@@ -1,0 +1,321 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 4,
+              "end": 5
+            },
+            "init": {
+              "type": "Identifier",
+              "name": "NaN",
+              "start": 8,
+              "end": 11
+            },
+            "start": 4,
+            "end": 11
+          }
+        ],
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x_geq_0",
+              "start": 17,
+              "end": 24
+            },
+            "init": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x",
+                "start": 27,
+                "end": 28
+              },
+              "operator": ">=",
+              "right": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0.0",
+                "start": 32,
+                "end": 35
+              },
+              "start": 27,
+              "end": 35
+            },
+            "start": 17,
+            "end": 35
+          }
+        ],
+        "start": 13,
+        "end": 36
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x_leq_0",
+              "start": 41,
+              "end": 48
+            },
+            "init": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x",
+                "start": 51,
+                "end": 52
+              },
+              "operator": "<=",
+              "right": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0.0",
+                "start": 56,
+                "end": 59
+              },
+              "start": 51,
+              "end": 59
+            },
+            "start": 41,
+            "end": 59
+          }
+        ],
+        "start": 37,
+        "end": 60
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x_leq_0_OR_geq_0",
+              "start": 65,
+              "end": 81
+            },
+            "init": {
+              "type": "LogicalExpression",
+              "left": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "x",
+                  "start": 84,
+                  "end": 85
+                },
+                "operator": "<=",
+                "right": {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0.0",
+                  "start": 89,
+                  "end": 92
+                },
+                "start": 84,
+                "end": 92
+              },
+              "operator": "||",
+              "right": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "x",
+                  "start": 96,
+                  "end": 97
+                },
+                "operator": ">=",
+                "right": {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0.0",
+                  "start": 101,
+                  "end": 104
+                },
+                "start": 96,
+                "end": 104
+              },
+              "start": 84,
+              "end": 104
+            },
+            "start": 65,
+            "end": 104
+          }
+        ],
+        "start": 61,
+        "end": 105
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x_geq_0_ADD_leq_0",
+              "start": 110,
+              "end": 127
+            },
+            "init": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "ParenthesizedExpression",
+                "expression": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "x",
+                    "start": 131,
+                    "end": 132
+                  },
+                  "operator": ">=",
+                  "right": {
+                    "type": "Literal",
+                    "value": 0,
+                    "raw": "0.0",
+                    "start": 136,
+                    "end": 139
+                  },
+                  "start": 131,
+                  "end": 139
+                },
+                "start": 130,
+                "end": 140
+              },
+              "operator": "+",
+              "right": {
+                "type": "ParenthesizedExpression",
+                "expression": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "x",
+                    "start": 144,
+                    "end": 145
+                  },
+                  "operator": "<=",
+                  "right": {
+                    "type": "Literal",
+                    "value": 0,
+                    "raw": "0.0",
+                    "start": 149,
+                    "end": 152
+                  },
+                  "start": 144,
+                  "end": 152
+                },
+                "start": 143,
+                "end": 153
+              },
+              "start": 130,
+              "end": 153
+            },
+            "start": 110,
+            "end": 153
+          }
+        ],
+        "start": 106,
+        "end": 154
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Identifier",
+          "name": "x_geq_0",
+          "start": 159,
+          "end": 166
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 168,
+          "end": 170
+        },
+        "alternate": null,
+        "start": 155,
+        "end": 170
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Identifier",
+          "name": "x_leq_0",
+          "start": 175,
+          "end": 182
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 184,
+          "end": 186
+        },
+        "alternate": null,
+        "start": 171,
+        "end": 186
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Identifier",
+          "name": "x_leq_0_OR_geq_0",
+          "start": 191,
+          "end": 207
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 209,
+          "end": 211
+        },
+        "alternate": null,
+        "start": 187,
+        "end": 211
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Identifier",
+          "name": "x_geq_0_ADD_leq_0",
+          "start": 216,
+          "end": 233
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 235,
+          "end": 237
+        },
+        "alternate": null,
+        "start": 212,
+        "end": 237
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 237
+  },
+  "errors": [],
+  "comments": []
+}

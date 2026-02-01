@@ -1,0 +1,24 @@
+const input = "a b c";
+const granularities = [undefined, "grapheme", "word", "sentence"];
+const index_to_zeros = [0, -0, NaN, 0.49, -0.49, null, undefined, false, "\ud800\udc00", "\ud800", "\udc00", "a", "g", "\u00DD", "0", "+0", "-0", "0.49", "+0.49", "-0.49", "4.9e-1", "-4.9e-1", "4.9E-1", "-4.9E-1", {
+  toString() {
+    return "-0.1";
+  }
+}, {
+  valueOf() {
+    return 0.1;
+  }
+}, {
+  [Symbol.toPrimitive]() {
+    return -0.1;
+  }
+}];
+granularities.forEach(function (granularity) {
+  const segmenter = new Intl.Segmenter(undefined, {
+    granularity
+  });
+  const segment = segmenter.segment(input);
+  index_to_zeros.forEach(function (index) {
+    const result = segment.containing(index);
+  });
+});

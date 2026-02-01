@@ -1,0 +1,7 @@
+function* g() {
+  yield 0;
+  yield 1;
+  yield 2;
+  yield 3;
+}
+let result = g().some(() => false);

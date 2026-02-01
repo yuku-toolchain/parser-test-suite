@@ -1,0 +1,2 @@
+const timeZones = [["Europe/Prague", "Europe/Prague"], ["Europe/Bratislava", "Europe/Bratislava"], ["Australia/Canberra", "Australia/Sydney"], ["Atlantic/Jan_Mayen", "Arctic/Longyearbyen"], ["Pacific/Truk", "Pacific/Chuuk"], ["Etc/UCT", "UTC"], ["Etc/GMT0", "UTC"]];
+for (const [timeZone, linkTarget] of timeZones) {}

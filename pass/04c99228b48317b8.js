@@ -1,0 +1,1 @@
+const epoch = new Temporal.Instant(0n);

@@ -1,0 +1,24 @@
+const input = "a b c";
+const granularities = [undefined, "grapheme", "word", "sentence"];
+const index_to_out_of_bound = [input.length, input.length + 0.1, -1, -2, "-1", "-2", "-1.1", Infinity, -Infinity, "Infinity", "-Infinity", {
+  toString() {
+    return "-1";
+  }
+}, {
+  valueOf() {
+    return input.length;
+  }
+}, {
+  [Symbol.toPrimitive]() {
+    return -1;
+  }
+}];
+granularities.forEach(function (granularity) {
+  const segmenter = new Intl.Segmenter(undefined, {
+    granularity
+  });
+  const segment = segmenter.segment(input);
+  index_to_out_of_bound.forEach(function (index) {
+    const result = segment.containing(index);
+  });
+});

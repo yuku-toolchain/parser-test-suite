@@ -1,0 +1,23 @@
+const validOptions = [[undefined, "short"], ["long", "long"], ["short", "short"], ["narrow", "narrow"], ["digital", "digital"], [{
+  toString() {
+    return "short";
+  }
+}, "short"], [{
+  toString() {
+    return "long";
+  }
+}, "long"], [{
+  toString() {
+    return "narrow";
+  }
+}, "narrow"], [{
+  toString() {
+    return "digital";
+  }
+}, "digital"]];
+for (const [validOption, expected] of validOptions) {
+  const df = new Intl.DurationFormat([], {
+    "style": validOption
+  });
+  const resolvedOptions = df.resolvedOptions();
+}

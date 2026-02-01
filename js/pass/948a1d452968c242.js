@@ -1,0 +1,1 @@
+var __executed = (/\be/).test("pilot\nsoviet robot\topenoffic\u0065");

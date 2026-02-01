@@ -1,0 +1,1 @@
+const day = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "day").get;

@@ -1,0 +1,25 @@
+const WAIT_INDEX = 0;
+const RUNNING = 1;
+const NUMAGENT = 2;
+const NOTIFYCOUNT = 2;
+$262.agent.start(`
+  $262.agent.receiveBroadcast(async (sab) => {
+    var i32a = new Int32Array(sab);
+    Atomics.add(i32a, ${RUNNING}, 1);
+$262.agent.report("A " + (await Atomics.waitAsync(i32a, 0, 0, undefined).value));
+    $262.agent.leaving();
+  });
+`);
+$262.agent.start(`
+  $262.agent.receiveBroadcast(async (sab) => {
+    var i32a = new Int32Array(sab);
+    Atomics.add(i32a, ${RUNNING}, 1);
+$262.agent.report("B " + (await Atomics.waitAsync(i32a, 0, 0).value));
+    $262.agent.leaving();
+  });
+`);
+const i32a = new Int32Array(new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT * 4));
+$262.agent.safeBroadcastAsync(i32a, RUNNING, NUMAGENT).then(async agentCount => {
+  const reports = [await $262.agent.getReportAsync(), await $262.agent.getReportAsync()];
+  reports.sort();
+}).then($DONE, $DONE);

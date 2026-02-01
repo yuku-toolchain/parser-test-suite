@@ -1,0 +1,4 @@
+const instance = new Temporal.PlainMonthDay(2, 2);
+[null, true, "hello", Symbol("foo"), 1, 1n].forEach(badOptions => assert.throws(TypeError, () => instance.with({
+  day: 17
+}, badOptions)));

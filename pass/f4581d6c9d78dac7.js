@@ -1,0 +1,1 @@
+TemporalHelpers.checkSubclassingIgnored(Temporal.ZonedDateTime, [88000_123_456_789n, "UTC"], "startOfDay", [], result => {});

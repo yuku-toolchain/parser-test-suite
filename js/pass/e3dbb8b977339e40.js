@@ -1,0 +1,1 @@
+/\P{lowercase}/u;

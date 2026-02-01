@@ -1,0 +1,14 @@
+var target = {};
+Object.defineProperty(target, 'prop', {
+  value: 3,
+  writable: true,
+  enumerable: false,
+  configurable: true
+});
+var proxy = new Proxy(target, {
+  ownKeys: function () {
+    return ['prop'];
+  }
+});
+Object.preventExtensions(target);
+var keys = Object.keys(proxy);

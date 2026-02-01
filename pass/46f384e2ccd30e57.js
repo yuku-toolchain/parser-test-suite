@@ -1,0 +1,8 @@
+const expected = ["get options.disambiguation", "get options.disambiguation.toString", "call options.disambiguation.toString"];
+const actual = [];
+const instance = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321, "iso8601");
+const options = TemporalHelpers.propertyBagObserver(actual, {
+  disambiguation: "compatible"
+}, "options");
+instance.toZonedDateTime("UTC", options);
+actual.splice(0);

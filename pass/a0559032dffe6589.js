@@ -1,0 +1,12 @@
+function callbackfn(prevVal, curVal, idx, obj) {
+  return curVal === 11 && idx === 1;
+}
+var obj = {
+  1: 11,
+  2: 9,
+  length: {
+    toString: function () {
+      return '2';
+    }
+  }
+};

@@ -1,0 +1,1 @@
+var obj = Object.freeze([0, 1, 2]);

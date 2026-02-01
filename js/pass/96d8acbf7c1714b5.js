@@ -1,0 +1,1 @@
+const millisecond = Object.getOwnPropertyDescriptor(Temporal.PlainTime.prototype, "millisecond").get;

@@ -1,0 +1,11 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
+var r = {};
+r.ignoreCase = undefined;
+r.ignoreCase = null;
+r.ignoreCase = NaN;
+r.ignoreCase = "";
+r.ignoreCase = "string";
+r.ignoreCase = 86;
+r.ignoreCase = Symbol();
+r.ignoreCase = [];
+r.ignoreCase = {};

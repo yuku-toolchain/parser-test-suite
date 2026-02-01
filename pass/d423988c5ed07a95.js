@@ -1,0 +1,2 @@
+const validCalendarOptions = [["abc", "en-u-ca-abc"], ["abcd", "en-u-ca-abcd"], ["abcde", "en-u-ca-abcde"], ["abcdef", "en-u-ca-abcdef"], ["abcdefg", "en-u-ca-abcdefg"], ["abcdefgh", "en-u-ca-abcdefgh"], ["12345678", "en-u-ca-12345678"], ["1234abcd", "en-u-ca-1234abcd"], ["1234abcd-abc123", "en-u-ca-1234abcd-abc123"]];
+for (const [calendar, expected] of validCalendarOptions) {}

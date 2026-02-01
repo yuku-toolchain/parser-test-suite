@@ -1,0 +1,16 @@
+var arr = {
+  length: 200
+};
+Object.defineProperty(arr, "1", {
+  get: function () {
+    return 6.99;
+  },
+  configurable: true
+});
+Object.defineProperty(arr, "100", {
+  get: function () {
+    delete arr[1];
+    return 0;
+  },
+  configurable: true
+});

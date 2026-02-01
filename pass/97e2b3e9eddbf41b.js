@@ -1,0 +1,4 @@
+var C = class {
+  get #m() {}
+  set #m(_) {}
+};

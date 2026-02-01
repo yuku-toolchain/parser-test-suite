@@ -1,0 +1,11 @@
+const obj = {
+    toString() {
+        throw 'custom error';
+    }
+};
+async function f() {
+  import.source(obj).catch(error => {
+assert.sameValue(error, 'custom error');
+}).then($DONE, $DONE);
+}
+f();

@@ -1,0 +1,1 @@
+const toJSON = Temporal.Duration.prototype.toJSON;

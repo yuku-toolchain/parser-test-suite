@@ -1,0 +1,13 @@
+class C {
+  set #m(v) {
+    this._v = v;
+  }
+  B = class {
+    method(o, v) {
+      o.#m = v;
+    }
+  };
+}
+let c = new C();
+let innerB = new c.B();
+innerB.method(c, 'test262');

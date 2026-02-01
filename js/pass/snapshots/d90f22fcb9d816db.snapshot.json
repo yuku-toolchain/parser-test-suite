@@ -1,0 +1,354 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "RUNNING",
+              "start": 6,
+              "end": 13
+            },
+            "init": {
+              "type": "Literal",
+              "value": 1,
+              "raw": "1",
+              "start": 16,
+              "end": 17
+            },
+            "start": 6,
+            "end": 17
+          }
+        ],
+        "start": 0,
+        "end": 18
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 19,
+                "end": 23
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 24,
+                "end": 29
+              },
+              "optional": false,
+              "computed": false,
+              "start": 19,
+              "end": 29
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "start",
+              "start": 30,
+              "end": 35
+            },
+            "optional": false,
+            "computed": false,
+            "start": 19,
+            "end": 35
+          },
+          "arguments": [
+            {
+              "type": "TemplateLiteral",
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": "\n  const poisonedValueOf = {\n    valueOf: function() {\n      throw new Test262Error('should not evaluate this code');\n    }\n  };\nconst poisonedToPrimitive = {\n    [Symbol.toPrimitive]: function() {\n      throw new Test262Error(\"passing a poisoned object using @@ToPrimitive\");\n    }\n  };\n$262.agent.receiveBroadcast(function(sab) {\n    const i32a = new Int32Array(sab);\n    Atomics.add(i32a, ",
+                    "cooked": "\n  const poisonedValueOf = {\n    valueOf: function() {\n      throw new Test262Error('should not evaluate this code');\n    }\n  };\nconst poisonedToPrimitive = {\n    [Symbol.toPrimitive]: function() {\n      throw new Test262Error(\"passing a poisoned object using @@ToPrimitive\");\n    }\n  };\n$262.agent.receiveBroadcast(function(sab) {\n    const i32a = new Int32Array(sab);\n    Atomics.add(i32a, "
+                  },
+                  "tail": false,
+                  "start": 37,
+                  "end": 429
+                },
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": ", 1);\nlet status1 = \"\";\n    let status2 = \"\";\ntry {\n      Atomics.wait(i32a, 0, Symbol(\"1\"), poisonedValueOf);\n    } catch (error) {\n      status1 = 'Symbol(\"1\")';\n    }\n    try {\n      Atomics.wait(i32a, 0, Symbol(\"2\"), poisonedToPrimitive);\n    } catch (error) {\n      status2 = 'Symbol(\"2\")';\n    }\n$262.agent.report(status1);\n    $262.agent.report(status2);\n    $262.agent.leaving();\n  });\n",
+                    "cooked": ", 1);\nlet status1 = \"\";\n    let status2 = \"\";\ntry {\n      Atomics.wait(i32a, 0, Symbol(\"1\"), poisonedValueOf);\n    } catch (error) {\n      status1 = 'Symbol(\"1\")';\n    }\n    try {\n      Atomics.wait(i32a, 0, Symbol(\"2\"), poisonedToPrimitive);\n    } catch (error) {\n      status2 = 'Symbol(\"2\")';\n    }\n$262.agent.report(status1);\n    $262.agent.report(status2);\n    $262.agent.leaving();\n  });\n"
+                  },
+                  "tail": true,
+                  "start": 439,
+                  "end": 833
+                }
+              ],
+              "expressions": [
+                {
+                  "type": "Identifier",
+                  "name": "RUNNING",
+                  "start": 431,
+                  "end": 438
+                }
+              ],
+              "start": 36,
+              "end": 834
+            }
+          ],
+          "optional": false,
+          "start": 19,
+          "end": 835
+        },
+        "start": 19,
+        "end": 836
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "i32a",
+              "start": 843,
+              "end": 847
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Int32Array",
+                "start": 854,
+                "end": 864
+              },
+              "arguments": [
+                {
+                  "type": "NewExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "SharedArrayBuffer",
+                    "start": 869,
+                    "end": 886
+                  },
+                  "arguments": [
+                    {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Int32Array",
+                          "start": 887,
+                          "end": 897
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "BYTES_PER_ELEMENT",
+                          "start": 898,
+                          "end": 915
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 887,
+                        "end": 915
+                      },
+                      "operator": "*",
+                      "right": {
+                        "type": "Literal",
+                        "value": 4,
+                        "raw": "4",
+                        "start": 918,
+                        "end": 919
+                      },
+                      "start": 887,
+                      "end": 919
+                    }
+                  ],
+                  "start": 865,
+                  "end": 920
+                }
+              ],
+              "start": 850,
+              "end": 921
+            },
+            "start": 843,
+            "end": 921
+          }
+        ],
+        "start": 837,
+        "end": 922
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 923,
+                "end": 927
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 928,
+                "end": 933
+              },
+              "optional": false,
+              "computed": false,
+              "start": 923,
+              "end": 933
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "safeBroadcast",
+              "start": 934,
+              "end": 947
+            },
+            "optional": false,
+            "computed": false,
+            "start": 923,
+            "end": 947
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "i32a",
+              "start": 948,
+              "end": 952
+            }
+          ],
+          "optional": false,
+          "start": 923,
+          "end": 953
+        },
+        "start": 923,
+        "end": 954
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 955,
+                "end": 959
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 960,
+                "end": 965
+              },
+              "optional": false,
+              "computed": false,
+              "start": 955,
+              "end": 965
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "waitUntil",
+              "start": 966,
+              "end": 975
+            },
+            "optional": false,
+            "computed": false,
+            "start": 955,
+            "end": 975
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "i32a",
+              "start": 976,
+              "end": 980
+            },
+            {
+              "type": "Identifier",
+              "name": "RUNNING",
+              "start": 982,
+              "end": 989
+            },
+            {
+              "type": "Literal",
+              "value": 1,
+              "raw": "1",
+              "start": 991,
+              "end": 992
+            }
+          ],
+          "optional": false,
+          "start": 955,
+          "end": 993
+        },
+        "start": 955,
+        "end": 994
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 995,
+                "end": 999
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 1000,
+                "end": 1005
+              },
+              "optional": false,
+              "computed": false,
+              "start": 995,
+              "end": 1005
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "tryYield",
+              "start": 1006,
+              "end": 1014
+            },
+            "optional": false,
+            "computed": false,
+            "start": 995,
+            "end": 1014
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 995,
+          "end": 1016
+        },
+        "start": 995,
+        "end": 1017
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 1017
+  },
+  "errors": [],
+  "comments": []
+}

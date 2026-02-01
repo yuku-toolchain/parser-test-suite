@@ -1,0 +1,7 @@
+var arguments = 1;
+class C {
+  x = () => {
+    var t = () => (0, eval)('arguments;');
+    return t();
+  };
+}

@@ -1,0 +1,1 @@
+var result = eval('function fn() {}let a, b = 42, c;b;');

@@ -1,0 +1,9 @@
+let duration = Temporal.Duration.from({
+  microseconds: Number.MAX_SAFE_INTEGER,
+  nanoseconds: 1000
+});
+let time = Temporal.PlainTime.from({
+  microsecond: 1
+});
+let result = time.add(duration);
+TemporalHelpers.assertPlainTime(result, 23, 47, 34, 740, 993, 0);

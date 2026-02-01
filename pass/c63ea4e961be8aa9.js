@@ -1,0 +1,3 @@
+var poisonedLastIndex = {
+  get lastIndex() {}
+};

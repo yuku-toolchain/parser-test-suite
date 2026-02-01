@@ -1,0 +1,30 @@
+class C {
+  async m() {
+    return 42;
+  }
+  #o;
+  #℘;
+  #ZW_‌_NJ;
+  #ZW_‍_J;
+  o(value) {
+    this.#o = value;
+    return this.#o;
+  }
+  ℘(value) {
+    this.#℘ = value;
+    return this.#℘;
+  }
+  ZW_‌_NJ(value) {
+    this.#ZW_‌_NJ = value;
+    return this.#ZW_‌_NJ;
+  }
+  ZW_‍_J(value) {
+    this.#ZW_‍_J = value;
+    return this.#ZW_‍_J;
+  }
+}
+var c = new C();
+c.m().then(function (v) {
+  function assertions() {}
+  return Promise.resolve(assertions());
+}).then($DONE, $DONE);

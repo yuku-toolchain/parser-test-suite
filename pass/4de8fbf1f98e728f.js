@@ -1,0 +1,17 @@
+async function* agen() {
+  for await (let imported of [import('./for-await-resolution-and-error-a_FIXTURE.js'), import('./for-await-resolution-and-error-b_FIXTURE.js'), import('./for-await-resolution-and-error-poisoned_FIXTURE.js')]) {
+    yield imported.x;
+  }
+}
+var aiter = agen();
+async function fn() {
+  var a = aiter.next();
+  var b = aiter.next();
+  var c = aiter.next();
+  var error;
+  try {
+    await c;
+  } catch (e) {
+    error = e;
+  }
+}

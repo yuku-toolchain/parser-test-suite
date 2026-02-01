@@ -1,0 +1,1 @@
+for (const [locales, expectedError] of getInvalidLocaleArguments()) {}

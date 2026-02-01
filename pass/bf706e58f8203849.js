@@ -1,0 +1,3 @@
+var start = {
+  valueOf: function () {}
+};

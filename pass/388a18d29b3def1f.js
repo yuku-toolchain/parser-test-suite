@@ -1,0 +1,26 @@
+var calls = '';
+var re = {
+  get hasIndices() {
+    calls += 'd';
+  },
+  get global() {
+    calls += 'g';
+  },
+  get ignoreCase() {
+    calls += 'i';
+  },
+  get multiline() {
+    calls += 'm';
+  },
+  get dotAll() {
+    calls += 's';
+  },
+  get unicode() {
+    calls += 'u';
+  },
+  get sticky() {
+    calls += 'y';
+  }
+};
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get;
+get.call(re);

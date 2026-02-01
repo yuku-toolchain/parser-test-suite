@@ -1,0 +1,1 @@
+const toString = Temporal.PlainTime.prototype.toString;

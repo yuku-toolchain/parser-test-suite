@@ -1,0 +1,1 @@
+const weekOfYear = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "weekOfYear").get;

@@ -1,0 +1,1 @@
+var includes = Array.prototype.includes;

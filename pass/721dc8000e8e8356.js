@@ -1,0 +1,16 @@
+var proto = {};
+var accessed = false;
+Object.defineProperty(proto, "enumerable", {
+  set: function () {}
+});
+var ConstructFun = function () {};
+ConstructFun.prototype = proto;
+var descObj = new ConstructFun();
+var newObj = Object.create({}, {
+  prop: descObj
+});
+for (var property in newObj) {
+  if (property === "prop") {
+    accessed = true;
+  }
+}

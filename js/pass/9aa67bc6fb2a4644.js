@@ -1,0 +1,1 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "unicodeSets").get;

@@ -1,0 +1,1 @@
+testWithBigIntTypedArrayConstructors(function (TA) {});

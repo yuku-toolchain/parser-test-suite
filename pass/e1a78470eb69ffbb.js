@@ -1,0 +1,11 @@
+var init;
+(function () {
+  init = f;
+  {
+    function f() {}
+  }
+  switch (1) {
+    default:
+      function f() {}
+  }
+})();

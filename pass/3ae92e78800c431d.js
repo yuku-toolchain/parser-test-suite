@@ -1,0 +1,1 @@
+var reduce = TypedArray.prototype.reduce;

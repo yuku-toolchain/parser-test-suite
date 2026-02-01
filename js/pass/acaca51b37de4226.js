@@ -1,0 +1,1 @@
+const nov94 = Temporal.PlainYearMonth.from("1994-11");

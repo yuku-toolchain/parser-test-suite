@@ -1,0 +1,93 @@
+function verifyFormatParts(actual, expected, message) {
+  for (let i = 0; i < actual.length; ++i) {}
+}
+const nf = new Intl.NumberFormat("ko-KR", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
+  signDisplay: "negative"
+});
+verifyFormatParts(nf.formatToParts(-987), [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], "negative");
+verifyFormatParts(nf.formatToParts(-0.0001), [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], "negativeNearZero");
+verifyFormatParts(nf.formatToParts(-0), [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], "negativeZero");
+verifyFormatParts(nf.formatToParts(0), [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], "zero");
+verifyFormatParts(nf.formatToParts(0.0001), [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], "positiveNearZero");
+verifyFormatParts(nf.formatToParts(987), [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], "positive");

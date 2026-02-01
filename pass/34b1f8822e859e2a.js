@@ -1,0 +1,1 @@
+var __executed = (/(\.(?!com|org)|\/)/).test("ah.com");

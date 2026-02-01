@@ -1,0 +1,16 @@
+if (isNaN(-0 % 0) !== true) {}
+if (isNaN(-0 % -0) !== true) {}
+if (isNaN(0 % 0) !== true) {}
+if (isNaN(0 % -0) !== true) {}
+if (isNaN(-1 % 0) !== true) {}
+if (isNaN(-1 % -0) !== true) {}
+if (isNaN(1 % 0) !== true) {}
+if (isNaN(1 % -0) !== true) {}
+if (isNaN(Number.NEGATIVE_INFINITY % 0) !== true) {}
+if (isNaN(Number.NEGATIVE_INFINITY % -0) !== true) {}
+if (isNaN(Number.POSITIVE_INFINITY % 0) !== true) {}
+if (isNaN(Number.POSITIVE_INFINITY % -0) !== true) {}
+if (isNaN(Number.MIN_VALUE % 0) !== true) {}
+if (isNaN(Number.MIN_VALUE % -0) !== true) {}
+if (isNaN(Number.MAX_VALUE % 0) !== true) {}
+if (isNaN(Number.MAX_VALUE % -0) !== true) {}

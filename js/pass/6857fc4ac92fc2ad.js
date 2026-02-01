@@ -1,0 +1,5 @@
+const instance = new Temporal.PlainDateTime(2000, 5, 2);
+const resultHours = instance.subtract("-PT24.567890123H");
+TemporalHelpers.assertPlainDateTime(resultHours, 2000, 5, "M05", 3, 0, 34, 4, 404, 442, 800, "negative fractional hours");
+const resultMinutes = instance.subtract("-PT1440.567890123M");
+TemporalHelpers.assertPlainDateTime(resultMinutes, 2000, 5, "M05", 3, 0, 0, 34, 73, 407, 380, "negative fractional minutes");

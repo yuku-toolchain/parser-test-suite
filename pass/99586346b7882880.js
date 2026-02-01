@@ -1,0 +1,10 @@
+const iter = (function* () {
+  yield;
+  yield;
+})();
+function fn() {
+  for (var [] of [iter]) {
+    return;
+  }
+}
+fn();

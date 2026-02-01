@@ -1,0 +1,1 @@
+var d = delete Math.LN2;

@@ -1,0 +1,60 @@
+function CustomError() {}
+const o1 = {
+  get localeMatcher() {
+    throw new CustomError();
+  },
+  get numberingSystem() {
+    throw "should not get the numberingSystem option before localeMatcher";
+  },
+  get style() {
+    throw "should not get the style option before localeMatcher";
+  },
+  get numeric() {
+    throw "should not get the numeric option before localeMatcher";
+  }
+};
+const o2captures = [];
+const o2 = {
+  get localeMatcher() {
+    o2captures.push('localeMatcher');
+  },
+  get numberingSystem() {
+    throw new CustomError();
+  },
+  get style() {
+    throw "should not get the style option before numberingSystem";
+  },
+  get numeric() {
+    throw "should not get the numeric option before numberingSystem";
+  }
+};
+const o3captures = [];
+const o3 = {
+  get localeMatcher() {
+    o3captures.push('localeMatcher');
+  },
+  get numberingSystem() {
+    o3captures.push('numberingSystem');
+  },
+  get style() {
+    throw new CustomError();
+  },
+  get numeric() {
+    throw "should not get the numeric option before style";
+  }
+};
+const o4captures = [];
+const o4 = {
+  get localeMatcher() {
+    o4captures.push('localeMatcher');
+  },
+  get numberingSystem() {
+    o4captures.push('numberingSystem');
+  },
+  get style() {
+    o4captures.push('style');
+  },
+  get numeric() {
+    throw new CustomError();
+  }
+};

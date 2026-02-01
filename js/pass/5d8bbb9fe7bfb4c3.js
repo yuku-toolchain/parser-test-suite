@@ -1,0 +1,1 @@
+var charAt = String.prototype.charAt;

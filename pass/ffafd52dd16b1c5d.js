@@ -1,0 +1,6 @@
+const leapDay = new Temporal.PlainMonthDay(2, 29);
+TemporalHelpers.assertPlainMonthDay(leapDay, "M02", 29, "leap day is supported");
+const beforeEpoch = new Temporal.PlainMonthDay(12, 2, "iso8601", 1920);
+TemporalHelpers.assertPlainMonthDay(beforeEpoch, "M12", 2, "reference year before epoch", 1920);
+const afterEpoch = new Temporal.PlainMonthDay(1, 7, "iso8601", 1980);
+TemporalHelpers.assertPlainMonthDay(afterEpoch, "M01", 7, "reference year after epoch", 1980);

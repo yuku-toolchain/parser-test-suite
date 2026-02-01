@@ -1,0 +1,8 @@
+const validValues = [new Temporal.PlainMonthDay(5, 2), {
+  monthCode: "M05",
+  day: 2
+}, "05-02"];
+const badOverflows = ["", "CONSTRAIN", "balance", "other string", "constra\u0131n", "reject\0"];
+for (const value of validValues) {
+  for (const overflow of badOverflows) {}
+}

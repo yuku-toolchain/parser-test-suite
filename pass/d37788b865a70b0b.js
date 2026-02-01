@@ -1,0 +1,13 @@
+const calendar = "iso8601";
+const plainDate = Temporal.PlainDate.from({
+  year: 1976,
+  month: 11,
+  day: 18,
+  calendar
+});
+TemporalHelpers.assertPlainDate(plainDate, 1976, 11, "M11", 18);
+const plainDateImplicitCalendar = Temporal.PlainDate.from({
+  year: 1976,
+  month: 11,
+  day: 18
+});

@@ -1,0 +1,8 @@
+const tests = [[new Temporal.PlainTime(5, 3, 1), "05:03:01"], [new Temporal.PlainTime(15, 23), "15:23:00"], [new Temporal.PlainTime(15, 23, 30), "15:23:30"], [new Temporal.PlainTime(15, 23, 30, 123, 400), "15:23:30.1234"]];
+for (const [time, expected] of tests) {
+  const explicit = time.toString({
+    fractionalSecondDigits: undefined
+  });
+  const implicit = time.toString({});
+  const lambda = time.toString(() => {});
+}

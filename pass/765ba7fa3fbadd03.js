@@ -1,0 +1,18 @@
+const expectedOptionsReading = ["get options.overflow", "get options.overflow.toString", "call options.overflow.toString"];
+const expected = ["get fields.calendar", "get fields.month", "get fields.month.valueOf", "call fields.month.valueOf", "get fields.monthCode", "get fields.monthCode.toString", "call fields.monthCode.toString", "get fields.year", "get fields.year.valueOf", "call fields.year.valueOf"].concat(expectedOptionsReading);
+const actual = [];
+const fields = TemporalHelpers.propertyBagObserver(actual, {
+  year: 1.7,
+  month: 1.7,
+  monthCode: "M01",
+  calendar: "iso8601"
+}, "fields", ["calendar"]);
+const options = TemporalHelpers.propertyBagObserver(actual, {
+  overflow: "constrain",
+  extra: "property"
+}, "options");
+Temporal.PlainYearMonth.from(fields, options);
+actual.splice(0);
+Temporal.PlainYearMonth.from(new Temporal.PlainYearMonth(2000, 5), options);
+actual.splice(0);
+Temporal.PlainYearMonth.from("2000-05", options);

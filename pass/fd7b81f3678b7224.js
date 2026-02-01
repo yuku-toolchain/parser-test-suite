@@ -1,0 +1,10 @@
+var value = "bad";
+var key = {
+  toString() {
+    value = "ok";
+    return "p";
+  }
+};
+var obj = {
+  [key]: value
+};

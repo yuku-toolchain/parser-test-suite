@@ -1,0 +1,12 @@
+for (await (function () {}); await (function () {}); await (function () {})) {
+  await (function () {});
+  break;
+}
+for (var binding; await (function () {}); await (function () {})) {
+  await (function () {});
+  break;
+}
+for (let binding; await (function () {}); await (function () {})) {
+  await (function () {});
+  break;
+}

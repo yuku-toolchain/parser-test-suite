@@ -1,0 +1,1 @@
+const minute = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "minute").get;

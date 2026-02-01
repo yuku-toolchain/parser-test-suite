@@ -1,0 +1,17 @@
+let iter = {
+  get next() {
+    let count = 3;
+    return function () {
+      --count;
+      return count >= 0 ? {
+        done: false,
+        value: count
+      } : {
+        done: true,
+        value: undefined
+      };
+    };
+  }
+};
+let dropIter = Iterator.prototype.drop.call(iter, 1);
+let {done, value} = dropIter.next();

@@ -1,0 +1,1 @@
+var x = Number.MIN_VALUE;

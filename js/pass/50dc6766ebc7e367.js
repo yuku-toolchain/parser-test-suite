@@ -1,0 +1,5 @@
+function callbackfn(val, Idx, obj) {
+  if (arguments.length === 3) return true;
+}
+var arr = [0, 1, true, null, new Object(), "five"];
+arr[999999] = -6.6;

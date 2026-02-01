@@ -1,0 +1,1 @@
+if (encodeURI.length !== 1) {}

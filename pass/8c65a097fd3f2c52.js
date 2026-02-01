@@ -1,0 +1,1 @@
+var getter = Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'resizable').get;

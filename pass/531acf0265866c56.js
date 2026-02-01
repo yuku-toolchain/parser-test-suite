@@ -1,0 +1,1 @@
+var m = new Map([["attr", 1], ["foo", 2]]);

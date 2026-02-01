@@ -1,0 +1,1 @@
+var result = eval('{}{x: 42};');

@@ -1,0 +1,2 @@
+var foo = 1;
+if (await foo) {}

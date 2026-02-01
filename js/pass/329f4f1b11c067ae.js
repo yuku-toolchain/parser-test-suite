@@ -1,0 +1,1 @@
+if (!String.hasOwnProperty('prototype')) {}

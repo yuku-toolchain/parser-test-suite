@@ -1,0 +1,9 @@
+var init;
+(function() {
+  init = f;
+{
+    function f() {}
+  }
+if (false) ; else function f() {  }
+}());
+assert.sameValue(init, undefined);

@@ -1,0 +1,8 @@
+var result = true;
+for (var alpha = 0x0061; alpha <= 0x007A; alpha++) {
+  var str = String.fromCharCode(alpha % 32);
+  var arr = new RegExp("\\c" + String.fromCharCode(alpha)).exec(str);
+  if (arr === null || arr[0] !== str) {
+    result = false;
+  }
+}

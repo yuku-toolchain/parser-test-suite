@@ -1,0 +1,1 @@
+let f = function* f(arguments, p = eval("var arguments = 'param'")) {};

@@ -1,0 +1,1 @@
+var result = eval('class C {}[42];');

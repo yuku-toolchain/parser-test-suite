@@ -1,0 +1,12 @@
+var proto = {};
+Object.defineProperty(proto, "inheritedProp", {
+  value: 1003,
+  enumerable: true,
+  configurable: true
+});
+var Con = function () {};
+Con.prototype = proto;
+var obj = new Con();
+obj.prop = 1004;
+var arr = Object.keys(obj);
+for (var p in arr) {}

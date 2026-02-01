@@ -1,0 +1,27 @@
+const visited = [];
+function visit(ns, path) {
+  if (visited.includes(ns)) {
+    return;
+  }
+  visited.push(ns);
+  if (typeof ns === 'function') {
+    assertNativeFunction(ns, path);
+  }
+  if (typeof ns !== 'function' && (typeof ns !== 'object' || ns === null)) {
+    return;
+  }
+  const descriptors = Object.getOwnPropertyDescriptors(ns);
+  Reflect.ownKeys(descriptors).forEach(name => {
+    const desc = descriptors[name];
+    const p = typeof name === 'symbol' ? `${path}[Symbol(${name.description})]` : `${path}.${name}`;
+    if (('value' in desc)) {
+      visit(desc.value, p);
+    } else {
+      visit(desc.get, p);
+      visit(desc.set, p);
+    }
+  });
+}
+WellKnownIntrinsicObjects.forEach(intrinsic => {
+  visit(intrinsic.value, intrinsic.name);
+});

@@ -1,0 +1,12 @@
+var obj = {};
+var accessed = false;
+Object.defineProperty(obj, "foo", {
+  value: NaN,
+  writable: false,
+  configurable: false
+});
+Object.defineProperties(obj, {
+  foo: {
+    value: NaN
+  }
+});

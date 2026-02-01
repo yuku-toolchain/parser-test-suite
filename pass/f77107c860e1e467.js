@@ -1,0 +1,1 @@
+var __evaluated = eval("if(1);");

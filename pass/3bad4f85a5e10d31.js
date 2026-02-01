@@ -1,0 +1,12 @@
+var obj = {};
+var map = new Map();
+map.set(1, 'foo');
+map.set(2, obj);
+map.set(3, map);
+var iterator = map.values();
+var result;
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();

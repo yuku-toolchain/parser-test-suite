@@ -1,0 +1,14 @@
+let count = 0;
+var C = class {
+  async method(x) {
+    return async function () {
+      return new.target;
+    };
+  }
+};
+let c = new C();
+let asyncFn = c.method.bind(c);
+asyncFn(1).then(retFn => {
+  count++;
+  return retFn();
+}).then(result => {}).then($DONE, $DONE);

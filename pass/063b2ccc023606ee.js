@@ -1,0 +1,4 @@
+/\p{Script_Extensions=Unknown}/u;
+/\p{Script_Extensions=Zzzz}/u;
+/\p{scx=Unknown}/u;
+/\p{scx=Zzzz}/u;

@@ -1,0 +1,1 @@
+Object.seal(new BigInt64Array());

@@ -1,0 +1,1 @@
+import {x} from './error-import-named_FIXTURE.js';

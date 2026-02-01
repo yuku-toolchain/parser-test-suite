@@ -1,0 +1,1 @@
+/\P{Block=Adlam}/u;

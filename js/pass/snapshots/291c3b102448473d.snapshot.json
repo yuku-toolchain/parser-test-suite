@@ -1,0 +1,355 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "r",
+              "start": 6,
+              "end": 7
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 14,
+                "end": 25
+              },
+              "arguments": [],
+              "start": 10,
+              "end": 27
+            },
+            "start": 6,
+            "end": 27
+          }
+        ],
+        "start": 0,
+        "end": 28
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrapped",
+              "start": 33,
+              "end": 40
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "r",
+                  "start": 43,
+                  "end": 44
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 45,
+                  "end": 53
+                },
+                "optional": false,
+                "computed": false,
+                "start": 43,
+                "end": 53
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "value": {
+                        "raw": "\nfunction fn(foo, bar) {}\nfn;\n",
+                        "cooked": "\nfunction fn(foo, bar) {}\nfn;\n"
+                      },
+                      "tail": true,
+                      "start": 55,
+                      "end": 85
+                    }
+                  ],
+                  "expressions": [],
+                  "start": 54,
+                  "end": 86
+                }
+              ],
+              "optional": false,
+              "start": 43,
+              "end": 87
+            },
+            "start": 33,
+            "end": 87
+          }
+        ],
+        "start": 29,
+        "end": 88
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "wrapped",
+            "start": 89,
+            "end": 96
+          },
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "r",
+                "start": 99,
+                "end": 100
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "evaluate",
+                "start": 101,
+                "end": 109
+              },
+              "optional": false,
+              "computed": false,
+              "start": 99,
+              "end": 109
+            },
+            "arguments": [
+              {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\nfunction fn() {}\ndelete fn.length;\nfn;\n",
+                      "cooked": "\nfunction fn() {}\ndelete fn.length;\nfn;\n"
+                    },
+                    "tail": true,
+                    "start": 111,
+                    "end": 151
+                  }
+                ],
+                "expressions": [],
+                "start": 110,
+                "end": 152
+              }
+            ],
+            "optional": false,
+            "start": 99,
+            "end": 153
+          },
+          "start": 89,
+          "end": 153
+        },
+        "start": 89,
+        "end": 154
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "wrapped",
+            "start": 155,
+            "end": 162
+          },
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "r",
+                "start": 165,
+                "end": 166
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "evaluate",
+                "start": 167,
+                "end": 175
+              },
+              "optional": false,
+              "computed": false,
+              "start": 165,
+              "end": 175
+            },
+            "arguments": [
+              {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => Infinity,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n",
+                      "cooked": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => Infinity,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n"
+                    },
+                    "tail": true,
+                    "start": 177,
+                    "end": 307
+                  }
+                ],
+                "expressions": [],
+                "start": 176,
+                "end": 308
+              }
+            ],
+            "optional": false,
+            "start": 165,
+            "end": 309
+          },
+          "start": 155,
+          "end": 309
+        },
+        "start": 155,
+        "end": 310
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "wrapped",
+            "start": 311,
+            "end": 318
+          },
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "r",
+                "start": 321,
+                "end": 322
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "evaluate",
+                "start": 323,
+                "end": 331
+              },
+              "optional": false,
+              "computed": false,
+              "start": 321,
+              "end": 331
+            },
+            "arguments": [
+              {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => -Infinity,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n",
+                      "cooked": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => -Infinity,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n"
+                    },
+                    "tail": true,
+                    "start": 333,
+                    "end": 464
+                  }
+                ],
+                "expressions": [],
+                "start": 332,
+                "end": 465
+              }
+            ],
+            "optional": false,
+            "start": 321,
+            "end": 466
+          },
+          "start": 311,
+          "end": 466
+        },
+        "start": 311,
+        "end": 467
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "wrapped",
+            "start": 468,
+            "end": 475
+          },
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "r",
+                "start": 478,
+                "end": 479
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "evaluate",
+                "start": 480,
+                "end": 488
+              },
+              "optional": false,
+              "computed": false,
+              "start": 478,
+              "end": 488
+            },
+            "arguments": [
+              {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => -1,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n",
+                      "cooked": "\nfunction fn() {}\nObject.defineProperty(fn, 'length', {\n  get: () => -1,\n  enumerable: false,\n  configurable: true,\n});\nfn;\n"
+                    },
+                    "tail": true,
+                    "start": 490,
+                    "end": 614
+                  }
+                ],
+                "expressions": [],
+                "start": 489,
+                "end": 615
+              }
+            ],
+            "optional": false,
+            "start": 478,
+            "end": 616
+          },
+          "start": 468,
+          "end": 616
+        },
+        "start": 468,
+        "end": 617
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 617
+  },
+  "errors": [],
+  "comments": []
+}

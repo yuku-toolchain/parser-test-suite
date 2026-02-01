@@ -1,0 +1,12 @@
+var obj = {};
+var accessed = false;
+Object.prototype.enumerable = true;
+var argObj = (function () {
+  return arguments;
+})();
+Object.defineProperty(obj, "property", argObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

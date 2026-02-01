@@ -1,0 +1,2 @@
+const validFirstDayOfWeekIds = [["en-u-fw-mon", 1], ["en-u-fw-tue", 2], ["en-u-fw-wed", 3], ["en-u-fw-thu", 4], ["en-u-fw-fri", 5], ["en-u-fw-sat", 6], ["en-u-fw-sun", 7]];
+for (const [id, expected] of validFirstDayOfWeekIds) {}

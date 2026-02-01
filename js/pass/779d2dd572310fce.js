@@ -1,0 +1,9 @@
+var arr = [0, 2];
+Object.defineProperty(arr, "0", {
+  get: function () {
+    delete Array.prototype[1];
+    return 0;
+  },
+  configurable: true
+});
+Array.prototype[1] = 1;

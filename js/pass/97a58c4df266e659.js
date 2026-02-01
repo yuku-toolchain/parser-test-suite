@@ -1,0 +1,17 @@
+let error = new Error();
+async function* readFile() {
+  yield Promise.reject(error);
+  yield "unreachable";
+}
+var callCount = 0;
+var C = class {
+  async *gen() {
+    callCount += 1;
+    yield* readFile();
+  }
+};
+var gen = C.prototype.gen;
+var iter = gen();
+iter.next().then(() => {}, rejectValue => {
+  iter.next().then(({done, value}) => {}).then($DONE, $DONE);
+}, $DONE).catch($DONE);

@@ -1,0 +1,3 @@
+const instance = new Temporal.ZonedDateTime(0n, "CET");
+const invalidStrings = [["2025-04-03T05:07.123", "Fractional minutes"], ["2025-04-03T12.5", "Fractional hours"]];
+for (const [arg, description] of invalidStrings) {}

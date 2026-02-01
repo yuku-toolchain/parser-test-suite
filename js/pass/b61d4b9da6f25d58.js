@@ -1,0 +1,7 @@
+let async;
+async function fn() {
+  for await (async of [7]);
+}
+fn()
+  .then(() => assert.sameValue(async, 7), $DONE)
+  .then($DONE, $DONE);

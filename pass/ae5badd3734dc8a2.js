@@ -1,0 +1,1 @@
+const formatRangeToParts = Intl.NumberFormat.prototype.formatRangeToParts;

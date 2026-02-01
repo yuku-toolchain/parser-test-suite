@@ -1,0 +1,1 @@
+/\P{Expands_On_NFC}/u;

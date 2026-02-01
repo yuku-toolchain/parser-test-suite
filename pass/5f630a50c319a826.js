@@ -1,0 +1,12 @@
+var props = new Error("test");
+Object.getOwnPropertyNames(props).forEach(function (name) {
+  props[name] = {
+    value: 11,
+    configurable: true
+  };
+});
+props.prop15_2_3_5_4_37 = {
+  value: 12,
+  enumerable: true
+};
+var newObj = Object.create({}, props);

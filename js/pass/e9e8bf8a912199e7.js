@@ -1,0 +1,3 @@
+var p = {
+  toString: function () {}
+};

@@ -1,0 +1,1 @@
+var result = Object.entries('abc');

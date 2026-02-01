@@ -1,0 +1,1 @@
+var f = Object.isSealed;

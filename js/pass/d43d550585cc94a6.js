@@ -1,0 +1,5 @@
+function a(b, c) {
+  b = c;
+  return b;
+}
+assertToStringOrNativeFunction(a, "function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }");

@@ -1,0 +1,96 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "ParenthesizedExpression",
+            "expression": {
+              "type": "SequenceExpression",
+              "expressions": [
+                {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0",
+                  "start": 1,
+                  "end": 2
+                },
+                {
+                  "type": "Identifier",
+                  "name": "eval",
+                  "start": 4,
+                  "end": 8
+                }
+              ],
+              "start": 1,
+              "end": 8
+            },
+            "start": 0,
+            "end": 9
+          },
+          "arguments": [
+            {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Literal",
+                    "value": "switch (1) {",
+                    "raw": "'switch (1) {'",
+                    "start": 10,
+                    "end": 24
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Literal",
+                    "value": "  default:",
+                    "raw": "'  default:'",
+                    "start": 27,
+                    "end": 39
+                  },
+                  "start": 10,
+                  "end": 39
+                },
+                "operator": "+",
+                "right": {
+                  "type": "Literal",
+                  "value": "    function f() { return \"inner declaration\"; }",
+                  "raw": "'    function f() { return \"inner declaration\"; }'",
+                  "start": 42,
+                  "end": 92
+                },
+                "start": 10,
+                "end": 92
+              },
+              "operator": "+",
+              "right": {
+                "type": "Literal",
+                "value": "}  assert.sameValue(typeof f, \"function\");  assert.sameValue(f(), \"inner declaration\");    function f() {    return \"outer declaration\";  }",
+                "raw": "'}\\\n  assert.sameValue(typeof f, \"function\");\\\n  assert.sameValue(f(), \"inner declaration\");\\\n  \\\n  function f() {\\\n    return \"outer declaration\";\\\n  }'",
+                "start": 95,
+                "end": 248
+              },
+              "start": 10,
+              "end": 248
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 249
+        },
+        "start": 0,
+        "end": 250
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 250
+  },
+  "errors": [],
+  "comments": []
+}

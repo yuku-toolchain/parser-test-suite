@@ -1,0 +1,1 @@
+typeof await 1;

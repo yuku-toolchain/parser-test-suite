@@ -1,0 +1,10 @@
+var props = [];
+var result = false;
+Object.defineProperty(props, "prop", {
+  get: function () {
+    result = this instanceof Array;
+    return {};
+  },
+  enumerable: true
+});
+Object.create({}, props);

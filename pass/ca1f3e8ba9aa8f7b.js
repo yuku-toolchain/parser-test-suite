@@ -1,0 +1,12 @@
+const s1 = new Set([]);
+const s2 = new Set([1, 2]);
+let expected = [];
+let combined = s1.intersection(s2);
+const s3 = new Set([1, 2]);
+const s4 = new Set([]);
+expected = [];
+combined = s3.intersection(s4);
+const s5 = new Set([]);
+const s6 = new Set([]);
+expected = [];
+combined = s5.intersection(s6);

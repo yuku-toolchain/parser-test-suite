@@ -1,0 +1,1 @@
+var i = [].indexOf(42);

@@ -1,0 +1,1 @@
+var AsyncFunction = getWellKnownIntrinsicObject('%AsyncFunction%');

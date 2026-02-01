@@ -1,0 +1,12 @@
+var simulation = {};
+var thenable = {
+  then(_, reject) {
+    reject(simulation);
+  }
+};
+Promise.allSettled([thenable]).then(settleds => {
+  checkSettledPromises(settleds, [{
+    status: 'rejected',
+    reason: simulation
+  }]);
+}).then($DONE, $DONE);

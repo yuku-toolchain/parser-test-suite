@@ -1,0 +1,1 @@
+var [fn = function () {}, xFn = function x() {}] = [];

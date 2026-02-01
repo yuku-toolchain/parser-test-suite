@@ -1,0 +1,11 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
+var r = {};
+r.sticky = undefined;
+r.sticky = null;
+r.sticky = NaN;
+r.sticky = "";
+r.sticky = "string";
+r.sticky = 86;
+r.sticky = Symbol();
+r.sticky = [];
+r.sticky = {};

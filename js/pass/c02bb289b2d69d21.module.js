@@ -1,0 +1,1 @@
+import {meta as fixture_meta, getMeta} from "./distinct-for-each-module_FIXTURE.js";

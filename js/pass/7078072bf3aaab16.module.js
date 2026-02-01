@@ -1,0 +1,1 @@
+undeclared = this.undeclared = 5;

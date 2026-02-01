@@ -1,0 +1,1 @@
+var obj = new Date(0);

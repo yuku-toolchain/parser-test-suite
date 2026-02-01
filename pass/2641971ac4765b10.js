@@ -1,0 +1,3 @@
+const orig = new Temporal.PlainYearMonth(2000, 5, undefined, 7);
+const result = Temporal.PlainYearMonth.from(orig);
+TemporalHelpers.assertPlainYearMonth(result, 2000, 5, "M05", "PlainYearMonth is copied", undefined, undefined, 7);

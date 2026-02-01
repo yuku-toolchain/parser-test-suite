@@ -1,0 +1,1 @@
+const negated = Temporal.Duration.prototype.negated;

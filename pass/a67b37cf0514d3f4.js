@@ -1,0 +1,118 @@
+var log = [];
+var obj = {
+  [Symbol.asyncIterator]() {
+    var returnCount = 0;
+    return {
+      name: 'asyncIterator',
+      get next() {
+        log.push({
+          name: "get next"
+        });
+        return function () {
+          return {
+            value: "next-value-1",
+            done: false
+          };
+        };
+      },
+      get return() {
+        log.push({
+          name: "get return",
+          thisValue: this
+        });
+        return function () {
+          log.push({
+            name: "call return",
+            thisValue: this,
+            args: [...arguments]
+          });
+          returnCount++;
+          if (returnCount == 1) {
+            return {
+              name: "return-promise-1",
+              get then() {
+                log.push({
+                  name: "get return then (1)",
+                  thisValue: this
+                });
+                return function (resolve) {
+                  log.push({
+                    name: "call return then (1)",
+                    thisValue: this,
+                    args: [...arguments]
+                  });
+                  resolve({
+                    name: "return-result-1",
+                    get value() {
+                      log.push({
+                        name: "get return value (1)",
+                        thisValue: this
+                      });
+                      return "return-value-1";
+                    },
+                    get done() {
+                      log.push({
+                        name: "get return done (1)",
+                        thisValue: this
+                      });
+                      return false;
+                    }
+                  });
+                };
+              }
+            };
+          }
+          return {
+            name: "return-promise-2",
+            get then() {
+              log.push({
+                name: "get return then (2)",
+                thisValue: this
+              });
+              return function (resolve) {
+                log.push({
+                  name: "call return then (2)",
+                  thisValue: this,
+                  args: [...arguments]
+                });
+                resolve({
+                  name: "return-result-2",
+                  get value() {
+                    log.push({
+                      name: "get return value (2)",
+                      thisValue: this
+                    });
+                    return "return-value-2";
+                  },
+                  get done() {
+                    log.push({
+                      name: "get return done (2)",
+                      thisValue: this
+                    });
+                    return true;
+                  }
+                });
+              };
+            }
+          };
+        };
+      }
+    };
+  }
+};
+var callCount = 0;
+var gen = ({
+  async *method() {
+    callCount += 1;
+    log.push({
+      name: "before yield*"
+    });
+    yield* obj;
+  }
+}).method;
+var iter = gen();
+iter.next().then(v => {
+  iter.return("return-arg-1").then(v => {
+    iter.return("return-arg-2").then(v => {}).then($DONE, $DONE);
+  }).catch($DONE);
+}).catch($DONE);

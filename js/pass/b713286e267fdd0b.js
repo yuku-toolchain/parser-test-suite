@@ -1,0 +1,1 @@
+const daysInMonth = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "daysInMonth").get;

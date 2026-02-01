@@ -1,0 +1,1 @@
+var wr = new WeakRef({});

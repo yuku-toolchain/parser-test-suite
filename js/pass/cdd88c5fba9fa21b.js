@@ -1,0 +1,12 @@
+var arrObj = [];
+function setFunc(value) {
+  arrObj.setVerifyHelpProp = value;
+}
+Object.defineProperty(arrObj, "1", {
+  get: undefined,
+  set: setFunc,
+  configurable: false
+});
+Object.defineProperty(arrObj, "1", {
+  get: undefined
+});

@@ -1,0 +1,11 @@
+var buffer = new ArrayBuffer(4);
+var sample = new DataView(buffer, 0);
+sample.setFloat32(0, 1);
+sample.setFloat32(0, 2, undefined);
+sample.setFloat32(0, 3, null);
+sample.setFloat32(0, 4, 0);
+sample.setFloat32(0, 5, "");
+sample.setFloat32(0, 6, {});
+sample.setFloat32(0, 7, Symbol("1"));
+sample.setFloat32(0, 8, 1);
+sample.setFloat32(0, 9, "string");

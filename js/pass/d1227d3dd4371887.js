@@ -1,0 +1,19 @@
+function callbackfn(val, idx, obj) {
+  if (idx === 2) {
+    return false;
+  } else {
+    return true;
+  }
+}
+var obj = {
+  2: 6.99,
+  8: 19
+};
+Object.defineProperty(obj, "length", {
+  get: function () {
+    delete obj[2];
+    return 10;
+  },
+  configurable: true
+});
+var testResult = Array.prototype.map.call(obj, callbackfn);

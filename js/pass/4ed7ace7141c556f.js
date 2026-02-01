@@ -1,0 +1,1 @@
+const codePoints = String.fromCharCode(0x100, 0x200, 0x300);

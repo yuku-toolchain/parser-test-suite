@@ -1,0 +1,1 @@
+var sample = [42, 0, 1, NaN];

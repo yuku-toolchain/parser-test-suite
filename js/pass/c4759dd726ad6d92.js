@@ -1,0 +1,1 @@
+var __executed = (/\bot/).test("pilot\nsoviet robot\topenoffice");

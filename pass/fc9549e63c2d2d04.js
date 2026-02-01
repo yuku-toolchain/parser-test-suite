@@ -1,0 +1,2 @@
+const validIds = [["en-u-fw-mon", "mon"], ["en-u-fw-tue", "tue"], ["en-u-fw-wed", "wed"], ["en-u-fw-thu", "thu"], ["en-u-fw-fri", "fri"], ["en-u-fw-sat", "sat"], ["en-u-fw-sun", "sun"]];
+for (const [id, expected] of validIds) {}

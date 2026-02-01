@@ -1,0 +1,3 @@
+while (await this) {
+  break;
+}

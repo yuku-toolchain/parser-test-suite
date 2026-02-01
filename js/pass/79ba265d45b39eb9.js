@@ -1,0 +1,1 @@
+const toJSON = Temporal.ZonedDateTime.prototype.toJSON;

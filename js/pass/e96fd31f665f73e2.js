@@ -1,0 +1,1 @@
+if (String.prototype.indexOf.prototype !== undefined) {}

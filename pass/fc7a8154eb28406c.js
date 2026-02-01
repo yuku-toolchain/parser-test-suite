@@ -1,0 +1,1 @@
+var mongolianVowelSeparator = "\u180E";

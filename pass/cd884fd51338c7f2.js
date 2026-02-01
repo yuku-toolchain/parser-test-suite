@@ -1,0 +1,18 @@
+var count = 0;
+var values = [];
+var case1 = {
+  [Symbol.iterator]() {
+    return {
+      next() {
+        count += 1;
+        return {
+          done: count === 3,
+          get value() {
+            values.push(count);
+          }
+        };
+      }
+    };
+  }
+};
+new AggregateError(case1);

@@ -1,0 +1,3 @@
+function getArguments() {
+  return arguments;
+}

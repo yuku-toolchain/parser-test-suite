@@ -1,0 +1,11 @@
+var __proto = {
+  phylum: "avis"
+};
+if (!(("valueOf" in __proto))) {}
+function Robin() {
+  this.name = "robin";
+}
+Robin.prototype = __proto;
+var __my__robin = new Robin();
+if (!(("phylum" in __my__robin))) {}
+if (__my__robin.hasOwnProperty("phylum")) {}

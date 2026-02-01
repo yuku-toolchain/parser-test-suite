@@ -1,0 +1,6 @@
+var bCalled = false;
+function callbackfn(prevVal, curVal, idx, obj) {
+  bCalled = true;
+  if (prevVal === true && arguments.length === 4) return true; else return false;
+}
+var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];

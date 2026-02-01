@@ -1,0 +1,12 @@
+if (String.fromCharCode(-32767).charCodeAt(0) !== 32769) {}
+if (String.fromCharCode(-32768).charCodeAt(0) !== 32768) {}
+if (String.fromCharCode(-32769).charCodeAt(0) !== 32767) {}
+if (String.fromCharCode(-65535).charCodeAt(0) !== 1) {}
+if (String.fromCharCode(-65536).charCodeAt(0) !== 0) {}
+if (String.fromCharCode(-65537).charCodeAt(0) !== 65535) {}
+if (String.fromCharCode(65535).charCodeAt(0) !== 65535) {}
+if (String.fromCharCode(65536).charCodeAt(0) !== 0) {}
+if (String.fromCharCode(65537).charCodeAt(0) !== 1) {}
+if (String.fromCharCode(131071).charCodeAt(0) !== 65535) {}
+if (String.fromCharCode(131072).charCodeAt(0) !== 0) {}
+if (String.fromCharCode(131073).charCodeAt(0) !== 1) {}

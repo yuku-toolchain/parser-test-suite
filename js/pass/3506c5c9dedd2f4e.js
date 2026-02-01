@@ -1,0 +1,2 @@
+for (; false; ) let;
+x = 1;

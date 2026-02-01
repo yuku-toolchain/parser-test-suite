@@ -1,0 +1,1 @@
+if (eval("if (false) ;") !== undefined) {}

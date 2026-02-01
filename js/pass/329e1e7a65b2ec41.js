@@ -1,0 +1,10 @@
+var proto = {
+  value: "inheritedDataProperty"
+};
+var ConstructFun = function () {};
+ConstructFun.prototype = proto;
+var descObj = new ConstructFun();
+descObj.value = "ownDataProperty";
+var newObj = Object.create({}, {
+  prop: descObj
+});

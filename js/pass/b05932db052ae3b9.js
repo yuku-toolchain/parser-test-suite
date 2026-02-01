@@ -1,0 +1,2 @@
+const pmd = Temporal.PlainMonthDay.from("2023-01-01[u-ca=hebrew]");
+TemporalHelpers.assertPlainMonthDay(pmd, "M04", 8);

@@ -1,0 +1,1 @@
+const toString = Temporal.PlainYearMonth.prototype.toString;

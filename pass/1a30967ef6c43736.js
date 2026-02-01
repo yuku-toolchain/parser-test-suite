@@ -1,0 +1,11 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
+var r = {};
+r.dotAll = undefined;
+r.dotAll = null;
+r.dotAll = NaN;
+r.dotAll = "";
+r.dotAll = "string";
+r.dotAll = 86;
+r.dotAll = Symbol();
+r.dotAll = [];
+r.dotAll = {};

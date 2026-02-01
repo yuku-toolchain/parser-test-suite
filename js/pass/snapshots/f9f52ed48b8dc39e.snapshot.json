@@ -1,0 +1,94 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "my_eval",
+              "start": 4,
+              "end": 11
+            },
+            "init": {
+              "type": "Identifier",
+              "name": "eval",
+              "start": 14,
+              "end": 18
+            },
+            "start": 4,
+            "end": 18
+          }
+        ],
+        "start": 0,
+        "end": 19
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "my_eval",
+              "start": 24,
+              "end": 31
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": "\"use strict\";\nthis",
+                "raw": "\"\\\"use strict\\\";\\nthis\"",
+                "start": 32,
+                "end": 55
+              }
+            ],
+            "optional": false,
+            "start": 24,
+            "end": 56
+          },
+          "operator": "!==",
+          "right": {
+            "type": "ThisExpression",
+            "start": 61,
+            "end": 65
+          },
+          "start": 24,
+          "end": 65
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ThrowStatement",
+              "argument": {
+                "type": "Literal",
+                "value": "'this' had incorrect value!",
+                "raw": "\"'this' had incorrect value!\"",
+                "start": 77,
+                "end": 106
+              },
+              "start": 71,
+              "end": 107
+            }
+          ],
+          "start": 67,
+          "end": 109
+        },
+        "alternate": null,
+        "start": 20,
+        "end": 109
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 109
+  },
+  "errors": [],
+  "comments": []
+}

@@ -1,0 +1,1 @@
+Function.prototype.indicator = 1;

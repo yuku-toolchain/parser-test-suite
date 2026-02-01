@@ -1,0 +1,12 @@
+var x = [];
+x.length = true;
+x = [0];
+x.length = null;
+x = [0];
+x.length = new Boolean(false);
+x = [];
+x.length = new Number(1);
+x = [];
+x.length = "1";
+x = [];
+x.length = new String("1");

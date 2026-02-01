@@ -1,0 +1,1 @@
+var __executed = (/\s+java\s+/).test("\t javax package");

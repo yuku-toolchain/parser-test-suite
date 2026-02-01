@@ -1,0 +1,1 @@
+/\\P{General_Category=WAT}/u;

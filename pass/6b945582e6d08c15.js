@@ -1,0 +1,13 @@
+const values = [undefined, null, 42, false, true, Symbol(), 'string', AggregateError.prototype];
+const NewTarget = new Function();
+for (const value of values) {
+  const NewTargetProxy = new Proxy(NewTarget, {
+    get(t, p) {
+      if (p === 'prototype') {
+        return value;
+      }
+      return t[p];
+    }
+  });
+  const error = Reflect.construct(AggregateError, [[]], NewTargetProxy);
+}

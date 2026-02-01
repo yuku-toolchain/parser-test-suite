@@ -1,0 +1,1 @@
+if (String.prototype.toUpperCase.prototype !== undefined) {}

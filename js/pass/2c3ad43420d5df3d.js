@@ -1,0 +1,1 @@
+if (RegExp("0").exec("1") !== null) {}

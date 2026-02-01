@@ -1,0 +1,1 @@
+var tostr = Object.prototype.toString();

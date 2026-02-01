@@ -1,0 +1,2 @@
+function fn() {}
+/1/;

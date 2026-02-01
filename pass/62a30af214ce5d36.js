@@ -1,0 +1,5 @@
+var result = false;
+function callbackfn(val, idx, obj) {
+  result = this === eval;
+}
+[11].forEach(callbackfn, eval);

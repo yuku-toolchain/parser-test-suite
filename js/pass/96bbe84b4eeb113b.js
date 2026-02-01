@@ -1,0 +1,9 @@
+var other = $262.createRealm().global;
+var fn = other.eval('(0, async function* () {})');
+var AsyncGeneratorPrototype = Object.getPrototypeOf(fn.prototype);
+fn.prototype = undefined;
+fn.prototype = null;
+fn.prototype = true;
+fn.prototype = 'str';
+fn.prototype = Symbol();
+fn.prototype = 0;

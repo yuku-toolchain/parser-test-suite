@@ -1,0 +1,1 @@
+var map = new Map([[0, 0]]);

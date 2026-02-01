@@ -1,0 +1,1 @@
+var result = Array.from.call(null, []);

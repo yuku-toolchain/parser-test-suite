@@ -1,0 +1,11 @@
+var probe;
+var C = class {
+  static set a(_ = null) {
+    var x = 'inside';
+    probe = function () {
+      return x;
+    };
+  }
+};
+C.a = null;
+var x = 'outside';

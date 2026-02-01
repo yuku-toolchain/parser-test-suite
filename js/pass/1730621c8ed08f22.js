@@ -1,0 +1,1 @@
+var __instance = new String("ABC");

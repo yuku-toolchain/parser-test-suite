@@ -1,0 +1,3 @@
+let newTarget = Object.defineProperty((function () {}).bind(null), "prototype", {
+  get() {}
+});

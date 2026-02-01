@@ -1,0 +1,1 @@
+var SetIteratorProto = Object.getPrototypeOf(new Set()[Symbol.iterator]());

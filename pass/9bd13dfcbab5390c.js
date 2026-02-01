@@ -1,0 +1,2 @@
+const requiredCalendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic-civil", "islamic-tbla", "islamic-umalqura", "iso8601", "japanese", "persian", "roc"];
+const supportedCalendars = Intl.supportedValuesOf("calendar");

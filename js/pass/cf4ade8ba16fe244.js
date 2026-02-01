@@ -1,0 +1,10 @@
+const obj = {
+    toString() {
+        throw 'custom error';
+    }
+};
+if (true) {
+  import.defer(obj).catch(error => {
+assert.sameValue(error, 'custom error');
+}).then($DONE, $DONE);
+}

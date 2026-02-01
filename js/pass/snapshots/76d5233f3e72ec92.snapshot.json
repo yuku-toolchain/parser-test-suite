@@ -1,0 +1,282 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "spreadableLengthOutOfRange",
+              "start": 4,
+              "end": 30
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [],
+              "start": 33,
+              "end": 35
+            },
+            "start": 4,
+            "end": 35
+          }
+        ],
+        "start": 0,
+        "end": 36
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "spreadableLengthOutOfRange",
+              "start": 37,
+              "end": 63
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "length",
+              "start": 64,
+              "end": 70
+            },
+            "optional": false,
+            "computed": false,
+            "start": 37,
+            "end": 70
+          },
+          "right": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "Number",
+              "start": 73,
+              "end": 79
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "MAX_SAFE_INTEGER",
+              "start": 80,
+              "end": 96
+            },
+            "optional": false,
+            "computed": false,
+            "start": 73,
+            "end": 96
+          },
+          "start": 37,
+          "end": 96
+        },
+        "start": 37,
+        "end": 97
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "spreadableLengthOutOfRange",
+              "start": 98,
+              "end": 124
+            },
+            "property": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Symbol",
+                "start": 125,
+                "end": 131
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "isConcatSpreadable",
+                "start": 132,
+                "end": 150
+              },
+              "optional": false,
+              "computed": false,
+              "start": 125,
+              "end": 150
+            },
+            "optional": false,
+            "computed": true,
+            "start": 98,
+            "end": 151
+          },
+          "right": {
+            "type": "Literal",
+            "value": true,
+            "raw": "true",
+            "start": 154,
+            "end": 158
+          },
+          "start": 98,
+          "end": 158
+        },
+        "start": 98,
+        "end": 159
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "proxyForArrayWithLengthOutOfRange",
+              "start": 164,
+              "end": 197
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 204,
+                "end": 209
+              },
+              "arguments": [
+                {
+                  "type": "ArrayExpression",
+                  "elements": [],
+                  "start": 210,
+                  "end": 212
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "get",
+                        "start": 218,
+                        "end": 221
+                      },
+                      "value": {
+                        "type": "FunctionExpression",
+                        "id": null,
+                        "generator": false,
+                        "async": false,
+                        "params": [
+                          {
+                            "type": "Identifier",
+                            "name": "_target",
+                            "start": 233,
+                            "end": 240
+                          },
+                          {
+                            "type": "Identifier",
+                            "name": "key",
+                            "start": 242,
+                            "end": 245
+                          }
+                        ],
+                        "body": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "IfStatement",
+                              "test": {
+                                "type": "BinaryExpression",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "key",
+                                  "start": 257,
+                                  "end": 260
+                                },
+                                "operator": "===",
+                                "right": {
+                                  "type": "Literal",
+                                  "value": "length",
+                                  "raw": "\"length\"",
+                                  "start": 265,
+                                  "end": 273
+                                },
+                                "start": 257,
+                                "end": 273
+                              },
+                              "consequent": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                      "type": "MemberExpression",
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "Number",
+                                        "start": 290,
+                                        "end": 296
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "MAX_SAFE_INTEGER",
+                                        "start": 297,
+                                        "end": 313
+                                      },
+                                      "optional": false,
+                                      "computed": false,
+                                      "start": 290,
+                                      "end": 313
+                                    },
+                                    "start": 283,
+                                    "end": 314
+                                  }
+                                ],
+                                "start": 275,
+                                "end": 320
+                              },
+                              "alternate": null,
+                              "start": 253,
+                              "end": 320
+                            }
+                          ],
+                          "start": 247,
+                          "end": 324
+                        },
+                        "expression": false,
+                        "start": 223,
+                        "end": 324
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 218,
+                      "end": 324
+                    }
+                  ],
+                  "start": 214,
+                  "end": 326
+                }
+              ],
+              "start": 200,
+              "end": 327
+            },
+            "start": 164,
+            "end": 327
+          }
+        ],
+        "start": 160,
+        "end": 328
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 328
+  },
+  "errors": [],
+  "comments": []
+}

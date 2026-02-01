@@ -1,0 +1,1 @@
+const WhiteSpace = '\uFEFF\u0020\u00A0\u202F';

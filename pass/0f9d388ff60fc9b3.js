@@ -1,0 +1,3 @@
+var buffer = new ArrayBuffer(8);
+var dv1 = new DataView(buffer, 0);
+var dv2 = new DataView(buffer, 0);

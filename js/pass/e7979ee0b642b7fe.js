@@ -1,0 +1,1 @@
+var noCoerce = Object.create(null);

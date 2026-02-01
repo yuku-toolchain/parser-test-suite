@@ -1,0 +1,5 @@
+const buffer = new SharedArrayBuffer(BigInt64Array.BYTES_PER_ELEMENT * 2);
+testWithBigIntTypedArrayConstructors(function (TA) {
+  const view = new TA(buffer);
+  testWithAtomicsOutOfBoundsIndices(function (IdxGen) {});
+});

@@ -1,0 +1,15 @@
+class C {
+  get [1.e1]() {
+    return 2;
+  }
+  set [1.e1](v) {
+    return 2;
+  }
+  static get [1.e1]() {
+    return 2;
+  }
+  static set [1.e1](v) {
+    return 2;
+  }
+}
+let c = new C();

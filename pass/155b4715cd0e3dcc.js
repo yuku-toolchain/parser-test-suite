@@ -1,0 +1,17 @@
+const plainDate = new Temporal.PlainDate(2000, 5, 2);
+const calendar = {
+  toString() {
+    return "iso8601";
+  }
+};
+const withOverflow = plainDate.toPlainDateTime({
+  hour: 25,
+  minute: 70,
+  second: 23
+});
+TemporalHelpers.assertPlainDateTime(withOverflow, 2000, 5, "M05", 2, 23, 59, 23, 0, 0, 0, "with overflow");
+const withCalendar = plainDate.toPlainDateTime({
+  hour: 13,
+  calendar
+});
+TemporalHelpers.assertPlainDateTime(withCalendar, 2000, 5, "M05", 2, 13, 0, 0, 0, 0, 0, "with calendar");

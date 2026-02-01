@@ -1,0 +1,4 @@
+var foo = 1;
+if (true) {
+  await foo;
+}

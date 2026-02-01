@@ -1,0 +1,109 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "my_eval",
+              "start": 4,
+              "end": 11
+            },
+            "init": {
+              "type": "Identifier",
+              "name": "eval",
+              "start": 14,
+              "end": 18
+            },
+            "start": 4,
+            "end": 18
+          }
+        ],
+        "start": 0,
+        "end": 19
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "my_eval",
+            "start": 20,
+            "end": 27
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "\"use strict\";\ngNonStrict();",
+              "raw": "\"\\\"use strict\\\";\\ngNonStrict();\"",
+              "start": 28,
+              "end": 60
+            }
+          ],
+          "optional": false,
+          "start": 20,
+          "end": 61
+        },
+        "start": 20,
+        "end": 62
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "gNonStrict",
+          "start": 72,
+          "end": 82
+        },
+        "generator": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "gNonStrict",
+                  "start": 96,
+                  "end": 106
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "caller",
+                  "start": 107,
+                  "end": 113
+                },
+                "optional": false,
+                "computed": false,
+                "start": 96,
+                "end": 113
+              },
+              "start": 89,
+              "end": 114
+            }
+          ],
+          "start": 85,
+          "end": 116
+        },
+        "expression": false,
+        "start": 63,
+        "end": 116
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 116
+  },
+  "errors": [],
+  "comments": []
+}

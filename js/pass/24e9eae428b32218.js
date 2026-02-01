@@ -1,0 +1,5 @@
+delete Array.prototype[Symbol.iterator];
+class C {
+  async *method([x, y, z] = [1, 2, 3]) {}
+}
+var method = C.prototype.method;

@@ -1,0 +1,21 @@
+var obj = {};
+function get_func() {
+  return 10;
+}
+function set_func(value) {
+  obj.setVerifyHelpProp = value;
+}
+Object.defineProperty(obj, "foo", {
+  get: get_func,
+  set: set_func,
+  enumerable: true,
+  configurable: true
+});
+function get_func2() {
+  return 20;
+}
+Object.defineProperties(obj, {
+  foo: {
+    get: get_func2
+  }
+});

@@ -1,0 +1,1 @@
+var result = eval('{}let a, b = 42, c;b;');

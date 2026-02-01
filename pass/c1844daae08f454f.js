@@ -1,0 +1,1 @@
+delete Number.prototype.toString;

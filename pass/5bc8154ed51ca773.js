@@ -1,0 +1,1 @@
+eval('for (let f of [0]) {if (false) function _f() {} else function f() {  }}');

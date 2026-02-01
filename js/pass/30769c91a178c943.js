@@ -1,0 +1,3 @@
+var position = {
+  valueOf: function () {}
+};

@@ -1,0 +1,19 @@
+var iterDoneSpy = {};
+var callCount = 0;
+iterDoneSpy[Symbol.iterator] = function () {
+  return {
+    next() {
+      return {
+        value: null,
+        done: false
+      };
+    },
+    return() {
+      callCount += 1;
+    }
+  };
+};
+Promise.resolve = function () {
+  throw new Error();
+};
+Promise.allSettled(iterDoneSpy);

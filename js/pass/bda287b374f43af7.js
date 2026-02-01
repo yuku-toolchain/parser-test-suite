@@ -1,0 +1,5 @@
+var init;
+(function () {
+  eval('var f = 123;\
+    init = f;if (false) ; else function f() {  }');
+})();

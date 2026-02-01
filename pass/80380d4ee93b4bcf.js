@@ -1,0 +1,17 @@
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+var other = $262.createRealm().global;
+var OtherAsyncFunction = Object.getPrototypeOf(other.eval('(0, async function() {})')).constructor;
+var newTarget = new other.Function();
+var fn;
+newTarget.prototype = undefined;
+fn = Reflect.construct(AsyncFunction, [], newTarget);
+newTarget.prototype = null;
+fn = Reflect.construct(AsyncFunction, [], newTarget);
+newTarget.prototype = true;
+fn = Reflect.construct(AsyncFunction, [], newTarget);
+newTarget.prototype = '';
+fn = Reflect.construct(AsyncFunction, [], newTarget);
+newTarget.prototype = Symbol();
+fn = Reflect.construct(AsyncFunction, [], newTarget);
+newTarget.prototype = 1;
+fn = Reflect.construct(AsyncFunction, [], newTarget);

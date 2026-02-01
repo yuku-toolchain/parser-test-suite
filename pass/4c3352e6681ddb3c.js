@@ -1,0 +1,23 @@
+function callbackfn(val, idx, obj) {
+  if (idx === 1 && val === 6.99) {
+    return false;
+  } else {
+    return true;
+  }
+}
+var obj = {
+  length: 2
+};
+Object.defineProperty(obj, "0", {
+  get: function () {
+    Object.defineProperty(Object.prototype, "1", {
+      get: function () {
+        return 6.99;
+      },
+      configurable: true
+    });
+    return 0;
+  },
+  configurable: true
+});
+var testResult = Array.prototype.map.call(obj, callbackfn);

@@ -1,0 +1,3 @@
+if (true) {
+  await await await await await await await await await await await await await await await 'await';
+}

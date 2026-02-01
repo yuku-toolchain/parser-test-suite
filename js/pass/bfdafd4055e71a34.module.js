@@ -1,0 +1,3 @@
+var value = await new Promise(function (res, rej) {
+  res(42);
+});

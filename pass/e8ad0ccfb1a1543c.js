@@ -1,0 +1,15 @@
+var lo = '\uD834';
+var hi = '\uDF06';
+var pair = lo + hi;
+var string = 'a' + pair + 'b' + lo + pair + hi + lo;
+var iterator = string[Symbol.iterator]();
+var result;
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();

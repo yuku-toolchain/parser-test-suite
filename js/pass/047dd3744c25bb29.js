@@ -1,0 +1,1 @@
+TemporalHelpers.checkSubclassingIgnoredStatic(Temporal.Instant, "fromEpochMilliseconds", [10], result => {});

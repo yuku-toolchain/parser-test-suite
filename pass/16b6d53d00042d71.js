@@ -1,0 +1,1 @@
+const getTimeZones = Intl.Locale.prototype.getTimeZones;

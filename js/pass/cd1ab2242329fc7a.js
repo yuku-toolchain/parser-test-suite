@@ -1,0 +1,7 @@
+const time = new Temporal.PlainTime(12, 34, 56, 0, 0, 5);
+const result = time.round({
+  smallestUnit: "nanosecond",
+  roundingIncrement: 2.5,
+  roundingMode: "expand"
+});
+TemporalHelpers.assertPlainTime(result, 12, 34, 56, 0, 0, 6, "roundingIncrement 2.5 truncates to 2");

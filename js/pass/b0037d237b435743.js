@@ -1,0 +1,11 @@
+var fn = function (a, b, c) {};
+fn[Symbol.isConcatSpreadable] = true;
+(fn[0] = 1, fn[1] = 2, fn[2] = 3);
+Function.prototype[Symbol.isConcatSpreadable] = true;
+Function.prototype[0] = 1;
+Function.prototype[1] = 2;
+Function.prototype[2] = 3;
+delete Function.prototype[Symbol.isConcatSpreadable];
+delete Function.prototype[0];
+delete Function.prototype[1];
+delete Function.prototype[2];

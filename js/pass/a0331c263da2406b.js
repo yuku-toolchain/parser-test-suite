@@ -1,0 +1,1 @@
+const timeZoneId = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "timeZoneId").get;

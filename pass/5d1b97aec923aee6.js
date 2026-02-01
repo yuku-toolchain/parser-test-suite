@@ -1,0 +1,1 @@
+const formatRange = Intl.NumberFormat.prototype.formatRange;

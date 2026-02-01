@@ -1,0 +1,2 @@
+const invalidOptions = ["", "a", "ab", "abcdefghi", "abc-abcdefghi", "!invalid!", "-latn-", "latn-", "latn--", "latn-ca", "latn-ca-", "latn-ca-gregory", "latné", "latn编号"];
+for (const numberingSystem of invalidOptions) {}

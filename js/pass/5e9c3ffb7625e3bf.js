@@ -1,0 +1,19 @@
+const validOptions = [[undefined, "long"], ["long", "long"], ["short", "short"], ["narrow", "narrow"], [{
+  toString() {
+    return "short";
+  }
+}, "short"], [{
+  toString() {
+    return "long";
+  }
+}, "long"], [{
+  toString() {
+    return "narrow";
+  }
+}, "narrow"]];
+for (const [validOption, expected] of validOptions) {
+  const lf = new Intl.ListFormat([], {
+    "style": validOption
+  });
+  const resolvedOptions = lf.resolvedOptions();
+}

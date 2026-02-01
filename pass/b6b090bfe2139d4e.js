@@ -1,0 +1,1 @@
+for (var p in Object.prototype.propertyIsEnumerable) {}

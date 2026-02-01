@@ -1,0 +1,10 @@
+const validValues = [new Temporal.PlainDateTime(2000, 5, 2, 12), new Temporal.PlainDate(2000, 5, 2), new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC"), {
+  year: 2000,
+  month: 5,
+  day: 2,
+  hour: 12
+}, "2000-05-02T12:00"];
+const badOverflows = ["", "CONSTRAIN", "balance", "other string", "constra\u0131n", "reject\0"];
+for (const value of validValues) {
+  for (const overflow of badOverflows) {}
+}

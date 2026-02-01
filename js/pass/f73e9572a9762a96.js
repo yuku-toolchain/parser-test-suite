@@ -1,0 +1,12 @@
+testWithBigIntTypedArrayConstructors(function (TA) {
+  var sample = new TA(2);
+  const rab = new ArrayBuffer(10, {
+    maxByteLength: 20
+  });
+  const lengthTracking = new TA(rab);
+  sample.constructor = {};
+  sample.constructor[Symbol.species] = function () {
+    return lengthTracking;
+  };
+  rab.resize(0);
+});

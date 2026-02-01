@@ -1,0 +1,1 @@
+var b = Object.isFrozen(String.prototype);

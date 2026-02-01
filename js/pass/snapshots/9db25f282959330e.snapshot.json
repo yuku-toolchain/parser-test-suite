@@ -1,0 +1,301 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "sum",
+              "start": 4,
+              "end": 7
+            },
+            "init": {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "a",
+                  "start": 20,
+                  "end": 21
+                },
+                {
+                  "type": "Identifier",
+                  "name": "b",
+                  "start": 23,
+                  "end": 24
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 37,
+                            "end": 41
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "foo",
+                            "start": 42,
+                            "end": 45
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 37,
+                          "end": 45
+                        },
+                        "operator": "+",
+                        "right": {
+                          "type": "Identifier",
+                          "name": "a",
+                          "start": 48,
+                          "end": 49
+                        },
+                        "start": 37,
+                        "end": 49
+                      },
+                      "operator": "+",
+                      "right": {
+                        "type": "Identifier",
+                        "name": "b",
+                        "start": 52,
+                        "end": 53
+                      },
+                      "start": 37,
+                      "end": 53
+                    },
+                    "start": 30,
+                    "end": 54
+                  }
+                ],
+                "start": 26,
+                "end": 56
+              },
+              "expression": false,
+              "start": 10,
+              "end": 56
+            },
+            "start": 4,
+            "end": 56
+          }
+        ],
+        "start": 0,
+        "end": 57
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "sumBound",
+              "start": 62,
+              "end": 70
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "sum",
+                  "start": 73,
+                  "end": 76
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "bind",
+                  "start": 77,
+                  "end": 81
+                },
+                "optional": false,
+                "computed": false,
+                "start": 73,
+                "end": 81
+              },
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "foo",
+                        "start": 86,
+                        "end": 89
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": 10,
+                        "raw": "10",
+                        "start": 91,
+                        "end": 93
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 86,
+                      "end": 93
+                    }
+                  ],
+                  "start": 82,
+                  "end": 95
+                },
+                {
+                  "type": "Literal",
+                  "value": 1,
+                  "raw": "1",
+                  "start": 97,
+                  "end": 98
+                }
+              ],
+              "optional": false,
+              "start": 73,
+              "end": 99
+            },
+            "start": 62,
+            "end": 99
+          }
+        ],
+        "start": 58,
+        "end": 100
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "sumTarget",
+              "start": 105,
+              "end": 114
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 121,
+                "end": 126
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "sumBound",
+                  "start": 127,
+                  "end": 135
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 137,
+                  "end": 139
+                }
+              ],
+              "start": 117,
+              "end": 140
+            },
+            "start": 105,
+            "end": 140
+          }
+        ],
+        "start": 101,
+        "end": 141
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "sumProxy",
+              "start": 146,
+              "end": 154
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 161,
+                "end": 166
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "sumTarget",
+                  "start": 167,
+                  "end": 176
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "apply",
+                        "start": 182,
+                        "end": 187
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "start": 189,
+                        "end": 193
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 182,
+                      "end": 193
+                    }
+                  ],
+                  "start": 178,
+                  "end": 195
+                }
+              ],
+              "start": 157,
+              "end": 196
+            },
+            "start": 146,
+            "end": 196
+          }
+        ],
+        "start": 142,
+        "end": 197
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 197
+  },
+  "errors": [],
+  "comments": []
+}

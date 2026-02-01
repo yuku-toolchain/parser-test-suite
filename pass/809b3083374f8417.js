@@ -1,0 +1,1 @@
+Object.prototype[0] = false;

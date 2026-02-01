@@ -1,0 +1,10 @@
+var symbol = Symbol();
+var thrower = function () {};
+var p = new Promise(function () {});
+p.then = undefined;
+p.then = null;
+p.then = 1;
+p.then = '';
+p.then = true;
+p.then = symbol;
+p.then = {};

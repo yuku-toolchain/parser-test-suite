@@ -1,0 +1,14 @@
+var data = "data";
+var descObj = {};
+Object.defineProperty(descObj, "set", {
+  get: function () {
+    return function (value) {
+      data = value;
+    };
+  }
+});
+var newObj = Object.create({}, {
+  prop: descObj
+});
+var hasProperty = newObj.hasOwnProperty("prop");
+newObj.prop = "overrideData";

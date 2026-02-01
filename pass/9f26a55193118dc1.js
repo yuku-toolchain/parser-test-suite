@@ -1,0 +1,1 @@
+var __executed = (/o+/).test("abcdefg");

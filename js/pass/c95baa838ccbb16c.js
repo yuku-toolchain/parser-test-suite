@@ -1,0 +1,1 @@
+var __executed = (/[xyz]*1/).test('a0.b2.c3');

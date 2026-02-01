@@ -1,0 +1,12 @@
+var obj = {};
+Object.defineProperty(obj, "foo", {
+  value: 100,
+  writable: true,
+  enumerable: true,
+  configurable: true
+});
+Object.defineProperty(obj, "foo", {
+  value: 200,
+  writable: false,
+  enumerable: false
+});

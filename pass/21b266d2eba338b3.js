@@ -1,0 +1,1 @@
+var str = String.fromCharCode(0x180E);

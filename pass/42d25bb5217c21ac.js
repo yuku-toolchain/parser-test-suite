@@ -1,0 +1,1 @@
+var matchAll = String.prototype.matchAll;

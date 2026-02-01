@@ -1,0 +1,24 @@
+var result;
+var proto = {
+  set p(v) {
+    result = "ok";
+  }
+};
+var proto2 = {
+  set p(v) {
+    result = "bad";
+  }
+};
+var obj = {
+  __proto__: proto,
+  m() {
+    super[key] = 10;
+  }
+};
+var key = {
+  toString() {
+    Object.setPrototypeOf(obj, proto2);
+    return "p";
+  }
+};
+obj.m();

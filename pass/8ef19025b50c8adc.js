@@ -1,0 +1,11 @@
+var obj = {};
+var props = function () {};
+var result = false;
+Object.defineProperty(props, "prop", {
+  get: function () {
+    result = this instanceof Function;
+    return {};
+  },
+  enumerable: true
+});
+Object.defineProperties(obj, props);

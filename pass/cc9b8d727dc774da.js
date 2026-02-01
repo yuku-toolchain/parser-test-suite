@@ -1,0 +1,1 @@
+/\P{Grapheme_Link}/u;

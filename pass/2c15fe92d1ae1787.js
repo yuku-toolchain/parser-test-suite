@@ -1,0 +1,59 @@
+function* zip(a, b) {
+  for (let i = 0; i < a.length; ++i) {
+    yield [i, a[i], b[i]];
+  }
+}
+function compare(actual, expected) {
+  for (const [i, actualEntry, expectedEntry] of zip(actual, expected)) {}
+}
+{
+  const date = new Date(2019, 7, 10, 1, 2, 3, 234);
+  let dtf = new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date, date), dtf.formatToParts(date), "same output with date options");
+  dtf = new Intl.DateTimeFormat("en", {
+    minute: "numeric",
+    second: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date, date), dtf.formatToParts(date), "same output with time options");
+  dtf = new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    minute: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date, date), dtf.formatToParts(date), "same output with date-time options");
+  dtf = new Intl.DateTimeFormat("en", {
+    dateStyle: "long",
+    timeStyle: "short"
+  });
+  compare(dtf.formatRangeToParts(date, date), dtf.formatToParts(date), "same output with dateStyle/timeStyle");
+}
+{
+  const date1 = new Date(2019, 7, 10, 1, 2, 3, 234);
+  const date2 = new Date(2019, 7, 10, 1, 2, 3, 235);
+  let dtf = new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date1, date2), dtf.formatToParts(date1), "same output with date options");
+  dtf = new Intl.DateTimeFormat("en", {
+    minute: "numeric",
+    second: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date1, date2), dtf.formatToParts(date1), "same output with time options");
+  dtf = new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    minute: "numeric"
+  });
+  compare(dtf.formatRangeToParts(date1, date2), dtf.formatToParts(date1), "same output with date-time options");
+  dtf = new Intl.DateTimeFormat("en", {
+    dateStyle: "long",
+    timeStyle: "short"
+  });
+  compare(dtf.formatRangeToParts(date1, date2), dtf.formatToParts(date1), "same output with dateStyle/timeStyle");
+}

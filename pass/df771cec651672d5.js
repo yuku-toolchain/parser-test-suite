@@ -1,0 +1,8 @@
+let rab = CreateResizableArrayBuffer(100, 200);
+for (let ctor of ctors) {
+  const ta = new ctor(rab, 0, 3);
+  let keys = '';
+  for (const key in ta) {
+    keys += key;
+  }
+}

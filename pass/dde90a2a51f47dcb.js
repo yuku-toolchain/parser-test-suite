@@ -1,0 +1,1 @@
+var result = [0, 1, 2, 3, 4].toSpliced(10, 1, 5, 6);

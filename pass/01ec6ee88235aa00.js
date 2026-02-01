@@ -1,0 +1,1 @@
+const seconds = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "seconds").get;

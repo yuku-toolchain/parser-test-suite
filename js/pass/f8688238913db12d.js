@@ -1,0 +1,34 @@
+const RUNNING = 1;
+$262.agent.start(`
+  const poisonedValueOf = {
+    valueOf() {
+      throw new Error('should not evaluate this code');
+    }
+  };
+const poisonedToPrimitive = {
+    [Symbol.toPrimitive]() {
+      throw new Error('passing a poisoned object using @@ToPrimitive');
+    }
+  };
+$262.agent.receiveBroadcast(function(sab) {
+    const i32a = new Int32Array(sab);
+    Atomics.add(i32a, ${RUNNING}, 1);
+let status1 = '';
+    let status2 = '';
+try {
+      Atomics.waitAsync(i32a, 0, 0, poisonedValueOf);
+    } catch (error) {
+      status1 = 'poisonedValueOf';
+    }
+    try {
+      Atomics.waitAsync(i32a, 0, 0, poisonedToPrimitive);
+    } catch (error) {
+      status2 = 'poisonedToPrimitive';
+    }
+$262.agent.report(status1);
+    $262.agent.report(status2);
+    $262.agent.leaving();
+  });
+`);
+const i32a = new Int32Array(new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT * 4));
+$262.agent.safeBroadcastAsync(i32a, RUNNING, 1).then(async agentCount => {}).then($DONE, $DONE);

@@ -1,0 +1,8 @@
+const instance = new Temporal.PlainDate(1976, 11, 18);
+const validStrings = ["-271821-04-19", "-271821-04-19T01:00", "+275760-09-13", "+275760-09-13T23:00"];
+for (const arg of validStrings) {
+  Temporal.PlainDate.compare(arg, instance);
+  Temporal.PlainDate.compare(instance, arg);
+}
+const invalidStrings = ["-271821-04-18", "-271821-04-18T23:00", "+275760-09-14", "+275760-09-14T01:00"];
+for (const arg of invalidStrings) {}

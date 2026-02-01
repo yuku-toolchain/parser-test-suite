@@ -1,0 +1,1 @@
+if (String("undefined").lastIndexOf(undefined) !== 0) {}

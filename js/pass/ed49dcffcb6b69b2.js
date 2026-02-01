@@ -1,0 +1,1 @@
+if (("abcd").indexOf("abcdab", NaN) !== -1) {}

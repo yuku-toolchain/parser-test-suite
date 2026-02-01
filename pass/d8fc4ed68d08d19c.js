@@ -1,0 +1,6 @@
+const zdt = new Temporal.ZonedDateTime(0n, "UTC");
+["", "EARLIER", "balance"].forEach(disambiguation => assert.throws(RangeError, () => zdt.with({
+  day: 5
+}, {
+  disambiguation
+})));

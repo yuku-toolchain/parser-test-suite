@@ -1,0 +1,12 @@
+var error = {};
+var thenable = {
+  then: function (resolve, reject) {
+    throw error;
+  }
+};
+var caught = false;
+try {
+  await thenable;
+} catch (e) {
+  caught = e;
+}

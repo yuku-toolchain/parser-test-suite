@@ -1,0 +1,1 @@
+const inst = new Temporal.Instant(500000n);
