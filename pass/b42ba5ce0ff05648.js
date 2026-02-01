@@ -1,9 +1,0 @@
-const timeZone = "America/Vancouver";
-const springForwardDatetime = new Temporal.PlainDateTime(2000, 4, 2, 2, 30);
-const fallBackDatetime = new Temporal.PlainDateTime(2000, 10, 29, 1, 30);
-[[springForwardDatetime, 954671400_000_000_000n], [fallBackDatetime, 972808200_000_000_000n]].forEach(([datetime, expected]) => {
-  const explicit = datetime.toZonedDateTime(timeZone, {
-    disambiguation: undefined
-  });
-  const implicit = datetime.toZonedDateTime(timeZone, {});
-});

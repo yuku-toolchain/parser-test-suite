@@ -1,6 +1,0 @@
-var from = new Temporal.PlainDate(1970, 1, 1);
-var to = new Temporal.PlainDate(1971, 1, 1);
-var options = {
-  roundingIncrement: 100_000_000,
-  smallestUnit: "months"
-};

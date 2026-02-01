@@ -1,1 +1,0 @@
-const second = Object.getOwnPropertyDescriptor(Temporal.PlainTime.prototype, "second").get;

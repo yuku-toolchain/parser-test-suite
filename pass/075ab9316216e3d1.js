@@ -1,8 +1,0 @@
-class C {
-  #m = async () => 'test262';
-  method() {
-    return this.#m();
-  }
-}
-let c = new C();
-c.method().then(value => assert.sameValue(value, 'test262')).then($DONE, $DONE);

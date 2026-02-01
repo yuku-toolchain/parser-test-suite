@@ -1,1 +1,0 @@
-for (const invalidTag of getInvalidLanguageTags()) {}

@@ -1,8 +1,0 @@
-const instance = new Temporal.PlainYearMonth(2019, 6);
-const calendar = "2016-12-31T23:59:60";
-const arg = {
-  year: 2019,
-  monthCode: "M06",
-  calendar
-};
-const result = instance.equals(arg);

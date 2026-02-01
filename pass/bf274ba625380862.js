@@ -1,4 +1,0 @@
-if (true << null !== 1) {}
-if (null << true !== 0) {}
-if (new Boolean(true) << null !== 1) {}
-if (null << new Boolean(true) !== 0) {}

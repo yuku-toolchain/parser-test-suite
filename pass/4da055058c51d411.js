@@ -1,1 +1,0 @@
-var result = (/d/)[Symbol.split]('abcdefg');

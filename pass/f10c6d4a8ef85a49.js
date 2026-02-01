@@ -1,1 +1,0 @@
-const toJSON = Temporal.PlainTime.prototype.toJSON;

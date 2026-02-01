@@ -1,1 +1,0 @@
-const daysInYear = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "daysInYear").get;

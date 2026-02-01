@@ -1,1 +1,0 @@
-if (await await await await await await await await await await await await await await await 'await') {}

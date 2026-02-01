@@ -1,1 +1,0 @@
-var subject = /test262/ig;

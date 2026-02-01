@@ -1,1 +1,0 @@
-if (String("undefined").search(undefined) !== 0) {}

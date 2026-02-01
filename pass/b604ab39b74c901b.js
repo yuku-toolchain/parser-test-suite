@@ -1,1 +1,0 @@
-var descriptor = Object.getOwnPropertyDescriptor(Map, Symbol.species);

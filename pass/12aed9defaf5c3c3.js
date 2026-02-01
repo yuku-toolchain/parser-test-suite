@@ -1,1 +1,0 @@
-if (delete x !== true) {}

@@ -1,2 +1,0 @@
-export let x = await await await await await await await await await await await await await await await 'await';
-export const y = await await await await await await await await await await await await await await await 'await';

@@ -1,4 +1,0 @@
-function fn() {
-  return function () {};
-}
-export class C extends fn(await (function () {})) {}

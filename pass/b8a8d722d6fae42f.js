@@ -1,5 +1,0 @@
-var speciesConstructor = {};
-speciesConstructor[Symbol.species] = undefined;
-var arrayBuffer = new SharedArrayBuffer(8);
-arrayBuffer.constructor = speciesConstructor;
-var result = arrayBuffer.slice();

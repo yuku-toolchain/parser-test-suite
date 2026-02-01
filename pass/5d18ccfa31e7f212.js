@@ -1,1 +1,0 @@
-var nullChar = String.fromCharCode(0);

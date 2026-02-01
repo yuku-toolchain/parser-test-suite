@@ -1,9 +1,0 @@
-var arr = [];
-Object.defineProperty(arr, "0", {
-  value: 101
-});
-Object.defineProperties(arr, {
-  "0": {
-    value: 101
-  }
-});

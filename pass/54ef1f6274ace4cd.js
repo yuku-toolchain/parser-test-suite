@@ -1,6 +1,0 @@
-async function thisFn() {
-  return await this?.a;
-}
-thisFn.call({
-  a: Promise.resolve(33)
-}).then(function (arg) {}).then($DONE, $DONE);

@@ -1,1 +1,0 @@
-var split = String.prototype.split;

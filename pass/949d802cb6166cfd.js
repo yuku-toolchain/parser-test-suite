@@ -1,1 +1,0 @@
-if (("smart").charCodeAt() !== 0x73) {}

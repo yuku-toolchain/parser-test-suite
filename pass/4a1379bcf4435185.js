@@ -1,1 +1,0 @@
-var errObj = new Error("ErrorMessage");

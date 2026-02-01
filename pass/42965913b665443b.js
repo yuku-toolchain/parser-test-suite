@@ -1,1 +1,0 @@
-const month = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "month").get;

@@ -1,1 +1,0 @@
-if (eval("var x = 1") !== undefined) {}

@@ -1,1 +1,0 @@
-var __re = new RegExp(Math, eval("\"g\""));

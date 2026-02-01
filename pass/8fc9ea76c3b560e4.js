@@ -1,1 +1,0 @@
-var toUpperCase = String.prototype.toUpperCase;

@@ -1,1 +1,0 @@
-var toLocaleLowerCase = String.prototype.toLocaleLowerCase;

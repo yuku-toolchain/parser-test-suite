@@ -1,1 +1,0 @@
-var locales = ["en-US", "this is not a valid locale"];

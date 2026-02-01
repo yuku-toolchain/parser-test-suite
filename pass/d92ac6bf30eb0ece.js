@@ -1,1 +1,0 @@
-var foo = new Function("'use strict';");

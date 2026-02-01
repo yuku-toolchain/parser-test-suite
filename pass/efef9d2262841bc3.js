@@ -1,1 +1,0 @@
-let groups = (/(?<a>.)(?<b>.)(?<c>.)\k<c>\k<b>\k<a>/d).exec("abccba").indices.groups;

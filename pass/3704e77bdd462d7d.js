@@ -1,1 +1,0 @@
-const years = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "years").get;

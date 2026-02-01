@@ -1,5 +1,0 @@
-var result = false;
-function callbackfn(prevVal, curVal, idx) {
-  result = prevVal === 1 && arguments[3][idx] === curVal;
-}
-[11].reduce(callbackfn, 1);

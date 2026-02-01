@@ -1,3 +1,0 @@
-while (await (function () {})) {
-  break;
-}

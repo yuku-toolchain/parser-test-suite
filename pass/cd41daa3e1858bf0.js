@@ -1,1 +1,0 @@
-var formatToParts = Intl.DateTimeFormat.prototype.formatToParts;

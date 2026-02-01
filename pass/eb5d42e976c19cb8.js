@@ -1,3 +1,0 @@
-[null, undefined, true, 3.1416, "a string", Symbol("symbol"), 7n].forEach(primitive => {
-  const plainMonthDay = new Temporal.PlainMonthDay(5, 2);
-});

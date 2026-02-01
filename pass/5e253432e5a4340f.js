@@ -1,1 +1,0 @@
-/\P{Other_Uppercase}/u;

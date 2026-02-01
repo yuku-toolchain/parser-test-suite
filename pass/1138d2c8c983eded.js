@@ -1,1 +1,0 @@
-var findLast = TypedArray.prototype.findLast;

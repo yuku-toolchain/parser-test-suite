@@ -1,1 +1,0 @@
-import * as ns from './omitted-from-namespace_FIXTURE.js';

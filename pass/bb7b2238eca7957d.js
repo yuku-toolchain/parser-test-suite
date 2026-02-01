@@ -1,1 +1,0 @@
-if (new Object().newProperty !== undefined) {}

@@ -1,4 +1,0 @@
-{
-  x;
-  using x = null;
-}

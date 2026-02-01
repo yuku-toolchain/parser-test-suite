@@ -1,1 +1,0 @@
-/\\P{Script_Extensions=H_e_h}/u;

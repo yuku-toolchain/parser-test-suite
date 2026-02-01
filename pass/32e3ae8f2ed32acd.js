@@ -1,1 +1,0 @@
-const getWeekInfo = Intl.Locale.prototype.getWeekInfo;

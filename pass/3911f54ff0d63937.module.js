@@ -1,1 +1,0 @@
-import defer * as ns from "./syntax-error_FIXTURE.js";

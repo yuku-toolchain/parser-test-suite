@@ -1,2 +1,0 @@
-const tests = [new Temporal.PlainDateTime(1976, 1, 1, 15, 23, 30, 123, 456, 789), new Temporal.PlainDateTime(1976, 11, 18, 15, 23, 30, 123, 456, 789), new Temporal.PlainDateTime(1976, 12, 31, 15, 23, 30, 123, 456, 789)];
-for (const plainDateTime of tests) {}

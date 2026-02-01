@@ -1,2 +1,0 @@
-const d = new Temporal.Duration(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
-const expected = "-P1Y1M1W1DT1H1M1.001001001S";

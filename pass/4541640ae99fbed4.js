@@ -1,1 +1,0 @@
-var result = (/b(.).(.)./)[Symbol.match]('abcdefg');

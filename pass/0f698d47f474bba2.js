@@ -1,1 +1,0 @@
-Function('a,a', 'return;');

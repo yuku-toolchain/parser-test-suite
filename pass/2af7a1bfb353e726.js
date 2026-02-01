@@ -1,4 +1,0 @@
-const earlier = new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC");
-const later = new Temporal.ZonedDateTime(1_000_090_061_987_654_321n, "UTC");
-const badValues = ["era", "eraYear", "millisecond\0", "mill\u0131second", "SECOND", "eras", "eraYears", "milliseconds\0", "mill\u0131seconds", "SECONDS", "other string"];
-for (const smallestUnit of badValues) {}

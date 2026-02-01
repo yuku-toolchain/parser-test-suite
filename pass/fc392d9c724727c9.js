@@ -1,1 +1,0 @@
-var __re = new RegExp(1, new Object("gi"));

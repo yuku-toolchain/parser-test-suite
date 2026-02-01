@@ -1,1 +1,0 @@
-Function("this.field=\"battle\"").call(void 0);

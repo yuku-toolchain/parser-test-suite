@@ -1,1 +1,0 @@
-var __executed = (/\d{2,4}/).test("the 7 movie");

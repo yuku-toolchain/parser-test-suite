@@ -1,1 +1,0 @@
-var call = Function.prototype.call;

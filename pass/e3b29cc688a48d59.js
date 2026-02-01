@@ -1,3 +1,0 @@
-const poisoned = {
-  valueOf: function () {}
-};

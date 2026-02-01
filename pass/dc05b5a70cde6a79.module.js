@@ -1,1 +1,0 @@
-import * as ns from './is-extensible.js';

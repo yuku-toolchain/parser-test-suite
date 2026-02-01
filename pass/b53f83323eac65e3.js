@@ -1,1 +1,0 @@
-if (eval("\"BJ\"").toLowerCase() !== "bj") {}

@@ -1,4 +1,0 @@
-switch (true) {
-  case true:
-    let x;
-}

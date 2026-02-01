@@ -1,1 +1,0 @@
-var locales = Intl.getCanonicalLocales(['en-US', 'en-US']);

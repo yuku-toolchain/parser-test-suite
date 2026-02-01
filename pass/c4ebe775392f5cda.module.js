@@ -1,1 +1,0 @@
-import value from './json-invalid_FIXTURE.json' with { type: 'json' };

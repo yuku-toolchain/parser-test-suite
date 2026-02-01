@@ -1,1 +1,0 @@
-var __split = ("").split();

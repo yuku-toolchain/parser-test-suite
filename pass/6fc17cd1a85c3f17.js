@@ -1,1 +1,0 @@
-/\p{Expands_On_NFD}/u;

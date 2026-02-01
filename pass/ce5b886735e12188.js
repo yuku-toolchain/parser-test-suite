@@ -1,1 +1,0 @@
-var result = ["first", "second", "third"].toSpliced(1, undefined);

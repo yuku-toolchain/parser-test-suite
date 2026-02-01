@@ -1,6 +1,0 @@
-class Sub extends Array {
-  constructor(a) {
-    super(a);
-  }
-}
-var sub = new Sub(42);

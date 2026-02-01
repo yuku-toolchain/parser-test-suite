@@ -1,1 +1,0 @@
-const toLocaleString = Temporal.ZonedDateTime.prototype.toLocaleString;

@@ -1,8 +1,0 @@
-var accessed = false;
-function callbackfn(prevVal, curVal, idx, obj) {
-  accessed = true;
-  return '[object Arguments]' === Object.prototype.toString.call(obj);
-}
-var obj = (function () {
-  return arguments;
-})("a", "b");

@@ -1,8 +1,0 @@
-var testResult = false;
-function callbackfn(prevVal, curVal, idx, obj) {
-  if (idx === 1) {
-    testResult = prevVal === 2;
-  }
-}
-Array.prototype[2] = "11";
-[0, 1, 2].reduceRight(callbackfn);

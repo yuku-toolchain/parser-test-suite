@@ -1,3 +1,0 @@
-class C {}
-let a, b = 42, c;
-b;

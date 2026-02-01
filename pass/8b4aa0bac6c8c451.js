@@ -1,1 +1,0 @@
-const date = new Temporal.PlainMonthDay(5, 2, "gregory");

@@ -1,6 +1,0 @@
-const output = new Intl.Locale('en').getHourCycles();
-assert(output.length > 0, 'array has at least one element');
-output.forEach(hc => {
-  if(!['h11', 'h12', 'h23', 'h24'].includes(hc))
-    throw new Test262Error();
-});

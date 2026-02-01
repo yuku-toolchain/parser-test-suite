@@ -1,1 +1,0 @@
-var formatFn = Object.getOwnPropertyDescriptor(Intl.DateTimeFormat.prototype, "format").get;

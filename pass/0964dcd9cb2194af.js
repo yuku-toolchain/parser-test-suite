@@ -1,1 +1,0 @@
-const descriptor = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "calendarId");

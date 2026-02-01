@@ -1,3 +1,0 @@
-const datetime = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 123, 987, 500);
-const badValues = ["era", "eraYear", "year", "month", "week", "day", "hour", "millisecond\0", "mill\u0131second", "SECOND", "eras", "eraYears", "years", "months", "weeks", "days", "hours", "milliseconds\0", "mill\u0131seconds", "SECONDS", "other string"];
-for (const smallestUnit of badValues) {}

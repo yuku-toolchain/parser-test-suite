@@ -1,6 +1,0 @@
-var result = false;
-var objString = function () {};
-function callbackfn(val, idx, obj) {
-  result = this === objString;
-}
-[11].forEach(callbackfn, objString);

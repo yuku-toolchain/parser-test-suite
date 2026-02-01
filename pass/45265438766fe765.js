@@ -1,7 +1,0 @@
-const earlier = new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC");
-const later = new Temporal.ZonedDateTime(1_000_000_000_000_000_005n, "UTC");
-const result = earlier.until(later, {
-  roundingIncrement: 2.5,
-  roundingMode: "trunc"
-});
-TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, "roundingIncrement 2.5 truncates to 2");

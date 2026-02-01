@@ -1,1 +1,0 @@
-var str = "initialValue is present";

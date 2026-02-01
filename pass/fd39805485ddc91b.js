@@ -1,1 +1,0 @@
-delete Boolean.prototype.toString;

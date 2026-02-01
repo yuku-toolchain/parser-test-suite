@@ -1,1 +1,0 @@
-if (eval.length !== 1) {}

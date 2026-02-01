@@ -1,1 +1,0 @@
-var s = new Set([0, undefined, false, NaN, null, "", Symbol()]);

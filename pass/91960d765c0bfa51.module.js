@@ -1,1 +1,0 @@
-var x = await void 1;

@@ -1,9 +1,0 @@
-const instance = new Temporal.PlainYearMonth(2019, 6);
-const calendar = "2016-12-31T23:59:60";
-const arg = {
-  year: 2019,
-  monthCode: "M06",
-  calendar
-};
-const result = instance.until(arg);
-TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "leap second is a valid ISO string for calendar");

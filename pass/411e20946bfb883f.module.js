@@ -1,1 +1,0 @@
-const ToStringTag = Object.getOwnPropertyDescriptor($262.AbstractModuleSource.prototype, Symbol.toStringTag).get;

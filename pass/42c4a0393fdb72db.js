@@ -1,1 +1,0 @@
-var concat = String.prototype.concat;

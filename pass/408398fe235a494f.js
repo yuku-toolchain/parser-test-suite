@@ -1,2 +1,0 @@
-const tests = [new Temporal.ZonedDateTime(189357810123456789n, "UTC"), new Temporal.ZonedDateTime(217178610123456789n, "UTC"), new Temporal.ZonedDateTime(220893810123456789n, "UTC")];
-for (const zonedDateTime of tests) {}

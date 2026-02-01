@@ -1,1 +1,0 @@
-var __executed = (/^xxx/).test("yyyyy");

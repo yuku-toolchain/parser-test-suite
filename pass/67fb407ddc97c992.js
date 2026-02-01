@@ -1,7 +1,0 @@
-class C {
-  #m() {}
-  assign() {
-    this.#m = 0;
-  }
-}
-var obj = new C();

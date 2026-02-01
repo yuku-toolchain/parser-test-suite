@@ -1,1 +1,0 @@
-const getHourCycles = Intl.Locale.prototype.getHourCycles;

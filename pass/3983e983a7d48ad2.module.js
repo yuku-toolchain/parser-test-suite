@@ -1,2 +1,0 @@
-export var name1 = await this;
-export var {x = await this} = {};

@@ -1,3 +1,0 @@
-var foo = 1;
-export var name1 = await foo;
-export var {x = await foo} = {};

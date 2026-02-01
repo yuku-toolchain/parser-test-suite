@@ -1,1 +1,0 @@
-TemporalHelpers.assertPlainDateTime(Temporal.PlainDateTime.from("2020-01-01T01:23:45[Asia/Kolkata]"), 2020, 1, "M01", 1, 1, 23, 45, 0, 0, 0, "ignores if a timezone is specified");

@@ -1,3 +1,0 @@
-function fn() {
-  return import.defer('./empty_FIXTURE.js');
-}

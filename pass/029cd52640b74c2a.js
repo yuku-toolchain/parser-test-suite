@@ -1,1 +1,0 @@
-var buffer = new ArrayBuffer(8);

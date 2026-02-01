@@ -1,6 +1,0 @@
-function body(FloatArray) {
-  var first = new FloatArray(NaNs);
-  var second = new FloatArray(NaNs);
-  var firstBytes = new Uint8Array(first.buffer);
-  var secondBytes = new Uint8Array(second.buffer);
-}

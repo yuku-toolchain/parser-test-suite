@@ -1,1 +1,0 @@
-var result = Array.from(Iterator.zip([Object("abc"), Object("123")]));

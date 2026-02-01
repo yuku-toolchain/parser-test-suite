@@ -1,1 +1,0 @@
-Object.seal(new SharedArrayBuffer(4));

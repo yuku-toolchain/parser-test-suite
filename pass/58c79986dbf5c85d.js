@@ -1,1 +1,0 @@
-const plainDate = new Temporal.PlainDate(1976, 11, 18);

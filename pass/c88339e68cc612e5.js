@@ -1,1 +1,0 @@
-const months = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "months").get;

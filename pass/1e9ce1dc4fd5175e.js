@@ -1,1 +1,0 @@
-const calendar = "islamic-civil";

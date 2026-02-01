@@ -1,6 +1,0 @@
-(0, eval)('if (false) function _f() {} else function f() { return "inner declaration"; }assert.sameValue(typeof f, "function");\
-  assert.sameValue(f(), "inner declaration");\
-  \
-  function f() {\
-    return "outer declaration";\
-  }');

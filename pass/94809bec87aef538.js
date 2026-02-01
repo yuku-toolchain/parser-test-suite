@@ -1,2 +1,0 @@
-function yield() {}
-var C = @(yield) class {};

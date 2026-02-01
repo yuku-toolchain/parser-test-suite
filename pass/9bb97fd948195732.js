@@ -1,4 +1,0 @@
-const duration1 = new Temporal.Duration(0, 0, 0, 0, -60);
-const duration2 = new Temporal.Duration(0, 0, 0, -1);
-const result = duration1.subtract(duration2);
-TemporalHelpers.assertDuration(result, 0, 0, 0, -1, -12, 0, 0, 0, 0, 0);

@@ -1,4 +1,0 @@
-with (import.source('<module source>')) {
-    assert.sameValue(then, Promise.prototype.then);
-    assert.sameValue(constructor, Promise);
-}

@@ -1,1 +1,0 @@
-const jan31 = new Temporal.ZonedDateTime(1580511600000000000n, "-08:00");

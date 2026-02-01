@@ -1,1 +1,0 @@
-const keys = Object.getOwnPropertyNames(Temporal);

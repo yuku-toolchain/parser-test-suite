@@ -1,4 +1,0 @@
-const monthday = new Temporal.PlainMonthDay(5, 2, "gregory");
-TemporalHelpers.checkStringOptionWrongType("calendarName", "auto", calendarName => monthday.toString({
-  calendarName
-}), (result, descr) => assert.sameValue(result, "1972-05-02[u-ca=gregory]", descr));

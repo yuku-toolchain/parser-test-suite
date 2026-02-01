@@ -1,1 +1,0 @@
-delete Intl.DateTimeFormat.prototype[Symbol.toStringTag];

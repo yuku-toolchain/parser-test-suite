@@ -1,1 +1,0 @@
-var replacer = new Proxy(['b'], {});

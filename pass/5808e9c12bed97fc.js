@@ -1,1 +1,0 @@
-var substr = String.prototype.substr;

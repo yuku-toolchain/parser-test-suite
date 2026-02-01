@@ -1,1 +1,0 @@
-var toLowerCase = String.prototype.toLowerCase;

@@ -1,1 +1,0 @@
-var __executed = (/[]a/).test("\0a\0a");

@@ -1,1 +1,0 @@
-Object.getOwnPropertyDescriptor(function () {}, 'arguments');

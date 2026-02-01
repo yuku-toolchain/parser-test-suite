@@ -1,1 +1,0 @@
-const md = new Temporal.PlainMonthDay(1, 15);

@@ -1,6 +1,0 @@
-const f = async () => {
-  await import.source('./empty_FIXTURE.js');
-}
-f().catch(error => {
-assert.sameValue(error.name, 'SyntaxError');
-}).then($DONE, $DONE);

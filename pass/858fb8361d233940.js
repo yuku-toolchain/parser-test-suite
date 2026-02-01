@@ -1,3 +1,0 @@
-const blank = new Temporal.Duration();
-TemporalHelpers.assertDuration(blank.add("PT1.03125H"), 0, 0, 0, 0, 1, 1, 52, 500, 0, 0, "positive fractional units rounded with correct rounding mode");
-TemporalHelpers.assertDuration(blank.add("-PT1.03125H"), 0, 0, 0, 0, -1, -1, -52, -500, 0, 0, "negative fractional units rounded with correct rounding mode");

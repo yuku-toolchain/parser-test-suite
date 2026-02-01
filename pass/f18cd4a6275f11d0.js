@@ -1,1 +1,0 @@
-var getYear = Date.prototype.getYear;

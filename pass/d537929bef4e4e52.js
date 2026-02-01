@@ -1,1 +1,0 @@
-const [cover = function () {}, xCover = (0, function () {})] = [];

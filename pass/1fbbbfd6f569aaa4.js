@@ -1,8 +1,0 @@
-var obj = {};
-Object.defineProperty(obj, "foo", {
-  value: 10,
-  writable: false,
-  enumerable: true,
-  configurable: true
-});
-Object.freeze(obj);

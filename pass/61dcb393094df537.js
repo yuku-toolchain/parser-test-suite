@@ -1,1 +1,0 @@
-var indexOf = String.prototype.indexOf;

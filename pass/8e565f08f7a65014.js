@@ -1,1 +1,0 @@
-for (var p in Object.prototype.valueOf) {}

@@ -1,4 +1,0 @@
-const date = new Temporal.PlainDate(2000, 5, 2, "iso8601");
-TemporalHelpers.checkStringOptionWrongType("calendarName", "auto", calendarName => date.toString({
-  calendarName
-}), (result, descr) => assert.sameValue(result, "2000-05-02", descr));

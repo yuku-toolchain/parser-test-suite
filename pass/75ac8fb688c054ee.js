@@ -1,1 +1,0 @@
-var compile = RegExp.prototype.compile;

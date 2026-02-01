@@ -1,9 +1,0 @@
-var duringExec;
-var fakeRe = {
-  lastIndex: 34,
-  exec: function () {
-    duringExec = fakeRe.lastIndex;
-    return null;
-  }
-};
-RegExp.prototype[Symbol.search].call(fakeRe);

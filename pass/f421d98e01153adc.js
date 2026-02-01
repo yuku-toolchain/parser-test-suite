@@ -1,1 +1,0 @@
-const pdt = new Temporal.PlainDateTime(1938, 4, 24, 22, 13, 19, 999, 999);

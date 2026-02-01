@@ -1,1 +1,0 @@
-var formatFn = new Intl.NumberFormat().format;

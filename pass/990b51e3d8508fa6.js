@@ -1,1 +1,0 @@
-var __executed = (/[Jj]ava([Ss]cript)?(?=\:)/).test("rhino is JavaScript engine");

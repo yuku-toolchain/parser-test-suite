@@ -1,9 +1,0 @@
-var testResult = false;
-var initialValue = 0;
-function callbackfn(prevVal, curVal, idx, obj) {
-  if (idx === 1) {
-    testResult = curVal === "1";
-  }
-}
-var str = new String("012");
-Array.prototype.reduce.call(str, callbackfn, initialValue);

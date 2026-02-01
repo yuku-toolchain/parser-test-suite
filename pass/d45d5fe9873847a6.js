@@ -1,1 +1,0 @@
-/\P{UnknownBinaryProperty}/u;

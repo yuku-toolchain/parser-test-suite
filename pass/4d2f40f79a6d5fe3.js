@@ -1,7 +1,0 @@
-var obj = function () {};
-Object.defineProperty(obj, "property", {
-  value: 12,
-  writable: true,
-  configurable: false
-});
-Object.preventExtensions(obj);

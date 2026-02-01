@@ -1,1 +1,0 @@
-var instance = new Temporal.ZonedDateTime(0n, "America/Los_Angeles");

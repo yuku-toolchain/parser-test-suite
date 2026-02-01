@@ -1,5 +1,0 @@
-var foo = 1;
-function fn() {
-  return function () {};
-}
-export default class extends fn(await foo) {}

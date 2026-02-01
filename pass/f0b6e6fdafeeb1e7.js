@@ -1,3 +1,0 @@
-for (var x in this) {
-  if (x === 'Object') {} else if (x === 'Function') {} else if (x === 'String') {} else if (x === 'Number') {} else if (x === 'Array') {} else if (x === 'Boolean') {} else if (x === 'Date') {} else if (x === 'RegExp') {} else if (x === 'Error') {} else if (x === 'EvalError') {} else if (x === 'RangeError') {} else if (x === 'ReferenceError') {} else if (x === 'SyntaxError') {} else if (x === 'TypeError') {} else if (x === 'URIError') {}
-}

@@ -1,2 +1,0 @@
-const invalidVariantsOptions = ["", "a", "1", "ab", "2x", "abc", "3xy", "abcd", "abcdefghi", "GB-scouse", "fonipa-fonipa", "fonipa-valencia-Fonipa", "-", "-spanglis", "spanglis-", "-spanglis-oxendict", "spanglis-oxendict-", "spanglis--oxendict"];
-for (const variants of invalidVariantsOptions) {}

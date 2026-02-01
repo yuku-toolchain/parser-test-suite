@@ -1,9 +1,0 @@
-var called = 0;
-var result = false;
-function callbackfn(prevVal, curVal, idx, obj) {
-  called++;
-  if (idx === 1) {
-    result = prevVal === 11 && curVal === 9;
-  }
-}
-[11, 9].reduce(callbackfn);

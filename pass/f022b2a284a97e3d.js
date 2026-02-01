@@ -1,1 +1,0 @@
-const hoursInDay = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "hoursInDay").get;

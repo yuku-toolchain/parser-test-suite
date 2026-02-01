@@ -1,1 +1,0 @@
-var d = Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags');

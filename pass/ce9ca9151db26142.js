@@ -1,3 +1,0 @@
-var poisonedFlags = {
-  get flags() {}
-};

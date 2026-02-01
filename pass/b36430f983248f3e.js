@@ -1,1 +1,0 @@
-var findLastIndex = TypedArray.prototype.findLastIndex;

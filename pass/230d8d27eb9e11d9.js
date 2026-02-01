@@ -1,2 +1,0 @@
-for (var x in null) let;
-{}

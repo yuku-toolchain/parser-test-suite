@@ -1,1 +1,0 @@
-var transient = 1;

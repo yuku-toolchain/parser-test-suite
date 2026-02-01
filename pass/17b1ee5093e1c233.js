@@ -1,3 +1,0 @@
-var method = ({
-  *method() {}
-}).method;

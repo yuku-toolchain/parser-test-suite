@@ -1,1 +1,0 @@
-var f = async function* ([[x]] = [null]) {};

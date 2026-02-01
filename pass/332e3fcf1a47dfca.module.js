@@ -1,1 +1,0 @@
-import value from './json-value-string_FIXTURE.json' with { type: 'json' };

@@ -1,3 +1,0 @@
-async function f() {
-  await import('./empty_FIXTURE.js');
-}

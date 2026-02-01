@@ -1,1 +1,0 @@
-var GeneratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf((function* () {})()));

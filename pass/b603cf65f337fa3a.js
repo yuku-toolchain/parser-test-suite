@@ -1,5 +1,0 @@
-var result = false;
-function callbackfn(prevVal, curVal, idx, obj) {
-  result = prevVal === 1 && obj[idx] === curVal;
-}
-[11].reduce(callbackfn, 1);

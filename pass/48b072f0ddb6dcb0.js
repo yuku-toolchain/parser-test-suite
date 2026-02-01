@@ -1,9 +1,0 @@
-var obj = {};
-var getter = function () {
-  return 100;
-};
-Object.defineProperties(obj, {
-  property: {
-    get: getter
-  }
-});

@@ -1,1 +1,0 @@
-var result = (/(?:)/g)[Symbol.match]('abc');

@@ -1,4 +1,0 @@
-const earlier = new Temporal.PlainDate(2000, 5, 2);
-const later = new Temporal.PlainDate(2001, 6, 3);
-const badValues = ["era", "eraYear", "hour", "minute", "second", "millisecond", "microsecond", "nanosecond", "month\0", "YEAR", "eras", "eraYears", "hours", "minutes", "seconds", "milliseconds", "microseconds", "nanoseconds", "months\0", "YEARS", "other string"];
-for (const smallestUnit of badValues) {}

@@ -1,3 +1,0 @@
-var async = { x: 0 };
-for (async.x of [1]) ;
-assert.sameValue(async.x, 1);

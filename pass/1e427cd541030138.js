@@ -1,3 +1,0 @@
-const datetime = new Temporal.ZonedDateTime(1001n, "-00:02");
-const time = datetime.toPlainTime();
-TemporalHelpers.assertPlainTime(time, 23, 58, 0, 0, 1, 1);

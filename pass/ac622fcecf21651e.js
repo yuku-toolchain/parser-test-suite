@@ -1,5 +1,0 @@
-var separator = ["", ""].toLocaleString();
-testWithBigIntTypedArrayConstructors(function (TA) {
-  var sample = new TA([42n, 0n, 43n]);
-  var expected = sample[0].toLocaleString().toString() + separator + sample[1].toLocaleString().toString() + separator + sample[2].toLocaleString().toString();
-});

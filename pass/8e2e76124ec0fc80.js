@@ -1,1 +1,0 @@
-if (String("undefined").indexOf(undefined) !== 0) {}

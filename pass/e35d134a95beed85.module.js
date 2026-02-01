@@ -1,1 +1,0 @@
-import * as ns from "./export-expname-binding-index_FIXTURE.js";

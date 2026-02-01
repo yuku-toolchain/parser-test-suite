@@ -1,5 +1,0 @@
-var my_eval = eval;
-my_eval("\"use strict\";\ngNonStrict();");
-function gNonStrict() {
-  return gNonStrict.caller;
-}

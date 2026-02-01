@@ -1,2 +1,0 @@
-var await = 0;
-await = 1;

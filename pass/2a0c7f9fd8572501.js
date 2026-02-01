@@ -1,9 +1,0 @@
-var base = -Infinity;
-var exponent = new Array();
-exponent[0] = 1;
-exponent[1] = 111;
-exponent[2] = 111111;
-var exponentnum = 3;
-for (var i = 0; i < exponentnum; i++) {
-  if (Math.pow(base, exponent[i]) !== -Infinity) {}
-}

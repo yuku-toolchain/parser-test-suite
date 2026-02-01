@@ -1,7 +1,0 @@
-var result = Object.getOwnPropertyNames(this);
-var expResult = ["NaN", "Infinity", "undefined", "eval", "parseInt", "parseFloat", "isNaN", "isFinite", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "Object", "Function", "Array", "String", "Boolean", "Number", "Date", "Date", "RegExp", "Error", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError", "Math", "JSON"];
-var result1 = {};
-for (var p in result) {
-  result1[result[p]] = true;
-}
-for (var p1 in expResult) {}

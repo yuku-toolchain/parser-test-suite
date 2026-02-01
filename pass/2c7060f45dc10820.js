@@ -1,1 +1,0 @@
-[undefined, null, 1, true, 'string', Symbol()].forEach(v => {});

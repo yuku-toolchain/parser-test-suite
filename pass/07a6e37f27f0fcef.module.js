@@ -1,5 +1,0 @@
-while (await ({
-  function() {}
-})) {
-  break;
-}

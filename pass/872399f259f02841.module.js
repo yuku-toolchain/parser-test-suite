@@ -1,2 +1,0 @@
-var f = Function('eval = 42;');
-f();

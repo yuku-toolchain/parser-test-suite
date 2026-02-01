@@ -1,5 +1,0 @@
-var supreme = 5;
-var count;
-for (count = 0; ; ) {
-  if (count === supreme) break; else count++;
-}

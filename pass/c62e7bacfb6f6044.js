@@ -1,1 +1,0 @@
-var completion = eval("for (var i = 0; i < 2; ++i) { if (i) { try {} finally { continue; } } 'bad completion'; }");

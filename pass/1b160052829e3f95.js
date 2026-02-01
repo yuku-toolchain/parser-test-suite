@@ -1,8 +1,0 @@
-let iterator = (function* () {
-  for (let i = 0; i < 5; ++i) {
-    yield i;
-  }
-})();
-iterator.return();
-let filtered = iterator.filter(() => true);
-let {value, done} = filtered.next();

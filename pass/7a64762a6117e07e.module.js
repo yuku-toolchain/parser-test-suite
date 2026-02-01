@@ -1,1 +1,0 @@
-import('./module-import-rejection_FIXTURE.js').then(() => {}, err => {}).then($DONE, $DONE);

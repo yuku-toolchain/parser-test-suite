@@ -1,1 +1,0 @@
-if (eval("true")) {} else {}

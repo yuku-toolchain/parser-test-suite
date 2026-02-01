@@ -1,3 +1,0 @@
-const instance = new Temporal.Instant(1_000_000_000_000_000_000n);
-const fields = ["years", "months", "weeks", "days", "hours", "minutes", "seconds", "milliseconds", "microseconds", "nanoseconds"];
-fields.forEach(field => {});

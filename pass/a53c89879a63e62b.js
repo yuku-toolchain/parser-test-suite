@@ -1,1 +1,0 @@
-new SharedArrayBuffer(1);

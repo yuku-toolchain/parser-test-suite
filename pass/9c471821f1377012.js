@@ -1,4 +1,0 @@
-var trimEnd = String.prototype.trimEnd;
-var lt = '\u000A\u000D\u2028\u2029';
-var str = lt + 'a' + lt + 'b' + lt;
-var expected = lt + 'a' + lt + 'b';

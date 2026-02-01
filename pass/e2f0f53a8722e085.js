@@ -1,2 +1,0 @@
-const invalidLanguageOptions = ["", "a", "ab7", "notalanguage", "undefined", "root", "fr-Latn", "fr-FR", "sa-vaidika", "fr-a-asdf", "fr-x-private", "i-klingon", "zh-min", "zh-min-nan", "abcd-US", "abcde-US", "abcdef-US", "abcdefg-US", "abcdefgh-US", 7];
-for (const language of invalidLanguageOptions) {}

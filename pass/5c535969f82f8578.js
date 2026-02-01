@@ -1,6 +1,0 @@
-function callbackfn(prevVal, curVal, idx, obj) {
-  arr[5] = 6;
-  arr[2] = 3;
-  return prevVal + curVal;
-}
-var arr = [1, 2, 4, '5'];

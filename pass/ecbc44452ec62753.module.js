@@ -1,1 +1,0 @@
-import * as ns from './get-prototype-of.js';

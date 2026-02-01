@@ -1,1 +1,0 @@
-const blank = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "blank").get;

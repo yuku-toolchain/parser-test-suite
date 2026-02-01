@@ -1,4 +1,0 @@
-delete Array.prototype[Symbol.iterator];
-var C = class {
-  static *method([x, y, z] = [1, 2, 3]) {}
-};

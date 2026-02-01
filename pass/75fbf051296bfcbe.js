@@ -1,1 +1,0 @@
-var keys = TypedArray.prototype.keys;

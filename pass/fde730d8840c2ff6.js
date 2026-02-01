@@ -1,1 +1,0 @@
-const valueOf = Temporal.ZonedDateTime.prototype.valueOf;

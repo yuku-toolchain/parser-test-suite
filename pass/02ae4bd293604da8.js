@@ -1,1 +1,0 @@
-var b = Object.isSealed(RegExp.prototype);

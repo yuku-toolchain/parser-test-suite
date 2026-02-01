@@ -1,2 +1,0 @@
-export default async function* AG() {}
-AG.foo = '';

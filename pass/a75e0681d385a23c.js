@@ -1,2 +1,0 @@
-var result = eval('{length: 3000}() => { return 42; };');
-var expected = 3000;

@@ -1,1 +1,0 @@
-var sym = Symbol('desc');

@@ -1,3 +1,0 @@
-const ok = new Temporal.PlainYearMonth(2000, 5);
-const invalidStrings = ["-000000-06", "-000000-06-24", "-000000-06-24T15:43:27", "-000000-06-24T15:43:27+01:00", "-000000-06-24T15:43:27+00:00[UTC]"];
-invalidStrings.forEach(arg => {});

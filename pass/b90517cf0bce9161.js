@@ -1,1 +1,0 @@
-/\p{Other_ID_Continue}/u;

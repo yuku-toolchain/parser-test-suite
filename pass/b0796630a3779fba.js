@@ -1,1 +1,0 @@
-var start = Symbol(1);

@@ -1,7 +1,0 @@
-var callCount = 0;
-var obj = {
-  *method([[x, y, z] = [4, 5, 6]] = []) {
-    callCount = callCount + 1;
-  }
-};
-obj.method().next();

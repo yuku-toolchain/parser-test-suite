@@ -1,1 +1,0 @@
-const toInstant = Temporal.ZonedDateTime.prototype.toInstant;

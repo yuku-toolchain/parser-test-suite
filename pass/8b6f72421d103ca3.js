@@ -1,1 +1,0 @@
-function f(p = eval("var arguments = 'param'"), arguments) {}

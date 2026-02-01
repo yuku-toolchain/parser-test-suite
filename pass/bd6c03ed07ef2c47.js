@@ -1,1 +1,0 @@
-var finalizationRegistry = new FinalizationRegistry(function () {});

@@ -1,9 +1,0 @@
-const instance = new Temporal.PlainDateTime(1976, 11, 18);
-const calendar = "iso8601";
-const arg = {
-  year: 1976,
-  monthCode: "M11",
-  day: 18,
-  calendar
-};
-const result = instance.equals(arg);

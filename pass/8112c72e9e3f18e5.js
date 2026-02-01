@@ -1,1 +1,0 @@
-var lineTerminatorsStr = "\u000A\u000D\u2028\u2029";

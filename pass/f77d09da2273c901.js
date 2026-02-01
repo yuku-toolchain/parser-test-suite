@@ -1,9 +1,0 @@
-var realm1 = $262.createRealm().global;
-var realm2 = $262.createRealm().global;
-var realm3 = $262.createRealm().global;
-var realm4 = $262.createRealm().global;
-var newTarget = new realm1.Function();
-newTarget.prototype = null;
-var newTargetProxy = new realm2.Proxy(newTarget, {});
-var newTargetProxyProxy = new realm3.Proxy(newTargetProxy, {});
-var boolean = Reflect.construct(realm4.Boolean, [], newTargetProxyProxy);

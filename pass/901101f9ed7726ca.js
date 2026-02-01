@@ -1,9 +1,0 @@
-const calendar = "2016-12-31T23:59:60";
-const arg = {
-  year: 1976,
-  monthCode: "M11",
-  day: 18,
-  calendar
-};
-const result = Temporal.PlainDateTime.from(arg);
-TemporalHelpers.assertPlainDateTime(result, 1976, 11, "M11", 18, 0, 0, 0, 0, 0, 0, "leap second is a valid ISO string for calendar");

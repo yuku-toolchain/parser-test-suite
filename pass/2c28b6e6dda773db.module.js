@@ -1,1 +1,0 @@
-import * as ns from './json-via-namespace_FIXTURE.json' with { type: 'json' };

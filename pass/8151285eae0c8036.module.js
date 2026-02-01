@@ -1,4 +1,0 @@
-const p = import(import.meta);
-if (!Object.prototype.hasOwnProperty.call(import.meta, 'toString') && !Object.prototype.hasOwnProperty.call(import.meta, 'valueOf') && !Object.prototype.hasOwnProperty.call(import.meta, Symbol.toPrimitive)) {
-  p.catch(error => assert.sameValue(error.constructor, TypeError, 'import() cannot resolve import.meta')).then($DONE, $DONE);
-} else {}

@@ -1,7 +1,0 @@
-var obj = {};
-var regObj = new RegExp();
-regObj.configurable = true;
-Object.defineProperty(obj, "property", regObj);
-var beforeDeleted = obj.hasOwnProperty("property");
-delete obj.property;
-var afterDeleted = obj.hasOwnProperty("property");

@@ -1,1 +1,0 @@
-var f = Array.isArray;

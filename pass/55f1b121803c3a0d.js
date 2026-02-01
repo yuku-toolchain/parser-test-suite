@@ -1,9 +1,0 @@
-const localeCalendar = new Intl.DateTimeFormat().resolvedOptions().calendar;
-const sameCalendarInstance = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321, localeCalendar);
-const result = sameCalendarInstance.toLocaleString();
-const isoInstance = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321, "iso8601");
-const calendars = new Set(Intl.supportedValuesOf("calendar"));
-calendars.delete("iso8601");
-calendars.delete(localeCalendar);
-const differentCalendar = calendars.values().next().value;
-const differentCalendarInstance = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321, differentCalendar);

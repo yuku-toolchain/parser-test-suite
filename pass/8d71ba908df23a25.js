@@ -1,8 +1,0 @@
-const tests = [["1976-11-18T12:34:56.987654321", "uppercase T"], ["1976-11-18t12:34:56.987654321", "lowercase T"], ["1976-11-18 12:34:56.987654321", "space between date and time"], ["T12:34:56.987654321", "time-only uppercase T"], ["t12:34:56.987654321", "time-only lowercase T"]];
-const instance = new Temporal.PlainDate(2000, 5, 2);
-tests.forEach(([arg, description]) => {
-  const result = instance.toZonedDateTime({
-    plainTime: arg,
-    timeZone: "UTC"
-  });
-});

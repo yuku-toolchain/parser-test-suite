@@ -1,4 +1,0 @@
-if (false) {
-} else {
-  import.source('<module source>');
-}

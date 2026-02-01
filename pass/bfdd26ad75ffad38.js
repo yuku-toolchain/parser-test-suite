@@ -1,1 +1,0 @@
-const inLeapYear = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "inLeapYear").get;

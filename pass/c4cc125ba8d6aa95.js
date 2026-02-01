@@ -1,1 +1,0 @@
-class MyRegExp extends RegExp {}

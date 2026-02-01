@@ -1,1 +1,0 @@
-if (new String(42).concat((function () {})()) !== "42undefined") {}

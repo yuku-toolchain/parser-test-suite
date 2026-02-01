@@ -1,1 +1,0 @@
-if (eval("switch(1){}") !== undefined) {}

@@ -1,1 +1,0 @@
-const toString = Temporal.Duration.prototype.toString;

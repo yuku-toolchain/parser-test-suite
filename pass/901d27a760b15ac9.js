@@ -1,1 +1,0 @@
-var __executed = (/([Jj]ava([Ss]cript)?)\sis\s(fun\w*)/).test("Developing with JavaScript is dangerous, do not try it without assistance");

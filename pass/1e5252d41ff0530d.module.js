@@ -1,1 +1,0 @@
-import {default as x} from './instn-named-err-dflt-thru-star-int_FIXTURE.js';

@@ -1,8 +1,0 @@
-function foo() {
-  'use strict';
-  return typeof this;
-}
-function bar() {
-  return typeof this;
-}
-function foobar() {}

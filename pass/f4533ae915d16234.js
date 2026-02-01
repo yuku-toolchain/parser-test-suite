@@ -1,3 +1,0 @@
-let f = () => {
-  import.source('<module source>');
-};

@@ -1,9 +1,0 @@
-const td1pos = new Temporal.Duration(0, 0, 0, 0, 5, 5, 5, 5, 5, 5);
-const td2pos = new Temporal.Duration(0, 0, 0, 0, 5, 4, 5, 5, 5, 5);
-const td1neg = new Temporal.Duration(0, 0, 0, 0, -5, -5, -5, -5, -5, -5);
-const td2neg = new Temporal.Duration(0, 0, 0, 0, -5, -4, -5, -5, -5, -5);
-const dd1pos = new Temporal.Duration(5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
-const dd2pos = new Temporal.Duration(5, 5, 5, 5, 5, 4, 5, 5, 5, 5);
-const dd1neg = new Temporal.Duration(-5, -5, -5, -5, -5, -5, -5, -5, -5, -5);
-const dd2neg = new Temporal.Duration(-5, -5, -5, -5, -5, -4, -5, -5, -5, -5);
-const relativeTo = Temporal.PlainDate.from("2017-01-01");

@@ -1,1 +1,0 @@
-const toPlainYearMonth = Temporal.PlainDate.prototype.toPlainYearMonth;

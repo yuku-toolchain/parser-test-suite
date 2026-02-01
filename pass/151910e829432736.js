@@ -1,1 +1,0 @@
-var unscopables = Array.prototype[Symbol.unscopables];

@@ -1,1 +1,0 @@
-var indexOf = TypedArray.prototype.indexOf;

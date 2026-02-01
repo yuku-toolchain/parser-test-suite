@@ -1,1 +1,0 @@
-var reduceRight = TypedArray.prototype.reduceRight;

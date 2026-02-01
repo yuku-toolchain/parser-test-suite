@@ -1,6 +1,0 @@
-const earlier = new Temporal.PlainYearMonth(2000, 5);
-const later = new Temporal.PlainYearMonth(2001, 6);
-const validUnits = ["year", "month"];
-TemporalHelpers.checkPluralUnitsAccepted(smallestUnit => later.since(earlier, {
-  smallestUnit
-}), validUnits);

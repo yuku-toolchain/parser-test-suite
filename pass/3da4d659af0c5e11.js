@@ -1,1 +1,0 @@
-/\P{Script_Extensions}/u;

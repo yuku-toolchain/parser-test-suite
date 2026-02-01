@@ -1,3 +1,0 @@
-var arrayLike = {
-  get length() {}
-};

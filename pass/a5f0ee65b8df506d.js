@@ -1,2 +1,0 @@
-delete Array.prototype[Symbol.iterator];
-function f([x, y, z] = [1, 2, 3]) {}

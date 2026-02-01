@@ -1,6 +1,0 @@
-var props = new Number(-9);
-props.prop = {
-  value: 12,
-  enumerable: true
-};
-var newObj = Object.create({}, props);

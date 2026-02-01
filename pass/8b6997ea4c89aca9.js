@@ -1,1 +1,0 @@
-const epochMilliseconds = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "epochMilliseconds").get;

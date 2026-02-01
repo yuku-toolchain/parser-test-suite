@@ -1,4 +1,0 @@
-var func = function (x, y, z) {
-  return x + y + z;
-};
-var newFunc = Function.prototype.bind.call(func, {}, "a", "b", "c");

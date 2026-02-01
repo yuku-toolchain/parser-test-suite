@@ -1,1 +1,0 @@
-const formatToParts = Intl.ListFormat.prototype.formatToParts;

@@ -1,1 +1,0 @@
-const epochMilliseconds = Object.getOwnPropertyDescriptor(Temporal.Instant.prototype, "epochMilliseconds").get;

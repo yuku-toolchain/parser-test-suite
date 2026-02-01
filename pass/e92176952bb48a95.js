@@ -1,1 +1,0 @@
-var parse = JSON.parse;

@@ -1,1 +1,0 @@
-let f = () => import.defer('./empty_FIXTURE.js');

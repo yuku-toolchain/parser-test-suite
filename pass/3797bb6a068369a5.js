@@ -1,1 +1,0 @@
-var toLocaleString = TypedArray.prototype.toLocaleString;

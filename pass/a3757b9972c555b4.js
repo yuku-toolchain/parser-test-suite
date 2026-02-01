@@ -1,1 +1,0 @@
-const getter = Object.getOwnPropertyDescriptor(Intl.Locale.prototype, "calendar").get;

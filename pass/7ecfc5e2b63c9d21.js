@@ -1,1 +1,0 @@
-var __executed = (/\d{3}|[a-z]{4}/).test("2, 12 and 23 AND 0.00.1");

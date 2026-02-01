@@ -1,1 +1,0 @@
-const nanoseconds = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "nanoseconds").get;

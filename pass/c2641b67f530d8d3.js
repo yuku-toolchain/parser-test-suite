@@ -1,7 +1,0 @@
-function body(FloatArray) {
-  var subject = new FloatArray(NaNs);
-  var sliced, subjectBytes, slicedBytes;
-  sliced = subject.slice();
-  subjectBytes = new Uint8Array(subject.buffer);
-  slicedBytes = new Uint8Array(sliced.buffer);
-}

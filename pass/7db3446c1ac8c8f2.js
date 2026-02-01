@@ -1,8 +1,0 @@
-class A {
-  #x = 'Avalue';
-  x() {
-    return this.#x;
-  }
-}
-class B extends A {}
-var b = new B();

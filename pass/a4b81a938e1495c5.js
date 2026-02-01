@@ -1,1 +1,0 @@
-if (String.prototype.search.prototype !== undefined) {}

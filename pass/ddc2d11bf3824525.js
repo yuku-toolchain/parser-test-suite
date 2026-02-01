@@ -1,5 +1,0 @@
-var result = false;
-function callbackfn(prevVal, curVal) {
-  result = curVal > 10 && 1 === prevVal;
-}
-[11].reduce(callbackfn, 1);

@@ -1,6 +1,0 @@
-testWithBigIntTypedArrayConstructors(function (TA) {
-  var sample = new TA(2);
-  var ctor = function () {};
-  sample.constructor = {};
-  sample.constructor[Symbol.species] = ctor;
-});

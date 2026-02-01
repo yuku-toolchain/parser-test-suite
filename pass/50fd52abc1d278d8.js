@@ -1,1 +1,0 @@
-var valueOf = BigInt.prototype.valueOf;

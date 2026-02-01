@@ -1,9 +1,0 @@
-const obj = {
-    toString() {
-        throw 'custom error';
-    }
-};
-const f = async () => await import.source(obj);
-f().catch(error => {
-assert.sameValue(error, 'custom error');
-}).then($DONE, $DONE);

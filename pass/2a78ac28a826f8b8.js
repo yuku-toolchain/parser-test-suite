@@ -1,1 +1,0 @@
-var result = Object.fromEntries([new String('ab')]);

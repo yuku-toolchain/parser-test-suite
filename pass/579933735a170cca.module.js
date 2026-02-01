@@ -1,3 +1,0 @@
-while (await 1) {
-  break;
-}

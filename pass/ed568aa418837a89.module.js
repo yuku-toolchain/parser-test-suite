@@ -1,3 +1,0 @@
-while (await await await await await await await await await await await await await await await 'await') {
-  break;
-}

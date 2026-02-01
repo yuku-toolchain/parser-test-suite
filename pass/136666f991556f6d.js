@@ -1,1 +1,0 @@
-eval("var public = 1; var anotherVariableNotReserveWord = 2; 'use strict';");

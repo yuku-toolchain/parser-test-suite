@@ -1,2 +1,0 @@
-const invalidScriptOptions = ["", "a", "ab", "abc", "abc7", "notascript", "undefined", "Bal\u0130", "Bal\u0131", "ary-Arab", "Latn-SA", "Latn-vaidika", "Latn-a-asdf", "Latn-x-private", 7];
-for (const script of invalidScriptOptions) {}

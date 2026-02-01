@@ -1,8 +1,0 @@
-function callbackfn(val, idx, obj) {
-  if (idx === 1) {
-    return val !== 13;
-  } else {
-    return true;
-  }
-}
-Array.prototype[1] = 13;

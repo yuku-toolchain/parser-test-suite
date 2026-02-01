@@ -1,4 +1,0 @@
-const wholeSeconds = new Temporal.Duration(1, 2, 3, 4, 5, 6, 7);
-const subSeconds = new Temporal.Duration(1, 2, 3, 4, 5, 6, 7, 987, 650);
-const tests = [[wholeSeconds, "P1Y2M3W4DT5H6M7S"], [subSeconds, "P1Y2M3W4DT5H6M7.98765S"]];
-for (const [duration, expected] of tests) {}

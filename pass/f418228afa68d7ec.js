@@ -1,1 +1,0 @@
-const value = new Intl.Locale('en');

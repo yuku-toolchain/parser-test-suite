@@ -1,1 +1,0 @@
-export {x as y} from './error-export-from-named_FIXTURE.js';

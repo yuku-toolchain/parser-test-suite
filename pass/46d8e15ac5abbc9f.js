@@ -1,1 +1,0 @@
-var m1 = new Map([['foo', 'bar'], [1, 1]]);

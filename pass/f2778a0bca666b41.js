@@ -1,7 +1,0 @@
-var obj = {};
-Number.prototype.writable = true;
-var numObj = new Number(-2);
-Object.defineProperty(obj, "property", numObj);
-var beforeWrite = obj.hasOwnProperty("property");
-obj.property = "isWritable";
-var afterWrite = obj.property === "isWritable";

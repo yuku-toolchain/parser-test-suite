@@ -1,9 +1,0 @@
-var data = "data";
-JSON.set = function (value) {
-  data = value;
-};
-var newObj = Object.create({}, {
-  prop: JSON
-});
-var hasProperty = newObj.hasOwnProperty("prop");
-newObj.prop = "overrideData";

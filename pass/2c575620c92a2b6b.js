@@ -1,1 +1,0 @@
-var join = TypedArray.prototype.join;

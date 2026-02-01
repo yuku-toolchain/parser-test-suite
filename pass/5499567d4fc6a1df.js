@@ -1,4 +1,0 @@
-const instance = new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC", "iso8601");
-for (const arg of ["2020-01-01", "2020-01-01[u-ca=iso8601]", "2020-01-01T00:00:00.000000000", "2020-01-01T00:00:00.000000000[u-ca=iso8601]", "01-01", "01-01[u-ca=iso8601]", "2020-01", "2020-01[u-ca=iso8601]"]) {
-  const result = instance.withCalendar(arg);
-}

@@ -1,1 +1,0 @@
-const withPlainTime = Temporal.PlainDateTime.prototype.withPlainTime;

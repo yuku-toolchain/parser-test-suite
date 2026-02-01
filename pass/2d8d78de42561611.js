@@ -1,3 +1,0 @@
-const instance = new Temporal.PlainTime(12, 34, 56, 987, 654, 321);
-const numbers = [1, -123456.987654321, 1234567, 123456.9876543219];
-for (const arg of numbers) {}

@@ -1,1 +1,0 @@
-const format = Intl.ListFormat.prototype.format;

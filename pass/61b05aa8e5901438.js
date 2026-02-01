@@ -1,3 +1,0 @@
-const options = {
-  numeric: undefined
-};

@@ -1,9 +1,0 @@
-class C {
-  #field;
-m() {
-    for (this.#field in {a: 0}) ;
-  }
-}
-assert.throws(TypeError, function() {
-  C.prototype.m.call({});
-});

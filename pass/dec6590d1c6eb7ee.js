@@ -1,3 +1,0 @@
-var __str = 'She sells seashells by the seashore.';
-var __re = /sh/g;
-if (__str.replace(__re, "$`" + 'sch') !== 'She sells seaShe sells seaschells by the seaShe sells seashells by the seaschore.') {}

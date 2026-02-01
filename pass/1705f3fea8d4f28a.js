@@ -1,1 +1,0 @@
-const subclass_regexp = new (class extends RegExp {})("");

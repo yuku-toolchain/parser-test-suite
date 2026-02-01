@@ -1,4 +1,0 @@
-const i1 = new Temporal.Instant(1n);
-const i2 = new Temporal.Instant(1n);
-const result = i1.since(i2);
-TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "blank result");

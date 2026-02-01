@@ -1,2 +1,0 @@
-const validNumberingSystemOptions = [["abc", "en-u-nu-abc"], ["abcd", "en-u-nu-abcd"], ["abcde", "en-u-nu-abcde"], ["abcdef", "en-u-nu-abcdef"], ["abcdefg", "en-u-nu-abcdefg"], ["abcdefgh", "en-u-nu-abcdefgh"], ["12345678", "en-u-nu-12345678"], ["1234abcd", "en-u-nu-1234abcd"], ["1234abcd-abc123", "en-u-nu-1234abcd-abc123"]];
-for (const [numberingSystem, expected] of validNumberingSystemOptions) {}

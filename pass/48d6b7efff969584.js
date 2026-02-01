@@ -1,8 +1,0 @@
-var foo = function () {};
-Object.defineProperty(Function.prototype, "prop", {
-  value: 1001,
-  writable: false,
-  enumerable: false,
-  configurable: true
-});
-var obj = foo.bind({});

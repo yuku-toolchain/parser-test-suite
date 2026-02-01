@@ -1,1 +1,0 @@
-const segment = new Intl.Segmenter().segment("");

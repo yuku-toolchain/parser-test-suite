@@ -1,3 +1,0 @@
-if (false) {} else {
-  import('');
-}

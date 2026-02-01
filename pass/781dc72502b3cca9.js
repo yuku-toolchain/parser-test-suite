@@ -1,1 +1,0 @@
-var result = JSON.parse('{ "__proto__": 1, "__proto__": 2 }');

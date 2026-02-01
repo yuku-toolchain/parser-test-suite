@@ -1,1 +1,0 @@
-const time = new Temporal.PlainTime(12, 34, 56, 987, 654, 321);

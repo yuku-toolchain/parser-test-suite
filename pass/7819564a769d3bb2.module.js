@@ -1,1 +1,0 @@
-var f = Function("return typeof this;");

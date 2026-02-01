@@ -1,3 +1,0 @@
-var fromIndex = {
-  valueOf: function () {}
-};

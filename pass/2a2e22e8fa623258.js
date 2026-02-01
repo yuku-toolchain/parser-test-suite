@@ -1,1 +1,0 @@
-var str = (/^|\udf06/ug)[Symbol.replace]('\ud834\udf06', 'XXX');

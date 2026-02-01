@@ -1,9 +1,0 @@
-const duration1a = new Temporal.Duration(1);
-const duration1b = new Temporal.Duration(1, 0, 0, 0, 0, 0, 0, 0, 0, 1);
-const duration2a = new Temporal.Duration(0, 12);
-const duration2b = new Temporal.Duration(0, 12, 0, 0, 0, 0, 0, 0, 0, 1);
-const duration3a = new Temporal.Duration(0, 0, 5);
-const duration3b = new Temporal.Duration(0, 0, 5, 0, 0, 0, 0, 0, 0, 1);
-const duration4a = new Temporal.Duration(0, 0, 0, 42);
-const duration4b = new Temporal.Duration(0, 0, 0, 42, 0, 0, 0, 0, 0, 1);
-const relativeTo = new Temporal.PlainDate(2021, 12, 15);

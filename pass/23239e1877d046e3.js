@@ -1,1 +1,0 @@
-const getTextInfo = Intl.Locale.prototype.getTextInfo;

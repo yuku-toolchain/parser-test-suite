@@ -1,5 +1,0 @@
-var rejectP1, p1 = new Promise(function (resolve, reject) {
-  rejectP1 = reject;
-}), p2 = Promise.resolve(2);
-Promise.all([p1, p2]).then(function (resolve) {}, function (rejected) {}).then($DONE, $DONE);
-rejectP1(1);

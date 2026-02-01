@@ -1,1 +1,0 @@
-var toString = Function.prototype.toString;

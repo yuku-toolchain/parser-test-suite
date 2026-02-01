@@ -1,7 +1,0 @@
-function foo() {
-  return bar.caller;
-}
-var bar = foo.bind({});
-function baz() {
-  return bar();
-}

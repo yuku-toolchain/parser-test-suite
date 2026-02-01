@@ -1,5 +1,0 @@
-delete Array.prototype[Symbol.iterator];
-class C {
-  method([x, y, z] = [1, 2, 3]) {}
-}
-var c = new C();

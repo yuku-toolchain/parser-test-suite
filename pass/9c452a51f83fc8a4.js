@@ -1,2 +1,0 @@
-const earlier = new Temporal.PlainTime(12, 34, 56, 987, 654, 321);
-const later = new Temporal.PlainTime(13, 35, 57, 988, 655, 322);

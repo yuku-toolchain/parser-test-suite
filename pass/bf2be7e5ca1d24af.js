@@ -1,1 +1,0 @@
-var __executed = (/a[^b]c/).test("abc");

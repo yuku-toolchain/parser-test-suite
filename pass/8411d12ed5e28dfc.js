@@ -1,1 +1,0 @@
-/\p{RGI_Emoji}/u;

@@ -1,6 +1,0 @@
-const {Instant} = Temporal;
-const isoString = '2020-01-01T23:58:57.012034Z';
-const instant = Instant.from(isoString);
-const instantIsoStrMicros = instant.toString({
-  smallestUnit: 'microseconds'
-});

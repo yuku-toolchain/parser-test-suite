@@ -1,1 +1,0 @@
-Object.seal(new Date(0));

@@ -1,1 +1,0 @@
-const descriptor = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "yearOfWeek");

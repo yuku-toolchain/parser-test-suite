@@ -1,1 +1,0 @@
-if (Boolean(true) !== true) {}

@@ -1,1 +1,0 @@
-const zero = new Date(0);

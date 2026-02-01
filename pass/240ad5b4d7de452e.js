@@ -1,1 +1,0 @@
-for (var invalid of [Symbol(), 0n]) {}

@@ -1,1 +1,0 @@
-import * as ns from './get-nested-namespace-props-nrml-1_FIXTURE.js';

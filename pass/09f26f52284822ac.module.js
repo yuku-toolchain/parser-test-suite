@@ -1,1 +1,0 @@
-import foo from './module-import-rejection-body_FIXTURE.js';

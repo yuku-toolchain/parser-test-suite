@@ -1,1 +1,0 @@
-import * as ns from './Symbol.iterator.js';

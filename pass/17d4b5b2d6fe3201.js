@@ -1,1 +1,0 @@
-Object.prototype.indicator = 1;

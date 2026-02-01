@@ -1,7 +1,0 @@
-var x = null;
-var counter = 0;
-for ({x} of [{
-  x: 2
-}]) {
-  counter += 1;
-}

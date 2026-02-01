@@ -1,1 +1,0 @@
-Function("this.field=\"oil\"").apply(undefined);

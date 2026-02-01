@@ -1,1 +1,0 @@
-var __obj = RegExp.prototype.toString.length;

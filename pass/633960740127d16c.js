@@ -1,1 +1,0 @@
-/\P{Basic_Emoji}/v;

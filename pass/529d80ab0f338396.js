@@ -1,1 +1,0 @@
-let wm = new WeakMap();

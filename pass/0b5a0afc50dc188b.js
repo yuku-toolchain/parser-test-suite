@@ -1,1 +1,0 @@
-delete Math.abs.prototype;

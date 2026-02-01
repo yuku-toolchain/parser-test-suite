@@ -1,1 +1,0 @@
-if (Array.prototype.join.prototype !== undefined) {}

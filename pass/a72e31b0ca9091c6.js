@@ -1,1 +1,0 @@
-var charCodeAt = String.prototype.charCodeAt;

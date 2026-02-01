@@ -1,1 +1,0 @@
-const getter = Object.getOwnPropertyDescriptor(Symbol.prototype, 'description').get;

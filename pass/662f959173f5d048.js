@@ -1,4 +1,0 @@
-var C = class {
-  static async *constructor() {}
-  constructor() {}
-};

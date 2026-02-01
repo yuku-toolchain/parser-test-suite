@@ -1,6 +1,0 @@
-function fn() {
-  return function () {};
-}
-export default class extends fn(await new Promise(function (res, rej) {
-  res(1);
-})) {}

@@ -1,1 +1,0 @@
-const toString = Temporal.ZonedDateTime.prototype.toString;

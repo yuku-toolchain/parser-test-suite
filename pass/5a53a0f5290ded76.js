@@ -1,4 +1,0 @@
-const instance = new Temporal.PlainDateTime(2000, 5, 2);
-["UTC", "+01:30"].forEach(timeZone => {
-  const result = instance.toZonedDateTime(timeZone);
-});

@@ -1,7 +1,0 @@
-class C {
-  static {
-    (() => {
-      var await;
-    });
-  }
-}

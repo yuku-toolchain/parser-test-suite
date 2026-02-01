@@ -1,1 +1,0 @@
-var obj = Object.prototype.valueOf.length;

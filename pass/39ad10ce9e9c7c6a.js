@@ -1,1 +1,0 @@
-/\P{ General_Category=Uppercase_Letter }/u;

@@ -1,3 +1,0 @@
-import defer * as ns from "./dep_FIXTURE.js";
-ns.x;
-assert(globalThis["error on ns.foo"] instanceof TypeError, "ns.foo while evaluating throws a TypeError");

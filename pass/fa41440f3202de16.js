@@ -1,1 +1,0 @@
-/\P{RGI_Emoji_Tag_Sequence}/v;

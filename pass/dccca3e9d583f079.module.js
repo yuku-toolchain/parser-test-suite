@@ -1,1 +1,0 @@
-import './instn-same-global-set_FIXTURE.js';

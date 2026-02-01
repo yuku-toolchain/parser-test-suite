@@ -1,1 +1,0 @@
-var result = (/x/)[Symbol.split]('axbxcxdxe', 3);

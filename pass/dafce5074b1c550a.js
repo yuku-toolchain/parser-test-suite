@@ -1,1 +1,0 @@
-var duration = new Temporal.Duration();

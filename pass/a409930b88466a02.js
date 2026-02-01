@@ -1,8 +1,0 @@
-const obj = {
-    toString() {
-        throw 'custom error';
-    }
-};
-import.source(obj).catch(error => {
-assert.sameValue(error, 'custom error');
-}).then($DONE, $DONE);

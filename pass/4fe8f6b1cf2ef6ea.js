@@ -1,3 +1,0 @@
-do {
-  import('');
-} while (false);

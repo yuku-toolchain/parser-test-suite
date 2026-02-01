@@ -1,3 +1,0 @@
-var thrower = {
-  then: function () {}
-};

@@ -1,1 +1,0 @@
-var sab = new SharedArrayBuffer(0);

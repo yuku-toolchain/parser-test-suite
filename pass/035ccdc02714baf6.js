@@ -1,3 +1,0 @@
-async function f() {
-  import.source('<module source>');
-}

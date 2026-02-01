@@ -1,1 +1,0 @@
-var localeCompare = String.prototype.localeCompare;

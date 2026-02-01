@@ -1,6 +1,0 @@
-const mar31 = Temporal.PlainDate.from("2020-03-31");
-TemporalHelpers.assertPlainDate(mar31.subtract({
-  months: 1
-}, {
-  overflow: "constrain"
-}), 2020, 2, "M02", 29);

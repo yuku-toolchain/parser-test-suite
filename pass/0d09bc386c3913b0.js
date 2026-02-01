@@ -1,1 +1,0 @@
-var uint8Array = new Uint8Array(8);

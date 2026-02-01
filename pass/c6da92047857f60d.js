@@ -1,8 +1,0 @@
-var base = +Infinity;
-var exponent = new Array();
-exponent[0] = -Infinity;
-exponent[1] = -1.7976931348623157E308;
-exponent[2] = -1;
-exponent[3] = -0.000000000000001;
-var exponentnum = 4;
-for (var i = 0; i < exponentnum; i++) {}

@@ -1,1 +1,0 @@
-if (("abcd").indexOf("abcdab", 99) !== -1) {}

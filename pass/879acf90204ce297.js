@@ -1,1 +1,0 @@
-var descriptor = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');

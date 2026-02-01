@@ -1,1 +1,0 @@
-var result = eval('class C {}{x: 42};');

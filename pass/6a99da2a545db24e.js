@@ -1,1 +1,0 @@
-if (String(void 0).slice("e", undefined) !== "undefined") {}

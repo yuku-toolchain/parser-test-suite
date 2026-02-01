@@ -1,1 +1,0 @@
-TemporalHelpers.checkSubclassingIgnored(Temporal.ZonedDateTime, [10n, "UTC"], "withPlainTime", ["05:43:21.123456789"], result => {});

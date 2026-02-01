@@ -1,1 +1,0 @@
-const milliseconds = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "milliseconds").get;

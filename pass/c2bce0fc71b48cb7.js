@@ -1,2 +1,0 @@
-const invalidKeys = ["", "hourCycle", "locale", "language", "script", "region", "calendars", "collations", "currencies", "numberingSystems", "timeZones", "units", "CALENDAR", "Collation", "Currency", "numberingsystem", "timezone", "UNIT", "calendar\0", undefined, null, false, true, NaN, 0, Math.PI, 123n, {}, []];
-for (let key of invalidKeys) {}

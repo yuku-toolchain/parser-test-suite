@@ -1,5 +1,0 @@
-let x = 0;
-while (!x) {
-  x++;
-  import('./THIS_FILE_DOES_NOT_EXIST.js').catch(error => {}).then($DONE, $DONE);
-}

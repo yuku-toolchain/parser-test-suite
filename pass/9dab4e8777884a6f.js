@@ -1,1 +1,0 @@
-const toLocaleString = Temporal.Duration.prototype.toLocaleString;

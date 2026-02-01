@@ -1,1 +1,0 @@
-const multiLocale = ["sr-Thai-RS", "de", "zh-CN"];

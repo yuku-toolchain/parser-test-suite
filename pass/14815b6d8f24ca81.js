@@ -1,6 +1,0 @@
-var init;
-(function () {
-  eval('init = f;if (true) function f() { return "inner declaration"; } else ;function f() {\
-      return "outer declaration";\
-    }');
-})();

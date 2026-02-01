@@ -1,2 +1,0 @@
-var bigTypedArray;
-var littleTypedArray;

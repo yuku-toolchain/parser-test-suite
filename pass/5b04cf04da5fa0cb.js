@@ -1,1 +1,0 @@
-var newObj = Object.create({});

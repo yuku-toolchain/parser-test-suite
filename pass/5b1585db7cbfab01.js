@@ -1,1 +1,0 @@
-var newArr = [11].filter(function () {});

@@ -1,1 +1,0 @@
-typeof await 1;

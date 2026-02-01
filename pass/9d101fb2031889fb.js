@@ -1,6 +1,0 @@
-verifyPrimordialProperty(DataView.prototype.getInt16, "length", {
-  value: 1,
-  writable: false,
-  enumerable: false,
-  configurable: true
-});

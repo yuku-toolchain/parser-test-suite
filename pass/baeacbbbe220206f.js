@@ -1,2 +1,0 @@
-let rejections = [Promise.reject('a'), new Promise((_, reject) => reject('b')), Promise.all([Promise.reject('c')]), Promise.resolve(Promise.reject('d'))];
-Promise.any(rejections).then(() => $DONE('The promise should be rejected, but was resolved'), error => {}).then($DONE, $DONE);

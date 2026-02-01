@@ -1,1 +1,0 @@
-const formatToParts = Intl.DurationFormat.prototype.formatToParts;

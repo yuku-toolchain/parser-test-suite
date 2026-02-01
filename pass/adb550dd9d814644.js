@@ -1,1 +1,0 @@
-TypedArray.prototype.baz = "test262";

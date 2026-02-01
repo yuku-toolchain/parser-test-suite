@@ -1,4 +1,0 @@
-if (false) ; else function f() { return 'function declaration'; }
-assert.sameValue(typeof f, 'function');
-assert.sameValue(f(), 'function declaration');
-var f = 123;

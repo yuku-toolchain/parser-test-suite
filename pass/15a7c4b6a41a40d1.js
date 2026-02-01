@@ -1,6 +1,0 @@
-var iter = (function* () {})();
-iter.next();
-var iterCount = 0;
-for (const [] = iter; iterCount < 1; ) {
-  iterCount += 1;
-}

@@ -1,3 +1,0 @@
-var thisVal = {
-  toString: function () {}
-};

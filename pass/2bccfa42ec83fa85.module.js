@@ -1,1 +1,0 @@
-import('./module-import-resolution_FIXTURE.js').then(ns => {}).then($DONE, $DONE);

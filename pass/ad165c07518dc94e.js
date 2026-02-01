@@ -1,2 +1,0 @@
-if (false) let;
-x = 1;

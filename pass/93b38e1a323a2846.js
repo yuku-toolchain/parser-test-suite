@@ -1,1 +1,0 @@
-let {gen = function* () {}, xGen = function* x() {}} = {};

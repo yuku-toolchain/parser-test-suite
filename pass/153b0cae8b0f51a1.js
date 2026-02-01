@@ -1,3 +1,0 @@
-var object = {
-  get constructor() {}
-};

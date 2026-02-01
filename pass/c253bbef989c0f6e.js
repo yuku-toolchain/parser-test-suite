@@ -1,4 +1,0 @@
-function foo() {}
-var o = {};
-var bf = foo.bind(o);
-var s = Object.prototype.toString.call(bf);

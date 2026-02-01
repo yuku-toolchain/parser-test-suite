@@ -1,1 +1,0 @@
-var compareFn = Object.getOwnPropertyDescriptor(Intl.Collator.prototype, "compare").get;

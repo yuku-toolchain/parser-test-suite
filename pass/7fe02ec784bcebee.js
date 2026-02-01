@@ -1,7 +1,0 @@
-var result = false;
-function callbackfn(val, idx, obj) {
-  result = obj instanceof Number;
-}
-Number.prototype[0] = 1;
-Number.prototype.length = 1;
-Array.prototype.forEach.call(2.5, callbackfn);

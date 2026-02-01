@@ -1,1 +1,0 @@
-for (const input of TemporalHelpers.ISO.plainYearMonthStringsInvalid()) {}

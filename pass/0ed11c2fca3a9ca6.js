@@ -1,9 +1,0 @@
-var arr = [11, 12, 13];
-var testResult = false;
-function callbackfn(prevVal, curVal, idx, obj) {
-  if (idx === 1) {
-    testResult = prevVal === 13;
-  }
-  return curVal;
-}
-arr.reduceRight(callbackfn);

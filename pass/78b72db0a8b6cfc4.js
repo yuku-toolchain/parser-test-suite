@@ -1,1 +1,0 @@
-if (decodeURIComponent.length !== 1) {}

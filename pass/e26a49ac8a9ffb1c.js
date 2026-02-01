@@ -1,1 +1,0 @@
-TemporalHelpers.checkSubclassingIgnoredStatic(Temporal.PlainYearMonth, "from", ["2000-05"], result => TemporalHelpers.assertPlainYearMonth(result, 2000, 5, "M05"));

@@ -1,3 +1,0 @@
-{
-  import.source('<module source>');
-};

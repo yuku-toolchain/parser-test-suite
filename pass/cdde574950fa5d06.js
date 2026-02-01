@@ -1,1 +1,0 @@
-testOption(Intl.NumberFormat, "roundingPriority", "string", ["auto", "morePrecision", "lessPrecision"], "auto");

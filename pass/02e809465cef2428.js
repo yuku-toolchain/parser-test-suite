@@ -1,9 +1,0 @@
-if (Number.POSITIVE_INFINITY !== Number.POSITIVE_INFINITY) {}
-if (Number.NEGATIVE_INFINITY !== Number.NEGATIVE_INFINITY) {}
-if (13 !== 13) {}
-if (-13 !== -13) {}
-if (1.3 !== 1.3) {}
-if (-1.3 !== -1.3) {}
-if (Number.POSITIVE_INFINITY !== -Number.NEGATIVE_INFINITY) {}
-if (!(1 !== 0.999999999999)) {}
-if (1.0 !== 1) {}

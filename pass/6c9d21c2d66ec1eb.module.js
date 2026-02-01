@@ -1,1 +1,0 @@
-import value from './json-value-array_FIXTURE.json' with { type: 'json' };

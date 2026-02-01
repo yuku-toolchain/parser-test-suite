@@ -1,1 +1,0 @@
-var result = ('').replaceAll('', 'abc');

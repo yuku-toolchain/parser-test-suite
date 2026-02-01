@@ -1,1 +1,0 @@
-import {name} from './json-named-bindings_FIXTURE.json' with { type: 'json' };

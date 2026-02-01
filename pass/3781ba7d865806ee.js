@@ -1,4 +1,0 @@
-var o = Object.create({
-  p: 1
-});
-var result = Reflect.getOwnPropertyDescriptor(o, 'p');

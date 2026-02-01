@@ -1,1 +1,0 @@
-verifyPrimordialCallableProperty(this, "parseFloat", "parseFloat", 1);

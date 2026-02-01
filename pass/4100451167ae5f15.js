@@ -1,2 +1,0 @@
-var weirdCases = ["en-x-u-foo", "en-a-bar-x-u-foo", "en-x-u-foo-a-bar", "en-a-bar-u-baz-x-u-foo"];
-weirdCases.forEach(function (weird) {});

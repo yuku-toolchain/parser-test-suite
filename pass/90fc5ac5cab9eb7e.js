@@ -1,6 +1,0 @@
-function f1(a){
-  delete a;
-  return a;
-}
-if (f1(1) !== 1)
-  throw new Test262Error('#1: Function parameter was deleted');

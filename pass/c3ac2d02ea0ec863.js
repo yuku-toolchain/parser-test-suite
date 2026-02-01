@@ -1,2 +1,0 @@
-const validCollationOptions = [["abc", "en-u-co-abc"], ["abcd", "en-u-co-abcd"], ["abcde", "en-u-co-abcde"], ["abcdef", "en-u-co-abcdef"], ["abcdefg", "en-u-co-abcdefg"], ["abcdefgh", "en-u-co-abcdefgh"], ["12345678", "en-u-co-12345678"], ["1234abcd", "en-u-co-1234abcd"], ["1234abcd-abc123", "en-u-co-1234abcd-abc123"]];
-for (const [collation, expected] of validCollationOptions) {}

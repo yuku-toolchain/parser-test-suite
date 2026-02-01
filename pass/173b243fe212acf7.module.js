@@ -1,1 +1,0 @@
-import * as ns from './instn-star-props-nrml-1_FIXTURE.js';

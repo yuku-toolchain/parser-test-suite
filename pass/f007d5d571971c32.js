@@ -1,7 +1,0 @@
-var arr = [];
-try {
-  Array.prototype[1] = "prototype";
-  arr.reduce(function () {});
-} finally {
-  delete Array.prototype[1];
-}

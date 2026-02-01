@@ -1,8 +1,0 @@
-var toStringCalled = false;
-BigInt.prototype.toString = function () {
-  toStringCalled = true;
-};
-testWithBigIntTypedArrayConstructors(function (TA) {
-  var sample = new TA([20n, 100n, 3n]);
-  var result = sample.sort();
-});

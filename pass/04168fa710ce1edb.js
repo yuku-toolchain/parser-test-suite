@@ -1,1 +1,0 @@
-var findIndex = TypedArray.prototype.findIndex;

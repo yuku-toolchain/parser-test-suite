@@ -1,1 +1,0 @@
-var __executed = (/["'][^"']*["']/).test('alice cries out: don\'t');

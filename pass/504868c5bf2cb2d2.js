@@ -1,3 +1,0 @@
-try {
-  yield = 0;
-} catch (_) {}

@@ -1,7 +1,0 @@
-let x = 0;
-while (!x) {
-  x++;
-  import.source('./empty_FIXTURE.js').catch(error => {
-assert.sameValue(error.name, 'SyntaxError');
-}).then($DONE, $DONE);
-};

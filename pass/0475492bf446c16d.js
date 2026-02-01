@@ -1,1 +1,0 @@
-var obj = new Object(1.1);

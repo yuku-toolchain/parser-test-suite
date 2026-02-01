@@ -1,5 +1,0 @@
-try {
-  throw {};
-} catch ({f}) {
-  if (true) function f() {}
-}

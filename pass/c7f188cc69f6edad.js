@@ -1,6 +1,0 @@
-const duration = Temporal.Duration.from({
-  days: 1,
-  minutes: 5
-});
-const result = duration.add("P2DT5M");
-TemporalHelpers.assertDuration(result, 0, 0, 0, 3, 0, 10, 0, 0, 0, 0, "String argument should be supported");

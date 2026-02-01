@@ -1,1 +1,0 @@
-/\P{ASSIGNED}/u;

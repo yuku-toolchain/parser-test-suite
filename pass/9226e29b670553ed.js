@@ -1,4 +1,0 @@
-assertNativeFunction(new Proxy((function () {}).bind({}), {}));
-assertNativeFunction(new Proxy((function () {}).bind({}), {
-  apply() {}
-}).apply);

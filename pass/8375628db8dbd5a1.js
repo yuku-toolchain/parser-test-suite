@@ -1,6 +1,0 @@
-var exponent = +Infinity;
-var base = new Array();
-base[0] = -1;
-base[1] = 1;
-var basenum = 2;
-for (var i = 0; i < basenum; i++) {}

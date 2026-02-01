@@ -1,1 +1,0 @@
-const item = new Temporal.PlainTime(0, 0);

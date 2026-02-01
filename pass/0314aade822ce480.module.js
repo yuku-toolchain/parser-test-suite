@@ -1,3 +1,0 @@
-export * from "./import-and-export-propagates-binding_export-from_FIXTURE.js";
-export * from "./import-and-export-propagates-binding_import-and-export_FIXTURE.js";
-import {foo} from './import-and-export-propagates-binding.js';

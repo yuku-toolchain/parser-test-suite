@@ -1,1 +1,0 @@
-if (encodeURIComponent.prototype !== undefined) {}

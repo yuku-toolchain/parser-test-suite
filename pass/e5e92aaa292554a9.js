@@ -1,1 +1,0 @@
-var match = (/(.)\1/).exec('a\x01 aa');

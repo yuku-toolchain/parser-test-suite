@@ -1,1 +1,0 @@
-const formatRangeToParts = Intl.DateTimeFormat.prototype.formatRangeToParts;

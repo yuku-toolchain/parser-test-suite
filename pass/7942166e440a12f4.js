@@ -1,5 +1,0 @@
-var buffer = new SharedArrayBuffer(BigInt64Array.BYTES_PER_ELEMENT * 2);
-testWithBigIntTypedArrayConstructors(function (TA) {
-  let view = new TA(buffer);
-  testWithAtomicsOutOfBoundsIndices(function (IdxGen) {});
-});

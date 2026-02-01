@@ -1,1 +1,0 @@
-const formatRange = Intl.DateTimeFormat.prototype.formatRange;

@@ -1,1 +1,0 @@
-const toPlainDate = Temporal.ZonedDateTime.prototype.toPlainDate;

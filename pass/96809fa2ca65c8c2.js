@@ -1,4 +1,0 @@
-var thisValue;
-(function () {
-  thisValue = (0, eval)('this;');
-})();

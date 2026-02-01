@@ -1,1 +1,0 @@
-var revocationFunction = Proxy.revocable({}, {}).revoke;

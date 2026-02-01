@@ -1,1 +1,0 @@
-var buffer = new SharedArrayBuffer(2);

@@ -1,1 +1,0 @@
-/\P{Other_Default_Ignorable_Code_Point}/u;

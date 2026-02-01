@@ -1,1 +1,0 @@
-var d = delete NaN;

@@ -1,1 +1,0 @@
-var f = ({w: {x, y, z} = undefined}) => {};

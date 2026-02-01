@@ -1,7 +1,0 @@
-const earlier = new Temporal.PlainYearMonth(2000, 5);
-const later = new Temporal.PlainYearMonth(2000, 10);
-const result = earlier.until(later, {
-  roundingIncrement: 2.5,
-  roundingMode: "trunc"
-});
-TemporalHelpers.assertDuration(result, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, "roundingIncrement 2.5 truncates to 2");

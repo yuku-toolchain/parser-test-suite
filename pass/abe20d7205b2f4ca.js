@@ -1,1 +1,0 @@
-var subarray = TypedArray.prototype.subarray;

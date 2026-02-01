@@ -1,4 +1,0 @@
-function fn() {
-  return function () {};
-}
-export default class extends fn(await await await await await await await await await await await await await await await 'await') {}

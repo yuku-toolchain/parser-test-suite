@@ -1,1 +1,0 @@
-const abs = Temporal.Duration.prototype.abs;

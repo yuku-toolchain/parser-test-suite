@@ -1,1 +1,0 @@
-var result = Reflect.getOwnPropertyDescriptor({}, undefined);

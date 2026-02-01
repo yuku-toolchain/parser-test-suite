@@ -1,2 +1,0 @@
-for (using x = null;;) break;
-for (using of = null;;) break;

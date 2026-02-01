@@ -1,2 +1,0 @@
-var result = eval('{length: 3000}/1/;');
-var expected = 3000;

@@ -1,1 +1,0 @@
-testOption(Intl.Collator, "ignorePunctuation", "boolean", undefined, false);

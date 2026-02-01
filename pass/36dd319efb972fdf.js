@@ -1,5 +1,0 @@
-do {
-  import.source('./empty_FIXTURE.js').catch(error => {
-assert.sameValue(error.name, 'SyntaxError');
-}).then($DONE, $DONE);
-} while (false);

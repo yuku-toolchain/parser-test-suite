@@ -1,1 +1,0 @@
-var defaultLocale = new Intl.NumberFormat().resolvedOptions().locale;

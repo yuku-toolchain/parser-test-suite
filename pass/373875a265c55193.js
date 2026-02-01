@@ -1,9 +1,0 @@
-var obj = {};
-var accessed = false;
-Math.enumerable = true;
-Object.defineProperty(obj, "property", Math);
-for (var prop in obj) {
-  if (prop === "property") {
-    accessed = true;
-  }
-}

@@ -1,1 +1,0 @@
-var {gen = function* () {}, xGen = function* x() {}} = {};

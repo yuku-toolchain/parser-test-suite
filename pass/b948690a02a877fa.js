@@ -1,1 +1,0 @@
-const value = new Intl.DurationFormat();

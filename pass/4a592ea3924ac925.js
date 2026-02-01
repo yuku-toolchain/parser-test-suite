@@ -1,3 +1,0 @@
-var len = {
-  valueOf: function () {}
-};

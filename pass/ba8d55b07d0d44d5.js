@@ -1,1 +1,0 @@
-/\p{Composition_Exclusion}/u;

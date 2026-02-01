@@ -1,5 +1,0 @@
-if ((function () {
-  return "gnulluna";
-})().replace(null, function (a1, a2, a3) {
-  return a2 + "";
-}) !== "g1una") {}

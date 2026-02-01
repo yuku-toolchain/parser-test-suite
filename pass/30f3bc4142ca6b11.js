@@ -1,1 +1,0 @@
-(0, eval)('for (let f of [0]) {{ function f() {  } }}');

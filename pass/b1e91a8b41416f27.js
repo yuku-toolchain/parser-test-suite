@@ -1,1 +1,0 @@
-const plainTime = Temporal.PlainTime.from("08:22:36.123456789");

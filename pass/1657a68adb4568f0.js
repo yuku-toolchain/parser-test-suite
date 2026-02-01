@@ -1,4 +1,0 @@
-void ({
-  get foo() {},
-  get foo() {}
-});

@@ -1,1 +1,0 @@
-var entries = TypedArray.prototype.entries;

@@ -1,5 +1,0 @@
-var smoosh;
-function smoosh() {}
-async function* f() {
-  await import('./empty_FIXTURE.js');
-}

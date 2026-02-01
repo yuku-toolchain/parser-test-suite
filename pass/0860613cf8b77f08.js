@@ -1,5 +1,0 @@
-var func = function (x) {
-  return new Boolean(arguments.length === 1 && x === 1 && arguments[0] === 1);
-};
-var NewFunc = Function.prototype.bind.call(func, {});
-var newInstance = new NewFunc(1);

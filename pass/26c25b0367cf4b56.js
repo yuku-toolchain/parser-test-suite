@@ -1,1 +1,0 @@
-const days = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "days").get;

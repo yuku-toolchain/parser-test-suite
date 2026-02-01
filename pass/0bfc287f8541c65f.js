@@ -1,1 +1,0 @@
-/\P{ASCII=Invalid}/u;

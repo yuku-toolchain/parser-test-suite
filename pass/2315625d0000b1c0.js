@@ -1,1 +1,0 @@
-var toExponential = Number.prototype.toExponential;

@@ -1,1 +1,0 @@
-if (eval("for(false;false;false);") !== undefined) {}

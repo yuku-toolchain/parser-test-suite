@@ -1,7 +1,0 @@
-var obj = {};
-Object.defineProperties(obj, {
-  property: {
-    writable: new RegExp()
-  }
-});
-obj.property = "isWritable";

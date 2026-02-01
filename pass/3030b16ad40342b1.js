@@ -1,1 +1,0 @@
-var final = 1;

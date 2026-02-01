@@ -1,1 +1,0 @@
-var desc = Object.getOwnPropertyDescriptor(Intl.DateTimeFormat.prototype, "format");

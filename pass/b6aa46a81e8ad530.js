@@ -1,1 +1,0 @@
-var arr = [-2, Infinity, NaN, -Infinity, 0.6, 9007199254740992];

@@ -1,1 +1,0 @@
-var FACTORY = String.prototype.lastIndexOf;

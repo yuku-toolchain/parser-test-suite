@@ -1,2 +1,0 @@
-import defer * as self from "./get-self-while-evaluating.js";
-assert.throws(TypeError, () => self.foo);

@@ -1,1 +1,0 @@
-const toPlainMonthDay = Temporal.PlainDate.prototype.toPlainMonthDay;

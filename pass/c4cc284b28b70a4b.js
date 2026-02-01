@@ -1,7 +1,0 @@
-var base = {};
-Object.defineProperty(base, "foo", {
-  get: function () {
-    return 42;
-  }
-});
-var o = Object.create(base);

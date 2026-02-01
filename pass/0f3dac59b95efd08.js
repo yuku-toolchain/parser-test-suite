@@ -1,6 +1,0 @@
-var accessed = false;
-var strObj = new String("1");
-for (var i = 0; strObj; ) {
-  accessed = true;
-  break;
-}

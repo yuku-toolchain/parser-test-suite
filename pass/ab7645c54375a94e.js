@@ -1,7 +1,0 @@
-while (function __func() {
-  return 0;
-}) {
-  var __reached = 1;
-  break;
-}
-if (__reached !== 1) {}

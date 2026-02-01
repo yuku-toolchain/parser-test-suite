@@ -1,1 +1,0 @@
-const [fn = function () {}, xFn = function x() {}] = [];

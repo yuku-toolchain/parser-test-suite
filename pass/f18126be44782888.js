@@ -1,1 +1,0 @@
-let desc = Object.getOwnPropertyDescriptor(Iterator.prototype, 'constructor');

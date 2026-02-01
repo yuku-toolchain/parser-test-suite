@@ -1,1 +1,0 @@
-/\p{gc=uppercaseletter}/u;

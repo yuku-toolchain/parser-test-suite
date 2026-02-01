@@ -1,1 +1,0 @@
-if (("$$abcdabcd").indexOf("ab", NaN) !== 2) {}

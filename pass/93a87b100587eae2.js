@@ -1,1 +1,0 @@
-var Base = (function () {}).bind();

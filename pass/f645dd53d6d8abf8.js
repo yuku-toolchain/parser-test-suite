@@ -1,1 +1,0 @@
-let lf = new Intl.ListFormat();

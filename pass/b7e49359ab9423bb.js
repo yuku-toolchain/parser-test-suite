@@ -1,1 +1,0 @@
-const valueOf = Temporal.PlainDateTime.prototype.valueOf;

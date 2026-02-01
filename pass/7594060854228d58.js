@@ -1,1 +1,0 @@
-var regObj = new RegExp(/test/);

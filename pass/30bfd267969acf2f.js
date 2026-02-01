@@ -1,1 +1,0 @@
-var {cover = function () {}, xCover = (0, function () {})} = {};

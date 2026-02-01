@@ -1,8 +1,0 @@
-TemporalHelpers.checkToTemporalCalendarFastPath(temporalObject => {
-  const yearmonth = new Temporal.PlainYearMonth(2000, 5);
-  yearmonth.since({
-    year: 2005,
-    month: 6,
-    calendar: temporalObject
-  });
-});

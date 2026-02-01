@@ -1,1 +1,0 @@
-const calendarId = Object.getOwnPropertyDescriptor(Temporal.PlainYearMonth.prototype, "calendarId").get;

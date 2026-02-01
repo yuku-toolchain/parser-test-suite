@@ -1,5 +1,0 @@
-var __executed = (/|()/).exec("");
-var __expected = ["", undefined];
-__expected.index = 0;
-__expected.input = "";
-for (var index = 0; index < __expected.length; index++) {}

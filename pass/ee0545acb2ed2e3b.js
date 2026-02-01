@@ -1,1 +1,0 @@
-var native = 1;

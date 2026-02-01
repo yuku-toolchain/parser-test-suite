@@ -1,5 +1,0 @@
-function decorator() {
-  return () => {};
-}
-var yield = decorator;
-@yield() class C {}

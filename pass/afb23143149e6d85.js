@@ -1,9 +1,0 @@
-var arr = [0, 1, 2];
-Object.defineProperty(Array.prototype, "protoProperty", {
-  get: function () {
-    return "protoArray";
-  },
-  configurable: true
-});
-var result = Object.getOwnPropertyNames(arr);
-for (var p in result) {}

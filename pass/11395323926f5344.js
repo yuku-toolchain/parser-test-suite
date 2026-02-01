@@ -1,5 +1,0 @@
-const instance = new Temporal.PlainDate(2000, 1, 1);
-const props = {};
-props.minute = 30;
-const result = instance.toPlainDateTime(props);
-TemporalHelpers.assertPlainDateTime(result, 2000, 1, "M01", 1, 0, 30, 0, 0, 0, 0, "missing time units default to 0");

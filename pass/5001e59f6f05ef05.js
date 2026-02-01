@@ -1,2 +1,0 @@
-var aString = new String("power \u006F\u0066 the power of the power \u006F\u0066 the power of the power \u006F\u0066 the power of the great sword");
-if (aString.search(/of/) !== aString.search(/of/g)) {}

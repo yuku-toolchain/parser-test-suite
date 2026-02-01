@@ -1,1 +1,0 @@
-class SubIterator extends Iterator {}

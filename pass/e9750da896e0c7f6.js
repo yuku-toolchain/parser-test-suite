@@ -1,1 +1,0 @@
-var cCode = 99;

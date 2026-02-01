@@ -1,7 +1,0 @@
-var __obj = {
-  toString: function () {
-    return 1;
-  }
-};
-var __str = "lego";
-if (__str.charCodeAt(__obj) !== 0x65) {}

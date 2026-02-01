@@ -1,1 +1,0 @@
-const plainTime = new Temporal.PlainTime(12, 34, 56, 123, 987, 500);

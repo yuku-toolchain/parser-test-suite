@@ -1,1 +1,0 @@
-import './instn-resolve-err-syntax-2_FIXTURE.js';

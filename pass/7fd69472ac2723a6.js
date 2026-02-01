@@ -1,6 +1,0 @@
-const instance = new Temporal.PlainYearMonth(2024, 6, "islamic-civil", 8);
-["2024-06-08[u-ca=islamicc]", {
-  year: 1445,
-  month: 12,
-  calendar: "islamicc"
-}].forEach(arg => assert(instance.equals(arg), "calendar ID is canonicalized"));

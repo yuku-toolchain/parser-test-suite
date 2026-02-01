@@ -1,4 +1,0 @@
-switch (true) {
-  default:
-    function g() {}
-}

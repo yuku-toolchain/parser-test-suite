@@ -1,1 +1,0 @@
-if (String.prototype.match.prototype !== undefined) {}

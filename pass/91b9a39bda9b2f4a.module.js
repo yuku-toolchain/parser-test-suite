@@ -1,5 +1,0 @@
-import * as ns from "./trap-is-undefined-target-is-proxy.js";
-var nsTarget = new Proxy(ns, {});
-var nsProxy = new Proxy(nsTarget, {
-  preventExtensions: undefined
-});

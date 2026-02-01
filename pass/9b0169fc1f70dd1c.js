@@ -1,7 +1,0 @@
-var callCount = 0;
-class C {
-  static method([...x] = [1]) {
-    callCount = callCount + 1;
-  }
-}
-C.method();

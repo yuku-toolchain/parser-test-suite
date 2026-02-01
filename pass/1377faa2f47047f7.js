@@ -1,4 +1,0 @@
-const s1 = new Set([1, 2]);
-const s2 = new Set([2, 3]);
-const expected = [1, 3];
-const combined = s1.symmetricDifference(s2);

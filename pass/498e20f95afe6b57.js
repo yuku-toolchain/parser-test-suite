@@ -1,1 +1,0 @@
-var StringIteratorProto = Object.getPrototypeOf(('')[Symbol.iterator]());

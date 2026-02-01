@@ -1,1 +1,0 @@
-var foo = new Function("baz", "qux", "baz", "return 0;");

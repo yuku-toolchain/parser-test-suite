@@ -1,1 +1,0 @@
-verifyPrimordialCallableProperty(this, "isFinite", "isFinite", 1);

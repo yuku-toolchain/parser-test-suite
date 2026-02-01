@@ -1,1 +1,0 @@
-var fromIndex = Symbol("1");

@@ -1,5 +1,0 @@
-var buffer = new ArrayBuffer(8);
-var sample = new DataView(buffer, 0);
-var result;
-result = sample.setFloat64(0, 42, true);
-result = sample.setFloat64(0, 8.759e-320, true);

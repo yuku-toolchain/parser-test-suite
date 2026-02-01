@@ -1,1 +1,0 @@
-var MapIteratorProto = Object.getPrototypeOf(new Map().values());

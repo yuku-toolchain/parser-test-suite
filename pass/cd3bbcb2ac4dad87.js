@@ -1,1 +1,0 @@
-verifyPrimordialCallableProperty(this, "parseInt", "parseInt", 2);

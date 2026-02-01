@@ -1,5 +1,0 @@
-var callCount = 0;
-async function f(_ = (function () {})()) {
-  callCount = callCount + 1;
-}
-f().then(_ => {}, error => assert.sameValue(error.constructor, Test262Error)).then(() => {}, $DONE).then($DONE, $DONE);

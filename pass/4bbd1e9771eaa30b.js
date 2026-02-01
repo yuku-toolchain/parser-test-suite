@@ -1,1 +1,0 @@
-const instance = new Temporal.Duration(0, 0, 0, 1, 2, 3, 4, 987, 654, 321);

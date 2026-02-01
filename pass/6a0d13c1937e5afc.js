@@ -1,5 +1,0 @@
-var i = 0;
-var counter = 0;
-for (async of => {}; i < 10; ++i) {
-  ++counter;
-}

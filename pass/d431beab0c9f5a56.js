@@ -1,1 +1,0 @@
-if (eval("\"bj\"").toLocaleUpperCase() !== "BJ") {}

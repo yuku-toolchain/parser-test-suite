@@ -1,1 +1,0 @@
-var lastIndexOf = String.prototype.lastIndexOf;

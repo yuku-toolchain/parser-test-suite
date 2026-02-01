@@ -1,1 +1,0 @@
-var p1 = Promise.resolve(1), p2 = Promise.resolve(p1);

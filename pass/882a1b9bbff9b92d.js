@@ -1,3 +1,0 @@
-var attr = {
-  toString: function () {}
-};

@@ -1,1 +1,0 @@
-var result = eval('{}() => { return 42; };');

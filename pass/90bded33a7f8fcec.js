@@ -1,1 +1,0 @@
-if (new String(42).charCodeAt((function () {})()) !== 0x34) {}

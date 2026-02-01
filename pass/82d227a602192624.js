@@ -1,1 +1,0 @@
-delete Intl.Locale.prototype[Symbol.toStringTag];

@@ -1,1 +1,0 @@
-var boolean = 1;

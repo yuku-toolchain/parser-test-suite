@@ -1,7 +1,0 @@
-var nsMaxInstant = 864n * 10n ** 19n;
-var nsMinInstant = -nsMaxInstant;
-var invalidEpochNanoseconds = [nsMaxInstant + 1n, nsMinInstant - 1n, 2n ** 128n, -(2n ** 128n)];
-var timeZones = ["UTC", "+00", "+01", "-01"];
-for (var timeZone of timeZones) {
-  for (var epochNs of invalidEpochNanoseconds) {}
-}

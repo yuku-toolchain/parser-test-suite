@@ -1,3 +1,0 @@
-var source = {
-  get attr() {}
-};

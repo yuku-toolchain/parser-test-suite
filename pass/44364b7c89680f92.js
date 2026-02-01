@@ -1,7 +1,0 @@
-for (let ctor of floatCtors) {
-  const rab = CreateResizableArrayBuffer(4 * ctor.BYTES_PER_ELEMENT, 8 * ctor.BYTES_PER_ELEMENT);
-  const lengthTracking = new ctor(rab);
-  lengthTracking[0] = -Infinity;
-  lengthTracking[1] = Infinity;
-  lengthTracking[2] = NaN;
-}

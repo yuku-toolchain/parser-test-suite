@@ -1,4 +1,0 @@
-const instance = new Temporal.PlainMonthDay(10, 1);
-for (const arg of TemporalHelpers.ISO.plainMonthDayStringsValid()) {
-  const result = instance.equals(arg);
-}

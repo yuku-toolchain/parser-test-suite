@@ -1,7 +1,0 @@
-function ctor() {
-  return import(new.target);
-}
-ctor.toString = () => './module-code_FIXTURE.js';
-async function fn() {
-  const ns = await new ctor();
-}

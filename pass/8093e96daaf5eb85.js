@@ -1,3 +1,0 @@
-TemporalHelpers.checkToTemporalInstantFastPath(datetime => {
-  const instant = new Temporal.Instant(1_000_000_000_987_654_321n);
-});

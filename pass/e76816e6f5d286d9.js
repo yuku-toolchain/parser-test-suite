@@ -1,1 +1,0 @@
-var f = new Function("\"use strict\";\nreturn typeof this;");

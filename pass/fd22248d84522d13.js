@@ -1,1 +1,0 @@
-const year = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "year").get;

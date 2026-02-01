@@ -1,1 +1,0 @@
-var obj = Function.prototype.call.length;

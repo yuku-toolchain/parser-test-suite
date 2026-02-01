@@ -1,1 +1,0 @@
-var obj = Object(null, 2, 3);

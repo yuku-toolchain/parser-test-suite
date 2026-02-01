@@ -1,1 +1,0 @@
-void await null;

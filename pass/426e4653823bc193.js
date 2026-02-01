@@ -1,2 +1,0 @@
-const tests = [[new Temporal.PlainYearMonth(1976, 2), 29], [new Temporal.PlainYearMonth(1976, 11), 30], [new Temporal.PlainYearMonth(1976, 12), 31], [new Temporal.PlainYearMonth(1977, 2), 28]];
-for (const [plainYearMonth, expected] of tests) {}

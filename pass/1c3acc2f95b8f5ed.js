@@ -1,3 +1,0 @@
-let o = {
-  [null]: null
-};

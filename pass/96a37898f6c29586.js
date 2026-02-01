@@ -1,1 +1,0 @@
-if (String(null) !== "null") {}

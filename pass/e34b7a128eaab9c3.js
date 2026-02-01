@@ -1,1 +1,0 @@
-/\p{InScript=Adlam}/u;

@@ -1,3 +1,0 @@
-export default await new Promise(function (res, rej) {
-  res(1);
-});

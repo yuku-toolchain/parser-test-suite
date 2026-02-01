@@ -1,1 +1,0 @@
-var toHex = Uint8Array.prototype.toHex;

@@ -1,8 +1,0 @@
-var obj = {};
-var testResult1 = true;
-var testResult2 = true;
-var preCheck = Object.isExtensible(obj);
-Object.preventExtensions(obj);
-testResult1 = Object.isExtensible(obj);
-Object.preventExtensions(obj);
-testResult2 = Object.isExtensible(obj);

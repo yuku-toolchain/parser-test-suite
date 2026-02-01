@@ -1,1 +1,0 @@
-var dotAll = Object.getOwnPropertyDescriptor(RegExp.prototype, "dotAll").get;

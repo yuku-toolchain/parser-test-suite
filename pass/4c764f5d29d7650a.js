@@ -1,6 +1,0 @@
-verifyPrimordialCallableProperty(WeakMap.prototype, "getOrInsertComputed", "getOrInsertComputed", 2, {
-  value: WeakMap.prototype.getOrInsertComputed,
-  writable: true,
-  enumerable: false,
-  configurable: true
-});

@@ -1,5 +1,0 @@
-const earlier = new Temporal.PlainYearMonth(2000, 5);
-const later = new Temporal.PlainYearMonth(2001, 6);
-TemporalHelpers.checkStringOptionWrongType("smallestUnit", "year", smallestUnit => earlier.until(later, {
-  smallestUnit
-}), (result, descr) => TemporalHelpers.assertDuration(result, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, descr));

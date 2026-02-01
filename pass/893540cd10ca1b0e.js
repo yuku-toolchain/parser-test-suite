@@ -1,1 +1,0 @@
-var s = Object.prototype.toString.call(RegExp.prototype);

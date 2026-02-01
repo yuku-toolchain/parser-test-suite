@@ -1,5 +1,0 @@
-switch (0) {
-  default:
-    const x = 1;
-}
-x;

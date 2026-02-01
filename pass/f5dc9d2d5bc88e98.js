@@ -1,1 +1,0 @@
-const segment = Intl.Segmenter.prototype.segment;

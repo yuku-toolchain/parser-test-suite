@@ -1,2 +1,0 @@
-export let x = await null;
-export const y = await null;

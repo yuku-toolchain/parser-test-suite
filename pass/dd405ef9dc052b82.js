@@ -1,1 +1,0 @@
-if (decodeURI.length !== 1) {}

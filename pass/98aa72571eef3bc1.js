@@ -1,1 +1,0 @@
-var obj = new SuppressedError(undefined, undefined, '42');

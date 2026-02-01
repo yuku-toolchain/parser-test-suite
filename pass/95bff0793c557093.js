@@ -1,1 +1,0 @@
-const dayOfYear = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "dayOfYear").get;

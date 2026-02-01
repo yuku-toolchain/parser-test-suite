@@ -1,7 +1,0 @@
-var obj = {};
-var arrObj = [1, 2, 3];
-arrObj.configurable = true;
-Object.defineProperty(obj, "property", arrObj);
-var beforeDeleted = obj.hasOwnProperty("property");
-delete obj.property;
-var afterDeleted = obj.hasOwnProperty("property");

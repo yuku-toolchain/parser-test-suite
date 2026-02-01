@@ -1,1 +1,0 @@
-var toPrecision = Number.prototype.toPrecision;

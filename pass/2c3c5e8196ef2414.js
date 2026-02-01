@@ -1,1 +1,0 @@
-Promise.race(new Error("abrupt")).then(function () {}, function (err) {}).then($DONE, $DONE);

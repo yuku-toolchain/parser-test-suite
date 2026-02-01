@@ -1,1 +1,0 @@
-const toLocaleString = Temporal.PlainYearMonth.prototype.toLocaleString;

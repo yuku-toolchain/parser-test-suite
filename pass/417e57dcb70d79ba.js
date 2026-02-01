@@ -1,1 +1,0 @@
-var iter = Iterator.zip([]);

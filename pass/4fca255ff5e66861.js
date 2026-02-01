@@ -1,3 +1,0 @@
-const instance = new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC");
-const arg = "jApAnEsE";
-const result = instance.withCalendar(arg);

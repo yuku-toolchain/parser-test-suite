@@ -1,1 +1,0 @@
-if (String(42).charAt(void 0) !== "4") {}

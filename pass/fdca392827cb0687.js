@@ -1,3 +1,0 @@
-function getArguments() {
-  return arguments;
-}

@@ -1,1 +1,0 @@
-new Function("a1,a2", "a3", "this.shifted=a2;").apply(null, [1, 2, 3]);

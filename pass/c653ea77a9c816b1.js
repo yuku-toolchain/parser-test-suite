@@ -1,4 +1,0 @@
-const datetime = new Temporal.ZonedDateTime(1_000_000_000_987_654_321n, "UTC", "iso8601");
-TemporalHelpers.checkStringOptionWrongType("calendarName", "auto", calendarName => datetime.toString({
-  calendarName
-}), (result, descr) => assert.sameValue(result, "2001-09-09T01:46:40.987654321+00:00[UTC]", descr));

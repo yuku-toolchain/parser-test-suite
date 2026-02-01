@@ -1,2 +1,0 @@
-const invalidNumberingSystemOptions = ["", "a", "ab", "abcdefghi", "abc-abcdefghi", "!invalid!", "-latn-", "latn-", "latn--", "latn-ca", "latn-ca-", "latn-ca-gregory"];
-for (const numberingSystem of invalidNumberingSystemOptions) {}

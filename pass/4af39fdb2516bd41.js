@@ -1,1 +1,0 @@
-var descriptor = Object.getOwnPropertyDescriptor(DataView.prototype, 'buffer');

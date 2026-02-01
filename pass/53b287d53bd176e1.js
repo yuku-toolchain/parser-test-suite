@@ -1,1 +1,0 @@
-var result = [0].with(-0.5, 123);

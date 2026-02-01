@@ -1,2 +1,0 @@
-(0, eval)('{\
-  let f = 123;{ function f() {  } }}');

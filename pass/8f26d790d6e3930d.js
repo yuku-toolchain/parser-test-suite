@@ -1,1 +1,0 @@
-var map = TypedArray.prototype.map;

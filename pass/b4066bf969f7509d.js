@@ -1,3 +1,0 @@
-var end = {
-  valueOf: function () {}
-};

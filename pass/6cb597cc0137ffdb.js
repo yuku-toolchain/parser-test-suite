@@ -1,1 +1,0 @@
-var match = (/^|\udf06/ug)[Symbol.match]('\ud834\udf06');

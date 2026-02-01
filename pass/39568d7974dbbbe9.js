@@ -1,1 +1,0 @@
-var p = new Promise(function () {});

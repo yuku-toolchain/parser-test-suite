@@ -1,9 +1,0 @@
-function F() {
-  this.af = _ => {
-    if (new.target) {
-      return 1;
-    }
-    return 2;
-  };
-}
-var f = new F();

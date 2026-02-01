@@ -1,1 +1,0 @@
-var s = Symbol('1');

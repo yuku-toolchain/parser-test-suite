@@ -1,8 +1,0 @@
-var el = {};
-var elIndex = Number.MAX_SAFE_INTEGER - 3;
-var fromIndex = Number.MAX_SAFE_INTEGER - 1;
-var arrayLike = {
-  length: Number.MAX_SAFE_INTEGER
-};
-arrayLike[elIndex] = el;
-var res = Array.prototype.lastIndexOf.call(arrayLike, el, fromIndex);

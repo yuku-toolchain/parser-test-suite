@@ -1,1 +1,0 @@
-var lastIndexOf = TypedArray.prototype.lastIndexOf;

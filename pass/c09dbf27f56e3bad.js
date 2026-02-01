@@ -1,8 +1,0 @@
-const expected = ["get options.fractionalSecondDigits", "get options.fractionalSecondDigits.toString", "call options.fractionalSecondDigits.toString", "get options.roundingMode", "get options.roundingMode.toString", "call options.roundingMode.toString", "get options.smallestUnit", "get options.smallestUnit.toString", "call options.smallestUnit.toString"];
-const actual = [];
-const options = TemporalHelpers.propertyBagObserver(actual, {
-  smallestUnit: "seconds",
-  fractionalSecondDigits: "auto",
-  roundingMode: "expand"
-}, "options");
-const instance = new Temporal.Duration(0, 0, 0, 0, 0, 0, Number.MAX_SAFE_INTEGER, 1);

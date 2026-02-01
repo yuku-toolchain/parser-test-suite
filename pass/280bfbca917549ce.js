@@ -1,9 +1,0 @@
-testWithBigIntTypedArrayConstructors(function (TA) {
-  const sample = new TA([1n, 2n, 3n]);
-  const separator = {
-    toString() {
-      $DETACHBUFFER(sample.buffer);
-      return ',';
-    }
-  };
-});

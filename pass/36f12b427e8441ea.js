@@ -1,1 +1,0 @@
-let {a, b, c} = (/(?<a>.)(?<b>.)(?<c>.)\k<c>\k<b>\k<a>/u).exec("abccba").groups;

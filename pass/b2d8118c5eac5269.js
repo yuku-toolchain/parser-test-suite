@@ -1,1 +1,0 @@
-if (eval("do ; while(false)") !== undefined) {}

@@ -1,4 +1,0 @@
-var instance = 60;
-var of = 6;
-var g = 2;
-var notRegExp = instance / of / g;

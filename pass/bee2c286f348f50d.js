@@ -1,1 +1,0 @@
-TemporalHelpers.checkSubclassingIgnoredStatic(Temporal.PlainMonthDay, "from", ["05-02"], result => TemporalHelpers.assertPlainMonthDay(result, "M05", 2));

@@ -1,1 +1,0 @@
-const getCollations = Intl.Locale.prototype.getCollations;

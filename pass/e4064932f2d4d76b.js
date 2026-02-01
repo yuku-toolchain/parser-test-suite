@@ -1,1 +1,0 @@
-const duration = new Temporal.Duration(0, 0, 0, 0, 12, 34, 56, 123, 987, 500);

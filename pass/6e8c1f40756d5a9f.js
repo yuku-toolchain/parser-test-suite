@@ -1,2 +1,0 @@
-(0, eval)('if (true) function f() { return "declaration"; } else function _f() {}assert.sameValue(typeof f, "function");\
-  assert.sameValue(f(), "declaration");');

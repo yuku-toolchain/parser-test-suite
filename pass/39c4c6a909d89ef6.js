@@ -1,2 +1,0 @@
-for (var x of []) let;
-x = 1;

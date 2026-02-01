@@ -1,7 +1,0 @@
-var arrObj = [1, 2, 3];
-Object.defineProperty(arrObj, "length", {
-  writable: false
-});
-Object.defineProperty(arrObj, 1, {
-  value: "abc"
-});

@@ -1,1 +1,0 @@
-var proto = Object.getPrototypeOf(DisposableStack.prototype);

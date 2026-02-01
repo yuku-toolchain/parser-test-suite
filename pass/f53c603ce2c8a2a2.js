@@ -1,7 +1,0 @@
-var array = [];
-var proxy = new Proxy(new Proxy(array, {}), {});
-var Ctor = function () {};
-var result;
-array.constructor = function () {};
-array.constructor[Symbol.species] = Ctor;
-result = Array.prototype.filter.call(proxy, function () {});

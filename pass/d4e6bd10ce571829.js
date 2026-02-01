@@ -1,1 +1,0 @@
-var double = 1;

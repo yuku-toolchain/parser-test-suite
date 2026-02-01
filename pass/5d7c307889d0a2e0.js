@@ -1,1 +1,0 @@
-/\\p{Script=FooBarBazInvalid}/u;

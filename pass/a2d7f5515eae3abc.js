@@ -1,1 +1,0 @@
-var sticky = Object.getOwnPropertyDescriptor(RegExp.prototype, 'sticky').get;

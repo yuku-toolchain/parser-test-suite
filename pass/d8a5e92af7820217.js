@@ -1,6 +1,0 @@
-var result = false;
-function callbackfn(val, idx, obj) {
-  result = obj.length === 3;
-}
-var str = new String("012");
-Array.prototype.forEach.call(str, callbackfn);

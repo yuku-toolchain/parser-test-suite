@@ -1,3 +1,0 @@
-void await ({
-  function() {}
-});

@@ -1,4 +1,0 @@
-var nsMaxInstant = 864n * 10n ** 19n;
-var nsMinInstant = -nsMaxInstant;
-var epochNs = nsMinInstant;
-var zdt = new Temporal.ZonedDateTime(epochNs, "UTC");

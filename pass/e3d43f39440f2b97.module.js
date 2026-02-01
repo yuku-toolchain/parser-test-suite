@@ -1,1 +1,0 @@
-export {} from './instn-resolve-empty-export_FIXTURE.js';

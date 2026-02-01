@@ -1,1 +1,0 @@
-import * as ns from './has-property-sym-found.js';

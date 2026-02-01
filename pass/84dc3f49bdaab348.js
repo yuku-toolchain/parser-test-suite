@@ -1,5 +1,0 @@
-let z = 1;
-let s = 0;
-for (let x = 1; z < 2; z++) {
-  s += x + z;
-}

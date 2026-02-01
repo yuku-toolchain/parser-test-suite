@@ -1,1 +1,0 @@
-const getCalendars = Intl.Locale.prototype.getCalendars;

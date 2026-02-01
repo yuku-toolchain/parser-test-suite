@@ -1,1 +1,0 @@
-var match = (/./u).exec('𝌆');

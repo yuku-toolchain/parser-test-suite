@@ -1,1 +1,0 @@
-if (String.fromCharCode(0x0000) !== "\0") {}
