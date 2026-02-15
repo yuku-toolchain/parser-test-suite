@@ -1,1 +1,132 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 4,
+              "end": 5
+            },
+            "init": null,
+            "start": 4,
+            "end": 5
+          }
+        ],
+        "start": 0,
+        "end": 6
+      },
+      {
+        "type": "TryStatement",
+        "block": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "eval",
+                  "start": 15,
+                  "end": 19
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "x = 1; x\n++",
+                    "raw": "\"x = 1; x\\u000A++\"",
+                    "start": 20,
+                    "end": 38
+                  }
+                ],
+                "optional": false,
+                "start": 15,
+                "end": 39
+              },
+              "start": 15,
+              "end": 40
+            }
+          ],
+          "start": 11,
+          "end": 42
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "e",
+            "start": 50,
+            "end": 51
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "IfStatement",
+                "test": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "e",
+                      "start": 61,
+                      "end": 62
+                    },
+                    "operator": "instanceof",
+                    "right": {
+                      "type": "Identifier",
+                      "name": "SyntaxError",
+                      "start": 74,
+                      "end": 85
+                    },
+                    "start": 61,
+                    "end": 85
+                  },
+                  "operator": "!==",
+                  "right": {
+                    "type": "Literal",
+                    "value": true,
+                    "raw": "true",
+                    "start": 90,
+                    "end": 94
+                  },
+                  "start": 61,
+                  "end": 94
+                },
+                "consequent": {
+                  "type": "BlockStatement",
+                  "body": [],
+                  "start": 96,
+                  "end": 98
+                },
+                "alternate": null,
+                "start": 57,
+                "end": 98
+              }
+            ],
+            "start": 53,
+            "end": 100
+          },
+          "start": 43,
+          "end": 100
+        },
+        "finalizer": null,
+        "start": 7,
+        "end": 100
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 100
+  },
+  "errors": [],
+  "comments": []
+}

@@ -1,1 +1,127 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "initialBV",
+              "start": 4,
+              "end": 13
+            },
+            "init": null,
+            "start": 4,
+            "end": 13
+          },
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "currentBV",
+              "start": 15,
+              "end": 24
+            },
+            "init": null,
+            "start": 15,
+            "end": 24
+          }
+        ],
+        "start": 0,
+        "end": 25
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 26,
+            "end": 30
+          },
+          "arguments": [
+            {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Literal",
+                    "value": "switch (1) {",
+                    "raw": "'switch (1) {'",
+                    "start": 31,
+                    "end": 45
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Literal",
+                    "value": "  default:",
+                    "raw": "'  default:'",
+                    "start": 48,
+                    "end": 60
+                  },
+                  "start": 31,
+                  "end": 60
+                },
+                "operator": "+",
+                "right": {
+                  "type": "Literal",
+                  "value": "    function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; }",
+                  "raw": "'    function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; }'",
+                  "start": 63,
+                  "end": 139
+                },
+                "start": 31,
+                "end": 139
+              },
+              "operator": "+",
+              "right": {
+                "type": "Literal",
+                "value": "}  ",
+                "raw": "'}\\\n  '",
+                "start": 142,
+                "end": 149
+              },
+              "start": 31,
+              "end": 149
+            }
+          ],
+          "optional": false,
+          "start": 26,
+          "end": 150
+        },
+        "start": 26,
+        "end": 151
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "f",
+            "start": 152,
+            "end": 153
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 152,
+          "end": 155
+        },
+        "start": 152,
+        "end": 156
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 156
+  },
+  "errors": [],
+  "comments": []
+}

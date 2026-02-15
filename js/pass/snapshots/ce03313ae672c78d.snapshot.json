@@ -1,1 +1,265 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "uriMark",
+              "start": 4,
+              "end": 11
+            },
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": "-",
+                  "raw": "\"-\"",
+                  "start": 15,
+                  "end": 18
+                },
+                {
+                  "type": "Literal",
+                  "value": "_",
+                  "raw": "\"_\"",
+                  "start": 20,
+                  "end": 23
+                },
+                {
+                  "type": "Literal",
+                  "value": ".",
+                  "raw": "\".\"",
+                  "start": 25,
+                  "end": 28
+                },
+                {
+                  "type": "Literal",
+                  "value": "!",
+                  "raw": "\"!\"",
+                  "start": 30,
+                  "end": 33
+                },
+                {
+                  "type": "Literal",
+                  "value": "~",
+                  "raw": "\"~\"",
+                  "start": 35,
+                  "end": 38
+                },
+                {
+                  "type": "Literal",
+                  "value": "*",
+                  "raw": "\"*\"",
+                  "start": 40,
+                  "end": 43
+                },
+                {
+                  "type": "Literal",
+                  "value": "'",
+                  "raw": "\"'\"",
+                  "start": 45,
+                  "end": 48
+                },
+                {
+                  "type": "Literal",
+                  "value": "(",
+                  "raw": "\"(\"",
+                  "start": 50,
+                  "end": 53
+                },
+                {
+                  "type": "Literal",
+                  "value": ")",
+                  "raw": "\")\"",
+                  "start": 55,
+                  "end": 58
+                }
+              ],
+              "start": 14,
+              "end": 59
+            },
+            "start": 4,
+            "end": 59
+          }
+        ],
+        "start": 0,
+        "end": 60
+      },
+      {
+        "type": "ForStatement",
+        "init": {
+          "type": "VariableDeclaration",
+          "kind": "var",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "indexC",
+                "start": 70,
+                "end": 76
+              },
+              "init": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 79,
+                "end": 80
+              },
+              "start": 70,
+              "end": 80
+            }
+          ],
+          "start": 66,
+          "end": 80
+        },
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "indexC",
+            "start": 82,
+            "end": 88
+          },
+          "operator": "<",
+          "right": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "uriMark",
+              "start": 91,
+              "end": 98
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "length",
+              "start": 99,
+              "end": 105
+            },
+            "optional": false,
+            "computed": false,
+            "start": 91,
+            "end": 105
+          },
+          "start": 82,
+          "end": 105
+        },
+        "update": {
+          "type": "UpdateExpression",
+          "operator": "++",
+          "prefix": false,
+          "argument": {
+            "type": "Identifier",
+            "name": "indexC",
+            "start": 107,
+            "end": 113
+          },
+          "start": 107,
+          "end": 115
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "var",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "str",
+                    "start": 125,
+                    "end": 128
+                  },
+                  "init": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "uriMark",
+                      "start": 131,
+                      "end": 138
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "indexC",
+                      "start": 139,
+                      "end": 145
+                    },
+                    "optional": false,
+                    "computed": true,
+                    "start": 131,
+                    "end": 146
+                  },
+                  "start": 125,
+                  "end": 146
+                }
+              ],
+              "start": 121,
+              "end": 147
+            },
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "encodeURI",
+                    "start": 154,
+                    "end": 163
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "str",
+                      "start": 164,
+                      "end": 167
+                    }
+                  ],
+                  "optional": false,
+                  "start": 154,
+                  "end": 168
+                },
+                "operator": "!==",
+                "right": {
+                  "type": "Identifier",
+                  "name": "str",
+                  "start": 173,
+                  "end": 176
+                },
+                "start": 154,
+                "end": 176
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 178,
+                "end": 180
+              },
+              "alternate": null,
+              "start": 150,
+              "end": 180
+            }
+          ],
+          "start": 117,
+          "end": 182
+        },
+        "start": 61,
+        "end": 182
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 182
+  },
+  "errors": [],
+  "comments": []
+}

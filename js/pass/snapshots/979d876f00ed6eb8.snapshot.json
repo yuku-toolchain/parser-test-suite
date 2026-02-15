@@ -1,1 +1,272 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "uriReserved",
+              "start": 4,
+              "end": 15
+            },
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": ";",
+                  "raw": "\";\"",
+                  "start": 19,
+                  "end": 22
+                },
+                {
+                  "type": "Literal",
+                  "value": "/",
+                  "raw": "\"/\"",
+                  "start": 24,
+                  "end": 27
+                },
+                {
+                  "type": "Literal",
+                  "value": "?",
+                  "raw": "\"?\"",
+                  "start": 29,
+                  "end": 32
+                },
+                {
+                  "type": "Literal",
+                  "value": ":",
+                  "raw": "\":\"",
+                  "start": 34,
+                  "end": 37
+                },
+                {
+                  "type": "Literal",
+                  "value": "@",
+                  "raw": "\"@\"",
+                  "start": 39,
+                  "end": 42
+                },
+                {
+                  "type": "Literal",
+                  "value": "&",
+                  "raw": "\"&\"",
+                  "start": 44,
+                  "end": 47
+                },
+                {
+                  "type": "Literal",
+                  "value": "=",
+                  "raw": "\"=\"",
+                  "start": 49,
+                  "end": 52
+                },
+                {
+                  "type": "Literal",
+                  "value": "+",
+                  "raw": "\"+\"",
+                  "start": 54,
+                  "end": 57
+                },
+                {
+                  "type": "Literal",
+                  "value": "$",
+                  "raw": "\"$\"",
+                  "start": 59,
+                  "end": 62
+                },
+                {
+                  "type": "Literal",
+                  "value": ",",
+                  "raw": "\",\"",
+                  "start": 64,
+                  "end": 67
+                }
+              ],
+              "start": 18,
+              "end": 68
+            },
+            "start": 4,
+            "end": 68
+          }
+        ],
+        "start": 0,
+        "end": 69
+      },
+      {
+        "type": "ForStatement",
+        "init": {
+          "type": "VariableDeclaration",
+          "kind": "var",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "indexC",
+                "start": 79,
+                "end": 85
+              },
+              "init": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 88,
+                "end": 89
+              },
+              "start": 79,
+              "end": 89
+            }
+          ],
+          "start": 75,
+          "end": 89
+        },
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "indexC",
+            "start": 91,
+            "end": 97
+          },
+          "operator": "<",
+          "right": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "uriReserved",
+              "start": 100,
+              "end": 111
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "length",
+              "start": 112,
+              "end": 118
+            },
+            "optional": false,
+            "computed": false,
+            "start": 100,
+            "end": 118
+          },
+          "start": 91,
+          "end": 118
+        },
+        "update": {
+          "type": "UpdateExpression",
+          "operator": "++",
+          "prefix": false,
+          "argument": {
+            "type": "Identifier",
+            "name": "indexC",
+            "start": 120,
+            "end": 126
+          },
+          "start": 120,
+          "end": 128
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "var",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "str",
+                    "start": 138,
+                    "end": 141
+                  },
+                  "init": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "uriReserved",
+                      "start": 144,
+                      "end": 155
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "indexC",
+                      "start": 156,
+                      "end": 162
+                    },
+                    "optional": false,
+                    "computed": true,
+                    "start": 144,
+                    "end": 163
+                  },
+                  "start": 138,
+                  "end": 163
+                }
+              ],
+              "start": 134,
+              "end": 164
+            },
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "encodeURI",
+                    "start": 171,
+                    "end": 180
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "str",
+                      "start": 181,
+                      "end": 184
+                    }
+                  ],
+                  "optional": false,
+                  "start": 171,
+                  "end": 185
+                },
+                "operator": "!==",
+                "right": {
+                  "type": "Identifier",
+                  "name": "str",
+                  "start": 190,
+                  "end": 193
+                },
+                "start": 171,
+                "end": 193
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 195,
+                "end": 197
+              },
+              "alternate": null,
+              "start": 167,
+              "end": 197
+            }
+          ],
+          "start": 130,
+          "end": 199
+        },
+        "start": 70,
+        "end": 199
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 199
+  },
+  "errors": [],
+  "comments": []
+}

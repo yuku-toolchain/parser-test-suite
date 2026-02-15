@@ -1,1 +1,90 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "funcA",
+              "start": 4,
+              "end": 9
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "eval",
+                "start": 12,
+                "end": 16
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "function __funcA(__arg){return __arg;}; __funcA",
+                  "raw": "\"function __func\\u0041(__arg){return __arg;}; __funcA\"",
+                  "start": 17,
+                  "end": 71
+                }
+              ],
+              "optional": false,
+              "start": 12,
+              "end": 72
+            },
+            "start": 4,
+            "end": 72
+          }
+        ],
+        "start": 0,
+        "end": 73
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "UnaryExpression",
+            "operator": "typeof",
+            "argument": {
+              "type": "Identifier",
+              "name": "funcA",
+              "start": 85,
+              "end": 90
+            },
+            "prefix": true,
+            "start": 78,
+            "end": 90
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "function",
+            "raw": "\"function\"",
+            "start": 95,
+            "end": 105
+          },
+          "start": 78,
+          "end": 105
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 107,
+          "end": 109
+        },
+        "alternate": null,
+        "start": 74,
+        "end": 109
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 109
+  },
+  "errors": [],
+  "comments": []
+}

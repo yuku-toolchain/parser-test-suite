@@ -1,1 +1,171 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "proxyProto",
+              "start": 4,
+              "end": 14
+            },
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [],
+              "start": 17,
+              "end": 19
+            },
+            "start": 4,
+            "end": 19
+          }
+        ],
+        "start": 0,
+        "end": 20
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "handler",
+              "start": 25,
+              "end": 32
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "allowProxyTraps",
+                "start": 35,
+                "end": 50
+              },
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "getPrototypeOf",
+                        "start": 55,
+                        "end": 69
+                      },
+                      "value": {
+                        "type": "FunctionExpression",
+                        "id": null,
+                        "generator": false,
+                        "async": false,
+                        "params": [
+                          {
+                            "type": "Identifier",
+                            "name": "_target",
+                            "start": 81,
+                            "end": 88
+                          }
+                        ],
+                        "body": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ReturnStatement",
+                              "argument": {
+                                "type": "Identifier",
+                                "name": "proxyProto",
+                                "start": 103,
+                                "end": 113
+                              },
+                              "start": 96,
+                              "end": 114
+                            }
+                          ],
+                          "start": 90,
+                          "end": 118
+                        },
+                        "expression": false,
+                        "start": 71,
+                        "end": 118
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 55,
+                      "end": 118
+                    }
+                  ],
+                  "start": 51,
+                  "end": 120
+                }
+              ],
+              "optional": false,
+              "start": 35,
+              "end": 121
+            },
+            "start": 25,
+            "end": 121
+          }
+        ],
+        "start": 21,
+        "end": 122
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "proxy",
+              "start": 127,
+              "end": 132
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 139,
+                "end": 144
+              },
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 145,
+                  "end": 147
+                },
+                {
+                  "type": "Identifier",
+                  "name": "handler",
+                  "start": 149,
+                  "end": 156
+                }
+              ],
+              "start": 135,
+              "end": 157
+            },
+            "start": 127,
+            "end": 157
+          }
+        ],
+        "start": 123,
+        "end": 158
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 158
+  },
+  "errors": [],
+  "comments": []
+}

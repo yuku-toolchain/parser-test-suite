@@ -1,1 +1,57 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "ParenthesizedExpression",
+            "expression": {
+              "type": "SequenceExpression",
+              "expressions": [
+                {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0",
+                  "start": 1,
+                  "end": 2
+                },
+                {
+                  "type": "Identifier",
+                  "name": "eval",
+                  "start": 4,
+                  "end": 8
+                }
+              ],
+              "start": 1,
+              "end": 8
+            },
+            "start": 0,
+            "end": 9
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "assert.throws(ReferenceError, function() {    f;  }, \"An initialized binding is not created prior to evaluation\");  assert.sameValue(    typeof f,    \"undefined\",    \"An uninitialized binding is not created prior to evaluation\"  );    try {    throw {};  } catch ({ f }) {{ function f() {  } }}    assert.throws(ReferenceError, function() {    f;  }, \"An initialized binding is not created following evaluation\");  assert.sameValue(    typeof f,    \"undefined\",    \"An uninitialized binding is not created following evaluation\"  );",
+              "raw": "'assert.throws(ReferenceError, function() {\\\n    f;\\\n  }, \"An initialized binding is not created prior to evaluation\");\\\n  assert.sameValue(\\\n    typeof f,\\\n    \"undefined\",\\\n    \"An uninitialized binding is not created prior to evaluation\"\\\n  );\\\n  \\\n  try {\\\n    throw {};\\\n  } catch ({ f }) {{ function f() {  } }}\\\n  \\\n  assert.throws(ReferenceError, function() {\\\n    f;\\\n  }, \"An initialized binding is not created following evaluation\");\\\n  assert.sameValue(\\\n    typeof f,\\\n    \"undefined\",\\\n    \"An uninitialized binding is not created following evaluation\"\\\n  );'",
+              "start": 10,
+              "end": 583
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 584
+        },
+        "start": 0,
+        "end": 585
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 585
+  },
+  "errors": [],
+  "comments": []
+}

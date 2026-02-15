@@ -1,1 +1,88 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "initialBV",
+              "start": 4,
+              "end": 13
+            },
+            "init": null,
+            "start": 4,
+            "end": 13
+          },
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "currentBV",
+              "start": 15,
+              "end": 24
+            },
+            "init": null,
+            "start": 15,
+            "end": 24
+          }
+        ],
+        "start": 0,
+        "end": 25
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 26,
+            "end": 30
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "if (true) function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; }",
+              "raw": "'if (true) function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; }'",
+              "start": 31,
+              "end": 113
+            }
+          ],
+          "optional": false,
+          "start": 26,
+          "end": 114
+        },
+        "start": 26,
+        "end": 115
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "f",
+            "start": 116,
+            "end": 117
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 116,
+          "end": 119
+        },
+        "start": 116,
+        "end": 120
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 120
+  },
+  "errors": [],
+  "comments": []
+}

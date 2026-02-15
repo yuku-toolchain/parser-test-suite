@@ -1,1 +1,435 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "yieldorder",
+              "start": 4,
+              "end": 14
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 17,
+              "end": 18
+            },
+            "start": 4,
+            "end": 18
+          }
+        ],
+        "start": 0,
+        "end": 19
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "resolveLatePromise",
+              "start": 24,
+              "end": 42
+            },
+            "init": null,
+            "start": 24,
+            "end": 42
+          }
+        ],
+        "start": 20,
+        "end": 43
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "resolveLater",
+          "start": 53,
+          "end": 65
+        },
+        "generator": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "NewExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "Promise",
+                  "start": 83,
+                  "end": 90
+                },
+                "arguments": [
+                  {
+                    "type": "ArrowFunctionExpression",
+                    "expression": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "resolve",
+                        "start": 91,
+                        "end": 98
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "resolveLatePromise",
+                              "start": 108,
+                              "end": 126
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "resolve",
+                              "start": 129,
+                              "end": 136
+                            },
+                            "start": 108,
+                            "end": 136
+                          },
+                          "start": 108,
+                          "end": 137
+                        }
+                      ],
+                      "start": 102,
+                      "end": 141
+                    },
+                    "id": null,
+                    "generator": false,
+                    "start": 91,
+                    "end": 141
+                  }
+                ],
+                "start": 79,
+                "end": 142
+              },
+              "start": 72,
+              "end": 143
+            }
+          ],
+          "start": 68,
+          "end": 145
+        },
+        "expression": false,
+        "start": 44,
+        "end": 145
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "g",
+          "start": 162,
+          "end": 163
+        },
+        "generator": true,
+        "async": true,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "YieldExpression",
+                "delegate": false,
+                "argument": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "resolveLater",
+                    "start": 176,
+                    "end": 188
+                  },
+                  "arguments": [],
+                  "optional": false,
+                  "start": 176,
+                  "end": 190
+                },
+                "start": 170,
+                "end": 190
+              },
+              "start": 170,
+              "end": 191
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "YieldExpression",
+                "delegate": false,
+                "argument": {
+                  "type": "UpdateExpression",
+                  "operator": "++",
+                  "prefix": true,
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "yieldorder",
+                    "start": 202,
+                    "end": 212
+                  },
+                  "start": 200,
+                  "end": 212
+                },
+                "start": 194,
+                "end": 212
+              },
+              "start": 194,
+              "end": 213
+            }
+          ],
+          "start": 166,
+          "end": 215
+        },
+        "expression": false,
+        "start": 146,
+        "end": 215
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "iter",
+              "start": 220,
+              "end": 224
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "g",
+                "start": 227,
+                "end": 228
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 227,
+              "end": 230
+            },
+            "start": 220,
+            "end": 230
+          }
+        ],
+        "start": 216,
+        "end": 231
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "item1",
+              "start": 236,
+              "end": 241
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "iter",
+                  "start": 244,
+                  "end": 248
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "next",
+                  "start": 249,
+                  "end": 253
+                },
+                "optional": false,
+                "computed": false,
+                "start": 244,
+                "end": 253
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 244,
+              "end": 255
+            },
+            "start": 236,
+            "end": 255
+          }
+        ],
+        "start": 232,
+        "end": 256
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "item2",
+              "start": 261,
+              "end": 266
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "iter",
+                  "start": 269,
+                  "end": 273
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "next",
+                  "start": 274,
+                  "end": 278
+                },
+                "optional": false,
+                "computed": false,
+                "start": 269,
+                "end": 278
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 269,
+              "end": 280
+            },
+            "start": 261,
+            "end": 280
+          }
+        ],
+        "start": 257,
+        "end": 281
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "item3",
+              "start": 286,
+              "end": 291
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "iter",
+                  "start": 294,
+                  "end": 298
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "next",
+                  "start": 299,
+                  "end": 303
+                },
+                "optional": false,
+                "computed": false,
+                "start": 294,
+                "end": 303
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 294,
+              "end": 305
+            },
+            "start": 286,
+            "end": 305
+          }
+        ],
+        "start": 282,
+        "end": 306
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "awaitnexts",
+          "start": 322,
+          "end": 332
+        },
+        "generator": false,
+        "async": true,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 335,
+          "end": 337
+        },
+        "expression": false,
+        "start": 307,
+        "end": 337
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "resolveLatePromise",
+            "start": 338,
+            "end": 356
+          },
+          "arguments": [
+            {
+              "type": "UpdateExpression",
+              "operator": "++",
+              "prefix": true,
+              "argument": {
+                "type": "Identifier",
+                "name": "yieldorder",
+                "start": 359,
+                "end": 369
+              },
+              "start": 357,
+              "end": 369
+            }
+          ],
+          "optional": false,
+          "start": 338,
+          "end": 370
+        },
+        "start": 338,
+        "end": 371
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 371
+  },
+  "errors": [],
+  "comments": []
+}

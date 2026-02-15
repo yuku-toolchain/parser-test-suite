@@ -1,1 +1,123 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "err",
+              "start": 4,
+              "end": 7
+            },
+            "init": null,
+            "start": 4,
+            "end": 7
+          }
+        ],
+        "start": 0,
+        "end": 8
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 9,
+            "end": 13
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "  switch (1) {    case 1:      function f() {  }  }",
+              "raw": "'\\\n  switch (1) {\\\n    case 1:\\\n      function f() {  }\\\n  }\\\n'",
+              "start": 14,
+              "end": 77
+            }
+          ],
+          "optional": false,
+          "start": 9,
+          "end": 78
+        },
+        "start": 9,
+        "end": 79
+      },
+      {
+        "type": "TryStatement",
+        "block": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "Identifier",
+                "name": "f",
+                "start": 88,
+                "end": 89
+              },
+              "start": 88,
+              "end": 90
+            }
+          ],
+          "start": 84,
+          "end": 92
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "exception",
+            "start": 100,
+            "end": 109
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "AssignmentExpression",
+                  "operator": "=",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "err",
+                    "start": 115,
+                    "end": 118
+                  },
+                  "right": {
+                    "type": "Identifier",
+                    "name": "exception",
+                    "start": 121,
+                    "end": 130
+                  },
+                  "start": 115,
+                  "end": 130
+                },
+                "start": 115,
+                "end": 131
+              }
+            ],
+            "start": 111,
+            "end": 133
+          },
+          "start": 93,
+          "end": 133
+        },
+        "finalizer": null,
+        "start": 80,
+        "end": 133
+      }
+    ],
+    "sourceType": "module",
+    "start": 0,
+    "end": 133
+  },
+  "errors": [],
+  "comments": []
+}

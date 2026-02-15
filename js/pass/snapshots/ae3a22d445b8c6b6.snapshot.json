@@ -1,1 +1,128 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "timeRegExp",
+              "start": 4,
+              "end": 14
+            },
+            "init": {
+              "type": "Literal",
+              "value": null,
+              "raw": "/^[0-9]{2}:[0-9]{2}:[0-9]{2} GMT[+-][0-9]{4}( \\(.+\\))?$/",
+              "regex": {
+                "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2} GMT[+-][0-9]{4}( \\(.+\\))?$",
+                "flags": ""
+              },
+              "start": 17,
+              "end": 73
+            },
+            "start": 4,
+            "end": 73
+          }
+        ],
+        "start": 0,
+        "end": 74
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "match",
+              "start": 79,
+              "end": 84
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "timeRegExp",
+                  "start": 87,
+                  "end": 97
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 98,
+                  "end": 102
+                },
+                "optional": false,
+                "computed": false,
+                "start": 87,
+                "end": 102
+              },
+              "arguments": [
+                {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "NewExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "Date",
+                        "start": 107,
+                        "end": 111
+                      },
+                      "arguments": [
+                        {
+                          "type": "Literal",
+                          "value": 0,
+                          "raw": "0",
+                          "start": 112,
+                          "end": 113
+                        }
+                      ],
+                      "start": 103,
+                      "end": 114
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "toTimeString",
+                      "start": 115,
+                      "end": 127
+                    },
+                    "optional": false,
+                    "computed": false,
+                    "start": 103,
+                    "end": 127
+                  },
+                  "arguments": [],
+                  "optional": false,
+                  "start": 103,
+                  "end": 129
+                }
+              ],
+              "optional": false,
+              "start": 87,
+              "end": 130
+            },
+            "start": 79,
+            "end": 130
+          }
+        ],
+        "start": 75,
+        "end": 131
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 131
+  },
+  "errors": [],
+  "comments": []
+}

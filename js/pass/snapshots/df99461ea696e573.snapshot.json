@@ -1,1 +1,316 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "assertOnlyOwnProperties",
+          "start": 9,
+          "end": 32
+        },
+        "generator": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "object",
+            "start": 33,
+            "end": 39
+          },
+          {
+            "type": "Identifier",
+            "name": "props",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "type": "Identifier",
+            "name": "message",
+            "start": 48,
+            "end": 55
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 57,
+          "end": 59
+        },
+        "expression": false,
+        "start": 0,
+        "end": 59
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "reviverWithExpectedSources",
+          "start": 69,
+          "end": 95
+        },
+        "generator": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "expectedSources",
+            "start": 96,
+            "end": 111
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "let",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "i",
+                    "start": 121,
+                    "end": 122
+                  },
+                  "init": {
+                    "type": "Literal",
+                    "value": 0,
+                    "raw": "0",
+                    "start": 125,
+                    "end": 126
+                  },
+                  "start": 121,
+                  "end": 126
+                }
+              ],
+              "start": 117,
+              "end": 127
+            },
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "FunctionExpression",
+                "id": {
+                  "type": "Identifier",
+                  "name": "reviver",
+                  "start": 146,
+                  "end": 153
+                },
+                "generator": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "key",
+                    "start": 154,
+                    "end": 157
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "value",
+                    "start": 159,
+                    "end": 164
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "context",
+                    "start": 166,
+                    "end": 173
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "name": "expectedSources",
+                            "start": 185,
+                            "end": 200
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "i",
+                            "start": 201,
+                            "end": 202
+                          },
+                          "optional": false,
+                          "computed": true,
+                          "start": 185,
+                          "end": 203
+                        },
+                        "operator": "!==",
+                        "right": {
+                          "type": "Identifier",
+                          "name": "undefined",
+                          "start": 208,
+                          "end": 217
+                        },
+                        "start": 185,
+                        "end": 217
+                      },
+                      "consequent": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "assertOnlyOwnProperties",
+                                "start": 227,
+                                "end": 250
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "context",
+                                  "start": 251,
+                                  "end": 258
+                                },
+                                {
+                                  "type": "ArrayExpression",
+                                  "elements": [
+                                    {
+                                      "type": "Literal",
+                                      "value": "source",
+                                      "raw": "\"source\"",
+                                      "start": 261,
+                                      "end": 269
+                                    }
+                                  ],
+                                  "start": 260,
+                                  "end": 270
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "the JSON value is a primitve value, its context should only have a source property",
+                                  "raw": "\"the JSON value is a primitve value, its context should only have a source property\"",
+                                  "start": 272,
+                                  "end": 356
+                                }
+                              ],
+                              "optional": false,
+                              "start": 227,
+                              "end": 357
+                            },
+                            "start": 227,
+                            "end": 358
+                          }
+                        ],
+                        "start": 219,
+                        "end": 364
+                      },
+                      "alternate": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "assertOnlyOwnProperties",
+                                "start": 378,
+                                "end": 401
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "context",
+                                  "start": 402,
+                                  "end": 409
+                                },
+                                {
+                                  "type": "ArrayExpression",
+                                  "elements": [],
+                                  "start": 411,
+                                  "end": 413
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "the JSON value is an Array or Object, its context should have no property",
+                                  "raw": "\"the JSON value is an Array or Object, its context should have no property\"",
+                                  "start": 415,
+                                  "end": 490
+                                }
+                              ],
+                              "optional": false,
+                              "start": 378,
+                              "end": 491
+                            },
+                            "start": 378,
+                            "end": 492
+                          },
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "UpdateExpression",
+                              "operator": "++",
+                              "prefix": false,
+                              "argument": {
+                                "type": "Identifier",
+                                "name": "i",
+                                "start": 499,
+                                "end": 500
+                              },
+                              "start": 499,
+                              "end": 502
+                            },
+                            "start": 499,
+                            "end": 503
+                          }
+                        ],
+                        "start": 370,
+                        "end": 509
+                      },
+                      "start": 181,
+                      "end": 509
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "value",
+                        "start": 521,
+                        "end": 526
+                      },
+                      "start": 514,
+                      "end": 527
+                    }
+                  ],
+                  "start": 175,
+                  "end": 531
+                },
+                "expression": false,
+                "start": 137,
+                "end": 531
+              },
+              "start": 130,
+              "end": 532
+            }
+          ],
+          "start": 113,
+          "end": 534
+        },
+        "expression": false,
+        "start": 60,
+        "end": 534
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 534
+  },
+  "errors": [],
+  "comments": []
+}

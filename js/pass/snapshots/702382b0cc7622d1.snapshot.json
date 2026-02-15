@@ -1,1 +1,336 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "RUNNING",
+              "start": 6,
+              "end": 13
+            },
+            "init": {
+              "type": "Literal",
+              "value": 1,
+              "raw": "1",
+              "start": 16,
+              "end": 17
+            },
+            "start": 6,
+            "end": 17
+          }
+        ],
+        "start": 0,
+        "end": 18
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 19,
+                "end": 23
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 24,
+                "end": 29
+              },
+              "optional": false,
+              "computed": false,
+              "start": 19,
+              "end": 29
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "start",
+              "start": 30,
+              "end": 35
+            },
+            "optional": false,
+            "computed": false,
+            "start": 19,
+            "end": 35
+          },
+          "arguments": [
+            {
+              "type": "TemplateLiteral",
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": "\n  const poisonedValueOf = {\n    valueOf: function() {\n      throw new Test262Error('should not evaluate this code');\n    }\n  };\nconst poisonedToPrimitive = {\n    [Symbol.toPrimitive]: function() {\n      throw new Test262Error(\"passing a poisoned object using @@ToPrimitive\");\n    }\n  };\n$262.agent.receiveBroadcast(function(sab) {\n    const i32a = new Int32Array(sab);\n    Atomics.add(i32a, ",
+                    "cooked": "\n  const poisonedValueOf = {\n    valueOf: function() {\n      throw new Test262Error('should not evaluate this code');\n    }\n  };\nconst poisonedToPrimitive = {\n    [Symbol.toPrimitive]: function() {\n      throw new Test262Error(\"passing a poisoned object using @@ToPrimitive\");\n    }\n  };\n$262.agent.receiveBroadcast(function(sab) {\n    const i32a = new Int32Array(sab);\n    Atomics.add(i32a, "
+                  },
+                  "tail": false,
+                  "start": 37,
+                  "end": 429
+                },
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": ", 1);\nlet status1 = \"\";\n    let status2 = \"\";\ntry {\n      Atomics.waitAsync(i32a, 0, Symbol(\"1\"), poisonedValueOf);\n    } catch (error) {\n      status1 = 'A ' + error.name;\n    }\n    try {\n      Atomics.waitAsync(i32a, 0, Symbol(\"2\"), poisonedToPrimitive);\n    } catch (error) {\n      status2 = 'B ' + error.name;\n    }\n$262.agent.report(status1);\n    $262.agent.report(status2);\n    $262.agent.leaving();\n  });\n",
+                    "cooked": ", 1);\nlet status1 = \"\";\n    let status2 = \"\";\ntry {\n      Atomics.waitAsync(i32a, 0, Symbol(\"1\"), poisonedValueOf);\n    } catch (error) {\n      status1 = 'A ' + error.name;\n    }\n    try {\n      Atomics.waitAsync(i32a, 0, Symbol(\"2\"), poisonedToPrimitive);\n    } catch (error) {\n      status2 = 'B ' + error.name;\n    }\n$262.agent.report(status1);\n    $262.agent.report(status2);\n    $262.agent.leaving();\n  });\n"
+                  },
+                  "tail": true,
+                  "start": 439,
+                  "end": 851
+                }
+              ],
+              "expressions": [
+                {
+                  "type": "Identifier",
+                  "name": "RUNNING",
+                  "start": 431,
+                  "end": 438
+                }
+              ],
+              "start": 36,
+              "end": 852
+            }
+          ],
+          "optional": false,
+          "start": 19,
+          "end": 853
+        },
+        "start": 19,
+        "end": 854
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "i32a",
+              "start": 861,
+              "end": 865
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Int32Array",
+                "start": 872,
+                "end": 882
+              },
+              "arguments": [
+                {
+                  "type": "NewExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "SharedArrayBuffer",
+                    "start": 887,
+                    "end": 904
+                  },
+                  "arguments": [
+                    {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Int32Array",
+                          "start": 905,
+                          "end": 915
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "BYTES_PER_ELEMENT",
+                          "start": 916,
+                          "end": 933
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 905,
+                        "end": 933
+                      },
+                      "operator": "*",
+                      "right": {
+                        "type": "Literal",
+                        "value": 4,
+                        "raw": "4",
+                        "start": 936,
+                        "end": 937
+                      },
+                      "start": 905,
+                      "end": 937
+                    }
+                  ],
+                  "start": 883,
+                  "end": 938
+                }
+              ],
+              "start": 868,
+              "end": 939
+            },
+            "start": 861,
+            "end": 939
+          }
+        ],
+        "start": 855,
+        "end": 940
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "Identifier",
+                        "name": "$262",
+                        "start": 941,
+                        "end": 945
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "agent",
+                        "start": 946,
+                        "end": 951
+                      },
+                      "optional": false,
+                      "computed": false,
+                      "start": 941,
+                      "end": 951
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "safeBroadcastAsync",
+                      "start": 952,
+                      "end": 970
+                    },
+                    "optional": false,
+                    "computed": false,
+                    "start": 941,
+                    "end": 970
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "i32a",
+                      "start": 971,
+                      "end": 975
+                    },
+                    {
+                      "type": "Identifier",
+                      "name": "RUNNING",
+                      "start": 977,
+                      "end": 984
+                    },
+                    {
+                      "type": "Literal",
+                      "value": 1,
+                      "raw": "1",
+                      "start": 986,
+                      "end": 987
+                    }
+                  ],
+                  "optional": false,
+                  "start": 941,
+                  "end": 988
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "then",
+                  "start": 989,
+                  "end": 993
+                },
+                "optional": false,
+                "computed": false,
+                "start": 941,
+                "end": 993
+              },
+              "arguments": [
+                {
+                  "type": "ArrowFunctionExpression",
+                  "expression": false,
+                  "async": true,
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "agentCount",
+                      "start": 1000,
+                      "end": 1010
+                    }
+                  ],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [],
+                    "start": 1014,
+                    "end": 1016
+                  },
+                  "id": null,
+                  "generator": false,
+                  "start": 994,
+                  "end": 1016
+                }
+              ],
+              "optional": false,
+              "start": 941,
+              "end": 1017
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "then",
+              "start": 1018,
+              "end": 1022
+            },
+            "optional": false,
+            "computed": false,
+            "start": 941,
+            "end": 1022
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "$DONE",
+              "start": 1023,
+              "end": 1028
+            },
+            {
+              "type": "Identifier",
+              "name": "$DONE",
+              "start": 1030,
+              "end": 1035
+            }
+          ],
+          "optional": false,
+          "start": 941,
+          "end": 1036
+        },
+        "start": 941,
+        "end": 1037
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 1037
+  },
+  "errors": [],
+  "comments": []
+}

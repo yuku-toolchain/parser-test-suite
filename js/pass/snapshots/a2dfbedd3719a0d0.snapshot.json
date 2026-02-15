@@ -1,1 +1,221 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "a",
+              "start": 4,
+              "end": 5
+            },
+            "init": {
+              "type": "Literal",
+              "value": true,
+              "raw": "true",
+              "start": 6,
+              "end": 10
+            },
+            "start": 4,
+            "end": 10
+          }
+        ],
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "b",
+              "start": 16,
+              "end": 17
+            },
+            "init": {
+              "type": "Literal",
+              "value": false,
+              "raw": "false",
+              "start": 18,
+              "end": 23
+            },
+            "start": 16,
+            "end": 23
+          }
+        ],
+        "start": 12,
+        "end": 24
+      },
+      {
+        "type": "TryStatement",
+        "block": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ThrowStatement",
+              "argument": {
+                "type": "ParenthesizedExpression",
+                "expression": {
+                  "type": "ConditionalExpression",
+                  "test": {
+                    "type": "ParenthesizedExpression",
+                    "expression": {
+                      "type": "LogicalExpression",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "a",
+                        "start": 40,
+                        "end": 41
+                      },
+                      "operator": "&&",
+                      "right": {
+                        "type": "ParenthesizedExpression",
+                        "expression": {
+                          "type": "UnaryExpression",
+                          "operator": "!",
+                          "argument": {
+                            "type": "Identifier",
+                            "name": "b",
+                            "start": 45,
+                            "end": 46
+                          },
+                          "prefix": true,
+                          "start": 44,
+                          "end": 46
+                        },
+                        "start": 43,
+                        "end": 47
+                      },
+                      "start": 40,
+                      "end": 47
+                    },
+                    "start": 39,
+                    "end": 48
+                  },
+                  "consequent": {
+                    "type": "Literal",
+                    "value": "exception",
+                    "raw": "\"exception\"",
+                    "start": 49,
+                    "end": 60
+                  },
+                  "alternate": {
+                    "type": "Literal",
+                    "value": " #1",
+                    "raw": "\" #1\"",
+                    "start": 61,
+                    "end": 66
+                  },
+                  "start": 39,
+                  "end": 66
+                },
+                "start": 38,
+                "end": 67
+              },
+              "start": 32,
+              "end": 68
+            }
+          ],
+          "start": 28,
+          "end": 70
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "e",
+            "start": 77,
+            "end": 78
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "IfStatement",
+                "test": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "e",
+                    "start": 87,
+                    "end": 88
+                  },
+                  "operator": "!==",
+                  "right": {
+                    "type": "Literal",
+                    "value": "exception",
+                    "raw": "\"exception\"",
+                    "start": 91,
+                    "end": 102
+                  },
+                  "start": 87,
+                  "end": 102
+                },
+                "consequent": {
+                  "type": "ThrowStatement",
+                  "argument": {
+                    "type": "NewExpression",
+                    "callee": {
+                      "type": "Identifier",
+                      "name": "Test262Error",
+                      "start": 114,
+                      "end": 126
+                    },
+                    "arguments": [
+                      {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "Literal",
+                          "value": "#1: Exception ===\"exception\"(operaton ? , ). Actual:  Exception ===",
+                          "raw": "'#1: Exception ===\"exception\"(operaton ? , ). Actual:  Exception ==='",
+                          "start": 127,
+                          "end": 196
+                        },
+                        "operator": "+",
+                        "right": {
+                          "type": "Identifier",
+                          "name": "e",
+                          "start": 197,
+                          "end": 198
+                        },
+                        "start": 127,
+                        "end": 198
+                      }
+                    ],
+                    "start": 110,
+                    "end": 201
+                  },
+                  "start": 104,
+                  "end": 202
+                },
+                "alternate": null,
+                "start": 83,
+                "end": 202
+              }
+            ],
+            "start": 79,
+            "end": 204
+          },
+          "start": 71,
+          "end": 204
+        },
+        "finalizer": null,
+        "start": 25,
+        "end": 204
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 204
+  },
+  "errors": [],
+  "comments": []
+}

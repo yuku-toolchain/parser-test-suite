@@ -1,1 +1,1025 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "epochNsInYear",
+          "start": 9,
+          "end": 22
+        },
+        "generator": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "year",
+            "start": 23,
+            "end": 27
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "const",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 39,
+                    "end": 51
+                  },
+                  "init": {
+                    "type": "Literal",
+                    "value": "(BigInt) 31556952000000000",
+                    "raw": "31_556_952_000_000_000n",
+                    "bigint": "31556952000000000",
+                    "start": 54,
+                    "end": 77
+                  },
+                  "start": 39,
+                  "end": 77
+                }
+              ],
+              "start": 33,
+              "end": 78
+            },
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "ParenthesizedExpression",
+                    "expression": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "year",
+                        "start": 89,
+                        "end": 93
+                      },
+                      "operator": "-",
+                      "right": {
+                        "type": "Literal",
+                        "value": "(BigInt) 1970",
+                        "raw": "1970n",
+                        "bigint": "1970",
+                        "start": 96,
+                        "end": 101
+                      },
+                      "start": 89,
+                      "end": 101
+                    },
+                    "start": 88,
+                    "end": 102
+                  },
+                  "operator": "*",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 105,
+                    "end": 117
+                  },
+                  "start": 88,
+                  "end": 117
+                },
+                "operator": "+",
+                "right": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 120,
+                    "end": 132
+                  },
+                  "operator": "/",
+                  "right": {
+                    "type": "Literal",
+                    "value": "(BigInt) 2",
+                    "raw": "2n",
+                    "bigint": "2",
+                    "start": 135,
+                    "end": 137
+                  },
+                  "start": 120,
+                  "end": 137
+                },
+                "start": 88,
+                "end": 137
+              },
+              "start": 81,
+              "end": 138
+            }
+          ],
+          "start": 29,
+          "end": 140
+        },
+        "expression": false,
+        "start": 0,
+        "end": 140
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "instance",
+              "start": 145,
+              "end": 153
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Temporal",
+                  "start": 160,
+                  "end": 168
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "Instant",
+                  "start": 169,
+                  "end": 176
+                },
+                "optional": false,
+                "computed": false,
+                "start": 160,
+                "end": 176
+              },
+              "arguments": [
+                {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "epochNsInYear",
+                    "start": 177,
+                    "end": 190
+                  },
+                  "arguments": [
+                    {
+                      "type": "UnaryExpression",
+                      "operator": "-",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "(BigInt) 100000",
+                        "raw": "100000n",
+                        "bigint": "100000",
+                        "start": 192,
+                        "end": 199
+                      },
+                      "prefix": true,
+                      "start": 191,
+                      "end": 199
+                    }
+                  ],
+                  "optional": false,
+                  "start": 177,
+                  "end": 200
+                }
+              ],
+              "start": 156,
+              "end": 201
+            },
+            "start": 145,
+            "end": 201
+          }
+        ],
+        "start": 141,
+        "end": 202
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 203,
+            "end": 211
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 218,
+                "end": 226
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 227,
+                "end": 234
+              },
+              "optional": false,
+              "computed": false,
+              "start": 218,
+              "end": 234
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 235,
+                  "end": 248
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 10000",
+                      "raw": "10000n",
+                      "bigint": "10000",
+                      "start": 250,
+                      "end": 256
+                    },
+                    "prefix": true,
+                    "start": 249,
+                    "end": 256
+                  }
+                ],
+                "optional": false,
+                "start": 235,
+                "end": 257
+              }
+            ],
+            "start": 214,
+            "end": 258
+          },
+          "start": 203,
+          "end": 258
+        },
+        "start": 203,
+        "end": 259
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 260,
+            "end": 268
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 275,
+                "end": 283
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 284,
+                "end": 291
+              },
+              "optional": false,
+              "computed": false,
+              "start": 275,
+              "end": 291
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 292,
+                  "end": 305
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 9999",
+                      "raw": "9999n",
+                      "bigint": "9999",
+                      "start": 307,
+                      "end": 312
+                    },
+                    "prefix": true,
+                    "start": 306,
+                    "end": 312
+                  }
+                ],
+                "optional": false,
+                "start": 292,
+                "end": 313
+              }
+            ],
+            "start": 271,
+            "end": 314
+          },
+          "start": 260,
+          "end": 314
+        },
+        "start": 260,
+        "end": 315
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 316,
+            "end": 324
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 331,
+                "end": 339
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 340,
+                "end": 347
+              },
+              "optional": false,
+              "computed": false,
+              "start": 331,
+              "end": 347
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 348,
+                  "end": 361
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 1000",
+                      "raw": "1000n",
+                      "bigint": "1000",
+                      "start": 363,
+                      "end": 368
+                    },
+                    "prefix": true,
+                    "start": 362,
+                    "end": 368
+                  }
+                ],
+                "optional": false,
+                "start": 348,
+                "end": 369
+              }
+            ],
+            "start": 327,
+            "end": 370
+          },
+          "start": 316,
+          "end": 370
+        },
+        "start": 316,
+        "end": 371
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 372,
+            "end": 380
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 387,
+                "end": 395
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 396,
+                "end": 403
+              },
+              "optional": false,
+              "computed": false,
+              "start": 387,
+              "end": 403
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 404,
+                  "end": 417
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 999",
+                      "raw": "999n",
+                      "bigint": "999",
+                      "start": 419,
+                      "end": 423
+                    },
+                    "prefix": true,
+                    "start": 418,
+                    "end": 423
+                  }
+                ],
+                "optional": false,
+                "start": 404,
+                "end": 424
+              }
+            ],
+            "start": 383,
+            "end": 425
+          },
+          "start": 372,
+          "end": 425
+        },
+        "start": 372,
+        "end": 426
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 427,
+            "end": 435
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 442,
+                "end": 450
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 451,
+                "end": 458
+              },
+              "optional": false,
+              "computed": false,
+              "start": 442,
+              "end": 458
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 459,
+                  "end": 472
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 1",
+                      "raw": "1n",
+                      "bigint": "1",
+                      "start": 474,
+                      "end": 476
+                    },
+                    "prefix": true,
+                    "start": 473,
+                    "end": 476
+                  }
+                ],
+                "optional": false,
+                "start": 459,
+                "end": 477
+              }
+            ],
+            "start": 438,
+            "end": 478
+          },
+          "start": 427,
+          "end": 478
+        },
+        "start": 427,
+        "end": 479
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 480,
+            "end": 488
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 495,
+                "end": 503
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 504,
+                "end": 511
+              },
+              "optional": false,
+              "computed": false,
+              "start": 495,
+              "end": 511
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 512,
+                  "end": 525
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 0",
+                    "raw": "0n",
+                    "bigint": "0",
+                    "start": 526,
+                    "end": 528
+                  }
+                ],
+                "optional": false,
+                "start": 512,
+                "end": 529
+              }
+            ],
+            "start": 491,
+            "end": 530
+          },
+          "start": 480,
+          "end": 530
+        },
+        "start": 480,
+        "end": 531
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 532,
+            "end": 540
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 547,
+                "end": 555
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 556,
+                "end": 563
+              },
+              "optional": false,
+              "computed": false,
+              "start": 547,
+              "end": 563
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 564,
+                  "end": 577
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 1",
+                    "raw": "1n",
+                    "bigint": "1",
+                    "start": 578,
+                    "end": 580
+                  }
+                ],
+                "optional": false,
+                "start": 564,
+                "end": 581
+              }
+            ],
+            "start": 543,
+            "end": 582
+          },
+          "start": 532,
+          "end": 582
+        },
+        "start": 532,
+        "end": 583
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 584,
+            "end": 592
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 599,
+                "end": 607
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 608,
+                "end": 615
+              },
+              "optional": false,
+              "computed": false,
+              "start": 599,
+              "end": 615
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 616,
+                  "end": 629
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 999",
+                    "raw": "999n",
+                    "bigint": "999",
+                    "start": 630,
+                    "end": 634
+                  }
+                ],
+                "optional": false,
+                "start": 616,
+                "end": 635
+              }
+            ],
+            "start": 595,
+            "end": 636
+          },
+          "start": 584,
+          "end": 636
+        },
+        "start": 584,
+        "end": 637
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 638,
+            "end": 646
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 653,
+                "end": 661
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 662,
+                "end": 669
+              },
+              "optional": false,
+              "computed": false,
+              "start": 653,
+              "end": 669
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 670,
+                  "end": 683
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 1000",
+                    "raw": "1000n",
+                    "bigint": "1000",
+                    "start": 684,
+                    "end": 689
+                  }
+                ],
+                "optional": false,
+                "start": 670,
+                "end": 690
+              }
+            ],
+            "start": 649,
+            "end": 691
+          },
+          "start": 638,
+          "end": 691
+        },
+        "start": 638,
+        "end": 692
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 693,
+            "end": 701
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 708,
+                "end": 716
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 717,
+                "end": 724
+              },
+              "optional": false,
+              "computed": false,
+              "start": 708,
+              "end": 724
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 725,
+                  "end": 738
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 9999",
+                    "raw": "9999n",
+                    "bigint": "9999",
+                    "start": 739,
+                    "end": 744
+                  }
+                ],
+                "optional": false,
+                "start": 725,
+                "end": 745
+              }
+            ],
+            "start": 704,
+            "end": 746
+          },
+          "start": 693,
+          "end": 746
+        },
+        "start": 693,
+        "end": 747
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 748,
+            "end": 756
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 763,
+                "end": 771
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 772,
+                "end": 779
+              },
+              "optional": false,
+              "computed": false,
+              "start": 763,
+              "end": 779
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 780,
+                  "end": 793
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 10000",
+                    "raw": "10000n",
+                    "bigint": "10000",
+                    "start": 794,
+                    "end": 800
+                  }
+                ],
+                "optional": false,
+                "start": 780,
+                "end": 801
+              }
+            ],
+            "start": 759,
+            "end": 802
+          },
+          "start": 748,
+          "end": 802
+        },
+        "start": 748,
+        "end": 803
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 804,
+            "end": 812
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 819,
+                "end": 827
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Instant",
+                "start": 828,
+                "end": 835
+              },
+              "optional": false,
+              "computed": false,
+              "start": 819,
+              "end": 835
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 836,
+                  "end": 849
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 100000",
+                    "raw": "100000n",
+                    "bigint": "100000",
+                    "start": 850,
+                    "end": 857
+                  }
+                ],
+                "optional": false,
+                "start": 836,
+                "end": 858
+              }
+            ],
+            "start": 815,
+            "end": 859
+          },
+          "start": 804,
+          "end": 859
+        },
+        "start": 804,
+        "end": 860
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 860
+  },
+  "errors": [],
+  "comments": []
+}

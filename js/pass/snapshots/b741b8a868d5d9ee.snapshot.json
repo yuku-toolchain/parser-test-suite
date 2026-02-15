@@ -1,1 +1,38 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 0,
+            "end": 4
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "if (true) function f() { return \"inner declaration\"; } else ;assert.sameValue(typeof f, \"function\");  assert.sameValue(f(), \"inner declaration\");    function f() {    return \"outer declaration\";  }",
+              "raw": "'if (true) function f() { return \"inner declaration\"; } else ;assert.sameValue(typeof f, \"function\");\\\n  assert.sameValue(f(), \"inner declaration\");\\\n  \\\n  function f() {\\\n    return \"outer declaration\";\\\n  }'",
+              "start": 5,
+              "end": 214
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 215
+        },
+        "start": 0,
+        "end": 216
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 216
+  },
+  "errors": [],
+  "comments": []
+}

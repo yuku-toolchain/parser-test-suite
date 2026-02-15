@@ -1,1 +1,256 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "testCompoundAssignment",
+          "start": 9,
+          "end": 31
+        },
+        "generator": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "var",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "x",
+                    "start": 42,
+                    "end": 43
+                  },
+                  "init": {
+                    "type": "Literal",
+                    "value": 8,
+                    "raw": "8",
+                    "start": 46,
+                    "end": 47
+                  },
+                  "start": 42,
+                  "end": 47
+                }
+              ],
+              "start": 38,
+              "end": 48
+            },
+            {
+              "type": "VariableDeclaration",
+              "kind": "var",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "innerX",
+                    "start": 55,
+                    "end": 61
+                  },
+                  "init": {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "ParenthesizedExpression",
+                      "expression": {
+                        "type": "FunctionExpression",
+                        "id": null,
+                        "generator": false,
+                        "async": false,
+                        "params": [],
+                        "body": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "operator": ">>>=",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "x",
+                                  "start": 83,
+                                  "end": 84
+                                },
+                                "right": {
+                                  "type": "ParenthesizedExpression",
+                                  "expression": {
+                                    "type": "SequenceExpression",
+                                    "expressions": [
+                                      {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "Identifier",
+                                          "name": "eval",
+                                          "start": 91,
+                                          "end": 95
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Literal",
+                                            "value": "var x = 2;",
+                                            "raw": "\"var x = 2;\"",
+                                            "start": 96,
+                                            "end": 108
+                                          }
+                                        ],
+                                        "optional": false,
+                                        "start": 91,
+                                        "end": 109
+                                      },
+                                      {
+                                        "type": "Literal",
+                                        "value": 1,
+                                        "raw": "1",
+                                        "start": 111,
+                                        "end": 112
+                                      }
+                                    ],
+                                    "start": 91,
+                                    "end": 112
+                                  },
+                                  "start": 90,
+                                  "end": 113
+                                },
+                                "start": 83,
+                                "end": 113
+                              },
+                              "start": 83,
+                              "end": 114
+                            },
+                            {
+                              "type": "ReturnStatement",
+                              "argument": {
+                                "type": "Identifier",
+                                "name": "x",
+                                "start": 126,
+                                "end": 127
+                              },
+                              "start": 119,
+                              "end": 128
+                            }
+                          ],
+                          "start": 77,
+                          "end": 132
+                        },
+                        "expression": false,
+                        "start": 65,
+                        "end": 132
+                      },
+                      "start": 64,
+                      "end": 133
+                    },
+                    "arguments": [],
+                    "optional": false,
+                    "start": 64,
+                    "end": 135
+                  },
+                  "start": 55,
+                  "end": 135
+                }
+              ],
+              "start": 51,
+              "end": 136
+            },
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "innerX",
+                  "start": 143,
+                  "end": 149
+                },
+                "operator": "!==",
+                "right": {
+                  "type": "Literal",
+                  "value": 2,
+                  "raw": "2",
+                  "start": 154,
+                  "end": 155
+                },
+                "start": 143,
+                "end": 155
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 157,
+                "end": 159
+              },
+              "alternate": null,
+              "start": 139,
+              "end": 159
+            },
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "x",
+                  "start": 166,
+                  "end": 167
+                },
+                "operator": "!==",
+                "right": {
+                  "type": "Literal",
+                  "value": 4,
+                  "raw": "4",
+                  "start": 172,
+                  "end": 173
+                },
+                "start": 166,
+                "end": 173
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 175,
+                "end": 177
+              },
+              "alternate": null,
+              "start": 162,
+              "end": 177
+            }
+          ],
+          "start": 34,
+          "end": 179
+        },
+        "expression": false,
+        "start": 0,
+        "end": 179
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "testCompoundAssignment",
+            "start": 180,
+            "end": 202
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 180,
+          "end": 204
+        },
+        "start": 180,
+        "end": 205
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 205
+  },
+  "errors": [],
+  "comments": []
+}

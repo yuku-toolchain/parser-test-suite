@@ -1,1 +1,1116 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "epochNsInYear",
+          "start": 9,
+          "end": 22
+        },
+        "generator": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "year",
+            "start": 23,
+            "end": 27
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "const",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 39,
+                    "end": 51
+                  },
+                  "init": {
+                    "type": "Literal",
+                    "value": "(BigInt) 31556952000000000",
+                    "raw": "31_556_952_000_000_000n",
+                    "bigint": "31556952000000000",
+                    "start": 54,
+                    "end": 77
+                  },
+                  "start": 39,
+                  "end": 77
+                }
+              ],
+              "start": 33,
+              "end": 78
+            },
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "ParenthesizedExpression",
+                    "expression": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "year",
+                        "start": 89,
+                        "end": 93
+                      },
+                      "operator": "-",
+                      "right": {
+                        "type": "Literal",
+                        "value": "(BigInt) 1970",
+                        "raw": "1970n",
+                        "bigint": "1970",
+                        "start": 96,
+                        "end": 101
+                      },
+                      "start": 89,
+                      "end": 101
+                    },
+                    "start": 88,
+                    "end": 102
+                  },
+                  "operator": "*",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 105,
+                    "end": 117
+                  },
+                  "start": 88,
+                  "end": 117
+                },
+                "operator": "+",
+                "right": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "avgNsPerYear",
+                    "start": 120,
+                    "end": 132
+                  },
+                  "operator": "/",
+                  "right": {
+                    "type": "Literal",
+                    "value": "(BigInt) 2",
+                    "raw": "2n",
+                    "bigint": "2",
+                    "start": 135,
+                    "end": 137
+                  },
+                  "start": 120,
+                  "end": 137
+                },
+                "start": 88,
+                "end": 137
+              },
+              "start": 81,
+              "end": 138
+            }
+          ],
+          "start": 29,
+          "end": 140
+        },
+        "expression": false,
+        "start": 0,
+        "end": 140
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "instance",
+              "start": 145,
+              "end": 153
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Temporal",
+                  "start": 160,
+                  "end": 168
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "ZonedDateTime",
+                  "start": 169,
+                  "end": 182
+                },
+                "optional": false,
+                "computed": false,
+                "start": 160,
+                "end": 182
+              },
+              "arguments": [
+                {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "epochNsInYear",
+                    "start": 183,
+                    "end": 196
+                  },
+                  "arguments": [
+                    {
+                      "type": "UnaryExpression",
+                      "operator": "-",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "(BigInt) 100000",
+                        "raw": "100000n",
+                        "bigint": "100000",
+                        "start": 198,
+                        "end": 205
+                      },
+                      "prefix": true,
+                      "start": 197,
+                      "end": 205
+                    }
+                  ],
+                  "optional": false,
+                  "start": 183,
+                  "end": 206
+                },
+                {
+                  "type": "Literal",
+                  "value": "UTC",
+                  "raw": "\"UTC\"",
+                  "start": 208,
+                  "end": 213
+                }
+              ],
+              "start": 156,
+              "end": 214
+            },
+            "start": 145,
+            "end": 214
+          }
+        ],
+        "start": 141,
+        "end": 215
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 216,
+            "end": 224
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 231,
+                "end": 239
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 240,
+                "end": 253
+              },
+              "optional": false,
+              "computed": false,
+              "start": 231,
+              "end": 253
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 254,
+                  "end": 267
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 10000",
+                      "raw": "10000n",
+                      "bigint": "10000",
+                      "start": 269,
+                      "end": 275
+                    },
+                    "prefix": true,
+                    "start": 268,
+                    "end": 275
+                  }
+                ],
+                "optional": false,
+                "start": 254,
+                "end": 276
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 278,
+                "end": 283
+              }
+            ],
+            "start": 227,
+            "end": 284
+          },
+          "start": 216,
+          "end": 284
+        },
+        "start": 216,
+        "end": 285
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 286,
+            "end": 294
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 301,
+                "end": 309
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 310,
+                "end": 323
+              },
+              "optional": false,
+              "computed": false,
+              "start": 301,
+              "end": 323
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 324,
+                  "end": 337
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 9999",
+                      "raw": "9999n",
+                      "bigint": "9999",
+                      "start": 339,
+                      "end": 344
+                    },
+                    "prefix": true,
+                    "start": 338,
+                    "end": 344
+                  }
+                ],
+                "optional": false,
+                "start": 324,
+                "end": 345
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 347,
+                "end": 352
+              }
+            ],
+            "start": 297,
+            "end": 353
+          },
+          "start": 286,
+          "end": 353
+        },
+        "start": 286,
+        "end": 354
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 355,
+            "end": 363
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 370,
+                "end": 378
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 379,
+                "end": 392
+              },
+              "optional": false,
+              "computed": false,
+              "start": 370,
+              "end": 392
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 393,
+                  "end": 406
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 1000",
+                      "raw": "1000n",
+                      "bigint": "1000",
+                      "start": 408,
+                      "end": 413
+                    },
+                    "prefix": true,
+                    "start": 407,
+                    "end": 413
+                  }
+                ],
+                "optional": false,
+                "start": 393,
+                "end": 414
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 416,
+                "end": 421
+              }
+            ],
+            "start": 366,
+            "end": 422
+          },
+          "start": 355,
+          "end": 422
+        },
+        "start": 355,
+        "end": 423
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 424,
+            "end": 432
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 439,
+                "end": 447
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 448,
+                "end": 461
+              },
+              "optional": false,
+              "computed": false,
+              "start": 439,
+              "end": 461
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 462,
+                  "end": 475
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 999",
+                      "raw": "999n",
+                      "bigint": "999",
+                      "start": 477,
+                      "end": 481
+                    },
+                    "prefix": true,
+                    "start": 476,
+                    "end": 481
+                  }
+                ],
+                "optional": false,
+                "start": 462,
+                "end": 482
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 484,
+                "end": 489
+              }
+            ],
+            "start": 435,
+            "end": 490
+          },
+          "start": 424,
+          "end": 490
+        },
+        "start": 424,
+        "end": 491
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 492,
+            "end": 500
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 507,
+                "end": 515
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 516,
+                "end": 529
+              },
+              "optional": false,
+              "computed": false,
+              "start": 507,
+              "end": 529
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 530,
+                  "end": 543
+                },
+                "arguments": [
+                  {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": "(BigInt) 1",
+                      "raw": "1n",
+                      "bigint": "1",
+                      "start": 545,
+                      "end": 547
+                    },
+                    "prefix": true,
+                    "start": 544,
+                    "end": 547
+                  }
+                ],
+                "optional": false,
+                "start": 530,
+                "end": 548
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 550,
+                "end": 555
+              }
+            ],
+            "start": 503,
+            "end": 556
+          },
+          "start": 492,
+          "end": 556
+        },
+        "start": 492,
+        "end": 557
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 558,
+            "end": 566
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 573,
+                "end": 581
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 582,
+                "end": 595
+              },
+              "optional": false,
+              "computed": false,
+              "start": 573,
+              "end": 595
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 596,
+                  "end": 609
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 0",
+                    "raw": "0n",
+                    "bigint": "0",
+                    "start": 610,
+                    "end": 612
+                  }
+                ],
+                "optional": false,
+                "start": 596,
+                "end": 613
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 615,
+                "end": 620
+              }
+            ],
+            "start": 569,
+            "end": 621
+          },
+          "start": 558,
+          "end": 621
+        },
+        "start": 558,
+        "end": 622
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 623,
+            "end": 631
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 638,
+                "end": 646
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 647,
+                "end": 660
+              },
+              "optional": false,
+              "computed": false,
+              "start": 638,
+              "end": 660
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 661,
+                  "end": 674
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 1",
+                    "raw": "1n",
+                    "bigint": "1",
+                    "start": 675,
+                    "end": 677
+                  }
+                ],
+                "optional": false,
+                "start": 661,
+                "end": 678
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 680,
+                "end": 685
+              }
+            ],
+            "start": 634,
+            "end": 686
+          },
+          "start": 623,
+          "end": 686
+        },
+        "start": 623,
+        "end": 687
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 688,
+            "end": 696
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 703,
+                "end": 711
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 712,
+                "end": 725
+              },
+              "optional": false,
+              "computed": false,
+              "start": 703,
+              "end": 725
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 726,
+                  "end": 739
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 999",
+                    "raw": "999n",
+                    "bigint": "999",
+                    "start": 740,
+                    "end": 744
+                  }
+                ],
+                "optional": false,
+                "start": 726,
+                "end": 745
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 747,
+                "end": 752
+              }
+            ],
+            "start": 699,
+            "end": 753
+          },
+          "start": 688,
+          "end": 753
+        },
+        "start": 688,
+        "end": 754
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 755,
+            "end": 763
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 770,
+                "end": 778
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 779,
+                "end": 792
+              },
+              "optional": false,
+              "computed": false,
+              "start": 770,
+              "end": 792
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 793,
+                  "end": 806
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 1000",
+                    "raw": "1000n",
+                    "bigint": "1000",
+                    "start": 807,
+                    "end": 812
+                  }
+                ],
+                "optional": false,
+                "start": 793,
+                "end": 813
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 815,
+                "end": 820
+              }
+            ],
+            "start": 766,
+            "end": 821
+          },
+          "start": 755,
+          "end": 821
+        },
+        "start": 755,
+        "end": 822
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 823,
+            "end": 831
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 838,
+                "end": 846
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 847,
+                "end": 860
+              },
+              "optional": false,
+              "computed": false,
+              "start": 838,
+              "end": 860
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 861,
+                  "end": 874
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 9999",
+                    "raw": "9999n",
+                    "bigint": "9999",
+                    "start": 875,
+                    "end": 880
+                  }
+                ],
+                "optional": false,
+                "start": 861,
+                "end": 881
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 883,
+                "end": 888
+              }
+            ],
+            "start": 834,
+            "end": 889
+          },
+          "start": 823,
+          "end": 889
+        },
+        "start": 823,
+        "end": 890
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 891,
+            "end": 899
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 906,
+                "end": 914
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 915,
+                "end": 928
+              },
+              "optional": false,
+              "computed": false,
+              "start": 906,
+              "end": 928
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 929,
+                  "end": 942
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 10000",
+                    "raw": "10000n",
+                    "bigint": "10000",
+                    "start": 943,
+                    "end": 949
+                  }
+                ],
+                "optional": false,
+                "start": 929,
+                "end": 950
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 952,
+                "end": 957
+              }
+            ],
+            "start": 902,
+            "end": 958
+          },
+          "start": 891,
+          "end": 958
+        },
+        "start": 891,
+        "end": 959
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "instance",
+            "start": 960,
+            "end": 968
+          },
+          "right": {
+            "type": "NewExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Temporal",
+                "start": 975,
+                "end": 983
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "ZonedDateTime",
+                "start": 984,
+                "end": 997
+              },
+              "optional": false,
+              "computed": false,
+              "start": 975,
+              "end": 997
+            },
+            "arguments": [
+              {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "epochNsInYear",
+                  "start": 998,
+                  "end": 1011
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "(BigInt) 100000",
+                    "raw": "100000n",
+                    "bigint": "100000",
+                    "start": 1012,
+                    "end": 1019
+                  }
+                ],
+                "optional": false,
+                "start": 998,
+                "end": 1020
+              },
+              {
+                "type": "Literal",
+                "value": "UTC",
+                "raw": "\"UTC\"",
+                "start": 1022,
+                "end": 1027
+              }
+            ],
+            "start": 971,
+            "end": 1028
+          },
+          "start": 960,
+          "end": 1028
+        },
+        "start": 960,
+        "end": 1029
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 1029
+  },
+  "errors": [],
+  "comments": []
+}

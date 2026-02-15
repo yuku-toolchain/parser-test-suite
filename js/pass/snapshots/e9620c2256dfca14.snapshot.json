@@ -1,1 +1,859 @@
-""
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "errorCount",
+              "start": 4,
+              "end": 14
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 17,
+              "end": 18
+            },
+            "start": 4,
+            "end": 18
+          }
+        ],
+        "start": 0,
+        "end": 19
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "count",
+              "start": 24,
+              "end": 29
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 32,
+              "end": 33
+            },
+            "start": 24,
+            "end": 33
+          }
+        ],
+        "start": 20,
+        "end": 34
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "indexP",
+              "start": 39,
+              "end": 45
+            },
+            "init": null,
+            "start": 39,
+            "end": 45
+          }
+        ],
+        "start": 35,
+        "end": 46
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "indexO",
+              "start": 51,
+              "end": 57
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 60,
+              "end": 61
+            },
+            "start": 51,
+            "end": 61
+          }
+        ],
+        "start": 47,
+        "end": 62
+      },
+      {
+        "type": "ForStatement",
+        "init": {
+          "type": "VariableDeclaration",
+          "kind": "var",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "index",
+                "start": 72,
+                "end": 77
+              },
+              "init": {
+                "type": "Literal",
+                "value": 55296,
+                "raw": "0xD800",
+                "start": 80,
+                "end": 86
+              },
+              "start": 72,
+              "end": 86
+            }
+          ],
+          "start": 68,
+          "end": 86
+        },
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "index",
+            "start": 88,
+            "end": 93
+          },
+          "operator": "<=",
+          "right": {
+            "type": "Literal",
+            "value": 56319,
+            "raw": "0xDBFF",
+            "start": 97,
+            "end": 103
+          },
+          "start": 88,
+          "end": 103
+        },
+        "update": {
+          "type": "UpdateExpression",
+          "operator": "++",
+          "prefix": false,
+          "argument": {
+            "type": "Identifier",
+            "name": "index",
+            "start": 105,
+            "end": 110
+          },
+          "start": 105,
+          "end": 112
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "UpdateExpression",
+                "operator": "++",
+                "prefix": false,
+                "argument": {
+                  "type": "Identifier",
+                  "name": "count",
+                  "start": 118,
+                  "end": 123
+                },
+                "start": 118,
+                "end": 125
+              },
+              "start": 118,
+              "end": 126
+            },
+            {
+              "type": "TryStatement",
+              "block": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "encodeURIComponent",
+                        "start": 139,
+                        "end": 157
+                      },
+                      "arguments": [
+                        {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "String",
+                              "start": 158,
+                              "end": 164
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "fromCharCode",
+                              "start": 165,
+                              "end": 177
+                            },
+                            "optional": false,
+                            "computed": false,
+                            "start": 158,
+                            "end": 177
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "index",
+                              "start": 178,
+                              "end": 183
+                            }
+                          ],
+                          "optional": false,
+                          "start": 158,
+                          "end": 184
+                        }
+                      ],
+                      "optional": false,
+                      "start": 139,
+                      "end": 185
+                    },
+                    "start": 139,
+                    "end": 186
+                  }
+                ],
+                "start": 133,
+                "end": 190
+              },
+              "handler": {
+                "type": "CatchClause",
+                "param": {
+                  "type": "Identifier",
+                  "name": "e",
+                  "start": 198,
+                  "end": 199
+                },
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "Identifier",
+                            "name": "e",
+                            "start": 211,
+                            "end": 212
+                          },
+                          "operator": "instanceof",
+                          "right": {
+                            "type": "Identifier",
+                            "name": "URIError",
+                            "start": 224,
+                            "end": 232
+                          },
+                          "start": 211,
+                          "end": 232
+                        },
+                        "operator": "===",
+                        "right": {
+                          "type": "Literal",
+                          "value": true,
+                          "raw": "true",
+                          "start": 237,
+                          "end": 241
+                        },
+                        "start": 211,
+                        "end": 241
+                      },
+                      "consequent": {
+                        "type": "ContinueStatement",
+                        "label": null,
+                        "start": 243,
+                        "end": 252
+                      },
+                      "alternate": null,
+                      "start": 207,
+                      "end": 252
+                    }
+                  ],
+                  "start": 201,
+                  "end": 256
+                },
+                "start": 191,
+                "end": 256
+              },
+              "finalizer": null,
+              "start": 129,
+              "end": 256
+            },
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "indexO",
+                  "start": 263,
+                  "end": 269
+                },
+                "operator": "===",
+                "right": {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0",
+                  "start": 274,
+                  "end": 275
+                },
+                "start": 263,
+                "end": 275
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "indexO",
+                        "start": 283,
+                        "end": 289
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "index",
+                        "start": 292,
+                        "end": 297
+                      },
+                      "start": 283,
+                      "end": 297
+                    },
+                    "start": 283,
+                    "end": 298
+                  }
+                ],
+                "start": 277,
+                "end": 302
+              },
+              "alternate": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "IfStatement",
+                    "test": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "index",
+                          "start": 318,
+                          "end": 323
+                        },
+                        "operator": "-",
+                        "right": {
+                          "type": "Identifier",
+                          "name": "indexP",
+                          "start": 326,
+                          "end": 332
+                        },
+                        "start": 318,
+                        "end": 332
+                      },
+                      "operator": "!==",
+                      "right": {
+                        "type": "Literal",
+                        "value": 1,
+                        "raw": "1",
+                        "start": 337,
+                        "end": 338
+                      },
+                      "start": 318,
+                      "end": 338
+                    },
+                    "consequent": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "IfStatement",
+                          "test": {
+                            "type": "BinaryExpression",
+                            "left": {
+                              "type": "BinaryExpression",
+                              "left": {
+                                "type": "Identifier",
+                                "name": "indexP",
+                                "start": 352,
+                                "end": 358
+                              },
+                              "operator": "-",
+                              "right": {
+                                "type": "Identifier",
+                                "name": "indexO",
+                                "start": 361,
+                                "end": 367
+                              },
+                              "start": 352,
+                              "end": 367
+                            },
+                            "operator": "!==",
+                            "right": {
+                              "type": "Literal",
+                              "value": 0,
+                              "raw": "0",
+                              "start": 372,
+                              "end": 373
+                            },
+                            "start": 352,
+                            "end": 373
+                          },
+                          "consequent": {
+                            "type": "BlockStatement",
+                            "body": [
+                              {
+                                "type": "VariableDeclaration",
+                                "kind": "var",
+                                "declarations": [
+                                  {
+                                    "type": "VariableDeclarator",
+                                    "id": {
+                                      "type": "Identifier",
+                                      "name": "hexP",
+                                      "start": 389,
+                                      "end": 393
+                                    },
+                                    "init": {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "Identifier",
+                                        "name": "decimalToHexString",
+                                        "start": 396,
+                                        "end": 414
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Identifier",
+                                          "name": "indexP",
+                                          "start": 415,
+                                          "end": 421
+                                        }
+                                      ],
+                                      "optional": false,
+                                      "start": 396,
+                                      "end": 422
+                                    },
+                                    "start": 389,
+                                    "end": 422
+                                  }
+                                ],
+                                "start": 385,
+                                "end": 423
+                              },
+                              {
+                                "type": "VariableDeclaration",
+                                "kind": "var",
+                                "declarations": [
+                                  {
+                                    "type": "VariableDeclarator",
+                                    "id": {
+                                      "type": "Identifier",
+                                      "name": "hexO",
+                                      "start": 436,
+                                      "end": 440
+                                    },
+                                    "init": {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "Identifier",
+                                        "name": "decimalToHexString",
+                                        "start": 443,
+                                        "end": 461
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Identifier",
+                                          "name": "indexO",
+                                          "start": 462,
+                                          "end": 468
+                                        }
+                                      ],
+                                      "optional": false,
+                                      "start": 443,
+                                      "end": 469
+                                    },
+                                    "start": 436,
+                                    "end": 469
+                                  }
+                                ],
+                                "start": 432,
+                                "end": 470
+                              }
+                            ],
+                            "start": 375,
+                            "end": 478
+                          },
+                          "alternate": {
+                            "type": "BlockStatement",
+                            "body": [
+                              {
+                                "type": "VariableDeclaration",
+                                "kind": "var",
+                                "declarations": [
+                                  {
+                                    "type": "VariableDeclarator",
+                                    "id": {
+                                      "type": "Identifier",
+                                      "name": "hexP",
+                                      "start": 498,
+                                      "end": 502
+                                    },
+                                    "init": {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "Identifier",
+                                        "name": "decimalToHexString",
+                                        "start": 505,
+                                        "end": 523
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Identifier",
+                                          "name": "indexP",
+                                          "start": 524,
+                                          "end": 530
+                                        }
+                                      ],
+                                      "optional": false,
+                                      "start": 505,
+                                      "end": 531
+                                    },
+                                    "start": 498,
+                                    "end": 531
+                                  }
+                                ],
+                                "start": 494,
+                                "end": 532
+                              }
+                            ],
+                            "start": 484,
+                            "end": 540
+                          },
+                          "start": 348,
+                          "end": 540
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "indexO",
+                              "start": 547,
+                              "end": 553
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "index",
+                              "start": 556,
+                              "end": 561
+                            },
+                            "start": 547,
+                            "end": 561
+                          },
+                          "start": 547,
+                          "end": 562
+                        }
+                      ],
+                      "start": 340,
+                      "end": 568
+                    },
+                    "alternate": null,
+                    "start": 314,
+                    "end": 568
+                  }
+                ],
+                "start": 308,
+                "end": 572
+              },
+              "start": 259,
+              "end": 572
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                  "type": "Identifier",
+                  "name": "indexP",
+                  "start": 575,
+                  "end": 581
+                },
+                "right": {
+                  "type": "Identifier",
+                  "name": "index",
+                  "start": 584,
+                  "end": 589
+                },
+                "start": 575,
+                "end": 589
+              },
+              "start": 575,
+              "end": 590
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "UpdateExpression",
+                "operator": "++",
+                "prefix": false,
+                "argument": {
+                  "type": "Identifier",
+                  "name": "errorCount",
+                  "start": 593,
+                  "end": 603
+                },
+                "start": 593,
+                "end": 605
+              },
+              "start": 593,
+              "end": 606
+            }
+          ],
+          "start": 114,
+          "end": 608
+        },
+        "start": 63,
+        "end": 608
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "errorCount",
+            "start": 613,
+            "end": 623
+          },
+          "operator": ">",
+          "right": {
+            "type": "Literal",
+            "value": 0,
+            "raw": "0",
+            "start": 626,
+            "end": 627
+          },
+          "start": 613,
+          "end": 627
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "indexP",
+                    "start": 637,
+                    "end": 643
+                  },
+                  "operator": "-",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "indexO",
+                    "start": 646,
+                    "end": 652
+                  },
+                  "start": 637,
+                  "end": 652
+                },
+                "operator": "!==",
+                "right": {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0",
+                  "start": 657,
+                  "end": 658
+                },
+                "start": 637,
+                "end": 658
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "kind": "var",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "hexP",
+                          "start": 670,
+                          "end": 674
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "decimalToHexString",
+                            "start": 677,
+                            "end": 695
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "indexP",
+                              "start": 696,
+                              "end": 702
+                            }
+                          ],
+                          "optional": false,
+                          "start": 677,
+                          "end": 703
+                        },
+                        "start": 670,
+                        "end": 703
+                      }
+                    ],
+                    "start": 666,
+                    "end": 704
+                  },
+                  {
+                    "type": "VariableDeclaration",
+                    "kind": "var",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "hexO",
+                          "start": 713,
+                          "end": 717
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "decimalToHexString",
+                            "start": 720,
+                            "end": 738
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "indexO",
+                              "start": 739,
+                              "end": 745
+                            }
+                          ],
+                          "optional": false,
+                          "start": 720,
+                          "end": 746
+                        },
+                        "start": 713,
+                        "end": 746
+                      }
+                    ],
+                    "start": 709,
+                    "end": 747
+                  }
+                ],
+                "start": 660,
+                "end": 751
+              },
+              "alternate": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "kind": "var",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "hexP",
+                          "start": 767,
+                          "end": 771
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "decimalToHexString",
+                            "start": 774,
+                            "end": 792
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "indexP",
+                              "start": 793,
+                              "end": 799
+                            }
+                          ],
+                          "optional": false,
+                          "start": 774,
+                          "end": 800
+                        },
+                        "start": 767,
+                        "end": 800
+                      }
+                    ],
+                    "start": 763,
+                    "end": 801
+                  }
+                ],
+                "start": 757,
+                "end": 805
+              },
+              "start": 633,
+              "end": 805
+            }
+          ],
+          "start": 629,
+          "end": 807
+        },
+        "alternate": null,
+        "start": 609,
+        "end": 807
+      }
+    ],
+    "sourceType": "script",
+    "start": 0,
+    "end": 807
+  },
+  "errors": [],
+  "comments": []
+}
