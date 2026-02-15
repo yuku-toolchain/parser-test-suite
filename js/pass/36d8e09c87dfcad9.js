@@ -1,0 +1,7 @@
+var obj = {};
+Number.prototype.configurable = true;
+var numObj = new Number(-2);
+Object.defineProperty(obj, "property", numObj);
+var beforeDeleted = obj.hasOwnProperty("property");
+delete obj.property;
+var afterDeleted = obj.hasOwnProperty("property");

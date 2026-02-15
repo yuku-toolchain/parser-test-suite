@@ -1,0 +1,13 @@
+var accessed = false;
+function callbackfn(val, idx, obj) {
+  accessed = true;
+  return idx !== 3;
+}
+var arr = [0, 1, 2, "last"];
+Object.defineProperty(arr, "0", {
+  get: function () {
+    arr.length = 3;
+    return 0;
+  },
+  configurable: true
+});

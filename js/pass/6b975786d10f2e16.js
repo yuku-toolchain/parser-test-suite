@@ -1,0 +1,2 @@
+const validFirstDayOfWeekOptions = [["mon", "mon"], ["tue", "tue"], ["wed", "wed"], ["thu", "thu"], ["fri", "fri"], ["sat", "sat"], ["sun", "sun"], ["1", "mon"], ["2", "tue"], ["3", "wed"], ["4", "thu"], ["5", "fri"], ["6", "sat"], ["7", "sun"], ["0", "sun"], [1, "mon"], [2, "tue"], [3, "wed"], [4, "thu"], [5, "fri"], [6, "sat"], [7, "sun"], [0, "sun"]];
+for (const [firstDayOfWeek, expected] of validFirstDayOfWeekOptions) {}

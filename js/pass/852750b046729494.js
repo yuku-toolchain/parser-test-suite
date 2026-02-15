@@ -1,0 +1,10 @@
+var json = '[1, 2]';
+var arr = JSON.parse(json, function (key, value) {
+  if (key === '0') {
+    Object.defineProperty(this, '1', {
+      configurable: false
+    });
+  }
+  if (key === '1') return;
+  return value;
+});

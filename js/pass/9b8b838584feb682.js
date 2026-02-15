@@ -1,0 +1,1 @@
+Object.seal(new DataView(new ArrayBuffer(4)));

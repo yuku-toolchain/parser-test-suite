@@ -1,0 +1,6 @@
+class Parent {
+  #x = 42;
+}
+var C = class extends Parent {
+  f = something.#x
+};

@@ -1,0 +1,1 @@
+var x = { \u0069mport } = { import: 42 };

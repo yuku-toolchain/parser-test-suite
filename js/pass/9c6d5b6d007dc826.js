@@ -1,0 +1,1 @@
+var dateStr = new Date(0).toISOString();

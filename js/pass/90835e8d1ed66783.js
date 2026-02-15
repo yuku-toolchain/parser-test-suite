@@ -1,0 +1,2 @@
+const conflictingOptions = [["weekday", "short"], ["era", "short"], ["year", "numeric"], ["month", "numeric"], ["day", "numeric"], ["dayPeriod", "short"], ["hour", "numeric"], ["minute", "numeric"], ["second", "numeric"], ["fractionalSecondDigits", 3], ["timeZoneName", "short"]];
+for (const [option, value] of conflictingOptions) {}

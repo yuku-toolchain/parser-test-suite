@@ -1,0 +1,3 @@
+class C {
+  field = 1  method(){}
+}

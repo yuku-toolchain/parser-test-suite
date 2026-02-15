@@ -1,0 +1,3 @@
+for (let x; false; ) {
+  var x;
+}

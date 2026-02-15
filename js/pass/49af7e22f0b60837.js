@@ -1,0 +1,8 @@
+let iterator = (function* () {
+  for (let i = 0; i < 5; ++i) {
+    yield i;
+  }
+})();
+let dropped = iterator.drop(2);
+iterator.return();
+let {value, done} = dropped.next();

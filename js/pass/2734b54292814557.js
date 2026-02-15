@@ -1,0 +1,18 @@
+const calendar = "ethiopic";
+const options = {
+  overflow: "reject"
+};
+const leapDay = Temporal.PlainDateTime.from({
+  year: 2015,
+  monthCode: "M13",
+  day: 6,
+  hour: 12,
+  minute: 34,
+  calendar
+}, options);
+TemporalHelpers.assertPlainDateTime(leapDay.with({
+  year: 2016
+}), 2016, 13, "M13", 5, 12, 34, 0, 0, 0, 0, "Changing year on leap day to a common year constrains to day 5 of epagomenal month", "am", 2016);
+TemporalHelpers.assertPlainDateTime(leapDay.with({
+  year: 2011
+}, options), 2011, 13, "M13", 6, 12, 34, 0, 0, 0, 0, "Changing year on leap day to another leap year constrains to day 6 of epagomenal month", "am", 2011);

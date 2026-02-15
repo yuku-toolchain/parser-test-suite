@@ -1,0 +1,12 @@
+const calls = [];
+const expected = ["call mapping", "get thenable_0.then", "call thenable_0.then", "call mapping", "get thenable_1.then", "call thenable_1.then", "call mapping", "get thenable_2.then", "call thenable_2.then"];
+function mapping(val, ix) {
+  calls.push("call mapping");
+  const thenableName = `thenable_${ix}`;
+  return TemporalHelpers.propertyBagObserver(calls, {
+    then(resolve, reject) {
+      calls.push(`call ${thenableName}.then`);
+      resolve(val * 2);
+    }
+  }, thenableName);
+}

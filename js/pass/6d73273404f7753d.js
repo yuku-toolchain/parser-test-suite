@@ -1,0 +1,2 @@
+const duration = new Temporal.Duration(0, 0, 0, 0, 12, 34, 56, 123, 987, 500);
+for (const roundingMode of ["other string", "cile", "CEIL", "ce\u0131l", "auto", "halfexpand", "floor\0"]) {}

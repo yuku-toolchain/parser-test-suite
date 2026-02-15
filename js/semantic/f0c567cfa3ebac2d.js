@@ -1,0 +1,8 @@
+class Parent {
+  #x = 42;
+}
+var C = class extends Parent {
+  m() {
+    (() => this)().#x
+  }
+};

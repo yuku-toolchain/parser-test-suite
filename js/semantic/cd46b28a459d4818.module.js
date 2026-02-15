@@ -1,0 +1,1 @@
+var x = { interf\u0061ce } = { interface: 42 };

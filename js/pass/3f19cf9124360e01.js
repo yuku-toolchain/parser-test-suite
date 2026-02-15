@@ -1,0 +1,23 @@
+var obj = {};
+Object.defineProperty(obj, "0", {
+  value: 1001,
+  writable: false,
+  configurable: false
+});
+Object.defineProperty(obj, "1", {
+  value: 1003,
+  writable: false,
+  configurable: true
+});
+try {
+  Object.defineProperties(obj, {
+    0: {
+      value: 1002
+    },
+    1: {
+      value: 1004
+    }
+  });
+} catch (e) {
+  if (!(e instanceof TypeError)) {}
+}

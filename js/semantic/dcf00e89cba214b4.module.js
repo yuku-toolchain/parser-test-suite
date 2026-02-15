@@ -1,0 +1,3 @@
+label: {
+  label: 0;
+}

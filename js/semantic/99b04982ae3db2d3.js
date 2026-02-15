@@ -1,0 +1,2 @@
+0, async function*(x = 0, x) {
+};

@@ -1,0 +1,2 @@
+const zdt = new Temporal.ZonedDateTime(0n, "-05:00", "iso8601");
+const zdt2 = new Temporal.ZonedDateTime(0n, "UTC", "iso8601");

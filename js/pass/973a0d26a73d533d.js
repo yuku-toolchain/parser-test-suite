@@ -1,0 +1,4 @@
+var trimStart = String.prototype.trimStart;
+var lt = '\u000A\u000D\u2028\u2029';
+var str = lt + 'a' + lt + 'b' + lt;
+var expected = 'a' + lt + 'b' + lt;

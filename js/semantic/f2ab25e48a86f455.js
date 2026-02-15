@@ -1,0 +1,6 @@
+function f() {
+    try {
+    } catch (e) {
+        function e(){}
+    }
+}

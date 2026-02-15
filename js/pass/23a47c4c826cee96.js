@@ -1,0 +1,1 @@
+if (/(?:)/ instanceof RegExp !== true) {}

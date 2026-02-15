@@ -1,0 +1,1 @@
+do import v from './decl-pos-import-do-while.js'; while (false)

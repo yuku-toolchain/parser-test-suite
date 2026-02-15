@@ -1,0 +1,18 @@
+const durations = [{
+  seconds: 10_000_000,
+  nanoseconds: 1
+}, {
+  seconds: 1,
+  milliseconds: 2,
+  microseconds: 3,
+  nanoseconds: Number.MAX_SAFE_INTEGER
+}, {
+  milliseconds: 4503599627370497_000,
+  microseconds: 4503599627370495_000000
+}];
+const df = new Intl.DurationFormat("en", {
+  style: "digital"
+});
+for (let duration of durations) {
+  let expected = formatDurationFormatPattern(df, duration);
+}

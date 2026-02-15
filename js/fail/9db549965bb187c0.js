@@ -1,0 +1,1 @@
+var x = { r\u0065turn } = { return: 42 };

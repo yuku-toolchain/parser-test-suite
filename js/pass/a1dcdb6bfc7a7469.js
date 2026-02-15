@@ -1,0 +1,1 @@
+const valueOf = Temporal.PlainDate.prototype.valueOf;

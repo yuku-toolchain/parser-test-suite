@@ -1,0 +1,3 @@
+async function f() {
+  return await new import.source('<module source>');
+}

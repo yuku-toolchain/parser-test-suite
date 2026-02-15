@@ -1,0 +1,4 @@
+import x from './import-attribute-1_FIXTURE.js' with {
+  type: 'json',
+  'typ\u0065': ''
+};

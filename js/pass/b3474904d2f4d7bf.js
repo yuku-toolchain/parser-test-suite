@@ -1,0 +1,1 @@
+var formatFn = new Intl.DateTimeFormat().format;

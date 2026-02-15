@@ -1,0 +1,1 @@
+if (String(void 0).replace("e", undefined) !== "undundefinedfined") {}

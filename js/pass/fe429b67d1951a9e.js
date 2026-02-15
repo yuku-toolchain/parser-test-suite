@@ -1,0 +1,3 @@
+const instance = new Temporal.PlainMonthDay(11, 18);
+const numbers = [1, 1118, -1118, 12345];
+for (const arg of numbers) {}

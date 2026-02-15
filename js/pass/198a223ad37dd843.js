@@ -1,0 +1,13 @@
+var count = 0;
+var callCount = 0;
+var obj = {
+  async *method({...x}) {
+    callCount = callCount + 1;
+  }
+};
+obj.method({
+  get v() {
+    count++;
+    return 2;
+  }
+}).next().then(() => {}).then($DONE, $DONE);

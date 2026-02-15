@@ -1,0 +1,1 @@
+/\p{ASCII=Yes}/u;

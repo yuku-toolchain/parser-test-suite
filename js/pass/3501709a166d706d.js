@@ -1,0 +1,3 @@
+const datetime = new Temporal.ZonedDateTime(1_000_000_000_123_987_500n, "UTC");
+const badValues = ["era", "eraYear", "year", "month", "week", "millisecond\0", "mill\u0131second", "SECOND", "eras", "eraYears", "years", "months", "weeks", "milliseconds\0", "mill\u0131seconds", "SECONDS", "other string"];
+for (const smallestUnit of badValues) {}

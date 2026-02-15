@@ -1,0 +1,10 @@
+var item = [1, 2];
+var result;
+item[Symbol.isConcatSpreadable] = null;
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = false;
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = 0;
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = NaN;
+result = [].concat(item);

@@ -1,0 +1,2 @@
+var bigTypedArray;
+var littleTypedArray;

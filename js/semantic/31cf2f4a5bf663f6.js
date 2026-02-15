@@ -1,0 +1,1 @@
+{ const f = 0; class f {} }

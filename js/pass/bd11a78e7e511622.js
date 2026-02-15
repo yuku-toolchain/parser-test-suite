@@ -1,0 +1,1 @@
+testWithAtomicsNonViewValues(function (view) {});

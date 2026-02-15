@@ -1,0 +1,4 @@
+class C extends function() { x = this.#foo; }
+{
+  #foo;
+}

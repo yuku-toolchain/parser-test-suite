@@ -1,0 +1,3 @@
+async () => {
+  void \u0061wait;
+}

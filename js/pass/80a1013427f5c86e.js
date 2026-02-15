@@ -1,0 +1,3 @@
+(0, eval)('switch (1) {' + '  case 1:' + '    function f() { return "declaration"; }' + '}\
+  assert.sameValue(typeof f, "function");\
+  assert.sameValue(f(), "declaration");');

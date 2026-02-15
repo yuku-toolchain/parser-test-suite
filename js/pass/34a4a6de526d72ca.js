@@ -1,0 +1,1 @@
+Promise.all([import('./empty_FIXTURE.js'), import('./empty_FIXTURE.js')]).then(([a, b]) => {}).then($DONE, $DONE);

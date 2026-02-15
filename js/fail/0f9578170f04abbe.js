@@ -1,0 +1,1 @@
+(async () => await typeof import)

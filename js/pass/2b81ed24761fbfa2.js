@@ -1,0 +1,13 @@
+var match;
+match = (/.(?=Z)*/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z)+/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z)?/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2}/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2,}/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2,3}/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z)*?/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z)+?/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z)??/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2}?/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2,}?/).exec('a bZ cZZ dZZZ eZZZZ');
+match = (/.(?=Z){2,3}?/).exec('a bZ cZZ dZZZ eZZZZ');

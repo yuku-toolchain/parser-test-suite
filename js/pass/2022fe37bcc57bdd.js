@@ -1,0 +1,11 @@
+var result;
+(function () {
+  try {
+    throw function () {
+      this._12_14_14_foo = "test";
+    };
+  } catch (e) {
+    e();
+    result = global._12_14_14_foo;
+  }
+})();

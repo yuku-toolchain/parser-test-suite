@@ -1,0 +1,1 @@
+var Generator = (function* () {}).constructor;

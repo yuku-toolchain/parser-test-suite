@@ -1,0 +1,3 @@
+var gen = async function *g() {
+  var yi\u0065ld;
+};

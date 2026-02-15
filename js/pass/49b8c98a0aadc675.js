@@ -1,0 +1,1 @@
+delete Intl.Collator.prototype[Symbol.toStringTag];

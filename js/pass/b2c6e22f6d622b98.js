@@ -1,0 +1,11 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
+var r = {};
+r.hasIndices = undefined;
+r.hasIndices = null;
+r.hasIndices = NaN;
+r.hasIndices = "";
+r.hasIndices = "string";
+r.hasIndices = 86;
+r.hasIndices = Symbol();
+r.hasIndices = [];
+r.hasIndices = {};

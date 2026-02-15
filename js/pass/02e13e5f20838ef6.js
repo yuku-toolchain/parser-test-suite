@@ -1,0 +1,14 @@
+var obj = {};
+var proto = {};
+Object.defineProperty(proto, "configurable", {
+  get: function () {
+    return true;
+  }
+});
+var ConstructFun = function () {};
+ConstructFun.prototype = proto;
+var child = new ConstructFun();
+Object.defineProperty(child, "configurable", {
+  set: function () {}
+});
+Object.defineProperty(obj, "property", child);

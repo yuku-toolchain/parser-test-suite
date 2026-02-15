@@ -1,0 +1,13 @@
+var obj = {};
+function set_func(value) {
+  obj.setVerifyHelpProp = value;
+}
+Object.defineProperty(obj, "foo", {
+  set: set_func,
+  configurable: false
+});
+Object.defineProperties(obj, {
+  foo: {
+    set: set_func
+  }
+});

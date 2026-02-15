@@ -1,0 +1,2 @@
+var array = [2, 4, 8, 16, 32, 64, 128];
+function mapFnThrows(value, index, obj) {}

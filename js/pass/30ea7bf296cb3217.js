@@ -1,0 +1,11 @@
+if (decodeURIComponent("%3b") !== ";") {}
+if (decodeURIComponent("%2f") !== "/") {}
+if (decodeURIComponent("%3f") !== "?") {}
+if (decodeURIComponent("%3a") !== ":") {}
+if (decodeURIComponent("%40") !== "@") {}
+if (decodeURIComponent("%26") !== "&") {}
+if (decodeURIComponent("%3d") !== "=") {}
+if (decodeURIComponent("%2b") !== "+") {}
+if (decodeURIComponent("%24") !== "$") {}
+if (decodeURIComponent("%2c") !== ",") {}
+if (decodeURIComponent("%23") !== "#") {}

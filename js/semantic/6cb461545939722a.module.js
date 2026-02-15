@@ -1,0 +1,16 @@
+var outerScope = {
+  x: 0
+};
+var innerScope = {
+  get x() {
+    delete this.x;
+    return 2;
+  }
+};
+with (outerScope) {
+  with (innerScope) {
+    x |= 4;
+  }
+}
+if (innerScope.x !== 6) {}
+if (outerScope.x !== 0) {}

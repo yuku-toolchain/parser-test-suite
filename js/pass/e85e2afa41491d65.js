@@ -1,0 +1,39 @@
+const callOrder = [];
+new Intl.RelativeTimeFormat([], {
+  get localeMatcher() {
+    callOrder.push("localeMatcher");
+    return {
+      toString() {
+        callOrder.push("localeMatcher toString");
+        return "best fit";
+      }
+    };
+  },
+  get style() {
+    callOrder.push("style");
+    return {
+      toString() {
+        callOrder.push("style toString");
+        return "long";
+      }
+    };
+  },
+  get numberingSystem() {
+    callOrder.push("numberingSystem");
+    return {
+      toString() {
+        callOrder.push("numberingSystem toString");
+        return "abc";
+      }
+    };
+  },
+  get numeric() {
+    callOrder.push("numeric");
+    return {
+      toString() {
+        callOrder.push("numeric toString");
+        return "always";
+      }
+    };
+  }
+});

@@ -1,0 +1,13 @@
+class A {
+  #x = 'Avalue';
+  x() {
+    return this.#x;
+  }
+}
+class B extends A {
+  #x = 'Bvalue';
+  x() {
+    return this.#x;
+  }
+}
+var b = new B();

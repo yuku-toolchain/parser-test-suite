@@ -1,0 +1,7 @@
+var typedArray = new Int32Array(10);
+var env = Object.create(typedArray);
+Object.defineProperty(env, "NaN", {
+  configurable: true,
+  value: 100
+});
+with (env) {}

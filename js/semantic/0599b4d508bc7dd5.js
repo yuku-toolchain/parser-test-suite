@@ -1,0 +1,1 @@
+switch (0) { case 1: class f {} default: async function* f() {} }

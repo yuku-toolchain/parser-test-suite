@@ -1,0 +1,8 @@
+const expected = ["get options.roundingIncrement", "get options.roundingIncrement.valueOf", "call options.roundingIncrement.valueOf", "get options.roundingMode", "get options.roundingMode.toString", "call options.roundingMode.toString", "get options.smallestUnit", "get options.smallestUnit.toString", "call options.smallestUnit.toString"];
+const actual = [];
+const options = TemporalHelpers.propertyBagObserver(actual, {
+  smallestUnit: "hour",
+  roundingIncrement: 25,
+  roundingMode: "expand"
+}, "options");
+const instance = new Temporal.PlainDateTime(2025, 8, 14, 12);

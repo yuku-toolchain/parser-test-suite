@@ -1,0 +1,1 @@
+const instance = new Temporal.ZonedDateTime(-65_261_246_399_500_000_000n, "UTC");

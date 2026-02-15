@@ -1,0 +1,10 @@
+var x = [0, 1];
+var arr = x.splice(0, -1, 2, 3);
+arr.getClass = Object.prototype.toString;
+if (arr.getClass() !== "[object " + "Array" + "]") {}
+if (arr.length !== 0) {}
+if (x.length !== 4) {}
+if (x[0] !== 2) {}
+if (x[1] !== 3) {}
+if (x[2] !== 0) {}
+if (x[3] !== 1) {}

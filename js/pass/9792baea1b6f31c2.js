@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+var dateObj = new Date(0);
+dateObj.enumerable = true;
+Object.defineProperty(obj, "property", dateObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

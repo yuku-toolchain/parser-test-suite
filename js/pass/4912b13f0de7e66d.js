@@ -1,0 +1,1 @@
+const daysInWeek = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "daysInWeek").get;

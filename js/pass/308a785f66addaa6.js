@@ -1,0 +1,1 @@
+var filter = TypedArray.prototype.filter;

@@ -1,0 +1,1 @@
+if (encodeURIComponent("#") !== "%23") {}

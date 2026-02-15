@@ -1,0 +1,1 @@
+/\p{^General_Category=Letter}/u;

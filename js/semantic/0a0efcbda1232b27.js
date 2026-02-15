@@ -1,0 +1,1 @@
+(async function() { 'use strict'; { await using f = null; var f; } })

@@ -1,0 +1,15 @@
+var v1 = {};
+var v2 = {};
+var v3 = {};
+Promise.allSettled([v1, v2, v3]).then(function (values) {
+  checkSettledPromises(values, [{
+    status: 'fulfilled',
+    value: v1
+  }, {
+    status: 'fulfilled',
+    value: v2
+  }, {
+    status: 'fulfilled',
+    value: v3
+  }], 'values');
+}, function () {}).then($DONE, $DONE);

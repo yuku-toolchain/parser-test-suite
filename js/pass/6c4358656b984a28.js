@@ -1,0 +1,1 @@
+let matchResult = ("aabb").match(/(?:(?:(?<x>a)|(?<x>b))\k<x>){2}/);

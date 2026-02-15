@@ -1,0 +1,5 @@
+var C = class {
+  x = () => {
+    var t = () => super();
+  }
+}

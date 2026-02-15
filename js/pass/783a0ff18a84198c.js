@@ -1,0 +1,17 @@
+var map = new Map();
+var item = 'bar';
+map.set(item, 0);
+item = 1;
+map.set(item, 42);
+item = NaN;
+map.set(item, 1);
+item = {};
+map.set(item, 2);
+item = [];
+map.set(item, 3);
+item = Symbol('item');
+map.set(item, 4);
+item = null;
+map.set(item, 5);
+item = undefined;
+map.set(item, 6);

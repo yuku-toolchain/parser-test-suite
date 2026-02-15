@@ -1,0 +1,3 @@
+if (true) {
+  import.defer('./empty_FIXTURE.js');
+}

@@ -1,0 +1,4 @@
+const explicit = new Temporal.PlainTime(undefined);
+TemporalHelpers.assertPlainTime(explicit, 0, 0, 0, 0, 0, 0, "explicit");
+const implicit = new Temporal.PlainTime();
+TemporalHelpers.assertPlainTime(implicit, 0, 0, 0, 0, 0, 0, "implicit");

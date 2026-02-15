@@ -1,0 +1,1 @@
+const format = Intl.RelativeTimeFormat.prototype.format;

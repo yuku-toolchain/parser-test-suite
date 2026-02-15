@@ -1,0 +1,2 @@
+const calendarsWithEras = ["buddhist", "coptic", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic-civil", "islamic-tbla", "islamic-umalqura", "japanese", "persian", "roc"];
+calendarsWithEras.forEach(calendar => {});

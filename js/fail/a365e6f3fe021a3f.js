@@ -1,0 +1,5 @@
+class C {
+  static {
+    const await = 0;
+  }
+}

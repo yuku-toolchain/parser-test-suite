@@ -1,0 +1,3 @@
+try { } catch (err) {
+  import v from './decl-pos-import-try-catch.js';
+}

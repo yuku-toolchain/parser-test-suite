@@ -1,0 +1,15 @@
+var proto = {};
+Object.defineProperty(proto, "foo", {
+  get: function () {
+    return 0;
+  },
+  configurable: true
+});
+var ConstructFun = function () {};
+ConstructFun.prototype = proto;
+var obj = new ConstructFun();
+Object.defineProperty(obj, "foo", {
+  value: 10,
+  configurable: true
+});
+Object.seal(obj);

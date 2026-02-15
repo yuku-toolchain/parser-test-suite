@@ -1,0 +1,1 @@
+var SetProto = Object.getPrototypeOf(new Set());

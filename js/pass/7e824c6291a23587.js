@@ -1,0 +1,1 @@
+var str = 'The future is cool!';

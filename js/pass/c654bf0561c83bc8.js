@@ -1,0 +1,10 @@
+const datetime = new Temporal.PlainDateTime(1976, 11, 18, 15, 23, 30, 123, 456, 789);
+const values = [Temporal.PlainDate.from("2022-04-12"), Temporal.PlainDateTime.from("2022-04-12T15:19:45"), Temporal.PlainMonthDay.from("04-12"), Temporal.PlainTime.from("15:19:45"), Temporal.PlainYearMonth.from("2022-04"), Temporal.ZonedDateTime.from("2022-04-12T15:19:45[UTC]"), Temporal.Now.plainDateTimeISO(), Temporal.Now.plainDateISO(), Temporal.Now.plainTimeISO()];
+for (const value of values) {
+  Object.defineProperty(value, "calendar", {
+    get() {}
+  });
+  Object.defineProperty(value, "timeZone", {
+    get() {}
+  });
+}

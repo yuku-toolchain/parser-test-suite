@@ -1,0 +1,1 @@
+var x = { \u0063ontinue } = { continue: 42 };

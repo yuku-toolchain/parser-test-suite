@@ -1,0 +1,1 @@
+var AsyncGenerator = (async function* () {}).constructor;

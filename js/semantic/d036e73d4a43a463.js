@@ -1,0 +1,5 @@
+var o = {
+  m(a = 0) {
+    "use strict";
+  }
+};

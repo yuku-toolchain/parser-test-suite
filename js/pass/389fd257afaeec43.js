@@ -1,0 +1,11 @@
+var set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+var iterator = set[Symbol.iterator]();
+var result;
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();
+result = iterator.next();

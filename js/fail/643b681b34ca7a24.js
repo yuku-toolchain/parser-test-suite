@@ -1,0 +1,1 @@
+var x = { \u0065xport } = { export: 42 };

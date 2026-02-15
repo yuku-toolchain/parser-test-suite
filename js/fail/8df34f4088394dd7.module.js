@@ -1,0 +1,3 @@
+function fn(x = await 1) {
+  return x;
+}

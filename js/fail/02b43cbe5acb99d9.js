@@ -1,0 +1,2 @@
+export var name1 = await /1/;
+export var {x = await /1/} = {};

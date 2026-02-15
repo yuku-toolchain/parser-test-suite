@@ -1,0 +1,1 @@
+let [fn = function () {}, xFn = function x() {}] = [];

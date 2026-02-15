@@ -1,0 +1,15 @@
+var obj = {
+  constructor: function () {},
+  flags: {
+    toString: function () {
+      return 'toString valuey';
+    }
+  }
+};
+var flagsArg;
+obj.constructor = function () {};
+obj.constructor[Symbol.species] = function (_, flags) {
+  flagsArg = flags;
+  return /./y;
+};
+RegExp.prototype[Symbol.split].call(obj);

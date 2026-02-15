@@ -1,0 +1,3 @@
+var uncoercibleObj = {
+  toString: function () {}
+};

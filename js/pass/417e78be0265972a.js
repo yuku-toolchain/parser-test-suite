@@ -1,0 +1,5 @@
+class C {
+  ['constructor']() {
+    return 1;
+  }
+}

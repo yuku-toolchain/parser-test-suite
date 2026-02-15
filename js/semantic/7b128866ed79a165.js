@@ -1,0 +1,6 @@
+function testcase() {
+  "use strict";
+  function fun() {
+    var static;
+  }
+}

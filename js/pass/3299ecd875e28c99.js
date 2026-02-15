@@ -1,0 +1,11 @@
+var s = new Set([1, 2, 3]);
+var expects = [1, 2, 3, 1];
+s.forEach(function (value, entry, set) {
+  var expect = expects.shift();
+  if (value === 2) {
+    set.delete(1);
+  }
+  if (value === 3) {
+    set.add(1);
+  }
+});

@@ -1,0 +1,5 @@
+var C = class {
+  method() {
+    this.\u0023field;
+  }
+};

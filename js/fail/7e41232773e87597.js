@@ -1,0 +1,4 @@
+0, class {
+  async *method(...x = []) {
+}
+};

@@ -1,0 +1,15 @@
+const other = $262.createRealm().global;
+const newTarget = new other.Function();
+let sgm;
+newTarget.prototype = undefined;
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);
+newTarget.prototype = null;
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);
+newTarget.prototype = false;
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);
+newTarget.prototype = 'str';
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);
+newTarget.prototype = Symbol();
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);
+newTarget.prototype = 1;
+sgm = Reflect.construct(Intl.Segmenter, [], newTarget);

@@ -1,0 +1,1 @@
+const resolvedOptions = Intl.ListFormat.prototype.resolvedOptions;

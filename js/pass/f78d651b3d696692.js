@@ -1,0 +1,1 @@
+var __obj = Error.prototype;

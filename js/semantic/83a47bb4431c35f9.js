@@ -1,0 +1,1 @@
+import {resolved} from './module-import-rejection_FIXTURE.js';

@@ -1,0 +1,15 @@
+const epoch = new Temporal.ZonedDateTime(0n, "UTC");
+const hourBefore = new Temporal.ZonedDateTime(-3600_000_000_000n, "UTC");
+let str = "1970-01-01T00:00";
+str = "1970-01-01T00:00Z";
+str = "1970-01-01T00:00+01:00";
+str = "1970-01-01T00:00[+01:00]";
+const result1 = Temporal.ZonedDateTime.compare(str, hourBefore);
+const result2 = Temporal.ZonedDateTime.compare(hourBefore, str);
+str = "1970-01-01T00:00Z[+01:00]";
+const result3 = Temporal.ZonedDateTime.compare(str, epoch);
+const result4 = Temporal.ZonedDateTime.compare(epoch, str);
+str = "1970-01-01T00:00+01:00[+01:00]";
+const result5 = Temporal.ZonedDateTime.compare(str, hourBefore);
+const result6 = Temporal.ZonedDateTime.compare(hourBefore, str);
+str = "1970-01-01T00:00-04:15[+01:00]";

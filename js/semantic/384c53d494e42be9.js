@@ -1,0 +1,1 @@
+function invalid() { "\5"; "use strict"; }

@@ -1,0 +1,4 @@
+class C {
+  async *method(...a,) {
+}
+}

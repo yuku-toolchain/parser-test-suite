@@ -1,0 +1,3 @@
+var asyncFn = async function () {
+  void \u0061wait;
+};

@@ -1,0 +1,3 @@
+0, async function* g([element]) {
+  "use strict";
+};

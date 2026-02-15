@@ -1,0 +1,15 @@
+class C {
+  foo = "foobar";
+  m() {
+    return 42;
+  }
+  #m = 'test262';
+  m2() {
+    return 39;
+  }
+  bar = "barbaz";
+  method() {
+    return this.#m;
+  }
+}
+var c = new C();

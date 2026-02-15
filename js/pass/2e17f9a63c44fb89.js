@@ -1,0 +1,4 @@
+const array = [1, 2, 3];
+const obj = Object.groupBy(array, function (i) {
+  return i % 2 === 0 ? 'even' : 'odd';
+});

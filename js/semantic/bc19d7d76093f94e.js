@@ -1,0 +1,7 @@
+var implements = 1;
+(function() {
+  "use strict";
+  ({
+    implements
+  });
+});

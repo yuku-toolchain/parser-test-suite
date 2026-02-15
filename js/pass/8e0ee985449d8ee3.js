@@ -1,0 +1,9 @@
+Object.defineProperty(fnGlobalObject(), 'f', {
+  value: function () {
+    return 'Another function';
+  },
+  enumerable: true,
+  writable: true,
+  configurable: false
+});
+eval('if (false) ; else function f() { return "function declaration"; }');

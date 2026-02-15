@@ -1,0 +1,20 @@
+const datetime = new Temporal.ZonedDateTime(1_000_000_000_987_654_321n, "UTC");
+TemporalHelpers.checkStringOptionWrongType("offset", "reject", offset => Temporal.ZonedDateTime.from(datetime, {
+  offset
+}), (result, descr) => assert.sameValue(result.epochNanoseconds, 1_000_000_000_987_654_321n, descr));
+const propertyBag = {
+  timeZone: "UTC",
+  offset: "+00:00",
+  year: 2001,
+  month: 9,
+  day: 9,
+  hour: 1,
+  minute: 46,
+  second: 40,
+  millisecond: 987,
+  microsecond: 654,
+  nanosecond: 321
+};
+TemporalHelpers.checkStringOptionWrongType("offset", "reject", offset => Temporal.ZonedDateTime.from(propertyBag, {
+  offset
+}), (result, descr) => assert.sameValue(result.epochNanoseconds, 1_000_000_000_987_654_321n, descr));

@@ -1,0 +1,1 @@
+const epoch = new Temporal.ZonedDateTime(0n, "UTC");

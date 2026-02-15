@@ -1,0 +1,13 @@
+var fn = function () {};
+var reg = new FinalizationRegistry(fn);
+var target1 = {};
+var target2 = {};
+var target3 = {};
+var token = Symbol('unregister');
+reg.register(target1, undefined, token);
+reg.register(target1, undefined, token);
+reg.register(target2, undefined, Symbol.hasInstance);
+reg.register(target3, undefined, Symbol.hasInstance);
+reg.register(target1, token);
+reg.register(target2, Symbol.hasInstance);
+reg.register(target3);

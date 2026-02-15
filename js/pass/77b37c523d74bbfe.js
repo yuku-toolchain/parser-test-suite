@@ -1,0 +1,6 @@
+const instance = Temporal.PlainYearMonth.from({
+  year: 2000,
+  month: 5
+});
+const result = instance.add("P3M");
+TemporalHelpers.assertPlainYearMonth(result, 2000, 8, "M08");

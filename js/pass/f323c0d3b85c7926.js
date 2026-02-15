@@ -1,0 +1,2 @@
+const invalidOptions = [null, 1, "", "Conjunction", "CONJUNCTION", "conjunction\0", "Disjunction", "DISJUNCTION", "disjunction\0", "Unit", "UNIT", "unit\0"];
+for (const invalidOption of invalidOptions) {}

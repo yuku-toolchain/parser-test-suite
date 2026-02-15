@@ -1,0 +1,1 @@
+const descriptions = ['years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds', 'milliseconds', 'microseconds', 'nanoseconds'].map(time => `Duration constructor throws RangeError with fractional value in the ${time} position`);

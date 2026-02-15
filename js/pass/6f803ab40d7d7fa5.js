@@ -1,0 +1,15 @@
+function callbackfn(prevVal, curVal, idx, obj) {
+  return idx;
+}
+var obj = {
+  3: 12,
+  4: 9,
+  length: 4
+};
+Object.defineProperty(obj, "2", {
+  get: function () {
+    obj.length = 10;
+    return 11;
+  },
+  configurable: true
+});

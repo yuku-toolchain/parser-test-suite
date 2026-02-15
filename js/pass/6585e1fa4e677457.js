@@ -1,0 +1,1 @@
+var result = (/./u)[Symbol.split]('\ud834\udf06');

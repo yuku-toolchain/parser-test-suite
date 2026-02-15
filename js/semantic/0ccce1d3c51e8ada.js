@@ -1,0 +1,2 @@
+export default function F() {}
+F.foo = '';

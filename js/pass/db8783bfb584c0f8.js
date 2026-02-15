@@ -1,0 +1,5 @@
+var from = new Temporal.PlainYearMonth(1970, 1);
+var to = new Temporal.PlainYearMonth(1971, 1);
+var options = {
+  roundingIncrement: 100_000_000
+};

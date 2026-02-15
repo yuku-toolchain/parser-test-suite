@@ -1,0 +1,12 @@
+const validOptions = [[undefined, "decimal"], ["unit", "unit"], [{
+  toString() {
+    return "unit";
+  }
+}, "unit"]];
+for (const [validOption, expected] of validOptions) {
+  const nf = new Intl.NumberFormat([], {
+    "style": validOption,
+    "unit": "gigabit"
+  });
+  const resolvedOptions = nf.resolvedOptions();
+}

@@ -1,0 +1,4 @@
+const minYearMonth = new Temporal.PlainYearMonth(-271821, 4);
+const maxYearMonth = new Temporal.PlainYearMonth(275760, 9);
+const epochYearMonth = new Temporal.PlainYearMonth(1970, 1);
+TemporalHelpers.assertDuration(minYearMonth.since(minYearMonth), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "minYearMonth.since(minYearMonth)");

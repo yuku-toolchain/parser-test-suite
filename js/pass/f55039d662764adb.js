@@ -1,0 +1,10 @@
+var arrObj = [];
+var setFunc = function (value) {
+  arrObj.setVerifyHelpProp = value;
+};
+var getFunc = function () {};
+Object.defineProperty(arrObj, "0", {
+  set: setFunc,
+  get: getFunc,
+  enumerable: true
+});

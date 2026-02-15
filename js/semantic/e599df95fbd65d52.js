@@ -1,0 +1,3 @@
+({
+  method(param = super()) {}
+});

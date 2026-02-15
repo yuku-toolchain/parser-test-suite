@@ -1,0 +1,1 @@
+const nf = new Intl.NumberFormat();

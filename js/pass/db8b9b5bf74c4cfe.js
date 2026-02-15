@@ -1,0 +1,1 @@
+var errObj = new Error();

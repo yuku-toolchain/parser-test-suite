@@ -1,0 +1,7 @@
+var protected = 1;
+(function() {
+  "use strict";
+  ({
+    protected
+  });
+});

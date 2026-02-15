@@ -1,0 +1,1 @@
+delete Intl.PluralRules.prototype[Symbol.toStringTag];

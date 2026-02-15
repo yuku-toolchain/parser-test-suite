@@ -1,0 +1,1 @@
+const hour = Object.getOwnPropertyDescriptor(Temporal.PlainTime.prototype, "hour").get;

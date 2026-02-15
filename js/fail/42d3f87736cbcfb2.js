@@ -1,0 +1,1 @@
+if (true) import.UNKNOWN('./empty_FIXTURE.js');

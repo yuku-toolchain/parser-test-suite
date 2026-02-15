@@ -1,0 +1,1 @@
+var maxSafe32bitInt = 2147483647;

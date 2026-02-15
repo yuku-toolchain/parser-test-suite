@@ -1,0 +1,4 @@
+class C {
+  set #f(v) {}
+  static get #f() {}
+}

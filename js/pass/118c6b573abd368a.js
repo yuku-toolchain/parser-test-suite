@@ -1,0 +1,1 @@
+var descriptor = Object.getOwnPropertyDescriptor(DataView.prototype, 'byteOffset');

@@ -1,0 +1,2 @@
+export var name1 = await await await await await await await await await await await await await await await 'await';
+export var {x = await await await await await await await await await await await await await await await 'await'} = {};

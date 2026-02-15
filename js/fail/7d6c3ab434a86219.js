@@ -1,0 +1,4 @@
+var g = function*() {
+  yield
+  * 1
+};

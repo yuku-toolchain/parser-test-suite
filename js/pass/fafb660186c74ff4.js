@@ -1,0 +1,1 @@
+var ownProperties = Object.getOwnPropertyNames((function* () {}).prototype);

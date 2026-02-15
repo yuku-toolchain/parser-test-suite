@@ -1,0 +1,2 @@
+0, async function* g(x = 0, x) {
+};

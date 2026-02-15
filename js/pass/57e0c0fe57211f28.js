@@ -1,0 +1,1 @@
+const getNumberingSystems = Intl.Locale.prototype.getNumberingSystems;

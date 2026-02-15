@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+Function.prototype.enumerable = true;
+var fun = function () {};
+Object.defineProperty(obj, "property", fun);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

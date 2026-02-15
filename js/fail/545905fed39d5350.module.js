@@ -1,0 +1,1 @@
+export * as namespace from './parse-err-semi-name-space-export.js' null;

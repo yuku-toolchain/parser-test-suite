@@ -1,0 +1,1 @@
+var sample = new ArrayBuffer(1);

@@ -1,0 +1,1 @@
+var sample = new DataView(new ArrayBuffer(1), 0, 0);

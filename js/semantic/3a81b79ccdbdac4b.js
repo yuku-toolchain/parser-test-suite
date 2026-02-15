@@ -1,0 +1,11 @@
+var C = class {
+  #m = function() { return 'test262'; };
+Child = class extends C {
+    access() {
+      return super.#m;
+    }
+method() {
+      return super.#m();
+    }
+  }
+};

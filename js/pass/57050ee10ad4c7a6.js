@@ -1,0 +1,1 @@
+var forEach = TypedArray.prototype.forEach;

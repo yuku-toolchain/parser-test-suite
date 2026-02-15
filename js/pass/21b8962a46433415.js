@@ -1,0 +1,1 @@
+var find = TypedArray.prototype.find;

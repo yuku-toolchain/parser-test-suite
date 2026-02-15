@@ -1,0 +1,10 @@
+var testResult = false;
+function callbackfn(prevVal, curVal, idx, obj) {
+  if (idx === 0) {
+    testResult = prevVal === 1;
+  }
+}
+var func = function (a, b, c) {
+  Array.prototype.reduceRight.call(arguments, callbackfn);
+};
+func(0, 1);

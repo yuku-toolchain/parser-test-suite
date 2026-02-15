@@ -1,0 +1,1 @@
+/[^\p{RGI_Emoji_ZWJ_Sequence}]/v;
