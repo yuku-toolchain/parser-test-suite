@@ -1,0 +1,12 @@
+var obj = {};
+var accessed = false;
+Object.defineProperties(obj, {
+  prop: {
+    enumerable: +0
+  }
+});
+for (var property in obj) {
+  if (property === "prop") {
+    accessed = true;
+  }
+}

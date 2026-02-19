@@ -1,0 +1,3 @@
+var fromIndex = {
+  valueOf: function () {}
+};

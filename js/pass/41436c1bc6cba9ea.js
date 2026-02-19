@@ -1,0 +1,4 @@
+const earlier = new Temporal.Instant(1_000_000_000_000_000_000n);
+const later = new Temporal.Instant(1_000_090_061_987_654_321n);
+const badValues = ["era", "eraYear", "year", "month", "week", "day", "millisecond\0", "mill\u0131second", "SECOND", "eras", "eraYears", "years", "months", "weeks", "days", "milliseconds\0", "mill\u0131seconds", "SECONDS", "other string"];
+for (const smallestUnit of badValues) {}

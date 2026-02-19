@@ -1,0 +1,15 @@
+var sequence = [];
+var p1 = new Promise(function () {}), p2 = Promise.resolve(2), p = Promise.race([p1, p2]);
+sequence.push(1);
+p.then(function (result) {
+  sequence.push(4);
+  checkSequence(sequence, "This happens second");
+}).catch($DONE);
+Promise.resolve().then(function () {
+  sequence.push(3);
+  checkSequence(sequence, "This happens first");
+}).then(function () {
+  sequence.push(5);
+  checkSequence(sequence, "This happens third");
+}).then($DONE, $DONE);
+sequence.push(2);

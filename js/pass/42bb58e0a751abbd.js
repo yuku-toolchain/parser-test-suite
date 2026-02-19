@@ -1,0 +1,8 @@
+const arrayPrototypeSymbolIteratorOriginal = Array.prototype[Symbol.iterator];
+Array.prototype[Symbol.iterator] = function arrayIterator() {};
+const instance = new Temporal.PlainYearMonth(2023, 5, "iso8601");
+instance.subtract({
+  years: 5,
+  months: 2
+});
+Array.prototype[Symbol.iterator] = arrayPrototypeSymbolIteratorOriginal;

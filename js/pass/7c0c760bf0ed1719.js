@@ -1,0 +1,4 @@
+const tests = [["1970-01-01T00:00[UTC][u-ca=iso8601]", "without !"], ["1970-01-01T00:00[UTC][!u-ca=iso8601]", "with !"], ["1970-01-01T00:00[UTC][u-ca=iso8601][u-ca=discord]", "second annotation ignored"]];
+tests.forEach(([arg, description]) => {
+  const result = Temporal.ZonedDateTime.compare(arg, arg);
+});

@@ -1,0 +1,17 @@
+const instance = new Temporal.Instant(0n);
+let str = "1970-01-01T00:00";
+str = "1970-01-01T00:00[UTC]";
+str = "1970-01-01T00:00Z";
+const result1 = instance.equals(str);
+str = "1970-01-01T00:00+01:00";
+const result2 = instance.equals(str);
+str = "1970-01-01T00:00Z[Etc/Ignored]";
+const result3 = instance.equals(str);
+str = "1970-01-01T00:00+01:00[Etc/Ignored]";
+const result4 = instance.equals(str);
+str = "1970-01-01T00:00Z[u-ca=hebrew]";
+const result6 = instance.equals(str);
+str = "1970-01-01T00:00+01:00[u-ca=hebrew]";
+const result5 = instance.equals(str);
+str = "1970-01-01T00:00+01:00[Etc/Ignored][u-ca=hebrew]";
+const result7 = instance.equals(str);

@@ -1,0 +1,1 @@
+var AsyncFunctionPrototype = Object.getPrototypeOf(async function () {});

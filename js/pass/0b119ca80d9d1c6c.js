@@ -1,0 +1,4 @@
+var foo = function (x, y) {
+  return new Boolean(x + y === "ab" && arguments[0] === "a" && arguments[1] === "b" && arguments.length === 2);
+};
+var obj = foo.bind({}, "a", "b");

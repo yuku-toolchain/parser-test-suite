@@ -1,0 +1,23 @@
+var obj = {};
+function get_func() {
+  return 10;
+}
+function set_func() {
+  return 10;
+}
+Object.defineProperty(obj, "property", {
+  get: get_func,
+  set: set_func,
+  enumerable: true,
+  configurable: true
+});
+Object.defineProperties(obj, {
+  property: {
+    set: undefined
+  }
+});
+var verifyGet = false;
+verifyGet = obj.property === 10;
+var verifySet = false;
+var desc = Object.getOwnPropertyDescriptor(obj, "property");
+verifySet = typeof desc.set === 'undefined';

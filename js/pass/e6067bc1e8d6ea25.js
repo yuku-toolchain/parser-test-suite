@@ -1,0 +1,12 @@
+var array = [2, 4, 0, 16];
+var expectedArray = [2, 4, 16];
+var obj = {
+  length: 4,
+  0: 2,
+  1: 4,
+  2: 0,
+  3: 16
+};
+delete obj[2];
+var a = Array.from(obj);
+for (var j = 0; j < expectedArray.length; j++) {}

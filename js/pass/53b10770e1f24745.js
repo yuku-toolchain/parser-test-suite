@@ -1,0 +1,3 @@
+TemporalHelpers.assertDuration(new Temporal.Duration(5, 5, 5, 5, 5, 5, 5, 5, 5, 0), 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, "positive");
+TemporalHelpers.assertDuration(new Temporal.Duration(-5, -5, -5, -5, -5, -5, -5, -5, -5, 0), -5, -5, -5, -5, -5, -5, -5, -5, -5, 0, "negative");
+TemporalHelpers.assertDuration(new Temporal.Duration(-0, -0, -0, -0, -0, -0, -0, -0, -0, -0), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "negative zero");

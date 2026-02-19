@@ -1,0 +1,3 @@
+const datetime = new Temporal.ZonedDateTime(-13849764_999_999_999n, "UTC");
+const result = datetime.toPlainTime();
+TemporalHelpers.assertPlainTime(result, 16, 50, 35, 0, 0, 1);

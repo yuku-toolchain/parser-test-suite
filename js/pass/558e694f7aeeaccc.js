@@ -1,0 +1,2 @@
+let fulfillables = [Promise.reject('a'), new Promise((resolve, reject) => reject('b')), Promise.all([Promise.reject('c')]), Promise.resolve(Promise.reject('d').catch(v => v))];
+Promise.any(fulfillables).then(resolution => {}).then($DONE, $DONE);

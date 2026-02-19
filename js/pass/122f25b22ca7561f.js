@@ -1,0 +1,1 @@
+const weeks = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "weeks").get;

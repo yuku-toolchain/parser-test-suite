@@ -1,0 +1,1 @@
+var replacer = ['c', 'b', 'a'];

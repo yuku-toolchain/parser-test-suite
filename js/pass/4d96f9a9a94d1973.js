@@ -1,0 +1,9 @@
+class C {
+  #field;
+m() {
+    for (this.#field of [1]) ;
+  }
+}
+assert.throws(TypeError, function() {
+  C.prototype.m.call({});
+});

@@ -1,0 +1,2 @@
+var __reg = new RegExp("77");
+if (("ABB\u0041BABAB\u0037\u0037BBAA").replace(__reg, 1) !== "ABBABABAB\u0031BBAA") {}

@@ -1,0 +1,396 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "df",
+              "start": 4,
+              "end": 6
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Intl",
+                  "start": 13,
+                  "end": 17
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "DateTimeFormat",
+                  "start": 18,
+                  "end": 32
+                },
+                "optional": false,
+                "computed": false,
+                "start": 13,
+                "end": 32
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "en-u-ca-chinese",
+                  "raw": "\"en-u-ca-chinese\"",
+                  "start": 33,
+                  "end": 50
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "year",
+                        "start": 56,
+                        "end": 60
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": "numeric",
+                        "raw": "\"numeric\"",
+                        "start": 62,
+                        "end": 71
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 56,
+                      "end": 71
+                    }
+                  ],
+                  "start": 52,
+                  "end": 73
+                }
+              ],
+              "start": 9,
+              "end": 74
+            },
+            "start": 4,
+            "end": 74
+          }
+        ],
+        "start": 0,
+        "end": 75
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "parts",
+              "start": 80,
+              "end": 85
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "df",
+                  "start": 88,
+                  "end": 90
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "formatToParts",
+                  "start": 91,
+                  "end": 104
+                },
+                "optional": false,
+                "computed": false,
+                "start": 88,
+                "end": 104
+              },
+              "arguments": [
+                {
+                  "type": "NewExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "Date",
+                    "start": 109,
+                    "end": 113
+                  },
+                  "arguments": [],
+                  "start": 105,
+                  "end": 115
+                }
+              ],
+              "optional": false,
+              "start": 88,
+              "end": 116
+            },
+            "start": 80,
+            "end": 116
+          }
+        ],
+        "start": 76,
+        "end": 117
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "relatedYearCount",
+              "start": 122,
+              "end": 138
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 141,
+              "end": 142
+            },
+            "start": 122,
+            "end": 142
+          }
+        ],
+        "start": 118,
+        "end": 143
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "yearNameCount",
+              "start": 148,
+              "end": 161
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 164,
+              "end": 165
+            },
+            "start": 148,
+            "end": 165
+          }
+        ],
+        "start": 144,
+        "end": 166
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "parts",
+              "start": 167,
+              "end": 172
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "forEach",
+              "start": 173,
+              "end": 180
+            },
+            "optional": false,
+            "computed": false,
+            "start": 167,
+            "end": 180
+          },
+          "arguments": [
+            {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "part",
+                  "start": 191,
+                  "end": 195
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "+=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "relatedYearCount",
+                        "start": 201,
+                        "end": 217
+                      },
+                      "right": {
+                        "type": "ConditionalExpression",
+                        "test": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "part",
+                              "start": 221,
+                              "end": 225
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "type",
+                              "start": 226,
+                              "end": 230
+                            },
+                            "optional": false,
+                            "computed": false,
+                            "start": 221,
+                            "end": 230
+                          },
+                          "operator": "==",
+                          "right": {
+                            "type": "Literal",
+                            "value": "relatedYear",
+                            "raw": "\"relatedYear\"",
+                            "start": 234,
+                            "end": 247
+                          },
+                          "start": 221,
+                          "end": 247
+                        },
+                        "consequent": {
+                          "type": "Literal",
+                          "value": 1,
+                          "raw": "1",
+                          "start": 250,
+                          "end": 251
+                        },
+                        "alternate": {
+                          "type": "Literal",
+                          "value": 0,
+                          "raw": "0",
+                          "start": 254,
+                          "end": 255
+                        },
+                        "start": 221,
+                        "end": 255
+                      },
+                      "start": 201,
+                      "end": 255
+                    },
+                    "start": 201,
+                    "end": 256
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "+=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "yearNameCount",
+                        "start": 259,
+                        "end": 272
+                      },
+                      "right": {
+                        "type": "ConditionalExpression",
+                        "test": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "part",
+                              "start": 276,
+                              "end": 280
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "type",
+                              "start": 281,
+                              "end": 285
+                            },
+                            "optional": false,
+                            "computed": false,
+                            "start": 276,
+                            "end": 285
+                          },
+                          "operator": "==",
+                          "right": {
+                            "type": "Literal",
+                            "value": "yearName",
+                            "raw": "\"yearName\"",
+                            "start": 289,
+                            "end": 299
+                          },
+                          "start": 276,
+                          "end": 299
+                        },
+                        "consequent": {
+                          "type": "Literal",
+                          "value": 1,
+                          "raw": "1",
+                          "start": 302,
+                          "end": 303
+                        },
+                        "alternate": {
+                          "type": "Literal",
+                          "value": 0,
+                          "raw": "0",
+                          "start": 306,
+                          "end": 307
+                        },
+                        "start": 276,
+                        "end": 307
+                      },
+                      "start": 259,
+                      "end": 307
+                    },
+                    "start": 259,
+                    "end": 308
+                  }
+                ],
+                "start": 197,
+                "end": 310
+              },
+              "expression": false,
+              "start": 181,
+              "end": 310
+            }
+          ],
+          "optional": false,
+          "start": 167,
+          "end": 311
+        },
+        "start": 167,
+        "end": 312
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 312
+  },
+  "errors": [],
+  "comments": []
+}

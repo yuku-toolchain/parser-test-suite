@@ -1,0 +1,35 @@
+class C {
+  foo = "foobar";
+  m() {
+    return 42;
+  }
+  #$ = 1;
+  #_ = 1;
+  #o = 1;
+  #℘ = 1;
+  #ZW_‌_NJ = 1;
+  #ZW_‍_J = 1;
+  m2() {
+    return 39;
+  }
+  bar = "barbaz";
+  $() {
+    return this.#$;
+  }
+  _() {
+    return this.#_;
+  }
+  o() {
+    return this.#o;
+  }
+  ℘() {
+    return this.#℘;
+  }
+  ZW_‌_NJ() {
+    return this.#ZW_‌_NJ;
+  }
+  ZW_‍_J() {
+    return this.#ZW_‍_J;
+  }
+}
+var c = new C();

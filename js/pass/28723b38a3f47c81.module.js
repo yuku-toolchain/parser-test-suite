@@ -1,0 +1,25 @@
+var binding;
+for (binding in [await ({
+  function() {}
+})]) {
+  await ({
+    function() {}
+  });
+  break;
+}
+for (var binding in [await ({
+  function() {}
+})]) {
+  await ({
+    function() {}
+  });
+  break;
+}
+for (let binding in [await ({
+  function() {}
+})]) {
+  await ({
+    function() {}
+  });
+  break;
+}

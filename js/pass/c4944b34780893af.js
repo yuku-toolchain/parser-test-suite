@@ -1,0 +1,2 @@
+const earlier = new Temporal.ZonedDateTime(1_000_000_000_987_654_321n, "UTC");
+const later = new Temporal.ZonedDateTime(1_000_090_061_988_655_322n, "UTC");

@@ -1,0 +1,13 @@
+var array = [];
+var callCount = 0;
+var OArray = $262.createRealm().global.Array;
+var speciesDesc = {
+  get: function () {
+    callCount += 1;
+  }
+};
+var result;
+array.constructor = OArray;
+Object.defineProperty(Array, Symbol.species, speciesDesc);
+Object.defineProperty(OArray, Symbol.species, speciesDesc);
+result = array.slice();

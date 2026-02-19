@@ -1,0 +1,1 @@
+Function("this.field=\"oil\"").call(undefined);

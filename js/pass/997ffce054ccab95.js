@@ -1,0 +1,1 @@
+if (String(42).concat(void 0) !== "42undefined") {}

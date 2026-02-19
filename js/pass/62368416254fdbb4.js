@@ -1,0 +1,1 @@
+(0, eval)('for (let f in { key: 0 }) {{ function f() {  } }}');

@@ -1,0 +1,5 @@
+const instant = new Temporal.Instant(0n);
+function test(timeZoneIdentifier, expected, description) {}
+test("UTC", "1970-01-01T00:00:00+00:00", "offset of UTC is +00:00");
+test("+01:00", "1970-01-01T01:00:00+01:00", "positive offset");
+test("-05:00", "1969-12-31T19:00:00-05:00", "negative offset");

@@ -1,0 +1,8 @@
+TemporalHelpers.assertPlainMonthDay(Temporal.PlainMonthDay.from({
+  monthCode: "M12",
+  day: 15
+}, {}), "M12", 15, "options may be an empty plain object");
+TemporalHelpers.assertPlainMonthDay(Temporal.PlainMonthDay.from({
+  monthCode: "M12",
+  day: 15
+}, () => {}), "M12", 15, "options may be an empty function object");

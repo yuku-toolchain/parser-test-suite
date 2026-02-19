@@ -1,0 +1,3 @@
+TemporalHelpers.checkSubclassingIgnored(Temporal.PlainYearMonth, [2000, 5], "with", [{
+  month: 11
+}], result => TemporalHelpers.assertPlainYearMonth(result, 2000, 11, "M11"));

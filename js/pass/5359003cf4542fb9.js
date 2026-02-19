@@ -1,0 +1,1 @@
+var executed = (/\b(\w+) \2\b/).test("do you listen the the band");

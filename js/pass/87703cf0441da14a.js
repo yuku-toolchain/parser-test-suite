@@ -1,0 +1,1 @@
+var descriptor = Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, 'byteLength');

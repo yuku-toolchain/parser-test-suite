@@ -1,0 +1,7 @@
+const lastMonth = new Temporal.PlainYearMonth(275760, 9);
+TemporalHelpers.assertPlainYearMonth(lastMonth.add({
+  months: -1
+}), 275760, 8, "M08", "-1 month");
+TemporalHelpers.assertPlainYearMonth(lastMonth.add({
+  years: -1
+}), 275759, 9, "M09", "-1 year");

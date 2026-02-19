@@ -1,0 +1,7 @@
+var validOptions = [undefined, {}];
+var invalidOptions = [null, true, "", Symbol(), 0, 0n];
+Iterator.zip([]);
+for (var options of validOptions) {
+  Iterator.zip([], options);
+}
+for (var options of invalidOptions) {}

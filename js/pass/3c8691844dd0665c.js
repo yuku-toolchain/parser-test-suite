@@ -1,0 +1,10 @@
+var regObj = new RegExp();
+var data = "data";
+regObj.set = function (value) {
+  data = value;
+};
+var newObj = Object.create({}, {
+  prop: regObj
+});
+var hasProperty = newObj.hasOwnProperty("prop");
+newObj.prop = "overrideData";

@@ -1,0 +1,12 @@
+var gCL = Intl.getCanonicalLocales;
+function assertArray(l, r) {}
+assertArray(gCL(), []);
+assertArray(gCL(undefined), []);
+assertArray(gCL(false), []);
+assertArray(gCL(true), []);
+assertArray(gCL(Symbol("foo")), []);
+assertArray(gCL(NaN), []);
+assertArray(gCL(1), []);
+Number.prototype[0] = "en-US";
+Number.prototype.length = 1;
+assertArray(gCL(NaN), ["en-US"]);

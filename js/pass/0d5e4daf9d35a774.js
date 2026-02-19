@@ -1,0 +1,6 @@
+var result;
+function* g() {
+  yield* g2();
+}
+function* g2() {}
+result = g().next();

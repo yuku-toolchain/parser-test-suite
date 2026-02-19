@@ -1,0 +1,1 @@
+const microsecond = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "microsecond").get;

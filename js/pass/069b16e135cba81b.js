@@ -1,0 +1,11 @@
+var result;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;
+result = delete 0;

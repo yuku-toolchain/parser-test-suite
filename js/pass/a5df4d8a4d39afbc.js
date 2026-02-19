@@ -1,0 +1,8 @@
+var testResult = false;
+function callbackfn(val, idx, obj) {
+  if (idx === 0) {
+    testResult = val === 12;
+  }
+}
+Array.prototype[0] = 11;
+[12].forEach(callbackfn);

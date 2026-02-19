@@ -1,0 +1,20 @@
+var C = class {
+  static async m() {
+    return 42;
+  }
+  static #x;
+  static #y;
+  static x() {
+    this.#x = 42;
+    return this.#x;
+  }
+  static y() {
+    this.#y = 43;
+    return this.#y;
+  }
+};
+var c = new C();
+C.m().then(function (v) {
+  function assertions() {}
+  return Promise.resolve(assertions());
+}).then($DONE, $DONE);

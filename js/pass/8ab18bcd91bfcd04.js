@@ -1,0 +1,8 @@
+const localesAndResults = [["en-US"], ["en-US-u-nu-arab"], ["en-US-u-nu-deva"], ["en-US-u-nu-hanidec"]];
+const seconds = 1234567890;
+for (const locale of localesAndResults) {
+  const formatted = new Intl.RelativeTimeFormat(locale, {
+    style: "short"
+  }).format(seconds, "seconds");
+  const expected = new Intl.NumberFormat(locale).format(seconds);
+}

@@ -1,0 +1,5 @@
+const matchSymbols = buildString({
+  loneCodePoints: [],
+  ranges: [[0x00DC00, 0x00DFFF], [0x000000, 0x00DBFF], [0x00E000, 0x10FFFF]]
+});
+testPropertyEscapes(/^\p{Any}+$/u, matchSymbols, "\\p{Any}");

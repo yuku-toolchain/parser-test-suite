@@ -1,0 +1,14 @@
+var target1 = Object.preventExtensions({
+  foo: 1
+});
+Object.assign(target1, {
+  foo: 2
+});
+var sym = Symbol();
+var target2 = {
+  [sym]: 1
+};
+Object.preventExtensions(target2);
+Object.assign(target2, {
+  [sym]: 2
+});

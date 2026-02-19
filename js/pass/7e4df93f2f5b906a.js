@@ -1,0 +1,13 @@
+Date.prototype.toString = Object.prototype.toString;
+var x1 = new Date(1899, 11, 31, 23, 59, 59, 999);
+var x2 = new Date(1899, 12, 1, 0, 0, 0, 0);
+var x3 = new Date(1900, 0, 1, 0, 0, 0, 0);
+var x4 = new Date(1969, 11, 31, 23, 59, 59, 999);
+var x5 = new Date(1969, 12, 1, 0, 0, 0, 0);
+var x6 = new Date(1970, 0, 1, 0, 0, 0, 0);
+var x7 = new Date(1999, 11, 31, 23, 59, 59, 999);
+var x8 = new Date(1999, 12, 1, 0, 0, 0, 0);
+var x9 = new Date(2000, 0, 1, 0, 0, 0, 0);
+var x10 = new Date(2099, 11, 31, 23, 59, 59, 999);
+var x11 = new Date(2099, 12, 1, 0, 0, 0, 0);
+var x12 = new Date(2100, 0, 1, 0, 0, 0, 0);

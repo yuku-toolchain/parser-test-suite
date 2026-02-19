@@ -1,0 +1,1 @@
+var desc = Object.getOwnPropertyDescriptor(Math, "SQRT1_2");

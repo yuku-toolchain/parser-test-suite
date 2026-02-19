@@ -1,0 +1,2 @@
+const arg = "2019-10-01";
+const instance = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321);

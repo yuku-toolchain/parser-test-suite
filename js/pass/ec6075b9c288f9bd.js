@@ -1,0 +1,4 @@
+const plainDate = Temporal.PlainDate.from("1976-11-18");
+const calendar = "iso8601";
+const stringResult = plainDate.withCalendar("iso8601");
+TemporalHelpers.assertPlainDate(stringResult, 1976, 11, "M11", 18, "string");

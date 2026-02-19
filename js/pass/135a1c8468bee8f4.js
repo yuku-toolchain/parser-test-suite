@@ -1,0 +1,1 @@
+const instant = Temporal.Now.instant();

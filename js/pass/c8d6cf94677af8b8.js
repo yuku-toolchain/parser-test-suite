@@ -1,0 +1,7 @@
+const validValues = [new Temporal.PlainTime(12), {
+  hour: 12
+}, "12:00"];
+const badOverflows = ["", "CONSTRAIN", "balance", "other string", "constra\u0131n", "reject\0"];
+for (const value of validValues) {
+  for (const overflow of badOverflows) {}
+}

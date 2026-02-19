@@ -1,0 +1,1 @@
+var hasIndices = Object.getOwnPropertyDescriptor(RegExp.prototype, "hasIndices").get;

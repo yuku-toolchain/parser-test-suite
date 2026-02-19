@@ -1,0 +1,1 @@
+var formatter = new Intl.NumberFormat();

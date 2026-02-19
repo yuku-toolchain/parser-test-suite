@@ -1,0 +1,1 @@
+var trimStart = String.prototype.trimStart;

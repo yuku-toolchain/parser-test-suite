@@ -1,0 +1,1 @@
+if (delete this.x !== true) {}

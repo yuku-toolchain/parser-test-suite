@@ -1,0 +1,13 @@
+var proto = {};
+var obj;
+obj = Object.create(proto, true);
+obj = undefined;
+obj = Object.create(proto, false);
+obj = undefined;
+obj = Object.create(proto, 1);
+obj = undefined;
+obj = Object.create(proto, NaN);
+obj = undefined;
+obj = Object.create(proto, '');
+obj = undefined;
+obj = Object.create(proto, Symbol('s'));

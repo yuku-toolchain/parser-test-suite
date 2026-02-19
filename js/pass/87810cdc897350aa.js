@@ -1,0 +1,24 @@
+var badIter = {};
+badIter[Symbol.iterator] = function () {
+  return {
+    next: function () {
+      return {
+        done: false
+      };
+    },
+    return: function () {
+      throw 87;
+    }
+  };
+};
+function* g() {
+  try {
+    yield* badIter;
+  } catch (err) {
+    caught = err;
+  }
+}
+var iter = g();
+var caught;
+iter.next();
+iter.throw();

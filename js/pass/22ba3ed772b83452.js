@@ -1,0 +1,12 @@
+var arr = [11, 12, 13];
+var testResult = true;
+var initVal = 6.99;
+var preResult = initVal;
+function callbackfn(prevVal, curVal, idx, obj) {
+  if (prevVal !== preResult) {
+    testResult = false;
+  }
+  preResult = curVal;
+  return curVal;
+}
+arr.reduceRight(callbackfn, initVal);

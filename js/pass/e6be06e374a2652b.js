@@ -1,0 +1,1 @@
+var strObj = String("    abc");

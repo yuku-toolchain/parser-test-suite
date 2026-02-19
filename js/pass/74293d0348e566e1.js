@@ -1,0 +1,14 @@
+const options = {
+  timeZone: "Pacific/Apia",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  hourCycle: "h23"
+};
+const datetime1 = new Temporal.PlainDateTime(2021, 8, 4, 0, 30, 45, 123, 456, 789);
+const result1 = datetime1.toLocaleString("en", options);
+const datetime2 = new Temporal.PlainDateTime(2021, 8, 4, 23, 30, 45, 123, 456, 789);
+const result2 = datetime2.toLocaleString("en", options);

@@ -1,0 +1,4 @@
+var sym = Symbol("66");
+var obj = {};
+obj[sym] = 1;
+Object.freeze(obj);

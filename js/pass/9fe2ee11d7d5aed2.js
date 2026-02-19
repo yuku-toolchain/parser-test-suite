@@ -1,0 +1,1 @@
+NaNs.forEach(function (v, i) {});

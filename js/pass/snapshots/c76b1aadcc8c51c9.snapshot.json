@@ -1,0 +1,394 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "r",
+              "start": 6,
+              "end": 7
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 14,
+                "end": 25
+              },
+              "arguments": [],
+              "start": 10,
+              "end": 27
+            },
+            "start": 6,
+            "end": 27
+          }
+        ],
+        "start": 0,
+        "end": 28
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "r",
+              "start": 29,
+              "end": 30
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "evaluate",
+              "start": 31,
+              "end": 39
+            },
+            "optional": false,
+            "computed": false,
+            "start": 29,
+            "end": 39
+          },
+          "arguments": [
+            {
+              "type": "TemplateLiteral",
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": "\nfunction fn() { return 42; }\nglobalThis.arrow = x => x * 2;\nglobalThis.pFn = new Proxy(fn, {\n    apply() {\n        pFn.used = 1;\n        return 39;\n    }\n});\nasync function aFn() {\n    return 1;\n}\nfunction * genFn() {\n    return 1;\n}\nfn.x = 'secrets';\narrow.x = 'secrets';\npFn.x = 'secrets';\naFn.x = 'secrets';\ngenFn.x = 'secrets';\n",
+                    "cooked": "\nfunction fn() { return 42; }\nglobalThis.arrow = x => x * 2;\nglobalThis.pFn = new Proxy(fn, {\n    apply() {\n        pFn.used = 1;\n        return 39;\n    }\n});\nasync function aFn() {\n    return 1;\n}\nfunction * genFn() {\n    return 1;\n}\nfn.x = 'secrets';\narrow.x = 'secrets';\npFn.x = 'secrets';\naFn.x = 'secrets';\ngenFn.x = 'secrets';\n"
+                  },
+                  "tail": true,
+                  "start": 41,
+                  "end": 374
+                }
+              ],
+              "expressions": [],
+              "start": 40,
+              "end": 375
+            }
+          ],
+          "optional": false,
+          "start": 29,
+          "end": 376
+        },
+        "start": 29,
+        "end": 377
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrappedOrdinary",
+              "start": 384,
+              "end": 399
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "r",
+                    "start": 402,
+                    "end": 403
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "evaluate",
+                    "start": 404,
+                    "end": 412
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 402,
+                  "end": 412
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "() => fn",
+                    "raw": "'() => fn'",
+                    "start": 413,
+                    "end": 423
+                  }
+                ],
+                "optional": false,
+                "start": 402,
+                "end": 424
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 402,
+              "end": 426
+            },
+            "start": 384,
+            "end": 426
+          }
+        ],
+        "start": 378,
+        "end": 427
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrappedArrow",
+              "start": 434,
+              "end": 446
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "r",
+                    "start": 449,
+                    "end": 450
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "evaluate",
+                    "start": 451,
+                    "end": 459
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 449,
+                  "end": 459
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "() => arrow",
+                    "raw": "'() => arrow'",
+                    "start": 460,
+                    "end": 473
+                  }
+                ],
+                "optional": false,
+                "start": 449,
+                "end": 474
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 449,
+              "end": 476
+            },
+            "start": 434,
+            "end": 476
+          }
+        ],
+        "start": 428,
+        "end": 477
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrappedProxied",
+              "start": 484,
+              "end": 498
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "r",
+                    "start": 501,
+                    "end": 502
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "evaluate",
+                    "start": 503,
+                    "end": 511
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 501,
+                  "end": 511
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "() => pFn",
+                    "raw": "'() => pFn'",
+                    "start": 512,
+                    "end": 523
+                  }
+                ],
+                "optional": false,
+                "start": 501,
+                "end": 524
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 501,
+              "end": 526
+            },
+            "start": 484,
+            "end": 526
+          }
+        ],
+        "start": 478,
+        "end": 527
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrappedAsync",
+              "start": 534,
+              "end": 546
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "r",
+                    "start": 549,
+                    "end": 550
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "evaluate",
+                    "start": 551,
+                    "end": 559
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 549,
+                  "end": 559
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "() => aFn",
+                    "raw": "'() => aFn'",
+                    "start": 560,
+                    "end": 571
+                  }
+                ],
+                "optional": false,
+                "start": 549,
+                "end": 572
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 549,
+              "end": 574
+            },
+            "start": 534,
+            "end": 574
+          }
+        ],
+        "start": 528,
+        "end": 575
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrappedGenerator",
+              "start": 582,
+              "end": 598
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "r",
+                    "start": 601,
+                    "end": 602
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "evaluate",
+                    "start": 603,
+                    "end": 611
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 601,
+                  "end": 611
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "() => genFn",
+                    "raw": "'() => genFn'",
+                    "start": 612,
+                    "end": 625
+                  }
+                ],
+                "optional": false,
+                "start": 601,
+                "end": 626
+              },
+              "arguments": [],
+              "optional": false,
+              "start": 601,
+              "end": 628
+            },
+            "start": 582,
+            "end": 628
+          }
+        ],
+        "start": 576,
+        "end": 629
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 629
+  },
+  "errors": [],
+  "comments": []
+}

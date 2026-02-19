@@ -1,0 +1,1 @@
+var result = (/a/yg)[Symbol.match]('aaba');

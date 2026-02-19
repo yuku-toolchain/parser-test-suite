@@ -1,0 +1,1 @@
+/\p{IsScript=Adlam}/u;

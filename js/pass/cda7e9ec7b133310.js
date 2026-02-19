@@ -1,0 +1,16 @@
+var obj = {};
+var abrupt = function () {
+  throw obj;
+};
+var callCount = 0;
+class C {
+  async *gen() {
+    callCount += 1;
+    yield* abrupt();
+  }
+}
+var gen = C.prototype.gen;
+var iter = gen();
+iter.next().then(() => {}, v => {
+  iter.next().then(({done, value}) => {}).then($DONE, $DONE);
+}).catch($DONE);

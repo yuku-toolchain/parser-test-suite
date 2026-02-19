@@ -1,0 +1,4 @@
+const IteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]()));
+const getIterator = IteratorPrototype[Symbol.iterator];
+const thisValues = [{}, Symbol(), 4, 4n, true, undefined, null];
+for (const thisValue of thisValues) {}

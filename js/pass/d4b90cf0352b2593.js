@@ -1,0 +1,16 @@
+if ("\x00" !== String.fromCharCode("0")) {}
+if ("\x01" !== String.fromCharCode("1")) {}
+if ("\x02" !== String.fromCharCode("2")) {}
+if ("\x03" !== String.fromCharCode("3")) {}
+if ("\x04" !== String.fromCharCode("4")) {}
+if ("\x05" !== String.fromCharCode("5")) {}
+if ("\x06" !== String.fromCharCode("6")) {}
+if ("\x07" !== String.fromCharCode("7")) {}
+if ("\x08" !== String.fromCharCode("8")) {}
+if ("\x09" !== String.fromCharCode("9")) {}
+if ("\x0A" !== String.fromCharCode("10")) {}
+if ("\x0B" !== String.fromCharCode("11")) {}
+if ("\x0C" !== String.fromCharCode("12")) {}
+if ("\x0D" !== String.fromCharCode("13")) {}
+if ("\x0E" !== String.fromCharCode("14")) {}
+if ("\x0F" !== String.fromCharCode("15")) {}

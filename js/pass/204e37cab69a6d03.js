@@ -1,0 +1,1 @@
+var newProperty = undefined = 42;

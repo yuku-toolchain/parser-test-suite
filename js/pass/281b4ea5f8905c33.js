@@ -1,0 +1,4 @@
+const instance = new Temporal.Instant(217175010_123_987_500n);
+const expected = [["hour", 217173600_000_000_000n], ["minute", 217174980_000_000_000n], ["second", 217175010_000_000_000n], ["millisecond", 217175010_123_000_000n], ["microsecond", 217175010_123_987_000n], ["nanosecond", 217175010_123_987_500n]];
+const roundingMode = "trunc";
+expected.forEach(([smallestUnit, expected]) => {});

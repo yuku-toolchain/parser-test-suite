@@ -1,0 +1,111 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "foo",
+            "start": 0,
+            "end": 3
+          },
+          "right": {
+            "type": "Literal",
+            "value": "prior to throw",
+            "raw": "\"prior to throw\"",
+            "start": 6,
+            "end": 22
+          },
+          "start": 0,
+          "end": 22
+        },
+        "start": 0,
+        "end": 23
+      },
+      {
+        "type": "TryStatement",
+        "block": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ThrowStatement",
+              "argument": {
+                "type": "NewExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "Error",
+                  "start": 42,
+                  "end": 47
+                },
+                "arguments": [],
+                "start": 38,
+                "end": 49
+              },
+              "start": 32,
+              "end": 50
+            }
+          ],
+          "start": 28,
+          "end": 52
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "foo",
+            "start": 60,
+            "end": 63
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "VariableDeclaration",
+                "kind": "var",
+                "declarations": [
+                  {
+                    "type": "VariableDeclarator",
+                    "id": {
+                      "type": "Identifier",
+                      "name": "foo",
+                      "start": 73,
+                      "end": 76
+                    },
+                    "init": {
+                      "type": "Literal",
+                      "value": "initializer in catch",
+                      "raw": "\"initializer in catch\"",
+                      "start": 79,
+                      "end": 101
+                    },
+                    "start": 73,
+                    "end": 101
+                  }
+                ],
+                "start": 69,
+                "end": 102
+              }
+            ],
+            "start": 65,
+            "end": 104
+          },
+          "start": 53,
+          "end": 104
+        },
+        "finalizer": null,
+        "start": 24,
+        "end": 104
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 104
+  },
+  "errors": [],
+  "comments": []
+}

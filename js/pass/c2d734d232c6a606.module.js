@@ -1,0 +1,1 @@
+var proto = Object.getPrototypeOf($262.AbstractModuleSource.prototype);

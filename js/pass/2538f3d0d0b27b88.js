@@ -1,0 +1,1 @@
+if (parseFloat.prototype !== undefined) {}

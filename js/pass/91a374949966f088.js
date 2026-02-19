@@ -1,0 +1,1 @@
+TypedArray.prototype["-0"] = "test262";

@@ -1,0 +1,14 @@
+const datetime = new Temporal.ZonedDateTime(957270896_987_650_000n, "UTC");
+const defaultFormatter = new Intl.DateTimeFormat([], {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  timeZoneName: "short",
+  timeZone: "UTC"
+});
+const expected = defaultFormatter.format(datetime.toInstant());
+const actualExplicit = datetime.toLocaleString(undefined);
+const actualImplicit = datetime.toLocaleString();

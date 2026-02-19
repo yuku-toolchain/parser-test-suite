@@ -1,0 +1,19 @@
+var exec = function () {
+  var thisMatch = nextMatch;
+  if (thisMatch === null) {
+    return null;
+  }
+  nextMatch = null;
+  return {
+    get 0() {
+      Object.defineProperty(r, 'lastIndex', {
+        writable: false
+      });
+      return thisMatch;
+    }
+  };
+};
+var r, nextMatch;
+r = /./g;
+r.exec = exec;
+nextMatch = '';

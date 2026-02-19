@@ -1,0 +1,8 @@
+const tests = [[new Temporal.Instant(192_258_181_000_000_000n), "1976-02-04T05:03:01Z"], [new Temporal.Instant(0n), "1970-01-01T00:00:00Z"], [new Temporal.Instant(30_000_000_000n), "1970-01-01T00:00:30Z"], [new Temporal.Instant(30_123_400_000n), "1970-01-01T00:00:30.1234Z"]];
+for (const [instant, expected] of tests) {
+  const explicit = instant.toString({
+    fractionalSecondDigits: undefined
+  });
+  const implicit = instant.toString({});
+  const lambda = instant.toString(() => {});
+}

@@ -1,0 +1,1 @@
+const d = new Temporal.Duration(0, 0, 0, 0, 0, 0, 0, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, 0);

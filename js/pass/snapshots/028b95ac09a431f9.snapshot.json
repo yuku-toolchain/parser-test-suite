@@ -1,0 +1,432 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "barValue",
+              "start": 4,
+              "end": 12
+            },
+            "init": null,
+            "start": 4,
+            "end": 12
+          }
+        ],
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "plainObject",
+              "start": 18,
+              "end": 29
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "kind": "get",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "foo",
+                    "start": 40,
+                    "end": 43
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "async": false,
+                    "params": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [],
+                      "start": 46,
+                      "end": 48
+                    },
+                    "expression": false,
+                    "start": 43,
+                    "end": 48
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "start": 36,
+                  "end": 48
+                },
+                {
+                  "type": "Property",
+                  "kind": "set",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "bar",
+                    "start": 56,
+                    "end": 59
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "value",
+                        "start": 60,
+                        "end": 65
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "barValue",
+                              "start": 73,
+                              "end": 81
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "value",
+                              "start": 84,
+                              "end": 89
+                            },
+                            "start": 73,
+                            "end": 89
+                          },
+                          "start": 73,
+                          "end": 90
+                        }
+                      ],
+                      "start": 67,
+                      "end": 94
+                    },
+                    "expression": false,
+                    "start": 59,
+                    "end": 94
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "start": 52,
+                  "end": 94
+                }
+              ],
+              "start": 32,
+              "end": 96
+            },
+            "start": 18,
+            "end": 96
+          }
+        ],
+        "start": 14,
+        "end": 97
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "plainObjectTarget",
+              "start": 102,
+              "end": 119
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 126,
+                "end": 131
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "plainObject",
+                  "start": 132,
+                  "end": 143
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 145,
+                  "end": 147
+                }
+              ],
+              "start": 122,
+              "end": 148
+            },
+            "start": 102,
+            "end": 148
+          }
+        ],
+        "start": 98,
+        "end": 149
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "plainObjectProxy",
+              "start": 154,
+              "end": 170
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 177,
+                "end": 182
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "plainObjectTarget",
+                  "start": 183,
+                  "end": 200
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 202,
+                  "end": 204
+                }
+              ],
+              "start": 173,
+              "end": 205
+            },
+            "start": 154,
+            "end": 205
+          }
+        ],
+        "start": 150,
+        "end": 206
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "plainObjectProxy",
+              "start": 207,
+              "end": 223
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "bar",
+              "start": 224,
+              "end": 227
+            },
+            "optional": false,
+            "computed": false,
+            "start": 207,
+            "end": 227
+          },
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "raw": "1",
+            "start": 230,
+            "end": 231
+          },
+          "start": 207,
+          "end": 231
+        },
+        "start": 207,
+        "end": 232
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "regExp",
+              "start": 237,
+              "end": 243
+            },
+            "init": {
+              "type": "Literal",
+              "value": "(RegExp) /(?:)/g",
+              "raw": "/(?:)/g",
+              "regex": {
+                "pattern": "(?:)",
+                "flags": "g"
+              },
+              "start": 246,
+              "end": 253
+            },
+            "start": 237,
+            "end": 253
+          }
+        ],
+        "start": 233,
+        "end": 254
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "regExpTarget",
+              "start": 259,
+              "end": 271
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 278,
+                "end": 283
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "regExp",
+                  "start": 284,
+                  "end": 290
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 292,
+                  "end": 294
+                }
+              ],
+              "start": 274,
+              "end": 295
+            },
+            "start": 259,
+            "end": 295
+          }
+        ],
+        "start": 255,
+        "end": 296
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "regExpProxy",
+              "start": 301,
+              "end": 312
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Proxy",
+                "start": 319,
+                "end": 324
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "regExpTarget",
+                  "start": 325,
+                  "end": 337
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 339,
+                  "end": 341
+                }
+              ],
+              "start": 315,
+              "end": 342
+            },
+            "start": 301,
+            "end": 342
+          }
+        ],
+        "start": 297,
+        "end": 343
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "regExpProxy",
+              "start": 344,
+              "end": 355
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "lastIndex",
+              "start": 356,
+              "end": 365
+            },
+            "optional": false,
+            "computed": false,
+            "start": 344,
+            "end": 365
+          },
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "raw": "1",
+            "start": 368,
+            "end": 369
+          },
+          "start": 344,
+          "end": 369
+        },
+        "start": 344,
+        "end": 370
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 370
+  },
+  "errors": [],
+  "comments": []
+}

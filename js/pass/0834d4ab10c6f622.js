@@ -1,0 +1,5 @@
+const datetime = new Temporal.ZonedDateTime(1_000_000_000_123_456_789n, "UTC");
+const validUnits = ["minute", "second", "millisecond", "microsecond", "nanosecond"];
+TemporalHelpers.checkPluralUnitsAccepted(smallestUnit => datetime.toString({
+  smallestUnit
+}), validUnits);

@@ -1,0 +1,1 @@
+const blank = new Temporal.Duration();

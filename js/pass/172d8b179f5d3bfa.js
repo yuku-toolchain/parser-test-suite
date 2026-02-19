@@ -1,0 +1,1 @@
+var reverse = TypedArray.prototype.reverse;

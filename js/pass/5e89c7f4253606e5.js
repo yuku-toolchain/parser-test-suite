@@ -1,0 +1,20 @@
+var values = [{
+  value: 1e6,
+  standard: "many",
+  compact: "many"
+}, {
+  value: 1.5e6,
+  standard: "other",
+  compact: "many"
+}, {
+  value: 1e-6,
+  standard: "one",
+  compact: "one"
+}];
+var prstandard = new Intl.PluralRules("fr", {
+  notation: "standard"
+});
+var prcompact = new Intl.PluralRules("fr", {
+  notation: "compact"
+});
+for (var {value, standard, compact} of values) {}

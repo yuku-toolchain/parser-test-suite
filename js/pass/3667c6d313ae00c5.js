@@ -1,0 +1,1 @@
+var foo = new Function("baz", "baz", "baz", "return 0;");

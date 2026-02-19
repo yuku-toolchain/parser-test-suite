@@ -1,0 +1,12 @@
+class Outer {
+  #x = 42;
+  innerclass() {
+    return class {
+      f() {
+        return this.#x;
+      }
+    };
+  }
+}
+var Inner = new Outer().innerclass();
+var i = new Inner();

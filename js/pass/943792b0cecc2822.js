@@ -1,0 +1,3 @@
+const datetime = new Temporal.ZonedDateTime(1001n, "-00:02");
+const pdt = datetime.toPlainDateTime();
+TemporalHelpers.assertPlainDateTime(pdt, 1969, 12, "M12", 31, 23, 58, 0, 0, 1, 1);

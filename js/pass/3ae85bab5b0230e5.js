@@ -1,0 +1,1 @@
+TemporalHelpers.assertDuration(new Temporal.Duration(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);

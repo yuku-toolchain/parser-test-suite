@@ -1,0 +1,9 @@
+const datetime = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 987, 654, 321);
+const defaultFormatter = new Intl.DateTimeFormat("en");
+const expected = defaultFormatter.format(datetime);
+const actualDate = datetime.toLocaleString("en", {
+  dateStyle: undefined
+});
+const actualTime = datetime.toLocaleString("en", {
+  timeStyle: undefined
+});

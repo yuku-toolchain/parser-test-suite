@@ -1,0 +1,14 @@
+const instance = new Temporal.PlainDate(2000, 5, 2);
+const minimumProperties = {
+  hour: 0
+};
+const allProperties = {
+  hour: 0,
+  minute: 0,
+  second: 0,
+  millisecond: 0,
+  microsecond: 0,
+  nanosecond: 0
+};
+const resultWithout = instance.toPlainDateTime(minimumProperties);
+const resultWith = instance.toPlainDateTime(allProperties);

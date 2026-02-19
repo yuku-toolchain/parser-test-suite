@@ -1,0 +1,1 @@
+const instance = new Temporal.PlainTime(15, 30, 45, 987, 654, 321);

@@ -1,0 +1,16 @@
+var message = "my-message";
+var cause = {
+  message: "my-cause"
+};
+var sequence = [];
+new Error({
+  toString() {
+    sequence.push("toString");
+    return message;
+  }
+}, {
+  get cause() {
+    sequence.push("cause");
+    return cause;
+  }
+});

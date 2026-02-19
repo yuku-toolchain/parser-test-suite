@@ -1,0 +1,3 @@
+var arg = {
+  toString: function () {}
+};

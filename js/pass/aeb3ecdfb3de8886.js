@@ -1,0 +1,11 @@
+if ("xx" < "xy" !== true) {}
+if ("xy" < "xx" !== false) {}
+if ("x" < "y" !== true) {}
+if ("aab" < "aba" !== true) {}
+if ("\u0061\u0061\u0061\u0062" < "\u0061\u0061\u0061\u0061" !== false) {}
+if ("a\u0000a" < "a\u0000b" !== true) {}
+if ("aB" < "aa" !== true) {}
+if ("\uD7FF" < "\u{10000}" !== true) {}
+if ("\uD800" < "\uDC00" !== true) {}
+if ("\u{10000}" < "\uFFFF" !== true) {}
+if ("\u{10000}" < "\u{12345}" !== true) {}

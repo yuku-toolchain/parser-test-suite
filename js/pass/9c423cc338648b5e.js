@@ -1,0 +1,1 @@
+var slice = TypedArray.prototype.slice;

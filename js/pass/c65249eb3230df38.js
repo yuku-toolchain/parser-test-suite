@@ -1,0 +1,2 @@
+const invalidOptions = [null, 1, "", "standard", "Grapheme", "GRAPHEME", "grapheme\0", "Word", "WORD", "word\0", "Sentence", "SENTENCE", "sentence\0", "line", "Line", "LINE", "line\0"];
+for (const granularity of invalidOptions) {}

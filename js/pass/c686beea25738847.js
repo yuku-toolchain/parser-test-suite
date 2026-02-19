@@ -1,0 +1,1 @@
+Array.prototype[2] = 42;

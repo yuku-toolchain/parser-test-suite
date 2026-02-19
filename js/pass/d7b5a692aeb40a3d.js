@@ -1,0 +1,5 @@
+const instance = new Temporal.Instant(0n);
+const primitiveTests = [[undefined, "undefined"], [null, "null"], [true, "boolean"], ["", "empty string"], [1, "number that doesn't convert to a valid ISO string"], [19761118, "number that would convert to a valid ISO string in other contexts"], [1n, "bigint"], [{}, "plain object"], [Temporal.Instant, "Temporal.Instant, object"]];
+for (const [arg, description] of primitiveTests) {}
+const typeErrorTests = [[Symbol(), "symbol"], [Temporal.Instant.prototype, "Temporal.Instant.prototype, object"]];
+for (const [arg, description] of typeErrorTests) {}

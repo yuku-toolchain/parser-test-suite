@@ -1,0 +1,1 @@
+const era = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "era").get;

@@ -1,0 +1,1 @@
+var ab = new ArrayBuffer(0);

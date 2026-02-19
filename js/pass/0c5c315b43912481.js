@@ -1,0 +1,5 @@
+async function* generator() {}
+const AsyncIteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf(generator.prototype));
+const getAsyncIterator = AsyncIteratorPrototype[Symbol.asyncIterator];
+const thisValues = [{}, Symbol(), 4, 4n, true, undefined, null];
+for (const thisValue of thisValues) {}

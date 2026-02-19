@@ -1,0 +1,1 @@
+assertNativeFunction((function () {}).bind({}));

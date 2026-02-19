@@ -1,0 +1,1 @@
+Object.seal(new Uint8ClampedArray());

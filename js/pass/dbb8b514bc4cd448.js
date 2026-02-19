@@ -1,0 +1,17 @@
+const value = 1;
+const actual = [];
+const expected = ['Await: 1', 'Promise: 1', 'Promise: 2'];
+function pushAwaitSync(value) {
+  actual.push('Await: ' + value);
+}
+async function trigger() {
+  await pushAwaitSync(value);
+}
+function checkAssertions() {}
+trigger().then(checkAssertions).then($DONE, $DONE);
+new Promise(function (resolve) {
+  actual.push('Promise: 1');
+  resolve();
+}).then(function () {
+  actual.push('Promise: 2');
+});

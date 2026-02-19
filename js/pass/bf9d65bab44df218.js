@@ -1,0 +1,1 @@
+var regExpObj = new RegExp('abc', 'gim');

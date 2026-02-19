@@ -1,0 +1,7 @@
+var obj = {};
+Boolean.prototype.writable = true;
+var boolObj = new Boolean(true);
+Object.defineProperty(obj, "property", boolObj);
+var beforeWrite = obj.hasOwnProperty("property");
+obj.property = "isWritable";
+var afterWrite = obj.property === "isWritable";

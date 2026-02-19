@@ -1,0 +1,1 @@
+const epochNanoseconds = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "epochNanoseconds").get;

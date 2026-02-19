@@ -1,0 +1,1 @@
+eval("var public = 1; 'use strict'; var anotherVariableNotReserveWord = 2;");

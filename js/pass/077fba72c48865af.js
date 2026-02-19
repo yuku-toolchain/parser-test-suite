@@ -1,0 +1,12 @@
+const timeZone = "UTC";
+const instance = new Temporal.ZonedDateTime(0n, timeZone);
+const arg = {
+  year: 1970,
+  monthCode: "M01",
+  day: 1,
+  timeZone,
+  calendar: "IsO8601"
+};
+const result = instance.since(arg);
+TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Calendar is case-insensitive");
+arg.calendar = "\u0130SO8601";

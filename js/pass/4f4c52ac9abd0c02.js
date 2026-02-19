@@ -1,0 +1,10 @@
+var date = new Date(NaN);
+var expected, result;
+result = date.setFullYear(2016);
+expected = new Date(2016, 0).getTime();
+date = new Date(NaN);
+result = date.setFullYear(2016, 6);
+expected = new Date(2016, 6).getTime();
+date = new Date(NaN);
+result = date.setFullYear(2016, 6, 7);
+expected = new Date(2016, 6, 7).getTime();
