@@ -1,0 +1,9 @@
+var map = new Map();
+var item = 'bar';
+item = 1;
+item = NaN;
+item = {};
+item = [];
+item = Symbol('item');
+item = null;
+item = undefined;

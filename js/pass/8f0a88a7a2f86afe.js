@@ -1,0 +1,1 @@
+const [gen = function* () {}, xGen = function* x() {}] = [];

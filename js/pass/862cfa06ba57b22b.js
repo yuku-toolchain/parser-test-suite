@@ -1,0 +1,1 @@
+var result = (/c(d)(e)/)[Symbol.split]('abcdefg', 2);

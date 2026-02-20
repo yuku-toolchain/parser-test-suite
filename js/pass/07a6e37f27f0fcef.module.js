@@ -1,0 +1,5 @@
+while (await ({
+  function() {}
+})) {
+  break;
+}

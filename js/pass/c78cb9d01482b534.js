@@ -1,0 +1,1 @@
+var copyWithin = TypedArray.prototype.copyWithin;

@@ -1,0 +1,15 @@
+var other = $262.createRealm().global;
+var newTarget = new other.Function();
+var locale;
+newTarget.prototype = undefined;
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);
+newTarget.prototype = null;
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);
+newTarget.prototype = true;
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);
+newTarget.prototype = 'str';
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);
+newTarget.prototype = Symbol();
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);
+newTarget.prototype = 0;
+locale = Reflect.construct(Intl.Locale, ['de'], newTarget);

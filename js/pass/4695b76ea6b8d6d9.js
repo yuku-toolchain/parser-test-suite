@@ -1,0 +1,8 @@
+const datetime = new Temporal.PlainDateTime(2000, 5, 2, 12, 34, 56, 123, 456, 789);
+function test(instance, expectations, description) {
+  for (const [smallestUnit, expectedResult] of expectations) {}
+}
+test(datetime, [["minute", "2000-05-02T12:34"], ["second", "2000-05-02T12:34:56"], ["millisecond", "2000-05-02T12:34:56.123"], ["microsecond", "2000-05-02T12:34:56.123456"], ["nanosecond", "2000-05-02T12:34:56.123456789"]], "subseconds toString");
+test(new Temporal.PlainDateTime(2000, 5, 2, 12, 34), [["minute", "2000-05-02T12:34"], ["second", "2000-05-02T12:34:00"], ["millisecond", "2000-05-02T12:34:00.000"], ["microsecond", "2000-05-02T12:34:00.000000"], ["nanosecond", "2000-05-02T12:34:00.000000000"]], "whole minutes toString");
+const notValid = ["era", "year", "month", "week", "day", "hour"];
+notValid.forEach(smallestUnit => {});

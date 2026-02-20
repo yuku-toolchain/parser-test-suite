@@ -1,0 +1,10 @@
+var obj = {};
+var func = function (a, b, c) {
+  return arguments;
+};
+Object.defineProperties(obj, {
+  property: {
+    writable: func(1, true, "a")
+  }
+});
+obj.property = "isWritable";

@@ -1,0 +1,1 @@
+const eraYear = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "eraYear").get;

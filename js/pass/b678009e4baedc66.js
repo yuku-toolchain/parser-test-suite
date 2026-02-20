@@ -1,0 +1,1 @@
+/\P{InAdlam}/u;

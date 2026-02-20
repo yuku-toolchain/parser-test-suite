@@ -1,0 +1,1 @@
+var ObjProto = Object.prototype;

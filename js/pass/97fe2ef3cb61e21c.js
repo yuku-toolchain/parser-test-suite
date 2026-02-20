@@ -1,0 +1,12 @@
+const calendar = "buddhist";
+const options = {
+  overflow: "reject"
+};
+for (var year = 2513; year < 2593; year++) {
+  const date = Temporal.PlainDate.from({
+    year,
+    month: 1,
+    calendar,
+    day: 1
+  });
+}

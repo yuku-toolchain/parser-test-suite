@@ -1,0 +1,1 @@
+if (("lego").concat() !== "lego") {}

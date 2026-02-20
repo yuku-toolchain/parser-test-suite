@@ -1,0 +1,23 @@
+function callbackfn1(val, idx, obj) {
+  return val > 10;
+}
+function callbackfn2(val, idx, obj) {
+  return val > 11;
+}
+var proto = {};
+Object.defineProperty(proto, "length", {
+  get: function () {
+    return 3;
+  },
+  configurable: true
+});
+var Con = function () {};
+Con.prototype = proto;
+var child = new Con();
+child[0] = 12;
+child[1] = 11;
+child[2] = 9;
+Object.defineProperty(child, "length", {
+  value: 2,
+  configurable: true
+});

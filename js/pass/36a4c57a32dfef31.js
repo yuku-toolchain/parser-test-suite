@@ -1,0 +1,9 @@
+this._15_4_4_19_5_1 = true;
+(function () {
+  var _15_4_4_19_5_1 = false;
+  function callbackfn(val, idx, obj) {
+    return this._15_4_4_19_5_1;
+  }
+  var srcArr = [1];
+  var resArr = srcArr.map(callbackfn);
+})();

@@ -1,0 +1,10 @@
+var props = new String();
+var result = false;
+Object.defineProperty(props, "prop", {
+  get: function () {
+    result = this instanceof String;
+    return {};
+  },
+  enumerable: true
+});
+Object.create({}, props);

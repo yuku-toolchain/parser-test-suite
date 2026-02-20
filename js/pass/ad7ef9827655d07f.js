@@ -1,0 +1,1 @@
+var __executed = (/^m/).test("pairs\nmakes\tdouble");

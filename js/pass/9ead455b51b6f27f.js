@@ -1,0 +1,7 @@
+var probe;
+class C {
+  static #test262 = 'private';
+  static {
+    probe = C.#test262;
+  }
+}

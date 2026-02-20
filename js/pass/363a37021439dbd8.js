@@ -1,0 +1,14 @@
+var fn = function () {};
+var finalizationRegistry = new FinalizationRegistry(fn);
+var target1 = {};
+var target2 = {};
+var target3 = {};
+var token1 = {};
+var token2 = {};
+finalizationRegistry.register(target1, undefined, token1);
+finalizationRegistry.register(target1, undefined, token1);
+finalizationRegistry.register(target2, undefined, token2);
+finalizationRegistry.register(target3, undefined, token2);
+finalizationRegistry.register(target1, token1);
+finalizationRegistry.register(target2, token2);
+finalizationRegistry.register(target3);

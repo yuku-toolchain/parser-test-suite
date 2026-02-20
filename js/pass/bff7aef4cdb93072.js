@@ -1,0 +1,1 @@
+let ss = new Intl.Segmenter().segment("123")[Symbol.iterator].name;

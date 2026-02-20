@@ -1,0 +1,1 @@
+let {a, b} = ("bab").match(/(?<b>b)\k<a>(?<a>a)\k<b>/).groups;

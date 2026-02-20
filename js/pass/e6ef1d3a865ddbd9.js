@@ -1,0 +1,13 @@
+class ThrowingIterator extends Iterator {
+  next() {
+    return {
+      get done() {},
+      value: 1
+    };
+  }
+  return() {
+    throw new Error();
+  }
+}
+let iterator = new ThrowingIterator().drop(0);
+iterator = new ThrowingIterator().drop(1);

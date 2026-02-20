@@ -1,0 +1,1 @@
+if (((NUMBER = Number, "MAX_VALUE") in NUMBER) !== true) {}

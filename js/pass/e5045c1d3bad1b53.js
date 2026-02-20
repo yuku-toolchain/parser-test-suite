@@ -1,0 +1,1 @@
+var __executed = (/Java(?!Script)([A-Z]\w*)/).test("using of Java language");

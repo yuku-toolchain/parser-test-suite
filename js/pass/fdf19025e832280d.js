@@ -1,0 +1,2 @@
+const invalidStrings = ["1970-01-01T00:00Z[UTC][UTC]", "1970-01-01T00:00Z[!UTC][UTC]", "1970-01-01T00:00Z[UTC][!UTC]", "1970-01-01T00:00Z[UTC][u-ca=iso8601][UTC]", "1970-01-01T00:00Z[UTC][foo=bar][UTC]"];
+invalidStrings.forEach(arg => {});

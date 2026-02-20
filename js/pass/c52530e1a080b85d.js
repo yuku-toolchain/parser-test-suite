@@ -1,0 +1,13 @@
+var match;
+match = (/[a-e](?!Z)*/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z)+/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z)?/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2}/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2,}/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2,3}/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z)*?/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z)+?/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z)??/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2}?/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2,}?/).exec('aZZZZ bZZZ cZZ dZ e');
+match = (/[a-e](?!Z){2,3}?/).exec('aZZZZ bZZZ cZZ dZ e');

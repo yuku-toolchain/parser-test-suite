@@ -1,0 +1,10 @@
+var propertyFound = false;
+var arr = [0, 1, 2];
+arr.ownProperty = "ownArray";
+var result = Object.getOwnPropertyNames(arr);
+for (var p in result) {
+  if (result[p] === "ownProperty") {
+    propertyFound = true;
+    break;
+  }
+}

@@ -1,0 +1,1 @@
+const instant = new Temporal.Instant(1_000_000_000_000_000_005n);

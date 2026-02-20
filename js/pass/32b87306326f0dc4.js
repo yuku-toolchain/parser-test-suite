@@ -1,0 +1,28 @@
+var WAIT_INDEX = 0;
+var RUNNING = 1;
+var NUMAGENT = 2;
+for (var i = 0; i < NUMAGENT; i++) {
+  $262.agent.start(`
+    $262.agent.receiveBroadcast(function(sab) {
+      const i32a = new Int32Array(sab);
+Atomics.add(i32a, ${RUNNING}, 1);
+var status = Atomics.wait(i32a, ${WAIT_INDEX}, 0);
+$262.agent.report(status);
+$262.agent.leaving();
+    });
+  `);
+}
+const i32a = new Int32Array(
+  new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT * 4)
+);
+$262.agent.safeBroadcast(i32a);
+$262.agent.waitUntil(i32a, RUNNING, NUMAGENT);
+$262.agent.tryYield();
+var woken = 0;
+while ((woken = Atomics.notify(i32a, undefined, 1)) === 0) ;
+assert.sameValue(woken, 1, 'Atomics.notify(i32a, undefined, 1) returns 1');
+assert.sameValue($262.agent.getReport(), 'ok', '$262.agent.getReport() returns "ok"');
+var woken = 0;
+while ((woken = Atomics.notify(i32a )) === 0) ;
+assert.sameValue(woken, 1, 'Atomics.notify(i32a ) returns 1');
+assert.sameValue($262.agent.getReport(), 'ok', '$262.agent.getReport() returns "ok"');

@@ -1,0 +1,1 @@
+Promise.any('').then(() => $DONE('The promise should be rejected, but was resolved'), error => {}).then($DONE, $DONE);

@@ -1,0 +1,1 @@
+if (String.prototype.slice.prototype !== undefined) {}

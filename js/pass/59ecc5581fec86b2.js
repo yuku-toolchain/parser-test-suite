@@ -1,0 +1,1 @@
+const offset = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "offset").get;

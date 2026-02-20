@@ -1,0 +1,15 @@
+var other = $262.createRealm().global;
+var newTarget = new other.Function();
+var arr;
+newTarget.prototype = undefined;
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);
+newTarget.prototype = null;
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);
+newTarget.prototype = false;
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);
+newTarget.prototype = '';
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);
+newTarget.prototype = Symbol();
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);
+newTarget.prototype = -1;
+arr = Reflect.construct(Array, ['a', 'b'], newTarget);

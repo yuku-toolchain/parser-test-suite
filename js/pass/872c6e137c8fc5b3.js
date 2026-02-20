@@ -1,0 +1,7 @@
+const defaultFormatter = new Intl.DateTimeFormat("en");
+const {calendar} = defaultFormatter.resolvedOptions();
+const yearmonth = new Temporal.PlainYearMonth(2000, 5, calendar);
+const expected = defaultFormatter.format(yearmonth);
+const actual = yearmonth.toLocaleString("en", {
+  dateStyle: undefined
+});

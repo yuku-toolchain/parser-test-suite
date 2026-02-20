@@ -1,0 +1,7 @@
+var promise;
+for (promise = import('./2nd-param_FIXTURE.js', 'test262' in {} || undefined); false; ) ;
+promise
+  .then(function(module) {
+    assert.sameValue(module.default, 262);
+  })
+  .then($DONE, $DONE);

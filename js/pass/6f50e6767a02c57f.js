@@ -1,0 +1,1 @@
+/\P{Line_Breakz=Alphabetic}/u;

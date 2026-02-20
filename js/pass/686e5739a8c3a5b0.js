@@ -1,0 +1,1 @@
+var constructed = Symbol('Symbol.iterator');

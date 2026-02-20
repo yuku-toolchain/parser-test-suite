@@ -1,0 +1,1 @@
+const output = new Intl.Locale('en-US').getTimeZones();

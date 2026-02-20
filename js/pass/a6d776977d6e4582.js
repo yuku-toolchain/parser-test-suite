@@ -1,0 +1,1 @@
+var RegExpStringIteratorProto = Object.getPrototypeOf((/./)[Symbol.matchAll](''));

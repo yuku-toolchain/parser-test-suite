@@ -1,0 +1,3 @@
+var obj = {
+  toString: function () {}
+};

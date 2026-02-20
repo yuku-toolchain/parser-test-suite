@@ -1,0 +1,9 @@
+var separator = $262.IsHTMLDDA;
+var splitterGets = 0;
+Object.defineProperty(separator, Symbol.split, {
+  get: function () {
+    splitterGets += 1;
+    return separator;
+  },
+  configurable: true
+});

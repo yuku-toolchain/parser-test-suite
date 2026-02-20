@@ -1,0 +1,1 @@
+var C = $262.createRealm().global.eval('new Proxy(function() {}, { construct: function(_, args) { return args; } })');

@@ -1,0 +1,9 @@
+var other = $262.createRealm().global;
+other.Number.prototype.test262 = 'number prototype';
+other.value = 1;
+other.String.prototype.test262 = 'string prototype';
+other.value = '';
+other.Boolean.prototype.test262 = 'Boolean prototype';
+other.value = true;
+other.Symbol.prototype.test262 = 'Symbol prototype';
+other.value = Symbol();

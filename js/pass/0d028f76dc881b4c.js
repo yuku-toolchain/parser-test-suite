@@ -1,0 +1,1 @@
+var formatFn = Object.getOwnPropertyDescriptor(Intl.NumberFormat.prototype, "format").get;

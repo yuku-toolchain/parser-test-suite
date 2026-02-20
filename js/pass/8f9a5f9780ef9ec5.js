@@ -1,0 +1,1 @@
+if (String("lego").charCodeAt(undefined) !== 0x6C) {}

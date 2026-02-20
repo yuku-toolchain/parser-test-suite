@@ -1,0 +1,3 @@
+const instance = new Temporal.Duration(0, 0, 0, 4, 5, 6, 7, 987, 654, 321);
+const invalidUnits = ["era", "eras"];
+invalidUnits.forEach(unit => {});

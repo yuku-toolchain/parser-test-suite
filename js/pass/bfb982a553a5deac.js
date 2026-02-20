@@ -1,0 +1,1 @@
+if ((OBJECT = Object, {}) instanceof OBJECT !== true) {}

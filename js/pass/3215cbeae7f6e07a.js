@@ -1,0 +1,6 @@
+foo.prototype = new Array(1, 2, 3);
+function foo() {}
+var f = new foo();
+f.length = false;
+function cb() {}
+var i = f.every(cb);

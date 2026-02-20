@@ -1,0 +1,3 @@
+var poisonedCtor = {
+  get constructor() {}
+};

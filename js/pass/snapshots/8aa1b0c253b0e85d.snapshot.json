@@ -1,0 +1,76 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "$262",
+                "start": 0,
+                "end": 4
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "agent",
+                "start": 5,
+                "end": 10
+              },
+              "optional": false,
+              "computed": false,
+              "start": 0,
+              "end": 10
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "start",
+              "start": 11,
+              "end": 16
+            },
+            "optional": false,
+            "computed": false,
+            "start": 0,
+            "end": 16
+          },
+          "arguments": [
+            {
+              "type": "TemplateLiteral",
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "value": {
+                    "raw": "\n  (async () => {\n    var sab = new SharedArrayBuffer(1024);\n    var good_indices = [ (view) => 0/-1,\n                         (view) => '-0',\n                         (view) => view.length - 1,\n                         (view) => ({ valueOf: () => 0 }),\n                         (view) => ({ toString: () => '0', valueOf: false })\n                       ];\nvar view = new Int32Array(sab, 32, 20);\nview[0] = 0;\n    $262.agent.report(\"A \" + (await Atomics.waitAsync(view, 0, 0, 0).value))\n    $262.agent.report(\"B \" + (await Atomics.waitAsync(view, 0, 37, 0).value));\nconst results = [];\nfor ( let IdxGen of good_indices ) {\n        let Idx = IdxGen(view);\n        view.fill(0);\nAtomics.store(view, Idx, 37);\n        results.push(await Atomics.waitAsync(view, Idx, 0).value);\n    }\n    $262.agent.report(\"C \" + results.join(\",\"));\n    $262.agent.leaving();\n  })();\n",
+                    "cooked": "\n  (async () => {\n    var sab = new SharedArrayBuffer(1024);\n    var good_indices = [ (view) => 0/-1,\n                         (view) => '-0',\n                         (view) => view.length - 1,\n                         (view) => ({ valueOf: () => 0 }),\n                         (view) => ({ toString: () => '0', valueOf: false })\n                       ];\nvar view = new Int32Array(sab, 32, 20);\nview[0] = 0;\n    $262.agent.report(\"A \" + (await Atomics.waitAsync(view, 0, 0, 0).value))\n    $262.agent.report(\"B \" + (await Atomics.waitAsync(view, 0, 37, 0).value));\nconst results = [];\nfor ( let IdxGen of good_indices ) {\n        let Idx = IdxGen(view);\n        view.fill(0);\nAtomics.store(view, Idx, 37);\n        results.push(await Atomics.waitAsync(view, Idx, 0).value);\n    }\n    $262.agent.report(\"C \" + results.join(\",\"));\n    $262.agent.leaving();\n  })();\n"
+                  },
+                  "tail": true,
+                  "start": 18,
+                  "end": 881
+                }
+              ],
+              "expressions": [],
+              "start": 17,
+              "end": 882
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 883
+        },
+        "start": 0,
+        "end": 884
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 884
+  },
+  "errors": [],
+  "comments": []
+}

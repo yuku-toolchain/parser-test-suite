@@ -1,0 +1,2 @@
+delete Array.prototype[Symbol.iterator];
+var f = async function* ([x, y, z] = [1, 2, 3]) {};

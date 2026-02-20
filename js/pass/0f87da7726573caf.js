@@ -1,0 +1,1 @@
+const nanosecond = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "nanosecond").get;

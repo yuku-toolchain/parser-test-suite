@@ -1,0 +1,4 @@
+var arr = (/\f/).exec("\u000C");
+if (arr === null || arr[0] !== "\u000C") {}
+var arr = (/\f\f/).exec("a\u000C\u000Cb");
+if (arr === null || arr[0] !== "\u000C\u000C") {}

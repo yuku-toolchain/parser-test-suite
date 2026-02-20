@@ -1,0 +1,7 @@
+const earlier = new Temporal.Instant(1_000_000_000_000_000_000n);
+const later = new Temporal.Instant(1_000_000_000_000_000_005n);
+const result = earlier.until(later, {
+  roundingIncrement: 2.5,
+  roundingMode: "trunc"
+});
+TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, "roundingIncrement 2.5 truncates to 2");

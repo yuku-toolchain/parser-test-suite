@@ -1,0 +1,15 @@
+var thrown = new Test262Error();
+var caught;
+function thrower() {
+  throw thrown;
+}
+var obj = {
+  method() {
+    try {
+      super[thrower()];
+    } catch (err) {
+      caught = err;
+    }
+  }
+};
+obj.method();

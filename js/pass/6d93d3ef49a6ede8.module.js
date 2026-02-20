@@ -1,0 +1,31 @@
+try {
+  await ({
+    function() {}
+  });
+} catch (e) {
+  await ({
+    function() {}
+  });
+}
+try {
+  await ({
+    function() {}
+  });
+} finally {
+  await ({
+    function() {}
+  });
+}
+try {
+  await ({
+    function() {}
+  });
+} catch (e) {
+  await ({
+    function() {}
+  });
+} finally {
+  await ({
+    function() {}
+  });
+}

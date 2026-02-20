@@ -1,0 +1,1 @@
+class MyError extends Error {}

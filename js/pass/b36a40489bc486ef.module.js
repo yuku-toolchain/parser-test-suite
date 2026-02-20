@@ -1,0 +1,13 @@
+var binding;
+for (binding of [await ``]) {
+  await ``;
+  break;
+}
+for (var binding of [await ``]) {
+  await ``;
+  break;
+}
+for (let binding of [await ``]) {
+  await ``;
+  break;
+}

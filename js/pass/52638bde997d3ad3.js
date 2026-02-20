@@ -1,0 +1,1 @@
+if (("lego").charAt() !== "l") {}

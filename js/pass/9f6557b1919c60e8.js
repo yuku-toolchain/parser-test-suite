@@ -1,0 +1,4 @@
+TemporalHelpers.checkPlainDateTimeConversionFastPath(plainDateTime => {
+  const result = Temporal.PlainTime.from(plainDateTime);
+  TemporalHelpers.assertPlainTime(result, 12, 34, 56, 987, 654, 321);
+});

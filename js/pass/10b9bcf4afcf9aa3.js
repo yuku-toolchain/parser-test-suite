@@ -1,0 +1,4 @@
+var using = [], x = 0;
+{
+  using[x] = null;
+}

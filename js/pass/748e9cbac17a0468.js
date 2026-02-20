@@ -1,0 +1,8 @@
+class C {
+  constructor() {
+    class B {
+      #m() {}
+    }
+  }
+  #m() {}
+}

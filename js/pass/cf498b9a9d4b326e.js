@@ -1,0 +1,1 @@
+var mapperFn = function () {};

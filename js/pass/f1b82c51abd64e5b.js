@@ -1,0 +1,13 @@
+var probeBefore = function () {
+  return x;
+};
+var probeTry, probeParam;
+var x = 'outside';
+try {
+  probeTry = function () {
+    return x;
+  };
+  throw ['inside'];
+} catch ([x, _ = probeParam = function () {
+  return x;
+}]) {}

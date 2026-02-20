@@ -1,0 +1,9 @@
+testWithBigIntTypedArrayConstructors(function (TA) {
+  var obj = {
+    "0": 0n,
+    "1": 1n,
+    "2": 2n,
+    length: 3
+  };
+  var sample = new TA(obj);
+});

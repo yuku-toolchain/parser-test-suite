@@ -1,0 +1,23 @@
+var iterStepThrows = {};
+var poisonedDone = {};
+var returnCount = 0;
+var error = new Test262Error();
+Object.defineProperty(poisonedDone, 'done', {
+  get: function () {
+    throw error;
+  }
+});
+Object.defineProperty(poisonedDone, 'value', {
+  get: function () {}
+});
+iterStepThrows[Symbol.iterator] = function () {
+  return {
+    next: function () {
+      return poisonedDone;
+    },
+    return: function () {
+      returnCount += 1;
+    }
+  };
+};
+Promise.race(iterStepThrows);

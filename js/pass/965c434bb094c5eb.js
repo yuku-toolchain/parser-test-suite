@@ -1,0 +1,1 @@
+/\p{FC_NFKC_Closure}/u;

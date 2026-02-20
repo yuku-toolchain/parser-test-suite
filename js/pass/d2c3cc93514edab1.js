@@ -1,0 +1,9 @@
+var testResult = false;
+var initialValue = 0;
+function callbackfn(prevVal, curVal, idx, obj) {
+  if (idx === 1) {
+    testResult = curVal === 1;
+  }
+}
+Array.prototype[1] = "3";
+[0, 1, 2].reduce(callbackfn, initialValue);

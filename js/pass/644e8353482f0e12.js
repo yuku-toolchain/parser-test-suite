@@ -1,0 +1,1 @@
+Number.prototype.toString = Object.prototype.toString;

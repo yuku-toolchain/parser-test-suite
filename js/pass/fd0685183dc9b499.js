@@ -1,0 +1,11 @@
+var get = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
+var r = {};
+r.multiline = undefined;
+r.multiline = null;
+r.multiline = NaN;
+r.multiline = "";
+r.multiline = "string";
+r.multiline = 86;
+r.multiline = Symbol();
+r.multiline = [];
+r.multiline = {};

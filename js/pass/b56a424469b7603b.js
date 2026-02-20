@@ -1,0 +1,7 @@
+var OProxy = $262.createRealm().global.Proxy;
+var target = Object.create(null);
+var p = new OProxy(target, {
+  defineProperty: function () {
+    return true;
+  }
+});

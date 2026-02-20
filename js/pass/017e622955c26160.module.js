@@ -1,0 +1,17 @@
+try {
+  await ``;
+} catch (e) {
+  await ``;
+}
+try {
+  await ``;
+} finally {
+  await ``;
+}
+try {
+  await ``;
+} catch (e) {
+  await ``;
+} finally {
+  await ``;
+}

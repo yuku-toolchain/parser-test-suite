@@ -1,0 +1,2 @@
+var fn;
+fn = function () {};

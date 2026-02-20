@@ -1,0 +1,2 @@
+var s = '\u00C5\u2ADC\u0958\u2126\u0344';
+var nfc = '\xC5\u2ADD\u0338\u0915\u093C\u03A9\u0308\u0301';

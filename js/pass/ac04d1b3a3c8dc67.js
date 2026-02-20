@@ -1,0 +1,11 @@
+const obj = {
+    toString() {
+        return './empty_FIXTURE.js';
+    }
+};
+const f = async () => {
+  await import.source(obj);
+}
+f().catch(error => {
+assert.sameValue(error.name, 'SyntaxError');
+}).then($DONE, $DONE);

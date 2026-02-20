@@ -1,0 +1,9 @@
+var executed = false;
+class A {}
+class C extends A {
+  #x = eval('executed = true; () => super["x"];');
+  x() {
+    this.#x();
+  }
+}
+new C().x();

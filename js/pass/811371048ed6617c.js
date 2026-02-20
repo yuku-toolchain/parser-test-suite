@@ -1,0 +1,15 @@
+function callbackfn(val, idx, obj) {
+  return val === 11 && idx === 1;
+}
+var proto = {};
+Object.defineProperty(proto, "1", {
+  get: function () {
+    return 11;
+  },
+  configurable: true
+});
+var Con = function () {};
+Con.prototype = proto;
+var child = new Con();
+child.length = 20;
+var newArr = Array.prototype.filter.call(child, callbackfn);

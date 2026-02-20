@@ -1,0 +1,14 @@
+var log = [];
+var newLength = {
+  toString: function () {
+    log.push('toString');
+    return {};
+  },
+  valueOf: function () {
+    log.push('valueOf');
+    return {};
+  }
+};
+var ab = new SharedArrayBuffer(0, {
+  maxByteLength: 4
+});

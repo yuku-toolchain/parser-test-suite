@@ -1,0 +1,1 @@
+const valueOf = Temporal.Instant.prototype.valueOf;

@@ -1,0 +1,1 @@
+var __executed = (/[]/).exec("a[b\n[]\tc]d");

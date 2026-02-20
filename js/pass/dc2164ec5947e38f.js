@@ -1,0 +1,1 @@
+var every = TypedArray.prototype.every;

@@ -1,0 +1,3 @@
+const blank = new Temporal.Duration();
+const result = Temporal.Duration.from(blank);
+TemporalHelpers.assertDuration(result, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "result is also blank");

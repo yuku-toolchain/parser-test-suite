@@ -1,0 +1,8 @@
+const instance = new Temporal.PlainMonthDay(11, 18);
+const arg = {
+  monthCode: "M11",
+  day: 18,
+  calendar: "IsO8601"
+};
+const result = instance.equals(arg);
+arg.calendar = "\u0130SO8601";

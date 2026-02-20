@@ -1,0 +1,1 @@
+var proto = Object.getPrototypeOf(BigInt.prototype);

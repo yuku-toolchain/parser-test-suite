@@ -1,0 +1,1 @@
+const sign = Object.getOwnPropertyDescriptor(Temporal.Duration.prototype, "sign").get;

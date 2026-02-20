@@ -1,0 +1,1 @@
+if (("$$abcdabcd").indexOf("ab", eval("\"-99\"")) !== 2) {}

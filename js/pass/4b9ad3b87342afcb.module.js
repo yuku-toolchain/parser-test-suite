@@ -1,0 +1,1 @@
+const constBinding = 89;

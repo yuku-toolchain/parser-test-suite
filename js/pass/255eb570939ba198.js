@@ -1,0 +1,1 @@
+var some = TypedArray.prototype.some;

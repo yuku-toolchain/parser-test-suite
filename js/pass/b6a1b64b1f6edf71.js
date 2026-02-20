@@ -1,0 +1,7 @@
+var obj = {};
+Object.defineProperties(obj, {
+  property: {
+    writable: new SyntaxError()
+  }
+});
+obj.property = "isWritable";

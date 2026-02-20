@@ -1,0 +1,1 @@
+var __executed = (/^..^e/).test("ab\ncde");

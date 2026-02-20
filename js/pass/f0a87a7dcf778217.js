@@ -1,0 +1,1 @@
+for (var p in Function.prototype.toString) {}

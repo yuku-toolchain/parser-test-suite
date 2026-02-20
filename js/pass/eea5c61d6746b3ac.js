@@ -1,0 +1,18 @@
+var nf = new Intl.NumberFormat();
+const implicit = nf.formatToParts();
+const explicit = nf.formatToParts(undefined);
+const resultNaN = nf.format(NaN);
+const result = [{
+  type: 'nan',
+  value: resultNaN
+}];
+function partsEquals(parts1, parts2) {
+  if (parts1.length !== parts2.length) return false;
+  for (var i = 0; i < parts1.length; i++) {
+    var part1 = parts1[i];
+    var part2 = parts2[i];
+    if (part1.type !== part2.type) return false;
+    if (part1.value !== part2.value) return false;
+  }
+  return true;
+}

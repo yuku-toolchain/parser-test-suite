@@ -1,0 +1,13 @@
+var date;
+date = new Date(1970, 0);
+date.setYear(-1);
+date = new Date(1970, 0);
+date.setYear(100);
+date = new Date(1970, 0);
+date.setYear(1899);
+date = new Date(1970, 0);
+date.setYear(1900);
+date = new Date(1970, 0);
+date.setYear(1999);
+date = new Date(1970, 0);
+date.setYear(2000);

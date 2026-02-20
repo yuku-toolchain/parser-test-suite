@@ -1,0 +1,1 @@
+var subject = /abcd/ig;

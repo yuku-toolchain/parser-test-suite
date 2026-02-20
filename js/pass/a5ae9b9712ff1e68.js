@@ -1,0 +1,4 @@
+var body = "var 1=1;";
+try {
+  var f = new Function(body);
+} catch (e) {}

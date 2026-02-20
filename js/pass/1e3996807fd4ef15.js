@@ -1,0 +1,1 @@
+var slice = String.prototype.slice;

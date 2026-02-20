@@ -1,0 +1,1 @@
+Promise.all([import('./2nd-param_FIXTURE.js'), import('./2nd-param_FIXTURE.js')]).then(function (values) {}).then($DONE, $DONE);

@@ -1,0 +1,16 @@
+var accessed = false;
+function callbackfn(val, idx, obj) {
+  if (idx > 1) {
+    accessed = true;
+  }
+  return true;
+}
+var obj = {
+  length: 20
+};
+Object.defineProperty(obj, "1", {
+  get: function () {
+    throw new RangeError("unhandle exception happened in getter");
+  },
+  configurable: true
+});

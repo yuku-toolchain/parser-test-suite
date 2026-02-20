@@ -1,0 +1,2 @@
+function testcase() {}
+testcase();

@@ -1,0 +1,12 @@
+var item = {};
+var result;
+item[Symbol.isConcatSpreadable] = true;
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = 86;
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = 'string';
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = Symbol();
+result = [].concat(item);
+item[Symbol.isConcatSpreadable] = {};
+result = [].concat(item);

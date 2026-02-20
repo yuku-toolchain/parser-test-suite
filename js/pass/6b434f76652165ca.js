@@ -1,0 +1,2 @@
+const invalidCalendarOptions = ["", "a", "ab", "abcdefghi", "abc-abcdefghi", "!invalid!", "-gregory-", "gregory-", "gregory--", "gregory-nu", "gregory-nu-", "gregory-nu-latn", "gregoryé", "gregory역법"];
+for (const calendar of invalidCalendarOptions) {}

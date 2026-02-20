@@ -1,0 +1,17 @@
+var stack = new DisposableStack();
+var useCount = 0;
+var adoptCount = 0;
+var deferCount = 0;
+stack.use({
+  [Symbol.dispose]() {
+    useCount++;
+  }
+});
+stack.adopt({}, _ => {
+  adoptCount++;
+});
+stack.defer(() => {
+  deferCount++;
+});
+stack.dispose();
+stack.dispose();

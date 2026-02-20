@@ -1,0 +1,14 @@
+var obj = {};
+var verifySetFunc = "data";
+var setFunc = function (value) {
+  verifySetFunc = value;
+};
+Object.defineProperty(obj, "prop", {
+  get: undefined,
+  set: setFunc,
+  enumerable: false,
+  configurable: true
+});
+var propertyDefineCorrect = obj.hasOwnProperty("prop");
+var desc = Object.getOwnPropertyDescriptor(obj, "prop");
+for (var p in obj) {}

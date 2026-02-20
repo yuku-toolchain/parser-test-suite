@@ -1,0 +1,1 @@
+var x = JSON.parse('{"__proto__":[]}');

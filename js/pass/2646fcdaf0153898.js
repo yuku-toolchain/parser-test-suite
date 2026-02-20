@@ -1,0 +1,4 @@
+let limit = {
+  toString() {},
+  valueOf() {}
+};

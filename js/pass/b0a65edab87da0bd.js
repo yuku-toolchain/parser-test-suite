@@ -1,0 +1,1 @@
+var implements0 = 1;

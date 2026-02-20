@@ -1,0 +1,1 @@
+const compare = (a, b) => (a / 4 | 0) - (b / 4 | 0);

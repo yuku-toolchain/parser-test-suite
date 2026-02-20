@@ -1,0 +1,3 @@
+var o = {
+  toString: function () {}
+};

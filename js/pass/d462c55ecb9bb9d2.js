@@ -1,0 +1,1 @@
+var sort = TypedArray.prototype.sort;

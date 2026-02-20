@@ -1,0 +1,5 @@
+var __executed = (/\bp/).exec("pilot\nsoviet robot\topenoffice");
+var __expected = ["p"];
+__expected.index = 0;
+__expected.input = "pilot\nsoviet robot\topenoffice";
+for (var index = 0; index < __expected.length; index++) {}

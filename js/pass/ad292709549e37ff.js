@@ -1,0 +1,1 @@
+var __executed = (/java(script)?/).test("state: both Java and JavaScript used in web development");

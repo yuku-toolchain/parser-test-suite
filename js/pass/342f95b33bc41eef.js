@@ -1,0 +1,1 @@
+var map = new Map([[0, undefined], [undefined, undefined], [false, undefined], [NaN, undefined], [null, undefined], ['', undefined], [Symbol(), undefined]]);

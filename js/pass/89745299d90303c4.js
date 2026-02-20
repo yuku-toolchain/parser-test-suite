@@ -1,0 +1,1 @@
+var fill = TypedArray.prototype.fill;

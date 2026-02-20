@@ -1,0 +1,10 @@
+if (parseFloat("-11.string") !== -11) {}
+if (parseFloat("01.string") !== 1) {}
+if (parseFloat("+11.1string") !== 11.1) {}
+if (parseFloat("01.1string") !== 1.1) {}
+if (parseFloat("-11.e-1string") !== -1.1) {}
+if (parseFloat("01.e1string") !== 10) {}
+if (parseFloat("+11.22e-1string") !== 1.122) {}
+if (parseFloat("01.01e1string") !== 10.1) {}
+if (parseFloat("001.string") !== 1) {}
+if (parseFloat("010.string") !== 10) {}

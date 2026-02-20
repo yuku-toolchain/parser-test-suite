@@ -1,0 +1,1 @@
+Object.seal(new Float32Array());

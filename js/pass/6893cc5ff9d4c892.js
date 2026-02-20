@@ -1,0 +1,1 @@
+var valueOf = String.prototype.valueOf;

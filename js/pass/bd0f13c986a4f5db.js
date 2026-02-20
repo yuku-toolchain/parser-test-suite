@@ -1,0 +1,15 @@
+var accessed = true;
+var obj = {};
+obj[0] = 12;
+obj[1] = 11;
+obj[2] = 9;
+function callbackfn(prevVal, curVal, idx, obj) {
+  accessed = true;
+  return obj.length === 2;
+}
+Object.defineProperty(obj, "length", {
+  get: function () {
+    return 2;
+  },
+  configurable: true
+});

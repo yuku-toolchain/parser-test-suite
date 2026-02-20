@@ -1,0 +1,1 @@
+var valueOf = Symbol.prototype.valueOf;

@@ -1,0 +1,9 @@
+var buffer = new ArrayBuffer(1);
+var sample = new DataView(buffer, 0);
+var typedArray = new Uint8Array(buffer, 0);
+var values = byteConversionValues.values;
+var expectedValues = byteConversionValues.expected.Uint8;
+values.forEach(function (value, i) {
+  var expected = expectedValues[i];
+  var result = sample.setUint8(0, value);
+});

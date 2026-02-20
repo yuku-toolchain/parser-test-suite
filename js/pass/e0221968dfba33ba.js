@@ -1,0 +1,4 @@
+const datetime = new Temporal.PlainDateTime(2001, 9, 9, 1, 46, 40, 987, 654, 321);
+TemporalHelpers.checkStringOptionWrongType("disambiguation", "compatible", disambiguation => datetime.toZonedDateTime("UTC", {
+  disambiguation
+}), (result, descr) => assert.sameValue(result.epochNanoseconds, 1_000_000_000_987_654_321n, descr));

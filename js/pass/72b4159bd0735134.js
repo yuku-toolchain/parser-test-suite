@@ -1,0 +1,16 @@
+var testResult = false;
+function callbackfn(prevVal, curVal, idx, obj) {
+  if (idx === 1) {
+    testResult = typeof curVal === "undefined";
+  }
+}
+var obj = {
+  0: 0,
+  2: 2,
+  length: 3
+};
+Object.defineProperty(obj, "1", {
+  set: function () {},
+  configurable: true
+});
+Array.prototype.reduceRight.call(obj, callbackfn, "initialValue");

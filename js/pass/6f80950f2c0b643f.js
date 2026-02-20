@@ -1,0 +1,1 @@
+if (String(42).charCodeAt(void 0) !== 0x34) {}

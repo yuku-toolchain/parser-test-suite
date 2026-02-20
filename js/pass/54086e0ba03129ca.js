@@ -1,0 +1,1 @@
+const dayOfWeek = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "dayOfWeek").get;
