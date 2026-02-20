@@ -1,0 +1,1 @@
+const getter = Object.getOwnPropertyDescriptor(Intl.Locale.prototype, "language").get;

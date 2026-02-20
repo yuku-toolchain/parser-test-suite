@@ -1,0 +1,5 @@
+const relativeTo = new Temporal.ZonedDateTime(-13849764_999_999_999n, "UTC");
+const duration = new Temporal.Duration(0, 0, 0, 1);
+const result = Temporal.Duration.compare(duration, duration, {
+  relativeTo
+});

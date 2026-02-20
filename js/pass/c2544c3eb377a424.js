@@ -1,0 +1,1 @@
+Function.prototype.myproperty = 1;

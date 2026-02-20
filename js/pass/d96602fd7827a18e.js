@@ -1,0 +1,14 @@
+var x = Symbol();
+var y = Symbol();
+var C = class {
+  async m() {
+    return 42;
+  }
+  [x];
+  [y] = 42;
+};
+var c = new C();
+c.m().then(function (v) {
+  function assertions() {}
+  return Promise.resolve(assertions());
+}).then($DONE, $DONE);

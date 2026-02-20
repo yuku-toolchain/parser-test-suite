@@ -1,0 +1,1 @@
+if ("string" !== "\u000Cstr\u000Cing\u000C") {}

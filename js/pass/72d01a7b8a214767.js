@@ -1,0 +1,1 @@
+var __obj = String.prototype.split.length;

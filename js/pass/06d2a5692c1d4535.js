@@ -1,0 +1,1 @@
+var desc = Object.getOwnPropertyDescriptor(Function, "arguments_1");

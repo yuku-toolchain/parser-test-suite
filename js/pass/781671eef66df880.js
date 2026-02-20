@@ -1,0 +1,8 @@
+var obj = {
+  [Symbol.toPrimitive]: 42
+};
+function evaluate() {
+  class C {
+    [obj] = refErrorIfEvaluated;
+  }
+}

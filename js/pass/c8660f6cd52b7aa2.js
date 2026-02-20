@@ -1,0 +1,15 @@
+var iterable = {};
+var iterationCount = 0;
+iterable[Symbol.iterator] = function () {
+  return {
+    next: function () {
+      return {
+        done: false,
+        value: null
+      };
+    },
+    return: function () {
+      return 0;
+    }
+  };
+};

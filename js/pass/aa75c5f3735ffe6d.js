@@ -1,0 +1,3 @@
+const datetime = new Temporal.ZonedDateTime(3661_001_001_001n, "-00:02");
+const zdt = new Temporal.ZonedDateTime(86400_000_000_000n, "UTC");
+const newzdt = zdt.withPlainTime(datetime);

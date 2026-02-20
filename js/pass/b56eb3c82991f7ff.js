@@ -1,0 +1,1 @@
+var canonicalLocales = Intl.getCanonicalLocales(["zu", "af"]);

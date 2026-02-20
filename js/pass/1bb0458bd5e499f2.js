@@ -1,0 +1,10 @@
+var o = {
+  get gNonStrict() {
+    var tmp = Object.getOwnPropertyDescriptor(o, "gNonStrict").get;
+    return tmp.caller || tmp.caller.throwTypeError;
+  }
+};
+function f() {
+  "use strict";
+  return o.gNonStrict;
+}

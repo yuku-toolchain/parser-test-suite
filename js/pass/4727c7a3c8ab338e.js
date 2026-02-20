@@ -1,0 +1,8 @@
+var ctor;
+class C {
+  constructor() {
+    ctor = this.foo;
+  }
+  foo = 42;
+}
+var c = new C();

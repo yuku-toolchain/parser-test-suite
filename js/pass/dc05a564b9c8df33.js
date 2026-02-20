@@ -1,0 +1,9 @@
+var obj = {};
+var accessed = false;
+Object.prototype.enumerable = true;
+Object.defineProperty(obj, "property", JSON);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

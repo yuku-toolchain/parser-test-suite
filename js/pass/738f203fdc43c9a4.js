@@ -1,0 +1,1 @@
+var desc = Object.getOwnPropertyDescriptor(Math, "sin");

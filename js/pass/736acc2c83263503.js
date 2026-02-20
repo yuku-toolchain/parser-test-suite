@@ -1,0 +1,1 @@
+const d2 = new Temporal.Duration(0, 0, 0, 5, 5, 5, 5, 5, 5, 5);

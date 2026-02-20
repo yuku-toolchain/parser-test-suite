@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+String.prototype.enumerable = true;
+var strObj = new String();
+Object.defineProperty(obj, "property", strObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

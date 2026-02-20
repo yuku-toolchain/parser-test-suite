@@ -1,0 +1,10 @@
+if (eval("Number\u0009()") !== 0) {}
+if (eval("Number\u000B()") !== 0) {}
+if (eval("Number\u000C()") !== 0) {}
+if (eval("Number\u0020()") !== 0) {}
+if (eval("Number\u00A0()") !== 0) {}
+if (eval("Number\u000A()") !== 0) {}
+if (eval("Number\u000D()") !== 0) {}
+if (eval("Number\u2028()") !== 0) {}
+if (eval("Number\u2029()") !== 0) {}
+if (eval("Number\u0009\u000B\u000C\u0020\u00A0\u000A\u000D\u2028\u2029()") !== 0) {}

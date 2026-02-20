@@ -1,0 +1,1 @@
+const year = Object.getOwnPropertyDescriptor(Temporal.PlainDate.prototype, "year").get;

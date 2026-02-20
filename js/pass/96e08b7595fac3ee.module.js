@@ -1,0 +1,1 @@
+for (var test262 = null; false; ) {}

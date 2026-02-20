@@ -1,0 +1,12 @@
+const granularityOptions = ["grapheme", "word", "sentence"];
+const combinations = [];
+combinations.push([{}, "grapheme", undefined]);
+for (const granularity of granularityOptions) {
+  combinations.push([{
+    granularity
+  }, granularity, undefined]);
+}
+for (const [input, granularity, lineBreakStyle] of combinations) {
+  const segmenter = new Intl.Segmenter([], input);
+  const resolvedOptions = segmenter.resolvedOptions();
+}

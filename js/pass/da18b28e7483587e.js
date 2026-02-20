@@ -1,0 +1,10 @@
+var other = $262.createRealm().global;
+var OtherShadowRealm = other.ShadowRealm;
+var OtherFunctionPrototype = other.Function.prototype;
+var yetAnother = $262.createRealm().global;
+var YetAnotherShadowRealm = yetAnother.ShadowRealm;
+var YetAnotherFunctionPrototype = yetAnother.Function.prototype;
+var realm = Reflect.construct(OtherShadowRealm, []);
+var checkArgWrapperFn = realm.evaluate('(x) => { return Object.getPrototypeOf(x) === Function.prototype }');
+var fn = realm.evaluate('() => { return () => { return 1 } }');
+var fn = YetAnotherShadowRealm.prototype.evaluate.call(realm, '() => { return () => { return 1 } }');

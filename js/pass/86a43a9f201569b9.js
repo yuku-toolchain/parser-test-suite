@@ -1,0 +1,14 @@
+var obj = {};
+var proto = {};
+Object.defineProperty(proto, "writable", {
+  get: function () {
+    return true;
+  }
+});
+var Con = function () {};
+Con.prototype = proto;
+var descObj = new Con();
+Object.defineProperties(obj, {
+  property: descObj
+});
+obj.property = "isWritable";

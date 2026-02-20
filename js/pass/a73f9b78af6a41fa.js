@@ -1,0 +1,10 @@
+const obj = {
+    toString() {
+        return './empty_FIXTURE.js';
+    }
+};
+label: {
+  import.source(obj).catch(error => {
+assert.sameValue(error.name, 'SyntaxError');
+}).then($DONE, $DONE);
+};

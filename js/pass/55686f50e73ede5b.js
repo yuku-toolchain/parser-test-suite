@@ -1,0 +1,1 @@
+let other = $262.createRealm().global;

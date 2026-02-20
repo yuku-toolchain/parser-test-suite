@@ -1,0 +1,2 @@
+function testFunc() {}
+testFunc.bind();

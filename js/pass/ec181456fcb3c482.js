@@ -1,0 +1,1 @@
+var AsyncGeneratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf((async function* () {})()));

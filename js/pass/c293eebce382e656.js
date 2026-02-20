@@ -1,0 +1,1 @@
+var p = Promise.resolve(3);

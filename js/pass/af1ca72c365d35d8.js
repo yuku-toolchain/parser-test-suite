@@ -1,0 +1,9 @@
+testWithBigIntTypedArrayConstructors(function (TA) {
+  const sample = new TA(1);
+  const fromIndex = {
+    valueOf() {
+      $DETACHBUFFER(sample.buffer);
+      return 0;
+    }
+  };
+});

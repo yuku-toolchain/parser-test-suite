@@ -1,0 +1,18 @@
+const calendarEraAliases = [{
+  calendar: "japanese",
+  canonicalizedEra: "ce",
+  alias: "ad"
+}, {
+  calendar: "japanese",
+  canonicalizedEra: "bce",
+  alias: "bc"
+}];
+for (const calendarEraAlias of calendarEraAliases) {
+  const calendar = Temporal.PlainYearMonth.from({
+    calendar: calendarEraAlias.calendar,
+    era: calendarEraAlias.alias,
+    eraYear: 1,
+    month: 1,
+    day: 1
+  });
+}

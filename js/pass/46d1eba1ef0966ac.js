@@ -1,0 +1,11 @@
+var probe;
+class C {
+  static *m(_ = null) {
+    var x = 'inside';
+    probe = function () {
+      return x;
+    };
+  }
+}
+C.m().next();
+var x = 'outside';

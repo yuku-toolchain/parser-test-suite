@@ -1,0 +1,1 @@
+const toLocaleString = Temporal.PlainTime.prototype.toLocaleString;

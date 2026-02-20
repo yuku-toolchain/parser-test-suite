@@ -1,0 +1,5 @@
+const otherPunctuators = ",-=<>#&!%:;@~'`\"";
+for (const c of otherPunctuators) {
+  const expected = `\\x${c.codePointAt(0).toString(16)}`;
+}
+const otherPunctuatorsExpected = "\\x2c\\x2d\\x3d\\x3c\\x3e\\x23\\x26\\x21\\x25\\x3a\\x3b\\x40\\x7e\\x27\\x60\\x22";

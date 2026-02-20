@@ -1,0 +1,13 @@
+let instance = new Temporal.PlainYearMonth(-100000, 12);
+instance = new Temporal.PlainYearMonth(-10000, 4);
+instance = new Temporal.PlainYearMonth(-9999, 6);
+instance = new Temporal.PlainYearMonth(-1000, 8);
+instance = new Temporal.PlainYearMonth(-999, 10);
+instance = new Temporal.PlainYearMonth(-1, 8);
+instance = new Temporal.PlainYearMonth(0, 6);
+instance = new Temporal.PlainYearMonth(1, 4);
+instance = new Temporal.PlainYearMonth(999, 2);
+instance = new Temporal.PlainYearMonth(1000, 1);
+instance = new Temporal.PlainYearMonth(9999, 4);
+instance = new Temporal.PlainYearMonth(10000, 6);
+instance = new Temporal.PlainYearMonth(100000, 8);

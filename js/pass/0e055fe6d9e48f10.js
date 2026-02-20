@@ -1,0 +1,1 @@
+if (String("lego").charAt(undefined) !== "l") {}

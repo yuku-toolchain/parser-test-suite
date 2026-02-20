@@ -1,0 +1,25 @@
+const tooEarly = {
+  year: -271821,
+  month: 4,
+  day: 18
+};
+const tooLate = {
+  year: 275760,
+  month: 9,
+  day: 14
+};
+["reject", "constrain"].forEach(overflow => {
+  [tooEarly, tooLate, "-271821-04-18", "+275760-09-14"].forEach(value => {});
+});
+TemporalHelpers.assertPlainDate(Temporal.PlainDate.from({
+  year: -271821,
+  month: 4,
+  day: 19
+}), -271821, 4, "M04", 19, "min object");
+TemporalHelpers.assertPlainDate(Temporal.PlainDate.from({
+  year: 275760,
+  month: 9,
+  day: 13
+}), 275760, 9, "M09", 13, "max object");
+TemporalHelpers.assertPlainDate(Temporal.PlainDate.from("-271821-04-19"), -271821, 4, "M04", 19, "min string");
+TemporalHelpers.assertPlainDate(Temporal.PlainDate.from("+275760-09-13"), 275760, 9, "M09", 13, "max string");

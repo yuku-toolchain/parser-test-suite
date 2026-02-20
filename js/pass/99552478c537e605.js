@@ -1,0 +1,16 @@
+var proto = {};
+Object.defineProperty(proto, "prop", {
+  value: 1003,
+  enumerable: true,
+  configurable: true
+});
+var Con = function () {};
+Con.prototype = proto;
+var obj = new Con();
+Object.defineProperty(obj, "prop", {
+  get: function () {},
+  enumerable: false,
+  configurable: true
+});
+var arr = Object.keys(obj);
+for (var p in arr) {}

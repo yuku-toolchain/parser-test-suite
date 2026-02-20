@@ -1,0 +1,1 @@
+const formatToParts = Intl.RelativeTimeFormat.prototype.formatToParts;

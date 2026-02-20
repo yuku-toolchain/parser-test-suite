@@ -1,0 +1,172 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "r",
+              "start": 6,
+              "end": 7
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 14,
+                "end": 25
+              },
+              "arguments": [],
+              "start": 10,
+              "end": 27
+            },
+            "start": 6,
+            "end": 27
+          }
+        ],
+        "start": 0,
+        "end": 28
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "anyMissed",
+              "start": 35,
+              "end": 44
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "r",
+                  "start": 47,
+                  "end": 48
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 49,
+                  "end": 57
+                },
+                "optional": false,
+                "computed": false,
+                "start": 47,
+                "end": 57
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "value": {
+                        "raw": "\nconst esNonConfigValues = [\n    'undefined',\n    'Infinity',\n    'NaN'\n  ];\nconst entries = Object.entries(Object.getOwnPropertyDescriptors(globalThis));\nconst missed = entries\n    .filter(entry => entry[1].configurable === false)\n    .map(([name]) => name)\n    .filter(name => !esNonConfigValues.includes(name))\n    .join(', ');\nmissed;\n",
+                        "cooked": "\nconst esNonConfigValues = [\n    'undefined',\n    'Infinity',\n    'NaN'\n  ];\nconst entries = Object.entries(Object.getOwnPropertyDescriptors(globalThis));\nconst missed = entries\n    .filter(entry => entry[1].configurable === false)\n    .map(([name]) => name)\n    .filter(name => !esNonConfigValues.includes(name))\n    .join(', ');\nmissed;\n"
+                      },
+                      "tail": true,
+                      "start": 59,
+                      "end": 398
+                    }
+                  ],
+                  "expressions": [],
+                  "start": 58,
+                  "end": 399
+                }
+              ],
+              "optional": false,
+              "start": 47,
+              "end": 400
+            },
+            "start": 35,
+            "end": 400
+          }
+        ],
+        "start": 29,
+        "end": 401
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "result",
+              "start": 408,
+              "end": 414
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "r",
+                  "start": 417,
+                  "end": 418
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 419,
+                  "end": 427
+                },
+                "optional": false,
+                "computed": false,
+                "start": 417,
+                "end": 427
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "value": {
+                        "raw": "\n  const ObjectKeys = Object.keys;\n  const hasOwn = Object.prototype.hasOwnProperty;\n  const savedGlobal = globalThis;\n  const names = Object.keys(Object.getOwnPropertyDescriptors(globalThis));\nconst esNonConfigValues = [\n    'undefined',\n    'Infinity',\n    'NaN'\n  ];\nconst remainingNames = names.filter(name => {\n    if (esNonConfigValues.includes(name)) {\n      return false;\n    }\nif (name !== 'globalThis') {\n      delete globalThis[name];\n      return hasOwn.call(globalThis, name);\n    }\n  });\ndelete globalThis['globalThis'];\nif (hasOwn.call(savedGlobal, 'globalThis')) {\n    remainingNames.push('globalThis');\n  }\nconst failedDelete = remainingNames.join(', ');\nfailedDelete;\n",
+                        "cooked": "\n  const ObjectKeys = Object.keys;\n  const hasOwn = Object.prototype.hasOwnProperty;\n  const savedGlobal = globalThis;\n  const names = Object.keys(Object.getOwnPropertyDescriptors(globalThis));\nconst esNonConfigValues = [\n    'undefined',\n    'Infinity',\n    'NaN'\n  ];\nconst remainingNames = names.filter(name => {\n    if (esNonConfigValues.includes(name)) {\n      return false;\n    }\nif (name !== 'globalThis') {\n      delete globalThis[name];\n      return hasOwn.call(globalThis, name);\n    }\n  });\ndelete globalThis['globalThis'];\nif (hasOwn.call(savedGlobal, 'globalThis')) {\n    remainingNames.push('globalThis');\n  }\nconst failedDelete = remainingNames.join(', ');\nfailedDelete;\n"
+                      },
+                      "tail": true,
+                      "start": 429,
+                      "end": 1115
+                    }
+                  ],
+                  "expressions": [],
+                  "start": 428,
+                  "end": 1116
+                }
+              ],
+              "optional": false,
+              "start": 417,
+              "end": 1117
+            },
+            "start": 408,
+            "end": 1117
+          }
+        ],
+        "start": 402,
+        "end": 1118
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 1118
+  },
+  "errors": [],
+  "comments": []
+}

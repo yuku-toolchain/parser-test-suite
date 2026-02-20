@@ -1,0 +1,1 @@
+import.defer('./empty_FIXTURE.js');

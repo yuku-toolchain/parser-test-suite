@@ -1,0 +1,10 @@
+var funObj = function () {};
+var data = "data";
+funObj.set = function (value) {
+  data = value;
+};
+var newObj = Object.create({}, {
+  prop: funObj
+});
+var hasProperty = newObj.hasOwnProperty("prop");
+newObj.prop = "overrideData";

@@ -1,0 +1,10 @@
+function body(FloatArray) {
+  var sample = new FloatArray(NaNs);
+  var sampleBytes, resultBytes;
+  var i = 0;
+  var result = sample.map(function () {
+    return NaNs[i++];
+  });
+  sampleBytes = new Uint8Array(sample.buffer);
+  resultBytes = new Uint8Array(result.buffer);
+}

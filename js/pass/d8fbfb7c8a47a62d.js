@@ -1,0 +1,11 @@
+var accessed = false;
+var descObj = [];
+descObj.enumerable = true;
+var newObj = Object.create({}, {
+  prop: descObj
+});
+for (var property in newObj) {
+  if (property === "prop") {
+    accessed = true;
+  }
+}

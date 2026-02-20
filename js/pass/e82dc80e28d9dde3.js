@@ -1,0 +1,4 @@
+const testCases = ["GMT", "Etc/Universal", "Etc/Zulu", "Etc/Greenwich", "Etc/GMT-0", "Etc/GMT+0", "Etc/GMT0"];
+for (let id of testCases) {
+  const instance = new Temporal.ZonedDateTime(0n, id);
+}

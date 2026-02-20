@@ -1,0 +1,12 @@
+const timeZone = "+01:00";
+const instance = new Temporal.ZonedDateTime(0n, timeZone);
+let str = "1970-01-01T00:00";
+str = "1970-01-01T00:00Z";
+str = "1970-01-01T00:00+01:00";
+str = "1970-01-01T00:00[+01:00]";
+const result1 = instance.equals(str);
+str = "1970-01-01T00:00Z[+01:00]";
+const result2 = instance.equals(str);
+str = "1970-01-01T00:00+01:00[+01:00]";
+const result3 = instance.equals(str);
+str = "1970-01-01T00:00-04:15[+01:00]";

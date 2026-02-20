@@ -1,0 +1,8 @@
+function x() {}
+x();
+function y() {}
+y();
+function z() {}
+z();
+function w() {}
+w();

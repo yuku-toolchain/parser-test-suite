@@ -1,0 +1,1 @@
+const weekOfYear = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "weekOfYear").get;

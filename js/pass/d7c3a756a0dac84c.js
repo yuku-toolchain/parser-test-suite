@@ -1,0 +1,7 @@
+const values = [[undefined, "auto"], ["auto"], ["never"], ["always"], ["exceptZero"]];
+for (const [value, expected = value] of values) {
+  const nf = new Intl.NumberFormat([], {
+    signDisplay: value
+  });
+  const resolvedOptions = nf.resolvedOptions();
+}

@@ -1,0 +1,7 @@
+var callCount = 0;
+class C {
+  async *method({arrow = () => {}} = {}) {
+    callCount = callCount + 1;
+  }
+}
+new C().method().next().then(() => {}).then($DONE, $DONE);

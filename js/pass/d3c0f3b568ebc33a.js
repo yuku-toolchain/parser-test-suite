@@ -1,0 +1,10 @@
+let df = new Intl.DateTimeFormat("en-u-ca-chinese", {
+  year: "numeric"
+});
+let parts = df.formatToParts(new Date());
+var relatedYearCount = 0;
+var yearNameCount = 0;
+parts.forEach(function (part) {
+  relatedYearCount += part.type == "relatedYear" ? 1 : 0;
+  yearNameCount += part.type == "yearName" ? 1 : 0;
+});

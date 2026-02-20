@@ -1,0 +1,18 @@
+var testResult = false;
+function callbackfn(val, idx, obj) {
+  if (idx === 1) {
+    testResult = val === 11;
+  }
+}
+var proto = {};
+Object.defineProperty(proto, "1", {
+  get: function () {
+    return 11;
+  },
+  configurable: true
+});
+var Con = function () {};
+Con.prototype = proto;
+var child = new Con();
+child.length = 20;
+Array.prototype.forEach.call(child, callbackfn);

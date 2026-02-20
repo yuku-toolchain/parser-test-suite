@@ -1,0 +1,9 @@
+var result = false;
+var obj = {
+  0: 11,
+  length: 2
+};
+function callbackfn(val, idx, o) {
+  result = obj === o;
+}
+Array.prototype.forEach.call(obj, callbackfn);

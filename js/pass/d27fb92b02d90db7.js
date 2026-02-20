@@ -1,0 +1,6 @@
+const tests = [[[], "05-02"], [["gregory"], "1972-05-02[u-ca=gregory]"]];
+for (const [args, expected] of tests) {
+  const monthday = new Temporal.PlainMonthDay(5, 2, ...args);
+  const explicit = monthday.toString(undefined);
+  const implicit = monthday.toString();
+}

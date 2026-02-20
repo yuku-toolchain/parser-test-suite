@@ -1,0 +1,1 @@
+RegExp.prototype[Symbol.matchAll] = function () {};

@@ -1,0 +1,20 @@
+const validOptions = [[undefined, "symbol"], ["narrowSymbol", "narrowSymbol"], [{
+  toString() {
+    return "narrowSymbol";
+  }
+}, "narrowSymbol"]];
+for (const [validOption, expected] of validOptions) {
+  const nf = new Intl.NumberFormat([], {
+    "style": "currency",
+    "currency": "EUR",
+    "currencyDisplay": validOption
+  });
+  const resolvedOptions = nf.resolvedOptions();
+}
+for (const [validOption] of validOptions) {
+  const nf = new Intl.NumberFormat([], {
+    "style": "percent",
+    "currencyDisplay": validOption
+  });
+  const resolvedOptions = nf.resolvedOptions();
+}

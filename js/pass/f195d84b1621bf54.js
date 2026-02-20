@@ -1,0 +1,17 @@
+var date = new Date(2016, 6);
+var callCount = 0;
+var arg = {
+  valueOf: function () {
+    args = arguments;
+    thisValue = this;
+    callCount += 1;
+    return 2;
+  }
+};
+var args, thisValue, returnValue;
+returnValue = date.setDate(arg);
+returnValue = date.setDate(null);
+returnValue = date.setDate(true);
+returnValue = date.setDate(false);
+returnValue = date.setDate('   +00200.000E-0002	');
+returnValue = date.setDate();

@@ -1,0 +1,1 @@
+const descriptor = Object.getOwnPropertyDescriptor(Temporal.PlainYearMonth.prototype, "eraYear");

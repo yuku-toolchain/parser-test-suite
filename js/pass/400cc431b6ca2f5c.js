@@ -1,0 +1,1 @@
+let matchResult = (/(?:(?:(?<x>a)|(?<x>b))\k<x>){2}/).exec("aabb");

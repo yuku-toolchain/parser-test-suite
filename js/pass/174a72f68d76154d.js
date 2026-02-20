@@ -1,0 +1,1 @@
+var p = Object.getPrototypeOf(Number);

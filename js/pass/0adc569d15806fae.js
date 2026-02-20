@@ -1,0 +1,1 @@
+var search = String.prototype.search;

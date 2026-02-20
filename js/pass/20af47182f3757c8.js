@@ -1,0 +1,1 @@
+var re = eval('/' + new RegExp('\n').source + '/');

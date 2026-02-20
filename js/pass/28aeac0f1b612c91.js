@@ -1,0 +1,1 @@
+if (String("lego").concat(undefined) !== "legoundefined") {}

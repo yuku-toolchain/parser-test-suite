@@ -1,0 +1,3 @@
+let async;
+for (\u0061sync of [7]);
+assert.sameValue(async, 7);

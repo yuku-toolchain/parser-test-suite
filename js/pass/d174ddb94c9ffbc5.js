@@ -1,0 +1,1 @@
+if (String.prototype.concat.prototype !== undefined) {}

@@ -1,0 +1,7 @@
+var obj = {};
+Object.defineProperties(obj, {
+  property: {
+    writable: new Date(0)
+  }
+});
+obj.property = "isWritable";

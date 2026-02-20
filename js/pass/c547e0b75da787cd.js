@@ -1,0 +1,1 @@
+if (new String(42).charAt((function () {})()) !== "4") {}

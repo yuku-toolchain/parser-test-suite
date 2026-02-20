@@ -1,0 +1,1 @@
+var view = new DataView(new SharedArrayBuffer(9));

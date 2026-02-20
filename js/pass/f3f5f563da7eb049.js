@@ -1,0 +1,7 @@
+for (var key of [-0, +0]) {
+  var map = new Map();
+  var canonicalKey;
+  map.getOrInsertComputed(key, function (keyArg) {
+    canonicalKey = keyArg;
+  });
+}

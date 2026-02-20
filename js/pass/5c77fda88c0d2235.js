@@ -1,0 +1,11 @@
+var sum = function* (arg) {
+  yield this.foo;
+  yield arg;
+};
+var sumTarget = new Proxy(sum, {});
+var sumProxy = new Proxy(sumTarget, {
+  apply: undefined
+});
+var gen = Reflect.apply(sumProxy, {
+  foo: 10
+}, [1]);

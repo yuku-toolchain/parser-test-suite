@@ -1,0 +1,1 @@
+const monthsInYear = Object.getOwnPropertyDescriptor(Temporal.PlainDateTime.prototype, "monthsInYear").get;

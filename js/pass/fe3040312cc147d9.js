@@ -1,0 +1,12 @@
+const timeZone = "UTC";
+const instance = new Temporal.ZonedDateTime(0n, timeZone);
+const badOffsets = ["00:00", "+0", "-000:00", 0, null, true, 1000n];
+badOffsets.forEach(offset => {
+  const arg = {
+    year: 2021,
+    month: 10,
+    day: 28,
+    offset,
+    timeZone
+  };
+});

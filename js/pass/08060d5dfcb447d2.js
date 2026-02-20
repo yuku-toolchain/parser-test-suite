@@ -1,0 +1,1 @@
+var replace = String.prototype.replace;

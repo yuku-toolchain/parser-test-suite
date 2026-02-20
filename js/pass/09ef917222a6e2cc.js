@@ -1,0 +1,1 @@
+const calendarId = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "calendarId").get;

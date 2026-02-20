@@ -1,0 +1,1 @@
+if (!Function.prototype.isPrototypeOf(String)) {}

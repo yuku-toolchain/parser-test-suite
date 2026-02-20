@@ -1,0 +1,1 @@
+var __executed = (/ab[erst]de/).test("abcde");

@@ -1,0 +1,1 @@
+if (eval("while(false);") !== undefined) {}

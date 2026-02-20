@@ -1,0 +1,2 @@
+const invalidRegionOptions = ["", "a", "abc", "a7", "notaregion", "SA-vaidika", "SA-a-asdf", "SA-x-private", "ary-Arab", "Latn-SA", "Latn-vaidika", "Latn-a-asdf", "Latn-x-private", 7];
+for (const region of invalidRegionOptions) {}

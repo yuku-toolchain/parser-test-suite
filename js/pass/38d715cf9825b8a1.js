@@ -1,0 +1,12 @@
+var obj = {};
+var func = function (a, b, c) {
+  return arguments;
+};
+var args = func(1, true, "a");
+Object.defineProperties(obj, {
+  property: {
+    configurable: args
+  }
+});
+var preCheck = obj.hasOwnProperty("property");
+delete obj.property;

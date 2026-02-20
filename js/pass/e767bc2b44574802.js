@@ -1,0 +1,20 @@
+let lf = new Intl.ListFormat();
+let iterable_of_strings = {
+  [Symbol.iterator]() {
+    return this;
+  },
+  count: 0,
+  next() {
+    this.count++;
+    if (this.count < 4) {
+      return {
+        done: false,
+        value: String(this.count)
+      };
+    }
+    return {
+      done: true
+    };
+  }
+};
+lf.format(iterable_of_strings);

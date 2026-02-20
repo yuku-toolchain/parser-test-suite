@@ -1,0 +1,11 @@
+var realmA = $262.createRealm().global;
+realmA.calls = 0;
+var aGeneratorFunction = realmA.eval("(function* () {})").constructor;
+var aGeneratorPrototype = Object.getPrototypeOf(realmA.eval("(function* () {})").prototype);
+var realmB = $262.createRealm().global;
+var bGeneratorFunction = realmB.eval("(function* () {})").constructor;
+var newTarget = new realmB.Function();
+newTarget.prototype = null;
+var fn = Reflect.construct(aGeneratorFunction, ["calls += 1;"], newTarget);
+var gen = fn();
+gen.next();

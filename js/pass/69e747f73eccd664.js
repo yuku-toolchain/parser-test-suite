@@ -1,0 +1,13 @@
+var s = Symbol("1");
+testWithBigIntTypedArrayConstructors(function (TA) {
+  var sample = new TA();
+  Object.defineProperty(sample, s, {
+    value: 42,
+    enumerable: false
+  });
+  Object.defineProperty(sample, "test262", {
+    value: 42,
+    enumerable: false
+  });
+  var result = Reflect.ownKeys(sample);
+});

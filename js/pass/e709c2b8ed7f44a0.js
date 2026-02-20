@@ -1,0 +1,10 @@
+if (eval("!\u0009true") !== false) {}
+if (eval("!\u000Btrue") !== false) {}
+if (eval("!\u000Ctrue") !== false) {}
+if (eval("!\u0020true") !== false) {}
+if (eval("!\u00A0true") !== false) {}
+if (eval("!\u000Atrue") !== false) {}
+if (eval("!\u000Dtrue") !== false) {}
+if (eval("!\u2028true") !== false) {}
+if (eval("!\u2029true") !== false) {}
+if (eval("!\u0009\u000B\u000C\u0020\u00A0\u000A\u000D\u2028\u2029true") !== false) {}

@@ -1,0 +1,3 @@
+function callbackfn() {
+  return true;
+}

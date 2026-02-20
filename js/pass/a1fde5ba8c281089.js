@@ -1,0 +1,13 @@
+const validOptions = [[undefined, undefined], [1, 1], ["1", 1], [2, 2], ["2", 2], [3, 3], ["3", 3], [2.9, 2], ["2.9", 2], [1.00001, 1], [{
+  toString() {
+    return "3";
+  }
+}, 3]];
+for (const [fractionalSecondDigits, expected] of validOptions) {
+  const dtf = new Intl.DateTimeFormat("en", {
+    fractionalSecondDigits
+  });
+  const options = dtf.resolvedOptions();
+  const propdesc = Object.getOwnPropertyDescriptor(options, "fractionalSecondDigits");
+  if (expected === undefined) {} else {}
+}

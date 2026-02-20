@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+Boolean.prototype.enumerable = true;
+var boolObj = new Boolean(true);
+Object.defineProperty(obj, "property", boolObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

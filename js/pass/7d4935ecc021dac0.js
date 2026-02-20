@@ -1,0 +1,1 @@
+var compareFn = new Intl.Collator().compare;

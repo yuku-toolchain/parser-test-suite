@@ -1,0 +1,1 @@
+var canonical = Symbol.for('s');

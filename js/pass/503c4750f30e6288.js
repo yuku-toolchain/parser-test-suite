@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+var arrObj = [];
+arrObj.enumerable = true;
+Object.defineProperty(obj, "property", arrObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

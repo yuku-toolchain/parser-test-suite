@@ -1,0 +1,10 @@
+var accessed = false;
+function callbackfn(val, idx, obj) {
+  accessed = true;
+  return val > 10;
+}
+var Foo = function () {};
+Foo.prototype = [1, 2, 3];
+var obj = new Foo();
+obj.length = false;
+var testResult = Array.prototype.map.call(obj, callbackfn);

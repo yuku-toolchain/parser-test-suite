@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+Error.prototype.enumerable = true;
+var errObj = new Error();
+Object.defineProperty(obj, "property", errObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

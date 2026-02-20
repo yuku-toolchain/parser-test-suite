@@ -1,0 +1,1 @@
+var n_obj = new Object("" + 1);

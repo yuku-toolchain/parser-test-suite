@@ -1,0 +1,11 @@
+var buffer = new ArrayBuffer(8);
+var sample = new DataView(buffer, 0);
+sample.setUint8(0, 7);
+sample.setUint8(1, 7);
+sample.setUint8(2, 7);
+sample.setUint8(3, 7);
+sample.setUint8(4, 1);
+sample.setUint8(5, 127);
+sample.setUint8(6, 128);
+sample.setUint8(7, 255);
+sample = new DataView(buffer, 4);

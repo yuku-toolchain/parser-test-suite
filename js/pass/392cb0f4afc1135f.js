@@ -1,0 +1,8 @@
+class Base {
+  constructor() {}
+}
+class Derived extends Base {
+  constructor() {
+    super[super()] += 0;
+  }
+}

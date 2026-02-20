@@ -1,0 +1,3 @@
+let async;
+for ((async) of [7]);
+assert.sameValue(async, 7);

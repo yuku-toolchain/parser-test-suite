@@ -1,0 +1,25 @@
+let error = new Test262Error();
+let promise = Promise.resolve();
+let returnCount = 0;
+let iter = {
+  [Symbol.iterator]() {
+    return {
+      next() {
+        return {
+          done: false,
+          value: promise
+        };
+      },
+      return() {
+        returnCount += 1;
+        return {};
+      }
+    };
+  }
+};
+Object.defineProperty(promise, 'then', {
+  get() {
+    throw error;
+  }
+});
+Promise.any(iter).then(() => {}, reason => {}).then($DONE, $DONE);

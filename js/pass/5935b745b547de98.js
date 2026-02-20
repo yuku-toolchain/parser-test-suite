@@ -1,0 +1,21 @@
+for (let ctor of ctors) {
+  const rab = CreateResizableArrayBuffer(4 * ctor.BYTES_PER_ELEMENT, 8 * ctor.BYTES_PER_ELEMENT);
+  const lengthTracking = new ctor(rab);
+  for (let i = 0; i < 4; ++i) {
+    lengthTracking[i] = MayNeedBigInt(lengthTracking, i);
+  }
+  const evil = {
+    valueOf: () => {
+      rab.resize(6 * ctor.BYTES_PER_ELEMENT);
+      lengthTracking[4] = MayNeedBigInt(lengthTracking, 4);
+      lengthTracking[5] = MayNeedBigInt(lengthTracking, 5);
+      return 0;
+    }
+  };
+  lengthTracking.copyWithin(evil, 2);
+  rab.resize(4 * ctor.BYTES_PER_ELEMENT);
+  for (let i = 0; i < 4; ++i) {
+    lengthTracking[i] = MayNeedBigInt(lengthTracking, i);
+  }
+  lengthTracking.copyWithin(2, evil);
+}

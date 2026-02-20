@@ -1,0 +1,1 @@
+verifyPrimordialCallableProperty(this, "isNaN", "isNaN", 1);

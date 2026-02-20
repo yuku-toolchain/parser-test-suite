@@ -1,0 +1,13 @@
+var obj = {};
+var proto = {
+  get: function () {
+    return "inheritedDataProperty";
+  }
+};
+var ConstructFun = function () {};
+ConstructFun.prototype = proto;
+var child = new ConstructFun();
+child.get = function () {
+  return "ownDataProperty";
+};
+Object.defineProperty(obj, "property", child);

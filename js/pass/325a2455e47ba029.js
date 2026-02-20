@@ -1,0 +1,12 @@
+var buffer = new ArrayBuffer(16);
+var obj1 = {
+  valueOf: function () {
+    return 1;
+  }
+};
+var obj2 = {
+  toString: function () {
+    return 1;
+  }
+};
+var items = [[-0, 0, "-0"], [obj1, 1, "object's valueOf"], [obj2, 1, "object's toString"], ["", 0, "the Empty string"], ["0", 0, "string '0'"], ["1", 1, "string '1'"], [false, 0, "false"], [true, 1, "true"], [NaN, 0, "NaN"], [null, 0, "null"], [0.1, 0, "0.1"], [0.9, 0, "0.9"], [1.1, 1, "1.1"], [1.9, 1, "1.9"], [-0.1, 0, "-0.1"], [-0.99999, 0, "-0.99999"]];

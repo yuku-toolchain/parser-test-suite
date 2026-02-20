@@ -1,0 +1,1 @@
+const offsetNanoseconds = Object.getOwnPropertyDescriptor(Temporal.ZonedDateTime.prototype, "offsetNanoseconds").get;

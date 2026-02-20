@@ -1,0 +1,12 @@
+const i32a = new Int32Array(new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT * 4));
+const valueOf = {
+  valueOf() {
+    return undefined;
+  }
+};
+const toPrimitive = {
+  [Symbol.toPrimitive]() {
+    return undefined;
+  }
+};
+Promise.all([Atomics.store(i32a, 0, 42), Atomics.waitAsync(i32a, 0, 0).value]).then(outcomes => {}).then($DONE, $DONE);

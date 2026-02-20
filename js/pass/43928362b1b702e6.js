@@ -1,0 +1,6 @@
+var props = new Date(0);
+props.prop = {
+  value: 12,
+  enumerable: true
+};
+var newObj = Object.create({}, props);

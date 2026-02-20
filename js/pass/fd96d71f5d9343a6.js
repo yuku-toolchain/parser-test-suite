@@ -1,0 +1,4 @@
+const instance = new Temporal.ZonedDateTime(217175010_123_987_500n, "+01:00");
+const expected = [["day", 217206000_000_000_000n], ["minute", 217175040_000_000_000n], ["second", 217175010_000_000_000n], ["millisecond", 217175010_124_000_000n], ["microsecond", 217175010_123_987_000n], ["nanosecond", 217175010_123_987_500n]];
+const roundingMode = "halfFloor";
+expected.forEach(([smallestUnit, expected]) => {});

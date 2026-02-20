@@ -1,0 +1,9 @@
+var callCount = 0;
+class C {
+  static *method({x: y} = {
+    x: 23
+  }) {
+    callCount = callCount + 1;
+  }
+}
+C.method().next();

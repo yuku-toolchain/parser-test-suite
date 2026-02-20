@@ -1,0 +1,10 @@
+var obj = {};
+var accessed = false;
+Number.prototype.enumerable = true;
+var numObj = new Number(-2);
+Object.defineProperty(obj, "property", numObj);
+for (var prop in obj) {
+  if (prop === "property") {
+    accessed = true;
+  }
+}

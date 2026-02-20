@@ -1,0 +1,1 @@
+var disposeAsync = AsyncDisposableStack.prototype.disposeAsync;

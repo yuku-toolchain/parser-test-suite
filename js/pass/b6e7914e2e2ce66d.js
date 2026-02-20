@@ -1,0 +1,2 @@
+var illegal = ['=', '==', '===', '====', '=====', 'A=', 'A==', 'A===', 'A====', 'A=====', 'AA====', 'AA=====', 'AAA==', 'AAA===', 'AAA====', 'AAA=====', 'AAAA=', 'AAAA==', 'AAAA===', 'AAAA====', 'AAAA=====', 'AAAAA=', 'AAAAA==', 'AAAAA===', 'AAAAA====', 'AAAAA====='];
+illegal.forEach(function (value) {});

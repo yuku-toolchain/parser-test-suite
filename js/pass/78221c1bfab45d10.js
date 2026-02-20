@@ -1,0 +1,24 @@
+var obj = {};
+obj.a = 1;
+obj.b = 2;
+Object.defineProperty(obj, "a", {
+  value: 11
+});
+var objKeys = [];
+for (var objKey in obj) {
+  objKeys.push(objKey);
+}
+var arr = [];
+Object.defineProperty(arr, "a", {
+  get: function () {},
+  enumerable: true,
+  configurable: true
+});
+arr.b = 2;
+Object.defineProperty(arr, "a", {
+  get: function () {}
+});
+var arrKeys = [];
+for (var arrKey in arr) {
+  arrKeys.push(arrKey);
+}

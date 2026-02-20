@@ -1,0 +1,3 @@
+const instance = new Temporal.ZonedDateTime(1_000_000_000_000_000_000n, "UTC", "iso8601");
+const invalidStrings = [["", "empty string"], ["1997-12-04[u-ca=notacal]", "Unknown calendar"]];
+for (const [arg, description] of invalidStrings) {}

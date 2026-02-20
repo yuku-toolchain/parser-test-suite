@@ -1,0 +1,1 @@
+var f = Function.prototype.bind;

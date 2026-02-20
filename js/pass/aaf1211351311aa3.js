@@ -1,0 +1,12 @@
+const timeZone = "UTC";
+const instance = new Temporal.ZonedDateTime(0n, timeZone);
+for (const calendar of ["2020-01-01", "2020-01-01[u-ca=iso8601]", "2020-01-01T00:00:00.000000000", "2020-01-01T00:00:00.000000000[u-ca=iso8601]", "01-01", "01-01[u-ca=iso8601]", "2020-01", "2020-01[u-ca=iso8601]"]) {
+  const arg = {
+    year: 1970,
+    monthCode: "M01",
+    day: 1,
+    timeZone,
+    calendar
+  };
+  const result = instance.equals(arg);
+}

@@ -1,0 +1,9 @@
+const inst = new Temporal.Instant(50000n);
+let result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, 0, 0, 3, 2, 1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, 0, 4, 3, 2, 1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, 5, 4, 3, 2, 1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 6, 5, 4, 3, 2, 1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, 0, 0, -3, -2, -1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, 0, -4, -3, -2, -1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, 0, -5, -4, -3, -2, -1));
+result = inst.add(new Temporal.Duration(0, 0, 0, 0, -6, -5, -4, -3, -2, -1));

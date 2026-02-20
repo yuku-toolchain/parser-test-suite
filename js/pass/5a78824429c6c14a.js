@@ -1,0 +1,22 @@
+testWithBigIntTypedArrayConstructors(TA => {
+  var BPE = TA.BYTES_PER_ELEMENT;
+  var ab = new ArrayBuffer(BPE * 4, {
+    maxByteLength: BPE * 5
+  });
+  var array = new TA(ab, BPE, 2);
+  try {
+    ab.resize(BPE * 5);
+  } catch (_) {}
+  array.findLast(() => {});
+  try {
+    ab.resize(BPE * 3);
+  } catch (_) {}
+  array.findLast(() => {});
+  var expectedError;
+  try {
+    ab.resize(BPE * 3 - 1);
+    expectedError = TypeError;
+  } catch (_) {
+    expectedError = Test262Error;
+  }
+});

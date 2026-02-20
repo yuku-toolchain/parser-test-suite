@@ -1,0 +1,8 @@
+var callCnt = 0;
+function callbackfn(val, idx, obj) {
+  callCnt++;
+}
+var arr = [1, 2, 3, 4, 5];
+arr["i"] = 10;
+arr[true] = 11;
+arr.forEach(callbackfn);

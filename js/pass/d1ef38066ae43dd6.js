@@ -1,0 +1,5 @@
+var sum = 0;
+for (var i = 1; i <= 10; i++) {
+  if (true) continue; else {}
+  sum += i;
+}

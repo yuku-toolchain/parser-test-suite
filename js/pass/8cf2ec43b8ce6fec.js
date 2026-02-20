@@ -1,0 +1,360 @@
+function verifyFormatParts(actual, expected, message) {
+  for (let i = 0; i < actual.length; ++i) {}
+}
+const tests = [["auto", [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}]], ["always", [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "plusSign",
+  "value": "+"
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "plusSign",
+  "value": "+"
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "plusSign",
+  "value": "+"
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}]], ["never", [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}]], ["exceptZero", [{
+  "type": "literal",
+  "value": "("
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}, {
+  "type": "literal",
+  "value": ")"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "0"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}], [{
+  "type": "plusSign",
+  "value": "+"
+}, {
+  "type": "currency",
+  "value": "US$"
+}, {
+  "type": "integer",
+  "value": "987"
+}, {
+  "type": "decimal",
+  "value": "."
+}, {
+  "type": "fraction",
+  "value": "00"
+}]]];
+for (const [signDisplay, negative, negativeNearZero, negativeZero, zero, positiveNearZero, positive] of tests) {
+  const nf = new Intl.NumberFormat("zh-TW", {
+    style: "currency",
+    currency: "USD",
+    currencySign: "accounting",
+    signDisplay
+  });
+  verifyFormatParts(nf.formatToParts(-987), negative, "negative");
+  verifyFormatParts(nf.formatToParts(-0.0001), negativeNearZero, "negativeNearZero");
+  verifyFormatParts(nf.formatToParts(-0), negativeZero, "negativeZero");
+  verifyFormatParts(nf.formatToParts(0), zero, "zero");
+  verifyFormatParts(nf.formatToParts(0.0001), positiveNearZero, "positiveNearZero");
+  verifyFormatParts(nf.formatToParts(987), positive, "positive");
+}

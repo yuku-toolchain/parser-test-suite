@@ -1,0 +1,1 @@
+var __executed = (/ab|cd|ef/).test("AEKFCD");

@@ -1,0 +1,10 @@
+function f() {
+  return gNonStrict();
+}
+(function () {
+  "use strict";
+  return new Function("return f();")();
+})();
+function gNonStrict() {
+  return gNonStrict.caller;
+}
