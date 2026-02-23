@@ -1,0 +1,1 @@
+var x = { \u0063onst } = { const: 42 };

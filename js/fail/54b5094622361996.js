@@ -1,0 +1,3 @@
+async function *gen() {
+  yi\u0065ld: ;
+}

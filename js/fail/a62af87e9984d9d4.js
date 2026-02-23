@@ -1,0 +1,2 @@
+for (; false; ) let
+[a] = 0;

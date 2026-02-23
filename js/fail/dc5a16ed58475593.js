@@ -1,0 +1,1 @@
+for (;false;) let x;

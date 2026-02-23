@@ -1,0 +1,1 @@
+(true instanceof false) = 1;

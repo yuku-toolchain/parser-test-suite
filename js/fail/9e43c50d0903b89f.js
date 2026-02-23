@@ -1,0 +1,5 @@
+switch (0) {
+  default:
+    using _ = null;
+    break;
+}

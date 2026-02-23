@@ -1,0 +1,3 @@
+var gen = function *g() {
+  var yi\u0065ld;
+};

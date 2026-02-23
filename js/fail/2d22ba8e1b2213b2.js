@@ -1,0 +1,1 @@
+var extends = 123;

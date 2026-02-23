@@ -1,0 +1,2 @@
+export default var x = null;
+export default var x = null;

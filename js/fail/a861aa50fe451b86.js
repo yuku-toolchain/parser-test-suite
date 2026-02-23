@@ -1,0 +1,1 @@
+let f = () => new import.source('<module source>');

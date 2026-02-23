@@ -1,0 +1,13 @@
+var binding;
+for (binding of [await null]) {
+  await null;
+  break;
+}
+for (var binding of [await null]) {
+  await null;
+  break;
+}
+for (let binding of [await null]) {
+  await null;
+  break;
+}

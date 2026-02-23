@@ -1,0 +1,5 @@
+class C {
+  method() {
+    foo().\u0023field;
+  }
+}

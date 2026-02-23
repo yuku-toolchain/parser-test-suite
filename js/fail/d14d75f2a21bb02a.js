@@ -1,0 +1,3 @@
+var C = class { async *#gen() {
+    yi\u0065ld: ;
+}};

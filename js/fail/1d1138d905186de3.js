@@ -1,0 +1,3 @@
+async function asyncFn() {
+  var \u0061wait;
+}

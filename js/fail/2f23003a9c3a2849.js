@@ -1,0 +1,3 @@
+async function f() {
+  label: await using x = null;
+}

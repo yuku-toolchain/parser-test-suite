@@ -1,0 +1,3 @@
+var foo = 1;
+export let x = await foo;
+export const y = await foo;

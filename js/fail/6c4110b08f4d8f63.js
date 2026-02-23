@@ -1,0 +1,3 @@
+async () => {
+  var \u0061wait;
+}

@@ -1,0 +1,9 @@
+var C = class {
+  #x;
+f() {
+    return this;
+  }
+m() {
+    this.f().# x;
+  }
+};

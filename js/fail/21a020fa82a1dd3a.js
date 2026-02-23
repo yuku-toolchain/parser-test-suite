@@ -1,0 +1,6 @@
+export let x = await new Promise(function (res, rej) {
+  res(1);
+});
+export const y = await new Promise(function (res, rej) {
+  res(1);
+});

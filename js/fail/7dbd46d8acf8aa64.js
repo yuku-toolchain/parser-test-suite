@@ -1,0 +1,4 @@
+class C extends (o) => [o.#foo]
+{
+  #foo;
+}

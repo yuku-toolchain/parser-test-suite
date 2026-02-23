@@ -1,0 +1,5 @@
+while (await new Promise(function (res, rej) {
+  res(1);
+})) {
+  break;
+}

@@ -1,0 +1,3 @@
+with ({}) {
+  typeof import.source.UNKNOWN;
+}

@@ -1,0 +1,4 @@
+var C = class {
+  x = 42
+  *gen() {}
+}

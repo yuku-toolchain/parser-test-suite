@@ -1,0 +1,3 @@
+class C {static *#gen() {
+    yi\u0065ld: ;
+}}

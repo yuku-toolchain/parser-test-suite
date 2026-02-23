@@ -1,0 +1,3 @@
+do {
+  typeof import.source;
+} while (false);

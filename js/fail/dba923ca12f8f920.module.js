@@ -1,0 +1,7 @@
+var await = 1;
+(function () {
+  "use strict";
+  ({
+    await
+  });
+});

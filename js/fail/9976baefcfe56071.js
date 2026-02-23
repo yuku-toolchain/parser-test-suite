@@ -1,0 +1,1 @@
+import defer x, * as ns from "./dep_FIXTURE.js";

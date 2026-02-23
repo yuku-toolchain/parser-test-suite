@@ -1,0 +1,3 @@
+function fn() {
+  return new import.defer('./empty_FIXTURE.js');
+}
