@@ -1,0 +1,13 @@
+var binding;
+for (binding in [await /1/]) {
+  await /1/;
+  break;
+}
+for (var binding in [await /1/]) {
+  await /1/;
+  break;
+}
+for (let binding in [await /1/]) {
+  await /1/;
+  break;
+}

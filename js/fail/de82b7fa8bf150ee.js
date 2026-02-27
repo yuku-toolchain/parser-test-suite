@@ -1,0 +1,3 @@
+async function f() {
+  return await typeof import.source.UNKNOWN;
+}

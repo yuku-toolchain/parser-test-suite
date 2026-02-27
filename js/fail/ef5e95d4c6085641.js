@@ -1,0 +1,3 @@
+var gen = async function *() {
+  \u0061wait: ;
+};

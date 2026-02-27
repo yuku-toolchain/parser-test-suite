@@ -1,0 +1,3 @@
+do {
+  import.defer(...['./empty_FIXTURE.js']);
+} while (false);

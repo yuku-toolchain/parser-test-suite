@@ -1,0 +1,5 @@
+class C {
+  static {
+    ((x = await) => 0);
+  }
+}

@@ -1,0 +1,1 @@
+var x = { \u0064elete } = { delete: 42 };

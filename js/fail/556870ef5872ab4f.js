@@ -1,0 +1,4 @@
+switch (true) {
+  case true:
+    using x = null;
+}

@@ -1,0 +1,3 @@
+var C = class { static *gen() {
+    var yi\u0065ld;
+}};

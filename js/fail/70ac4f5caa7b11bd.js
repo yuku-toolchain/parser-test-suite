@@ -1,0 +1,13 @@
+var binding;
+for (binding in [await await await await await await await await await await await await await await await 'await']) {
+  await await await await await await await await await await await await await await await 'await';
+  break;
+}
+for (var binding in [await await await await await await await await await await await await await await await 'await']) {
+  await await await await await await await await await await await await await await await 'await';
+  break;
+}
+for (let binding in [await await await await await await await await await await await await await await await 'await']) {
+  await await await await await await await await await await await await await await await 'await';
+  break;
+}

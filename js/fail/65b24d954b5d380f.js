@@ -1,0 +1,1 @@
+var x = { cl\u0061ss } = { class: 42 };

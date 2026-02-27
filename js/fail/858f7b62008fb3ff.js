@@ -1,0 +1,3 @@
+var C = class {*#gen() {
+    yi\u0065ld: ;
+}};

@@ -1,0 +1,6 @@
+function fn() {
+  return function () {};
+}
+export class C extends fn(await new Promise(function (res, rej) {
+  res(1);
+})) {}

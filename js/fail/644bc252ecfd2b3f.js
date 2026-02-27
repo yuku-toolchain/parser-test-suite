@@ -1,0 +1,3 @@
+label: {
+  typeof import.source;
+};

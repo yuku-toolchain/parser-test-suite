@@ -1,0 +1,3 @@
+async function fn() {
+  for await ([{ get x() {} }] of [[{}]]) {}
+}

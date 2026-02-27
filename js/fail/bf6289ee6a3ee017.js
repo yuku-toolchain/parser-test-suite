@@ -1,0 +1,5 @@
+var obj = {
+  async *method() {
+    void await;
+  }
+};

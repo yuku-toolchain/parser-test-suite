@@ -1,0 +1,3 @@
+var gen = function *g() {
+  yield: ;
+};

@@ -1,0 +1,1 @@
+delete x.y = 1;

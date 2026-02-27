@@ -1,0 +1,3 @@
+async function * f() {
+  await import.UNKNOWN('./empty_FIXTURE.js')
+}

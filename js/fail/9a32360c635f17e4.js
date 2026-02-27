@@ -1,0 +1,4 @@
+if (false) {
+    with ({}) let
+    [a] = 0;
+}

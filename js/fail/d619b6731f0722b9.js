@@ -1,0 +1,1 @@
+import defer { default as x } from "./dep_FIXTURE.js";

@@ -1,0 +1,3 @@
+async function f() {
+  if (true) {} else await using x = null;
+}

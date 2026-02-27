@@ -1,0 +1,3 @@
+async function* f() {
+    for await (import.meta of null) ;
+}

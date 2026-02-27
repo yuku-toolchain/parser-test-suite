@@ -1,0 +1,1 @@
+let f = () => import.source();

@@ -1,0 +1,3 @@
+async function * f() {
+  await typeof import.source
+}

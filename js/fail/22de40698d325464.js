@@ -1,0 +1,1 @@
+with ({}) const x = null;

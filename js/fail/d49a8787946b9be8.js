@@ -1,0 +1,3 @@
+class C { async *gen() {
+    void await;
+}}

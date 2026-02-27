@@ -1,0 +1,1 @@
+function obj.tt.ss() {}

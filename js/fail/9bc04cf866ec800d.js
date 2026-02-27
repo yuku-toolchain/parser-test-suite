@@ -1,0 +1,5 @@
+switch (0) {
+  case 0:
+    using _ = null;
+    break;
+}

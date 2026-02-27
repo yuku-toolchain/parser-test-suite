@@ -1,0 +1,1 @@
+await import('./module-import-rejection-body_FIXTURE.js');

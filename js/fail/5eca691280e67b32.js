@@ -1,0 +1,5 @@
+let x = 0;
+while (!x) {
+  x++;
+  new import.source('<module source>');
+};

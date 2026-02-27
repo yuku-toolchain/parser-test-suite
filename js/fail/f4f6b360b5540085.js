@@ -1,0 +1,6 @@
+export var name1 = await new Promise(function (res, rej) {
+  res(1);
+});
+export var {x = await new Promise(function (res, rej) {
+  res(1);
+})} = {};

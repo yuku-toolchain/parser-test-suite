@@ -1,0 +1,4 @@
+if (false) {
+} else {
+  import.defer(...['./empty_FIXTURE.js']);
+}
