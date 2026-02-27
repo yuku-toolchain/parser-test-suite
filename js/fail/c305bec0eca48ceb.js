@@ -1,0 +1,1 @@
+var x = { \u0069nstanceof } = { instanceof: 42 };

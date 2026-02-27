@@ -1,0 +1,3 @@
+class C { static async *gen() {
+    \u0061wait: ;
+}}

@@ -1,0 +1,4 @@
+var C = class extends (o) => [o.#foo]
+{
+  #foo;
+};

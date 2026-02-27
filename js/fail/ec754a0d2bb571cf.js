@@ -1,0 +1,6 @@
+class C {
+  #field;
+constructor() {
+    for (#field in value;;) break;
+  }
+}

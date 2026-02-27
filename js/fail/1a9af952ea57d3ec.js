@@ -1,0 +1,1 @@
+var x = { bre\u0061k } = { break: 42 };

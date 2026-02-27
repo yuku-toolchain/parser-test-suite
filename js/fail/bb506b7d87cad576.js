@@ -1,0 +1,1 @@
+0, class { get a(param = null) {} };

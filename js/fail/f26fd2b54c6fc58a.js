@@ -1,0 +1,3 @@
+class C { async *#gen() {
+    void yi\u0065ld;
+}}

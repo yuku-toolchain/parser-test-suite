@@ -1,0 +1,1 @@
+void await /1/;

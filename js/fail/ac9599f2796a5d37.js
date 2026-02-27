@@ -1,0 +1,6 @@
+async function f() {
+  switch (true) {
+    default:
+      await using x = null;
+  }
+}

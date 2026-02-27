@@ -1,0 +1,1 @@
+var x = { t\u0068row } = { throw: 42 };

@@ -1,0 +1,3 @@
+let f = () => {
+  import.UNKNOWN('./empty_FIXTURE.js');
+};

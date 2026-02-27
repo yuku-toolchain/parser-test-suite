@@ -1,0 +1,3 @@
+do {
+  import(...['']);
+} while (false);

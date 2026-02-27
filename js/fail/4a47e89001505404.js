@@ -1,0 +1,3 @@
+var C = class {*#gen() {
+    void yield;
+}};

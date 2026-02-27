@@ -1,0 +1,5 @@
+var obj = {
+  *method() {
+    void yi\u0065ld;
+  }
+};

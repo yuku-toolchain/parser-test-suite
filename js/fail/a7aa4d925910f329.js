@@ -1,0 +1,1 @@
+if (true) new import.source('<module source>');

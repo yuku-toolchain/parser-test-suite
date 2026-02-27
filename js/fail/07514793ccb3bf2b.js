@@ -1,0 +1,5 @@
+var C = class {
+  async #method() {
+    void await;
+  }
+};

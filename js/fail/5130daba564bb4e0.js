@@ -1,0 +1,2 @@
+export var name1 = await '';
+export var {x = await ''} = {};

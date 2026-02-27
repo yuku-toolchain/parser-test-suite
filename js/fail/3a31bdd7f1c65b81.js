@@ -1,0 +1,3 @@
+async function *gen() {
+  var await;
+}

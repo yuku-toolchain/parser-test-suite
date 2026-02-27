@@ -1,0 +1,3 @@
+with ({}) {
+  import.source(...['<module source>']);
+}

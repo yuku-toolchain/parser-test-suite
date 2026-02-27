@@ -1,0 +1,1 @@
+(async () => await new import.source('<module source>'))

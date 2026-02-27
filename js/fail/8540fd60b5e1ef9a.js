@@ -1,0 +1,5 @@
+class C {
+  async #method() {
+    var \u0061wait;
+  }
+}

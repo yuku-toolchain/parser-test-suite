@@ -1,0 +1,1 @@
+do function* g() {} while (false)

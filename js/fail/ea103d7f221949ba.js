@@ -1,0 +1,3 @@
+async function * f() {
+  await new import.defer('./empty_FIXTURE.js')
+}

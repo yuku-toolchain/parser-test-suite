@@ -1,0 +1,7 @@
+async function f() {
+  switch (0) {
+    case 0:
+      await using _ = null;
+      break;
+  }
+}

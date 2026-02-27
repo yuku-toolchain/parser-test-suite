@@ -1,0 +1,3 @@
+async function *gen() {
+  void yi\u0065ld;
+}

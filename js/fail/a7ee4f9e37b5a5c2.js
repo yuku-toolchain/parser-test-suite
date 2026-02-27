@@ -1,0 +1,1 @@
+var ns = await import('./module-import-resolution_FIXTURE.js');

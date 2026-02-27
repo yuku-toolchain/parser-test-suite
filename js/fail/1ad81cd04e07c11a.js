@@ -1,0 +1,1 @@
+var x = { whil\u0065 } = { while: 42 };

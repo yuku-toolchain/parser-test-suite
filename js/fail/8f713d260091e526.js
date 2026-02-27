@@ -1,0 +1,13 @@
+var x;
+x = await 42;
+x = await '';
+var s = Symbol();
+x = await s;
+x = await false;
+x = await true;
+x = await NaN;
+x = await null;
+x = await undefined;
+var obj = {};
+x = await obj;
+x = await Promise.resolve(1).then(v => v * 2).then(v => v * 3);

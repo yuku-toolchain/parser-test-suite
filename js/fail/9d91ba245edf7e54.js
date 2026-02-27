@@ -1,0 +1,1 @@
+var export = 123;

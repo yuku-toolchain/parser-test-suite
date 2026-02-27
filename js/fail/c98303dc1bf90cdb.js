@@ -1,0 +1,3 @@
+async function f() {
+  while (false) await using x = null;
+}

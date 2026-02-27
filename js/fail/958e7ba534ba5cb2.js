@@ -1,0 +1,1 @@
+do const x = null; while (false)

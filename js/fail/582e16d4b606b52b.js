@@ -1,0 +1,3 @@
+var C = class { async *gen() {
+    var await;
+}};

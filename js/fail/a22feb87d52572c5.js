@@ -1,0 +1,1 @@
+var x = { def\u0061ult } = { default: 42 };

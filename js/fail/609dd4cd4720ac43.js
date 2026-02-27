@@ -1,0 +1,3 @@
+async function* f() {
+  for await (var x o\u0066 []) ;
+}

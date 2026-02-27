@@ -1,0 +1,5 @@
+var C = class {
+  static async #method() {
+    \u0061wait: ;
+  }
+}

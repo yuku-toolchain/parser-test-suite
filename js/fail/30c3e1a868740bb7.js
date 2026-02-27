@@ -1,0 +1,5 @@
+var obj = {
+  async *method() {
+    void yi\u0065ld;
+  }
+};

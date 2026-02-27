@@ -1,0 +1,5 @@
+class C {
+  static async #method() {
+    void \u0061wait;
+  }
+}

@@ -1,0 +1,18 @@
+var foo = 1;
+try {
+  await foo;
+} catch (e) {
+  await foo;
+}
+try {
+  await foo;
+} finally {
+  await foo;
+}
+try {
+  await foo;
+} catch (e) {
+  await foo;
+} finally {
+  await foo;
+}

@@ -1,0 +1,3 @@
+var asyncFn = async function asyncFn() {
+  void await;
+};

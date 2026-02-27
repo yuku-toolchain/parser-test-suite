@@ -1,0 +1,3 @@
+var gen = async function *() {
+  yield: ;
+};

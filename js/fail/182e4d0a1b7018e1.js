@@ -1,0 +1,46 @@
+function StopSplice() {}
+var traps = [];
+var targetLength;
+var array = ["no-hole",  , "stop"];
+array.constructor = {
+  [Symbol.species]: function(n) {
+    targetLength = n;
+    return target;
+  }
+};
+var source = new Proxy(array, allowProxyTraps({
+  get(t, pk, r) {
+    traps.push(`source.[[Get]]:${String(pk)}`);
+if (pk === "length")
+      return 2 ** 53 + 2;
+return Reflect.get(t, pk, r);
+  },
+  has(t, pk, r) {
+    traps.push(`source.[[Has]]:${String(pk)}`);
+return Reflect.get(t, pk, r);
+  },
+}));
+var target = new Proxy([], allowProxyTraps({
+  defineProperty(t, pk, desc) {
+    traps.push(`target.[[DefineProperty]]:${String(pk)}`);
+if (pk === "0" || pk === "1")
+      return Reflect.defineProperty(t, pk, desc);
+throw new StopSplice();
+  }
+}));
+assert.throws(StopSplice, function() {
+Array.prototype.splice.call(source, 0, 2 ** 53 + 4);
+}, '
+assert.sameValue(targetLength, 2 ** 53 - 1,
+  'The value of targetLength is expected to be 2 ** 53 - 1');
+assert.compareArray(traps, [
+  "source.[[Get]]:length",
+"source.[[Get]]:constructor",
+"source.[[Has]]:0",
+  "source.[[Get]]:0",
+  "target.[[DefineProperty]]:0",
+"source.[[Has]]:1",
+"source.[[Has]]:2",
+  "source.[[Get]]:2",
+  "target.[[DefineProperty]]:2",
+], 'The value of traps is expected to be [\n  "source.[[Get]]:length",\n\n  "source.[[Get]]:constructor",\n\n  "source.[[Has]]:0",\n  "source.[[Get]]:0",\n  "target.[[DefineProperty]]:0",\n\n  "source.[[Has]]:1",\n\n  "source.[[Has]]:2",\n  "source.[[Get]]:2",\n  "target.[[DefineProperty]]:2",\n]');

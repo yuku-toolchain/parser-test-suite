@@ -1,0 +1,3 @@
+with ({}) {
+  import.UNKNOWN('./empty_FIXTURE.js');
+}
