@@ -1,0 +1,4 @@
+const obj = { [Symbol.dispose]() { } };
+async function f() {
+  for (await using x = obj of []) {}
+}

@@ -1,0 +1,5 @@
+void {
+  set x(eval) {
+    "use strict";
+  }
+};

@@ -1,0 +1,5 @@
+void {
+  get x() {
+    public = 42;
+  }
+};

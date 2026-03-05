@@ -1,0 +1,1 @@
+({ set m(x) { export default null; } });

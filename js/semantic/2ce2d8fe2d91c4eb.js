@@ -1,0 +1,5 @@
+class C {
+  async *method(a,...rest) {
+    "use strict";
+  }
+}

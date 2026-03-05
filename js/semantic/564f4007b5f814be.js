@@ -1,0 +1,10 @@
+class C {
+  #x;
+x() {
+    var g = this.f;
+    delete ((g().#x));
+  }
+f() {
+  return this;
+  }
+}

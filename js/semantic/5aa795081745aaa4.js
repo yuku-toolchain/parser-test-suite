@@ -1,0 +1,1 @@
+{ const f = 0; const f = 0 }

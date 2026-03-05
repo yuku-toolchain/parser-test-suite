@@ -1,0 +1,3 @@
+for (const x in {}) {
+  var x;
+}

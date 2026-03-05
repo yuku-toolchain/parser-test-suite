@@ -1,0 +1,3 @@
+for (let x of []) {
+  var x;
+}

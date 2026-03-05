@@ -1,0 +1,1 @@
+import * as ns from './instn-star-star-cycle-2_FIXTURE.js';

@@ -1,0 +1,6 @@
+void {
+  get x() {
+    "use strict";
+    public = 42;
+  }
+};

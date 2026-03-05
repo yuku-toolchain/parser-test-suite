@@ -1,0 +1,7 @@
+var static = 1;
+(function() {
+  "use strict";
+  ({
+    static
+  });
+});

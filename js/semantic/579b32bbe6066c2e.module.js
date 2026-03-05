@@ -1,0 +1,1 @@
+let f = function (arguments, p = eval("var arguments")) {};

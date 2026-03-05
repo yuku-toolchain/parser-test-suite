@@ -1,0 +1,1 @@
+function fn() { this.#x }

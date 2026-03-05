@@ -1,0 +1,3 @@
+var x;
+export { x };
+import { x as eval } from './early-import-as-eval.js';

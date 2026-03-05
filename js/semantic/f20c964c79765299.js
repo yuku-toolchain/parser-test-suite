@@ -1,0 +1,1 @@
+import "./dep-1_FIXTURE.js";

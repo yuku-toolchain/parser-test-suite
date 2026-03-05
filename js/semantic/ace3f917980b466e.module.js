@@ -1,0 +1,1 @@
+({ set m(x) { import v from './decl-pos-import-object-setter.js'; } });

@@ -1,0 +1,1 @@
+(function*() { import v from './decl-pos-import-generator-expr.js'; });

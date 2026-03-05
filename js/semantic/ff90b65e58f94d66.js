@@ -1,0 +1,1 @@
+{ let f; const f = 0 }

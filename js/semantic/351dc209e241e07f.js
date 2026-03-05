@@ -1,0 +1,6 @@
+import "./setup_FIXTURE.js";
+import.defer("./tla_FIXTURE.js").then(ns => {
+  assert.compareArray(globalThis.evaluations, ["tla start", "tla end"]);
+  ns.x;
+  assert.compareArray(globalThis.evaluations, ["tla start", "tla end"]);
+}).then($DONE, $DONE);

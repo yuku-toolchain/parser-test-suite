@@ -1,0 +1,5 @@
+0, {
+  async *method({property}) {
+    "use strict";
+  }
+};

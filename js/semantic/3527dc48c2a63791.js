@@ -1,0 +1,5 @@
+var C = class extends Function{
+  set method(_) {
+      super();
+  }
+};

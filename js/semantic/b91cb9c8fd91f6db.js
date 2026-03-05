@@ -1,0 +1,5 @@
+var C = class {
+  static async method(a,...rest) {
+    "use strict";
+  }
+};

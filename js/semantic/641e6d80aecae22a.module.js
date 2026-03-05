@@ -1,0 +1,1 @@
+var af = package => 1;

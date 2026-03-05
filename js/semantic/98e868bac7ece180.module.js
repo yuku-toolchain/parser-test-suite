@@ -1,0 +1,2 @@
+for (var y in [])
+  export default null;

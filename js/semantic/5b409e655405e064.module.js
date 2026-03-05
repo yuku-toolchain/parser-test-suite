@@ -1,0 +1,4 @@
+var f = function () {
+   var o = {};
+   with (o) {};
+};

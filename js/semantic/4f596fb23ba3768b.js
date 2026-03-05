@@ -1,0 +1,1 @@
+import value from './json-value-null_FIXTURE.json' with { type: 'json' };

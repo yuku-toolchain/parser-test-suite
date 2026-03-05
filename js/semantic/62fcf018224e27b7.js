@@ -1,0 +1,8 @@
+class C {
+  #x;
+  g = this.f;
+  x = delete (g().#x);
+  f() {
+  return this;
+  }
+}

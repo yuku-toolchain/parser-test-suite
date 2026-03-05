@@ -1,0 +1,6 @@
+class C {
+  #x = () => {
+    var t = () => arguments;
+    t();
+  }
+}

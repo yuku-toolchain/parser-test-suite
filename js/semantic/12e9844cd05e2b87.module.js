@@ -1,0 +1,11 @@
+var log = [];
+var env = {};
+var proxy = new Proxy(env, allowProxyTraps({
+  has(t, pk) {
+    log.push("has:" + String(pk));
+    return Reflect.has(t, pk);
+  }
+}));
+with (proxy) {
+  Object;
+}

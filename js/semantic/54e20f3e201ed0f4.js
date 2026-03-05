@@ -1,0 +1,7 @@
+var C = class {
+  #x;
+x() {
+delete this.#m
+;
+  }
+}

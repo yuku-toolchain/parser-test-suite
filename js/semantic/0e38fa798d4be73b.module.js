@@ -1,0 +1,4 @@
+export * from './import-attribute-3_FIXTURE.js' with {
+  type: 'json',
+  'typ\u0065': ''
+};

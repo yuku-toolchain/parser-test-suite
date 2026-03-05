@@ -1,0 +1,2 @@
+for (y of [])
+  export default null;

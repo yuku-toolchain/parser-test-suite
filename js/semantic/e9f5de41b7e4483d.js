@@ -1,0 +1,8 @@
+class C {
+  m() {
+    class Outter {
+      #x = 42;
+    }
+this.#x;
+  }
+}
