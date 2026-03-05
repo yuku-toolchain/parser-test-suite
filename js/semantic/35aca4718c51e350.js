@@ -1,0 +1,5 @@
+var C = class extends Function{
+  static get method() {
+      super();
+  }
+};

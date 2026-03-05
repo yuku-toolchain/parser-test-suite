@@ -1,0 +1,1 @@
+import * as ns from './set-prototype-of-null.js';

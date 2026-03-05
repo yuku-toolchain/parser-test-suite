@@ -1,0 +1,7 @@
+import * as ns from './get-str-update.js';
+export var local1 = 111;
+var local2 = 222;
+export {local2 as renamed};
+export {local1 as indirect} from './get-str-update.js';
+local1 = 333;
+local2 = 444;

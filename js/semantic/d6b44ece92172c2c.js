@@ -1,0 +1,7 @@
+function foo() {
+  'use strict';
+  function f() {
+    var o = {};
+    with (o) {};
+  }
+}

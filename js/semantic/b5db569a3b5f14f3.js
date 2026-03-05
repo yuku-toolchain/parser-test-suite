@@ -1,0 +1,3 @@
+(async ({property}) => {
+  "use strict";
+});

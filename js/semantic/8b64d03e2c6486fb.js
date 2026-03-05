@@ -1,0 +1,1 @@
+(async function foo (foo = super.foo) { var bar; });

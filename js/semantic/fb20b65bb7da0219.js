@@ -1,0 +1,3 @@
+0, class {
+  static *g(x = yield) {}
+};

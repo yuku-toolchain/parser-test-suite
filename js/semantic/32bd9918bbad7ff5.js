@@ -1,0 +1,4 @@
+var C = class extends class { x = this.#foo; }
+{
+  #foo;
+};

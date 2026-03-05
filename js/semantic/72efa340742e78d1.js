@@ -1,0 +1,4 @@
+0, class {
+  *method(x = 0, x) {
+}
+};

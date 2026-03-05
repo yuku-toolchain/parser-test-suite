@@ -1,0 +1,1 @@
+var x = ({ prot\u0065cted }) => {};

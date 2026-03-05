@@ -1,0 +1,7 @@
+var private = 1;
+(function() {
+  "use strict";
+  ({
+    private
+  });
+});

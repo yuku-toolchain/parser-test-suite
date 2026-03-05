@@ -1,0 +1,2 @@
+for (let y of [])
+  export default null;

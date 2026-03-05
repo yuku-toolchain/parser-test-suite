@@ -1,0 +1,7 @@
+class A {
+  *g() {
+    function h() {
+      yield = 1;
+    }
+  }
+}

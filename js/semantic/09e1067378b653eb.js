@@ -1,0 +1,3 @@
+function x() {
+  { async function* f() {}; var f; }
+}

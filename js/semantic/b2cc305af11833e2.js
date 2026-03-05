@@ -1,0 +1,1 @@
+import val from './eval-gtbndng-indirect-update-dflt_FIXTURE.js';

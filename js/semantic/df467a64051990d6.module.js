@@ -1,0 +1,3 @@
+for (await using x of []) {
+  var x;
+}

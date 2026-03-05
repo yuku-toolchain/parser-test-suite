@@ -1,0 +1,3 @@
+class C {
+  [this.#f] = 'Test262'
+}

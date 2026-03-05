@@ -1,0 +1,5 @@
+var C = class {
+  m() {
+    function fn() { (() => {})().#x }
+  }
+};

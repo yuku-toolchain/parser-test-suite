@@ -1,0 +1,1 @@
+switch (0) { case 1: function f() {} default: const f = 0 }

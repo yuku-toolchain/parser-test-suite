@@ -1,0 +1,7 @@
+var interface = 1;
+(function() {
+  "use strict";
+  ({
+    interface
+  });
+});

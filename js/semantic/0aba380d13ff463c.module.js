@@ -1,0 +1,1 @@
+if (true) {} else function g() {}

@@ -1,0 +1,2 @@
+export var name1 = await (function () {});
+export var {x = await (function () {})} = {};

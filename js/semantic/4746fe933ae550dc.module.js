@@ -1,0 +1,3 @@
+var x;
+export { x as z };
+export * as z from './early-dup-export-as-star-as.js';

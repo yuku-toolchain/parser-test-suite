@@ -1,0 +1,1 @@
+async (x = 1) => {"use strict"}

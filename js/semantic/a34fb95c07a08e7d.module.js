@@ -1,0 +1,1 @@
+var obj = { get(a) { with(a){} } };

@@ -1,0 +1,1 @@
+switch (0) { case 1: const f = 0; default: async function f() {} }

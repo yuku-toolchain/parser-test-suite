@@ -1,0 +1,7 @@
+var public = 1;
+(function() {
+  "use strict";
+  ({
+    public
+  });
+});

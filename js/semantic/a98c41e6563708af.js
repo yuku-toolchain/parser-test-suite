@@ -1,0 +1,1 @@
+async function foo (bar) { let bar; }

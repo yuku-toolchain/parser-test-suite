@@ -1,0 +1,5 @@
+class C extends Function{
+  static set method(_) {
+      super();
+  }
+}

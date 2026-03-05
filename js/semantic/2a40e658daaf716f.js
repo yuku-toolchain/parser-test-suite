@@ -1,0 +1,6 @@
+class C {
+  #field;
+static method() {
+    #field in yield;
+  }
+}

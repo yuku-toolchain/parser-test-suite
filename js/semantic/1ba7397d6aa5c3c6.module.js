@@ -1,0 +1,5 @@
+void {
+  set x(value) {
+    public = 42;
+  }
+};

@@ -1,0 +1,1 @@
+var x = { privat\u0065 } = { private: 42 };

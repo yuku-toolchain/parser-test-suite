@@ -1,0 +1,1 @@
+(async function*(a) { const a = 0; });

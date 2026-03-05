@@ -1,0 +1,2 @@
+for (const y of [])
+  export default null;

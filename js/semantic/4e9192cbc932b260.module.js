@@ -1,0 +1,1 @@
+({ get m() { import v from './decl-pos-import-object-getter.js'; } });

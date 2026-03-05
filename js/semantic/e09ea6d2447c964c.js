@@ -1,0 +1,6 @@
+export let x = await ({
+  function() {}
+});
+export const y = await ({
+  function() {}
+});

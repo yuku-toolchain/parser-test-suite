@@ -1,0 +1,5 @@
+0, class {
+  static async *method([element]) {
+    "use strict";
+  }
+};
