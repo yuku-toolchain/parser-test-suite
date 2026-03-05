@@ -1,0 +1,1 @@
+function f() { import v from './decl-pos-import-function-decl.js'; }

@@ -1,0 +1,2 @@
+for (let x = 0; false;)
+  export default null;

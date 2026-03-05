@@ -1,0 +1,4 @@
+var C = class {
+  set #m(_) {}
+  #m() {}
+};

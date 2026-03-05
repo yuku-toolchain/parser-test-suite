@@ -1,0 +1,1 @@
+class yi\u0065ld {}

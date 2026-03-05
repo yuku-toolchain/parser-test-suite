@@ -1,0 +1,5 @@
+0, class {
+  static *method(a,...rest) {
+    "use strict";
+  }
+};

@@ -1,0 +1,3 @@
+0, async function* g({property}) {
+  "use strict";
+};

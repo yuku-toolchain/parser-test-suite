@@ -1,0 +1,6 @@
+try{
+} catch(e){
+	continue LABEL2;
+	LABEL2 : do {
+	} while(0);
+};

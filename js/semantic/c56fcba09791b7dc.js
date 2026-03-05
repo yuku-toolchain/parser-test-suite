@@ -1,0 +1,1 @@
+{ let f; class f {} }

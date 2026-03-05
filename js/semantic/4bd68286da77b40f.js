@@ -1,0 +1,7 @@
+var yield = 1;
+(function() {
+  "use strict";
+  ({
+    yield
+  });
+});

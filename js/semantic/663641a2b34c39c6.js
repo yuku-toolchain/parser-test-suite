@@ -1,0 +1,4 @@
+class C {
+  *method(x = 0, x) {
+}
+}

@@ -1,0 +1,8 @@
+class Parent {
+  #x = 42;
+}
+class C extends Parent {
+  m() {
+    something.#x
+  }
+}

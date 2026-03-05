@@ -1,0 +1,7 @@
+class C {
+  static {
+    x: while (false) {
+      continue y;
+    }
+  }
+}

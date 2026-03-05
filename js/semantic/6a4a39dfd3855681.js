@@ -1,0 +1,5 @@
+class C {
+  async method({property}) {
+    "use strict";
+  }
+}

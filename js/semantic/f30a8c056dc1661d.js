@@ -1,0 +1,6 @@
+function _13_0_10_fun() {
+    function _13_0_10_inner() {
+        "use strict";
+        eval = 42;
+    }
+}

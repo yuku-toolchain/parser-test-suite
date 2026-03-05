@@ -1,0 +1,7 @@
+class C {
+  static {
+    (() => {
+      using await = null;
+    });
+  }
+}

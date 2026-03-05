@@ -1,0 +1,3 @@
+var x;
+export default x;
+export * as default from './early-dup-export-start-as-dflt.js';

@@ -1,0 +1,5 @@
+var smoosh;
+function smoosh() {}
+if (false) {} else {
+  import('./empty_FIXTURE.js');
+}

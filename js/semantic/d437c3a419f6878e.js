@@ -1,0 +1,5 @@
+0, {
+  *method(a,...rest) {
+    "use strict";
+  }
+};

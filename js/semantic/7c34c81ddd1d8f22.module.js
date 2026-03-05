@@ -1,0 +1,1 @@
+var x = { st\u0061tic } = { static: 42 };

@@ -1,0 +1,5 @@
+var obj = {
+    *foo(a) {
+        const a = 3;
+    }
+};

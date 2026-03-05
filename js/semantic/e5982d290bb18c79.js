@@ -1,0 +1,6 @@
+function fn() {
+  return function () {};
+}
+export default class extends fn(await ({
+  function() {}
+})) {}

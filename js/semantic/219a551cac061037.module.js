@@ -1,0 +1,13 @@
+var callCount = 0;
+var C = class {*gen() {
+    callCount += 1;
+    return {
+         ...(function() {
+            var yield;
+            throw new Test262Error();
+         }()),
+      }
+}}
+var gen = C.prototype.gen;
+var iter = gen();
+assert.sameValue(callCount, 1);

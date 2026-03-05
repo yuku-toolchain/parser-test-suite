@@ -1,0 +1,5 @@
+class C extends Function{
+  get method() {
+      super();
+  }
+}

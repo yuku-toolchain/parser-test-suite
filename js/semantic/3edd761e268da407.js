@@ -1,0 +1,2 @@
+const obj = { [Symbol.dispose]() { } };
+for (using x = obj of []) {}

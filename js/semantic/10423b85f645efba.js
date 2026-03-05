@@ -1,0 +1,5 @@
+class C {
+  static {
+    (class { [argument\u0073]() {} });
+  }
+}

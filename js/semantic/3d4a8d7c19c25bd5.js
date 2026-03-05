@@ -1,0 +1,3 @@
+var f = function(a = 0) {
+  "use strict";
+}

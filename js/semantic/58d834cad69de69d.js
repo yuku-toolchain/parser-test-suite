@@ -1,0 +1,5 @@
+var o = {
+  set m(a = 0) {
+    "use strict";
+  }
+};

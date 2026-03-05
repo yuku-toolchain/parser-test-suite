@@ -1,0 +1,7 @@
+import defer * as ns from "./dep_FIXTURE.js";
+verifyProperty(ns, Symbol.toStringTag, {
+  value: "Deferred Module",
+  writable: false,
+  enumerable: false,
+  configurable: false,
+});

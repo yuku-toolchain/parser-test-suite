@@ -1,0 +1,1 @@
+export let test262 = 23;

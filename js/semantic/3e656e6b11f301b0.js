@@ -1,0 +1,5 @@
+0, class {
+  async *method(a,...rest) {
+    "use strict";
+  }
+};

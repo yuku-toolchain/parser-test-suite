@@ -1,0 +1,5 @@
+for (let f in {
+  key: 0
+}) {
+  if (false) function _f() {} else function f() {}
+}

@@ -1,0 +1,1 @@
+var af = (arguments) => 1;
