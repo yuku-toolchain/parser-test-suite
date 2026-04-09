@@ -1,0 +1,173 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "asyncTest",
+            "start": 941,
+            "end": 950
+          },
+          "arguments": [
+            {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": true,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "kind": "var",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "stack",
+                          "start": 977,
+                          "end": 982
+                        },
+                        "init": {
+                          "type": "NewExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "AsyncDisposableStack",
+                            "start": 989,
+                            "end": 1009
+                          },
+                          "arguments": [],
+                          "start": 985,
+                          "end": 1011
+                        },
+                        "start": 977,
+                        "end": 1011
+                      }
+                    ],
+                    "start": 973,
+                    "end": 1012
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "stack",
+                          "start": 1015,
+                          "end": 1020
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "use",
+                          "start": 1021,
+                          "end": 1024
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 1015,
+                        "end": 1024
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "undefined",
+                          "start": 1025,
+                          "end": 1034
+                        }
+                      ],
+                      "optional": false,
+                      "start": 1015,
+                      "end": 1035
+                    },
+                    "start": 1015,
+                    "end": 1036
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AwaitExpression",
+                      "argument": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "name": "stack",
+                            "start": 1045,
+                            "end": 1050
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "disposeAsync",
+                            "start": 1051,
+                            "end": 1063
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 1045,
+                          "end": 1063
+                        },
+                        "arguments": [],
+                        "optional": false,
+                        "start": 1045,
+                        "end": 1065
+                      },
+                      "start": 1039,
+                      "end": 1065
+                    },
+                    "start": 1039,
+                    "end": 1066
+                  }
+                ],
+                "start": 969,
+                "end": 1068
+              },
+              "expression": false,
+              "start": 951,
+              "end": 1068
+            }
+          ],
+          "optional": false,
+          "start": 941,
+          "end": 1069
+        },
+        "start": 941,
+        "end": 1070
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 1071
+  },
+  "diagnostics": [],
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
+      "start": 0,
+      "end": 55
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 56,
+      "end": 126
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-asyncdisposablestack.prototype.use\ndescription: Does not throw when argument is 'undefined'\ninfo: |\n  AsyncDisposableStack.prototype.use ( value )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], value, async-dispose).\n  ...\n\n  AddDisposableResource ( disposeCapability, V, hint [, method ] )\n\n  1. If method is not present then,\n    a. If V is either null or undefined and hint is sync-dispose, then\n      i. Return unused\n    ...\n  ...\n\nfeatures: [explicit-resource-management]\nflags: [async]\nincludes: [asyncHelpers.js]\n---",
+      "start": 128,
+      "end": 939
+    }
+  ]
+}
