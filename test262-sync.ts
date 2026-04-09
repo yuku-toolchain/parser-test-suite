@@ -4,7 +4,6 @@ const HISTORY_FILE = "test262-sync.md";
 const TEST_FOLDERS = [
   "test/annexB/",
   "test/built-ins/",
-  "test/harness/",
   "test/intl402/",
   "test/language/",
   "test/staging/",
@@ -108,6 +107,7 @@ for (const commit of commits) {
     if (
       f.status === "added" &&
       f.filename.endsWith(".js") &&
+      !f.filename.includes("_FIXTURE") &&
       TEST_FOLDERS.some((dir: string) => f.filename.startsWith(dir))
     ) {
       added.set(f.filename, commit.sha);
