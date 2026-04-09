@@ -37,6 +37,8 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
       outputPath,
       JSON.stringify(
         output,
+        // JSON can't represent bigints or regexps natively
+        // So we tag them with a prefix to preserve them in snapshots
         (_, value) => {
           if (typeof value === "bigint") {
             return `(BigInt) ${value}n`;
