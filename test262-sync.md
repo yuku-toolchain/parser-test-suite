@@ -1,6 +1,6 @@
 # test262 sync history
 
-## 2026-04-08
+## 2026-04-09
 
 - [12d05aa2726e.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/since/roundingmode-half-boundary.js)
 - [10f011f1359e.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/until/roundingmode-half-boundary.js)
@@ -46,7 +46,6 @@
 - [dd876085d416.js](https://github.com/tc39/test262/blob/main/test/language/expressions/dynamic-import/import-attributes/2nd-param-with-type-text.js)
 - [c73d71cf2067.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-empty.js)
 - [bf3937c13901.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-javascript.js)
-- [1b7797c75a96.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-javascript_FIXTURE.js)
 - [ce190f0ba63c.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-self.js)
 - [69dee9bbd361.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-string.js)
 - [b131a7decfee.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-attributes/text-via-namespace.js)
@@ -104,10 +103,7 @@
 - [fb4757f829f0.js](https://github.com/tc39/test262/blob/main/test/built-ins/AsyncDisposableStack/prototype/use/throws-if-value-missing-Symbol.asyncDispose-and-Symbol.dispose.js)
 - [51788514ccf6.js](https://github.com/tc39/test262/blob/main/test/built-ins/DisposableStack/prototype/adopt/throws-if-disposed.js)
 - [f71090b6b4a3.js](https://github.com/tc39/test262/blob/main/test/built-ins/DisposableStack/prototype/defer/throws-if-disposed.js)
-- [ddd0c1bd8c7a.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/deferred-namespace-object/deferred_ns_export_FIXTURE.js)
-- [38d0deb820ce.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/deferred-namespace-object/dep2_FIXTURE.js)
 - [f122b4a38cb5.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/deferred-namespace-object/reexport-deferred-ns-evaluation.js)
-- [8dfcf3b4279e.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/deferred-namespace-object/setup_FIXTURE.js)
 - [c7edf70a2f2a.module.js](https://github.com/tc39/test262/blob/main/test/language/expressions/dynamic-import/import-defer/import-defer-transitive-async-module/promise-prototype-then-not-called.js)
 - [9476b8bb00b0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/string-shorthand-no-object-prototype-pollution.js)
 - [cba9af1b4a29.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/string-shorthand-no-object-prototype-pollution.js)
@@ -302,18 +298,3 @@
 - [d574fbb93e43.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainMonthDay/prototype/toLocaleString/basic.js)
 - [355be9789cf2.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainTime/prototype/toLocaleString/basic.js)
 - [9b2ec54bed86.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainYearMonth/prototype/toLocaleString/basic.js)
-- [9cbb97b0496f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/extensible.js)
-- [c38c5ec526b4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/length.js)
-- [1661038cf165.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/name.js)
-- [ffa3ec9cbf45.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/not-a-constructor.js)
-- [b81089b5c2cd.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/prop-desc.js)
-- [e354bebd3aad.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/proto.js)
-- [e4dd6fa3549d.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/extensible.js)
-- [dab3f10e7c0b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/length.js)
-- [226538fc499c.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/name.js)
-- [20d9a5916900.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/not-a-constructor.js)
-- [ae8a41a141de.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/prop-desc.js)
-- [28a79a1af88a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/proto.js)
-- [bbd871556a28.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/compare/relativeto-string.js)
-- [1f90d5b1013f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-string.js)
-- [c443ffbfd66a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/relativeto-string.js)
