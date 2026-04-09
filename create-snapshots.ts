@@ -32,9 +32,14 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
       astType,
       preserveParens: true
     });
+
+    if (result.errors.length > 0) {
+      throw new Error(`parse errors:\n${result.errors.map((e) => `  ${e.message}`).join("\n")}`);
+    }
+
     const output = {
       program: result.program,
-      errors: result.errors,
+      diagnostics: result.errors,
       comments: result.comments,
     };
 
