@@ -74,7 +74,7 @@ function isModule(yaml: string) {
 }
 
 function contentHash(code: string) {
-  return new Bun.CryptoHasher("sha256").update(code).digest("hex").slice(0, 12);
+  return new Bun.CryptoHasher("sha256").update(code).digest("hex").slice(0, 16);
 }
 
 function parseDays() {

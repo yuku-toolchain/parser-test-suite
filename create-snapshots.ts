@@ -16,7 +16,7 @@ const FOLDERS: FolderConfig[] = [
 async function processFile(folderPath: string, fileName: string, lang: Lang, astType: AstType) {
   const filePath = join(folderPath, fileName);
 
-  const outputName = `${fileName.replace('.js', '').replace('.module', '')}.snapshot.json`;
+  const outputName = `${fileName.replace(/\.(module\.)?(j|t)sx?$/, '')}.snapshot.json`;
   const outputPath = join(folderPath, "snapshots", outputName);
 
   if (await Bun.file(outputPath).exists()) {
