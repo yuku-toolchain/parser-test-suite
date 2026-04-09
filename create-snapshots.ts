@@ -16,6 +16,13 @@ const FOLDERS: FolderConfig[] = [
 async function processFile(folderPath: string, fileName: string, lang: Lang, astType: AstType) {
   const filePath = join(folderPath, fileName);
 
+  const outputName = `${fileName.replace('.js', '').replace('.module', '')}.snapshot.json`;
+  const outputPath = join(folderPath, "snapshots", outputName);
+
+  if (await Bun.file(outputPath).exists()) {
+    return;
+  }
+
   try {
     const source = await Bun.file(filePath).text();
     const isModule = fileName.includes(".module.js");
@@ -31,8 +38,6 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
       comments: result.comments,
     };
 
-    const outputName = `${fileName.replace('.js', '').replace('.module', '')}.snapshot.json`;
-    const outputPath = join(folderPath, "snapshots", outputName);
     await Bun.write(
       outputPath,
       JSON.stringify(
