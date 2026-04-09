@@ -1,4 +1,4 @@
-name: update-snapshots
+name: create-snapshots
 
 on:
   workflow_dispatch:
@@ -7,13 +7,13 @@ permissions:
   contents: write
 
 jobs:
-  update-snapshots:
+  create-snapshots:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
       - run: bun install
-      - run: bun run update-snapshots
+      - run: bun run create-snapshots
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -21,6 +21,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "update snapshots $(date -u +%Y-%m-%d)"
+            git commit -m "create snapshots $(date -u +%Y-%m-%d)"
             git push
           fi
