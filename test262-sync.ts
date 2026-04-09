@@ -65,7 +65,8 @@ function parseFlags(yaml: string) {
 }
 
 function shouldFail(yaml: string) {
-  return parseNegativePhase(yaml) === "parse";
+  const phase = parseNegativePhase(yaml);
+  return phase === "parse" || phase === "early";
 }
 
 function isModule(yaml: string) {
