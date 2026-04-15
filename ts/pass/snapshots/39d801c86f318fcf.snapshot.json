@@ -1,0 +1,538 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "decorators": [],
+          "name": "distinguish",
+          "optional": false,
+          "typeAnnotation": null,
+          "start": 29,
+          "end": 40
+        },
+        "generator": false,
+        "async": false,
+        "declare": false,
+        "typeParameters": null,
+        "params": [
+          {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "thing",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "TSTypeAnnotation",
+              "typeAnnotation": {
+                "type": "TSUnionType",
+                "types": [
+                  {
+                    "type": "TSStringKeyword",
+                    "start": 48,
+                    "end": 54
+                  },
+                  {
+                    "type": "TSNumberKeyword",
+                    "start": 57,
+                    "end": 63
+                  },
+                  {
+                    "type": "TSTypeReference",
+                    "typeName": {
+                      "type": "Identifier",
+                      "decorators": [],
+                      "name": "Date",
+                      "optional": false,
+                      "typeAnnotation": null,
+                      "start": 66,
+                      "end": 70
+                    },
+                    "typeArguments": null,
+                    "start": 66,
+                    "end": 70
+                  }
+                ],
+                "start": 48,
+                "end": 70
+              },
+              "start": 46,
+              "end": 70
+            },
+            "start": 41,
+            "end": 70
+          }
+        ],
+        "returnType": null,
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "decorators": [],
+                  "name": "thing",
+                  "optional": false,
+                  "typeAnnotation": null,
+                  "start": 83,
+                  "end": 88
+                },
+                "operator": "instanceof",
+                "right": {
+                  "type": "Identifier",
+                  "decorators": [],
+                  "name": "Object",
+                  "optional": false,
+                  "typeAnnotation": null,
+                  "start": 100,
+                  "end": 106
+                },
+                "start": 83,
+                "end": 106
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "decorators": [],
+                          "name": "console",
+                          "optional": false,
+                          "typeAnnotation": null,
+                          "start": 119,
+                          "end": 126
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "decorators": [],
+                          "name": "log",
+                          "optional": false,
+                          "typeAnnotation": null,
+                          "start": 127,
+                          "end": 130
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 119,
+                        "end": 130
+                      },
+                      "typeArguments": null,
+                      "arguments": [
+                        {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "Literal",
+                            "value": "Aha!! It's a Date in ",
+                            "raw": "\"Aha!! It's a Date in \"",
+                            "start": 131,
+                            "end": 154
+                          },
+                          "operator": "+",
+                          "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "object": {
+                                "type": "Identifier",
+                                "decorators": [],
+                                "name": "thing",
+                                "optional": false,
+                                "typeAnnotation": null,
+                                "start": 157,
+                                "end": 162
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "decorators": [],
+                                "name": "getFullYear",
+                                "optional": false,
+                                "typeAnnotation": null,
+                                "start": 163,
+                                "end": 174
+                              },
+                              "optional": false,
+                              "computed": false,
+                              "start": 157,
+                              "end": 174
+                            },
+                            "typeArguments": null,
+                            "arguments": [],
+                            "optional": false,
+                            "start": 157,
+                            "end": 176
+                          },
+                          "start": 131,
+                          "end": 176
+                        }
+                      ],
+                      "optional": false,
+                      "start": 119,
+                      "end": 177
+                    },
+                    "directive": null,
+                    "start": 119,
+                    "end": 178
+                  }
+                ],
+                "start": 108,
+                "end": 185
+              },
+              "alternate": {
+                "type": "IfStatement",
+                "test": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "UnaryExpression",
+                    "operator": "typeof",
+                    "argument": {
+                      "type": "Identifier",
+                      "decorators": [],
+                      "name": "thing",
+                      "optional": false,
+                      "typeAnnotation": null,
+                      "start": 202,
+                      "end": 207
+                    },
+                    "prefix": true,
+                    "start": 195,
+                    "end": 207
+                  },
+                  "operator": "===",
+                  "right": {
+                    "type": "Literal",
+                    "value": "string",
+                    "raw": "'string'",
+                    "start": 212,
+                    "end": 220
+                  },
+                  "start": 195,
+                  "end": 220
+                },
+                "consequent": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "decorators": [],
+                            "name": "console",
+                            "optional": false,
+                            "typeAnnotation": null,
+                            "start": 233,
+                            "end": 240
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "decorators": [],
+                            "name": "log",
+                            "optional": false,
+                            "typeAnnotation": null,
+                            "start": 241,
+                            "end": 244
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 233,
+                          "end": 244
+                        },
+                        "typeArguments": null,
+                        "arguments": [
+                          {
+                            "type": "BinaryExpression",
+                            "left": {
+                              "type": "Literal",
+                              "value": "Aha!! It's a string of length ",
+                              "raw": "\"Aha!! It's a string of length \"",
+                              "start": 245,
+                              "end": 277
+                            },
+                            "operator": "+",
+                            "right": {
+                              "type": "MemberExpression",
+                              "object": {
+                                "type": "Identifier",
+                                "decorators": [],
+                                "name": "thing",
+                                "optional": false,
+                                "typeAnnotation": null,
+                                "start": 280,
+                                "end": 285
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "decorators": [],
+                                "name": "length",
+                                "optional": false,
+                                "typeAnnotation": null,
+                                "start": 286,
+                                "end": 292
+                              },
+                              "optional": false,
+                              "computed": false,
+                              "start": 280,
+                              "end": 292
+                            },
+                            "start": 245,
+                            "end": 292
+                          }
+                        ],
+                        "optional": false,
+                        "start": 233,
+                        "end": 293
+                      },
+                      "directive": null,
+                      "start": 233,
+                      "end": 294
+                    }
+                  ],
+                  "start": 222,
+                  "end": 301
+                },
+                "alternate": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "decorators": [],
+                            "name": "console",
+                            "optional": false,
+                            "typeAnnotation": null,
+                            "start": 318,
+                            "end": 325
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "decorators": [],
+                            "name": "log",
+                            "optional": false,
+                            "typeAnnotation": null,
+                            "start": 326,
+                            "end": 329
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 318,
+                          "end": 329
+                        },
+                        "typeArguments": null,
+                        "arguments": [
+                          {
+                            "type": "BinaryExpression",
+                            "left": {
+                              "type": "Literal",
+                              "value": "Aha!! It's the number ",
+                              "raw": "\"Aha!! It's the number \"",
+                              "start": 330,
+                              "end": 354
+                            },
+                            "operator": "+",
+                            "right": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "object": {
+                                  "type": "Identifier",
+                                  "decorators": [],
+                                  "name": "thing",
+                                  "optional": false,
+                                  "typeAnnotation": null,
+                                  "start": 357,
+                                  "end": 362
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "decorators": [],
+                                  "name": "toPrecision",
+                                  "optional": false,
+                                  "typeAnnotation": null,
+                                  "start": 363,
+                                  "end": 374
+                                },
+                                "optional": false,
+                                "computed": false,
+                                "start": 357,
+                                "end": 374
+                              },
+                              "typeArguments": null,
+                              "arguments": [
+                                {
+                                  "type": "Literal",
+                                  "value": 3,
+                                  "raw": "3",
+                                  "start": 375,
+                                  "end": 376
+                                }
+                              ],
+                              "optional": false,
+                              "start": 357,
+                              "end": 377
+                            },
+                            "start": 330,
+                            "end": 377
+                          }
+                        ],
+                        "optional": false,
+                        "start": 318,
+                        "end": 378
+                      },
+                      "directive": null,
+                      "start": 318,
+                      "end": 379
+                    }
+                  ],
+                  "start": 307,
+                  "end": 386
+                },
+                "start": 191,
+                "end": 386
+              },
+              "start": 79,
+              "end": 386
+            }
+          ],
+          "start": 72,
+          "end": 389
+        },
+        "expression": false,
+        "start": 20,
+        "end": 389
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "distinguish",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 393,
+            "end": 404
+          },
+          "typeArguments": null,
+          "arguments": [
+            {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "Date",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 409,
+                "end": 413
+              },
+              "typeArguments": null,
+              "arguments": [],
+              "start": 405,
+              "end": 415
+            }
+          ],
+          "optional": false,
+          "start": 393,
+          "end": 416
+        },
+        "directive": null,
+        "start": 393,
+        "end": 417
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "distinguish",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 419,
+            "end": 430
+          },
+          "typeArguments": null,
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "beef",
+              "raw": "\"beef\"",
+              "start": 431,
+              "end": 437
+            }
+          ],
+          "optional": false,
+          "start": 419,
+          "end": 438
+        },
+        "directive": null,
+        "start": 419,
+        "end": 439
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "distinguish",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 441,
+            "end": 452
+          },
+          "typeArguments": null,
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": 3.14159265,
+              "raw": "3.14159265",
+              "start": 453,
+              "end": 463
+            }
+          ],
+          "optional": false,
+          "start": 441,
+          "end": 464
+        },
+        "directive": null,
+        "start": 441,
+        "end": 465
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 20,
+    "end": 465
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " @target: es2015",
+      "start": 0,
+      "end": 18
+    }
+  ],
+  "diagnostics": []
+}
