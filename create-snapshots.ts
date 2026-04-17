@@ -55,24 +55,30 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
       diagnostics: [],
     };
 
-    await Bun.write(
-      outputPath,
-      JSON.stringify(
-        output,
-        // JSON can't represent bigints or regexps natively
-        // So we tag them with a prefix to preserve them in snapshots
-        (_, value) => {
-          if (typeof value === "bigint") {
-            return `(BigInt) ${value}n`;
-          }
-          if (value instanceof RegExp) {
-            return `(RegExp) ${value.toString()}`;
-          }
-          return value;
-        },
-        2
-      )
+    const serialized = JSON.stringify(
+      output,
+      // JSON can't represent bigints or regexps natively
+      // So we tag them with a prefix to preserve them in snapshots
+      (_, value) => {
+        if (typeof value === "bigint") {
+          return `(BigInt) ${value}n`;
+        }
+        if (value instanceof RegExp) {
+          return `(RegExp) ${value.toString()}`;
+        }
+        return value;
+      },
+      2
     );
+
+    if (Buffer.byteLength(serialized, "utf8") > 100 * 1024 * 1024) {
+      rmSync(outputPath, { force: true });
+      rmSync(filePath, { force: true });
+      console.error(`skipped ${filePath}: snapshot exceeds 100MB`);
+      return;
+    }
+
+    await Bun.write(outputPath, serialized);
   } catch (error) {
     rmSync(outputPath, { force: true });
 
