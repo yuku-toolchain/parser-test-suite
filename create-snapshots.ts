@@ -66,6 +66,12 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
         if (value instanceof RegExp) {
           return `(RegExp) ${value.toString()}`;
         }
+        // oxc-parser emits non-standard `attributes`/`selfClosing` on
+        // JSXOpeningFragment in .jsx mode.
+        if (value && typeof value === "object" && value.type === "JSXOpeningFragment") {
+          const { attributes: _, selfClosing: __, ...rest } = value;
+          return rest;
+        }
         return value;
       },
       2
