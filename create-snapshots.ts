@@ -6,12 +6,16 @@ import { rmSync } from "fs";
 type Lang = ParserOptions["lang"];
 type AstType = ParserOptions["astType"];
 
-type FolderConfig = { path: string; allowFailures?: boolean };
+type FolderConfig = {
+  path: string;
+  failPath?: string;
+  allowFailures?: boolean;
+};
 
 const FOLDERS: FolderConfig[] = [
-  { path: "js/pass" },
-  { path: "jsx/pass" },
-  { path: "ts/pass", allowFailures: true },
+  { path: "js/pass", failPath: "js/fail" },
+  { path: "jsx/pass", failPath: "jsx/fail" },
+  { path: "ts/pass", failPath: "ts/fail", allowFailures: true },
 ];
 
 function detectLang(fileName: string): Lang {
@@ -25,11 +29,11 @@ function detectAstType(lang: Lang): AstType {
   return lang === "ts" || lang === "tsx" ? "ts" : "js";
 }
 
-async function processFile(folderPath: string, fileName: string, lang: Lang, astType: AstType, allowFailures: boolean) {
-  const filePath = join(folderPath, fileName);
+async function processFile(folder: FolderConfig, fileName: string, lang: Lang, astType: AstType) {
+  const filePath = join(folder.path, fileName);
 
   const outputName = `${fileName.replace(/\.(module\.)?(j|t)sx?$/, '')}.snapshot.json`;
-  const outputPath = join(folderPath, "snapshots", outputName);
+  const outputPath = join(folder.path, "snapshots", outputName);
 
   if (await Bun.file(outputPath).exists()) {
     return;
@@ -45,8 +49,17 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
       preserveParens: true
     });
 
-    if (result.errors.length > 0 && !allowFailures) {
+    if (result.errors.length > 0 && !folder.allowFailures) {
       throw new Error(`parse errors:\n${result.errors.map((e) => `  ${e.message}`).join("\n")}`);
+    }
+
+    if (result.errors.length > 0 && result.program.body.length === 0) {
+      if (folder.failPath) {
+        const failPath = join(folder.failPath, fileName);
+        await Bun.write(failPath, source);
+        rmSync(filePath, { force: true });
+      }
+      return;
     }
 
     const output = {
@@ -97,7 +110,7 @@ async function processFolder(folder: FolderConfig) {
     for await (const file of glob.scan(folder.path)) {
       const lang = detectLang(file);
       const astType = detectAstType(lang);
-      await processFile(folder.path, file, lang, astType, !!folder.allowFailures);
+      await processFile(folder, file, lang, astType);
     }
   } catch (error) {
     console.error(`cannot open ${folder.path}:`, error);
