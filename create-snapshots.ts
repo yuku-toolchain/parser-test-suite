@@ -50,7 +50,7 @@ async function processFile(folderPath: string, fileName: string, lang: Lang, ast
     }
 
     const output = {
-      program: result.program,
+      program: { ...result.program, start: 0 },
       comments: result.comments,
       diagnostics: [],
     };
