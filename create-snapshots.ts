@@ -9,13 +9,12 @@ type AstType = ParserOptions["astType"];
 type FolderConfig = {
   path: string;
   failPath?: string;
-  allowFailures?: boolean;
 };
 
 const FOLDERS: FolderConfig[] = [
   { path: "js/pass", failPath: "js/fail" },
   { path: "jsx/pass", failPath: "jsx/fail" },
-  { path: "ts/pass", failPath: "ts/fail", allowFailures: true },
+  { path: "ts/pass", failPath: "ts/fail" },
 ];
 
 function detectLang(fileName: string): Lang {
@@ -49,11 +48,7 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
       preserveParens: true
     });
 
-    if (result.errors.length > 0 && !folder.allowFailures) {
-      throw new Error(`parse errors:\n${result.errors.map((e) => `  ${e.message}`).join("\n")}`);
-    }
-
-    if (result.errors.length > 0 && result.program.body.length === 0) {
+    if (result.errors.length > 0) {
       if (folder.failPath) {
         const failPath = join(folder.failPath, fileName);
         await Bun.write(failPath, source);
