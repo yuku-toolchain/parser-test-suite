@@ -1,0 +1,209 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ClassDeclaration",
+        "decorators": [],
+        "id": {
+          "type": "Identifier",
+          "decorators": [],
+          "name": "Foo",
+          "optional": false,
+          "typeAnnotation": null,
+          "start": 28,
+          "end": 31
+        },
+        "typeParameters": null,
+        "superClass": null,
+        "superTypeArguments": null,
+        "implements": [],
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "decorators": [],
+              "key": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "bar",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 41,
+                "end": 44
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "generator": false,
+                "async": false,
+                "declare": false,
+                "typeParameters": null,
+                "params": [],
+                "returnType": null,
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "x",
+                        "raw": "\"x\"",
+                        "start": 56,
+                        "end": 59
+                      },
+                      "start": 49,
+                      "end": 60
+                    }
+                  ],
+                  "start": 47,
+                  "end": 62
+                },
+                "expression": false,
+                "start": 44,
+                "end": 62
+              },
+              "kind": "method",
+              "computed": false,
+              "static": true,
+              "override": false,
+              "optional": false,
+              "accessibility": null,
+              "start": 34,
+              "end": 62
+            }
+          ],
+          "start": 32,
+          "end": 64
+        },
+        "abstract": false,
+        "declare": false,
+        "start": 22,
+        "end": 64
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "decorators": [],
+              "name": "baz",
+              "optional": false,
+              "typeAnnotation": null,
+              "start": 72,
+              "end": 75
+            },
+            "init": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "Foo",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 78,
+                "end": 81
+              },
+              "property": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "b",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 82,
+                "end": 83
+              },
+              "optional": false,
+              "computed": false,
+              "start": 78,
+              "end": 83
+            },
+            "definite": false,
+            "start": 72,
+            "end": 83
+          }
+        ],
+        "declare": false,
+        "start": 68,
+        "end": 84
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "decorators": [],
+              "name": "baz",
+              "optional": false,
+              "typeAnnotation": null,
+              "start": 111,
+              "end": 114
+            },
+            "property": {
+              "type": "Identifier",
+              "decorators": [],
+              "name": "concat",
+              "optional": false,
+              "typeAnnotation": null,
+              "start": 115,
+              "end": 121
+            },
+            "optional": false,
+            "computed": false,
+            "start": 111,
+            "end": 121
+          },
+          "typeArguments": null,
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "y",
+              "raw": "\"y\"",
+              "start": 122,
+              "end": 125
+            }
+          ],
+          "optional": false,
+          "start": 111,
+          "end": 126
+        },
+        "directive": null,
+        "start": 111,
+        "end": 127
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 174
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " @target: es2015",
+      "start": 0,
+      "end": 18
+    },
+    {
+      "type": "Line",
+      "value": " Foo.b won't bind. ",
+      "start": 88,
+      "end": 109
+    },
+    {
+      "type": "Line",
+      "value": " So we don't want an error on 'concat'.",
+      "start": 133,
+      "end": 174
+    }
+  ],
+  "diagnostics": []
+}
