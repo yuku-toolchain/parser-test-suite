@@ -84,6 +84,8 @@ function parseDays() {
   return idx !== -1 ? parseInt(Bun.argv[idx + 1], 10) || 1 : 1;
 }
 
+const skipHistory = Bun.argv.includes("--skip-history");
+
 const { mkdir } = await import("node:fs/promises");
 await mkdir("js/pass", { recursive: true });
 await mkdir("js/fail", { recursive: true });
@@ -142,22 +144,26 @@ for (const [path] of added) {
   }
 }
 
-const date = new Date().toISOString().slice(0, 10);
-const lines = saved.map(
-  (f) => `- [${f.filename}](https://github.com/${REPO}/blob/main/${f.path})`
-);
-const entry = `## ${date}\n\n${lines.join("\n")}\n`;
+if (!skipHistory) {
+  const date = new Date().toISOString().slice(0, 10);
+  const lines = saved.map(
+    (f) => `- [${f.filename}](https://github.com/${REPO}/blob/main/${f.path})`
+  );
+  const entry = `## ${date}\n\n${lines.join("\n")}\n`;
 
-const historyFile = Bun.file(HISTORY_FILE);
-const raw = (await historyFile.exists()) ? await historyFile.text() : "";
-const normalized =
-  raw.trim() === ""
-    ? `${HISTORY_HEADER}\n\n`
-    : raw.startsWith(HISTORY_HEADER)
-      ? raw
-      : `${HISTORY_HEADER}\n\n${raw}`;
-const rest = normalized.slice(HISTORY_HEADER.length).replace(/^\n+/, "");
-await Bun.write(HISTORY_FILE, `${HISTORY_HEADER}\n\n${entry}${rest}`);
+  const historyFile = Bun.file(HISTORY_FILE);
+  const raw = (await historyFile.exists()) ? await historyFile.text() : "";
+  const normalized =
+    raw.trim() === ""
+      ? `${HISTORY_HEADER}\n\n`
+      : raw.startsWith(HISTORY_HEADER)
+        ? raw
+        : `${HISTORY_HEADER}\n\n${raw}`;
+  const rest = normalized.slice(HISTORY_HEADER.length).replace(/^\n+/, "");
+  await Bun.write(HISTORY_FILE, `${HISTORY_HEADER}\n\n${entry}${rest}`);
+} else {
+  console.log(`${LOG_PREFIX} Skipped history file (--skip-history).`);
+}
 
 console.log(`${LOG_PREFIX} Done. ${saved.length} file(s) synced.`);
 
