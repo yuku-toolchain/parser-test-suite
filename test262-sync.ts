@@ -160,7 +160,7 @@ if (!skipHistory) {
         ? raw
         : `${HISTORY_HEADER}\n\n${raw}`;
   const rest = normalized.slice(HISTORY_HEADER.length).replace(/^\n+/, "");
-  await Bun.write(HISTORY_FILE, `${HISTORY_HEADER}\n\n${entry}${rest}`);
+  await Bun.write(HISTORY_FILE, `${HISTORY_HEADER}\n\n${entry}\n${rest}`);
 } else {
   console.log(`${LOG_PREFIX} Skipped history file (--skip-history).`);
 }
