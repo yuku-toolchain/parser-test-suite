@@ -1,5 +1,7 @@
 const REPO = "tc39/test262";
 const HISTORY_FILE = "test262-sync.md";
+const HISTORY_HEADER = "# test262 sync history";
+const LOG_PREFIX = "[test262]";
 
 const TEST_FOLDERS = [
   "test/annexB/",
@@ -87,11 +89,11 @@ await mkdir("js/pass", { recursive: true });
 await mkdir("js/fail", { recursive: true });
 
 const days = parseDays();
-console.log(`Checking last ${days} day(s)...`);
+console.log(`${LOG_PREFIX} Checking last ${days} day(s)...`);
 
 const commits = await getRecentCommits(days);
 if (!commits.length) {
-  console.log("No commits found.");
+  console.log(`${LOG_PREFIX} No commits found.`);
   process.exit(0);
 }
 
@@ -116,11 +118,11 @@ for (const commit of commits) {
 }
 
 if (!added.size) {
-  console.log("No new .js test files added.");
+  console.log(`${LOG_PREFIX} No new .js test files added.`);
   process.exit(0);
 }
 
-console.log(`Found ${added.size} new file(s).`);
+console.log(`${LOG_PREFIX} Found ${added.size} new file(s).`);
 
 const saved: { filename: string; path: string }[] = [];
 
@@ -134,9 +136,9 @@ for (const [path] of added) {
     const filename = `${hash}${ext}`;
     await Bun.write(`js/${category}/${filename}`, code);
     saved.push({ filename, path });
-    console.log(`  ${category}: ${filename} <- ${path}`);
+    console.log(`${LOG_PREFIX}   ${category}: ${filename} <- ${path}`);
   } catch (e: any) {
-    console.log(`  skip: ${path} (${e.message})`);
+    console.log(`${LOG_PREFIX}   skip: ${path} (${e.message})`);
   }
 }
 
@@ -144,12 +146,19 @@ const date = new Date().toISOString().slice(0, 10);
 const lines = saved.map(
   (f) => `- [${f.filename}](https://github.com/${REPO}/blob/main/${f.path})`
 );
-const entry = `\n## ${date}\n\n${lines.join("\n")}\n`;
+const entry = `## ${date}\n\n${lines.join("\n")}\n`;
 
 const historyFile = Bun.file(HISTORY_FILE);
-const existing = (await historyFile.exists()) ? await historyFile.text() : "# test262 sync history\n";
-await Bun.write(HISTORY_FILE, existing + entry);
+const raw = (await historyFile.exists()) ? await historyFile.text() : "";
+const normalized =
+  raw.trim() === ""
+    ? `${HISTORY_HEADER}\n\n`
+    : raw.startsWith(HISTORY_HEADER)
+      ? raw
+      : `${HISTORY_HEADER}\n\n${raw}`;
+const rest = normalized.slice(HISTORY_HEADER.length).replace(/^\n+/, "");
+await Bun.write(HISTORY_FILE, `${HISTORY_HEADER}\n\n${entry}${rest}`);
 
-console.log(`Done. ${saved.length} file(s) synced.`);
+console.log(`${LOG_PREFIX} Done. ${saved.length} file(s) synced.`);
 
-export {}
+export {};
