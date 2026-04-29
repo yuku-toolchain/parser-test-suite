@@ -14,7 +14,7 @@ type FolderConfig = {
 const FOLDERS: FolderConfig[] = [
   { path: "js/pass", failPath: "js/fail" },
   { path: "jsx/pass", failPath: "jsx/fail" },
-  { path: "ts/pass", failPath: "ts/fail" },
+  { path: "ts" },
 ];
 
 function detectLang(fileName: string): Lang {
@@ -50,10 +50,9 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
 
     if (result.errors.length > 0) {
       if (folder.failPath) {
-        const failPath = join(folder.failPath, fileName);
-        await Bun.write(failPath, source);
-        rmSync(filePath, { force: true });
+        await Bun.write(join(folder.failPath, fileName), source);
       }
+      rmSync(filePath, { force: true });
       return;
     }
 

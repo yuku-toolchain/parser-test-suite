@@ -141,8 +141,7 @@ function outputName(hash: string, isModule: boolean, repoPath: string) {
 }
 
 const { mkdir } = await import("node:fs/promises");
-await mkdir("ts/pass", { recursive: true });
-await mkdir("ts/fail", { recursive: true });
+await mkdir("ts", { recursive: true });
 
 const days = parseDays();
 console.log(`${LOG_PREFIX} Checking last ${days} day(s)...`);
@@ -189,12 +188,15 @@ for (const [path] of added) {
       console.log(`${LOG_PREFIX}   skip (${c.reason}): ${path}`);
       continue;
     }
+    if (c.kind === "fail") {
+      console.log(`${LOG_PREFIX}   skip (syntactic errors): ${path}`);
+      continue;
+    }
     const hash = contentHash(source);
     const filename = outputName(hash, c.asModule, path);
-    const category = c.kind === "fail" ? "fail" : "pass";
-    await Bun.write(`ts/${category}/${filename}`, source);
+    await Bun.write(`ts/${filename}`, source);
     saved.push({ filename, path });
-    console.log(`${LOG_PREFIX}   ${category}: ${filename} <- ${path}`);
+    console.log(`${LOG_PREFIX}   pass: ${filename} <- ${path}`);
   } catch (e: any) {
     console.log(`${LOG_PREFIX}   skip: ${path} (${e.message})`);
   }
