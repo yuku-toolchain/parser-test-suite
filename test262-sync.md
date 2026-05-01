@@ -1,5 +1,12 @@
 # test262 sync history
 
+## 2026-04-30
+
+- [275ecd17aa2c98f8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-plaindate-large-time-component-out-of-range.js)
+- [ba744cba9d75b0fc.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-zoneddatetime-large-time-component-out-of-range.js)
+- [ec801660c5baef46.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/relativeto-plaindate-large-time-component-out-of-range.js)
+- [32c503e904072fce.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/relativeto-zoneddatetime-large-time-component-out-of-range.js)
+
 ## 2026-04-28
 
 - [90cf494515318d78.js](https://github.com/tc39/test262/blob/main/test/staging/set-is-subset-of-empty-index.js)
