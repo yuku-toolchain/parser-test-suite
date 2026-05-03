@@ -194,7 +194,7 @@ for (const [path] of added) {
     }
     const hash = contentHash(source);
     const filename = outputName(hash, c.asModule, path);
-    await Bun.write(`ts/${filename}`, source);
+    await Bun.write(`ts/pass/${filename}`, source);
     saved.push({ filename, path });
     console.log(`${LOG_PREFIX}   pass: ${filename} <- ${path}`);
   } catch (e: any) {
