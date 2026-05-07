@@ -1,5 +1,13 @@
 # test262 sync history
 
+## 2026-05-07
+
+- [2ab8ab518c24ac9c.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/prop-desc.js)
+- [20687c2fe1f12d4e.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/return-immutable.js)
+- [6e9aea93a82536e3.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/this-has-no-arraybufferdata-internal.js)
+- [1d1aa788e2886301.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/this-is-not-object.js)
+- [a71a946ea25a9999.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/this-is-sharedarraybuffer.js)
+
 ## 2026-04-30
 
 - [275ecd17aa2c98f8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-plaindate-large-time-component-out-of-range.js)
