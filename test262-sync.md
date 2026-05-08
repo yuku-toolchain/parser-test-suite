@@ -1,5 +1,19 @@
 # test262 sync history
 
+## 2026-05-08
+
+- [57be271ee6a8dca7.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/argument-coercion.js)
+- [be3ff3746abbf013.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/modify-source-after-return.js)
+- [c7a9fa50607e306c.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/not-a-constructor.js)
+- [0caaf5a1e7387363.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/prop-desc.js)
+- [86f80edaf234f3c3.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-becomes-detached.js)
+- [0afb54f4a26dc8ee.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-grows.js)
+- [9d8b32a99912636f.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-has-no-arraybufferdata-internal.js)
+- [aacc655eb0d1a2fe.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-is-not-detached.js)
+- [34adc5be5f011112.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-is-not-object.js)
+- [7ffb44132f460d69.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-is-sharedarraybuffer.js)
+- [195de3b57629aeac.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/this-shrinks.js)
+
 ## 2026-05-07
 
 - [2ab8ab518c24ac9c.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/immutable/prop-desc.js)
