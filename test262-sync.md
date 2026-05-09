@@ -1,5 +1,12 @@
 # test262 sync history
 
+## 2026-05-09
+
+- [021352b0812eb1fe.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/from/custom-ctor-returns-immutable-arraybuffer.js)
+- [ce0873ca117cdcf5.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/of/custom-ctor-returns-immutable-arraybuffer.js)
+- [0bb460865002aa48.js](https://github.com/tc39/test262/blob/main/test/built-ins/Uint8Array/prototype/setFromBase64/throws-when-target-is-backed-by-immutable-arraybuffer.js)
+- [b3afe3ca5bcdcc39.js](https://github.com/tc39/test262/blob/main/test/built-ins/Uint8Array/prototype/setFromHex/throws-when-target-is-backed-by-immutable-arraybuffer.js)
+
 ## 2026-05-08
 
 - [57be271ee6a8dca7.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/sliceToImmutable/argument-coercion.js)
