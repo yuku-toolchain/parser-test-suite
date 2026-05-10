@@ -14,7 +14,7 @@ type FolderConfig = {
 const FOLDERS: FolderConfig[] = [
   { path: "js/pass", failPath: "js/fail" },
   { path: "jsx/pass", failPath: "jsx/fail" },
-  { path: "ts" },
+  { path: "ts/pass" },
 ];
 
 function detectLang(fileName: string): Lang {
