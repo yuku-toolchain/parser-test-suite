@@ -1,5 +1,17 @@
 # test262 sync history
 
+## 2026-05-16
+
+- [b3c45d6d45e31535.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/add/immutable-buffer.js)
+- [5aa97121f08249e1.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/and/immutable-buffer.js)
+- [b74f9d7541e8a28a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/compareExchange/immutable-buffer.js)
+- [7c6b8a15272abc99.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/exchange/immutable-buffer.js)
+- [82a0cf4cf61cd6a7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/notify/immutable-buffer-returns-0.js)
+- [bd8b751638db907f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/or/immutable-buffer.js)
+- [4f1a74aa65800e4f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/store/immutable-buffer.js)
+- [b7773b765ef69c8a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/sub/immutable-buffer.js)
+- [1a593850bcbc359f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/xor/immutable-buffer.js)
+
 ## 2026-05-15
 
 - [ee209818e3401927.js](https://github.com/tc39/test262/blob/main/test/built-ins/ArrayBuffer/prototype/transferToImmutable/new-length-coercion.js)
