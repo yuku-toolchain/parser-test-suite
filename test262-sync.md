@@ -1,5 +1,16 @@
 # test262 sync history
 
+## 2026-05-18
+
+- [1455ccf2bbd2fdfc.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/copyWithin/immutable-buffer.js)
+- [0c97eb61a35bca67.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/fill/immutable-buffer.js)
+- [c7b1165100ff5bdd.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/reverse/immutable-buffer.js)
+- [ae1534f5edee3737.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/set/immutable-buffer.js)
+- [903e807dea6870cf.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/sort/immutable-buffer.js)
+- [1047eccb842109c6.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/filter/speciesctor-destination-backed-by-immutable-buffer.js)
+- [f5944fa510138111.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/map/speciesctor-destination-backed-by-immutable-buffer.js)
+- [7e84c15b51fc6a1c.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/slice/speciesctor-destination-backed-by-immutable-buffer.js)
+
 ## 2026-05-16
 
 - [b3c45d6d45e31535.js](https://github.com/tc39/test262/blob/main/test/built-ins/Atomics/add/immutable-buffer.js)
