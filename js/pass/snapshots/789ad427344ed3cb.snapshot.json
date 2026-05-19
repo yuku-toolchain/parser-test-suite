@@ -217,7 +217,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -226,7 +225,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -235,7 +233,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.move\ndescription: Resources in the stack are not disposed when move is called.\ninfo: |\n  AsyncDisposableStack.prototype.move ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Let newAsyncDisposableStack be ? OrdinaryCreateFromConstructor(%AsyncDisposableStack%, \"%AsyncDisposableStack.prototype%\", « [[AsyncDisposableState]], [[DisposeCapability]] »).\n  5. Set newAsyncDisposableStack.[[AsyncDisposableState]] to pending.\n  6. Set newAsyncDisposableStack.[[DisposeCapability]] to asyncDisposableStack.[[DisposeCapability]].\n  7. Set asyncDisposableStack.[[DisposeCapability]] to NewDisposeCapability().\n  8. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  9. Return newAsyncDisposableStack.\n\nfeatures: [explicit-resource-management]\n---",

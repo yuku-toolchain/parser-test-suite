@@ -1135,7 +1135,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Danial Asaria (Bloomberg LP). All rights reserved.",
@@ -1144,7 +1143,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1153,7 +1151,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-performpromiseallkeyed\ndescription: >\n  Promise.allSettledKeyed result key order matches property key order, not settlement order\ninfo: |\n  PerformPromiseAllKeyed ( variant, promises, constructor, resultCapability, promiseResolve )\n\n  ...\n  1. Let allKeys be ? promises.[[OwnPropertyKeys]]().\n  ...\n  6. For each element key of allKeys, do\n    ...\n    b. If desc is not undefined and desc.[[Enumerable]] is true, then\n      ...\n      ii. Append key to keys.\n      ...\n    ...\n  ...\n  8. If remainingElementsCount.[[Value]] = 0, then\n    ...\n    b. Let result be CreateKeyedPromiseCombinatorResultObject(keys, values).\nincludes: [asyncHelpers.js, compareArray.js]\nflags: [async]\nfeatures: [await-dictionary]\n---",

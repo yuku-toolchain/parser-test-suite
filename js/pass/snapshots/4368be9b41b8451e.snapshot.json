@@ -913,7 +913,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Danial Asaria (Bloomberg LP). All rights reserved.",
@@ -922,7 +921,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -931,7 +929,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-promise.allsettledkeyed\ndescription: >\n  Promise.allSettledKeyed accepts a function argument with enumerable own properties\ninfo: |\n  Promise.allSettledKeyed ( promises )\n\n  ...\n  5. If promises is not an Object, then\n    a. ...Reject...\n  ...\n\n  Functions are objects, so they pass the type check. Only own enumerable\n  properties are traversed; built-in function properties (name, length,\n  prototype) are non-enumerable by default and should be excluded.\nincludes: [asyncHelpers.js]\nflags: [async]\nfeatures: [await-dictionary]\n---",

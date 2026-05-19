@@ -11323,7 +11323,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -11332,7 +11331,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -11341,7 +11339,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-arraybuffer.prototype.slicetoimmutable\ndescription: >\n  Requested start and end are coerced to integers and checked for validity, then\n  (if valid) an immutable ArrayBuffer with the correct length and contents is\n  returned\ninfo: |\n  ArrayBuffer.prototype.sliceToImmutable ( start, end )\n  ...\n  5. Let len be O.[[ArrayBufferByteLength]].\n  6. Let bounds be ? ResolveBounds(len, start, end).\n  7. Let first be bounds.[[From]].\n  8. Let final be bounds.[[To]].\n  9. Let newLen be max(final - first, 0).\n  ...\n  12. Let fromBuf be O.[[ArrayBufferData]].\n  13. Let currentLen be O.[[ArrayBufferByteLength]].\n  14. If currentLen < final, throw a RangeError exception.\n  15. Let newBuffer be ? AllocateImmutableArrayBuffer(%ArrayBuffer%, newLen, fromBuf, first, newLen).\n  16. Return newBuffer.\n\n  ResolveBounds ( len, start, end )\n  1. Let relativeStart be ? ToIntegerOrInfinity(start).\n  2. If relativeStart = -∞, let from be 0.\n  3. Else if relativeStart < 0, let from be max(len + relativeStart, 0).\n  4. Else, let from be min(relativeStart, len).\n  5. If end is undefined, let relativeEnd be len; else let relativeEnd be ? ToIntegerOrInfinity(end).\n  6. If relativeEnd = -∞, let to be 0.\n  7. Else if relativeEnd < 0, let to be max(len + relativeEnd, 0).\n  8. Else, let to be min(relativeEnd, len).\n  9. Return the Record { [[From]]: from, [[To]]: to }.\n\n  ToIntegerOrInfinity ( argument )\n  1. Let number be ? ToNumber(argument).\n  2. If number is one of NaN, +0𝔽, or -0𝔽, return 0.\n  3. If number is +∞𝔽, return +∞.\n  4. If number is -∞𝔽, return -∞.\n  5. Return truncate(ℝ(number)).\nfeatures: [immutable-arraybuffer]\nincludes: [compareArray.js]\n---",
@@ -11350,7 +11347,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Unmodified non-negative integral numbers",
@@ -11359,7 +11355,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Truncated non-negative integral numbers",
@@ -11368,7 +11363,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Negative integral numbers",
@@ -11377,7 +11371,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Coerced to integral numbers",
@@ -11386,7 +11379,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Coerced to NaN and mapped to 0",
@@ -11395,7 +11387,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Clamped",
@@ -11404,7 +11395,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Math.pow(2, 53) = 9007199254740992",
@@ -11413,7 +11403,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Math.pow(2, 53) = 9007199254740992",
@@ -11422,7 +11411,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " non-numbers",
@@ -11431,7 +11419,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " thrower",

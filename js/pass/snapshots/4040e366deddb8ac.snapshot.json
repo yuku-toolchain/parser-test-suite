@@ -619,7 +619,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -628,7 +627,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -637,7 +635,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.use\ndescription: Puts value on the top of the dispose stack\ninfo: |\n  AsyncDisposableStack.prototype.use ( value )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], value, async-dispose).\n  ...\n\n  AddDisposableResource ( disposeCapability, V, hint [, method ] )\n\n  1. If method is not present then,\n    a. If V is either null or undefined and hint is sync-dispose, then\n      i. Return unused\n    b. Let resource be ? CreateDisposableResource(V, hint).\n  2. Else,\n    ...\n  3. Append resource to disposeCapability.[[DisposableResourceStack]].\n  4. Return unused.\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",

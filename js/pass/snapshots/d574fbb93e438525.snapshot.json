@@ -1533,7 +1533,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2018 Bloomberg LP. All rights reserved.",
@@ -1542,7 +1541,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1551,7 +1549,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-temporal.plainmonthday.prototype.tolocalestring\ndescription: Basic tests for Temporal.PlainMonthDay.toLocaleString\ninfo: |\n    Temporal.PlainMonthDay.prototype.toLocaleString ( [ locales [ , options ] ] )\n     ...\n    4. Return ? FormatDateTime(dateFormat, plainMonthDay).\n    ...\n\n    FormatDateTime ( dateTimeFormat, x )\n    1. Let parts be ? PartitionDateTimePattern(dateTimeFormat, x).\n    2. Let result be the empty String.\n    3. For each Record { [[Type]], [[Value]] } part of parts, do\n        a. Set result to the string-concatenation of result and part.[[Value]].\n    4. Return result.\n\n    FormatDateTimeToParts ( dateTimeFormat, x )\n    1. Let parts be ? PartitionDateTimePattern(dateTimeFormat, x).\n    2. Let result be ! ArrayCreate(0).\n    3. Let n be 0.\n    4. For each Record { [[Type]], [[Value]] } part of parts, do\n           a. Let O be OrdinaryObjectCreate(%Object.prototype%).\n           b. Perform ! CreateDataPropertyOrThrow(O, \"type\", part.[[Type]]).\n           c. Perform ! CreateDataPropertyOrThrow(O, \"value\", part.[[Value]]).\n           d. Perform ! CreateDataPropertyOrThrow(result, ! ToString(𝔽(n)), O).\n           e. Increment n by 1.\n    5. Return result.\nlocale: [en-US, de-AT]\n---",
