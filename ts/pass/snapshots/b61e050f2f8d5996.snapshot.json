@@ -693,7 +693,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " @target: es2015",
@@ -702,7 +701,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " The issue above, #49517, is fixed very indirectly. Here's some code",
@@ -711,7 +709,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " that shows the direct result of the change:",
@@ -720,7 +717,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Ok",
@@ -729,7 +725,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Error",
@@ -738,7 +733,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Prev error, now ok",
@@ -747,7 +741,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " V[P] in `Nothing<V[P]>` is the substitution type `V[P] & Foo`. When",
@@ -756,7 +749,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " checking if that's assignable to `Foo` in the constraint of `Nothing`,",
@@ -765,7 +757,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " it passes the regular assignability check but then goes into intersection",
@@ -774,7 +765,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " property checks. To pull `foo` from the substitution type, it gets the",
@@ -783,7 +773,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " apparent type, which turns out to be something like `(Foo & Foo') | (Foo & Bar)`",
@@ -792,7 +781,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " where `Foo` and `Foo'` are different this-type instantiations of `Foo`.",
@@ -801,7 +789,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " Those two instantiations have the same `foo` property, but then `(Foo & Bar)['foo']`",
@@ -810,7 +797,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " is a synthesized intersection property with a declaration in `Foo` and a",
@@ -819,7 +805,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " declaration in `Bar`. Because the former was marked as protected and the",
@@ -828,7 +813,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " latter was a different symbol, we previously thought the two symbols were",
@@ -837,7 +821,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " totally unrelated, as in `(Foo | Bar)['foo']`. The fix I implemented is to",
@@ -846,7 +829,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " check not that the two property symbols are identical, but that they share",
@@ -855,7 +837,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " some common declaration. The change is directly observable by seeing whether",
@@ -864,7 +845,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " `(Foo | (Foo & Bar))['foo']` is allowed.",

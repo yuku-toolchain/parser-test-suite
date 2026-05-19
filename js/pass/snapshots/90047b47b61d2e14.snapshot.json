@@ -522,7 +522,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Mike Pennisi. All rights reserved.",
@@ -531,7 +530,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -540,7 +538,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.disposeAsync\ndescription: Does not await when the stack is empty.\ninfo: |\n  AsyncDisposableStack.prototype.disposeAsync ( )\n\n  [...]\n  6. Let result be DisposeResources(asyncDisposableStack.[[DisposeCapability]], NormalCompletion(undefined)).\n  [...]\n\n  DisposeResources ( disposeCapability, completion )\n\n  1. Let needsAwait be false.\n  2. Let hasAwaited be false.\n  3. For each element resource of disposeCapability.[[DisposableResourceStack]], in reverse list order, do\n     [...]\n  4. If needsAwait is true and hasAwaited is false, then\n     a. Perform ! Await(undefined).\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",

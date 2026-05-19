@@ -719,7 +719,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -728,7 +727,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -737,7 +735,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.adopt\ndescription: Allows any 'value'\ninfo: |\n  AsyncDisposableStack.prototype.adopt ( value, onDisposeAsync )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. If IsCallable(onDisposeAsync) is false, throw a TypeError exception.\n  5. Let closure be a new Abstract Closure with no parameters that captures value and onDisposeAsync and performs the following steps when called:\n    a. Perform ? Call(onDisposeAsync, undefined, « value »).\n  6. Let F be CreateBuiltinFunction(closure, 0, \"\", « »).\n  7. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], undefined, async-dispose, F).\n  ...\n\nfeatures: [explicit-resource-management]\n---",

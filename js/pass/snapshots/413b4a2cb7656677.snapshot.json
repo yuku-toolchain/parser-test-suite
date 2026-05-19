@@ -1656,7 +1656,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Rudolph Gottesheim. All rights reserved.",
@@ -1665,7 +1664,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1674,7 +1672,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-temporal.plainyearmonth.prototype.until\ndescription: Half rounding modes at the exact 0.5 boundary\ninfo: |\n  Tests that all rounding modes correctly break ties at the exact 0.5 boundary\n  in RoundRelativeDuration, for both odd and even integer parts (distinguishing\n  halfEven from other modes).\n\n  PlainYearMonth(2018, 6).until(PlainYearMonth(2019, 12)) produces a\n  difference of 1 year plus 6 months. RoundRelativeDuration converts the\n  6-month remainder to days relative to the reference date (1st of the month).\n  From 2019-06-01, six months spans Jun(30)+Jul(31)+Aug(31)+Sep(30)+Oct(31)+\n  Nov(30) = 183 days, and the year from 2019-06-01 to 2020-06-01 contains 366\n  days (crossing Feb 29, 2020), giving a fractional progress of exactly\n  183/366 = 0.5.\n\n  PlainYearMonth(2017, 6).until(PlainYearMonth(2019, 12)) produces 2 years\n  plus 6 months with the same 0.5 fractional progress but an even integer\n  part. This distinguishes halfEven from halfExpand: halfEven rounds to the\n  nearest even integer (2), while halfExpand rounds away from zero (3).\nincludes: [temporalHelpers.js]\nfeatures: [Temporal]\n---",
@@ -1683,7 +1680,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " 1.5 years: odd integer part (1) + exact 0.5 fractional progress",
@@ -1692,7 +1688,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " 2.5 years: even integer part (2) — distinguishes halfEven from halfExpand",

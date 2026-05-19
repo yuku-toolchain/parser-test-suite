@@ -345,7 +345,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -354,7 +353,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -363,7 +361,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.disposeAsync\ndescription: Return value of dispose is undefined\ninfo: |\n  AsyncDisposableStack.prototype.disposeAsync ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, return undefined.\n  4. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  5. Return DisposeResources(asyncDisposableStack.[[DisposeCapability]], NormalCompletion(undefined)).\n\n  DisposeResources ( disposeCapability, completion )\n\n  1. For each resource of disposeCapability.[[DisposableResourceStack]], in reverse list order, do\n    a. Let result be Dispose(resource.[[ResourceValue]], resource.[[Hint]], resource.[[DisposeMethod]]).\n    b. If result.[[Type]] is throw, then\n      i. If completion.[[Type]] is throw, then\n        1. Set result to result.[[Value]].\n        2. Let suppressed be completion.[[Value]].\n        3. Let error be a newly created SuppressedError object.\n        4. Perform ! CreateNonEnumerableDataPropertyOrThrow(error, \"error\", result).\n        5. Perform ! CreateNonEnumerableDataPropertyOrThrow(error, \"suppressed\", suppressed).\n        6. Set completion to ThrowCompletion(error).\n      ii. Else,\n        1. Set completion to result.\n  2. Return completion.\n\n  Dispose ( V, hint, method )\n\n  1. If method is undefined, let result be undefined.\n  2. Else, let result be ? Call(method, V).\n  3. If hint is async-dispose, then\n    a. Perform ? Await(result).\n  4. Return undefined.\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",

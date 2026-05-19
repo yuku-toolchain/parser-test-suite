@@ -294,7 +294,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -303,7 +302,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -312,7 +310,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-get-arraybuffer.prototype.immutable\ndescription: Return value according to the [[ArrayBufferIsImmutable]] internal slot.\ninfo: |\n  get ArrayBuffer.prototype.immutable\n  1. Let O be the this value.\n  2. Perform ? RequireInternalSlot(O, [[ArrayBufferData]]).\n  3. If IsSharedArrayBuffer(O) is true, throw a TypeError exception.\n  4. Return IsImmutableBuffer(O).\n\n  IsImmutableBuffer ( arrayBuffer )\n  1. If arrayBuffer has an [[ArrayBufferIsImmutable]] internal slot, return true.\n  2. Return false.\nfeatures: [ArrayBuffer, immutable-arraybuffer]\nincludes: [detachArrayBuffer.js]\n---",

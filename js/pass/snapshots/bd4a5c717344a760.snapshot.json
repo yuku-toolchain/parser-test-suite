@@ -265,7 +265,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -274,7 +273,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -283,7 +281,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.defer\ndescription: Adds an onDisposeAsync callback to the stack\ninfo: |\n  AsyncDisposableStack.prototype.defer ( onDisposeAsync )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. If IsCallable(onDisposeAsync) is false, throw a TypeError exception.\n  5. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], undefined, async-dispose, onDisposeAsync).\n  ...\n\n  AddDisposableResource ( disposeCapability, V, hint [, method ] )\n\n  1. If method is not present then,\n    ...\n  2. Else,\n    a. Assert: V is undefined.\n    b. Let resource be ? CreateDisposableResource(undefined, hint, method).\n  3. Append resource to disposeCapability.[[DisposableResourceStack]].\n  4. Return unused.\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",

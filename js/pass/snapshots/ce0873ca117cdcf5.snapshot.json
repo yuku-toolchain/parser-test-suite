@@ -672,7 +672,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -681,7 +680,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -690,7 +688,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-%typedarray%.of\ndescription: >\n  Throws a TypeError if species constructor returns an immutable ArrayBuffer.\ninfo: |\n  %TypedArray%.of ( ...items )\n  1. Let len be the number of elements in items.\n  2. Let C be the this value.\n  3. If IsConstructor(C) is false, throw a TypeError exception.\n  4. Let newObj be ? TypedArrayCreateFromConstructor(C, « 𝔽(len) », write).\n  5. Let k be 0.\n  6. Repeat, while k < len,\n     a. Let kValue be items[k].\n     b. Let Pk be ! ToString(𝔽(k)).\n     c. Perform ? Set(newObj, Pk, kValue, true).\n     d. Set k to k + 1.\nfeatures: [Symbol.iterator, TypedArray, immutable-arraybuffer]\nincludes: [testTypedArray.js, compareArray.js]\n---",

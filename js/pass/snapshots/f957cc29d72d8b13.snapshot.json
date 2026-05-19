@@ -406,7 +406,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved.",
@@ -415,7 +414,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -424,7 +422,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-ordinarysetwithowndescriptor\ndescription: >\n    super.foo = V calls the accessor on super class instead of throwing\n    ReferenceError for TDZ binding\ninfo: |\n    OrdinarySetWithOwnDescriptor ( _O_, _P_, _V_, _Receiver_, _ownDesc_ )\n      ...\n      1. Assert: IsAccessorDescriptor(_ownDesc_) is *true*.\n      1. Let _setter_ be _ownDesc_.[[Set]].\n      1. If _setter_ is *undefined*, return *false*.\n      1. Perform ? Call(_setter_, _Receiver_, « _V_ »).\n      1. Return *true*.\n\n    NOTE: When the super class has an accessor property, the setter is called\n    directly and the Receiver's [[GetOwnProperty]] is never invoked, so the\n    module namespace TDZ binding is not accessed.\nflags: [module]\nfeatures: [let]\n---",

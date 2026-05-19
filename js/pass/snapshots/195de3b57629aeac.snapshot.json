@@ -1153,7 +1153,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -1162,7 +1161,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1171,7 +1169,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-arraybuffer.prototype.slicetoimmutable\ndescription: Calculates bounds from original length if receiver shrinks.\ninfo: |\n  ArrayBuffer.prototype.sliceToImmutable ( start, end )\n  ...\n  5. Let len be O.[[ArrayBufferByteLength]].\n  6. Let bounds be ? ResolveBounds(len, start, end).\n  7. Let first be bounds.[[From]].\n  8. Let final be bounds.[[To]].\n  9. Let newLen be max(final - first, 0).\n  ...\n  12. Let fromBuf be O.[[ArrayBufferData]].\n  13. Let currentLen be O.[[ArrayBufferByteLength]].\n  14. If currentLen < final, throw a RangeError exception.\n  15. Let newBuffer be ? AllocateImmutableArrayBuffer(%ArrayBuffer%, newLen, fromBuf, first, newLen).\n  16. Return newBuffer.\n\n  ResolveBounds ( len, start, end )\n  1. Let relativeStart be ? ToIntegerOrInfinity(start).\n  2. If relativeStart = -∞, let from be 0.\n  3. Else if relativeStart < 0, let from be max(len + relativeStart, 0).\n  4. Else, let from be min(relativeStart, len).\n  5. If end is undefined, let relativeEnd be len; else let relativeEnd be ? ToIntegerOrInfinity(end).\n  6. If relativeEnd = -∞, let to be 0.\n  7. Else if relativeEnd < 0, let to be max(len + relativeEnd, 0).\n  8. Else, let to be min(relativeEnd, len).\n  9. Return the Record { [[From]]: from, [[To]]: to }.\nfeatures: [resizable-arraybuffer, immutable-arraybuffer]\nincludes: [compareArray.js, detachArrayBuffer.js]\n---",

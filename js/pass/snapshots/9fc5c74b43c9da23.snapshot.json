@@ -1772,7 +1772,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved.",
@@ -1781,7 +1780,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1790,7 +1788,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-temporal.plainmonthday.from\nfeatures: [Temporal, Intl.Era-monthcode]\ndescription: >\n  * Verify constrain behaviour correct when day >= 30 and monthCode indicates a leap month in which day 30 has never occurred\n  * Verify constrain behaviour correct when day === 29 and monthCode indicates a leap month that never occurs.\n\ninfo: |\n  4.1.21 NonISOMonthDayToISOReferenceDate ( calendar, fields, overflow )\n  ...\n  4. If calendar is \"chinese\" or \"dangi\", then\n    ...\n    c. If fields.[[Day]] > daysInMonth, then\n      i. If overflow is reject, throw a RangeError exception.\n      ii. Let day be daysInMonth\n    ...\n    f. Let row be the row in Table 6 with a value in the \"Month Code\" column matching monthCode\n    g. If the \"Reference Year (Days 1-29)\" column of row is \"—\", or day = 30 and the \"Reference Year (Day 30)\" column of row is \"—\", then\n      i. If overflow is reject, throw a RangeError exception.\n      ii. Set monthCode to CreateMonthCode(! ParseMonthCode(monthCode).[[MonthNumber]], false).\n\nincludes: [temporalHelpers.js]\n---",
@@ -1799,7 +1796,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " day >= 30 in leap months where day 30 doesn't exist, should constrain to day 30 of non-leap month and use correct reference year",
@@ -1808,7 +1804,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " constrain days >= 30 of leap months without day 30 to day 30 of corresponding non-leap month",
@@ -1817,7 +1812,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "TemporalHelpers.assertPlainMonthDay(constrain, nonLeapMonthCode, 30, `${nonLeapMonthCode} ${day} (constrained)`, referenceYear);",
@@ -1826,7 +1820,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " constrain day 29 of leap months that never occur to day 29 of corresponding non-leap month",

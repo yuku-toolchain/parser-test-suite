@@ -1684,7 +1684,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Rudolph Gottesheim. All rights reserved.",
@@ -1693,7 +1692,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -1702,7 +1700,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-temporal.plainyearmonth.prototype.since\ndescription: Half rounding modes at the exact 0.5 boundary\ninfo: |\n  Tests that all rounding modes correctly break ties at the exact 0.5 boundary\n  in RoundRelativeDuration in the negative direction, for both odd and even\n  integer parts (distinguishing halfEven from other modes). In the negative\n  direction, halfExpand and halfCeil diverge (away from zero vs toward positive\n  infinity).\n\n  Calling since() in the negative direction (earlier.since(later)) with\n  PlainYearMonth(2018, 6) and PlainYearMonth(2019, 12) produces a difference\n  of -1 year minus 6 months. RoundRelativeDuration converts the 6-month\n  remainder to days relative to the reference date (1st of the month). From\n  2019-06-01, six months spans Jun(30)+Jul(31)+Aug(31)+Sep(30)+Oct(31)+\n  Nov(30) = 183 days, and the year from 2019-06-01 to 2020-06-01 contains\n  366 days (crossing Feb 29, 2020), giving a fractional progress of exactly\n  183/366 = 0.5.\n\n  With PlainYearMonth(2017, 6) and PlainYearMonth(2019, 12) the difference is\n  -2 years minus 6 months, giving the same 0.5 fractional progress but with\n  an even integer part. This distinguishes halfEven from halfExpand in the\n  negative direction.\nincludes: [temporalHelpers.js]\nfeatures: [Temporal]\n---",
@@ -1711,7 +1708,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " -1.5 years: odd integer part (1) + exact 0.5 fractional progress",
@@ -1720,7 +1716,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " -2.5 years: even integer part (2) — distinguishes halfEven from halfExpand",

@@ -368,7 +368,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
@@ -377,7 +376,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -386,7 +384,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.use\ndescription: Invokes getter for `[Symbol.asyncDispose]`.\ninfo: |\n  AsyncDisposableStack.prototype.use ( value )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], value, async-dispose).\n  ...\n\n  AddDisposableResource ( disposeCapability, V, hint [, method ] )\n\n  1. If method is not present then,\n    a. If V is either null or undefined and hint is sync-dispose, then\n      i. Return unused\n    b. Let resource be ? CreateDisposableResource(V, hint).\n  ...\n\n  CreateDisposableResource ( V, hint [ , method ] )\n\n  1. If method is not present, then\n    a. If V is either null or undefined, then\n      i. Set V to undefined\n      ii. Set method to undefined\n    b. Else,\n      i. If Type(V) is not Object, throw a TypeError exception.\n      ii. Set method to ? GetDisposeMethod(V, hint).\n      iii. If method is undefined, throw a TypeError exception.\n  2. Else,\n      a. ...\n  3. Return the DisposableResource Record { [[ResourceValue]]: V, [[Hint]]: hint, [[DisposeMethod]]: method }.\n\n  GetDisposeMethod ( V, hint )\n\n  1. If hint is async-dispose, then\n    a. Let method be ? GetMethod(V, @@asyncDispose).\n    b. If method is undefined, then\n      i. Set method to ? GetMethod(V, @@dispose).\n  2. Else,\n    a. Let method be ? GetMethod(V, @@dispose).\n  3. Return method.\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",

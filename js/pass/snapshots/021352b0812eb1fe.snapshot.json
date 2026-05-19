@@ -2292,7 +2292,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -2301,7 +2300,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -2310,7 +2308,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-%typedarray%.from\ndescription: >\n  Throws a TypeError if species constructor returns an immutable ArrayBuffer.\ninfo: |\n  %TypedArray%.from ( source [ , mapper [ , thisArg ] ] )\n  1. Let C be the this value.\n  2. If IsConstructor(C) is false, throw a TypeError exception.\n  3. If mapper is undefined, then\n     a. Let mapping be false.\n  4. Else,\n     a. If IsCallable(mapper) is false, throw a TypeError exception.\n     b. Let mapping be true.\n  5. Let usingIterator be ? GetMethod(source, %Symbol.iterator%).\n  6. If usingIterator is not undefined, then\n     a. Let values be ? IteratorToList(? GetIteratorFromMethod(source, usingIterator)).\n     b. Let len be the number of elements in values.\n     c. Let targetObj be ? TypedArrayCreateFromConstructor(C, « 𝔽(len) », write).\n     d. Let k be 0.\n     e. Repeat, while k < len,\n        i. Let Pk be ! ToString(𝔽(k)).\n        ii. Let kValue be the first element of values.\n        iii. Remove the first element from values.\n        iv. If mapping is true, then\n            1. Let mappedValue be ? Call(mapper, thisArg, « kValue, 𝔽(k) »).\n        v. Else,\n           1. Let mappedValue be kValue.\n        vi. Perform ? Set(targetObj, Pk, mappedValue, true).\n        vii. Set k to k + 1.\n     f. Assert: values is now an empty List.\n     g. Return targetObj.\n  7. NOTE: source is not an iterable object, so assume it is already an array-like object.\n  8. Let arrayLike be ! ToObject(source).\n  9. Let len be ? LengthOfArrayLike(arrayLike).\n  10. Let targetObj be ? TypedArrayCreateFromConstructor(C, « 𝔽(len) », write).\n  11. Let k be 0.\n  12. Repeat, while k < len,\n      a. Let Pk be ! ToString(𝔽(k)).\n      b. Let kValue be ? Get(arrayLike, Pk).\n      c. If mapping is true, then\n         i. Let mappedValue be ? Call(mapper, thisArg, « kValue, 𝔽(k) »).\nfeatures: [Symbol.iterator, TypedArray, immutable-arraybuffer]\nincludes: [testTypedArray.js, compareArray.js]\n---",
@@ -2319,7 +2316,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " arraylike source",
@@ -2328,7 +2324,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " iterable source",

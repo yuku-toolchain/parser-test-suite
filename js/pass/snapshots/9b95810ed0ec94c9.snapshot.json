@@ -330,7 +330,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Danial Asaria (Bloomberg LP). All rights reserved.",
@@ -339,7 +338,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -348,7 +346,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-performpromiseallkeyed\ndescription: >\n  Promise.allKeyed resolves an empty object to an empty null-prototype object\ninfo: |\n  PerformPromiseAllKeyed ( variant, promises, constructor, resultCapability, promiseResolve )\n\n  ...\n  1. Let allKeys be ? promises.[[OwnPropertyKeys]]().\n  ...\n  7. Set remainingElementsCount.[[Value]] to remainingElementsCount.[[Value]] - 1.\n  8. If remainingElementsCount.[[Value]] = 0, then\n    a. Let result be CreateKeyedPromiseCombinatorResultObject(keys, values).\n    b. Perform ? Call(resultCapability.[[Resolve]], undefined, « result »).\nincludes: [asyncHelpers.js, compareArray.js]\nflags: [async]\nfeatures: [await-dictionary]\n---",

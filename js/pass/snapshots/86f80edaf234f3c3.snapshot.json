@@ -586,7 +586,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
@@ -595,7 +594,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -604,7 +602,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-arraybuffer.prototype.slicetoimmutable\ndescription: Throws if receiver is detached by bounds resolution\ninfo: |\n  ArrayBuffer.prototype.sliceToImmutable ( start, end )\n  ...\n  6. Let bounds be ? ResolveBounds(len, start, end).\n  ...\n  10. NOTE: Side-effects of the above steps may have detached or resized O.\n  11. If IsDetachedBuffer(O) is true, throw a TypeError exception.\n\n  ResolveBounds ( len, start, end )\n  1. Let relativeStart be ? ToIntegerOrInfinity(start).\n  2. If relativeStart = -∞, let from be 0.\n  3. Else if relativeStart < 0, let from be max(len + relativeStart, 0).\n  4. Else, let from be min(relativeStart, len).\n  5. If end is undefined, let relativeEnd be len; else let relativeEnd be ? ToIntegerOrInfinity(end).\n  6. If relativeEnd = -∞, let to be 0.\n  7. Else if relativeEnd < 0, let to be max(len + relativeEnd, 0).\n  8. Else, let to be min(relativeEnd, len).\n  9. Return the Record { [[From]]: from, [[To]]: to }.\nfeatures: [immutable-arraybuffer]\nincludes: [compareArray.js, detachArrayBuffer.js]\n---",

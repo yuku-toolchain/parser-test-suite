@@ -637,7 +637,6 @@
   "comments": [
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": false,
       "followedByNewline": true,
       "value": " Copyright (C) 2026 Mike Pennisi. All rights reserved.",
@@ -646,7 +645,6 @@
     },
     {
       "type": "Line",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
@@ -655,7 +653,6 @@
     },
     {
       "type": "Block",
-      "kind": "normal",
       "precededByNewline": true,
       "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.disposeAsync\ndescription: Awaits even when only null values are disposed.\ninfo: |\n  AsyncDisposableStack.prototype.disposeAsync ( )\n\n  [...]\n  6. Let result be DisposeResources(asyncDisposableStack.[[DisposeCapability]], NormalCompletion(undefined)).\n  [...]\n\n  DisposeResources ( disposeCapability, completion )\n\n  1. Let needsAwait be false.\n  2. Let hasAwaited be false.\n  3. For each element resource of disposeCapability.[[DisposableResourceStack]], in reverse list order, do\n     [...]\n     f. Else,\n        i. Assert: hint is async-dispose.\n        ii. Set needsAwait to true.\n        iii. NOTE: This can only indicate a case where either null or undefined was the initialized value of an await using declaration.\n  4. If needsAwait is true and hasAwaited is false, then\n     a. Perform ! Await(undefined).\n\nflags: [async]\nincludes: [asyncHelpers.js]\nfeatures: [explicit-resource-management]\n---",
