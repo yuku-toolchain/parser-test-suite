@@ -1,126 +1,135 @@
 {
   "program": {
     "type": "Program",
+    "start": 0,
+    "end": 690,
+    "sourceType": "module",
+    "hashbang": null,
     "body": [
       {
         "type": "ImportDeclaration",
+        "start": 582,
+        "end": 646,
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
+            "start": 589,
+            "end": 594,
             "local": {
               "type": "Identifier",
-              "name": "value",
               "start": 589,
-              "end": 594
-            },
-            "start": 589,
-            "end": 594
+              "end": 594,
+              "name": "value"
+            }
           }
         ],
         "source": {
           "type": "Literal",
-          "value": "./text-string_FIXTURE",
-          "raw": "'./text-string_FIXTURE'",
           "start": 600,
-          "end": 623
+          "end": 623,
+          "value": "./text-string_FIXTURE",
+          "raw": "'./text-string_FIXTURE'"
         },
-        "phase": null,
         "attributes": [
           {
             "type": "ImportAttribute",
+            "start": 631,
+            "end": 643,
             "key": {
               "type": "Identifier",
-              "name": "type",
               "start": 631,
-              "end": 635
+              "end": 635,
+              "name": "type"
             },
             "value": {
               "type": "Literal",
-              "value": "text",
-              "raw": "'text'",
               "start": 637,
-              "end": 643
-            },
-            "start": 631,
-            "end": 643
+              "end": 643,
+              "value": "text",
+              "raw": "'text'"
+            }
           }
         ],
-        "start": 582,
-        "end": 646
+        "phase": null
       },
       {
         "type": "ExpressionStatement",
+        "start": 648,
+        "end": 689,
         "expression": {
           "type": "CallExpression",
+          "start": 648,
+          "end": 688,
           "callee": {
             "type": "MemberExpression",
+            "start": 648,
+            "end": 664,
             "object": {
               "type": "Identifier",
-              "name": "assert",
               "start": 648,
-              "end": 654
+              "end": 654,
+              "name": "assert"
             },
             "property": {
               "type": "Identifier",
-              "name": "sameValue",
               "start": 655,
-              "end": 664
+              "end": 664,
+              "name": "sameValue"
             },
-            "optional": false,
             "computed": false,
-            "start": 648,
-            "end": 664
+            "optional": false
           },
           "arguments": [
             {
               "type": "UnaryExpression",
+              "start": 665,
+              "end": 677,
               "operator": "typeof",
+              "prefix": true,
               "argument": {
                 "type": "Identifier",
-                "name": "value",
                 "start": 672,
-                "end": 677
-              },
-              "prefix": true,
-              "start": 665,
-              "end": 677
+                "end": 677,
+                "name": "value"
+              }
             },
             {
               "type": "Literal",
-              "value": "string",
-              "raw": "'string'",
               "start": 679,
-              "end": 687
+              "end": 687,
+              "value": "string",
+              "raw": "'string'"
             }
           ],
-          "optional": false,
-          "start": 648,
-          "end": 688
-        },
-        "start": 648,
-        "end": 689
+          "optional": false
+        }
       }
-    ],
-    "sourceType": "module",
-    "hashbang": null,
-    "start": 0,
-    "end": 690
+    ]
   },
   "comments": [
     {
       "type": "Line",
+      "kind": "normal",
+      "precededByNewline": false,
+      "followedByNewline": true,
       "value": " Copyright (C) 2025 Mozilla Foundation. All rights reserved.",
       "start": 0,
       "end": 62
     },
     {
       "type": "Line",
+      "kind": "normal",
+      "precededByNewline": true,
+      "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
       "start": 63,
       "end": 133
     },
     {
       "type": "Block",
+      "kind": "normal",
+      "precededByNewline": true,
+      "followedByNewline": true,
       "value": "---\nesid: sec-create-text-module\ndescription: Correctly parses a text file\ninfo: |\n  # 16.2.1.8.x CreateTextModule ( source )\n\n  The abstract operation CreateTextModule takes argument source (a String) and\n  returns a normal completion containing a Synthetic Module Record.\n  It performs the following steps when called:\n\n    1. Return CreateDefaultExportSyntheticModule(source).\nflags: [module]\nfeatures: [import-attributes, import-text]\n---",
       "start": 134,
       "end": 580
