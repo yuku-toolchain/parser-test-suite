@@ -1,159 +1,168 @@
 {
   "program": {
     "type": "Program",
+    "start": 0,
+    "end": 1978,
+    "sourceType": "script",
+    "hashbang": null,
     "body": [
       {
         "type": "VariableDeclaration",
+        "start": 1870,
+        "end": 1909,
         "kind": "var",
         "declarations": [
           {
             "type": "VariableDeclarator",
+            "start": 1874,
+            "end": 1908,
             "id": {
               "type": "Identifier",
-              "name": "stack",
               "start": 1874,
-              "end": 1879
+              "end": 1879,
+              "name": "stack"
             },
             "init": {
               "type": "NewExpression",
+              "start": 1882,
+              "end": 1908,
               "callee": {
                 "type": "Identifier",
-                "name": "AsyncDisposableStack",
                 "start": 1886,
-                "end": 1906
+                "end": 1906,
+                "name": "AsyncDisposableStack"
               },
-              "arguments": [],
-              "start": 1882,
-              "end": 1908
-            },
-            "start": 1874,
-            "end": 1908
+              "arguments": []
+            }
           }
-        ],
-        "start": 1870,
-        "end": 1909
+        ]
       },
       {
         "type": "ExpressionStatement",
+        "start": 1910,
+        "end": 1977,
         "expression": {
           "type": "CallExpression",
+          "start": 1910,
+          "end": 1976,
           "callee": {
             "type": "MemberExpression",
+            "start": 1910,
+            "end": 1923,
             "object": {
               "type": "Identifier",
-              "name": "assert",
               "start": 1910,
-              "end": 1916
+              "end": 1916,
+              "name": "assert"
             },
             "property": {
               "type": "Identifier",
-              "name": "throws",
               "start": 1917,
-              "end": 1923
+              "end": 1923,
+              "name": "throws"
             },
-            "optional": false,
             "computed": false,
-            "start": 1910,
-            "end": 1923
+            "optional": false
           },
           "arguments": [
             {
               "type": "Identifier",
-              "name": "TypeError",
               "start": 1924,
-              "end": 1933
+              "end": 1933,
+              "name": "TypeError"
             },
             {
               "type": "FunctionExpression",
+              "start": 1935,
+              "end": 1967,
               "id": null,
               "generator": false,
               "async": false,
               "params": [],
               "body": {
                 "type": "BlockStatement",
+                "start": 1946,
+                "end": 1967,
                 "body": [
                   {
                     "type": "ExpressionStatement",
+                    "start": 1950,
+                    "end": 1965,
                     "expression": {
                       "type": "CallExpression",
+                      "start": 1950,
+                      "end": 1964,
                       "callee": {
                         "type": "MemberExpression",
+                        "start": 1950,
+                        "end": 1959,
                         "object": {
                           "type": "Identifier",
-                          "name": "stack",
                           "start": 1950,
-                          "end": 1955
+                          "end": 1955,
+                          "name": "stack"
                         },
                         "property": {
                           "type": "Identifier",
-                          "name": "use",
                           "start": 1956,
-                          "end": 1959
+                          "end": 1959,
+                          "name": "use"
                         },
-                        "optional": false,
                         "computed": false,
-                        "start": 1950,
-                        "end": 1959
+                        "optional": false
                       },
                       "arguments": [
                         {
                           "type": "ObjectExpression",
-                          "properties": [],
                           "start": 1960,
-                          "end": 1963
+                          "end": 1963,
+                          "properties": []
                         }
                       ],
-                      "optional": false,
-                      "start": 1950,
-                      "end": 1964
-                    },
-                    "start": 1950,
-                    "end": 1965
+                      "optional": false
+                    }
                   }
-                ],
-                "start": 1946,
-                "end": 1967
+                ]
               },
-              "expression": false,
-              "start": 1935,
-              "end": 1967
+              "expression": false
             },
             {
               "type": "Literal",
-              "value": "true",
-              "raw": "'true'",
               "start": 1969,
-              "end": 1975
+              "end": 1975,
+              "value": "true",
+              "raw": "'true'"
             }
           ],
-          "optional": false,
-          "start": 1910,
-          "end": 1976
-        },
-        "start": 1910,
-        "end": 1977
+          "optional": false
+        }
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 1978
+    ]
   },
   "comments": [
     {
       "type": "Line",
+      "kind": "normal",
+      "precededByNewline": false,
+      "followedByNewline": true,
       "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
       "start": 0,
       "end": 55
     },
     {
       "type": "Line",
+      "kind": "normal",
+      "precededByNewline": true,
+      "followedByNewline": true,
       "value": " This code is governed by the BSD license found in the LICENSE file.",
       "start": 56,
       "end": 126
     },
     {
       "type": "Block",
+      "kind": "normal",
+      "precededByNewline": true,
+      "followedByNewline": true,
       "value": "---\nesid: sec-asyncdisposablestack.prototype.use\ndescription: Throws if the argument is an object that does not have a Symbol.asyncDispose property.\ninfo: |\n  AsyncDisposableStack.prototype.use ( value )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Perform ? AddDisposableResource(asyncDisposableStack.[[DisposeCapability]], value, async-dispose).\n  ...\n\n  AddDisposableResource ( disposeCapability, V, hint [, method ] )\n\n  1. If method is not present then,\n    a. If V is either null or undefined and hint is sync-dispose, then\n      i. Return unused\n    b. Let resource be ? CreateDisposableResource(V, hint).\n  ...\n\n  CreateDisposableResource ( V, hint [ , method ] )\n\n  1. If method is not present, then\n    a. If V is either null or undefined, then\n      i. Set V to undefined\n      ii. Set method to undefined\n    b. Else,\n      i. If Type(V) is not Object, throw a TypeError exception.\n      ii. Set method to ? GetDisposeMethod(V, hint).\n      iii. If method is undefined, throw a TypeError exception.\n  ...\n\n  GetDisposeMethod ( V, hint )\n\n  1. If hint is async-dispose, then\n    a. Let method be ? GetMethod(V, @@asyncDispose).\n    b. If method is undefined, then\n      i. Set method to ? GetMethod(V, @@dispose).\n  2. Else,\n    a. Let method be ? GetMethod(V, @@dispose).\n  3. Return method.\n\n  GetMethod ( V, P )\n\n    1. Let func be ? GetV(V, P).\n    2. If func is either undefined or null, return undefined.\n    3. If IsCallable(func) is false, throw a TypeError exception.\n    ...\n\nfeatures: [explicit-resource-management]\n---",
       "start": 128,
       "end": 1868
