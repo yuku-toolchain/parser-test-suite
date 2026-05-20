@@ -1,5 +1,13 @@
 # test262 sync history
 
+## 2026-05-19
+
+- [c2421a03fb80641a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-rounding-near-minimum-date.js)
+- [2cbaa2d5e4e3715b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/since/rounding-near-minimum-date.js)
+- [c14fb7ce4b3b34a0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/until/rounding-near-minimum-date.js)
+- [36d004390802620c.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/since/rounding-near-minimum-date.js)
+- [93dc8444ab931566.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/until/rounding-near-minimum-date.js)
+
 ## 2026-05-18
 
 - [1455ccf2bbd2fdfc.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/copyWithin/immutable-buffer.js)
