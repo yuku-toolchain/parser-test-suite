@@ -1,5 +1,24 @@
 # test262 sync history
 
+## 2026-05-21
+
+- [668fa4fb67967578.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/zip/iterator-zip-iteration-strict-checks-remaining-done.js)
+- [c8e89ca07f01f5da.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/zip/result-arrays-are-fresh.js)
+- [82b864b58f1d6ac8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/zipKeyed/iterator-zip-iteration-strict-checks-remaining-done.js)
+- [577d16757a2d8ed7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/zipKeyed/result-objects-are-fresh.js)
+- [cffa2faa04b9a5e1.js](https://github.com/tc39/test262/blob/main/test/intl402/PluralRules/compactDisplay-undefined-unless-notation-compact.js)
+- [bc5342541b7e6513.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/prototype/round/same-date-starts-twice.js)
+- [cffb554bc6b50e7f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/exact-multiple-of-larger-unit-plaindate.js)
+- [b398d2b521965e41.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/exact-multiple-of-larger-unit-zoned.js)
+- [2c0b4c4014359d43.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/since/exact-multiple-of-larger-unit.js)
+- [51ab1c4d48ede367.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/until/exact-multiple-of-larger-unit.js)
+- [0421761d2a185f4b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/since/exact-multiple-of-larger-unit.js)
+- [80347bfc766e6bd6.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/until/exact-multiple-of-larger-unit.js)
+- [b9f742aaaaef77d8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/since/exact-multiple-of-larger-unit.js)
+- [37ef5719de15f1eb.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/until/exact-multiple-of-larger-unit.js)
+- [11a6b55e317ca018.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/since/exact-multiple-of-larger-unit.js)
+- [d9fdf5a43a035130.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/until/exact-multiple-of-larger-unit.js)
+
 ## 2026-05-19
 
 - [c2421a03fb80641a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-rounding-near-minimum-date.js)
