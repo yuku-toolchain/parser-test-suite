@@ -1,177 +1,173 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "__evaluated",
-              "start": 4,
-              "end": 15
-            },
-            "init": null,
+  "type": "Program",
+  "start": 0,
+  "end": 230,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 16,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 15,
+          "id": {
+            "type": "Identifier",
             "start": 4,
-            "end": 15
-          }
-        ],
-        "start": 0,
-        "end": 16
-      },
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "__condition",
-              "start": 21,
-              "end": 32
-            },
-            "init": {
-              "type": "Literal",
-              "value": 0,
-              "raw": "0",
-              "start": 35,
-              "end": 36
-            },
+            "end": 15,
+            "name": "__evaluated"
+          },
+          "init": null
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 17,
+      "end": 49,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 21,
+          "end": 36,
+          "id": {
+            "type": "Identifier",
             "start": 21,
-            "end": 36
+            "end": 32,
+            "name": "__condition"
           },
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "__odds",
-              "start": 38,
-              "end": 44
-            },
-            "init": {
-              "type": "Literal",
-              "value": 0,
-              "raw": "0",
-              "start": 47,
-              "end": 48
-            },
-            "start": 38,
-            "end": 48
+          "init": {
+            "type": "Literal",
+            "start": 35,
+            "end": 36,
+            "value": 0,
+            "raw": "0"
           }
-        ],
-        "start": 17,
-        "end": 49
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "AssignmentExpression",
-          "operator": "=",
-          "left": {
-            "type": "Identifier",
-            "name": "__evaluated",
-            "start": 50,
-            "end": 61
-          },
-          "right": {
-            "type": "CallExpression",
-            "callee": {
-              "type": "Identifier",
-              "name": "eval",
-              "start": 64,
-              "end": 68
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": "do { __condition++; if (((''+__condition/2).split('.')).length>1) continue; __odds++;} while(__condition < 10)",
-                "raw": "\"do { __condition++; if (((''+__condition/2).split('.')).length>1) continue; __odds++;} while(__condition < 10)\"",
-                "start": 69,
-                "end": 181
-              }
-            ],
-            "optional": false,
-            "start": 64,
-            "end": 182
-          },
-          "start": 50,
-          "end": 182
         },
+        {
+          "type": "VariableDeclarator",
+          "start": 38,
+          "end": 48,
+          "id": {
+            "type": "Identifier",
+            "start": 38,
+            "end": 44,
+            "name": "__odds"
+          },
+          "init": {
+            "type": "Literal",
+            "start": 47,
+            "end": 48,
+            "value": 0,
+            "raw": "0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 50,
+      "end": 183,
+      "expression": {
+        "type": "AssignmentExpression",
         "start": 50,
-        "end": 183
-      },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
+        "end": 182,
+        "left": {
+          "type": "Identifier",
+          "start": 50,
+          "end": 61,
+          "name": "__evaluated"
+        },
+        "right": {
+          "type": "CallExpression",
+          "start": 64,
+          "end": 182,
+          "callee": {
             "type": "Identifier",
-            "name": "__odds",
-            "start": 188,
-            "end": 194
+            "start": 64,
+            "end": 68,
+            "name": "eval"
           },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": 5,
-            "raw": "5",
-            "start": 199,
-            "end": 200
-          },
-          "start": 188,
-          "end": 200
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 69,
+              "end": 181,
+              "value": "do { __condition++; if (((''+__condition/2).split('.')).length>1) continue; __odds++;} while(__condition < 10)",
+              "raw": "\"do { __condition++; if (((''+__condition/2).split('.')).length>1) continue; __odds++;} while(__condition < 10)\""
+            }
+          ],
+          "optional": false
         },
-        "consequent": {
-          "type": "BlockStatement",
-          "body": [],
-          "start": 202,
-          "end": 204
-        },
-        "alternate": null,
-        "start": 184,
-        "end": 204
-      },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "Identifier",
-            "name": "__evaluated",
-            "start": 209,
-            "end": 220
-          },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": 4,
-            "raw": "4",
-            "start": 225,
-            "end": 226
-          },
-          "start": 209,
-          "end": 226
-        },
-        "consequent": {
-          "type": "BlockStatement",
-          "body": [],
-          "start": 228,
-          "end": 230
-        },
-        "alternate": null,
-        "start": 205,
-        "end": 230
+        "operator": "="
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 230
-  },
-  "comments": [],
-  "diagnostics": []
+    },
+    {
+      "type": "IfStatement",
+      "start": 184,
+      "end": 204,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 188,
+        "end": 200,
+        "left": {
+          "type": "Identifier",
+          "start": 188,
+          "end": 194,
+          "name": "__odds"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 199,
+          "end": 200,
+          "value": 5,
+          "raw": "5"
+        },
+        "operator": "!=="
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "start": 202,
+        "end": 204,
+        "body": []
+      },
+      "alternate": null
+    },
+    {
+      "type": "IfStatement",
+      "start": 205,
+      "end": 230,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 209,
+        "end": 226,
+        "left": {
+          "type": "Identifier",
+          "start": 209,
+          "end": 220,
+          "name": "__evaluated"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 225,
+          "end": 226,
+          "value": 4,
+          "raw": "4"
+        },
+        "operator": "!=="
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "start": 228,
+        "end": 230,
+        "body": []
+      },
+      "alternate": null
+    }
+  ]
 }

@@ -1,91 +1,87 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "funcA",
-              "start": 4,
-              "end": 9
-            },
-            "init": {
-              "type": "CallExpression",
-              "callee": {
-                "type": "Identifier",
-                "name": "eval",
-                "start": 12,
-                "end": 16
-              },
-              "arguments": [
-                {
-                  "type": "Literal",
-                  "value": "function __funcA(__arg){return __arg;}; __funcA",
-                  "raw": "\"function __func\\u0041(__arg){return __arg;}; __funcA\"",
-                  "start": 17,
-                  "end": 71
-                }
-              ],
-              "optional": false,
-              "start": 12,
-              "end": 72
-            },
+  "type": "Program",
+  "start": 0,
+  "end": 109,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 73,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 72,
+          "id": {
+            "type": "Identifier",
             "start": 4,
-            "end": 72
-          }
-        ],
-        "start": 0,
-        "end": 73
-      },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "UnaryExpression",
-            "operator": "typeof",
-            "argument": {
+            "end": 9,
+            "name": "funcA"
+          },
+          "init": {
+            "type": "CallExpression",
+            "start": 12,
+            "end": 72,
+            "callee": {
               "type": "Identifier",
-              "name": "funcA",
-              "start": 85,
-              "end": 90
+              "start": 12,
+              "end": 16,
+              "name": "eval"
             },
-            "prefix": true,
-            "start": 78,
-            "end": 90
-          },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": "function",
-            "raw": "\"function\"",
-            "start": 95,
-            "end": 105
-          },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 17,
+                "end": 71,
+                "value": "function __funcA(__arg){return __arg;}; __funcA",
+                "raw": "\"function __func\\u0041(__arg){return __arg;}; __funcA\""
+              }
+            ],
+            "optional": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "IfStatement",
+      "start": 74,
+      "end": 109,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 78,
+        "end": 105,
+        "left": {
+          "type": "UnaryExpression",
           "start": 78,
-          "end": 105
+          "end": 90,
+          "operator": "typeof",
+          "prefix": true,
+          "argument": {
+            "type": "Identifier",
+            "start": 85,
+            "end": 90,
+            "name": "funcA"
+          }
         },
-        "consequent": {
-          "type": "BlockStatement",
-          "body": [],
-          "start": 107,
-          "end": 109
+        "right": {
+          "type": "Literal",
+          "start": 95,
+          "end": 105,
+          "value": "function",
+          "raw": "\"function\""
         },
-        "alternate": null,
-        "start": 74,
-        "end": 109
-      }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 109
-  },
-  "comments": [],
-  "diagnostics": []
+        "operator": "!=="
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "start": 107,
+        "end": 109,
+        "body": []
+      },
+      "alternate": null
+    }
+  ]
 }

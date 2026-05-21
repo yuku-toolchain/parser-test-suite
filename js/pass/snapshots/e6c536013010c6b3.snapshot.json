@@ -1,142 +1,138 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
+  "type": "Program",
+  "start": 0,
+  "end": 100,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 27,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 26,
+          "id": {
+            "type": "Identifier",
+            "start": 4,
+            "end": 9,
+            "name": "__str"
+          },
+          "init": {
+            "type": "NewExpression",
+            "start": 12,
+            "end": 26,
+            "callee": {
               "type": "Identifier",
-              "name": "__str",
-              "start": 4,
-              "end": 9
+              "start": 16,
+              "end": 22,
+              "name": "Object"
             },
-            "init": {
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 23,
+                "end": 25,
+                "value": "",
+                "raw": "\"\""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TryStatement",
+      "start": 28,
+      "end": 100,
+      "block": {
+        "type": "BlockStatement",
+        "start": 32,
+        "end": 50,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 36,
+            "end": 48,
+            "expression": {
               "type": "NewExpression",
+              "start": 36,
+              "end": 47,
               "callee": {
                 "type": "Identifier",
-                "name": "Object",
-                "start": 16,
-                "end": 22
+                "start": 40,
+                "end": 45,
+                "name": "__str"
               },
-              "arguments": [
-                {
-                  "type": "Literal",
-                  "value": "",
-                  "raw": "\"\"",
-                  "start": 23,
-                  "end": 25
-                }
-              ],
-              "start": 12,
-              "end": 26
-            },
-            "start": 4,
-            "end": 26
+              "arguments": []
+            }
           }
-        ],
-        "start": 0,
-        "end": 27
+        ]
       },
-      {
-        "type": "TryStatement",
-        "block": {
+      "handler": {
+        "type": "CatchClause",
+        "start": 51,
+        "end": 100,
+        "param": {
+          "type": "Identifier",
+          "start": 58,
+          "end": 59,
+          "name": "e"
+        },
+        "body": {
           "type": "BlockStatement",
+          "start": 61,
+          "end": 100,
           "body": [
             {
-              "type": "ExpressionStatement",
-              "expression": {
-                "type": "NewExpression",
-                "callee": {
-                  "type": "Identifier",
-                  "name": "__str",
-                  "start": 40,
-                  "end": 45
-                },
-                "arguments": [],
-                "start": 36,
-                "end": 47
-              },
-              "start": 36,
-              "end": 48
-            }
-          ],
-          "start": 32,
-          "end": 50
-        },
-        "handler": {
-          "type": "CatchClause",
-          "param": {
-            "type": "Identifier",
-            "name": "e",
-            "start": 58,
-            "end": 59
-          },
-          "body": {
-            "type": "BlockStatement",
-            "body": [
-              {
-                "type": "IfStatement",
-                "test": {
-                  "type": "UnaryExpression",
-                  "operator": "!",
-                  "argument": {
-                    "type": "ParenthesizedExpression",
-                    "expression": {
-                      "type": "BinaryExpression",
-                      "left": {
-                        "type": "Identifier",
-                        "name": "e",
-                        "start": 71,
-                        "end": 72
-                      },
-                      "operator": "instanceof",
-                      "right": {
-                        "type": "Identifier",
-                        "name": "TypeError",
-                        "start": 84,
-                        "end": 93
-                      },
+              "type": "IfStatement",
+              "start": 65,
+              "end": 98,
+              "test": {
+                "type": "UnaryExpression",
+                "start": 69,
+                "end": 94,
+                "operator": "!",
+                "prefix": true,
+                "argument": {
+                  "type": "ParenthesizedExpression",
+                  "start": 70,
+                  "end": 94,
+                  "expression": {
+                    "type": "BinaryExpression",
+                    "start": 71,
+                    "end": 93,
+                    "left": {
+                      "type": "Identifier",
                       "start": 71,
-                      "end": 93
+                      "end": 72,
+                      "name": "e"
                     },
-                    "start": 70,
-                    "end": 94
-                  },
-                  "prefix": true,
-                  "start": 69,
-                  "end": 94
-                },
-                "consequent": {
-                  "type": "BlockStatement",
-                  "body": [],
-                  "start": 96,
-                  "end": 98
-                },
-                "alternate": null,
-                "start": 65,
-                "end": 98
-              }
-            ],
-            "start": 61,
-            "end": 100
-          },
-          "start": 51,
-          "end": 100
-        },
-        "finalizer": null,
-        "start": 28,
-        "end": 100
-      }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 100
-  },
-  "comments": [],
-  "diagnostics": []
+                    "right": {
+                      "type": "Identifier",
+                      "start": 84,
+                      "end": 93,
+                      "name": "TypeError"
+                    },
+                    "operator": "instanceof"
+                  }
+                }
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "start": 96,
+                "end": 98,
+                "body": []
+              },
+              "alternate": null
+            }
+          ]
+        }
+      },
+      "finalizer": null
+    }
+  ]
 }

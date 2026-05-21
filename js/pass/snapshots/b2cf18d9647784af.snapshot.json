@@ -1,111 +1,107 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "AssignmentExpression",
-          "operator": "=",
-          "left": {
-            "type": "Identifier",
-            "name": "foo",
-            "start": 0,
-            "end": 3
-          },
-          "right": {
-            "type": "Literal",
-            "value": "prior to throw",
-            "raw": "\"prior to throw\"",
-            "start": 6,
-            "end": 22
-          },
-          "start": 0,
-          "end": 22
-        },
+  "type": "Program",
+  "start": 0,
+  "end": 104,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "end": 23,
+      "expression": {
+        "type": "AssignmentExpression",
         "start": 0,
-        "end": 23
+        "end": 22,
+        "left": {
+          "type": "Identifier",
+          "start": 0,
+          "end": 3,
+          "name": "foo"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 6,
+          "end": 22,
+          "value": "prior to throw",
+          "raw": "\"prior to throw\""
+        },
+        "operator": "="
+      }
+    },
+    {
+      "type": "TryStatement",
+      "start": 24,
+      "end": 104,
+      "block": {
+        "type": "BlockStatement",
+        "start": 28,
+        "end": 52,
+        "body": [
+          {
+            "type": "ThrowStatement",
+            "start": 32,
+            "end": 50,
+            "argument": {
+              "type": "NewExpression",
+              "start": 38,
+              "end": 49,
+              "callee": {
+                "type": "Identifier",
+                "start": 42,
+                "end": 47,
+                "name": "Error"
+              },
+              "arguments": []
+            }
+          }
+        ]
       },
-      {
-        "type": "TryStatement",
-        "block": {
+      "handler": {
+        "type": "CatchClause",
+        "start": 53,
+        "end": 104,
+        "param": {
+          "type": "Identifier",
+          "start": 60,
+          "end": 63,
+          "name": "foo"
+        },
+        "body": {
           "type": "BlockStatement",
+          "start": 65,
+          "end": 104,
           "body": [
             {
-              "type": "ThrowStatement",
-              "argument": {
-                "type": "NewExpression",
-                "callee": {
-                  "type": "Identifier",
-                  "name": "Error",
-                  "start": 42,
-                  "end": 47
-                },
-                "arguments": [],
-                "start": 38,
-                "end": 49
-              },
-              "start": 32,
-              "end": 50
-            }
-          ],
-          "start": 28,
-          "end": 52
-        },
-        "handler": {
-          "type": "CatchClause",
-          "param": {
-            "type": "Identifier",
-            "name": "foo",
-            "start": 60,
-            "end": 63
-          },
-          "body": {
-            "type": "BlockStatement",
-            "body": [
-              {
-                "type": "VariableDeclaration",
-                "kind": "var",
-                "declarations": [
-                  {
-                    "type": "VariableDeclarator",
-                    "id": {
-                      "type": "Identifier",
-                      "name": "foo",
-                      "start": 73,
-                      "end": 76
-                    },
-                    "init": {
-                      "type": "Literal",
-                      "value": "initializer in catch",
-                      "raw": "\"initializer in catch\"",
-                      "start": 79,
-                      "end": 101
-                    },
+              "type": "VariableDeclaration",
+              "start": 69,
+              "end": 102,
+              "kind": "var",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "start": 73,
+                  "end": 101,
+                  "id": {
+                    "type": "Identifier",
                     "start": 73,
-                    "end": 101
+                    "end": 76,
+                    "name": "foo"
+                  },
+                  "init": {
+                    "type": "Literal",
+                    "start": 79,
+                    "end": 101,
+                    "value": "initializer in catch",
+                    "raw": "\"initializer in catch\""
                   }
-                ],
-                "start": 69,
-                "end": 102
-              }
-            ],
-            "start": 65,
-            "end": 104
-          },
-          "start": 53,
-          "end": 104
-        },
-        "finalizer": null,
-        "start": 24,
-        "end": 104
-      }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 104
-  },
-  "comments": [],
-  "diagnostics": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "finalizer": null
+    }
+  ]
 }

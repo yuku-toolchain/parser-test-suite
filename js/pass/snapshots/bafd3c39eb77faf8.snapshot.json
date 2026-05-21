@@ -1,158 +1,149 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 591,
-    "sourceType": "script",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "start": 489,
-        "end": 528,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
+  "type": "Program",
+  "start": 0,
+  "end": 591,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 489,
+      "end": 528,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 493,
+          "end": 527,
+          "id": {
+            "type": "Identifier",
             "start": 493,
+            "end": 498,
+            "name": "stack"
+          },
+          "init": {
+            "type": "NewExpression",
+            "start": 501,
             "end": 527,
-            "id": {
+            "callee": {
               "type": "Identifier",
-              "start": 493,
-              "end": 498,
-              "name": "stack"
+              "start": 505,
+              "end": 525,
+              "name": "AsyncDisposableStack"
             },
-            "init": {
-              "type": "NewExpression",
-              "start": 501,
-              "end": 527,
-              "callee": {
-                "type": "Identifier",
-                "start": 505,
-                "end": 525,
-                "name": "AsyncDisposableStack"
-              },
-              "arguments": []
-            }
+            "arguments": []
           }
-        ]
-      },
-      {
-        "type": "ExpressionStatement",
+        }
+      ],
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2023 Ron Buckton. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\nesid: sec-get-asyncdisposablestack.prototype.disposed\ndescription: >\n  Returns `true` after the AsyncDisposableStack has been disposed.\ninfo: |\n  get AsyncDisposableStack.prototype.disposed\n\n  ...\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, return true.\n  4. Otherwise, return false.\n\nfeatures: [explicit-resource-management]\n---"
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 529,
+      "end": 550,
+      "expression": {
+        "type": "CallExpression",
         "start": 529,
-        "end": 550,
-        "expression": {
-          "type": "CallExpression",
+        "end": 549,
+        "callee": {
+          "type": "MemberExpression",
           "start": 529,
-          "end": 549,
-          "callee": {
-            "type": "MemberExpression",
+          "end": 547,
+          "object": {
+            "type": "Identifier",
             "start": 529,
+            "end": 534,
+            "name": "stack"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 535,
             "end": 547,
+            "name": "disposeAsync"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [],
+        "optional": false
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 551,
+      "end": 590,
+      "expression": {
+        "type": "CallExpression",
+        "start": 551,
+        "end": 589,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 551,
+          "end": 567,
+          "object": {
+            "type": "Identifier",
+            "start": 551,
+            "end": 557,
+            "name": "assert"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 558,
+            "end": 567,
+            "name": "sameValue"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "MemberExpression",
+            "start": 568,
+            "end": 582,
             "object": {
               "type": "Identifier",
-              "start": 529,
-              "end": 534,
+              "start": 568,
+              "end": 573,
               "name": "stack"
             },
             "property": {
               "type": "Identifier",
-              "start": 535,
-              "end": 547,
-              "name": "disposeAsync"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [],
-          "optional": false
-        }
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 551,
-        "end": 590,
-        "expression": {
-          "type": "CallExpression",
-          "start": 551,
-          "end": 589,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 551,
-            "end": 567,
-            "object": {
-              "type": "Identifier",
-              "start": 551,
-              "end": 557,
-              "name": "assert"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 558,
-              "end": 567,
-              "name": "sameValue"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "MemberExpression",
-              "start": 568,
+              "start": 574,
               "end": 582,
-              "object": {
-                "type": "Identifier",
-                "start": 568,
-                "end": 573,
-                "name": "stack"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 574,
-                "end": 582,
-                "name": "disposed"
-              },
-              "computed": false,
-              "optional": false
+              "name": "disposed"
             },
-            {
-              "type": "Literal",
-              "start": 584,
-              "end": 588,
-              "value": true,
-              "raw": "true"
-            }
-          ],
-          "optional": false
-        }
+            "computed": false,
+            "optional": false
+          },
+          {
+            "type": "Literal",
+            "start": 584,
+            "end": 588,
+            "value": true,
+            "raw": "true"
+          }
+        ],
+        "optional": false
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
-      "start": 0,
-      "end": 55
-    },
-    {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
-    },
-    {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\nesid: sec-get-asyncdisposablestack.prototype.disposed\ndescription: >\n  Returns `true` after the AsyncDisposableStack has been disposed.\ninfo: |\n  get AsyncDisposableStack.prototype.disposed\n\n  ...\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, return true.\n  4. Otherwise, return false.\n\nfeatures: [explicit-resource-management]\n---",
-      "start": 127,
-      "end": 487
     }
-  ],
-  "diagnostics": []
+  ]
 }

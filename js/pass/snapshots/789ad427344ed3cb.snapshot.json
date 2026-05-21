@@ -1,244 +1,235 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 1278,
-    "sourceType": "script",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "start": 1126,
-        "end": 1165,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
+  "type": "Program",
+  "start": 0,
+  "end": 1278,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 1126,
+      "end": 1165,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 1130,
+          "end": 1164,
+          "id": {
+            "type": "Identifier",
             "start": 1130,
+            "end": 1135,
+            "name": "stack"
+          },
+          "init": {
+            "type": "NewExpression",
+            "start": 1138,
             "end": 1164,
-            "id": {
+            "callee": {
               "type": "Identifier",
-              "start": 1130,
-              "end": 1135,
-              "name": "stack"
+              "start": 1142,
+              "end": 1162,
+              "name": "AsyncDisposableStack"
             },
-            "init": {
-              "type": "NewExpression",
-              "start": 1138,
-              "end": 1164,
-              "callee": {
-                "type": "Identifier",
-                "start": 1142,
-                "end": 1162,
-                "name": "AsyncDisposableStack"
-              },
-              "arguments": []
-            }
+            "arguments": []
           }
-        ]
-      },
-      {
-        "type": "VariableDeclaration",
-        "start": 1166,
-        "end": 1187,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
+        }
+      ],
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2023 Ron Buckton. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\nesid: sec-asyncdisposablestack.prototype.move\ndescription: Resources in the stack are not disposed when move is called.\ninfo: |\n  AsyncDisposableStack.prototype.move ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Let newAsyncDisposableStack be ? OrdinaryCreateFromConstructor(%AsyncDisposableStack%, \"%AsyncDisposableStack.prototype%\", « [[AsyncDisposableState]], [[DisposeCapability]] »).\n  5. Set newAsyncDisposableStack.[[AsyncDisposableState]] to pending.\n  6. Set newAsyncDisposableStack.[[DisposeCapability]] to asyncDisposableStack.[[DisposeCapability]].\n  7. Set asyncDisposableStack.[[DisposeCapability]] to NewDisposeCapability().\n  8. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  9. Return newAsyncDisposableStack.\n\nfeatures: [explicit-resource-management]\n---"
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 1166,
+      "end": 1187,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 1170,
+          "end": 1186,
+          "id": {
+            "type": "Identifier",
             "start": 1170,
+            "end": 1178,
+            "name": "disposed"
+          },
+          "init": {
+            "type": "Literal",
+            "start": 1181,
             "end": 1186,
-            "id": {
-              "type": "Identifier",
-              "start": 1170,
-              "end": 1178,
-              "name": "disposed"
-            },
-            "init": {
-              "type": "Literal",
-              "start": 1181,
-              "end": 1186,
-              "value": false,
-              "raw": "false"
-            }
+            "value": false,
+            "raw": "false"
           }
-        ]
-      },
-      {
-        "type": "ExpressionStatement",
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 1188,
+      "end": 1228,
+      "expression": {
+        "type": "CallExpression",
         "start": 1188,
-        "end": 1228,
-        "expression": {
-          "type": "CallExpression",
+        "end": 1227,
+        "callee": {
+          "type": "MemberExpression",
           "start": 1188,
-          "end": 1227,
-          "callee": {
-            "type": "MemberExpression",
+          "end": 1199,
+          "object": {
+            "type": "Identifier",
             "start": 1188,
+            "end": 1193,
+            "name": "stack"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 1194,
             "end": 1199,
-            "object": {
-              "type": "Identifier",
-              "start": 1188,
-              "end": 1193,
-              "name": "stack"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 1194,
-              "end": 1199,
-              "name": "defer"
-            },
-            "computed": false,
-            "optional": false
+            "name": "defer"
           },
-          "arguments": [
-            {
-              "type": "ArrowFunctionExpression",
-              "start": 1200,
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "ArrowFunctionExpression",
+            "start": 1200,
+            "end": 1226,
+            "id": null,
+            "generator": false,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 1206,
               "end": 1226,
-              "id": null,
-              "generator": false,
-              "async": false,
-              "params": [],
-              "body": {
-                "type": "BlockStatement",
-                "start": 1206,
-                "end": 1226,
-                "body": [
-                  {
-                    "type": "ExpressionStatement",
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 1208,
+                  "end": 1224,
+                  "expression": {
+                    "type": "AssignmentExpression",
                     "start": 1208,
-                    "end": 1224,
-                    "expression": {
-                      "type": "AssignmentExpression",
+                    "end": 1223,
+                    "left": {
+                      "type": "Identifier",
                       "start": 1208,
+                      "end": 1216,
+                      "name": "disposed"
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "start": 1219,
                       "end": 1223,
-                      "left": {
-                        "type": "Identifier",
-                        "start": 1208,
-                        "end": 1216,
-                        "name": "disposed"
-                      },
-                      "right": {
-                        "type": "Literal",
-                        "start": 1219,
-                        "end": 1223,
-                        "value": true,
-                        "raw": "true"
-                      },
-                      "operator": "="
-                    }
+                      "value": true,
+                      "raw": "true"
+                    },
+                    "operator": "="
                   }
-                ]
-              },
-              "expression": false
-            }
-          ],
-          "optional": false
-        }
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1229,
-        "end": 1242,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1229,
-          "end": 1241,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 1229,
-            "end": 1239,
-            "object": {
-              "type": "Identifier",
-              "start": 1229,
-              "end": 1234,
-              "name": "stack"
+                }
+              ]
             },
-            "property": {
-              "type": "Identifier",
-              "start": 1235,
-              "end": 1239,
-              "name": "move"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [],
-          "optional": false
-        }
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1243,
-        "end": 1277,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1243,
-          "end": 1276,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 1243,
-            "end": 1259,
-            "object": {
-              "type": "Identifier",
-              "start": 1243,
-              "end": 1249,
-              "name": "assert"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 1250,
-              "end": 1259,
-              "name": "sameValue"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Identifier",
-              "start": 1260,
-              "end": 1268,
-              "name": "disposed"
-            },
-            {
-              "type": "Literal",
-              "start": 1270,
-              "end": 1275,
-              "value": false,
-              "raw": "false"
-            }
-          ],
-          "optional": false
-        }
+            "expression": false
+          }
+        ],
+        "optional": false
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
-      "start": 0,
-      "end": 55
     },
     {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
+      "type": "ExpressionStatement",
+      "start": 1229,
+      "end": 1242,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1229,
+        "end": 1241,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 1229,
+          "end": 1239,
+          "object": {
+            "type": "Identifier",
+            "start": 1229,
+            "end": 1234,
+            "name": "stack"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 1235,
+            "end": 1239,
+            "name": "move"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [],
+        "optional": false
+      }
     },
     {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\nesid: sec-asyncdisposablestack.prototype.move\ndescription: Resources in the stack are not disposed when move is called.\ninfo: |\n  AsyncDisposableStack.prototype.move ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Let newAsyncDisposableStack be ? OrdinaryCreateFromConstructor(%AsyncDisposableStack%, \"%AsyncDisposableStack.prototype%\", « [[AsyncDisposableState]], [[DisposeCapability]] »).\n  5. Set newAsyncDisposableStack.[[AsyncDisposableState]] to pending.\n  6. Set newAsyncDisposableStack.[[DisposeCapability]] to asyncDisposableStack.[[DisposeCapability]].\n  7. Set asyncDisposableStack.[[DisposeCapability]] to NewDisposeCapability().\n  8. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  9. Return newAsyncDisposableStack.\n\nfeatures: [explicit-resource-management]\n---",
-      "start": 128,
-      "end": 1124
+      "type": "ExpressionStatement",
+      "start": 1243,
+      "end": 1277,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1243,
+        "end": 1276,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 1243,
+          "end": 1259,
+          "object": {
+            "type": "Identifier",
+            "start": 1243,
+            "end": 1249,
+            "name": "assert"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 1250,
+            "end": 1259,
+            "name": "sameValue"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "start": 1260,
+            "end": 1268,
+            "name": "disposed"
+          },
+          {
+            "type": "Literal",
+            "start": 1270,
+            "end": 1275,
+            "value": false,
+            "raw": "false"
+          }
+        ],
+        "optional": false
+      }
     }
-  ],
-  "diagnostics": []
+  ]
 }

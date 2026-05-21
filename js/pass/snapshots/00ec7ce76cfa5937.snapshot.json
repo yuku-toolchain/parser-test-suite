@@ -1,143 +1,139 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "err",
-              "start": 4,
-              "end": 7
-            },
-            "init": null,
+  "type": "Program",
+  "start": 0,
+  "end": 109,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 8,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 7,
+          "id": {
+            "type": "Identifier",
             "start": 4,
-            "end": 7
+            "end": 7,
+            "name": "err"
+          },
+          "init": null
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 9,
+      "end": 55,
+      "expression": {
+        "type": "CallExpression",
+        "start": 9,
+        "end": 54,
+        "callee": {
+          "type": "ParenthesizedExpression",
+          "start": 9,
+          "end": 18,
+          "expression": {
+            "type": "SequenceExpression",
+            "start": 10,
+            "end": 17,
+            "expressions": [
+              {
+                "type": "Literal",
+                "start": 10,
+                "end": 11,
+                "value": 0,
+                "raw": "0"
+              },
+              {
+                "type": "Identifier",
+                "start": 13,
+                "end": 17,
+                "name": "eval"
+              }
+            ]
+          }
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 19,
+            "end": 53,
+            "value": "\"use strict\";{ function f() {} }",
+            "raw": "'\"use strict\";{ function f() {} }'"
           }
         ],
-        "start": 0,
-        "end": 8
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "ParenthesizedExpression",
+        "optional": false
+      }
+    },
+    {
+      "type": "TryStatement",
+      "start": 56,
+      "end": 109,
+      "block": {
+        "type": "BlockStatement",
+        "start": 60,
+        "end": 68,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 64,
+            "end": 66,
             "expression": {
-              "type": "SequenceExpression",
-              "expressions": [
-                {
-                  "type": "Literal",
-                  "value": 0,
-                  "raw": "0",
-                  "start": 10,
-                  "end": 11
-                },
-                {
-                  "type": "Identifier",
-                  "name": "eval",
-                  "start": 13,
-                  "end": 17
-                }
-              ],
-              "start": 10,
-              "end": 17
-            },
-            "start": 9,
-            "end": 18
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "value": "\"use strict\";{ function f() {} }",
-              "raw": "'\"use strict\";{ function f() {} }'",
-              "start": 19,
-              "end": 53
+              "type": "Identifier",
+              "start": 64,
+              "end": 65,
+              "name": "f"
             }
-          ],
-          "optional": false,
-          "start": 9,
-          "end": 54
-        },
-        "start": 9,
-        "end": 55
+          }
+        ]
       },
-      {
-        "type": "TryStatement",
-        "block": {
+      "handler": {
+        "type": "CatchClause",
+        "start": 69,
+        "end": 109,
+        "param": {
+          "type": "Identifier",
+          "start": 76,
+          "end": 85,
+          "name": "exception"
+        },
+        "body": {
           "type": "BlockStatement",
+          "start": 87,
+          "end": 109,
           "body": [
             {
               "type": "ExpressionStatement",
+              "start": 91,
+              "end": 107,
               "expression": {
-                "type": "Identifier",
-                "name": "f",
-                "start": 64,
-                "end": 65
-              },
-              "start": 64,
-              "end": 66
-            }
-          ],
-          "start": 60,
-          "end": 68
-        },
-        "handler": {
-          "type": "CatchClause",
-          "param": {
-            "type": "Identifier",
-            "name": "exception",
-            "start": 76,
-            "end": 85
-          },
-          "body": {
-            "type": "BlockStatement",
-            "body": [
-              {
-                "type": "ExpressionStatement",
-                "expression": {
-                  "type": "AssignmentExpression",
-                  "operator": "=",
-                  "left": {
-                    "type": "Identifier",
-                    "name": "err",
-                    "start": 91,
-                    "end": 94
-                  },
-                  "right": {
-                    "type": "Identifier",
-                    "name": "exception",
-                    "start": 97,
-                    "end": 106
-                  },
-                  "start": 91,
-                  "end": 106
-                },
+                "type": "AssignmentExpression",
                 "start": 91,
-                "end": 107
+                "end": 106,
+                "left": {
+                  "type": "Identifier",
+                  "start": 91,
+                  "end": 94,
+                  "name": "err"
+                },
+                "right": {
+                  "type": "Identifier",
+                  "start": 97,
+                  "end": 106,
+                  "name": "exception"
+                },
+                "operator": "="
               }
-            ],
-            "start": 87,
-            "end": 109
-          },
-          "start": 69,
-          "end": 109
-        },
-        "finalizer": null,
-        "start": 56,
-        "end": 109
-      }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 109
-  },
-  "comments": [],
-  "diagnostics": []
+            }
+          ]
+        }
+      },
+      "finalizer": null
+    }
+  ]
 }
