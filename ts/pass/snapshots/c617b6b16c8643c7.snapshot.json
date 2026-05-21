@@ -1,115 +1,110 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 210,
-    "sourceType": "script",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "TSModuleDeclaration",
-        "start": 20,
+  "type": "Program",
+  "start": 0,
+  "end": 210,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "TSModuleDeclaration",
+      "start": 20,
+      "end": 208,
+      "id": {
+        "type": "Identifier",
+        "start": 38,
+        "end": 42,
+        "name": "test",
+        "decorators": [],
+        "typeAnnotation": null,
+        "optional": false
+      },
+      "kind": "namespace",
+      "declare": true,
+      "global": false,
+      "body": {
+        "type": "TSModuleBlock",
+        "start": 43,
         "end": 208,
-        "id": {
-          "type": "Identifier",
-          "start": 38,
-          "end": 42,
-          "name": "test",
-          "decorators": [],
-          "typeAnnotation": null,
-          "optional": false
-        },
-        "kind": "namespace",
-        "declare": true,
-        "global": false,
-        "body": {
-          "type": "TSModuleBlock",
-          "start": 43,
-          "end": 208,
-          "body": [
-            {
-              "type": "TSInterfaceDeclaration",
-              "start": 50,
+        "body": [
+          {
+            "type": "TSInterfaceDeclaration",
+            "start": 50,
+            "end": 71,
+            "id": {
+              "type": "Identifier",
+              "start": 60,
+              "end": 67,
+              "name": "istring",
+              "decorators": [],
+              "typeAnnotation": null,
+              "optional": false
+            },
+            "typeParameters": null,
+            "extends": [],
+            "body": {
+              "type": "TSInterfaceBody",
+              "start": 68,
               "end": 71,
-              "id": {
+              "body": []
+            },
+            "declare": false
+          },
+          {
+            "type": "TSImportEqualsDeclaration",
+            "start": 176,
+            "end": 205,
+            "id": {
+              "type": "Identifier",
+              "start": 183,
+              "end": 189,
+              "name": "string",
+              "decorators": [],
+              "typeAnnotation": null,
+              "optional": false
+            },
+            "moduleReference": {
+              "type": "TSQualifiedName",
+              "start": 192,
+              "end": 204,
+              "left": {
                 "type": "Identifier",
-                "start": 60,
-                "end": 67,
+                "start": 192,
+                "end": 196,
+                "name": "test",
+                "decorators": [],
+                "optional": false,
+                "typeAnnotation": null
+              },
+              "right": {
+                "type": "Identifier",
+                "start": 197,
+                "end": 204,
                 "name": "istring",
                 "decorators": [],
-                "typeAnnotation": null,
-                "optional": false
-              },
-              "typeParameters": null,
-              "extends": [],
-              "body": {
-                "type": "TSInterfaceBody",
-                "start": 68,
-                "end": 71,
-                "body": []
-              },
-              "declare": false
+                "optional": false,
+                "typeAnnotation": null
+              }
             },
-            {
-              "type": "TSImportEqualsDeclaration",
-              "start": 176,
-              "end": 205,
-              "id": {
-                "type": "Identifier",
-                "start": 183,
-                "end": 189,
-                "name": "string",
-                "decorators": [],
-                "typeAnnotation": null,
-                "optional": false
-              },
-              "moduleReference": {
-                "type": "TSQualifiedName",
-                "start": 192,
-                "end": 204,
-                "left": {
-                  "type": "Identifier",
-                  "start": 192,
-                  "end": 196,
-                  "name": "test",
-                  "decorators": [],
-                  "optional": false,
-                  "typeAnnotation": null
-                },
-                "right": {
-                  "type": "Identifier",
-                  "start": 197,
-                  "end": 204,
-                  "name": "istring",
-                  "decorators": [],
-                  "optional": false,
-                  "typeAnnotation": null
-                }
-              },
-              "importKind": "value"
-            }
-          ]
+            "importKind": "value",
+            "comments": [
+              {
+                "type": "Line",
+                "position": "before",
+                "sameLine": false,
+                "value": " Should error; 'test.istring' is a type, so this import conflicts with the 'string' type."
+              }
+            ]
+          }
+        ]
+      },
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " @target: es2015"
         }
-      }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " @target: es2015",
-      "start": 0,
-      "end": 18
-    },
-    {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " Should error; 'test.istring' is a type, so this import conflicts with the 'string' type.",
-      "start": 79,
-      "end": 170
+      ]
     }
-  ],
-  "diagnostics": []
+  ]
 }

@@ -1,255 +1,251 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "const",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "invalidStrings",
-              "start": 6,
-              "end": 20
-            },
-            "init": {
-              "type": "ArrayExpression",
-              "elements": [
-                {
-                  "type": "ArrayExpression",
-                  "elements": [
-                    {
-                      "type": "Literal",
-                      "value": "1970-01-01T00:00[UTC][U-CA=iso8601]",
-                      "raw": "\"1970-01-01T00:00[UTC][U-CA=iso8601]\"",
-                      "start": 25,
-                      "end": 62
-                    },
-                    {
-                      "type": "Literal",
-                      "value": "invalid capitalized key",
-                      "raw": "\"invalid capitalized key\"",
-                      "start": 64,
-                      "end": 89
-                    }
-                  ],
-                  "start": 24,
-                  "end": 90
-                },
-                {
-                  "type": "ArrayExpression",
-                  "elements": [
-                    {
-                      "type": "Literal",
-                      "value": "1970-01-01T00:00[UTC][u-CA=iso8601]",
-                      "raw": "\"1970-01-01T00:00[UTC][u-CA=iso8601]\"",
-                      "start": 93,
-                      "end": 130
-                    },
-                    {
-                      "type": "Literal",
-                      "value": "invalid partially-capitalized key",
-                      "raw": "\"invalid partially-capitalized key\"",
-                      "start": 132,
-                      "end": 167
-                    }
-                  ],
-                  "start": 92,
-                  "end": 168
-                },
-                {
-                  "type": "ArrayExpression",
-                  "elements": [
-                    {
-                      "type": "Literal",
-                      "value": "1970-01-01T00:00[UTC][FOO=bar]",
-                      "raw": "\"1970-01-01T00:00[UTC][FOO=bar]\"",
-                      "start": 171,
-                      "end": 203
-                    },
-                    {
-                      "type": "Literal",
-                      "value": "invalid capitalized unrecognized key",
-                      "raw": "\"invalid capitalized unrecognized key\"",
-                      "start": 205,
-                      "end": 243
-                    }
-                  ],
-                  "start": 170,
-                  "end": 244
-                }
-              ],
-              "start": 23,
-              "end": 245
-            },
+  "type": "Program",
+  "start": 0,
+  "end": 375,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 246,
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 6,
+          "end": 245,
+          "id": {
+            "type": "Identifier",
             "start": 6,
-            "end": 245
-          }
-        ],
-        "start": 0,
-        "end": 246
-      },
-      {
-        "type": "VariableDeclaration",
-        "kind": "const",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "timeZone",
-              "start": 253,
-              "end": 261
-            },
-            "init": {
-              "type": "Literal",
-              "value": "UTC",
-              "raw": "\"UTC\"",
-              "start": 264,
-              "end": 269
-            },
-            "start": 253,
-            "end": 269
-          }
-        ],
-        "start": 247,
-        "end": 270
-      },
-      {
-        "type": "VariableDeclaration",
-        "kind": "const",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "instance",
-              "start": 277,
-              "end": 285
-            },
-            "init": {
-              "type": "NewExpression",
-              "callee": {
-                "type": "MemberExpression",
-                "object": {
-                  "type": "Identifier",
-                  "name": "Temporal",
-                  "start": 292,
-                  "end": 300
-                },
-                "property": {
-                  "type": "Identifier",
-                  "name": "ZonedDateTime",
-                  "start": 301,
-                  "end": 314
-                },
-                "optional": false,
-                "computed": false,
-                "start": 292,
-                "end": 314
-              },
-              "arguments": [
-                {
-                  "type": "Literal",
-                  "value": "(BigInt) 0n",
-                  "raw": "0n",
-                  "bigint": "0",
-                  "start": 315,
-                  "end": 317
-                },
-                {
-                  "type": "Identifier",
-                  "name": "timeZone",
-                  "start": 319,
-                  "end": 327
-                }
-              ],
-              "start": 288,
-              "end": 328
-            },
-            "start": 277,
-            "end": 328
-          }
-        ],
-        "start": 271,
-        "end": 329
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "MemberExpression",
-            "object": {
-              "type": "Identifier",
-              "name": "invalidStrings",
-              "start": 330,
-              "end": 344
-            },
-            "property": {
-              "type": "Identifier",
-              "name": "forEach",
-              "start": 345,
-              "end": 352
-            },
-            "optional": false,
-            "computed": false,
-            "start": 330,
-            "end": 352
+            "end": 20,
+            "name": "invalidStrings"
           },
-          "arguments": [
-            {
-              "type": "ArrowFunctionExpression",
-              "expression": false,
-              "async": false,
-              "params": [
-                {
-                  "type": "ArrayPattern",
-                  "elements": [
-                    {
-                      "type": "Identifier",
-                      "name": "arg",
-                      "start": 355,
-                      "end": 358
-                    },
-                    {
-                      "type": "Identifier",
-                      "name": "descr",
-                      "start": 360,
-                      "end": 365
-                    }
-                  ],
-                  "start": 354,
-                  "end": 366
-                }
-              ],
-              "body": {
-                "type": "BlockStatement",
-                "body": [],
-                "start": 371,
-                "end": 373
+          "init": {
+            "type": "ArrayExpression",
+            "start": 23,
+            "end": 245,
+            "elements": [
+              {
+                "type": "ArrayExpression",
+                "start": 24,
+                "end": 90,
+                "elements": [
+                  {
+                    "type": "Literal",
+                    "start": 25,
+                    "end": 62,
+                    "value": "1970-01-01T00:00[UTC][U-CA=iso8601]",
+                    "raw": "\"1970-01-01T00:00[UTC][U-CA=iso8601]\""
+                  },
+                  {
+                    "type": "Literal",
+                    "start": 64,
+                    "end": 89,
+                    "value": "invalid capitalized key",
+                    "raw": "\"invalid capitalized key\""
+                  }
+                ]
               },
-              "id": null,
-              "generator": false,
-              "start": 353,
-              "end": 373
-            }
-          ],
-          "optional": false,
-          "start": 330,
-          "end": 374
-        },
+              {
+                "type": "ArrayExpression",
+                "start": 92,
+                "end": 168,
+                "elements": [
+                  {
+                    "type": "Literal",
+                    "start": 93,
+                    "end": 130,
+                    "value": "1970-01-01T00:00[UTC][u-CA=iso8601]",
+                    "raw": "\"1970-01-01T00:00[UTC][u-CA=iso8601]\""
+                  },
+                  {
+                    "type": "Literal",
+                    "start": 132,
+                    "end": 167,
+                    "value": "invalid partially-capitalized key",
+                    "raw": "\"invalid partially-capitalized key\""
+                  }
+                ]
+              },
+              {
+                "type": "ArrayExpression",
+                "start": 170,
+                "end": 244,
+                "elements": [
+                  {
+                    "type": "Literal",
+                    "start": 171,
+                    "end": 203,
+                    "value": "1970-01-01T00:00[UTC][FOO=bar]",
+                    "raw": "\"1970-01-01T00:00[UTC][FOO=bar]\""
+                  },
+                  {
+                    "type": "Literal",
+                    "start": 205,
+                    "end": 243,
+                    "value": "invalid capitalized unrecognized key",
+                    "raw": "\"invalid capitalized unrecognized key\""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 247,
+      "end": 270,
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 253,
+          "end": 269,
+          "id": {
+            "type": "Identifier",
+            "start": 253,
+            "end": 261,
+            "name": "timeZone"
+          },
+          "init": {
+            "type": "Literal",
+            "start": 264,
+            "end": 269,
+            "value": "UTC",
+            "raw": "\"UTC\""
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 271,
+      "end": 329,
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 277,
+          "end": 328,
+          "id": {
+            "type": "Identifier",
+            "start": 277,
+            "end": 285,
+            "name": "instance"
+          },
+          "init": {
+            "type": "NewExpression",
+            "start": 288,
+            "end": 328,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 292,
+              "end": 314,
+              "object": {
+                "type": "Identifier",
+                "start": 292,
+                "end": 300,
+                "name": "Temporal"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 301,
+                "end": 314,
+                "name": "ZonedDateTime"
+              },
+              "computed": false,
+              "optional": false
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 315,
+                "end": 317,
+                "value": "(BigInt) 0n",
+                "raw": "0n",
+                "bigint": "0"
+              },
+              {
+                "type": "Identifier",
+                "start": 319,
+                "end": 327,
+                "name": "timeZone"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 330,
+      "end": 375,
+      "expression": {
+        "type": "CallExpression",
         "start": 330,
-        "end": 375
+        "end": 374,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 330,
+          "end": 352,
+          "object": {
+            "type": "Identifier",
+            "start": 330,
+            "end": 344,
+            "name": "invalidStrings"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 345,
+            "end": 352,
+            "name": "forEach"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "ArrowFunctionExpression",
+            "start": 353,
+            "end": 373,
+            "id": null,
+            "generator": false,
+            "async": false,
+            "params": [
+              {
+                "type": "ArrayPattern",
+                "start": 354,
+                "end": 366,
+                "elements": [
+                  {
+                    "type": "Identifier",
+                    "start": 355,
+                    "end": 358,
+                    "name": "arg"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 360,
+                    "end": 365,
+                    "name": "descr"
+                  }
+                ]
+              }
+            ],
+            "body": {
+              "type": "BlockStatement",
+              "start": 371,
+              "end": 373,
+              "body": []
+            },
+            "expression": false
+          }
+        ],
+        "optional": false
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 375
-  },
-  "comments": [],
-  "diagnostics": []
+    }
+  ]
 }

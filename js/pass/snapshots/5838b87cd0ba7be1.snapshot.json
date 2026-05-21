@@ -1,89 +1,85 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "initialBV",
-              "start": 4,
-              "end": 13
-            },
-            "init": null,
+  "type": "Program",
+  "start": 0,
+  "end": 114,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 25,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 13,
+          "id": {
+            "type": "Identifier",
             "start": 4,
-            "end": 13
+            "end": 13,
+            "name": "initialBV"
           },
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "currentBV",
-              "start": 15,
-              "end": 24
-            },
-            "init": null,
+          "init": null
+        },
+        {
+          "type": "VariableDeclarator",
+          "start": 15,
+          "end": 24,
+          "id": {
+            "type": "Identifier",
             "start": 15,
-            "end": 24
+            "end": 24,
+            "name": "currentBV"
+          },
+          "init": null
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 26,
+      "end": 109,
+      "expression": {
+        "type": "CallExpression",
+        "start": 26,
+        "end": 108,
+        "callee": {
+          "type": "Identifier",
+          "start": 26,
+          "end": 30,
+          "name": "eval"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 31,
+            "end": 107,
+            "value": "{ function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; } }",
+            "raw": "'{ function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; } }'"
           }
         ],
-        "start": 0,
-        "end": 25
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "Identifier",
-            "name": "eval",
-            "start": 26,
-            "end": 30
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "value": "{ function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; } }",
-              "raw": "'{ function f() { initialBV = f; f = 123; currentBV = f; return \"decl\"; } }'",
-              "start": 31,
-              "end": 107
-            }
-          ],
-          "optional": false,
-          "start": 26,
-          "end": 108
-        },
-        "start": 26,
-        "end": 109
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "Identifier",
-            "name": "f",
-            "start": 110,
-            "end": 111
-          },
-          "arguments": [],
-          "optional": false,
-          "start": 110,
-          "end": 113
-        },
-        "start": 110,
-        "end": 114
+        "optional": false
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 114
-  },
-  "comments": [],
-  "diagnostics": []
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 110,
+      "end": 114,
+      "expression": {
+        "type": "CallExpression",
+        "start": 110,
+        "end": 113,
+        "callee": {
+          "type": "Identifier",
+          "start": 110,
+          "end": 111,
+          "name": "f"
+        },
+        "arguments": [],
+        "optional": false
+      }
+    }
+  ]
 }

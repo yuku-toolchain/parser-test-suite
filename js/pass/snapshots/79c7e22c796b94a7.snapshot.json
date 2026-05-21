@@ -1,211 +1,207 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "AssignmentExpression",
-          "operator": "=",
-          "left": {
-            "type": "MemberExpression",
-            "object": {
-              "type": "ThisExpression",
-              "start": 0,
-              "end": 4
-            },
-            "property": {
-              "type": "Identifier",
-              "name": "p1",
-              "start": 5,
-              "end": 7
-            },
-            "optional": false,
-            "computed": false,
-            "start": 0,
-            "end": 7
-          },
-          "right": {
-            "type": "Literal",
-            "value": "a",
-            "raw": "'a'",
-            "start": 10,
-            "end": 13
-          },
-          "start": 0,
-          "end": 13
-        },
+  "type": "Program",
+  "start": 0,
+  "end": 114,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "end": 14,
+      "expression": {
+        "type": "AssignmentExpression",
         "start": 0,
-        "end": 14
-      },
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "myObj",
-              "start": 19,
-              "end": 24
-            },
-            "init": {
-              "type": "ObjectExpression",
-              "properties": [
-                {
-                  "type": "Property",
-                  "kind": "init",
-                  "key": {
-                    "type": "Identifier",
-                    "name": "p1",
-                    "start": 31,
-                    "end": 33
-                  },
-                  "value": {
-                    "type": "Literal",
-                    "value": 1,
-                    "raw": "1",
-                    "start": 35,
-                    "end": 36
-                  },
-                  "method": false,
-                  "shorthand": false,
-                  "computed": false,
-                  "start": 31,
-                  "end": 36
-                }
-              ],
-              "start": 27,
-              "end": 38
-            },
+        "end": 13,
+        "left": {
+          "type": "MemberExpression",
+          "start": 0,
+          "end": 7,
+          "object": {
+            "type": "ThisExpression",
+            "start": 0,
+            "end": 4
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 5,
+            "end": 7,
+            "name": "p1"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "right": {
+          "type": "Literal",
+          "start": 10,
+          "end": 13,
+          "value": "a",
+          "raw": "'a'"
+        },
+        "operator": "="
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 15,
+      "end": 39,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 19,
+          "end": 38,
+          "id": {
+            "type": "Identifier",
             "start": 19,
-            "end": 38
+            "end": 24,
+            "name": "myObj"
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "start": 27,
+            "end": 38,
+            "properties": [
+              {
+                "type": "Property",
+                "start": 31,
+                "end": 36,
+                "key": {
+                  "type": "Identifier",
+                  "start": 31,
+                  "end": 33,
+                  "name": "p1"
+                },
+                "value": {
+                  "type": "Literal",
+                  "start": 35,
+                  "end": 36,
+                  "value": 1,
+                  "raw": "1"
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 40,
+      "end": 66,
+      "expression": {
+        "type": "CallExpression",
+        "start": 40,
+        "end": 65,
+        "callee": {
+          "type": "Identifier",
+          "start": 40,
+          "end": 44,
+          "name": "eval"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 45,
+            "end": 64,
+            "value": "with(myObj){p1=2}",
+            "raw": "\"with(myObj){p1=2}\""
           }
         ],
-        "start": 15,
-        "end": 39
-      },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "Identifier",
-            "name": "eval",
-            "start": 40,
-            "end": 44
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "value": "with(myObj){p1=2}",
-              "raw": "\"with(myObj){p1=2}\"",
-              "start": 45,
-              "end": 64
-            }
-          ],
-          "optional": false,
-          "start": 40,
-          "end": 65
-        },
-        "start": 40,
-        "end": 66
-      },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "MemberExpression",
-            "object": {
-              "type": "Identifier",
-              "name": "myObj",
-              "start": 71,
-              "end": 76
-            },
-            "property": {
-              "type": "Identifier",
-              "name": "p1",
-              "start": 77,
-              "end": 79
-            },
-            "optional": false,
-            "computed": false,
-            "start": 71,
-            "end": 79
-          },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": 2,
-            "raw": "2",
-            "start": 84,
-            "end": 85
-          },
-          "start": 71,
-          "end": 85
-        },
-        "consequent": {
-          "type": "BlockStatement",
-          "body": [],
-          "start": 87,
-          "end": 89
-        },
-        "alternate": null,
-        "start": 67,
-        "end": 89
-      },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "MemberExpression",
-            "object": {
-              "type": "Identifier",
-              "name": "myObj",
-              "start": 94,
-              "end": 99
-            },
-            "property": {
-              "type": "Identifier",
-              "name": "p1",
-              "start": 100,
-              "end": 102
-            },
-            "optional": false,
-            "computed": false,
-            "start": 94,
-            "end": 102
-          },
-          "operator": "===",
-          "right": {
-            "type": "Literal",
-            "value": "a",
-            "raw": "'a'",
-            "start": 107,
-            "end": 110
-          },
-          "start": 94,
-          "end": 110
-        },
-        "consequent": {
-          "type": "BlockStatement",
-          "body": [],
-          "start": 112,
-          "end": 114
-        },
-        "alternate": null,
-        "start": 90,
-        "end": 114
+        "optional": false
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 114
-  },
-  "comments": [],
-  "diagnostics": []
+    },
+    {
+      "type": "IfStatement",
+      "start": 67,
+      "end": 89,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 71,
+        "end": 85,
+        "left": {
+          "type": "MemberExpression",
+          "start": 71,
+          "end": 79,
+          "object": {
+            "type": "Identifier",
+            "start": 71,
+            "end": 76,
+            "name": "myObj"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 77,
+            "end": 79,
+            "name": "p1"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "right": {
+          "type": "Literal",
+          "start": 84,
+          "end": 85,
+          "value": 2,
+          "raw": "2"
+        },
+        "operator": "!=="
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "start": 87,
+        "end": 89,
+        "body": []
+      },
+      "alternate": null
+    },
+    {
+      "type": "IfStatement",
+      "start": 90,
+      "end": 114,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 94,
+        "end": 110,
+        "left": {
+          "type": "MemberExpression",
+          "start": 94,
+          "end": 102,
+          "object": {
+            "type": "Identifier",
+            "start": 94,
+            "end": 99,
+            "name": "myObj"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 100,
+            "end": 102,
+            "name": "p1"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "right": {
+          "type": "Literal",
+          "start": 107,
+          "end": 110,
+          "value": "a",
+          "raw": "'a'"
+        },
+        "operator": "==="
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "start": 112,
+        "end": 114,
+        "body": []
+      },
+      "alternate": null
+    }
+  ]
 }

@@ -1,116 +1,107 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 1954,
-    "sourceType": "module",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "ImportDeclaration",
-        "start": 1852,
-        "end": 1926,
-        "specifiers": [
-          {
-            "type": "ImportSpecifier",
+  "type": "Program",
+  "start": 0,
+  "end": 1954,
+  "sourceType": "module",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 1852,
+      "end": 1926,
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 1861,
+          "end": 1864,
+          "imported": {
+            "type": "Identifier",
             "start": 1861,
             "end": 1864,
-            "imported": {
-              "type": "Identifier",
-              "start": 1861,
-              "end": 1864,
-              "name": "foo"
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 1861,
-              "end": 1864,
-              "name": "foo"
-            }
+            "name": "foo"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 1861,
+            "end": 1864,
+            "name": "foo"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "start": 1872,
+        "end": 1925,
+        "value": "./instn-star-iee-multi-cycle-same-name-a_FIXTURE.js",
+        "raw": "'./instn-star-iee-multi-cycle-same-name-a_FIXTURE.js'"
+      },
+      "attributes": [],
+      "phase": null,
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\ndescription: >\n    Star export resolution skips multiple cyclic indirect named re-exports\n    and resolves the binding from a non-cyclic path.\nesid: sec-resolveexport\ninfo: |\n    ResolveExport ( exportName [ , resolveSet ] )\n\n    [...]\n    1. For each Record { [[Module]], [[ExportName]] } r of resolveSet, do\n      a. If module and r.[[Module]] are the same Module Record and exportName is r.[[ExportName]], then\n        i. Assert: This is a circular import request.\n        i. Return null.\n    1. Append the Record { [[Module]]: module, [[ExportName]]: exportName }\n       to resolveSet.\n    [...]\n    1. For each ExportEntry Record e of module.[[IndirectExportEntries]], do\n      a. If exportName is e.[[ExportName]], then\n        [...]\n        1. Return importedModule.ResolveExport(e.[[ImportName]],\n           resolveSet).\n    [...]\n    1. Let starResolution be null.\n    1. For each ExportEntry Record e of module.[[StarExportEntries]], do\n      a. Let importedModule be GetImportedModule(module,\n         e.[[ModuleRequest]]).\n      a. Let resolution be importedModule.ResolveExport(exportName,\n         resolveSet).\n      a. If resolution is AMBIGUOUS, return AMBIGUOUS.\n      a. If resolution is not null, then\n         i. If starResolution is null, let starResolution be resolution.\n         [...]\n    1. Return starResolution.\n\n    Module \"a\" has three star exports:\n    - \"b\" has `export { foo } from \"a\"` (cycles back, returns null).\n    - \"c\" has `export let foo = 1` (provides the binding).\n    - \"d\" has `export { foo } from \"a\"` (cycles back, returns null).\n    The two cyclic paths return null (cycle detection), the star loop\n    skips them, and the binding from \"c\" is used.\nflags: [module]\n---"
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 1928,
+      "end": 1953,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1928,
+        "end": 1952,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 1928,
+          "end": 1944,
+          "object": {
+            "type": "Identifier",
+            "start": 1928,
+            "end": 1934,
+            "name": "assert"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 1935,
+            "end": 1944,
+            "name": "sameValue"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "start": 1945,
+            "end": 1948,
+            "name": "foo"
+          },
+          {
+            "type": "Literal",
+            "start": 1950,
+            "end": 1951,
+            "value": 1,
+            "raw": "1"
           }
         ],
-        "source": {
-          "type": "Literal",
-          "start": 1872,
-          "end": 1925,
-          "value": "./instn-star-iee-multi-cycle-same-name-a_FIXTURE.js",
-          "raw": "'./instn-star-iee-multi-cycle-same-name-a_FIXTURE.js'"
-        },
-        "attributes": [],
-        "phase": null
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1928,
-        "end": 1953,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1928,
-          "end": 1952,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 1928,
-            "end": 1944,
-            "object": {
-              "type": "Identifier",
-              "start": 1928,
-              "end": 1934,
-              "name": "assert"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 1935,
-              "end": 1944,
-              "name": "sameValue"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Identifier",
-              "start": 1945,
-              "end": 1948,
-              "name": "foo"
-            },
-            {
-              "type": "Literal",
-              "start": 1950,
-              "end": 1951,
-              "value": 1,
-              "raw": "1"
-            }
-          ],
-          "optional": false
-        }
+        "optional": false
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved.",
-      "start": 0,
-      "end": 55
-    },
-    {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
-    },
-    {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\ndescription: >\n    Star export resolution skips multiple cyclic indirect named re-exports\n    and resolves the binding from a non-cyclic path.\nesid: sec-resolveexport\ninfo: |\n    ResolveExport ( exportName [ , resolveSet ] )\n\n    [...]\n    1. For each Record { [[Module]], [[ExportName]] } r of resolveSet, do\n      a. If module and r.[[Module]] are the same Module Record and exportName is r.[[ExportName]], then\n        i. Assert: This is a circular import request.\n        i. Return null.\n    1. Append the Record { [[Module]]: module, [[ExportName]]: exportName }\n       to resolveSet.\n    [...]\n    1. For each ExportEntry Record e of module.[[IndirectExportEntries]], do\n      a. If exportName is e.[[ExportName]], then\n        [...]\n        1. Return importedModule.ResolveExport(e.[[ImportName]],\n           resolveSet).\n    [...]\n    1. Let starResolution be null.\n    1. For each ExportEntry Record e of module.[[StarExportEntries]], do\n      a. Let importedModule be GetImportedModule(module,\n         e.[[ModuleRequest]]).\n      a. Let resolution be importedModule.ResolveExport(exportName,\n         resolveSet).\n      a. If resolution is AMBIGUOUS, return AMBIGUOUS.\n      a. If resolution is not null, then\n         i. If starResolution is null, let starResolution be resolution.\n         [...]\n    1. Return starResolution.\n\n    Module \"a\" has three star exports:\n    - \"b\" has `export { foo } from \"a\"` (cycles back, returns null).\n    - \"c\" has `export let foo = 1` (provides the binding).\n    - \"d\" has `export { foo } from \"a\"` (cycles back, returns null).\n    The two cyclic paths return null (cycle detection), the star loop\n    skips them, and the binding from \"c\" is used.\nflags: [module]\n---",
-      "start": 127,
-      "end": 1850
     }
-  ],
-  "diagnostics": []
+  ]
 }

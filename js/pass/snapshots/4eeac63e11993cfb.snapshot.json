@@ -1,157 +1,153 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "probe",
-              "start": 4,
-              "end": 9
-            },
-            "init": null,
+  "type": "Program",
+  "start": 0,
+  "end": 111,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 13,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 9,
+          "id": {
+            "type": "Identifier",
             "start": 4,
-            "end": 9
+            "end": 9,
+            "name": "probe"
           },
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "x",
-              "start": 11,
-              "end": 12
-            },
-            "init": null,
+          "init": null
+        },
+        {
+          "type": "VariableDeclarator",
+          "start": 11,
+          "end": 12,
+          "id": {
+            "type": "Identifier",
             "start": 11,
-            "end": 12
+            "end": 12,
+            "name": "x"
+          },
+          "init": null
+        }
+      ]
+    },
+    {
+      "type": "TryStatement",
+      "start": 14,
+      "end": 96,
+      "block": {
+        "type": "BlockStatement",
+        "start": 18,
+        "end": 39,
+        "body": [
+          {
+            "type": "ThrowStatement",
+            "start": 22,
+            "end": 37,
+            "argument": {
+              "type": "Literal",
+              "start": 28,
+              "end": 36,
+              "value": "inside",
+              "raw": "'inside'"
+            }
           }
-        ],
-        "start": 0,
-        "end": 13
+        ]
       },
-      {
-        "type": "TryStatement",
-        "block": {
+      "handler": {
+        "type": "CatchClause",
+        "start": 40,
+        "end": 96,
+        "param": {
+          "type": "Identifier",
+          "start": 47,
+          "end": 48,
+          "name": "x"
+        },
+        "body": {
           "type": "BlockStatement",
+          "start": 50,
+          "end": 96,
           "body": [
             {
-              "type": "ThrowStatement",
-              "argument": {
-                "type": "Literal",
-                "value": "inside",
-                "raw": "'inside'",
-                "start": 28,
-                "end": 36
-              },
-              "start": 22,
-              "end": 37
-            }
-          ],
-          "start": 18,
-          "end": 39
-        },
-        "handler": {
-          "type": "CatchClause",
-          "param": {
-            "type": "Identifier",
-            "name": "x",
-            "start": 47,
-            "end": 48
-          },
-          "body": {
-            "type": "BlockStatement",
-            "body": [
-              {
-                "type": "ExpressionStatement",
-                "expression": {
-                  "type": "AssignmentExpression",
-                  "operator": "=",
-                  "left": {
-                    "type": "Identifier",
-                    "name": "probe",
-                    "start": 54,
-                    "end": 59
-                  },
-                  "right": {
-                    "type": "FunctionExpression",
-                    "id": null,
-                    "generator": false,
-                    "async": false,
-                    "params": [],
-                    "body": {
-                      "type": "BlockStatement",
-                      "body": [
-                        {
-                          "type": "ReturnStatement",
-                          "argument": {
-                            "type": "Identifier",
-                            "name": "x",
-                            "start": 87,
-                            "end": 88
-                          },
-                          "start": 80,
-                          "end": 89
-                        }
-                      ],
-                      "start": 74,
-                      "end": 93
-                    },
-                    "expression": false,
-                    "start": 62,
-                    "end": 93
-                  },
-                  "start": 54,
-                  "end": 93
-                },
+              "type": "ExpressionStatement",
+              "start": 54,
+              "end": 94,
+              "expression": {
+                "type": "AssignmentExpression",
                 "start": 54,
-                "end": 94
+                "end": 93,
+                "left": {
+                  "type": "Identifier",
+                  "start": 54,
+                  "end": 59,
+                  "name": "probe"
+                },
+                "right": {
+                  "type": "FunctionExpression",
+                  "start": 62,
+                  "end": 93,
+                  "id": null,
+                  "generator": false,
+                  "async": false,
+                  "params": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "start": 74,
+                    "end": 93,
+                    "body": [
+                      {
+                        "type": "ReturnStatement",
+                        "start": 80,
+                        "end": 89,
+                        "argument": {
+                          "type": "Identifier",
+                          "start": 87,
+                          "end": 88,
+                          "name": "x"
+                        }
+                      }
+                    ]
+                  },
+                  "expression": false
+                },
+                "operator": "="
               }
-            ],
-            "start": 50,
-            "end": 96
-          },
-          "start": 40,
-          "end": 96
-        },
-        "finalizer": null,
-        "start": 14,
-        "end": 96
+            }
+          ]
+        }
       },
-      {
-        "type": "ExpressionStatement",
-        "expression": {
-          "type": "AssignmentExpression",
-          "operator": "=",
-          "left": {
-            "type": "Identifier",
-            "name": "x",
-            "start": 97,
-            "end": 98
-          },
-          "right": {
-            "type": "Literal",
-            "value": "outside",
-            "raw": "'outside'",
-            "start": 101,
-            "end": 110
-          },
-          "start": 97,
-          "end": 110
-        },
+      "finalizer": null
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 97,
+      "end": 111,
+      "expression": {
+        "type": "AssignmentExpression",
         "start": 97,
-        "end": 111
+        "end": 110,
+        "left": {
+          "type": "Identifier",
+          "start": 97,
+          "end": 98,
+          "name": "x"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 101,
+          "end": 110,
+          "value": "outside",
+          "raw": "'outside'"
+        },
+        "operator": "="
       }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 111
-  },
-  "comments": [],
-  "diagnostics": []
+    }
+  ]
 }

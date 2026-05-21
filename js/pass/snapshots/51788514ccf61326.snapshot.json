@@ -1,217 +1,208 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 692,
-    "sourceType": "script",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "start": 562,
-        "end": 596,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
+  "type": "Program",
+  "start": 0,
+  "end": 692,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 562,
+      "end": 596,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 566,
+          "end": 595,
+          "id": {
+            "type": "Identifier",
             "start": 566,
+            "end": 571,
+            "name": "stack"
+          },
+          "init": {
+            "type": "NewExpression",
+            "start": 574,
             "end": 595,
-            "id": {
+            "callee": {
               "type": "Identifier",
-              "start": 566,
-              "end": 571,
-              "name": "stack"
+              "start": 578,
+              "end": 593,
+              "name": "DisposableStack"
             },
-            "init": {
-              "type": "NewExpression",
-              "start": 574,
-              "end": 595,
-              "callee": {
-                "type": "Identifier",
-                "start": 578,
-                "end": 593,
-                "name": "DisposableStack"
-              },
-              "arguments": []
-            }
+            "arguments": []
           }
-        ]
-      },
-      {
-        "type": "ExpressionStatement",
+        }
+      ],
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2026 Ron Buckton. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\nesid: sec-disposablestack.prototype.adopt\ndescription: Throws a ReferenceError if this is disposed.\ninfo: |\n  DisposableStack.prototype.adopt ( value, onDispose )\n\n  1. Let disposableStack be the this value.\n  2. Perform ? RequireInternalSlot(disposableStack, [[DisposableState]]).\n  3. If disposableStack.[[DisposableState]] is disposed, throw a ReferenceError exception.\n  ...\n\nfeatures: [explicit-resource-management]\n---"
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 597,
+      "end": 613,
+      "expression": {
+        "type": "CallExpression",
         "start": 597,
-        "end": 613,
-        "expression": {
-          "type": "CallExpression",
+        "end": 612,
+        "callee": {
+          "type": "MemberExpression",
           "start": 597,
-          "end": 612,
-          "callee": {
-            "type": "MemberExpression",
+          "end": 610,
+          "object": {
+            "type": "Identifier",
             "start": 597,
+            "end": 602,
+            "name": "stack"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 603,
             "end": 610,
-            "object": {
-              "type": "Identifier",
-              "start": 597,
-              "end": 602,
-              "name": "stack"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 603,
-              "end": 610,
-              "name": "dispose"
-            },
-            "computed": false,
-            "optional": false
+            "name": "dispose"
           },
-          "arguments": [],
+          "computed": false,
           "optional": false
-        }
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 615,
-        "end": 691,
-        "expression": {
-          "type": "CallExpression",
-          "start": 615,
-          "end": 690,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 615,
-            "end": 628,
-            "object": {
-              "type": "Identifier",
-              "start": 615,
-              "end": 621,
-              "name": "assert"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 622,
-              "end": 628,
-              "name": "throws"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Identifier",
-              "start": 629,
-              "end": 643,
-              "name": "ReferenceError"
-            },
-            {
-              "type": "FunctionExpression",
-              "start": 645,
-              "end": 689,
-              "id": null,
-              "generator": false,
-              "async": false,
-              "params": [],
-              "body": {
-                "type": "BlockStatement",
-                "start": 656,
-                "end": 689,
-                "body": [
-                  {
-                    "type": "ExpressionStatement",
-                    "start": 660,
-                    "end": 687,
-                    "expression": {
-                      "type": "CallExpression",
-                      "start": 660,
-                      "end": 686,
-                      "callee": {
-                        "type": "MemberExpression",
-                        "start": 660,
-                        "end": 671,
-                        "object": {
-                          "type": "Identifier",
-                          "start": 660,
-                          "end": 665,
-                          "name": "stack"
-                        },
-                        "property": {
-                          "type": "Identifier",
-                          "start": 666,
-                          "end": 671,
-                          "name": "adopt"
-                        },
-                        "computed": false,
-                        "optional": false
-                      },
-                      "arguments": [
-                        {
-                          "type": "Literal",
-                          "start": 672,
-                          "end": 676,
-                          "value": null,
-                          "raw": "null"
-                        },
-                        {
-                          "type": "ArrowFunctionExpression",
-                          "start": 678,
-                          "end": 685,
-                          "id": null,
-                          "generator": false,
-                          "async": false,
-                          "params": [
-                            {
-                              "type": "Identifier",
-                              "start": 678,
-                              "end": 679,
-                              "name": "_"
-                            }
-                          ],
-                          "body": {
-                            "type": "BlockStatement",
-                            "start": 683,
-                            "end": 685,
-                            "body": []
-                          },
-                          "expression": false
-                        }
-                      ],
-                      "optional": false
-                    }
-                  }
-                ]
-              },
-              "expression": false
-            }
-          ],
-          "optional": false
-        }
+        },
+        "arguments": [],
+        "optional": false
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2026 Ron Buckton. All rights reserved.",
-      "start": 0,
-      "end": 55
     },
     {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
-    },
-    {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\nesid: sec-disposablestack.prototype.adopt\ndescription: Throws a ReferenceError if this is disposed.\ninfo: |\n  DisposableStack.prototype.adopt ( value, onDispose )\n\n  1. Let disposableStack be the this value.\n  2. Perform ? RequireInternalSlot(disposableStack, [[DisposableState]]).\n  3. If disposableStack.[[DisposableState]] is disposed, throw a ReferenceError exception.\n  ...\n\nfeatures: [explicit-resource-management]\n---",
-      "start": 128,
-      "end": 560
+      "type": "ExpressionStatement",
+      "start": 615,
+      "end": 691,
+      "expression": {
+        "type": "CallExpression",
+        "start": 615,
+        "end": 690,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 615,
+          "end": 628,
+          "object": {
+            "type": "Identifier",
+            "start": 615,
+            "end": 621,
+            "name": "assert"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 622,
+            "end": 628,
+            "name": "throws"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "start": 629,
+            "end": 643,
+            "name": "ReferenceError"
+          },
+          {
+            "type": "FunctionExpression",
+            "start": 645,
+            "end": 689,
+            "id": null,
+            "generator": false,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 656,
+              "end": 689,
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 660,
+                  "end": 687,
+                  "expression": {
+                    "type": "CallExpression",
+                    "start": 660,
+                    "end": 686,
+                    "callee": {
+                      "type": "MemberExpression",
+                      "start": 660,
+                      "end": 671,
+                      "object": {
+                        "type": "Identifier",
+                        "start": 660,
+                        "end": 665,
+                        "name": "stack"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 666,
+                        "end": 671,
+                        "name": "adopt"
+                      },
+                      "computed": false,
+                      "optional": false
+                    },
+                    "arguments": [
+                      {
+                        "type": "Literal",
+                        "start": 672,
+                        "end": 676,
+                        "value": null,
+                        "raw": "null"
+                      },
+                      {
+                        "type": "ArrowFunctionExpression",
+                        "start": 678,
+                        "end": 685,
+                        "id": null,
+                        "generator": false,
+                        "async": false,
+                        "params": [
+                          {
+                            "type": "Identifier",
+                            "start": 678,
+                            "end": 679,
+                            "name": "_"
+                          }
+                        ],
+                        "body": {
+                          "type": "BlockStatement",
+                          "start": 683,
+                          "end": 685,
+                          "body": []
+                        },
+                        "expression": false
+                      }
+                    ],
+                    "optional": false
+                  }
+                }
+              ]
+            },
+            "expression": false
+          }
+        ],
+        "optional": false
+      }
     }
-  ],
-  "diagnostics": []
+  ]
 }

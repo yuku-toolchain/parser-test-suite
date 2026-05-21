@@ -1,202 +1,193 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 1363,
-    "sourceType": "script",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "VariableDeclaration",
-        "start": 1100,
-        "end": 1140,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 1104,
-            "end": 1139,
-            "id": {
-              "type": "Identifier",
-              "start": 1104,
-              "end": 1110,
-              "name": "stack1"
-            },
-            "init": {
-              "type": "NewExpression",
-              "start": 1113,
-              "end": 1139,
-              "callee": {
-                "type": "Identifier",
-                "start": 1117,
-                "end": 1137,
-                "name": "AsyncDisposableStack"
-              },
-              "arguments": []
-            }
-          }
-        ]
-      },
-      {
-        "type": "VariableDeclaration",
-        "start": 1141,
-        "end": 1168,
-        "kind": "var",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 1145,
-            "end": 1167,
-            "id": {
-              "type": "Identifier",
-              "start": 1145,
-              "end": 1151,
-              "name": "stack2"
-            },
-            "init": {
-              "type": "CallExpression",
-              "start": 1154,
-              "end": 1167,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 1154,
-                "end": 1165,
-                "object": {
-                  "type": "Identifier",
-                  "start": 1154,
-                  "end": 1160,
-                  "name": "stack1"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 1161,
-                  "end": 1165,
-                  "name": "move"
-                },
-                "computed": false,
-                "optional": false
-              },
-              "arguments": [],
-              "optional": false
-            }
-          }
-        ]
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1169,
-        "end": 1253,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1169,
-          "end": 1252,
-          "callee": {
+  "type": "Program",
+  "start": 0,
+  "end": 1363,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 1100,
+      "end": 1140,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 1104,
+          "end": 1139,
+          "id": {
             "type": "Identifier",
-            "start": 1169,
-            "end": 1175,
-            "name": "assert"
+            "start": 1104,
+            "end": 1110,
+            "name": "stack1"
           },
-          "arguments": [
-            {
-              "type": "BinaryExpression",
-              "start": 1176,
-              "end": 1193,
-              "left": {
+          "init": {
+            "type": "NewExpression",
+            "start": 1113,
+            "end": 1139,
+            "callee": {
+              "type": "Identifier",
+              "start": 1117,
+              "end": 1137,
+              "name": "AsyncDisposableStack"
+            },
+            "arguments": []
+          }
+        }
+      ],
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2023 Ron Buckton. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\nesid: sec-asyncdisposablestack.prototype.move\ndescription: Returns a new AsyncDisposableStack\ninfo: |\n  AsyncDisposableStack.prototype.move ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Let newAsyncDisposableStack be ? OrdinaryCreateFromConstructor(%AsyncDisposableStack%, \"%AsyncDisposableStack.prototype%\", « [[AsyncDisposableState]], [[DisposeCapability]] »).\n  5. Set newAsyncDisposableStack.[[AsyncDisposableState]] to pending.\n  6. Set newAsyncDisposableStack.[[DisposeCapability]] to asyncDisposableStack.[[DisposeCapability]].\n  7. Set asyncDisposableStack.[[DisposeCapability]] to NewDisposeCapability().\n  8. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  9. Return newAsyncDisposableStack.\n\nfeatures: [explicit-resource-management]\n---"
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 1141,
+      "end": 1168,
+      "kind": "var",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 1145,
+          "end": 1167,
+          "id": {
+            "type": "Identifier",
+            "start": 1145,
+            "end": 1151,
+            "name": "stack2"
+          },
+          "init": {
+            "type": "CallExpression",
+            "start": 1154,
+            "end": 1167,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 1154,
+              "end": 1165,
+              "object": {
                 "type": "Identifier",
-                "start": 1176,
-                "end": 1182,
-                "name": "stack2"
-              },
-              "right": {
-                "type": "Identifier",
-                "start": 1187,
-                "end": 1193,
+                "start": 1154,
+                "end": 1160,
                 "name": "stack1"
               },
-              "operator": "!=="
+              "property": {
+                "type": "Identifier",
+                "start": 1161,
+                "end": 1165,
+                "name": "move"
+              },
+              "computed": false,
+              "optional": false
             },
-            {
-              "type": "Literal",
-              "start": 1195,
-              "end": 1251,
-              "value": "Expected stack2 to not be the same reference as stack1",
-              "raw": "'Expected stack2 to not be the same reference as stack1'"
-            }
-          ],
-          "optional": false
+            "arguments": [],
+            "optional": false
+          }
         }
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1254,
-        "end": 1362,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1254,
-          "end": 1361,
-          "callee": {
-            "type": "Identifier",
-            "start": 1254,
-            "end": 1260,
-            "name": "assert"
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 1169,
+      "end": 1253,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1169,
+        "end": 1252,
+        "callee": {
+          "type": "Identifier",
+          "start": 1169,
+          "end": 1175,
+          "name": "assert"
+        },
+        "arguments": [
+          {
+            "type": "BinaryExpression",
+            "start": 1176,
+            "end": 1193,
+            "left": {
+              "type": "Identifier",
+              "start": 1176,
+              "end": 1182,
+              "name": "stack2"
+            },
+            "right": {
+              "type": "Identifier",
+              "start": 1187,
+              "end": 1193,
+              "name": "stack1"
+            },
+            "operator": "!=="
           },
-          "arguments": [
-            {
-              "type": "BinaryExpression",
-              "start": 1261,
-              "end": 1299,
-              "left": {
-                "type": "Identifier",
-                "start": 1261,
-                "end": 1267,
-                "name": "stack2"
-              },
-              "right": {
-                "type": "Identifier",
-                "start": 1279,
-                "end": 1299,
-                "name": "AsyncDisposableStack"
-              },
-              "operator": "instanceof"
-            },
-            {
-              "type": "Literal",
-              "start": 1301,
-              "end": 1360,
-              "value": "Expected stack2 to be an instance of AsyncDisposableStack",
-              "raw": "'Expected stack2 to be an instance of AsyncDisposableStack'"
-            }
-          ],
-          "optional": false
-        }
+          {
+            "type": "Literal",
+            "start": 1195,
+            "end": 1251,
+            "value": "Expected stack2 to not be the same reference as stack1",
+            "raw": "'Expected stack2 to not be the same reference as stack1'"
+          }
+        ],
+        "optional": false
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2023 Ron Buckton. All rights reserved.",
-      "start": 0,
-      "end": 55
     },
     {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
-    },
-    {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\nesid: sec-asyncdisposablestack.prototype.move\ndescription: Returns a new AsyncDisposableStack\ninfo: |\n  AsyncDisposableStack.prototype.move ( )\n\n  1. Let asyncDisposableStack be the this value.\n  2. Perform ? RequireInternalSlot(asyncDisposableStack, [[AsyncDisposableState]]).\n  3. If asyncDisposableStack.[[AsyncDisposableState]] is disposed, throw a ReferenceError exception.\n  4. Let newAsyncDisposableStack be ? OrdinaryCreateFromConstructor(%AsyncDisposableStack%, \"%AsyncDisposableStack.prototype%\", « [[AsyncDisposableState]], [[DisposeCapability]] »).\n  5. Set newAsyncDisposableStack.[[AsyncDisposableState]] to pending.\n  6. Set newAsyncDisposableStack.[[DisposeCapability]] to asyncDisposableStack.[[DisposeCapability]].\n  7. Set asyncDisposableStack.[[DisposeCapability]] to NewDisposeCapability().\n  8. Set asyncDisposableStack.[[AsyncDisposableState]] to disposed.\n  9. Return newAsyncDisposableStack.\n\nfeatures: [explicit-resource-management]\n---",
-      "start": 128,
-      "end": 1098
+      "type": "ExpressionStatement",
+      "start": 1254,
+      "end": 1362,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1254,
+        "end": 1361,
+        "callee": {
+          "type": "Identifier",
+          "start": 1254,
+          "end": 1260,
+          "name": "assert"
+        },
+        "arguments": [
+          {
+            "type": "BinaryExpression",
+            "start": 1261,
+            "end": 1299,
+            "left": {
+              "type": "Identifier",
+              "start": 1261,
+              "end": 1267,
+              "name": "stack2"
+            },
+            "right": {
+              "type": "Identifier",
+              "start": 1279,
+              "end": 1299,
+              "name": "AsyncDisposableStack"
+            },
+            "operator": "instanceof"
+          },
+          {
+            "type": "Literal",
+            "start": 1301,
+            "end": 1360,
+            "value": "Expected stack2 to be an instance of AsyncDisposableStack",
+            "raw": "'Expected stack2 to be an instance of AsyncDisposableStack'"
+          }
+        ],
+        "optional": false
+      }
     }
-  ],
-  "diagnostics": []
+  ]
 }

@@ -1,775 +1,771 @@
 {
-  "program": {
-    "type": "Program",
-    "body": [
-      {
-        "type": "TryStatement",
-        "block": {
-          "type": "BlockStatement",
-          "body": [
-            {
-              "type": "ThrowStatement",
-              "argument": {
-                "type": "Literal",
-                "value": "catchme",
-                "raw": "\"catchme\"",
-                "start": 14,
-                "end": 23
-              },
-              "start": 8,
-              "end": 24
-            },
-            {
-              "type": "ThrowStatement",
-              "argument": {
-                "type": "Literal",
-                "value": "dontcatchme",
-                "raw": "\"dontcatchme\"",
-                "start": 33,
-                "end": 46
-              },
-              "start": 27,
-              "end": 47
-            },
-            {
-              "type": "ThrowStatement",
-              "argument": {
-                "type": "NewExpression",
-                "callee": {
-                  "type": "Identifier",
-                  "name": "Test262Error",
-                  "start": 60,
-                  "end": 72
-                },
-                "arguments": [
-                  {
-                    "type": "Literal",
-                    "value": "#1.1: throw \"catchme\" lead to throwing exception",
-                    "raw": "'#1.1: throw \"catchme\" lead to throwing exception'",
-                    "start": 73,
-                    "end": 123
-                  }
-                ],
-                "start": 56,
-                "end": 124
-              },
-              "start": 50,
-              "end": 125
-            }
-          ],
-          "start": 4,
-          "end": 127
-        },
-        "handler": {
-          "type": "CatchClause",
-          "param": {
-            "type": "Identifier",
-            "name": "e",
-            "start": 135,
-            "end": 136
-          },
-          "body": {
-            "type": "BlockStatement",
-            "body": [
-              {
-                "type": "IfStatement",
-                "test": {
-                  "type": "BinaryExpression",
-                  "left": {
-                    "type": "Identifier",
-                    "name": "e",
-                    "start": 145,
-                    "end": 146
-                  },
-                  "operator": "===",
-                  "right": {
-                    "type": "Literal",
-                    "value": "dontcatchme",
-                    "raw": "\"dontcatchme\"",
-                    "start": 149,
-                    "end": 162
-                  },
-                  "start": 145,
-                  "end": 162
-                },
-                "consequent": {
-                  "type": "BlockStatement",
-                  "body": [
-                    {
-                      "type": "ThrowStatement",
-                      "argument": {
-                        "type": "NewExpression",
-                        "callee": {
-                          "type": "Identifier",
-                          "name": "Test262Error",
-                          "start": 179,
-                          "end": 191
-                        },
-                        "arguments": [
-                          {
-                            "type": "Literal",
-                            "value": "#1.2: Exception !== \"dontcatchme\"",
-                            "raw": "'#1.2: Exception !== \"dontcatchme\"'",
-                            "start": 192,
-                            "end": 227
-                          }
-                        ],
-                        "start": 175,
-                        "end": 228
-                      },
-                      "start": 169,
-                      "end": 229
-                    }
-                  ],
-                  "start": 163,
-                  "end": 233
-                },
-                "alternate": null,
-                "start": 142,
-                "end": 233
-              },
-              {
-                "type": "IfStatement",
-                "test": {
-                  "type": "BinaryExpression",
-                  "left": {
-                    "type": "Identifier",
-                    "name": "e",
-                    "start": 240,
-                    "end": 241
-                  },
-                  "operator": "!==",
-                  "right": {
-                    "type": "Literal",
-                    "value": "catchme",
-                    "raw": "\"catchme\"",
-                    "start": 244,
-                    "end": 253
-                  },
-                  "start": 240,
-                  "end": 253
-                },
-                "consequent": {
-                  "type": "BlockStatement",
-                  "body": [
-                    {
-                      "type": "ThrowStatement",
-                      "argument": {
-                        "type": "NewExpression",
-                        "callee": {
-                          "type": "Identifier",
-                          "name": "Test262Error",
-                          "start": 271,
-                          "end": 283
-                        },
-                        "arguments": [
-                          {
-                            "type": "BinaryExpression",
-                            "left": {
-                              "type": "Literal",
-                              "value": "#1.3: Exception === \"catchme\". Actual:  Exception ===",
-                              "raw": "'#1.3: Exception === \"catchme\". Actual:  Exception ==='",
-                              "start": 284,
-                              "end": 339
-                            },
-                            "operator": "+",
-                            "right": {
-                              "type": "Identifier",
-                              "name": "e",
-                              "start": 341,
-                              "end": 342
-                            },
-                            "start": 284,
-                            "end": 342
-                          }
-                        ],
-                        "start": 267,
-                        "end": 345
-                      },
-                      "start": 261,
-                      "end": 346
-                    }
-                  ],
-                  "start": 255,
-                  "end": 350
-                },
-                "alternate": null,
-                "start": 236,
-                "end": 350
-              }
-            ],
-            "start": 138,
-            "end": 352
-          },
-          "start": 128,
-          "end": 352
-        },
-        "finalizer": null,
-        "start": 0,
-        "end": 352
-      },
-      {
-        "type": "FunctionDeclaration",
-        "id": {
-          "type": "Identifier",
-          "name": "SwitchTest1",
-          "start": 362,
-          "end": 373
-        },
-        "generator": false,
-        "async": false,
-        "params": [
+  "type": "Program",
+  "start": 0,
+  "end": 1002,
+  "sourceType": "script",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "TryStatement",
+      "start": 0,
+      "end": 352,
+      "block": {
+        "type": "BlockStatement",
+        "start": 4,
+        "end": 127,
+        "body": [
           {
-            "type": "Identifier",
-            "name": "value",
-            "start": 374,
-            "end": 379
+            "type": "ThrowStatement",
+            "start": 8,
+            "end": 24,
+            "argument": {
+              "type": "Literal",
+              "start": 14,
+              "end": 23,
+              "value": "catchme",
+              "raw": "\"catchme\""
+            }
+          },
+          {
+            "type": "ThrowStatement",
+            "start": 27,
+            "end": 47,
+            "argument": {
+              "type": "Literal",
+              "start": 33,
+              "end": 46,
+              "value": "dontcatchme",
+              "raw": "\"dontcatchme\""
+            }
+          },
+          {
+            "type": "ThrowStatement",
+            "start": 50,
+            "end": 125,
+            "argument": {
+              "type": "NewExpression",
+              "start": 56,
+              "end": 124,
+              "callee": {
+                "type": "Identifier",
+                "start": 60,
+                "end": 72,
+                "name": "Test262Error"
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "start": 73,
+                  "end": 123,
+                  "value": "#1.1: throw \"catchme\" lead to throwing exception",
+                  "raw": "'#1.1: throw \"catchme\" lead to throwing exception'"
+                }
+              ]
+            }
           }
-        ],
+        ]
+      },
+      "handler": {
+        "type": "CatchClause",
+        "start": 128,
+        "end": 352,
+        "param": {
+          "type": "Identifier",
+          "start": 135,
+          "end": 136,
+          "name": "e"
+        },
         "body": {
           "type": "BlockStatement",
+          "start": 138,
+          "end": 352,
           "body": [
             {
-              "type": "VariableDeclaration",
-              "kind": "var",
-              "declarations": [
-                {
-                  "type": "VariableDeclarator",
-                  "id": {
-                    "type": "Identifier",
-                    "name": "result",
-                    "start": 388,
-                    "end": 394
-                  },
-                  "init": {
-                    "type": "Literal",
-                    "value": 0,
-                    "raw": "0",
-                    "start": 397,
-                    "end": 398
-                  },
-                  "start": 388,
-                  "end": 398
-                }
-              ],
-              "start": 384,
-              "end": 399
+              "type": "IfStatement",
+              "start": 142,
+              "end": 233,
+              "test": {
+                "type": "BinaryExpression",
+                "start": 145,
+                "end": 162,
+                "left": {
+                  "type": "Identifier",
+                  "start": 145,
+                  "end": 146,
+                  "name": "e"
+                },
+                "right": {
+                  "type": "Literal",
+                  "start": 149,
+                  "end": 162,
+                  "value": "dontcatchme",
+                  "raw": "\"dontcatchme\""
+                },
+                "operator": "==="
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "start": 163,
+                "end": 233,
+                "body": [
+                  {
+                    "type": "ThrowStatement",
+                    "start": 169,
+                    "end": 229,
+                    "argument": {
+                      "type": "NewExpression",
+                      "start": 175,
+                      "end": 228,
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 179,
+                        "end": 191,
+                        "name": "Test262Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "Literal",
+                          "start": 192,
+                          "end": 227,
+                          "value": "#1.2: Exception !== \"dontcatchme\"",
+                          "raw": "'#1.2: Exception !== \"dontcatchme\"'"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "alternate": null
             },
             {
-              "type": "TryStatement",
-              "block": {
+              "type": "IfStatement",
+              "start": 236,
+              "end": 350,
+              "test": {
+                "type": "BinaryExpression",
+                "start": 240,
+                "end": 253,
+                "left": {
+                  "type": "Identifier",
+                  "start": 240,
+                  "end": 241,
+                  "name": "e"
+                },
+                "right": {
+                  "type": "Literal",
+                  "start": 244,
+                  "end": 253,
+                  "value": "catchme",
+                  "raw": "\"catchme\""
+                },
+                "operator": "!=="
+              },
+              "consequent": {
                 "type": "BlockStatement",
+                "start": 255,
+                "end": 350,
                 "body": [
                   {
-                    "type": "SwitchStatement",
-                    "discriminant": {
-                      "type": "Identifier",
-                      "name": "value",
-                      "start": 418,
-                      "end": 423
-                    },
-                    "cases": [
-                      {
-                        "type": "SwitchCase",
-                        "test": {
-                          "type": "Literal",
-                          "value": 1,
-                          "raw": "1",
-                          "start": 438,
-                          "end": 439
-                        },
-                        "consequent": [
-                          {
-                            "type": "ExpressionStatement",
-                            "expression": {
-                              "type": "AssignmentExpression",
-                              "operator": "+=",
-                              "left": {
-                                "type": "Identifier",
-                                "name": "result",
-                                "start": 449,
-                                "end": 455
-                              },
-                              "right": {
-                                "type": "Literal",
-                                "value": 4,
-                                "raw": "4",
-                                "start": 459,
-                                "end": 460
-                              },
-                              "start": 449,
-                              "end": 460
-                            },
-                            "start": 449,
-                            "end": 461
-                          },
-                          {
-                            "type": "ThrowStatement",
-                            "argument": {
-                              "type": "Identifier",
-                              "name": "result",
-                              "start": 476,
-                              "end": 482
-                            },
-                            "start": 470,
-                            "end": 483
-                          },
-                          {
-                            "type": "BreakStatement",
-                            "label": null,
-                            "start": 492,
-                            "end": 498
-                          }
-                        ],
-                        "start": 433,
-                        "end": 498
+                    "type": "ThrowStatement",
+                    "start": 261,
+                    "end": 346,
+                    "argument": {
+                      "type": "NewExpression",
+                      "start": 267,
+                      "end": 345,
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 271,
+                        "end": 283,
+                        "name": "Test262Error"
                       },
-                      {
-                        "type": "SwitchCase",
-                        "test": {
-                          "type": "Literal",
-                          "value": 4,
-                          "raw": "4",
-                          "start": 510,
-                          "end": 511
-                        },
-                        "consequent": [
-                          {
-                            "type": "ExpressionStatement",
-                            "expression": {
-                              "type": "AssignmentExpression",
-                              "operator": "+=",
-                              "left": {
-                                "type": "Identifier",
-                                "name": "result",
-                                "start": 521,
-                                "end": 527
-                              },
-                              "right": {
-                                "type": "Literal",
-                                "value": 64,
-                                "raw": "64",
-                                "start": 531,
-                                "end": 533
-                              },
-                              "start": 521,
-                              "end": 533
-                            },
-                            "start": 521,
-                            "end": 534
+                      "arguments": [
+                        {
+                          "type": "BinaryExpression",
+                          "start": 284,
+                          "end": 342,
+                          "left": {
+                            "type": "Literal",
+                            "start": 284,
+                            "end": 339,
+                            "value": "#1.3: Exception === \"catchme\". Actual:  Exception ===",
+                            "raw": "'#1.3: Exception === \"catchme\". Actual:  Exception ==='"
                           },
-                          {
-                            "type": "ThrowStatement",
-                            "argument": {
-                              "type": "Literal",
-                              "value": "ex",
-                              "raw": "\"ex\"",
-                              "start": 549,
-                              "end": 553
+                          "right": {
+                            "type": "Identifier",
+                            "start": 341,
+                            "end": 342,
+                            "name": "e"
+                          },
+                          "operator": "+"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "alternate": null
+            }
+          ]
+        }
+      },
+      "finalizer": null
+    },
+    {
+      "type": "FunctionDeclaration",
+      "start": 353,
+      "end": 820,
+      "id": {
+        "type": "Identifier",
+        "start": 362,
+        "end": 373,
+        "name": "SwitchTest1"
+      },
+      "generator": false,
+      "async": false,
+      "params": [
+        {
+          "type": "Identifier",
+          "start": 374,
+          "end": 379,
+          "name": "value"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "start": 380,
+        "end": 820,
+        "body": [
+          {
+            "type": "VariableDeclaration",
+            "start": 384,
+            "end": 399,
+            "kind": "var",
+            "declarations": [
+              {
+                "type": "VariableDeclarator",
+                "start": 388,
+                "end": 398,
+                "id": {
+                  "type": "Identifier",
+                  "start": 388,
+                  "end": 394,
+                  "name": "result"
+                },
+                "init": {
+                  "type": "Literal",
+                  "start": 397,
+                  "end": 398,
+                  "value": 0,
+                  "raw": "0"
+                }
+              }
+            ]
+          },
+          {
+            "type": "TryStatement",
+            "start": 402,
+            "end": 818,
+            "block": {
+              "type": "BlockStatement",
+              "start": 405,
+              "end": 581,
+              "body": [
+                {
+                  "type": "SwitchStatement",
+                  "start": 411,
+                  "end": 560,
+                  "discriminant": {
+                    "type": "Identifier",
+                    "start": 418,
+                    "end": 423,
+                    "name": "value"
+                  },
+                  "cases": [
+                    {
+                      "type": "SwitchCase",
+                      "start": 433,
+                      "end": 498,
+                      "test": {
+                        "type": "Literal",
+                        "start": 438,
+                        "end": 439,
+                        "value": 1,
+                        "raw": "1"
+                      },
+                      "consequent": [
+                        {
+                          "type": "ExpressionStatement",
+                          "start": 449,
+                          "end": 461,
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "start": 449,
+                            "end": 460,
+                            "left": {
+                              "type": "Identifier",
+                              "start": 449,
+                              "end": 455,
+                              "name": "result"
                             },
-                            "start": 543,
-                            "end": 554
+                            "right": {
+                              "type": "Literal",
+                              "start": 459,
+                              "end": 460,
+                              "value": 4,
+                              "raw": "4"
+                            },
+                            "operator": "+="
                           }
-                        ],
-                        "start": 505,
-                        "end": 554
+                        },
+                        {
+                          "type": "ThrowStatement",
+                          "start": 470,
+                          "end": 483,
+                          "argument": {
+                            "type": "Identifier",
+                            "start": 476,
+                            "end": 482,
+                            "name": "result"
+                          }
+                        },
+                        {
+                          "type": "BreakStatement",
+                          "start": 492,
+                          "end": 498,
+                          "label": null
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SwitchCase",
+                      "start": 505,
+                      "end": 554,
+                      "test": {
+                        "type": "Literal",
+                        "start": 510,
+                        "end": 511,
+                        "value": 4,
+                        "raw": "4"
+                      },
+                      "consequent": [
+                        {
+                          "type": "ExpressionStatement",
+                          "start": 521,
+                          "end": 534,
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "start": 521,
+                            "end": 533,
+                            "left": {
+                              "type": "Identifier",
+                              "start": 521,
+                              "end": 527,
+                              "name": "result"
+                            },
+                            "right": {
+                              "type": "Literal",
+                              "start": 531,
+                              "end": 533,
+                              "value": 64,
+                              "raw": "64"
+                            },
+                            "operator": "+="
+                          }
+                        },
+                        {
+                          "type": "ThrowStatement",
+                          "start": 543,
+                          "end": 554,
+                          "argument": {
+                            "type": "Literal",
+                            "start": 549,
+                            "end": 553,
+                            "value": "ex",
+                            "raw": "\"ex\""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ReturnStatement",
+                  "start": 563,
+                  "end": 577,
+                  "argument": {
+                    "type": "Identifier",
+                    "start": 570,
+                    "end": 576,
+                    "name": "result"
+                  }
+                }
+              ]
+            },
+            "handler": {
+              "type": "CatchClause",
+              "start": 584,
+              "end": 784,
+              "param": {
+                "type": "Identifier",
+                "start": 590,
+                "end": 591,
+                "name": "e"
+              },
+              "body": {
+                "type": "BlockStatement",
+                "start": 592,
+                "end": 784,
+                "body": [
+                  {
+                    "type": "IfStatement",
+                    "start": 598,
+                    "end": 684,
+                    "test": {
+                      "type": "LogicalExpression",
+                      "start": 602,
+                      "end": 622,
+                      "left": {
+                        "type": "ParenthesizedExpression",
+                        "start": 602,
+                        "end": 613,
+                        "expression": {
+                          "type": "BinaryExpression",
+                          "start": 603,
+                          "end": 612,
+                          "left": {
+                            "type": "Identifier",
+                            "start": 603,
+                            "end": 608,
+                            "name": "value"
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "start": 611,
+                            "end": 612,
+                            "value": 1,
+                            "raw": "1"
+                          },
+                          "operator": "==="
+                        }
+                      },
+                      "right": {
+                        "type": "ParenthesizedExpression",
+                        "start": 615,
+                        "end": 622,
+                        "expression": {
+                          "type": "BinaryExpression",
+                          "start": 616,
+                          "end": 621,
+                          "left": {
+                            "type": "Identifier",
+                            "start": 616,
+                            "end": 617,
+                            "name": "e"
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "start": 620,
+                            "end": 621,
+                            "value": 4,
+                            "raw": "4"
+                          },
+                          "operator": "!=="
+                        }
+                      },
+                      "operator": "&&"
+                    },
+                    "consequent": {
+                      "type": "ThrowStatement",
+                      "start": 624,
+                      "end": 684,
+                      "argument": {
+                        "type": "NewExpression",
+                        "start": 630,
+                        "end": 683,
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 634,
+                          "end": 646,
+                          "name": "Test262Error"
+                        },
+                        "arguments": [
+                          {
+                            "type": "BinaryExpression",
+                            "start": 647,
+                            "end": 682,
+                            "left": {
+                              "type": "Literal",
+                              "start": 647,
+                              "end": 680,
+                              "value": "#2.1: Exception === 4. Actual: ",
+                              "raw": "'#2.1: Exception === 4. Actual: '"
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "start": 681,
+                              "end": 682,
+                              "name": "e"
+                            },
+                            "operator": "+"
+                          }
+                        ]
                       }
-                    ],
-                    "start": 411,
-                    "end": 560
+                    },
+                    "alternate": null
                   },
                   {
-                    "type": "ReturnStatement",
-                    "argument": {
-                      "type": "Identifier",
-                      "name": "result",
-                      "start": 570,
-                      "end": 576
-                    },
-                    "start": 563,
-                    "end": 577
-                  }
-                ],
-                "start": 405,
-                "end": 581
-              },
-              "handler": {
-                "type": "CatchClause",
-                "param": {
-                  "type": "Identifier",
-                  "name": "e",
-                  "start": 590,
-                  "end": 591
-                },
-                "body": {
-                  "type": "BlockStatement",
-                  "body": [
-                    {
-                      "type": "IfStatement",
-                      "test": {
-                        "type": "LogicalExpression",
-                        "left": {
-                          "type": "ParenthesizedExpression",
-                          "expression": {
-                            "type": "BinaryExpression",
-                            "left": {
-                              "type": "Identifier",
-                              "name": "value",
-                              "start": 603,
-                              "end": 608
-                            },
-                            "operator": "===",
-                            "right": {
-                              "type": "Literal",
-                              "value": 1,
-                              "raw": "1",
-                              "start": 611,
-                              "end": 612
-                            },
-                            "start": 603,
-                            "end": 612
-                          },
-                          "start": 602,
-                          "end": 613
-                        },
-                        "operator": "&&",
-                        "right": {
-                          "type": "ParenthesizedExpression",
-                          "expression": {
-                            "type": "BinaryExpression",
-                            "left": {
-                              "type": "Identifier",
-                              "name": "e",
-                              "start": 616,
-                              "end": 617
-                            },
-                            "operator": "!==",
-                            "right": {
-                              "type": "Literal",
-                              "value": 4,
-                              "raw": "4",
-                              "start": 620,
-                              "end": 621
-                            },
-                            "start": 616,
-                            "end": 621
-                          },
-                          "start": 615,
-                          "end": 622
-                        },
-                        "start": 602,
-                        "end": 622
-                      },
-                      "consequent": {
-                        "type": "ThrowStatement",
-                        "argument": {
-                          "type": "NewExpression",
-                          "callee": {
-                            "type": "Identifier",
-                            "name": "Test262Error",
-                            "start": 634,
-                            "end": 646
-                          },
-                          "arguments": [
-                            {
-                              "type": "BinaryExpression",
-                              "left": {
-                                "type": "Literal",
-                                "value": "#2.1: Exception === 4. Actual: ",
-                                "raw": "'#2.1: Exception === 4. Actual: '",
-                                "start": 647,
-                                "end": 680
-                              },
-                              "operator": "+",
-                              "right": {
-                                "type": "Identifier",
-                                "name": "e",
-                                "start": 681,
-                                "end": 682
-                              },
-                              "start": 647,
-                              "end": 682
-                            }
-                          ],
-                          "start": 630,
-                          "end": 683
-                        },
-                        "start": 624,
-                        "end": 684
-                      },
-                      "alternate": null,
-                      "start": 598,
-                      "end": 684
-                    },
-                    {
-                      "type": "IfStatement",
-                      "test": {
-                        "type": "LogicalExpression",
-                        "left": {
-                          "type": "ParenthesizedExpression",
-                          "expression": {
-                            "type": "BinaryExpression",
-                            "left": {
-                              "type": "Identifier",
-                              "name": "value",
-                              "start": 694,
-                              "end": 699
-                            },
-                            "operator": "===",
-                            "right": {
-                              "type": "Literal",
-                              "value": 4,
-                              "raw": "4",
-                              "start": 702,
-                              "end": 703
-                            },
-                            "start": 694,
-                            "end": 703
-                          },
-                          "start": 693,
-                          "end": 704
-                        },
-                        "operator": "&&",
-                        "right": {
-                          "type": "ParenthesizedExpression",
-                          "expression": {
-                            "type": "BinaryExpression",
-                            "left": {
-                              "type": "Identifier",
-                              "name": "e",
-                              "start": 707,
-                              "end": 708
-                            },
-                            "operator": "!==",
-                            "right": {
-                              "type": "Literal",
-                              "value": "ex",
-                              "raw": "\"ex\"",
-                              "start": 711,
-                              "end": 715
-                            },
-                            "start": 707,
-                            "end": 715
-                          },
-                          "start": 706,
-                          "end": 716
-                        },
+                    "type": "IfStatement",
+                    "start": 689,
+                    "end": 780,
+                    "test": {
+                      "type": "LogicalExpression",
+                      "start": 693,
+                      "end": 716,
+                      "left": {
+                        "type": "ParenthesizedExpression",
                         "start": 693,
-                        "end": 716
-                      },
-                      "consequent": {
-                        "type": "ThrowStatement",
-                        "argument": {
-                          "type": "NewExpression",
-                          "callee": {
+                        "end": 704,
+                        "expression": {
+                          "type": "BinaryExpression",
+                          "start": 694,
+                          "end": 703,
+                          "left": {
                             "type": "Identifier",
-                            "name": "Test262Error",
-                            "start": 727,
-                            "end": 739
+                            "start": 694,
+                            "end": 699,
+                            "name": "value"
                           },
-                          "arguments": [
-                            {
-                              "type": "BinaryExpression",
-                              "left": {
-                                "type": "Literal",
-                                "value": "#2.2: Exception === \"ex\". Actual: ",
-                                "raw": "'#2.2: Exception === \"ex\". Actual: '",
-                                "start": 740,
-                                "end": 776
-                              },
-                              "operator": "+",
-                              "right": {
-                                "type": "Identifier",
-                                "name": "e",
-                                "start": 777,
-                                "end": 778
-                              },
-                              "start": 740,
-                              "end": 778
-                            }
-                          ],
-                          "start": 723,
-                          "end": 779
-                        },
-                        "start": 717,
-                        "end": 780
+                          "right": {
+                            "type": "Literal",
+                            "start": 702,
+                            "end": 703,
+                            "value": 4,
+                            "raw": "4"
+                          },
+                          "operator": "==="
+                        }
                       },
-                      "alternate": null,
-                      "start": 689,
-                      "end": 780
-                    }
-                  ],
-                  "start": 592,
-                  "end": 784
-                },
-                "start": 584,
-                "end": 784
-              },
-              "finalizer": {
-                "type": "BlockStatement",
-                "body": [
-                  {
-                    "type": "ReturnStatement",
-                    "argument": {
-                      "type": "Identifier",
-                      "name": "result",
-                      "start": 807,
-                      "end": 813
+                      "right": {
+                        "type": "ParenthesizedExpression",
+                        "start": 706,
+                        "end": 716,
+                        "expression": {
+                          "type": "BinaryExpression",
+                          "start": 707,
+                          "end": 715,
+                          "left": {
+                            "type": "Identifier",
+                            "start": 707,
+                            "end": 708,
+                            "name": "e"
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "start": 711,
+                            "end": 715,
+                            "value": "ex",
+                            "raw": "\"ex\""
+                          },
+                          "operator": "!=="
+                        }
+                      },
+                      "operator": "&&"
                     },
-                    "start": 800,
-                    "end": 814
+                    "consequent": {
+                      "type": "ThrowStatement",
+                      "start": 717,
+                      "end": 780,
+                      "argument": {
+                        "type": "NewExpression",
+                        "start": 723,
+                        "end": 779,
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 727,
+                          "end": 739,
+                          "name": "Test262Error"
+                        },
+                        "arguments": [
+                          {
+                            "type": "BinaryExpression",
+                            "start": 740,
+                            "end": 778,
+                            "left": {
+                              "type": "Literal",
+                              "start": 740,
+                              "end": 776,
+                              "value": "#2.2: Exception === \"ex\". Actual: ",
+                              "raw": "'#2.2: Exception === \"ex\". Actual: '"
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "start": 777,
+                              "end": 778,
+                              "name": "e"
+                            },
+                            "operator": "+"
+                          }
+                        ]
+                      }
+                    },
+                    "alternate": null
                   }
-                ],
-                "start": 794,
-                "end": 818
-              },
-              "start": 402,
-              "end": 818
+                ]
+              }
+            },
+            "finalizer": {
+              "type": "BlockStatement",
+              "start": 794,
+              "end": 818,
+              "body": [
+                {
+                  "type": "ReturnStatement",
+                  "start": 800,
+                  "end": 814,
+                  "argument": {
+                    "type": "Identifier",
+                    "start": 807,
+                    "end": 813,
+                    "name": "result"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "expression": false
+    },
+    {
+      "type": "IfStatement",
+      "start": 821,
+      "end": 911,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 825,
+        "end": 843,
+        "left": {
+          "type": "CallExpression",
+          "start": 825,
+          "end": 839,
+          "callee": {
+            "type": "Identifier",
+            "start": 825,
+            "end": 836,
+            "name": "SwitchTest1"
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 837,
+              "end": 838,
+              "value": 1,
+              "raw": "1"
             }
           ],
-          "start": 380,
-          "end": 820
+          "optional": false
         },
-        "expression": false,
-        "start": 353,
-        "end": 820
+        "right": {
+          "type": "Literal",
+          "start": 842,
+          "end": 843,
+          "value": 4,
+          "raw": "4"
+        },
+        "operator": "!=="
       },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "CallExpression",
-            "callee": {
-              "type": "Identifier",
-              "name": "SwitchTest1",
-              "start": 825,
-              "end": 836
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": 1,
-                "raw": "1",
-                "start": 837,
-                "end": 838
-              }
-            ],
-            "optional": false,
-            "start": 825,
-            "end": 839
+      "consequent": {
+        "type": "ThrowStatement",
+        "start": 845,
+        "end": 911,
+        "argument": {
+          "type": "NewExpression",
+          "start": 851,
+          "end": 910,
+          "callee": {
+            "type": "Identifier",
+            "start": 855,
+            "end": 867,
+            "name": "Test262Error"
           },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": 4,
-            "raw": "4",
-            "start": 842,
-            "end": 843
-          },
-          "start": 825,
-          "end": 843
-        },
-        "consequent": {
-          "type": "ThrowStatement",
-          "argument": {
-            "type": "NewExpression",
-            "callee": {
-              "type": "Identifier",
-              "name": "Test262Error",
-              "start": 855,
-              "end": 867
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": "#2.3: \"finally\" block must be evaluated",
-                "raw": "'#2.3: \"finally\" block must be evaluated'",
-                "start": 868,
-                "end": 909
-              }
-            ],
-            "start": 851,
-            "end": 910
-          },
-          "start": 845,
-          "end": 911
-        },
-        "alternate": null,
-        "start": 821,
-        "end": 911
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 868,
+              "end": 909,
+              "value": "#2.3: \"finally\" block must be evaluated",
+              "raw": "'#2.3: \"finally\" block must be evaluated'"
+            }
+          ]
+        }
       },
-      {
-        "type": "IfStatement",
-        "test": {
-          "type": "BinaryExpression",
-          "left": {
-            "type": "CallExpression",
-            "callee": {
-              "type": "Identifier",
-              "name": "SwitchTest1",
-              "start": 916,
-              "end": 927
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": 4,
-                "raw": "4",
-                "start": 928,
-                "end": 929
-              }
-            ],
-            "optional": false,
-            "start": 916,
-            "end": 930
-          },
-          "operator": "!==",
-          "right": {
-            "type": "Literal",
-            "value": 64,
-            "raw": "64",
-            "start": 933,
-            "end": 935
-          },
+      "alternate": null
+    },
+    {
+      "type": "IfStatement",
+      "start": 912,
+      "end": 1002,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 916,
+        "end": 935,
+        "left": {
+          "type": "CallExpression",
           "start": 916,
-          "end": 935
-        },
-        "consequent": {
-          "type": "ThrowStatement",
-          "argument": {
-            "type": "NewExpression",
-            "callee": {
-              "type": "Identifier",
-              "name": "Test262Error",
-              "start": 946,
-              "end": 958
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": "#2.4: \"finally\" block must be evaluated",
-                "raw": "'#2.4: \"finally\" block must be evaluated'",
-                "start": 959,
-                "end": 1000
-              }
-            ],
-            "start": 942,
-            "end": 1001
+          "end": 930,
+          "callee": {
+            "type": "Identifier",
+            "start": 916,
+            "end": 927,
+            "name": "SwitchTest1"
           },
-          "start": 936,
-          "end": 1002
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 928,
+              "end": 929,
+              "value": 4,
+              "raw": "4"
+            }
+          ],
+          "optional": false
         },
-        "alternate": null,
-        "start": 912,
-        "end": 1002
-      }
-    ],
-    "sourceType": "script",
-    "hashbang": null,
-    "start": 0,
-    "end": 1002
-  },
-  "comments": [],
-  "diagnostics": []
+        "right": {
+          "type": "Literal",
+          "start": 933,
+          "end": 935,
+          "value": 64,
+          "raw": "64"
+        },
+        "operator": "!=="
+      },
+      "consequent": {
+        "type": "ThrowStatement",
+        "start": 936,
+        "end": 1002,
+        "argument": {
+          "type": "NewExpression",
+          "start": 942,
+          "end": 1001,
+          "callee": {
+            "type": "Identifier",
+            "start": 946,
+            "end": 958,
+            "name": "Test262Error"
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 959,
+              "end": 1000,
+              "value": "#2.4: \"finally\" block must be evaluated",
+              "raw": "'#2.4: \"finally\" block must be evaluated'"
+            }
+          ]
+        }
+      },
+      "alternate": null
+    }
+  ]
 }

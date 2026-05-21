@@ -1,354 +1,345 @@
 {
-  "program": {
-    "type": "Program",
-    "start": 0,
-    "end": 1355,
-    "sourceType": "module",
-    "hashbang": null,
-    "body": [
-      {
-        "type": "ImportDeclaration",
-        "start": 1097,
-        "end": 1152,
-        "specifiers": [
-          {
-            "type": "ImportNamespaceSpecifier",
-            "start": 1104,
+  "type": "Program",
+  "start": 0,
+  "end": 1355,
+  "sourceType": "module",
+  "hashbang": null,
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 1097,
+      "end": 1152,
+      "specifiers": [
+        {
+          "type": "ImportNamespaceSpecifier",
+          "start": 1104,
+          "end": 1111,
+          "local": {
+            "type": "Identifier",
+            "start": 1109,
             "end": 1111,
-            "local": {
-              "type": "Identifier",
-              "start": 1109,
-              "end": 1111,
-              "name": "ns"
-            }
+            "name": "ns"
           }
-        ],
-        "source": {
-          "type": "Literal",
-          "start": 1117,
-          "end": 1151,
-          "value": "./super-access-to-tdz-binding.js",
-          "raw": "'./super-access-to-tdz-binding.js'"
-        },
-        "attributes": [],
-        "phase": null
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "start": 1117,
+        "end": 1151,
+        "value": "./super-access-to-tdz-binding.js",
+        "raw": "'./super-access-to-tdz-binding.js'"
       },
-      {
-        "type": "ClassDeclaration",
-        "start": 1154,
+      "attributes": [],
+      "phase": null,
+      "comments": [
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved."
+        },
+        {
+          "type": "Line",
+          "position": "before",
+          "sameLine": false,
+          "value": " This code is governed by the BSD license found in the LICENSE file."
+        },
+        {
+          "type": "Block",
+          "position": "before",
+          "sameLine": false,
+          "value": "---\nesid: sec-module-namespace-exotic-objects-getownproperty-p\ndescription: >\n    super.foo = V throws ReferenceError when Receiver is a module namespace\n    with an uninitialized binding\ninfo: |\n    OrdinarySetWithOwnDescriptor ( _O_, _P_, _V_, _Receiver_, _ownDesc_ )\n      ...\n      1. If IsDataDescriptor(_ownDesc_) is *true*, then\n        1. If _ownDesc_.[[Writable]] is *false*, return *false*.\n        1. If _Receiver_ is not an Object, return *false*.\n        1. Let _existingDescriptor_ be ? _Receiver_.[[GetOwnProperty]](_P_).\n        ...\n\n    [[GetOwnProperty]] ( _P_ )\n      ...\n      1. Let _value_ be ? _O_.[[Get]](_P_, _O_).\n      ...\n\n    [[Get]] ( _P_, _Receiver_ )\n      ...\n      1. Let _targetEnvRec_ be _targetEnv_'s EnvironmentRecord.\n      1. Return ? _targetEnvRec_.GetBindingValue(_binding_.[[BindingName]], *true*).\n\n    NOTE: If the binding is uninitialized, GetBindingValue throws a *ReferenceError*.\nflags: [module]\nfeatures: [let]\n---"
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "start": 1154,
+      "end": 1194,
+      "decorators": [],
+      "id": {
+        "type": "Identifier",
+        "start": 1160,
+        "end": 1161,
+        "name": "A"
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "start": 1162,
         "end": 1194,
-        "decorators": [],
-        "id": {
-          "type": "Identifier",
-          "start": 1160,
-          "end": 1161,
-          "name": "A"
-        },
-        "superClass": null,
-        "body": {
-          "type": "ClassBody",
-          "start": 1162,
-          "end": 1194,
-          "body": [
-            {
-              "type": "MethodDefinition",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "start": 1164,
+            "end": 1192,
+            "decorators": [],
+            "key": {
+              "type": "Identifier",
               "start": 1164,
-              "end": 1192,
-              "decorators": [],
-              "key": {
-                "type": "Identifier",
-                "start": 1164,
-                "end": 1175,
-                "name": "constructor"
-              },
-              "value": {
-                "type": "FunctionExpression",
-                "start": 1175,
-                "end": 1192,
-                "id": null,
-                "generator": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 1178,
-                  "end": 1192,
-                  "body": [
-                    {
-                      "type": "ReturnStatement",
-                      "start": 1180,
-                      "end": 1190,
-                      "argument": {
-                        "type": "Identifier",
-                        "start": 1187,
-                        "end": 1189,
-                        "name": "ns"
-                      }
-                    }
-                  ]
-                },
-                "expression": false
-              },
-              "kind": "constructor",
-              "computed": false,
-              "static": false
-            }
-          ]
-        }
-      },
-      {
-        "type": "EmptyStatement",
-        "start": 1194,
-        "end": 1195
-      },
-      {
-        "type": "ClassDeclaration",
-        "start": 1196,
-        "end": 1272,
-        "decorators": [],
-        "id": {
-          "type": "Identifier",
-          "start": 1202,
-          "end": 1203,
-          "name": "B"
-        },
-        "superClass": {
-          "type": "Identifier",
-          "start": 1212,
-          "end": 1213,
-          "name": "A"
-        },
-        "body": {
-          "type": "ClassBody",
-          "start": 1214,
-          "end": 1272,
-          "body": [
-            {
-              "type": "MethodDefinition",
-              "start": 1218,
-              "end": 1270,
-              "decorators": [],
-              "key": {
-                "type": "Identifier",
-                "start": 1218,
-                "end": 1229,
-                "name": "constructor"
-              },
-              "value": {
-                "type": "FunctionExpression",
-                "start": 1229,
-                "end": 1270,
-                "id": null,
-                "generator": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 1232,
-                  "end": 1270,
-                  "body": [
-                    {
-                      "type": "ExpressionStatement",
-                      "start": 1238,
-                      "end": 1246,
-                      "expression": {
-                        "type": "CallExpression",
-                        "start": 1238,
-                        "end": 1245,
-                        "callee": {
-                          "type": "Super",
-                          "start": 1238,
-                          "end": 1243
-                        },
-                        "arguments": [],
-                        "optional": false
-                      }
-                    },
-                    {
-                      "type": "ExpressionStatement",
-                      "start": 1251,
-                      "end": 1266,
-                      "expression": {
-                        "type": "AssignmentExpression",
-                        "start": 1251,
-                        "end": 1265,
-                        "left": {
-                          "type": "MemberExpression",
-                          "start": 1251,
-                          "end": 1260,
-                          "object": {
-                            "type": "Super",
-                            "start": 1251,
-                            "end": 1256
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "start": 1257,
-                            "end": 1260,
-                            "name": "foo"
-                          },
-                          "computed": false,
-                          "optional": false
-                        },
-                        "right": {
-                          "type": "Literal",
-                          "start": 1263,
-                          "end": 1265,
-                          "value": 14,
-                          "raw": "14"
-                        },
-                        "operator": "="
-                      }
-                    }
-                  ]
-                },
-                "expression": false
-              },
-              "kind": "constructor",
-              "computed": false,
-              "static": false
-            }
-          ]
-        }
-      },
-      {
-        "type": "EmptyStatement",
-        "start": 1272,
-        "end": 1273
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 1275,
-        "end": 1332,
-        "expression": {
-          "type": "CallExpression",
-          "start": 1275,
-          "end": 1331,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 1275,
-            "end": 1288,
-            "object": {
-              "type": "Identifier",
-              "start": 1275,
-              "end": 1281,
-              "name": "assert"
+              "end": 1175,
+              "name": "constructor"
             },
-            "property": {
-              "type": "Identifier",
-              "start": 1282,
-              "end": 1288,
-              "name": "throws"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Identifier",
-              "start": 1289,
-              "end": 1303,
-              "name": "ReferenceError"
-            },
-            {
+            "value": {
               "type": "FunctionExpression",
-              "start": 1305,
-              "end": 1330,
+              "start": 1175,
+              "end": 1192,
               "id": null,
               "generator": false,
               "async": false,
               "params": [],
               "body": {
                 "type": "BlockStatement",
-                "start": 1316,
-                "end": 1330,
+                "start": 1178,
+                "end": 1192,
                 "body": [
                   {
-                    "type": "ExpressionStatement",
-                    "start": 1320,
-                    "end": 1328,
-                    "expression": {
-                      "type": "NewExpression",
-                      "start": 1320,
-                      "end": 1327,
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1324,
-                        "end": 1325,
-                        "name": "B"
-                      },
-                      "arguments": []
+                    "type": "ReturnStatement",
+                    "start": 1180,
+                    "end": 1190,
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 1187,
+                      "end": 1189,
+                      "name": "ns"
                     }
                   }
                 ]
               },
               "expression": false
-            }
-          ],
-          "optional": false
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 1334,
-        "end": 1354,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 1341,
-          "end": 1354,
-          "kind": "let",
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 1345,
-              "end": 1353,
-              "id": {
-                "type": "Identifier",
-                "start": 1345,
-                "end": 1348,
-                "name": "foo"
-              },
-              "init": {
-                "type": "Literal",
-                "start": 1351,
-                "end": 1353,
-                "value": 42,
-                "raw": "42"
-              }
-            }
-          ]
-        },
-        "specifiers": [],
-        "source": null,
-        "attributes": []
+            },
+            "kind": "constructor",
+            "computed": false,
+            "static": false
+          }
+        ]
       }
-    ]
-  },
-  "comments": [
-    {
-      "type": "Line",
-      "precededByNewline": false,
-      "followedByNewline": true,
-      "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved.",
-      "start": 0,
-      "end": 55
     },
     {
-      "type": "Line",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": " This code is governed by the BSD license found in the LICENSE file.",
-      "start": 56,
-      "end": 126
+      "type": "EmptyStatement",
+      "start": 1194,
+      "end": 1195
     },
     {
-      "type": "Block",
-      "precededByNewline": true,
-      "followedByNewline": true,
-      "value": "---\nesid: sec-module-namespace-exotic-objects-getownproperty-p\ndescription: >\n    super.foo = V throws ReferenceError when Receiver is a module namespace\n    with an uninitialized binding\ninfo: |\n    OrdinarySetWithOwnDescriptor ( _O_, _P_, _V_, _Receiver_, _ownDesc_ )\n      ...\n      1. If IsDataDescriptor(_ownDesc_) is *true*, then\n        1. If _ownDesc_.[[Writable]] is *false*, return *false*.\n        1. If _Receiver_ is not an Object, return *false*.\n        1. Let _existingDescriptor_ be ? _Receiver_.[[GetOwnProperty]](_P_).\n        ...\n\n    [[GetOwnProperty]] ( _P_ )\n      ...\n      1. Let _value_ be ? _O_.[[Get]](_P_, _O_).\n      ...\n\n    [[Get]] ( _P_, _Receiver_ )\n      ...\n      1. Let _targetEnvRec_ be _targetEnv_'s EnvironmentRecord.\n      1. Return ? _targetEnvRec_.GetBindingValue(_binding_.[[BindingName]], *true*).\n\n    NOTE: If the binding is uninitialized, GetBindingValue throws a *ReferenceError*.\nflags: [module]\nfeatures: [let]\n---",
-      "start": 127,
-      "end": 1095
+      "type": "ClassDeclaration",
+      "start": 1196,
+      "end": 1272,
+      "decorators": [],
+      "id": {
+        "type": "Identifier",
+        "start": 1202,
+        "end": 1203,
+        "name": "B"
+      },
+      "superClass": {
+        "type": "Identifier",
+        "start": 1212,
+        "end": 1213,
+        "name": "A"
+      },
+      "body": {
+        "type": "ClassBody",
+        "start": 1214,
+        "end": 1272,
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "start": 1218,
+            "end": 1270,
+            "decorators": [],
+            "key": {
+              "type": "Identifier",
+              "start": 1218,
+              "end": 1229,
+              "name": "constructor"
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "start": 1229,
+              "end": 1270,
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 1232,
+                "end": 1270,
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 1238,
+                    "end": 1246,
+                    "expression": {
+                      "type": "CallExpression",
+                      "start": 1238,
+                      "end": 1245,
+                      "callee": {
+                        "type": "Super",
+                        "start": 1238,
+                        "end": 1243
+                      },
+                      "arguments": [],
+                      "optional": false
+                    }
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 1251,
+                    "end": 1266,
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "start": 1251,
+                      "end": 1265,
+                      "left": {
+                        "type": "MemberExpression",
+                        "start": 1251,
+                        "end": 1260,
+                        "object": {
+                          "type": "Super",
+                          "start": 1251,
+                          "end": 1256
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 1257,
+                          "end": 1260,
+                          "name": "foo"
+                        },
+                        "computed": false,
+                        "optional": false
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "start": 1263,
+                        "end": 1265,
+                        "value": 14,
+                        "raw": "14"
+                      },
+                      "operator": "="
+                    }
+                  }
+                ]
+              },
+              "expression": false
+            },
+            "kind": "constructor",
+            "computed": false,
+            "static": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "EmptyStatement",
+      "start": 1272,
+      "end": 1273
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 1275,
+      "end": 1332,
+      "expression": {
+        "type": "CallExpression",
+        "start": 1275,
+        "end": 1331,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 1275,
+          "end": 1288,
+          "object": {
+            "type": "Identifier",
+            "start": 1275,
+            "end": 1281,
+            "name": "assert"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 1282,
+            "end": 1288,
+            "name": "throws"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "start": 1289,
+            "end": 1303,
+            "name": "ReferenceError"
+          },
+          {
+            "type": "FunctionExpression",
+            "start": 1305,
+            "end": 1330,
+            "id": null,
+            "generator": false,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 1316,
+              "end": 1330,
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 1320,
+                  "end": 1328,
+                  "expression": {
+                    "type": "NewExpression",
+                    "start": 1320,
+                    "end": 1327,
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 1324,
+                      "end": 1325,
+                      "name": "B"
+                    },
+                    "arguments": []
+                  }
+                }
+              ]
+            },
+            "expression": false
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 1334,
+      "end": 1354,
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 1341,
+        "end": 1354,
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 1345,
+            "end": 1353,
+            "id": {
+              "type": "Identifier",
+              "start": 1345,
+              "end": 1348,
+              "name": "foo"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 1351,
+              "end": 1353,
+              "value": 42,
+              "raw": "42"
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "attributes": []
     }
-  ],
-  "diagnostics": []
+  ]
 }
