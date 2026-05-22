@@ -1,5 +1,43 @@
 # test262 sync history
 
+## 2026-05-22
+
+- [b2241461c9df86be.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-cross-realm.js)
+- [4d5c55b8dee7c582.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-data-property-shadows.js)
+- [63fab4386037833b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-error-as-prototype.js)
+- [5214aced9ef3d5ee.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-error-instance.js)
+- [6d7da6c8752a79d3.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-error-prototype.js)
+- [574d3d267999b830.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-foreign-new-target.js)
+- [2121fae24c46b62f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-no-error-data.js)
+- [9dd387d70abd2fac.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-not-a-constructor.js)
+- [7c123da652d10d42.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-receiver-is-proxy.js)
+- [c1147393e1f06163.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-subclass.js)
+- [bba757a77bb67002.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-this-not-object.js)
+- [6e3561587c691962.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/instance-no-own-stack.js)
+- [dec2cd0c59748c9d.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/instance-not-enumerable.js)
+- [46b553b544f20bac.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/prop-desc.js)
+- [7383bac5b7ca2c47.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-creates-own-property.js)
+- [c5f285647e114e5a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-cross-realm.js)
+- [7e51b9edb6d2663c.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-delete-round-trip.js)
+- [a23d5ea6da60d148.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-empty-string.js)
+- [df378d04635bdeb7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-existing-own-property.js)
+- [1f3c62ab5dd7f76f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-no-argument.js)
+- [c5b9199473cb169f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-non-error-receiver.js)
+- [6a1a2dcce3594f93.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-non-extensible-receiver.js)
+- [5c936dc4f732c607.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-non-string-value.js)
+- [a9a11fa96f783197.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-non-writable-stack.js)
+- [ee3282caa6a3805a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-not-a-constructor.js)
+- [457a08187469475f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-own-accessor.js)
+- [d46e27a20c59c0ce.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-proxy-trap-rejects.js)
+- [ecec4d21666b39f3.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-proxy-trap-throws.js)
+- [6be477eff2739c6a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-proxy-wrapping-prototype.js)
+- [e051fd295eb9e11e.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-receiver-is-null-proto.js)
+- [39f15f056c6d9f32.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-receiver-is-other-prototype.js)
+- [1971669235df1762.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-receiver-is-prototype.js)
+- [79315af5a71a55ab.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-receiver-is-proxy.js)
+- [04a17ec3f31867db.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-this-not-object.js)
+- [cc8d0fd5672ee0b4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/setter-via-assignment.js)
+
 ## 2026-05-21
 
 - [668fa4fb67967578.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/zip/iterator-zip-iteration-strict-checks-remaining-done.js)
