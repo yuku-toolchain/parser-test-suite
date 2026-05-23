@@ -1,5 +1,11 @@
 # test262 sync history
 
+## 2026-05-23
+
+- [262a7f1476e6ce7d.module.js](https://github.com/tc39/test262/blob/main/test/language/module-code/ambiguous-export-bindings/namespace-unambiguous-if-import-source-and-export.js)
+- [db820f1911787bb7.module.js](https://github.com/tc39/test262/blob/main/test/language/module-code/source-phase-import/reexport-source-binding-named-import.js)
+- [ad7aef88754ae79b.module.js](https://github.com/tc39/test262/blob/main/test/language/module-code/source-phase-import/reexport-source-binding-namespace-get.js)
+
 ## 2026-05-22
 
 - [b2241461c9df86be.js](https://github.com/tc39/test262/blob/main/test/built-ins/Error/prototype/stack/getter-cross-realm.js)
