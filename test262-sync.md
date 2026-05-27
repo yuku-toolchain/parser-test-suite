@@ -1,5 +1,12 @@
 # test262 sync history
 
+## 2026-05-27
+
+- [c24c6b41fc34f2d3.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/intl-legacy-constructed-symbol-property.js)
+- [2d41fc0c88fe154e.js](https://github.com/tc39/test262/blob/main/test/intl402/FallbackSymbol/description.js)
+- [2d62190c82c9daf3.js](https://github.com/tc39/test262/blob/main/test/intl402/FallbackSymbol/per-realm.js)
+- [8741478c5f0322d6.js](https://github.com/tc39/test262/blob/main/test/intl402/NumberFormat/intl-legacy-constructed-symbol-property.js)
+
 ## 2026-05-23
 
 - [262a7f1476e6ce7d.module.js](https://github.com/tc39/test262/blob/main/test/language/module-code/ambiguous-export-bindings/namespace-unambiguous-if-import-source-and-export.js)
