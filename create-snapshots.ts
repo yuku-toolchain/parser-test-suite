@@ -28,6 +28,24 @@ function detectAstType(lang: Lang): AstType {
   return lang === "ts" || lang === "tsx" ? "ts" : "js";
 }
 
+// Workaround for an oxc-parser bug: the `value` of HTML-style
+// line comments is computed by always stripping a fixed 2 leading chars, so the
+// `<!--` (4-char) and `-->` (3-char) markers leak into the value
+// (`<!--a` -> "--a", `-->` -> ">", `<!--` -> "--").
+// Track upstream: https://github.com/oxc-project/oxc/issues/22803
+function fixHtmlCommentValues<T extends { type: string; start: number; end: number; value: string }>(
+  comments: T[],
+  source: string,
+): T[] {
+  for (const comment of comments) {
+    if (comment.type !== "Line") continue;
+    const text = source.slice(comment.start, comment.end);
+    if (text.startsWith("<!--")) comment.value = text.slice(4);
+    else if (text.startsWith("-->")) comment.value = text.slice(3);
+  }
+  return comments;
+}
+
 async function processFile(folder: FolderConfig, fileName: string, lang: Lang, astType: AstType) {
   const filePath = join(folder.path, fileName);
 
@@ -59,7 +77,7 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
 
     const output = {
       program: { ...result.program, start: 0 },
-      comments: result.comments,
+      comments: fixHtmlCommentValues(result.comments, source),
       diagnostics: [],
     };
 
