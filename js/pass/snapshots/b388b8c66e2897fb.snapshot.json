@@ -1,67 +1,70 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 69,
-  "sourceType": "module",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "IfStatement",
-      "start": 0,
-      "end": 69,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 4,
-        "end": 25,
-        "left": {
-          "type": "CallExpression",
-          "start": 4,
-          "end": 16,
-          "callee": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "eval",
+              "start": 4,
+              "end": 8
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": "this",
+                "raw": "\"this\"",
+                "start": 9,
+                "end": 15
+              }
+            ],
+            "optional": false,
             "start": 4,
-            "end": 8,
-            "name": "eval",
-            "kind": "reference"
+            "end": 16
           },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 9,
-              "end": 15,
-              "value": "this",
-              "raw": "\"this\""
-            }
-          ],
-          "optional": false
-        },
-        "right": {
-          "type": "ThisExpression",
-          "start": 21,
+          "operator": "!==",
+          "right": {
+            "type": "ThisExpression",
+            "start": 21,
+            "end": 25
+          },
+          "start": 4,
           "end": 25
         },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 27,
-        "end": 69,
-        "body": [
-          {
-            "type": "ThrowStatement",
-            "start": 31,
-            "end": 67,
-            "argument": {
-              "type": "Literal",
-              "start": 37,
-              "end": 66,
-              "value": "'this' had incorrect value!",
-              "raw": "\"'this' had incorrect value!\""
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ThrowStatement",
+              "argument": {
+                "type": "Literal",
+                "value": "'this' had incorrect value!",
+                "raw": "\"'this' had incorrect value!\"",
+                "start": 37,
+                "end": 66
+              },
+              "start": 31,
+              "end": 67
             }
-          }
-        ]
-      },
-      "alternate": null
-    }
-  ]
+          ],
+          "start": 27,
+          "end": 69
+        },
+        "alternate": null,
+        "start": 0,
+        "end": 69
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 69
+  },
+  "comments": [],
+  "diagnostics": []
 }

@@ -1,162 +1,157 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 118,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ClassDeclaration",
-      "start": 0,
-      "end": 26,
-      "decorators": [],
-      "id": {
-        "type": "Identifier",
-        "start": 6,
-        "end": 9,
-        "name": "Err",
-        "kind": "binding"
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ClassDeclaration",
+        "decorators": [],
+        "id": {
+          "type": "Identifier",
+          "name": "Err",
+          "start": 6,
+          "end": 9
+        },
+        "superClass": {
+          "type": "Identifier",
+          "name": "Error",
+          "start": 18,
+          "end": 23
+        },
+        "body": {
+          "type": "ClassBody",
+          "body": [],
+          "start": 24,
+          "end": 26
+        },
+        "start": 0,
+        "end": 26
       },
-      "superClass": {
-        "type": "Identifier",
-        "start": 18,
-        "end": 23,
-        "name": "Error",
-        "kind": "reference"
-      },
-      "body": {
-        "type": "ClassBody",
-        "start": 24,
-        "end": 26,
-        "body": []
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 27,
-      "end": 66,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 27,
-        "end": 65,
-        "left": {
-          "type": "MemberExpression",
-          "start": 27,
-          "end": 48,
-          "object": {
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
             "type": "MemberExpression",
-            "start": 27,
-            "end": 40,
             "object": {
-              "type": "Identifier",
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Err",
+                "start": 27,
+                "end": 30
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "prototype",
+                "start": 31,
+                "end": 40
+              },
+              "optional": false,
+              "computed": false,
               "start": 27,
-              "end": 30,
-              "name": "Err",
-              "kind": "reference"
+              "end": 40
             },
             "property": {
               "type": "Identifier",
-              "start": 31,
-              "end": 40,
-              "name": "prototype",
-              "kind": "name"
+              "name": "message",
+              "start": 41,
+              "end": 48
             },
+            "optional": false,
             "computed": false,
-            "optional": false
+            "start": 27,
+            "end": 48
           },
-          "property": {
-            "type": "Identifier",
-            "start": 41,
-            "end": 48,
-            "name": "message",
-            "kind": "name"
+          "right": {
+            "type": "Literal",
+            "value": "custom-error",
+            "raw": "'custom-error'",
+            "start": 51,
+            "end": 65
           },
-          "computed": false,
-          "optional": false
+          "start": 27,
+          "end": 65
         },
-        "right": {
-          "type": "Literal",
-          "start": 51,
-          "end": 65,
-          "value": "custom-error",
-          "raw": "'custom-error'"
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 67,
-      "end": 96,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 71,
-          "end": 95,
-          "id": {
-            "type": "Identifier",
+        "start": 27,
+        "end": 66
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "err1",
+              "start": 71,
+              "end": 75
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Err",
+                "start": 82,
+                "end": 85
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "foo 42",
+                  "raw": "'foo 42'",
+                  "start": 86,
+                  "end": 94
+                }
+              ],
+              "start": 78,
+              "end": 95
+            },
             "start": 71,
-            "end": 75,
-            "name": "err1",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 78,
-            "end": 95,
-            "callee": {
-              "type": "Identifier",
-              "start": 82,
-              "end": 85,
-              "name": "Err",
-              "kind": "reference"
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 86,
-                "end": 94,
-                "value": "foo 42",
-                "raw": "'foo 42'"
-              }
-            ]
+            "end": 95
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 97,
-      "end": 118,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 101,
-          "end": 117,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 67,
+        "end": 96
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "err2",
+              "start": 101,
+              "end": 105
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Err",
+                "start": 112,
+                "end": 115
+              },
+              "arguments": [],
+              "start": 108,
+              "end": 117
+            },
             "start": 101,
-            "end": 105,
-            "name": "err2",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 108,
-            "end": 117,
-            "callee": {
-              "type": "Identifier",
-              "start": 112,
-              "end": 115,
-              "name": "Err",
-              "kind": "reference"
-            },
-            "arguments": []
+            "end": 117
           }
-        }
-      ]
-    }
-  ]
+        ],
+        "start": 97,
+        "end": 118
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 118
+  },
+  "comments": [],
+  "diagnostics": []
 }

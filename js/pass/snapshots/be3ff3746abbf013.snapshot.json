@@ -1,992 +1,938 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 1389,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 536,
-      "end": 590,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 540,
-          "end": 589,
-          "id": {
-            "type": "Identifier",
-            "start": 540,
-            "end": 546,
-            "name": "source",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 549,
-            "end": 589,
-            "callee": {
-              "type": "Identifier",
-              "start": 553,
-              "end": 564,
-              "name": "ArrayBuffer",
-              "kind": "reference"
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 565,
-                "end": 566,
-                "value": 8,
-                "raw": "8"
-              },
-              {
-                "type": "ObjectExpression",
-                "start": 568,
-                "end": 588,
-                "properties": [
-                  {
-                    "type": "Property",
-                    "start": 570,
-                    "end": 586,
-                    "key": {
-                      "type": "Identifier",
-                      "start": 570,
-                      "end": 583,
-                      "name": "maxByteLength",
-                      "kind": "name"
-                    },
-                    "value": {
-                      "type": "Literal",
-                      "start": 585,
-                      "end": 586,
-                      "value": 8,
-                      "raw": "8"
-                    },
-                    "kind": "init",
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Copyright (C) 2025 Richard Gibson. All rights reserved."
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " This code is governed by the BSD license found in the LICENSE file."
-        },
-        {
-          "type": "Block",
-          "position": "before",
-          "sameLine": false,
-          "value": "---\nesid: sec-arraybuffer.prototype.slicetoimmutable\ndescription: Unaffected by post-hoc manipulation of the source\ninfo: |\n  ArrayBuffer.prototype.sliceToImmutable ( start, end )\n  ...\n  15. Let newBuffer be ? AllocateImmutableArrayBuffer(%ArrayBuffer%, newLen, fromBuf, first, newLen).\n  16. Return newBuffer.\nfeatures: [immutable-arraybuffer]\nincludes: [compareArray.js, detachArrayBuffer.js]\n---"
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 591,
-      "end": 625,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 595,
-          "end": 624,
-          "id": {
-            "type": "Identifier",
-            "start": 595,
-            "end": 599,
-            "name": "view",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 602,
-            "end": 624,
-            "callee": {
-              "type": "Identifier",
-              "start": 606,
-              "end": 616,
-              "name": "Uint8Array",
-              "kind": "reference"
-            },
-            "arguments": [
-              {
-                "type": "Identifier",
-                "start": 617,
-                "end": 623,
-                "name": "source",
-                "kind": "reference"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "ForStatement",
-      "start": 626,
-      "end": 670,
-      "init": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
         "type": "VariableDeclaration",
-        "start": 631,
-        "end": 640,
         "kind": "var",
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 635,
-            "end": 640,
             "id": {
               "type": "Identifier",
-              "start": 635,
-              "end": 636,
-              "name": "i",
-              "kind": "binding"
+              "name": "source",
+              "start": 540,
+              "end": 546
             },
             "init": {
-              "type": "Literal",
-              "start": 639,
-              "end": 640,
-              "value": 0,
-              "raw": "0"
-            }
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ArrayBuffer",
+                "start": 553,
+                "end": 564
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": 8,
+                  "raw": "8",
+                  "start": 565,
+                  "end": 566
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "maxByteLength",
+                        "start": 570,
+                        "end": 583
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": 8,
+                        "raw": "8",
+                        "start": 585,
+                        "end": 586
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 570,
+                      "end": 586
+                    }
+                  ],
+                  "start": 568,
+                  "end": 588
+                }
+              ],
+              "start": 549,
+              "end": 589
+            },
+            "start": 540,
+            "end": 589
           }
-        ]
+        ],
+        "start": 536,
+        "end": 590
       },
-      "test": {
-        "type": "BinaryExpression",
-        "start": 642,
-        "end": 647,
-        "left": {
-          "type": "Identifier",
-          "start": 642,
-          "end": 643,
-          "name": "i",
-          "kind": "reference"
-        },
-        "right": {
-          "type": "Literal",
-          "start": 646,
-          "end": 647,
-          "value": 8,
-          "raw": "8"
-        },
-        "operator": "<"
-      },
-      "update": {
-        "type": "UpdateExpression",
-        "start": 649,
-        "end": 652,
-        "argument": {
-          "type": "Identifier",
-          "start": 649,
-          "end": 650,
-          "name": "i",
-          "kind": "reference"
-        },
-        "operator": "++",
-        "prefix": false
-      },
-      "body": {
-        "type": "ExpressionStatement",
-        "start": 654,
-        "end": 670,
-        "expression": {
-          "type": "AssignmentExpression",
-          "start": 654,
-          "end": 669,
-          "left": {
-            "type": "MemberExpression",
-            "start": 654,
-            "end": 661,
-            "object": {
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 654,
-              "end": 658,
               "name": "view",
-              "kind": "reference"
+              "start": 595,
+              "end": 599
             },
-            "property": {
-              "type": "Identifier",
-              "start": 659,
-              "end": 660,
-              "name": "i",
-              "kind": "reference"
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Uint8Array",
+                "start": 606,
+                "end": 616
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "source",
+                  "start": 617,
+                  "end": 623
+                }
+              ],
+              "start": 602,
+              "end": 624
             },
-            "computed": true,
-            "optional": false
-          },
-          "right": {
-            "type": "BinaryExpression",
-            "start": 664,
-            "end": 669,
-            "left": {
-              "type": "Identifier",
-              "start": 664,
-              "end": 665,
-              "name": "i",
-              "kind": "reference"
-            },
-            "right": {
-              "type": "Literal",
-              "start": 668,
-              "end": 669,
-              "value": 1,
-              "raw": "1"
-            },
-            "operator": "+"
-          },
-          "operator": "="
-        }
-      }
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 672,
-      "end": 709,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 676,
-          "end": 708,
-          "id": {
+            "start": 595,
+            "end": 624
+          }
+        ],
+        "start": 591,
+        "end": 625
+      },
+      {
+        "type": "ForStatement",
+        "init": {
+          "type": "VariableDeclaration",
+          "kind": "var",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "i",
+                "start": 635,
+                "end": 636
+              },
+              "init": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 639,
+                "end": 640
+              },
+              "start": 635,
+              "end": 640
+            }
+          ],
+          "start": 631,
+          "end": 640
+        },
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
             "type": "Identifier",
-            "start": 676,
-            "end": 680,
-            "name": "dest",
-            "kind": "binding"
+            "name": "i",
+            "start": 642,
+            "end": 643
           },
-          "init": {
-            "type": "CallExpression",
-            "start": 683,
-            "end": 708,
-            "callee": {
+          "operator": "<",
+          "right": {
+            "type": "Literal",
+            "value": 8,
+            "raw": "8",
+            "start": 646,
+            "end": 647
+          },
+          "start": 642,
+          "end": 647
+        },
+        "update": {
+          "type": "UpdateExpression",
+          "operator": "++",
+          "prefix": false,
+          "argument": {
+            "type": "Identifier",
+            "name": "i",
+            "start": 649,
+            "end": 650
+          },
+          "start": 649,
+          "end": 652
+        },
+        "body": {
+          "type": "ExpressionStatement",
+          "expression": {
+            "type": "AssignmentExpression",
+            "operator": "=",
+            "left": {
               "type": "MemberExpression",
-              "start": 683,
-              "end": 706,
               "object": {
                 "type": "Identifier",
-                "start": 683,
-                "end": 689,
-                "name": "source",
-                "kind": "reference"
+                "name": "view",
+                "start": 654,
+                "end": 658
               },
               "property": {
                 "type": "Identifier",
-                "start": 690,
-                "end": 706,
-                "name": "sliceToImmutable",
-                "kind": "name"
+                "name": "i",
+                "start": 659,
+                "end": 660
               },
-              "computed": false,
-              "optional": false
+              "optional": false,
+              "computed": true,
+              "start": 654,
+              "end": 661
             },
-            "arguments": [],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 710,
-      "end": 756,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 714,
-          "end": 755,
-          "id": {
-            "type": "Identifier",
-            "start": 714,
-            "end": 728,
-            "name": "expectContents",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ArrayExpression",
-            "start": 731,
-            "end": 755,
-            "elements": [
-              {
+            "right": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "i",
+                "start": 664,
+                "end": 665
+              },
+              "operator": "+",
+              "right": {
                 "type": "Literal",
-                "start": 732,
-                "end": 733,
                 "value": 1,
-                "raw": "1"
+                "raw": "1",
+                "start": 668,
+                "end": 669
               },
-              {
-                "type": "Literal",
-                "start": 735,
-                "end": 736,
-                "value": 2,
-                "raw": "2"
-              },
-              {
-                "type": "Literal",
-                "start": 738,
-                "end": 739,
-                "value": 3,
-                "raw": "3"
-              },
-              {
-                "type": "Literal",
-                "start": 741,
-                "end": 742,
-                "value": 4,
-                "raw": "4"
-              },
-              {
-                "type": "Literal",
-                "start": 744,
-                "end": 745,
-                "value": 5,
-                "raw": "5"
-              },
-              {
-                "type": "Literal",
-                "start": 747,
-                "end": 748,
-                "value": 6,
-                "raw": "6"
-              },
-              {
-                "type": "Literal",
-                "start": 750,
-                "end": 751,
-                "value": 7,
-                "raw": "7"
-              },
-              {
-                "type": "Literal",
-                "start": 753,
-                "end": 754,
-                "value": 8,
-                "raw": "8"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 757,
-      "end": 793,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 761,
-          "end": 792,
-          "id": {
-            "type": "Identifier",
-            "start": 761,
-            "end": 769,
-            "name": "destView",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 772,
-            "end": 792,
-            "callee": {
-              "type": "Identifier",
-              "start": 776,
-              "end": 786,
-              "name": "Uint8Array",
-              "kind": "reference"
+              "start": 664,
+              "end": 669
             },
-            "arguments": [
-              {
-                "type": "Identifier",
-                "start": 787,
-                "end": 791,
-                "name": "dest",
-                "kind": "reference"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 794,
-      "end": 840,
-      "expression": {
-        "type": "CallExpression",
-        "start": 794,
-        "end": 839,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 794,
-          "end": 813,
-          "object": {
-            "type": "Identifier",
-            "start": 794,
-            "end": 800,
-            "name": "assert",
-            "kind": "reference"
+            "start": 654,
+            "end": 669
           },
-          "property": {
-            "type": "Identifier",
-            "start": 801,
-            "end": 813,
-            "name": "compareArray",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "start": 654,
+          "end": 670
         },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 814,
-            "end": 822,
-            "name": "destView",
-            "kind": "reference"
-          },
-          {
-            "type": "Identifier",
-            "start": 824,
-            "end": 838,
-            "name": "expectContents",
-            "kind": "reference"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 842,
-      "end": 855,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 842,
-        "end": 854,
-        "left": {
-          "type": "MemberExpression",
-          "start": 842,
-          "end": 849,
-          "object": {
-            "type": "Identifier",
-            "start": 842,
-            "end": 846,
-            "name": "view",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Literal",
-            "start": 847,
-            "end": 848,
-            "value": 0,
-            "raw": "0"
-          },
-          "computed": true,
-          "optional": false
-        },
-        "right": {
-          "type": "Literal",
-          "start": 852,
-          "end": 854,
-          "value": 86,
-          "raw": "86"
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 856,
-      "end": 928,
-      "expression": {
-        "type": "CallExpression",
-        "start": 856,
-        "end": 927,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 856,
-          "end": 875,
-          "object": {
-            "type": "Identifier",
-            "start": 856,
-            "end": 862,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 863,
-            "end": 875,
-            "name": "compareArray",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 876,
-            "end": 884,
-            "name": "destView",
-            "kind": "reference"
-          },
-          {
-            "type": "Identifier",
-            "start": 886,
-            "end": 900,
-            "name": "expectContents",
-            "kind": "reference"
-          },
-          {
-            "type": "Literal",
-            "start": 902,
-            "end": 926,
-            "value": "after source overwrite",
-            "raw": "\"after source overwrite\""
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 929,
-      "end": 1022,
-      "expression": {
-        "type": "CallExpression",
-        "start": 929,
-        "end": 1021,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 929,
-          "end": 948,
-          "object": {
-            "type": "Identifier",
-            "start": 929,
-            "end": 935,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 936,
-            "end": 948,
-            "name": "compareArray",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "NewExpression",
-            "start": 949,
-            "end": 969,
-            "callee": {
-              "type": "Identifier",
-              "start": 953,
-              "end": 963,
-              "name": "Uint8Array",
-              "kind": "reference"
-            },
-            "arguments": [
-              {
-                "type": "Identifier",
-                "start": 964,
-                "end": 968,
-                "name": "dest",
-                "kind": "reference"
-              }
-            ]
-          },
-          {
-            "type": "Identifier",
-            "start": 971,
-            "end": 985,
-            "name": "expectContents",
-            "kind": "reference"
-          },
-          {
-            "type": "Literal",
-            "start": 987,
-            "end": 1020,
-            "value": "new view after source overwrite",
-            "raw": "\"new view after source overwrite\""
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "IfStatement",
-      "start": 1024,
-      "end": 1217,
-      "test": {
-        "type": "MemberExpression",
-        "start": 1028,
-        "end": 1041,
-        "object": {
-          "type": "Identifier",
-          "start": 1028,
-          "end": 1034,
-          "name": "source",
-          "kind": "reference"
-        },
-        "property": {
-          "type": "Identifier",
-          "start": 1035,
-          "end": 1041,
-          "name": "resize",
-          "kind": "name"
-        },
-        "computed": false,
-        "optional": false
+        "start": 626,
+        "end": 670
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 1043,
-        "end": 1217,
-        "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
           {
-            "type": "ExpressionStatement",
-            "start": 1047,
-            "end": 1064,
-            "expression": {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "dest",
+              "start": 676,
+              "end": 680
+            },
+            "init": {
               "type": "CallExpression",
-              "start": 1047,
-              "end": 1063,
               "callee": {
                 "type": "MemberExpression",
-                "start": 1047,
-                "end": 1060,
                 "object": {
                   "type": "Identifier",
-                  "start": 1047,
-                  "end": 1053,
                   "name": "source",
-                  "kind": "reference"
+                  "start": 683,
+                  "end": 689
                 },
                 "property": {
                   "type": "Identifier",
-                  "start": 1054,
-                  "end": 1060,
-                  "name": "resize",
-                  "kind": "name"
+                  "name": "sliceToImmutable",
+                  "start": 690,
+                  "end": 706
                 },
+                "optional": false,
                 "computed": false,
-                "optional": false
+                "start": 683,
+                "end": 706
               },
-              "arguments": [
-                {
-                  "type": "Literal",
-                  "start": 1061,
-                  "end": 1062,
-                  "value": 4,
-                  "raw": "4"
-                }
-              ],
-              "optional": false
-            }
-          },
-          {
-            "type": "ExpressionStatement",
-            "start": 1067,
-            "end": 1129,
-            "expression": {
-              "type": "CallExpression",
-              "start": 1067,
-              "end": 1128,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 1067,
-                "end": 1086,
-                "object": {
-                  "type": "Identifier",
-                  "start": 1067,
-                  "end": 1073,
-                  "name": "assert",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 1074,
-                  "end": 1086,
-                  "name": "compareArray",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
-              },
-              "arguments": [
-                {
-                  "type": "Identifier",
-                  "start": 1087,
-                  "end": 1095,
-                  "name": "destView",
-                  "kind": "reference"
-                },
-                {
-                  "type": "Identifier",
-                  "start": 1097,
-                  "end": 1111,
-                  "name": "expectContents",
-                  "kind": "reference"
-                },
-                {
-                  "type": "Literal",
-                  "start": 1113,
-                  "end": 1127,
-                  "value": "after resize",
-                  "raw": "\"after resize\""
-                }
-              ],
-              "optional": false
-            }
-          },
-          {
-            "type": "ExpressionStatement",
-            "start": 1132,
-            "end": 1215,
-            "expression": {
-              "type": "CallExpression",
-              "start": 1132,
-              "end": 1214,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 1132,
-                "end": 1151,
-                "object": {
-                  "type": "Identifier",
-                  "start": 1132,
-                  "end": 1138,
-                  "name": "assert",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 1139,
-                  "end": 1151,
-                  "name": "compareArray",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
-              },
-              "arguments": [
-                {
-                  "type": "NewExpression",
-                  "start": 1152,
-                  "end": 1172,
-                  "callee": {
-                    "type": "Identifier",
-                    "start": 1156,
-                    "end": 1166,
-                    "name": "Uint8Array",
-                    "kind": "reference"
-                  },
-                  "arguments": [
-                    {
-                      "type": "Identifier",
-                      "start": 1167,
-                      "end": 1171,
-                      "name": "dest",
-                      "kind": "reference"
-                    }
-                  ]
-                },
-                {
-                  "type": "Identifier",
-                  "start": 1174,
-                  "end": 1188,
-                  "name": "expectContents",
-                  "kind": "reference"
-                },
-                {
-                  "type": "Literal",
-                  "start": 1190,
-                  "end": 1213,
-                  "value": "new view after resize",
-                  "raw": "\"new view after resize\""
-                }
-              ],
-              "optional": false
-            }
-          }
-        ]
-      },
-      "alternate": null
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 1219,
-      "end": 1241,
-      "expression": {
-        "type": "CallExpression",
-        "start": 1219,
-        "end": 1240,
-        "callee": {
-          "type": "Identifier",
-          "start": 1219,
-          "end": 1232,
-          "name": "$DETACHBUFFER",
-          "kind": "reference"
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 1233,
-            "end": 1239,
-            "name": "source",
-            "kind": "reference"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 1242,
-      "end": 1304,
-      "expression": {
-        "type": "CallExpression",
-        "start": 1242,
-        "end": 1303,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 1242,
-          "end": 1261,
-          "object": {
-            "type": "Identifier",
-            "start": 1242,
-            "end": 1248,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 1249,
-            "end": 1261,
-            "name": "compareArray",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 1262,
-            "end": 1270,
-            "name": "destView",
-            "kind": "reference"
-          },
-          {
-            "type": "Identifier",
-            "start": 1272,
-            "end": 1286,
-            "name": "expectContents",
-            "kind": "reference"
-          },
-          {
-            "type": "Literal",
-            "start": 1288,
-            "end": 1302,
-            "value": "after detach",
-            "raw": "\"after detach\""
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 1305,
-      "end": 1388,
-      "expression": {
-        "type": "CallExpression",
-        "start": 1305,
-        "end": 1387,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 1305,
-          "end": 1324,
-          "object": {
-            "type": "Identifier",
-            "start": 1305,
-            "end": 1311,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 1312,
-            "end": 1324,
-            "name": "compareArray",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "NewExpression",
-            "start": 1325,
-            "end": 1345,
-            "callee": {
-              "type": "Identifier",
-              "start": 1329,
-              "end": 1339,
-              "name": "Uint8Array",
-              "kind": "reference"
+              "arguments": [],
+              "optional": false,
+              "start": 683,
+              "end": 708
             },
-            "arguments": [
-              {
-                "type": "Identifier",
-                "start": 1340,
-                "end": 1344,
-                "name": "dest",
-                "kind": "reference"
-              }
-            ]
-          },
-          {
-            "type": "Identifier",
-            "start": 1347,
-            "end": 1361,
-            "name": "expectContents",
-            "kind": "reference"
-          },
-          {
-            "type": "Literal",
-            "start": 1363,
-            "end": 1386,
-            "value": "new view after detach",
-            "raw": "\"new view after detach\""
+            "start": 676,
+            "end": 708
           }
         ],
-        "optional": false
+        "start": 672,
+        "end": 709
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 714,
+              "end": 728
+            },
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [
+                {
+                  "type": "Literal",
+                  "value": 1,
+                  "raw": "1",
+                  "start": 732,
+                  "end": 733
+                },
+                {
+                  "type": "Literal",
+                  "value": 2,
+                  "raw": "2",
+                  "start": 735,
+                  "end": 736
+                },
+                {
+                  "type": "Literal",
+                  "value": 3,
+                  "raw": "3",
+                  "start": 738,
+                  "end": 739
+                },
+                {
+                  "type": "Literal",
+                  "value": 4,
+                  "raw": "4",
+                  "start": 741,
+                  "end": 742
+                },
+                {
+                  "type": "Literal",
+                  "value": 5,
+                  "raw": "5",
+                  "start": 744,
+                  "end": 745
+                },
+                {
+                  "type": "Literal",
+                  "value": 6,
+                  "raw": "6",
+                  "start": 747,
+                  "end": 748
+                },
+                {
+                  "type": "Literal",
+                  "value": 7,
+                  "raw": "7",
+                  "start": 750,
+                  "end": 751
+                },
+                {
+                  "type": "Literal",
+                  "value": 8,
+                  "raw": "8",
+                  "start": 753,
+                  "end": 754
+                }
+              ],
+              "start": 731,
+              "end": 755
+            },
+            "start": 714,
+            "end": 755
+          }
+        ],
+        "start": 710,
+        "end": 756
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "destView",
+              "start": 761,
+              "end": 769
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Uint8Array",
+                "start": 776,
+                "end": 786
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "dest",
+                  "start": 787,
+                  "end": 791
+                }
+              ],
+              "start": 772,
+              "end": 792
+            },
+            "start": 761,
+            "end": 792
+          }
+        ],
+        "start": 757,
+        "end": 793
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 794,
+              "end": 800
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "compareArray",
+              "start": 801,
+              "end": 813
+            },
+            "optional": false,
+            "computed": false,
+            "start": 794,
+            "end": 813
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "destView",
+              "start": 814,
+              "end": 822
+            },
+            {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 824,
+              "end": 838
+            }
+          ],
+          "optional": false,
+          "start": 794,
+          "end": 839
+        },
+        "start": 794,
+        "end": 840
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "view",
+              "start": 842,
+              "end": 846
+            },
+            "property": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 847,
+              "end": 848
+            },
+            "optional": false,
+            "computed": true,
+            "start": 842,
+            "end": 849
+          },
+          "right": {
+            "type": "Literal",
+            "value": 86,
+            "raw": "86",
+            "start": 852,
+            "end": 854
+          },
+          "start": 842,
+          "end": 854
+        },
+        "start": 842,
+        "end": 855
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 856,
+              "end": 862
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "compareArray",
+              "start": 863,
+              "end": 875
+            },
+            "optional": false,
+            "computed": false,
+            "start": 856,
+            "end": 875
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "destView",
+              "start": 876,
+              "end": 884
+            },
+            {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 886,
+              "end": 900
+            },
+            {
+              "type": "Literal",
+              "value": "after source overwrite",
+              "raw": "\"after source overwrite\"",
+              "start": 902,
+              "end": 926
+            }
+          ],
+          "optional": false,
+          "start": 856,
+          "end": 927
+        },
+        "start": 856,
+        "end": 928
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 929,
+              "end": 935
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "compareArray",
+              "start": 936,
+              "end": 948
+            },
+            "optional": false,
+            "computed": false,
+            "start": 929,
+            "end": 948
+          },
+          "arguments": [
+            {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Uint8Array",
+                "start": 953,
+                "end": 963
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "dest",
+                  "start": 964,
+                  "end": 968
+                }
+              ],
+              "start": 949,
+              "end": 969
+            },
+            {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 971,
+              "end": 985
+            },
+            {
+              "type": "Literal",
+              "value": "new view after source overwrite",
+              "raw": "\"new view after source overwrite\"",
+              "start": 987,
+              "end": 1020
+            }
+          ],
+          "optional": false,
+          "start": 929,
+          "end": 1021
+        },
+        "start": 929,
+        "end": 1022
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "Identifier",
+            "name": "source",
+            "start": 1028,
+            "end": 1034
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "resize",
+            "start": 1035,
+            "end": 1041
+          },
+          "optional": false,
+          "computed": false,
+          "start": 1028,
+          "end": 1041
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "source",
+                    "start": 1047,
+                    "end": 1053
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "resize",
+                    "start": 1054,
+                    "end": 1060
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 1047,
+                  "end": 1060
+                },
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": 4,
+                    "raw": "4",
+                    "start": 1061,
+                    "end": 1062
+                  }
+                ],
+                "optional": false,
+                "start": 1047,
+                "end": 1063
+              },
+              "start": 1047,
+              "end": 1064
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "assert",
+                    "start": 1067,
+                    "end": 1073
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "compareArray",
+                    "start": 1074,
+                    "end": 1086
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 1067,
+                  "end": 1086
+                },
+                "arguments": [
+                  {
+                    "type": "Identifier",
+                    "name": "destView",
+                    "start": 1087,
+                    "end": 1095
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "expectContents",
+                    "start": 1097,
+                    "end": 1111
+                  },
+                  {
+                    "type": "Literal",
+                    "value": "after resize",
+                    "raw": "\"after resize\"",
+                    "start": 1113,
+                    "end": 1127
+                  }
+                ],
+                "optional": false,
+                "start": 1067,
+                "end": 1128
+              },
+              "start": 1067,
+              "end": 1129
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "assert",
+                    "start": 1132,
+                    "end": 1138
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "compareArray",
+                    "start": 1139,
+                    "end": 1151
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 1132,
+                  "end": 1151
+                },
+                "arguments": [
+                  {
+                    "type": "NewExpression",
+                    "callee": {
+                      "type": "Identifier",
+                      "name": "Uint8Array",
+                      "start": 1156,
+                      "end": 1166
+                    },
+                    "arguments": [
+                      {
+                        "type": "Identifier",
+                        "name": "dest",
+                        "start": 1167,
+                        "end": 1171
+                      }
+                    ],
+                    "start": 1152,
+                    "end": 1172
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "expectContents",
+                    "start": 1174,
+                    "end": 1188
+                  },
+                  {
+                    "type": "Literal",
+                    "value": "new view after resize",
+                    "raw": "\"new view after resize\"",
+                    "start": 1190,
+                    "end": 1213
+                  }
+                ],
+                "optional": false,
+                "start": 1132,
+                "end": 1214
+              },
+              "start": 1132,
+              "end": 1215
+            }
+          ],
+          "start": 1043,
+          "end": 1217
+        },
+        "alternate": null,
+        "start": 1024,
+        "end": 1217
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "$DETACHBUFFER",
+            "start": 1219,
+            "end": 1232
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "source",
+              "start": 1233,
+              "end": 1239
+            }
+          ],
+          "optional": false,
+          "start": 1219,
+          "end": 1240
+        },
+        "start": 1219,
+        "end": 1241
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 1242,
+              "end": 1248
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "compareArray",
+              "start": 1249,
+              "end": 1261
+            },
+            "optional": false,
+            "computed": false,
+            "start": 1242,
+            "end": 1261
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "destView",
+              "start": 1262,
+              "end": 1270
+            },
+            {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 1272,
+              "end": 1286
+            },
+            {
+              "type": "Literal",
+              "value": "after detach",
+              "raw": "\"after detach\"",
+              "start": 1288,
+              "end": 1302
+            }
+          ],
+          "optional": false,
+          "start": 1242,
+          "end": 1303
+        },
+        "start": 1242,
+        "end": 1304
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 1305,
+              "end": 1311
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "compareArray",
+              "start": 1312,
+              "end": 1324
+            },
+            "optional": false,
+            "computed": false,
+            "start": 1305,
+            "end": 1324
+          },
+          "arguments": [
+            {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Uint8Array",
+                "start": 1329,
+                "end": 1339
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "dest",
+                  "start": 1340,
+                  "end": 1344
+                }
+              ],
+              "start": 1325,
+              "end": 1345
+            },
+            {
+              "type": "Identifier",
+              "name": "expectContents",
+              "start": 1347,
+              "end": 1361
+            },
+            {
+              "type": "Literal",
+              "value": "new view after detach",
+              "raw": "\"new view after detach\"",
+              "start": 1363,
+              "end": 1386
+            }
+          ],
+          "optional": false,
+          "start": 1305,
+          "end": 1387
+        },
+        "start": 1305,
+        "end": 1388
       }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 1389
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2025 Richard Gibson. All rights reserved.",
+      "start": 0,
+      "end": 58
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 59,
+      "end": 129
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-arraybuffer.prototype.slicetoimmutable\ndescription: Unaffected by post-hoc manipulation of the source\ninfo: |\n  ArrayBuffer.prototype.sliceToImmutable ( start, end )\n  ...\n  15. Let newBuffer be ? AllocateImmutableArrayBuffer(%ArrayBuffer%, newLen, fromBuf, first, newLen).\n  16. Return newBuffer.\nfeatures: [immutable-arraybuffer]\nincludes: [compareArray.js, detachArrayBuffer.js]\n---",
+      "start": 131,
+      "end": 534
     }
-  ]
+  ],
+  "diagnostics": []
 }

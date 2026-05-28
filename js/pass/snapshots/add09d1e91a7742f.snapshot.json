@@ -1,242 +1,235 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 188,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 44,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 43,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "source",
+              "start": 4,
+              "end": 10
+            },
+            "init": {
+              "type": "Literal",
+              "value": "(?<fst>.)(?<snd>.)|(?<thd>x)",
+              "raw": "\"(?<fst>.)(?<snd>.)|(?<thd>x)\"",
+              "start": 13,
+              "end": 43
+            },
             "start": 4,
-            "end": 10,
-            "name": "source",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 13,
-            "end": 43,
-            "value": "(?<fst>.)(?<snd>.)|(?<thd>x)",
-            "raw": "\"(?<fst>.)(?<snd>.)|(?<thd>x)\""
+            "end": 43
           }
-        }
-      ]
-    },
-    {
-      "type": "ForOfStatement",
-      "start": 45,
-      "end": 115,
-      "left": {
-        "type": "VariableDeclaration",
-        "start": 50,
-        "end": 59,
-        "kind": "let",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 54,
-            "end": 59,
-            "id": {
-              "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 44
+      },
+      {
+        "type": "ForOfStatement",
+        "await": false,
+        "left": {
+          "type": "VariableDeclaration",
+          "kind": "let",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "flags",
+                "start": 54,
+                "end": 59
+              },
+              "init": null,
               "start": 54,
-              "end": 59,
-              "name": "flags",
-              "kind": "binding"
+              "end": 59
+            }
+          ],
+          "start": 50,
+          "end": 59
+        },
+        "right": {
+          "type": "ArrayExpression",
+          "elements": [
+            {
+              "type": "Literal",
+              "value": "",
+              "raw": "\"\"",
+              "start": 64,
+              "end": 66
             },
-            "init": null
-          }
-        ]
-      },
-      "right": {
-        "type": "ArrayExpression",
-        "start": 63,
-        "end": 72,
-        "elements": [
-          {
-            "type": "Literal",
-            "start": 64,
-            "end": 66,
-            "value": "",
-            "raw": "\"\""
-          },
-          {
-            "type": "Literal",
-            "start": 68,
-            "end": 71,
-            "value": "u",
-            "raw": "\"u\""
-          }
-        ]
-      },
-      "body": {
-        "type": "BlockStatement",
-        "start": 74,
-        "end": 115,
-        "body": [
-          {
-            "type": "VariableDeclaration",
-            "start": 78,
-            "end": 113,
-            "kind": "let",
-            "declarations": [
-              {
-                "type": "VariableDeclarator",
-                "start": 82,
-                "end": 112,
-                "id": {
-                  "type": "Identifier",
+            {
+              "type": "Literal",
+              "value": "u",
+              "raw": "\"u\"",
+              "start": 68,
+              "end": 71
+            }
+          ],
+          "start": 63,
+          "end": 72
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "let",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "re",
+                    "start": 82,
+                    "end": 84
+                  },
+                  "init": {
+                    "type": "NewExpression",
+                    "callee": {
+                      "type": "Identifier",
+                      "name": "RegExp",
+                      "start": 91,
+                      "end": 97
+                    },
+                    "arguments": [
+                      {
+                        "type": "Identifier",
+                        "name": "source",
+                        "start": 98,
+                        "end": 104
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "flags",
+                        "start": 106,
+                        "end": 111
+                      }
+                    ],
+                    "start": 87,
+                    "end": 112
+                  },
                   "start": 82,
-                  "end": 84,
-                  "name": "re",
-                  "kind": "binding"
-                },
-                "init": {
-                  "type": "NewExpression",
-                  "start": 87,
-                  "end": 112,
-                  "callee": {
-                    "type": "Identifier",
-                    "start": 91,
-                    "end": 97,
-                    "name": "RegExp",
-                    "kind": "reference"
-                  },
-                  "arguments": [
-                    {
-                      "type": "Identifier",
-                      "start": 98,
-                      "end": 104,
-                      "name": "source",
-                      "kind": "reference"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 106,
-                      "end": 111,
-                      "name": "flags",
-                      "kind": "reference"
-                    }
-                  ]
+                  "end": 112
                 }
-              }
-            ]
-          }
-        ]
+              ],
+              "start": 78,
+              "end": 113
+            }
+          ],
+          "start": 74,
+          "end": 115
+        },
+        "start": 45,
+        "end": 115
       },
-      "await": false
-    },
-    {
-      "type": "ForOfStatement",
-      "start": 116,
-      "end": 188,
-      "left": {
-        "type": "VariableDeclaration",
-        "start": 121,
-        "end": 130,
-        "kind": "let",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 125,
-            "end": 130,
-            "id": {
-              "type": "Identifier",
+      {
+        "type": "ForOfStatement",
+        "await": false,
+        "left": {
+          "type": "VariableDeclaration",
+          "kind": "let",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "flags",
+                "start": 125,
+                "end": 130
+              },
+              "init": null,
               "start": 125,
-              "end": 130,
-              "name": "flags",
-              "kind": "binding"
+              "end": 130
+            }
+          ],
+          "start": 121,
+          "end": 130
+        },
+        "right": {
+          "type": "ArrayExpression",
+          "elements": [
+            {
+              "type": "Literal",
+              "value": "g",
+              "raw": "\"g\"",
+              "start": 135,
+              "end": 138
             },
-            "init": null
-          }
-        ]
-      },
-      "right": {
-        "type": "ArrayExpression",
-        "start": 134,
-        "end": 145,
-        "elements": [
-          {
-            "type": "Literal",
-            "start": 135,
-            "end": 138,
-            "value": "g",
-            "raw": "\"g\""
-          },
-          {
-            "type": "Literal",
-            "start": 140,
-            "end": 144,
-            "value": "gu",
-            "raw": "\"gu\""
-          }
-        ]
-      },
-      "body": {
-        "type": "BlockStatement",
-        "start": 147,
-        "end": 188,
-        "body": [
-          {
-            "type": "VariableDeclaration",
-            "start": 151,
-            "end": 186,
-            "kind": "let",
-            "declarations": [
-              {
-                "type": "VariableDeclarator",
-                "start": 155,
-                "end": 185,
-                "id": {
-                  "type": "Identifier",
-                  "start": 155,
-                  "end": 157,
-                  "name": "re",
-                  "kind": "binding"
-                },
-                "init": {
-                  "type": "NewExpression",
-                  "start": 160,
-                  "end": 185,
-                  "callee": {
+            {
+              "type": "Literal",
+              "value": "gu",
+              "raw": "\"gu\"",
+              "start": 140,
+              "end": 144
+            }
+          ],
+          "start": 134,
+          "end": 145
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "kind": "let",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
                     "type": "Identifier",
-                    "start": 164,
-                    "end": 170,
-                    "name": "RegExp",
-                    "kind": "reference"
+                    "name": "re",
+                    "start": 155,
+                    "end": 157
                   },
-                  "arguments": [
-                    {
+                  "init": {
+                    "type": "NewExpression",
+                    "callee": {
                       "type": "Identifier",
-                      "start": 171,
-                      "end": 177,
-                      "name": "source",
-                      "kind": "reference"
+                      "name": "RegExp",
+                      "start": 164,
+                      "end": 170
                     },
-                    {
-                      "type": "Identifier",
-                      "start": 179,
-                      "end": 184,
-                      "name": "flags",
-                      "kind": "reference"
-                    }
-                  ]
+                    "arguments": [
+                      {
+                        "type": "Identifier",
+                        "name": "source",
+                        "start": 171,
+                        "end": 177
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "flags",
+                        "start": 179,
+                        "end": 184
+                      }
+                    ],
+                    "start": 160,
+                    "end": 185
+                  },
+                  "start": 155,
+                  "end": 185
                 }
-              }
-            ]
-          }
-        ]
-      },
-      "await": false
-    }
-  ]
+              ],
+              "start": 151,
+              "end": 186
+            }
+          ],
+          "start": 147,
+          "end": 188
+        },
+        "start": 116,
+        "end": 188
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 188
+  },
+  "comments": [],
+  "diagnostics": []
 }

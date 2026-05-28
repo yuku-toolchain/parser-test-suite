@@ -1,130 +1,132 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 199,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 9,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 8,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "init",
+              "start": 4,
+              "end": 8
+            },
+            "init": null,
             "start": 4,
-            "end": 8,
-            "name": "init",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 10,
-      "end": 199,
-      "expression": {
-        "type": "CallExpression",
-        "start": 10,
-        "end": 198,
-        "callee": {
-          "type": "ParenthesizedExpression",
-          "start": 10,
-          "end": 196,
-          "expression": {
-            "type": "FunctionExpression",
-            "start": 11,
-            "end": 195,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 23,
-              "end": 195,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 27,
-                  "end": 193,
-                  "expression": {
-                    "type": "CallExpression",
-                    "start": 27,
-                    "end": 192,
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 27,
-                      "end": 31,
-                      "name": "eval",
-                      "kind": "reference"
-                    },
-                    "arguments": [
-                      {
-                        "type": "BinaryExpression",
-                        "start": 32,
-                        "end": 191,
-                        "left": {
+            "end": 8
+          }
+        ],
+        "start": 0,
+        "end": 9
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "ParenthesizedExpression",
+            "expression": {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "eval",
+                        "start": 27,
+                        "end": 31
+                      },
+                      "arguments": [
+                        {
                           "type": "BinaryExpression",
-                          "start": 32,
-                          "end": 123,
                           "left": {
                             "type": "BinaryExpression",
-                            "start": 32,
-                            "end": 70,
                             "left": {
-                              "type": "Literal",
+                              "type": "BinaryExpression",
+                              "left": {
+                                "type": "Literal",
+                                "value": "init = f;switch (1) {",
+                                "raw": "'init = f;switch (1) {'",
+                                "start": 32,
+                                "end": 55
+                              },
+                              "operator": "+",
+                              "right": {
+                                "type": "Literal",
+                                "value": "  default:",
+                                "raw": "'  default:'",
+                                "start": 58,
+                                "end": 70
+                              },
                               "start": 32,
-                              "end": 55,
-                              "value": "init = f;switch (1) {",
-                              "raw": "'init = f;switch (1) {'"
+                              "end": 70
                             },
+                            "operator": "+",
                             "right": {
                               "type": "Literal",
-                              "start": 58,
-                              "end": 70,
-                              "value": "  default:",
-                              "raw": "'  default:'"
+                              "value": "    function f() { return \"inner declaration\"; }",
+                              "raw": "'    function f() { return \"inner declaration\"; }'",
+                              "start": 73,
+                              "end": 123
                             },
-                            "operator": "+"
+                            "start": 32,
+                            "end": 123
                           },
+                          "operator": "+",
                           "right": {
                             "type": "Literal",
-                            "start": 73,
-                            "end": 123,
-                            "value": "    function f() { return \"inner declaration\"; }",
-                            "raw": "'    function f() { return \"inner declaration\"; }'"
+                            "value": "}    function f() {      return \"outer declaration\";    }",
+                            "raw": "'}\\\n    function f() {\\\n      return \"outer declaration\";\\\n    }'",
+                            "start": 126,
+                            "end": 191
                           },
-                          "operator": "+"
-                        },
-                        "right": {
-                          "type": "Literal",
-                          "start": 126,
-                          "end": 191,
-                          "value": "}    function f() {      return \"outer declaration\";    }",
-                          "raw": "'}\\\n    function f() {\\\n      return \"outer declaration\";\\\n    }'"
-                        },
-                        "operator": "+"
-                      }
-                    ],
-                    "optional": false
+                          "start": 32,
+                          "end": 191
+                        }
+                      ],
+                      "optional": false,
+                      "start": 27,
+                      "end": 192
+                    },
+                    "start": 27,
+                    "end": 193
                   }
-                }
-              ]
+                ],
+                "start": 23,
+                "end": 195
+              },
+              "expression": false,
+              "start": 11,
+              "end": 195
             },
-            "expression": false
-          }
+            "start": 10,
+            "end": 196
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 10,
+          "end": 198
         },
-        "arguments": [],
-        "optional": false
+        "start": 10,
+        "end": 199
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 199
+  },
+  "comments": [],
+  "diagnostics": []
 }

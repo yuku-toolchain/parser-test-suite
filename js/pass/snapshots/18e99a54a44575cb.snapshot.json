@@ -1,112 +1,110 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 1905,
-  "sourceType": "module",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ImportDeclaration",
-      "start": 1801,
-      "end": 1876,
-      "specifiers": [
-        {
-          "type": "ImportSpecifier",
-          "start": 1810,
-          "end": 1813,
-          "imported": {
-            "type": "Identifier",
-            "start": 1810,
-            "end": 1813,
-            "name": "foo",
-            "kind": "name"
-          },
-          "local": {
-            "type": "Identifier",
-            "start": 1810,
-            "end": 1813,
-            "name": "foo",
-            "kind": "binding"
-          }
-        }
-      ],
-      "source": {
-        "type": "Literal",
-        "start": 1821,
-        "end": 1875,
-        "value": "./instn-star-iee-single-cycle-same-name-a_FIXTURE.js",
-        "raw": "'./instn-star-iee-single-cycle-same-name-a_FIXTURE.js'"
-      },
-      "attributes": [],
-      "phase": null,
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved."
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " This code is governed by the BSD license found in the LICENSE file."
-        },
-        {
-          "type": "Block",
-          "position": "before",
-          "sameLine": false,
-          "value": "---\ndescription: >\n    Star export resolution skips a single cyclic indirect named re-export\n    and resolves the binding from the remaining non-cyclic path.\nesid: sec-resolveexport\ninfo: |\n    ResolveExport ( exportName [ , resolveSet ] )\n\n    [...]\n    1. For each Record { [[Module]], [[ExportName]] } r of resolveSet, do\n      a. If module and r.[[Module]] are the same Module Record and exportName is r.[[ExportName]], then\n        i. Assert: This is a circular import request.\n        i. Return null.\n    1. Append the Record { [[Module]]: module, [[ExportName]]: exportName }\n       to resolveSet.\n    [...]\n    1. For each ExportEntry Record e of module.[[IndirectExportEntries]], do\n      a. If exportName is e.[[ExportName]], then\n        [...]\n        1. Return importedModule.ResolveExport(e.[[ImportName]],\n           resolveSet).\n    [...]\n    1. Let starResolution be null.\n    1. For each ExportEntry Record e of module.[[StarExportEntries]], do\n      a. Let importedModule be GetImportedModule(module,\n         e.[[ModuleRequest]]).\n      a. Let resolution be importedModule.ResolveExport(exportName,\n         resolveSet).\n      a. If resolution is AMBIGUOUS, return AMBIGUOUS.\n      a. If resolution is not null, then\n         i. If starResolution is null, let starResolution be resolution.\n         [...]\n    1. Return starResolution.\n\n    Module \"a\" has two star exports:\n    - One to \"b\", which has `export { foo } from \"a\"` (cycles back).\n    - One to \"c\", which has `export let foo = 42` (provides the binding).\n    The cyclic path returns null (cycle detection), the star loop skips it,\n    and the binding from \"c\" is used.\nflags: [module]\n---"
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 1878,
-      "end": 1904,
-      "expression": {
-        "type": "CallExpression",
-        "start": 1878,
-        "end": 1903,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 1878,
-          "end": 1894,
-          "object": {
-            "type": "Identifier",
-            "start": 1878,
-            "end": 1884,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 1885,
-            "end": 1894,
-            "name": "sameValue",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
           {
-            "type": "Identifier",
-            "start": 1895,
-            "end": 1898,
-            "name": "foo",
-            "kind": "reference"
-          },
-          {
-            "type": "Literal",
-            "start": 1900,
-            "end": 1902,
-            "value": 42,
-            "raw": "42"
+            "type": "ImportSpecifier",
+            "imported": {
+              "type": "Identifier",
+              "name": "foo",
+              "start": 1810,
+              "end": 1813
+            },
+            "local": {
+              "type": "Identifier",
+              "name": "foo",
+              "start": 1810,
+              "end": 1813
+            },
+            "start": 1810,
+            "end": 1813
           }
         ],
-        "optional": false
+        "source": {
+          "type": "Literal",
+          "value": "./instn-star-iee-single-cycle-same-name-a_FIXTURE.js",
+          "raw": "'./instn-star-iee-single-cycle-same-name-a_FIXTURE.js'",
+          "start": 1821,
+          "end": 1875
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 1801,
+        "end": 1876
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 1878,
+              "end": 1884
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "sameValue",
+              "start": 1885,
+              "end": 1894
+            },
+            "optional": false,
+            "computed": false,
+            "start": 1878,
+            "end": 1894
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "foo",
+              "start": 1895,
+              "end": 1898
+            },
+            {
+              "type": "Literal",
+              "value": 42,
+              "raw": "42",
+              "start": 1900,
+              "end": 1902
+            }
+          ],
+          "optional": false,
+          "start": 1878,
+          "end": 1903
+        },
+        "start": 1878,
+        "end": 1904
       }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 1905
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2026 Igalia, S.L. All rights reserved.",
+      "start": 0,
+      "end": 55
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 56,
+      "end": 126
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: >\n    Star export resolution skips a single cyclic indirect named re-export\n    and resolves the binding from the remaining non-cyclic path.\nesid: sec-resolveexport\ninfo: |\n    ResolveExport ( exportName [ , resolveSet ] )\n\n    [...]\n    1. For each Record { [[Module]], [[ExportName]] } r of resolveSet, do\n      a. If module and r.[[Module]] are the same Module Record and exportName is r.[[ExportName]], then\n        i. Assert: This is a circular import request.\n        i. Return null.\n    1. Append the Record { [[Module]]: module, [[ExportName]]: exportName }\n       to resolveSet.\n    [...]\n    1. For each ExportEntry Record e of module.[[IndirectExportEntries]], do\n      a. If exportName is e.[[ExportName]], then\n        [...]\n        1. Return importedModule.ResolveExport(e.[[ImportName]],\n           resolveSet).\n    [...]\n    1. Let starResolution be null.\n    1. For each ExportEntry Record e of module.[[StarExportEntries]], do\n      a. Let importedModule be GetImportedModule(module,\n         e.[[ModuleRequest]]).\n      a. Let resolution be importedModule.ResolveExport(exportName,\n         resolveSet).\n      a. If resolution is AMBIGUOUS, return AMBIGUOUS.\n      a. If resolution is not null, then\n         i. If starResolution is null, let starResolution be resolution.\n         [...]\n    1. Return starResolution.\n\n    Module \"a\" has two star exports:\n    - One to \"b\", which has `export { foo } from \"a\"` (cycles back).\n    - One to \"c\", which has `export let foo = 42` (provides the binding).\n    The cyclic path returns null (cycle detection), the star loop skips it,\n    and the binding from \"c\" is used.\nflags: [module]\n---",
+      "start": 127,
+      "end": 1799
     }
-  ]
+  ],
+  "diagnostics": []
 }

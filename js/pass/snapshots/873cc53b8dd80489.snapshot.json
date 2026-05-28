@@ -1,287 +1,277 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 279,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 50,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 49,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "MyFunction",
+              "start": 4,
+              "end": 14
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Function",
+                "start": 21,
+                "end": 29
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "this.THIS = this",
+                  "raw": "\"this.THIS = this\"",
+                  "start": 30,
+                  "end": 48
+                }
+              ],
+              "start": 17,
+              "end": 49
+            },
             "start": 4,
-            "end": 14,
-            "name": "MyFunction",
-            "kind": "binding"
+            "end": 49
+          }
+        ],
+        "start": 0,
+        "end": 50
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "MyObject",
+              "start": 55,
+              "end": 63
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "MyFunction",
+                "start": 70,
+                "end": 80
+              },
+              "arguments": [],
+              "start": 66,
+              "end": 82
+            },
+            "start": 55,
+            "end": 82
+          }
+        ],
+        "start": 51,
+        "end": 83
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "MyObject",
+                  "start": 88,
+                  "end": 96
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "THIS",
+                  "start": 97,
+                  "end": 101
+                },
+                "optional": false,
+                "computed": false,
+                "start": 88,
+                "end": 101
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "toString",
+                "start": 102,
+                "end": 110
+              },
+              "optional": false,
+              "computed": false,
+              "start": 88,
+              "end": 110
+            },
+            "arguments": [],
+            "optional": false,
+            "start": 88,
+            "end": 112
           },
-          "init": {
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "[object Object]",
+            "raw": "\"[object Object]\"",
+            "start": 117,
+            "end": 134
+          },
+          "start": 88,
+          "end": 134
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 136,
+          "end": 138
+        },
+        "alternate": null,
+        "start": 84,
+        "end": 138
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "MyFunction",
+            "start": 139,
+            "end": 149
+          },
+          "right": {
             "type": "NewExpression",
-            "start": 17,
-            "end": 49,
             "callee": {
               "type": "Identifier",
-              "start": 21,
-              "end": 29,
               "name": "Function",
-              "kind": "reference"
+              "start": 156,
+              "end": 164
             },
             "arguments": [
               {
                 "type": "Literal",
-                "start": 30,
-                "end": 48,
-                "value": "this.THIS = this",
-                "raw": "\"this.THIS = this\""
+                "value": "this.THIS = eval('this')",
+                "raw": "\"this.THIS = eval(\\'this\\')\"",
+                "start": 165,
+                "end": 193
               }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 51,
-      "end": 83,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 55,
-          "end": 82,
-          "id": {
-            "type": "Identifier",
-            "start": 55,
-            "end": 63,
-            "name": "MyObject",
-            "kind": "binding"
+            ],
+            "start": 152,
+            "end": 194
           },
-          "init": {
+          "start": 139,
+          "end": 194
+        },
+        "start": 139,
+        "end": 195
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "MyObject",
+            "start": 196,
+            "end": 204
+          },
+          "right": {
             "type": "NewExpression",
-            "start": 66,
-            "end": 82,
             "callee": {
               "type": "Identifier",
-              "start": 70,
-              "end": 80,
               "name": "MyFunction",
-              "kind": "reference"
+              "start": 211,
+              "end": 221
             },
-            "arguments": []
-          }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 84,
-      "end": 138,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 88,
-        "end": 134,
-        "left": {
-          "type": "CallExpression",
-          "start": 88,
-          "end": 112,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 88,
-            "end": 110,
-            "object": {
-              "type": "MemberExpression",
-              "start": 88,
-              "end": 101,
-              "object": {
-                "type": "Identifier",
-                "start": 88,
-                "end": 96,
-                "name": "MyObject",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 97,
-                "end": 101,
-                "name": "THIS",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 102,
-              "end": 110,
-              "name": "toString",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
+            "arguments": [],
+            "start": 207,
+            "end": 223
           },
-          "arguments": [],
-          "optional": false
-        },
-        "right": {
-          "type": "Literal",
-          "start": 117,
-          "end": 134,
-          "value": "[object Object]",
-          "raw": "\"[object Object]\""
-        },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 136,
-        "end": 138,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 139,
-      "end": 195,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 139,
-        "end": 194,
-        "left": {
-          "type": "Identifier",
-          "start": 139,
-          "end": 149,
-          "name": "MyFunction",
-          "kind": "reference"
-        },
-        "right": {
-          "type": "NewExpression",
-          "start": 152,
-          "end": 194,
-          "callee": {
-            "type": "Identifier",
-            "start": 156,
-            "end": 164,
-            "name": "Function",
-            "kind": "reference"
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 165,
-              "end": 193,
-              "value": "this.THIS = eval('this')",
-              "raw": "\"this.THIS = eval(\\'this\\')\""
-            }
-          ]
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 196,
-      "end": 224,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 196,
-        "end": 223,
-        "left": {
-          "type": "Identifier",
           "start": 196,
-          "end": 204,
-          "name": "MyObject",
-          "kind": "reference"
+          "end": 223
         },
-        "right": {
-          "type": "NewExpression",
-          "start": 207,
-          "end": 223,
-          "callee": {
-            "type": "Identifier",
-            "start": 211,
-            "end": 221,
-            "name": "MyFunction",
-            "kind": "reference"
-          },
-          "arguments": []
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "IfStatement",
-      "start": 225,
-      "end": 279,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 229,
-        "end": 275,
-        "left": {
-          "type": "CallExpression",
-          "start": 229,
-          "end": 253,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 229,
-            "end": 251,
-            "object": {
+        "start": 196,
+        "end": 224
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
               "type": "MemberExpression",
-              "start": 229,
-              "end": 242,
               "object": {
-                "type": "Identifier",
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "MyObject",
+                  "start": 229,
+                  "end": 237
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "THIS",
+                  "start": 238,
+                  "end": 242
+                },
+                "optional": false,
+                "computed": false,
                 "start": 229,
-                "end": 237,
-                "name": "MyObject",
-                "kind": "reference"
+                "end": 242
               },
               "property": {
                 "type": "Identifier",
-                "start": 238,
-                "end": 242,
-                "name": "THIS",
-                "kind": "name"
+                "name": "toString",
+                "start": 243,
+                "end": 251
               },
+              "optional": false,
               "computed": false,
-              "optional": false
+              "start": 229,
+              "end": 251
             },
-            "property": {
-              "type": "Identifier",
-              "start": 243,
-              "end": 251,
-              "name": "toString",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
+            "arguments": [],
+            "optional": false,
+            "start": 229,
+            "end": 253
           },
-          "arguments": [],
-          "optional": false
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "[object Object]",
+            "raw": "\"[object Object]\"",
+            "start": 258,
+            "end": 275
+          },
+          "start": 229,
+          "end": 275
         },
-        "right": {
-          "type": "Literal",
-          "start": 258,
-          "end": 275,
-          "value": "[object Object]",
-          "raw": "\"[object Object]\""
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 277,
+          "end": 279
         },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 277,
-        "end": 279,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+        "alternate": null,
+        "start": 225,
+        "end": 279
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 279
+  },
+  "comments": [],
+  "diagnostics": []
 }

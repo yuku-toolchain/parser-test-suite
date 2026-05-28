@@ -1,211 +1,206 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 186,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 26,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 25,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 9,
-            "name": "__str",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 12,
-            "end": 25,
-            "value": "abc12 def34",
-            "raw": "\"abc12 def34\""
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 27,
-      "end": 63,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 31,
-          "end": 62,
-          "id": {
-            "type": "Identifier",
-            "start": 31,
-            "end": 40,
-            "name": "__pattern",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 43,
-            "end": 62,
-            "value": "(RegExp) /([a-z]+)([0-9]+)/g",
-            "raw": "/([a-z]+)([0-9]+)/g",
-            "regex": {
-              "pattern": "([a-z]+)([0-9]+)",
-              "flags": "g"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 64,
-      "end": 124,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 68,
-        "end": 120,
-        "left": {
-          "type": "CallExpression",
-          "start": 68,
-          "end": 102,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 68,
-            "end": 81,
-            "object": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 68,
-              "end": 73,
               "name": "__str",
-              "kind": "reference"
+              "start": 4,
+              "end": 9
             },
-            "property": {
-              "type": "Identifier",
-              "start": 74,
-              "end": 81,
-              "name": "replace",
-              "kind": "name"
+            "init": {
+              "type": "Literal",
+              "value": "abc12 def34",
+              "raw": "\"abc12 def34\"",
+              "start": 12,
+              "end": 25
             },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
+            "start": 4,
+            "end": 25
+          }
+        ],
+        "start": 0,
+        "end": 26
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 82,
-              "end": 91,
               "name": "__pattern",
-              "kind": "reference"
+              "start": 31,
+              "end": 40
             },
+            "init": {
+              "type": "Literal",
+              "value": "(RegExp) /([a-z]+)([0-9]+)/g",
+              "raw": "/([a-z]+)([0-9]+)/g",
+              "regex": {
+                "pattern": "([a-z]+)([0-9]+)",
+                "flags": "g"
+              },
+              "start": 43,
+              "end": 62
+            },
+            "start": 31,
+            "end": 62
+          }
+        ],
+        "start": 27,
+        "end": 63
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "__str",
+                "start": 68,
+                "end": 73
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "replace",
+                "start": 74,
+                "end": 81
+              },
+              "optional": false,
+              "computed": false,
+              "start": 68,
+              "end": 81
+            },
+            "arguments": [
+              {
+                "type": "Identifier",
+                "name": "__pattern",
+                "start": 82,
+                "end": 91
+              },
+              {
+                "type": "Identifier",
+                "name": "__replFN",
+                "start": 93,
+                "end": 101
+              }
+            ],
+            "optional": false,
+            "start": 68,
+            "end": 102
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "12abc 34def",
+            "raw": "'12abc 34def'",
+            "start": 107,
+            "end": 120
+          },
+          "start": 68,
+          "end": 120
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 122,
+          "end": 124
+        },
+        "alternate": null,
+        "start": 64,
+        "end": 124
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "__replFN",
+          "start": 134,
+          "end": 142
+        },
+        "generator": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
             {
-              "type": "Identifier",
-              "start": 93,
-              "end": 101,
-              "name": "__replFN",
-              "kind": "reference"
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "arguments",
+                    "start": 156,
+                    "end": 165
+                  },
+                  "property": {
+                    "type": "Literal",
+                    "value": 2,
+                    "raw": "2",
+                    "start": 166,
+                    "end": 167
+                  },
+                  "optional": false,
+                  "computed": true,
+                  "start": 156,
+                  "end": 168
+                },
+                "operator": "+",
+                "right": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "arguments",
+                    "start": 171,
+                    "end": 180
+                  },
+                  "property": {
+                    "type": "Literal",
+                    "value": 1,
+                    "raw": "1",
+                    "start": 181,
+                    "end": 182
+                  },
+                  "optional": false,
+                  "computed": true,
+                  "start": 171,
+                  "end": 183
+                },
+                "start": 156,
+                "end": 183
+              },
+              "start": 149,
+              "end": 184
             }
           ],
-          "optional": false
+          "start": 145,
+          "end": 186
         },
-        "right": {
-          "type": "Literal",
-          "start": 107,
-          "end": 120,
-          "value": "12abc 34def",
-          "raw": "'12abc 34def'"
-        },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 122,
-        "end": 124,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 125,
-      "end": 186,
-      "id": {
-        "type": "Identifier",
-        "start": 134,
-        "end": 142,
-        "name": "__replFN",
-        "kind": "binding"
-      },
-      "generator": false,
-      "async": false,
-      "params": [],
-      "body": {
-        "type": "BlockStatement",
-        "start": 145,
-        "end": 186,
-        "body": [
-          {
-            "type": "ReturnStatement",
-            "start": 149,
-            "end": 184,
-            "argument": {
-              "type": "BinaryExpression",
-              "start": 156,
-              "end": 183,
-              "left": {
-                "type": "MemberExpression",
-                "start": 156,
-                "end": 168,
-                "object": {
-                  "type": "Identifier",
-                  "start": 156,
-                  "end": 165,
-                  "name": "arguments",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Literal",
-                  "start": 166,
-                  "end": 167,
-                  "value": 2,
-                  "raw": "2"
-                },
-                "computed": true,
-                "optional": false
-              },
-              "right": {
-                "type": "MemberExpression",
-                "start": 171,
-                "end": 183,
-                "object": {
-                  "type": "Identifier",
-                  "start": 171,
-                  "end": 180,
-                  "name": "arguments",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Literal",
-                  "start": 181,
-                  "end": 182,
-                  "value": 1,
-                  "raw": "1"
-                },
-                "computed": true,
-                "optional": false
-              },
-              "operator": "+"
-            }
-          }
-        ]
-      },
-      "expression": false
-    }
-  ]
+        "expression": false,
+        "start": 125,
+        "end": 186
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 186
+  },
+  "comments": [],
+  "diagnostics": []
 }

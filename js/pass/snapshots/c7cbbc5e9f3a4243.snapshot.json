@@ -1,56 +1,58 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 31,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "IfStatement",
-      "start": 0,
-      "end": 31,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 4,
-        "end": 27,
-        "left": {
-          "type": "CallExpression",
-          "start": 4,
-          "end": 13,
-          "callee": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "eval",
+              "start": 4,
+              "end": 8
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": ";",
+                "raw": "\";\"",
+                "start": 9,
+                "end": 12
+              }
+            ],
+            "optional": false,
             "start": 4,
-            "end": 8,
-            "name": "eval",
-            "kind": "reference"
+            "end": 13
           },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 9,
-              "end": 12,
-              "value": ";",
-              "raw": "\";\""
-            }
-          ],
-          "optional": false
+          "operator": "!==",
+          "right": {
+            "type": "Identifier",
+            "name": "undefined",
+            "start": 18,
+            "end": 27
+          },
+          "start": 4,
+          "end": 27
         },
-        "right": {
-          "type": "Identifier",
-          "start": 18,
-          "end": 27,
-          "name": "undefined",
-          "kind": "reference"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 29,
+          "end": 31
         },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 29,
-        "end": 31,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+        "alternate": null,
+        "start": 0,
+        "end": 31
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 31
+  },
+  "comments": [],
+  "diagnostics": []
 }

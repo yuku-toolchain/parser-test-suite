@@ -1,156 +1,153 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 100,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 14,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 13,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 9,
-            "name": "count",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 12,
-            "end": 13,
-            "value": 0,
-            "raw": "0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "ForInStatement",
-      "start": 15,
-      "end": 100,
-      "left": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
         "type": "VariableDeclaration",
-        "start": 20,
-        "end": 25,
         "kind": "var",
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 24,
-            "end": 25,
             "id": {
               "type": "Identifier",
-              "start": 24,
-              "end": 25,
-              "name": "p",
-              "kind": "binding"
+              "name": "count",
+              "start": 4,
+              "end": 9
             },
-            "init": null
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 12,
+              "end": 13
+            },
+            "start": 4,
+            "end": 13
           }
-        ]
+        ],
+        "start": 0,
+        "end": 14
       },
-      "right": {
-        "type": "MemberExpression",
-        "start": 29,
-        "end": 54,
-        "object": {
+      {
+        "type": "ForInStatement",
+        "left": {
+          "type": "VariableDeclaration",
+          "kind": "var",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "p",
+                "start": 24,
+                "end": 25
+              },
+              "init": null,
+              "start": 24,
+              "end": 25
+            }
+          ],
+          "start": 20,
+          "end": 25
+        },
+        "right": {
           "type": "MemberExpression",
-          "start": 29,
-          "end": 45,
           "object": {
-            "type": "Identifier",
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "RegExp",
+              "start": 29,
+              "end": 35
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "prototype",
+              "start": 36,
+              "end": 45
+            },
+            "optional": false,
+            "computed": false,
             "start": 29,
-            "end": 35,
-            "name": "RegExp",
-            "kind": "reference"
+            "end": 45
           },
           "property": {
             "type": "Identifier",
-            "start": 36,
-            "end": 45,
-            "name": "prototype",
-            "kind": "name"
+            "name": "toString",
+            "start": 46,
+            "end": 54
           },
+          "optional": false,
           "computed": false,
-          "optional": false
+          "start": 29,
+          "end": 54
         },
-        "property": {
-          "type": "Identifier",
-          "start": 46,
-          "end": 54,
-          "name": "toString",
-          "kind": "name"
-        },
-        "computed": false,
-        "optional": false
-      },
-      "body": {
-        "type": "BlockStatement",
-        "start": 56,
-        "end": 100,
-        "body": [
-          {
-            "type": "IfStatement",
-            "start": 60,
-            "end": 98,
-            "test": {
-              "type": "BinaryExpression",
-              "start": 64,
-              "end": 78,
-              "left": {
-                "type": "Identifier",
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "p",
+                  "start": 64,
+                  "end": 65
+                },
+                "operator": "===",
+                "right": {
+                  "type": "Literal",
+                  "value": "length",
+                  "raw": "\"length\"",
+                  "start": 70,
+                  "end": 78
+                },
                 "start": 64,
-                "end": 65,
-                "name": "p",
-                "kind": "reference"
+                "end": 78
               },
-              "right": {
-                "type": "Literal",
-                "start": 70,
-                "end": 78,
-                "value": "length",
-                "raw": "\"length\""
-              },
-              "operator": "==="
-            },
-            "consequent": {
-              "type": "BlockStatement",
-              "start": 80,
-              "end": 98,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 86,
-                  "end": 94,
-                  "expression": {
-                    "type": "UpdateExpression",
-                    "start": 86,
-                    "end": 93,
-                    "argument": {
-                      "type": "Identifier",
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "UpdateExpression",
+                      "operator": "++",
+                      "prefix": false,
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "count",
+                        "start": 86,
+                        "end": 91
+                      },
                       "start": 86,
-                      "end": 91,
-                      "name": "count",
-                      "kind": "reference"
+                      "end": 93
                     },
-                    "operator": "++",
-                    "prefix": false
+                    "start": 86,
+                    "end": 94
                   }
-                }
-              ]
-            },
-            "alternate": null
-          }
-        ]
+                ],
+                "start": 80,
+                "end": 98
+              },
+              "alternate": null,
+              "start": 60,
+              "end": 98
+            }
+          ],
+          "start": 56,
+          "end": 100
+        },
+        "start": 15,
+        "end": 100
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 100
+  },
+  "comments": [],
+  "diagnostics": []
 }

@@ -1,0 +1,181 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "imported": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 1718,
+              "end": 1719
+            },
+            "local": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 1718,
+              "end": 1719
+            },
+            "start": 1718,
+            "end": 1719
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./reexport-source-binding_FIXTURE.js",
+          "raw": "'./reexport-source-binding_FIXTURE.js'",
+          "start": 1727,
+          "end": 1765
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 1709,
+        "end": 1766
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 1768,
+              "end": 1774
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "sameValue",
+              "start": 1775,
+              "end": 1784
+            },
+            "optional": false,
+            "computed": false,
+            "start": 1768,
+            "end": 1784
+          },
+          "arguments": [
+            {
+              "type": "UnaryExpression",
+              "operator": "typeof",
+              "argument": {
+                "type": "Identifier",
+                "name": "x",
+                "start": 1792,
+                "end": 1793
+              },
+              "prefix": true,
+              "start": 1785,
+              "end": 1793
+            },
+            {
+              "type": "Literal",
+              "value": "object",
+              "raw": "'object'",
+              "start": 1795,
+              "end": 1803
+            },
+            {
+              "type": "Literal",
+              "value": "Named import of a re-exported source binding should be bound to an object",
+              "raw": "'Named import of a re-exported source binding should be bound to an object'",
+              "start": 1807,
+              "end": 1882
+            }
+          ],
+          "optional": false,
+          "start": 1768,
+          "end": 1883
+        },
+        "start": 1768,
+        "end": 1884
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "assert",
+            "start": 1885,
+            "end": 1891
+          },
+          "arguments": [
+            {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x",
+                "start": 1892,
+                "end": 1893
+              },
+              "operator": "instanceof",
+              "right": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "$262",
+                  "start": 1905,
+                  "end": 1909
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "AbstractModuleSource",
+                  "start": 1910,
+                  "end": 1930
+                },
+                "optional": false,
+                "computed": false,
+                "start": 1905,
+                "end": 1930
+              },
+              "start": 1892,
+              "end": 1930
+            },
+            {
+              "type": "Literal",
+              "value": "x should be a %AbstractModuleSource% instance (the underlying ModuleSource)",
+              "raw": "'x should be a %AbstractModuleSource% instance (the underlying ModuleSource)'",
+              "start": 1934,
+              "end": 2011
+            }
+          ],
+          "optional": false,
+          "start": 1885,
+          "end": 2012
+        },
+        "start": 1885,
+        "end": 2013
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 2014
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2026 Guy Bedford. All rights reserved.",
+      "start": 0,
+      "end": 55
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 56,
+      "end": 126
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: >\n  A named import of a re-exported source-phase binding is initialized to the\n  imported module's ModuleSource object.\nesid: sec-source-text-module-record-initialize-environment\ninfo: |\n  When a module does `import source x from \"...\"; export { x };`, ParseModule\n  reclassifies the local re-export to an indirect ExportEntry whose\n  [[ImportName]] is ~source~. ResolveExport on the re-exporting module returns\n  a ResolvedBinding Record with [[BindingName]] ~source~ and [[Module]] set to\n  the source-phase target module.\n\n  InitializeEnvironment ( )\n\n    7. For each ImportEntry Record in of module.[[ImportEntries]], do\n       [...]\n       d. Else,\n          i. Assert: in.[[ImportName]] is a String.\n          ii. Let resolution be importedModule.ResolveExport(in.[[ImportName]]).\n          iii. If resolution is either null or ambiguous, throw a SyntaxError.\n          iv. If resolution.[[BindingName]] is namespace, then [...]\n          v. Else if resolution.[[BindingName]] is source, then\n             1. Let moduleSourceObject be resolution.[[Module]].[[ModuleSource]].\n             2. If moduleSourceObject is empty, throw a SyntaxError exception.\n             3. Perform ! env.CreateImmutableBinding(in.[[LocalName]], true).\n             4. Perform ! env.InitializeBinding(in.[[LocalName]], moduleSourceObject).\n\n  The named import `x` is therefore bound directly to the ModuleSource object\n  of the underlying module, an instance of %AbstractModuleSource%.\nfeatures: [source-phase-imports, source-phase-imports-module-source]\nflags: [module]\n---",
+      "start": 127,
+      "end": 1707
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,130 +1,132 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 213,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 10,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 9,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "after",
+              "start": 4,
+              "end": 9
+            },
+            "init": null,
             "start": 4,
-            "end": 9,
-            "name": "after",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 11,
-      "end": 213,
-      "expression": {
-        "type": "CallExpression",
-        "start": 11,
-        "end": 212,
-        "callee": {
-          "type": "ParenthesizedExpression",
-          "start": 11,
-          "end": 210,
-          "expression": {
-            "type": "FunctionExpression",
-            "start": 12,
-            "end": 209,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 24,
-              "end": 209,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 28,
-                  "end": 207,
-                  "expression": {
-                    "type": "CallExpression",
-                    "start": 28,
-                    "end": 206,
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 28,
-                      "end": 32,
-                      "name": "eval",
-                      "kind": "reference"
-                    },
-                    "arguments": [
-                      {
-                        "type": "BinaryExpression",
-                        "start": 33,
-                        "end": 205,
-                        "left": {
+            "end": 9
+          }
+        ],
+        "start": 0,
+        "end": 10
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "ParenthesizedExpression",
+            "expression": {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "eval",
+                        "start": 28,
+                        "end": 32
+                      },
+                      "arguments": [
+                        {
                           "type": "BinaryExpression",
-                          "start": 33,
-                          "end": 115,
                           "left": {
                             "type": "BinaryExpression",
-                            "start": 33,
-                            "end": 62,
                             "left": {
-                              "type": "Literal",
+                              "type": "BinaryExpression",
+                              "left": {
+                                "type": "Literal",
+                                "value": "switch (1) {",
+                                "raw": "'switch (1) {'",
+                                "start": 33,
+                                "end": 47
+                              },
+                              "operator": "+",
+                              "right": {
+                                "type": "Literal",
+                                "value": "  default:",
+                                "raw": "'  default:'",
+                                "start": 50,
+                                "end": 62
+                              },
                               "start": 33,
-                              "end": 47,
-                              "value": "switch (1) {",
-                              "raw": "'switch (1) {'"
+                              "end": 62
                             },
+                            "operator": "+",
                             "right": {
                               "type": "Literal",
-                              "start": 50,
-                              "end": 62,
-                              "value": "  default:",
-                              "raw": "'  default:'"
+                              "value": "    function f() { return \"inner declaration\"; }",
+                              "raw": "'    function f() { return \"inner declaration\"; }'",
+                              "start": 65,
+                              "end": 115
                             },
-                            "operator": "+"
+                            "start": 33,
+                            "end": 115
                           },
+                          "operator": "+",
                           "right": {
                             "type": "Literal",
-                            "start": 65,
-                            "end": 115,
-                            "value": "    function f() { return \"inner declaration\"; }",
-                            "raw": "'    function f() { return \"inner declaration\"; }'"
+                            "value": "}    after = f;        function f() {      return \"outer declaration\";    }",
+                            "raw": "'}\\\n    after = f;\\\n    \\\n    function f() {\\\n      return \"outer declaration\";\\\n    }'",
+                            "start": 118,
+                            "end": 205
                           },
-                          "operator": "+"
-                        },
-                        "right": {
-                          "type": "Literal",
-                          "start": 118,
-                          "end": 205,
-                          "value": "}    after = f;        function f() {      return \"outer declaration\";    }",
-                          "raw": "'}\\\n    after = f;\\\n    \\\n    function f() {\\\n      return \"outer declaration\";\\\n    }'"
-                        },
-                        "operator": "+"
-                      }
-                    ],
-                    "optional": false
+                          "start": 33,
+                          "end": 205
+                        }
+                      ],
+                      "optional": false,
+                      "start": 28,
+                      "end": 206
+                    },
+                    "start": 28,
+                    "end": 207
                   }
-                }
-              ]
+                ],
+                "start": 24,
+                "end": 209
+              },
+              "expression": false,
+              "start": 12,
+              "end": 209
             },
-            "expression": false
-          }
+            "start": 11,
+            "end": 210
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 11,
+          "end": 212
         },
-        "arguments": [],
-        "optional": false
+        "start": 11,
+        "end": 213
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 213
+  },
+  "comments": [],
+  "diagnostics": []
 }

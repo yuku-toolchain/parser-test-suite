@@ -1,149 +1,145 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 90,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 21,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 20,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "newTarget",
+              "start": 4,
+              "end": 13
+            },
+            "init": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 16,
+              "end": 20
+            },
             "start": 4,
-            "end": 13,
-            "name": "newTarget",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 16,
-            "end": 20,
-            "value": null,
-            "raw": "null"
-          }
-        }
-      ]
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 22,
-      "end": 64,
-      "id": {
-        "type": "Identifier",
-        "start": 31,
-        "end": 32,
-        "name": "f",
-        "kind": "binding"
-      },
-      "generator": false,
-      "async": false,
-      "params": [],
-      "body": {
-        "type": "BlockStatement",
-        "start": 35,
-        "end": 64,
-        "body": [
-          {
-            "type": "ExpressionStatement",
-            "start": 39,
-            "end": 62,
-            "expression": {
-              "type": "AssignmentExpression",
-              "start": 39,
-              "end": 61,
-              "left": {
-                "type": "Identifier",
-                "start": 39,
-                "end": 48,
-                "name": "newTarget",
-                "kind": "reference"
-              },
-              "right": {
-                "type": "MetaProperty",
-                "start": 51,
-                "end": 61,
-                "meta": {
-                  "type": "Identifier",
-                  "start": 51,
-                  "end": 54,
-                  "name": "new",
-                  "kind": "name"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 55,
-                  "end": 61,
-                  "name": "target",
-                  "kind": "name"
-                }
-              },
-              "operator": "="
-            }
-          }
-        ]
-      },
-      "expression": false
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 65,
-      "end": 90,
-      "expression": {
-        "type": "CallExpression",
-        "start": 65,
-        "end": 89,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 65,
-          "end": 78,
-          "object": {
-            "type": "Identifier",
-            "start": 65,
-            "end": 72,
-            "name": "Reflect",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 73,
-            "end": 78,
-            "name": "apply",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 79,
-            "end": 80,
-            "name": "f",
-            "kind": "reference"
-          },
-          {
-            "type": "ObjectExpression",
-            "start": 82,
-            "end": 84,
-            "properties": []
-          },
-          {
-            "type": "ArrayExpression",
-            "start": 86,
-            "end": 88,
-            "elements": []
+            "end": 20
           }
         ],
-        "optional": false
+        "start": 0,
+        "end": 21
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "f",
+          "start": 31,
+          "end": 32
+        },
+        "generator": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                  "type": "Identifier",
+                  "name": "newTarget",
+                  "start": 39,
+                  "end": 48
+                },
+                "right": {
+                  "type": "MetaProperty",
+                  "meta": {
+                    "type": "Identifier",
+                    "name": "new",
+                    "start": 51,
+                    "end": 54
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "target",
+                    "start": 55,
+                    "end": 61
+                  },
+                  "start": 51,
+                  "end": 61
+                },
+                "start": 39,
+                "end": 61
+              },
+              "start": 39,
+              "end": 62
+            }
+          ],
+          "start": 35,
+          "end": 64
+        },
+        "expression": false,
+        "start": 22,
+        "end": 64
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "Reflect",
+              "start": 65,
+              "end": 72
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "apply",
+              "start": 73,
+              "end": 78
+            },
+            "optional": false,
+            "computed": false,
+            "start": 65,
+            "end": 78
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "f",
+              "start": 79,
+              "end": 80
+            },
+            {
+              "type": "ObjectExpression",
+              "properties": [],
+              "start": 82,
+              "end": 84
+            },
+            {
+              "type": "ArrayExpression",
+              "elements": [],
+              "start": 86,
+              "end": 88
+            }
+          ],
+          "optional": false,
+          "start": 65,
+          "end": 89
+        },
+        "start": 65,
+        "end": 90
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 90
+  },
+  "comments": [],
+  "diagnostics": []
 }

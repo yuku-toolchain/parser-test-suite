@@ -1,182 +1,177 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 148,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 28,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 27,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "r",
+              "start": 6,
+              "end": 7
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 14,
+                "end": 25
+              },
+              "arguments": [],
+              "start": 10,
+              "end": 27
+            },
             "start": 6,
-            "end": 7,
-            "name": "r",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 10,
-            "end": 27,
-            "callee": {
-              "type": "Identifier",
-              "start": 14,
-              "end": 25,
-              "name": "ShadowRealm",
-              "kind": "reference"
-            },
-            "arguments": []
+            "end": 27
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 29,
-      "end": 75,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 35,
-          "end": 74,
-          "id": {
-            "type": "Identifier",
-            "start": 35,
-            "end": 42,
-            "name": "wrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 45,
-            "end": 74,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 45,
-              "end": 55,
-              "object": {
-                "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 28
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "wrapped",
+              "start": 35,
+              "end": 42
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "r",
+                  "start": 45,
+                  "end": 46
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 47,
+                  "end": 55
+                },
+                "optional": false,
+                "computed": false,
                 "start": 45,
-                "end": 46,
-                "name": "r",
-                "kind": "reference"
+                "end": 55
               },
-              "property": {
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "x => y => x * y",
+                  "raw": "'x => y => x * y'",
+                  "start": 56,
+                  "end": 73
+                }
+              ],
+              "optional": false,
+              "start": 45,
+              "end": 74
+            },
+            "start": 35,
+            "end": 74
+          }
+        ],
+        "start": 29,
+        "end": 75
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "nestedWrapped",
+              "start": 82,
+              "end": 95
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
                 "type": "Identifier",
-                "start": 47,
-                "end": 55,
-                "name": "evaluate",
-                "kind": "name"
+                "name": "wrapped",
+                "start": 98,
+                "end": 105
               },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 56,
-                "end": 73,
-                "value": "x => y => x * y",
-                "raw": "'x => y => x * y'"
-              }
-            ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 76,
-      "end": 109,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 82,
-          "end": 108,
-          "id": {
-            "type": "Identifier",
-            "start": 82,
-            "end": 95,
-            "name": "nestedWrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 98,
-            "end": 108,
-            "callee": {
-              "type": "Identifier",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": 2,
+                  "raw": "2",
+                  "start": 106,
+                  "end": 107
+                }
+              ],
+              "optional": false,
               "start": 98,
-              "end": 105,
-              "name": "wrapped",
-              "kind": "reference"
+              "end": 108
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 106,
-                "end": 107,
-                "value": 2,
-                "raw": "2"
-              }
-            ],
-            "optional": false
+            "start": 82,
+            "end": 108
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 110,
-      "end": 148,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 116,
-          "end": 147,
-          "id": {
-            "type": "Identifier",
-            "start": 116,
-            "end": 134,
-            "name": "otherNestedWrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 137,
-            "end": 147,
-            "callee": {
+        ],
+        "start": 76,
+        "end": 109
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 137,
-              "end": 144,
-              "name": "wrapped",
-              "kind": "reference"
+              "name": "otherNestedWrapped",
+              "start": 116,
+              "end": 134
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 145,
-                "end": 146,
-                "value": 4,
-                "raw": "4"
-              }
-            ],
-            "optional": false
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "wrapped",
+                "start": 137,
+                "end": 144
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": 4,
+                  "raw": "4",
+                  "start": 145,
+                  "end": 146
+                }
+              ],
+              "optional": false,
+              "start": 137,
+              "end": 147
+            },
+            "start": 116,
+            "end": 147
           }
-        }
-      ]
-    }
-  ]
+        ],
+        "start": 110,
+        "end": 148
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 148
+  },
+  "comments": [],
+  "diagnostics": []
 }

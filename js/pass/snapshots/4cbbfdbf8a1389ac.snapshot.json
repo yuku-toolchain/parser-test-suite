@@ -1,846 +1,802 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 704,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 18,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 17,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 13,
-            "name": "callCount",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 16,
-            "end": 17,
-            "value": 0,
-            "raw": "0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 19,
-      "end": 29,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 23,
-          "end": 28,
-          "id": {
-            "type": "Identifier",
-            "start": 23,
-            "end": 28,
-            "name": "error",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 30,
-      "end": 166,
-      "id": {
-        "type": "Identifier",
-        "start": 39,
-        "end": 50,
-        "name": "Constructor",
-        "kind": "binding"
-      },
-      "generator": false,
-      "async": false,
-      "params": [
-        {
-          "type": "Identifier",
-          "start": 51,
-          "end": 59,
-          "name": "executor",
-          "kind": "binding"
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 61,
-        "end": 166,
-        "body": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
           {
-            "type": "FunctionDeclaration",
-            "start": 65,
-            "end": 134,
+            "type": "VariableDeclarator",
             "id": {
               "type": "Identifier",
-              "start": 74,
-              "end": 80,
-              "name": "reject",
-              "kind": "binding"
+              "name": "callCount",
+              "start": 4,
+              "end": 13
             },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 16,
+              "end": 17
+            },
+            "start": 4,
+            "end": 17
+          }
+        ],
+        "start": 0,
+        "end": 18
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "error",
+              "start": 23,
+              "end": 28
+            },
+            "init": null,
+            "start": 23,
+            "end": 28
+          }
+        ],
+        "start": 19,
+        "end": 29
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "Constructor",
+          "start": 39,
+          "end": 50
+        },
+        "generator": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "executor",
+            "start": 51,
+            "end": 59
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "FunctionDeclaration",
+              "id": {
+                "type": "Identifier",
+                "name": "reject",
+                "start": 74,
+                "end": 80
+              },
+              "generator": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "result",
+                  "start": 81,
+                  "end": 87
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "+=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "callCount",
+                        "start": 95,
+                        "end": 104
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 1,
+                        "raw": "1",
+                        "start": 108,
+                        "end": 109
+                      },
+                      "start": 95,
+                      "end": 109
+                    },
+                    "start": 95,
+                    "end": 110
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "error",
+                        "start": 115,
+                        "end": 120
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "result",
+                        "start": 123,
+                        "end": 129
+                      },
+                      "start": 115,
+                      "end": 129
+                    },
+                    "start": 115,
+                    "end": 130
+                  }
+                ],
+                "start": 89,
+                "end": 134
+              },
+              "expression": false,
+              "start": 65,
+              "end": 134
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "executor",
+                  "start": 137,
+                  "end": 145
+                },
+                "arguments": [
+                  {
+                    "type": "ArrowFunctionExpression",
+                    "expression": false,
+                    "async": false,
+                    "params": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [],
+                      "start": 152,
+                      "end": 154
+                    },
+                    "id": null,
+                    "generator": false,
+                    "start": 146,
+                    "end": 154
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "reject",
+                    "start": 156,
+                    "end": 162
+                  }
+                ],
+                "optional": false,
+                "start": 137,
+                "end": 163
+              },
+              "start": 137,
+              "end": 164
+            }
+          ],
+          "start": 61,
+          "end": 166
+        },
+        "expression": false,
+        "start": 30,
+        "end": 166
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "Constructor",
+              "start": 167,
+              "end": 178
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "resolve",
+              "start": 179,
+              "end": 186
+            },
+            "optional": false,
+            "computed": false,
+            "start": 167,
+            "end": 186
+          },
+          "right": {
+            "type": "FunctionExpression",
+            "id": null,
             "generator": false,
             "async": false,
             "params": [
               {
                 "type": "Identifier",
-                "start": 81,
-                "end": 87,
-                "name": "result",
-                "kind": "binding"
+                "name": "v",
+                "start": 199,
+                "end": 200
               }
             ],
             "body": {
               "type": "BlockStatement",
-              "start": 89,
-              "end": 134,
               "body": [
                 {
-                  "type": "ExpressionStatement",
-                  "start": 95,
-                  "end": 110,
-                  "expression": {
-                    "type": "AssignmentExpression",
-                    "start": 95,
-                    "end": 109,
-                    "left": {
-                      "type": "Identifier",
-                      "start": 95,
-                      "end": 104,
-                      "name": "callCount",
-                      "kind": "reference"
-                    },
-                    "right": {
-                      "type": "Literal",
-                      "start": 108,
-                      "end": 109,
-                      "value": 1,
-                      "raw": "1"
-                    },
-                    "operator": "+="
-                  }
-                },
-                {
-                  "type": "ExpressionStatement",
-                  "start": 115,
-                  "end": 130,
-                  "expression": {
-                    "type": "AssignmentExpression",
-                    "start": 115,
-                    "end": 129,
-                    "left": {
-                      "type": "Identifier",
-                      "start": 115,
-                      "end": 120,
-                      "name": "error",
-                      "kind": "reference"
-                    },
-                    "right": {
-                      "type": "Identifier",
-                      "start": 123,
-                      "end": 129,
-                      "name": "result",
-                      "kind": "reference"
-                    },
-                    "operator": "="
-                  }
-                }
-              ]
-            },
-            "expression": false
-          },
-          {
-            "type": "ExpressionStatement",
-            "start": 137,
-            "end": 164,
-            "expression": {
-              "type": "CallExpression",
-              "start": 137,
-              "end": 163,
-              "callee": {
-                "type": "Identifier",
-                "start": 137,
-                "end": 145,
-                "name": "executor",
-                "kind": "reference"
-              },
-              "arguments": [
-                {
-                  "type": "ArrowFunctionExpression",
-                  "start": 146,
-                  "end": 154,
-                  "id": null,
-                  "generator": false,
-                  "async": false,
-                  "params": [],
-                  "body": {
-                    "type": "BlockStatement",
-                    "start": 152,
-                    "end": 154,
-                    "body": []
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "v",
+                    "start": 213,
+                    "end": 214
                   },
-                  "expression": false
-                },
-                {
-                  "type": "Identifier",
-                  "start": 156,
-                  "end": 162,
-                  "name": "reject",
-                  "kind": "reference"
+                  "start": 206,
+                  "end": 215
                 }
               ],
-              "optional": false
-            }
-          }
-        ]
-      },
-      "expression": false
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 167,
-      "end": 218,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 167,
-        "end": 217,
-        "left": {
-          "type": "MemberExpression",
+              "start": 202,
+              "end": 217
+            },
+            "expression": false,
+            "start": 189,
+            "end": 217
+          },
           "start": 167,
-          "end": 186,
-          "object": {
-            "type": "Identifier",
-            "start": 167,
-            "end": 178,
-            "name": "Constructor",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 179,
-            "end": 186,
-            "name": "resolve",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "end": 217
         },
-        "right": {
-          "type": "FunctionExpression",
-          "start": 189,
-          "end": 217,
-          "id": null,
-          "generator": false,
-          "async": false,
-          "params": [
-            {
+        "start": 167,
+        "end": 218
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 199,
-              "end": 200,
-              "name": "v",
-              "kind": "binding"
-            }
-          ],
-          "body": {
-            "type": "BlockStatement",
-            "start": 202,
-            "end": 217,
-            "body": [
-              {
-                "type": "ReturnStatement",
-                "start": 206,
-                "end": 215,
-                "argument": {
-                  "type": "Identifier",
-                  "start": 213,
-                  "end": 214,
-                  "name": "v",
-                  "kind": "reference"
-                }
-              }
-            ]
-          },
-          "expression": false
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 219,
-      "end": 264,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 223,
-          "end": 235,
-          "id": {
-            "type": "Identifier",
+              "name": "p1OnRejected",
+              "start": 223,
+              "end": 235
+            },
+            "init": null,
             "start": 223,
-            "end": 235,
-            "name": "p1OnRejected",
-            "kind": "binding"
+            "end": 235
           },
-          "init": null
-        },
-        {
-          "type": "VariableDeclarator",
-          "start": 237,
-          "end": 249,
-          "id": {
-            "type": "Identifier",
-            "start": 237,
-            "end": 249,
-            "name": "p2OnRejected",
-            "kind": "binding"
-          },
-          "init": null
-        },
-        {
-          "type": "VariableDeclarator",
-          "start": 251,
-          "end": 263,
-          "id": {
-            "type": "Identifier",
-            "start": 251,
-            "end": 263,
-            "name": "p3OnRejected",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 265,
-      "end": 337,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 269,
-          "end": 336,
-          "id": {
-            "type": "Identifier",
-            "start": 269,
-            "end": 271,
-            "name": "p1",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 274,
-            "end": 336,
-            "properties": [
-              {
-                "type": "Property",
-                "start": 278,
-                "end": 334,
-                "key": {
-                  "type": "Identifier",
-                  "start": 278,
-                  "end": 282,
-                  "name": "then",
-                  "kind": "name"
-                },
-                "value": {
-                  "type": "FunctionExpression",
-                  "start": 282,
-                  "end": 334,
-                  "id": null,
-                  "generator": false,
-                  "async": false,
-                  "params": [
-                    {
-                      "type": "Identifier",
-                      "start": 283,
-                      "end": 284,
-                      "name": "_",
-                      "kind": "binding"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 286,
-                      "end": 296,
-                      "name": "onRejected",
-                      "kind": "binding"
-                    }
-                  ],
-                  "body": {
-                    "type": "BlockStatement",
-                    "start": 298,
-                    "end": 334,
-                    "body": [
-                      {
-                        "type": "ExpressionStatement",
-                        "start": 304,
-                        "end": 330,
-                        "expression": {
-                          "type": "AssignmentExpression",
-                          "start": 304,
-                          "end": 329,
-                          "left": {
-                            "type": "Identifier",
-                            "start": 304,
-                            "end": 316,
-                            "name": "p1OnRejected",
-                            "kind": "reference"
-                          },
-                          "right": {
-                            "type": "Identifier",
-                            "start": 319,
-                            "end": 329,
-                            "name": "onRejected",
-                            "kind": "reference"
-                          },
-                          "operator": "="
-                        }
-                      }
-                    ]
-                  },
-                  "expression": false
-                },
-                "kind": "init",
-                "method": true,
-                "shorthand": false,
-                "computed": false
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 338,
-      "end": 410,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 342,
-          "end": 409,
-          "id": {
-            "type": "Identifier",
-            "start": 342,
-            "end": 344,
-            "name": "p2",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 347,
-            "end": 409,
-            "properties": [
-              {
-                "type": "Property",
-                "start": 351,
-                "end": 407,
-                "key": {
-                  "type": "Identifier",
-                  "start": 351,
-                  "end": 355,
-                  "name": "then",
-                  "kind": "name"
-                },
-                "value": {
-                  "type": "FunctionExpression",
-                  "start": 355,
-                  "end": 407,
-                  "id": null,
-                  "generator": false,
-                  "async": false,
-                  "params": [
-                    {
-                      "type": "Identifier",
-                      "start": 356,
-                      "end": 357,
-                      "name": "_",
-                      "kind": "binding"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 359,
-                      "end": 369,
-                      "name": "onRejected",
-                      "kind": "binding"
-                    }
-                  ],
-                  "body": {
-                    "type": "BlockStatement",
-                    "start": 371,
-                    "end": 407,
-                    "body": [
-                      {
-                        "type": "ExpressionStatement",
-                        "start": 377,
-                        "end": 403,
-                        "expression": {
-                          "type": "AssignmentExpression",
-                          "start": 377,
-                          "end": 402,
-                          "left": {
-                            "type": "Identifier",
-                            "start": 377,
-                            "end": 389,
-                            "name": "p2OnRejected",
-                            "kind": "reference"
-                          },
-                          "right": {
-                            "type": "Identifier",
-                            "start": 392,
-                            "end": 402,
-                            "name": "onRejected",
-                            "kind": "reference"
-                          },
-                          "operator": "="
-                        }
-                      }
-                    ]
-                  },
-                  "expression": false
-                },
-                "kind": "init",
-                "method": true,
-                "shorthand": false,
-                "computed": false
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 411,
-      "end": 483,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 415,
-          "end": 482,
-          "id": {
-            "type": "Identifier",
-            "start": 415,
-            "end": 417,
-            "name": "p3",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 420,
-            "end": 482,
-            "properties": [
-              {
-                "type": "Property",
-                "start": 424,
-                "end": 480,
-                "key": {
-                  "type": "Identifier",
-                  "start": 424,
-                  "end": 428,
-                  "name": "then",
-                  "kind": "name"
-                },
-                "value": {
-                  "type": "FunctionExpression",
-                  "start": 428,
-                  "end": 480,
-                  "id": null,
-                  "generator": false,
-                  "async": false,
-                  "params": [
-                    {
-                      "type": "Identifier",
-                      "start": 429,
-                      "end": 430,
-                      "name": "_",
-                      "kind": "binding"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 432,
-                      "end": 442,
-                      "name": "onRejected",
-                      "kind": "binding"
-                    }
-                  ],
-                  "body": {
-                    "type": "BlockStatement",
-                    "start": 444,
-                    "end": 480,
-                    "body": [
-                      {
-                        "type": "ExpressionStatement",
-                        "start": 450,
-                        "end": 476,
-                        "expression": {
-                          "type": "AssignmentExpression",
-                          "start": 450,
-                          "end": 475,
-                          "left": {
-                            "type": "Identifier",
-                            "start": 450,
-                            "end": 462,
-                            "name": "p3OnRejected",
-                            "kind": "reference"
-                          },
-                          "right": {
-                            "type": "Identifier",
-                            "start": 465,
-                            "end": 475,
-                            "name": "onRejected",
-                            "kind": "reference"
-                          },
-                          "operator": "="
-                        }
-                      }
-                    ]
-                  },
-                  "expression": false
-                },
-                "kind": "init",
-                "method": true,
-                "shorthand": false,
-                "computed": false
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 484,
-      "end": 528,
-      "expression": {
-        "type": "CallExpression",
-        "start": 484,
-        "end": 527,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 484,
-          "end": 500,
-          "object": {
-            "type": "MemberExpression",
-            "start": 484,
-            "end": 495,
-            "object": {
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
+              "name": "p2OnRejected",
+              "start": 237,
+              "end": 249
+            },
+            "init": null,
+            "start": 237,
+            "end": 249
+          },
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "p3OnRejected",
+              "start": 251,
+              "end": 263
+            },
+            "init": null,
+            "start": 251,
+            "end": 263
+          }
+        ],
+        "start": 219,
+        "end": 264
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "p1",
+              "start": 269,
+              "end": 271
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "kind": "init",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "then",
+                    "start": 278,
+                    "end": 282
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "_",
+                        "start": 283,
+                        "end": 284
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "onRejected",
+                        "start": 286,
+                        "end": 296
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "p1OnRejected",
+                              "start": 304,
+                              "end": 316
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "onRejected",
+                              "start": 319,
+                              "end": 329
+                            },
+                            "start": 304,
+                            "end": 329
+                          },
+                          "start": 304,
+                          "end": 330
+                        }
+                      ],
+                      "start": 298,
+                      "end": 334
+                    },
+                    "expression": false,
+                    "start": 282,
+                    "end": 334
+                  },
+                  "method": true,
+                  "shorthand": false,
+                  "computed": false,
+                  "start": 278,
+                  "end": 334
+                }
+              ],
+              "start": 274,
+              "end": 336
+            },
+            "start": 269,
+            "end": 336
+          }
+        ],
+        "start": 265,
+        "end": 337
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "p2",
+              "start": 342,
+              "end": 344
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "kind": "init",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "then",
+                    "start": 351,
+                    "end": 355
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "_",
+                        "start": 356,
+                        "end": 357
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "onRejected",
+                        "start": 359,
+                        "end": 369
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "p2OnRejected",
+                              "start": 377,
+                              "end": 389
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "onRejected",
+                              "start": 392,
+                              "end": 402
+                            },
+                            "start": 377,
+                            "end": 402
+                          },
+                          "start": 377,
+                          "end": 403
+                        }
+                      ],
+                      "start": 371,
+                      "end": 407
+                    },
+                    "expression": false,
+                    "start": 355,
+                    "end": 407
+                  },
+                  "method": true,
+                  "shorthand": false,
+                  "computed": false,
+                  "start": 351,
+                  "end": 407
+                }
+              ],
+              "start": 347,
+              "end": 409
+            },
+            "start": 342,
+            "end": 409
+          }
+        ],
+        "start": 338,
+        "end": 410
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "p3",
+              "start": 415,
+              "end": 417
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "kind": "init",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "then",
+                    "start": 424,
+                    "end": 428
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "_",
+                        "start": 429,
+                        "end": 430
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "onRejected",
+                        "start": 432,
+                        "end": 442
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "p3OnRejected",
+                              "start": 450,
+                              "end": 462
+                            },
+                            "right": {
+                              "type": "Identifier",
+                              "name": "onRejected",
+                              "start": 465,
+                              "end": 475
+                            },
+                            "start": 450,
+                            "end": 475
+                          },
+                          "start": 450,
+                          "end": 476
+                        }
+                      ],
+                      "start": 444,
+                      "end": 480
+                    },
+                    "expression": false,
+                    "start": 428,
+                    "end": 480
+                  },
+                  "method": true,
+                  "shorthand": false,
+                  "computed": false,
+                  "start": 424,
+                  "end": 480
+                }
+              ],
+              "start": 420,
+              "end": 482
+            },
+            "start": 415,
+            "end": 482
+          }
+        ],
+        "start": 411,
+        "end": 483
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Promise",
+                "start": 484,
+                "end": 491
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "any",
+                "start": 492,
+                "end": 495
+              },
+              "optional": false,
+              "computed": false,
               "start": 484,
-              "end": 491,
-              "name": "Promise",
-              "kind": "reference"
+              "end": 495
             },
             "property": {
               "type": "Identifier",
-              "start": 492,
-              "end": 495,
-              "name": "any",
-              "kind": "name"
+              "name": "call",
+              "start": 496,
+              "end": 500
             },
+            "optional": false,
             "computed": false,
-            "optional": false
+            "start": 484,
+            "end": 500
           },
-          "property": {
-            "type": "Identifier",
-            "start": 496,
-            "end": 500,
-            "name": "call",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "Constructor",
+              "start": 501,
+              "end": 512
+            },
+            {
+              "type": "ArrayExpression",
+              "elements": [
+                {
+                  "type": "Identifier",
+                  "name": "p1",
+                  "start": 515,
+                  "end": 517
+                },
+                {
+                  "type": "Identifier",
+                  "name": "p2",
+                  "start": 519,
+                  "end": 521
+                },
+                {
+                  "type": "Identifier",
+                  "name": "p3",
+                  "start": 523,
+                  "end": 525
+                }
+              ],
+              "start": 514,
+              "end": 526
+            }
+          ],
+          "optional": false,
+          "start": 484,
+          "end": 527
         },
-        "arguments": [
-          {
+        "start": 484,
+        "end": 528
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
             "type": "Identifier",
-            "start": 501,
-            "end": 512,
-            "name": "Constructor",
-            "kind": "reference"
+            "name": "p1OnRejected",
+            "start": 529,
+            "end": 541
           },
-          {
-            "type": "ArrayExpression",
-            "start": 514,
-            "end": 526,
-            "elements": [
-              {
-                "type": "Identifier",
-                "start": 515,
-                "end": 517,
-                "name": "p1",
-                "kind": "reference"
-              },
-              {
-                "type": "Identifier",
-                "start": 519,
-                "end": 521,
-                "name": "p2",
-                "kind": "reference"
-              },
-              {
-                "type": "Identifier",
-                "start": 523,
-                "end": 525,
-                "name": "p3",
-                "kind": "reference"
-              }
-            ]
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 529,
-      "end": 558,
-      "expression": {
-        "type": "CallExpression",
-        "start": 529,
-        "end": 557,
-        "callee": {
-          "type": "Identifier",
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "p1-rejection",
+              "raw": "'p1-rejection'",
+              "start": 542,
+              "end": 556
+            }
+          ],
+          "optional": false,
           "start": 529,
-          "end": 541,
-          "name": "p1OnRejected",
-          "kind": "reference"
+          "end": 557
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 542,
-            "end": 556,
-            "value": "p1-rejection",
-            "raw": "'p1-rejection'"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 559,
-      "end": 601,
-      "expression": {
-        "type": "CallExpression",
-        "start": 559,
-        "end": 600,
-        "callee": {
-          "type": "Identifier",
+        "start": 529,
+        "end": 558
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "p1OnRejected",
+            "start": 559,
+            "end": 571
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "p1-rejection-unexpected-1",
+              "raw": "'p1-rejection-unexpected-1'",
+              "start": 572,
+              "end": 599
+            }
+          ],
+          "optional": false,
           "start": 559,
-          "end": 571,
-          "name": "p1OnRejected",
-          "kind": "reference"
+          "end": 600
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 572,
-            "end": 599,
-            "value": "p1-rejection-unexpected-1",
-            "raw": "'p1-rejection-unexpected-1'"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 602,
-      "end": 644,
-      "expression": {
-        "type": "CallExpression",
-        "start": 602,
-        "end": 643,
-        "callee": {
-          "type": "Identifier",
+        "start": 559,
+        "end": 601
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "p1OnRejected",
+            "start": 602,
+            "end": 614
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "p1-rejection-unexpected-2",
+              "raw": "'p1-rejection-unexpected-2'",
+              "start": 615,
+              "end": 642
+            }
+          ],
+          "optional": false,
           "start": 602,
-          "end": 614,
-          "name": "p1OnRejected",
-          "kind": "reference"
+          "end": 643
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 615,
-            "end": 642,
-            "value": "p1-rejection-unexpected-2",
-            "raw": "'p1-rejection-unexpected-2'"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 645,
-      "end": 674,
-      "expression": {
-        "type": "CallExpression",
-        "start": 645,
-        "end": 673,
-        "callee": {
-          "type": "Identifier",
+        "start": 602,
+        "end": 644
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "p2OnRejected",
+            "start": 645,
+            "end": 657
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "p2-rejection",
+              "raw": "'p2-rejection'",
+              "start": 658,
+              "end": 672
+            }
+          ],
+          "optional": false,
           "start": 645,
-          "end": 657,
-          "name": "p2OnRejected",
-          "kind": "reference"
+          "end": 673
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 658,
-            "end": 672,
-            "value": "p2-rejection",
-            "raw": "'p2-rejection'"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 675,
-      "end": 704,
-      "expression": {
-        "type": "CallExpression",
-        "start": 675,
-        "end": 703,
-        "callee": {
-          "type": "Identifier",
+        "start": 645,
+        "end": 674
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "p3OnRejected",
+            "start": 675,
+            "end": 687
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "value": "p3-rejection",
+              "raw": "'p3-rejection'",
+              "start": 688,
+              "end": 702
+            }
+          ],
+          "optional": false,
           "start": 675,
-          "end": 687,
-          "name": "p3OnRejected",
-          "kind": "reference"
+          "end": 703
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 688,
-            "end": 702,
-            "value": "p3-rejection",
-            "raw": "'p3-rejection'"
-          }
-        ],
-        "optional": false
+        "start": 675,
+        "end": 704
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 704
+  },
+  "comments": [],
+  "diagnostics": []
 }

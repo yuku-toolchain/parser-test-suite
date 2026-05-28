@@ -1,217 +1,215 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 163,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 14,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 13,
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "check",
+              "start": 4,
+              "end": 9
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 12,
+              "end": 13
+            },
+            "start": 4,
+            "end": 13
+          }
+        ],
+        "start": 0,
+        "end": 14
+      },
+      {
+        "type": "WhileStatement",
+        "test": {
+          "type": "FunctionExpression",
           "id": {
             "type": "Identifier",
-            "start": 4,
-            "end": 9,
-            "name": "check",
-            "kind": "binding"
+            "name": "f",
+            "start": 31,
+            "end": 32
           },
-          "init": {
-            "type": "Literal",
-            "start": 12,
-            "end": 13,
-            "value": 0,
-            "raw": "0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "WhileStatement",
-      "start": 15,
-      "end": 143,
-      "test": {
-        "type": "FunctionExpression",
-        "start": 22,
-        "end": 37,
-        "id": {
-          "type": "Identifier",
-          "start": 31,
-          "end": 32,
-          "name": "f",
-          "kind": "binding"
+          "generator": false,
+          "async": false,
+          "params": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [],
+            "start": 35,
+            "end": 37
+          },
+          "expression": false,
+          "start": 22,
+          "end": 37
         },
-        "generator": false,
-        "async": false,
-        "params": [],
         "body": {
           "type": "BlockStatement",
-          "start": 35,
-          "end": 37,
-          "body": []
-        },
-        "expression": false
-      },
-      "body": {
-        "type": "BlockStatement",
-        "start": 39,
-        "end": 143,
-        "body": [
-          {
-            "type": "IfStatement",
-            "start": 43,
-            "end": 141,
-            "test": {
-              "type": "BinaryExpression",
-              "start": 47,
-              "end": 70,
-              "left": {
-                "type": "UnaryExpression",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "UnaryExpression",
+                  "operator": "typeof",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "f",
+                    "start": 54,
+                    "end": 55
+                  },
+                  "prefix": true,
+                  "start": 47,
+                  "end": 55
+                },
+                "operator": "===",
+                "right": {
+                  "type": "Literal",
+                  "value": "function",
+                  "raw": "\"function\"",
+                  "start": 60,
+                  "end": 70
+                },
                 "start": 47,
-                "end": 55,
-                "operator": "typeof",
-                "prefix": true,
-                "argument": {
-                  "type": "Identifier",
-                  "start": 54,
-                  "end": 55,
-                  "name": "f",
-                  "kind": "reference"
-                }
+                "end": 70
               },
-              "right": {
-                "type": "Literal",
-                "start": 60,
-                "end": 70,
-                "value": "function",
-                "raw": "\"function\""
-              },
-              "operator": "==="
-            },
-            "consequent": {
-              "type": "BlockStatement",
-              "start": 72,
-              "end": 104,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 78,
-                  "end": 89,
-                  "expression": {
-                    "type": "AssignmentExpression",
-                    "start": 78,
-                    "end": 88,
-                    "left": {
-                      "type": "Identifier",
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "check",
+                        "start": 78,
+                        "end": 83
+                      },
+                      "right": {
+                        "type": "UnaryExpression",
+                        "operator": "-",
+                        "argument": {
+                          "type": "Literal",
+                          "value": 1,
+                          "raw": "1",
+                          "start": 87,
+                          "end": 88
+                        },
+                        "prefix": true,
+                        "start": 86,
+                        "end": 88
+                      },
                       "start": 78,
-                      "end": 83,
-                      "name": "check",
-                      "kind": "reference"
+                      "end": 88
                     },
-                    "right": {
-                      "type": "UnaryExpression",
-                      "start": 86,
-                      "end": 88,
-                      "operator": "-",
-                      "prefix": true,
-                      "argument": {
+                    "start": 78,
+                    "end": 89
+                  },
+                  {
+                    "type": "BreakStatement",
+                    "label": null,
+                    "start": 94,
+                    "end": 100
+                  }
+                ],
+                "start": 72,
+                "end": 104
+              },
+              "alternate": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "check",
+                        "start": 116,
+                        "end": 121
+                      },
+                      "right": {
                         "type": "Literal",
-                        "start": 87,
-                        "end": 88,
                         "value": 1,
-                        "raw": "1"
-                      }
-                    },
-                    "operator": "="
-                  }
-                },
-                {
-                  "type": "BreakStatement",
-                  "start": 94,
-                  "end": 100,
-                  "label": null
-                }
-              ]
-            },
-            "alternate": {
-              "type": "BlockStatement",
-              "start": 110,
-              "end": 141,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 116,
-                  "end": 126,
-                  "expression": {
-                    "type": "AssignmentExpression",
-                    "start": 116,
-                    "end": 125,
-                    "left": {
-                      "type": "Identifier",
+                        "raw": "1",
+                        "start": 124,
+                        "end": 125
+                      },
                       "start": 116,
-                      "end": 121,
-                      "name": "check",
-                      "kind": "reference"
+                      "end": 125
                     },
-                    "right": {
-                      "type": "Literal",
-                      "start": 124,
-                      "end": 125,
-                      "value": 1,
-                      "raw": "1"
-                    },
-                    "operator": "="
+                    "start": 116,
+                    "end": 126
+                  },
+                  {
+                    "type": "BreakStatement",
+                    "label": null,
+                    "start": 131,
+                    "end": 137
                   }
-                },
-                {
-                  "type": "BreakStatement",
-                  "start": 131,
-                  "end": 137,
-                  "label": null
-                }
-              ]
+                ],
+                "start": 110,
+                "end": 141
+              },
+              "start": 43,
+              "end": 141
             }
-          }
-        ]
-      }
-    },
-    {
-      "type": "IfStatement",
-      "start": 144,
-      "end": 163,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 148,
-        "end": 159,
-        "left": {
-          "type": "Identifier",
+          ],
+          "start": 39,
+          "end": 143
+        },
+        "start": 15,
+        "end": 143
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "check",
+            "start": 148,
+            "end": 153
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "raw": "1",
+            "start": 158,
+            "end": 159
+          },
           "start": 148,
-          "end": 153,
-          "name": "check",
-          "kind": "reference"
+          "end": 159
         },
-        "right": {
-          "type": "Literal",
-          "start": 158,
-          "end": 159,
-          "value": 1,
-          "raw": "1"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 161,
+          "end": 163
         },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 161,
-        "end": 163,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+        "alternate": null,
+        "start": 144,
+        "end": 163
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 163
+  },
+  "comments": [],
+  "diagnostics": []
 }

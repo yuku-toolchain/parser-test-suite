@@ -1,75 +1,78 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 193,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 0,
-      "end": 193,
-      "expression": {
-        "type": "CallExpression",
-        "start": 0,
-        "end": 192,
-        "callee": {
-          "type": "Identifier",
-          "start": 0,
-          "end": 4,
-          "name": "eval",
-          "kind": "reference"
-        },
-        "arguments": [
-          {
-            "type": "BinaryExpression",
-            "start": 5,
-            "end": 191,
-            "left": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 0,
+            "end": 4
+          },
+          "arguments": [
+            {
               "type": "BinaryExpression",
-              "start": 5,
-              "end": 129,
               "left": {
                 "type": "BinaryExpression",
-                "start": 5,
-                "end": 76,
                 "left": {
-                  "type": "Literal",
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Literal",
+                    "value": "assert.sameValue(f(), \"outer declaration\");switch (1) {",
+                    "raw": "'assert.sameValue(f(), \"outer declaration\");switch (1) {'",
+                    "start": 5,
+                    "end": 62
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Literal",
+                    "value": "  case 1:",
+                    "raw": "'  case 1:'",
+                    "start": 65,
+                    "end": 76
+                  },
                   "start": 5,
-                  "end": 62,
-                  "value": "assert.sameValue(f(), \"outer declaration\");switch (1) {",
-                  "raw": "'assert.sameValue(f(), \"outer declaration\");switch (1) {'"
+                  "end": 76
                 },
+                "operator": "+",
                 "right": {
                   "type": "Literal",
-                  "start": 65,
-                  "end": 76,
-                  "value": "  case 1:",
-                  "raw": "'  case 1:'"
+                  "value": "    function f() { return \"inner declaration\"; }",
+                  "raw": "'    function f() { return \"inner declaration\"; }'",
+                  "start": 79,
+                  "end": 129
                 },
-                "operator": "+"
+                "start": 5,
+                "end": 129
               },
+              "operator": "+",
               "right": {
                 "type": "Literal",
-                "start": 79,
-                "end": 129,
-                "value": "    function f() { return \"inner declaration\"; }",
-                "raw": "'    function f() { return \"inner declaration\"; }'"
+                "value": "}  function f() {    return \"outer declaration\";  }",
+                "raw": "'}\\\n  function f() {\\\n    return \"outer declaration\";\\\n  }'",
+                "start": 132,
+                "end": 191
               },
-              "operator": "+"
-            },
-            "right": {
-              "type": "Literal",
-              "start": 132,
-              "end": 191,
-              "value": "}  function f() {    return \"outer declaration\";  }",
-              "raw": "'}\\\n  function f() {\\\n    return \"outer declaration\";\\\n  }'"
-            },
-            "operator": "+"
-          }
-        ],
-        "optional": false
+              "start": 5,
+              "end": 191
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 192
+        },
+        "start": 0,
+        "end": 193
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 193
+  },
+  "comments": [],
+  "diagnostics": []
 }

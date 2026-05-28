@@ -1,91 +1,93 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 155,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 9,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 8,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 8,
-            "name": "init",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 10,
-      "end": 155,
-      "expression": {
-        "type": "CallExpression",
-        "start": 10,
-        "end": 154,
-        "callee": {
-          "type": "ParenthesizedExpression",
-          "start": 10,
-          "end": 152,
-          "expression": {
-            "type": "FunctionExpression",
-            "start": 11,
-            "end": 151,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 23,
-              "end": 151,
-              "body": [
-                {
-                  "type": "ExpressionStatement",
-                  "start": 27,
-                  "end": 149,
-                  "expression": {
-                    "type": "CallExpression",
-                    "start": 27,
-                    "end": 148,
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 27,
-                      "end": 31,
-                      "name": "eval",
-                      "kind": "reference"
-                    },
-                    "arguments": [
-                      {
-                        "type": "Literal",
-                        "start": 32,
-                        "end": 147,
-                        "value": "init = f;{ function f() { return \"inner declaration\"; } }function f() {      return \"outer declaration\";    }",
-                        "raw": "'init = f;{ function f() { return \"inner declaration\"; } }function f() {\\\n      return \"outer declaration\";\\\n    }'"
-                      }
-                    ],
-                    "optional": false
-                  }
-                }
-              ]
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "init",
+              "start": 4,
+              "end": 8
             },
-            "expression": false
+            "init": null,
+            "start": 4,
+            "end": 8
           }
+        ],
+        "start": 0,
+        "end": 9
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "ParenthesizedExpression",
+            "expression": {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "eval",
+                        "start": 27,
+                        "end": 31
+                      },
+                      "arguments": [
+                        {
+                          "type": "Literal",
+                          "value": "init = f;{ function f() { return \"inner declaration\"; } }function f() {      return \"outer declaration\";    }",
+                          "raw": "'init = f;{ function f() { return \"inner declaration\"; } }function f() {\\\n      return \"outer declaration\";\\\n    }'",
+                          "start": 32,
+                          "end": 147
+                        }
+                      ],
+                      "optional": false,
+                      "start": 27,
+                      "end": 148
+                    },
+                    "start": 27,
+                    "end": 149
+                  }
+                ],
+                "start": 23,
+                "end": 151
+              },
+              "expression": false,
+              "start": 11,
+              "end": 151
+            },
+            "start": 10,
+            "end": 152
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 10,
+          "end": 154
         },
-        "arguments": [],
-        "optional": false
+        "start": 10,
+        "end": 155
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 155
+  },
+  "comments": [],
+  "diagnostics": []
 }

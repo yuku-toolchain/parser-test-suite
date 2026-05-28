@@ -1,557 +1,545 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 315,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 34,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 33,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 7,
-            "name": "arr",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 10,
-            "end": 33,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 10,
-              "end": 23,
-              "object": {
-                "type": "ParenthesizedExpression",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 4,
+              "end": 7
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "ParenthesizedExpression",
+                  "expression": {
+                    "type": "Literal",
+                    "value": "(RegExp) /\\x00/",
+                    "raw": "/\\x00/",
+                    "regex": {
+                      "pattern": "\\x00",
+                      "flags": ""
+                    },
+                    "start": 11,
+                    "end": 17
+                  },
+                  "start": 10,
+                  "end": 18
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 19,
+                  "end": 23
+                },
+                "optional": false,
+                "computed": false,
                 "start": 10,
-                "end": 18,
-                "expression": {
+                "end": 23
+              },
+              "arguments": [
+                {
                   "type": "Literal",
-                  "start": 11,
-                  "end": 17,
-                  "value": "(RegExp) /\\x00/",
-                  "raw": "/\\x00/",
-                  "regex": {
-                    "pattern": "\\x00",
-                    "flags": ""
-                  }
+                  "value": "\u0000",
+                  "raw": "\"\\u0000\"",
+                  "start": 24,
+                  "end": 32
                 }
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 19,
-                "end": 23,
-                "name": "exec",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              ],
+              "optional": false,
+              "start": 10,
+              "end": 33
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 24,
-                "end": 32,
-                "value": "\u0000",
-                "raw": "\"\\u0000\""
-              }
-            ],
-            "optional": false
+            "start": 4,
+            "end": 33
           }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 35,
-      "end": 78,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 39,
-        "end": 74,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 39,
-          "end": 51,
+        ],
+        "start": 0,
+        "end": 34
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
           "left": {
-            "type": "Identifier",
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 39,
+              "end": 42
+            },
+            "operator": "===",
+            "right": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 47,
+              "end": 51
+            },
             "start": 39,
-            "end": 42,
-            "name": "arr",
-            "kind": "reference"
+            "end": 51
           },
+          "operator": "||",
           "right": {
-            "type": "Literal",
-            "start": 47,
-            "end": 51,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
-        },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 55,
-          "end": 74,
-          "left": {
-            "type": "MemberExpression",
-            "start": 55,
-            "end": 61,
-            "object": {
-              "type": "Identifier",
+            "type": "BinaryExpression",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "arr",
+                "start": 55,
+                "end": 58
+              },
+              "property": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 59,
+                "end": 60
+              },
+              "optional": false,
+              "computed": true,
               "start": 55,
-              "end": 58,
-              "name": "arr",
-              "kind": "reference"
+              "end": 61
             },
-            "property": {
+            "operator": "!==",
+            "right": {
               "type": "Literal",
-              "start": 59,
-              "end": 60,
-              "value": 0,
-              "raw": "0"
+              "value": "\u0000",
+              "raw": "\"\\u0000\"",
+              "start": 66,
+              "end": 74
             },
-            "computed": true,
-            "optional": false
+            "start": 55,
+            "end": 74
           },
-          "right": {
-            "type": "Literal",
-            "start": 66,
-            "end": 74,
-            "value": "\u0000",
-            "raw": "\"\\u0000\""
-          },
-          "operator": "!=="
+          "start": 39,
+          "end": 74
         },
-        "operator": "||"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 76,
+          "end": 78
+        },
+        "alternate": null,
+        "start": 35,
+        "end": 78
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 76,
-        "end": 78,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 79,
-      "end": 113,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 83,
-          "end": 112,
-          "id": {
-            "type": "Identifier",
-            "start": 83,
-            "end": 86,
-            "name": "arr",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 89,
-            "end": 112,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 89,
-              "end": 102,
-              "object": {
-                "type": "ParenthesizedExpression",
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 83,
+              "end": 86
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "ParenthesizedExpression",
+                  "expression": {
+                    "type": "Literal",
+                    "value": "(RegExp) /\\x01/",
+                    "raw": "/\\x01/",
+                    "regex": {
+                      "pattern": "\\x01",
+                      "flags": ""
+                    },
+                    "start": 90,
+                    "end": 96
+                  },
+                  "start": 89,
+                  "end": 97
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 98,
+                  "end": 102
+                },
+                "optional": false,
+                "computed": false,
                 "start": 89,
-                "end": 97,
-                "expression": {
+                "end": 102
+              },
+              "arguments": [
+                {
                   "type": "Literal",
-                  "start": 90,
-                  "end": 96,
-                  "value": "(RegExp) /\\x01/",
-                  "raw": "/\\x01/",
-                  "regex": {
-                    "pattern": "\\x01",
-                    "flags": ""
-                  }
+                  "value": "\u0001",
+                  "raw": "\"\\u0001\"",
+                  "start": 103,
+                  "end": 111
                 }
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 98,
-                "end": 102,
-                "name": "exec",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              ],
+              "optional": false,
+              "start": 89,
+              "end": 112
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 103,
-                "end": 111,
-                "value": "\u0001",
-                "raw": "\"\\u0001\""
-              }
-            ],
-            "optional": false
+            "start": 83,
+            "end": 112
           }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 114,
-      "end": 157,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 118,
-        "end": 153,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 118,
-          "end": 130,
+        ],
+        "start": 79,
+        "end": 113
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
           "left": {
-            "type": "Identifier",
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 118,
+              "end": 121
+            },
+            "operator": "===",
+            "right": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 126,
+              "end": 130
+            },
             "start": 118,
-            "end": 121,
-            "name": "arr",
-            "kind": "reference"
+            "end": 130
           },
+          "operator": "||",
           "right": {
-            "type": "Literal",
-            "start": 126,
-            "end": 130,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
-        },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 134,
-          "end": 153,
-          "left": {
-            "type": "MemberExpression",
-            "start": 134,
-            "end": 140,
-            "object": {
-              "type": "Identifier",
+            "type": "BinaryExpression",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "arr",
+                "start": 134,
+                "end": 137
+              },
+              "property": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 138,
+                "end": 139
+              },
+              "optional": false,
+              "computed": true,
               "start": 134,
-              "end": 137,
-              "name": "arr",
-              "kind": "reference"
+              "end": 140
             },
-            "property": {
+            "operator": "!==",
+            "right": {
               "type": "Literal",
-              "start": 138,
-              "end": 139,
-              "value": 0,
-              "raw": "0"
+              "value": "\u0001",
+              "raw": "\"\\u0001\"",
+              "start": 145,
+              "end": 153
             },
-            "computed": true,
-            "optional": false
+            "start": 134,
+            "end": 153
           },
-          "right": {
-            "type": "Literal",
-            "start": 145,
-            "end": 153,
-            "value": "\u0001",
-            "raw": "\"\\u0001\""
-          },
-          "operator": "!=="
+          "start": 118,
+          "end": 153
         },
-        "operator": "||"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 155,
+          "end": 157
+        },
+        "alternate": null,
+        "start": 114,
+        "end": 157
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 155,
-        "end": 157,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 158,
-      "end": 192,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 162,
-          "end": 191,
-          "id": {
-            "type": "Identifier",
-            "start": 162,
-            "end": 165,
-            "name": "arr",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 168,
-            "end": 191,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 168,
-              "end": 181,
-              "object": {
-                "type": "ParenthesizedExpression",
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 162,
+              "end": 165
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "ParenthesizedExpression",
+                  "expression": {
+                    "type": "Literal",
+                    "value": "(RegExp) /\\x0A/",
+                    "raw": "/\\x0A/",
+                    "regex": {
+                      "pattern": "\\x0A",
+                      "flags": ""
+                    },
+                    "start": 169,
+                    "end": 175
+                  },
+                  "start": 168,
+                  "end": 176
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 177,
+                  "end": 181
+                },
+                "optional": false,
+                "computed": false,
                 "start": 168,
-                "end": 176,
-                "expression": {
+                "end": 181
+              },
+              "arguments": [
+                {
                   "type": "Literal",
-                  "start": 169,
-                  "end": 175,
-                  "value": "(RegExp) /\\x0A/",
-                  "raw": "/\\x0A/",
-                  "regex": {
-                    "pattern": "\\x0A",
-                    "flags": ""
-                  }
+                  "value": "\n",
+                  "raw": "\"\\u000A\"",
+                  "start": 182,
+                  "end": 190
                 }
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 177,
-                "end": 181,
-                "name": "exec",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              ],
+              "optional": false,
+              "start": 168,
+              "end": 191
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 182,
-                "end": 190,
-                "value": "\n",
-                "raw": "\"\\u000A\""
-              }
-            ],
-            "optional": false
+            "start": 162,
+            "end": 191
           }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 193,
-      "end": 236,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 197,
-        "end": 232,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 197,
-          "end": 209,
+        ],
+        "start": 158,
+        "end": 192
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
           "left": {
-            "type": "Identifier",
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 197,
+              "end": 200
+            },
+            "operator": "===",
+            "right": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 205,
+              "end": 209
+            },
             "start": 197,
-            "end": 200,
-            "name": "arr",
-            "kind": "reference"
+            "end": 209
           },
+          "operator": "||",
           "right": {
-            "type": "Literal",
-            "start": 205,
-            "end": 209,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
-        },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 213,
-          "end": 232,
-          "left": {
-            "type": "MemberExpression",
-            "start": 213,
-            "end": 219,
-            "object": {
-              "type": "Identifier",
-              "start": 213,
-              "end": 216,
-              "name": "arr",
-              "kind": "reference"
-            },
-            "property": {
-              "type": "Literal",
-              "start": 217,
-              "end": 218,
-              "value": 0,
-              "raw": "0"
-            },
-            "computed": true,
-            "optional": false
-          },
-          "right": {
-            "type": "Literal",
-            "start": 224,
-            "end": 232,
-            "value": "\n",
-            "raw": "\"\\u000A\""
-          },
-          "operator": "!=="
-        },
-        "operator": "||"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 234,
-        "end": 236,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 237,
-      "end": 271,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 241,
-          "end": 270,
-          "id": {
-            "type": "Identifier",
-            "start": 241,
-            "end": 244,
-            "name": "arr",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 247,
-            "end": 270,
-            "callee": {
+            "type": "BinaryExpression",
+            "left": {
               "type": "MemberExpression",
-              "start": 247,
-              "end": 260,
               "object": {
-                "type": "ParenthesizedExpression",
-                "start": 247,
-                "end": 255,
-                "expression": {
-                  "type": "Literal",
-                  "start": 248,
-                  "end": 254,
-                  "value": "(RegExp) /\\xFF/",
-                  "raw": "/\\xFF/",
-                  "regex": {
-                    "pattern": "\\xFF",
-                    "flags": ""
-                  }
-                }
+                "type": "Identifier",
+                "name": "arr",
+                "start": 213,
+                "end": 216
               },
               "property": {
-                "type": "Identifier",
-                "start": 256,
-                "end": 260,
-                "name": "exec",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
                 "type": "Literal",
-                "start": 261,
-                "end": 269,
-                "value": "ÿ",
-                "raw": "\"\\u00FF\""
-              }
-            ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 272,
-      "end": 315,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 276,
-        "end": 311,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 276,
-          "end": 288,
-          "left": {
-            "type": "Identifier",
-            "start": 276,
-            "end": 279,
-            "name": "arr",
-            "kind": "reference"
-          },
-          "right": {
-            "type": "Literal",
-            "start": 284,
-            "end": 288,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
-        },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 292,
-          "end": 311,
-          "left": {
-            "type": "MemberExpression",
-            "start": 292,
-            "end": 298,
-            "object": {
-              "type": "Identifier",
-              "start": 292,
-              "end": 295,
-              "name": "arr",
-              "kind": "reference"
+                "value": 0,
+                "raw": "0",
+                "start": 217,
+                "end": 218
+              },
+              "optional": false,
+              "computed": true,
+              "start": 213,
+              "end": 219
             },
-            "property": {
+            "operator": "!==",
+            "right": {
               "type": "Literal",
-              "start": 296,
-              "end": 297,
-              "value": 0,
-              "raw": "0"
+              "value": "\n",
+              "raw": "\"\\u000A\"",
+              "start": 224,
+              "end": 232
             },
-            "computed": true,
-            "optional": false
+            "start": 213,
+            "end": 232
           },
-          "right": {
-            "type": "Literal",
-            "start": 303,
-            "end": 311,
-            "value": "ÿ",
-            "raw": "\"\\u00FF\""
-          },
-          "operator": "!=="
+          "start": 197,
+          "end": 232
         },
-        "operator": "||"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 234,
+          "end": 236
+        },
+        "alternate": null,
+        "start": 193,
+        "end": 236
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 313,
-        "end": 315,
-        "body": []
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 241,
+              "end": 244
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "ParenthesizedExpression",
+                  "expression": {
+                    "type": "Literal",
+                    "value": "(RegExp) /\\xFF/",
+                    "raw": "/\\xFF/",
+                    "regex": {
+                      "pattern": "\\xFF",
+                      "flags": ""
+                    },
+                    "start": 248,
+                    "end": 254
+                  },
+                  "start": 247,
+                  "end": 255
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 256,
+                  "end": 260
+                },
+                "optional": false,
+                "computed": false,
+                "start": 247,
+                "end": 260
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "ÿ",
+                  "raw": "\"\\u00FF\"",
+                  "start": 261,
+                  "end": 269
+                }
+              ],
+              "optional": false,
+              "start": 247,
+              "end": 270
+            },
+            "start": 241,
+            "end": 270
+          }
+        ],
+        "start": 237,
+        "end": 271
       },
-      "alternate": null
-    }
-  ]
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
+          "left": {
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 276,
+              "end": 279
+            },
+            "operator": "===",
+            "right": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 284,
+              "end": 288
+            },
+            "start": 276,
+            "end": 288
+          },
+          "operator": "||",
+          "right": {
+            "type": "BinaryExpression",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "arr",
+                "start": 292,
+                "end": 295
+              },
+              "property": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "start": 296,
+                "end": 297
+              },
+              "optional": false,
+              "computed": true,
+              "start": 292,
+              "end": 298
+            },
+            "operator": "!==",
+            "right": {
+              "type": "Literal",
+              "value": "ÿ",
+              "raw": "\"\\u00FF\"",
+              "start": 303,
+              "end": 311
+            },
+            "start": 292,
+            "end": 311
+          },
+          "start": 276,
+          "end": 311
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 313,
+          "end": 315
+        },
+        "alternate": null,
+        "start": 272,
+        "end": 315
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 315
+  },
+  "comments": [],
+  "diagnostics": []
 }

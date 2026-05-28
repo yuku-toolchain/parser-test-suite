@@ -1,108 +1,109 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 70,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 38,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 37,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 9,
-            "name": "__obj",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 12,
-            "end": 37,
-            "properties": [
-              {
-                "type": "Property",
-                "start": 16,
-                "end": 35,
-                "key": {
-                  "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "__obj",
+              "start": 4,
+              "end": 9
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "kind": "init",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "fooProp",
+                    "start": 16,
+                    "end": 23
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "fooooooo",
+                    "raw": "\"fooooooo\"",
+                    "start": 25,
+                    "end": 35
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
                   "start": 16,
-                  "end": 23,
-                  "name": "fooProp",
-                  "kind": "name"
-                },
-                "value": {
-                  "type": "Literal",
-                  "start": 25,
-                  "end": 35,
-                  "value": "fooooooo",
-                  "raw": "\"fooooooo\""
-                },
-                "kind": "init",
-                "method": false,
-                "shorthand": false,
-                "computed": false
-              }
-            ]
+                  "end": 35
+                }
+              ],
+              "start": 12,
+              "end": 37
+            },
+            "start": 4,
+            "end": 37
           }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 39,
-      "end": 70,
-      "test": {
-        "type": "UnaryExpression",
-        "start": 43,
-        "end": 66,
-        "operator": "!",
-        "prefix": true,
-        "argument": {
-          "type": "ParenthesizedExpression",
-          "start": 44,
-          "end": 66,
-          "expression": {
+        ],
+        "start": 0,
+        "end": 38
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "UnaryExpression",
+          "operator": "!",
+          "argument": {
             "type": "ParenthesizedExpression",
-            "start": 45,
-            "end": 65,
             "expression": {
-              "type": "BinaryExpression",
-              "start": 46,
-              "end": 64,
-              "left": {
-                "type": "Literal",
+              "type": "ParenthesizedExpression",
+              "expression": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Literal",
+                  "value": "fooProp",
+                  "raw": "\"fooProp\"",
+                  "start": 46,
+                  "end": 55
+                },
+                "operator": "in",
+                "right": {
+                  "type": "Identifier",
+                  "name": "__obj",
+                  "start": 59,
+                  "end": 64
+                },
                 "start": 46,
-                "end": 55,
-                "value": "fooProp",
-                "raw": "\"fooProp\""
+                "end": 64
               },
-              "right": {
-                "type": "Identifier",
-                "start": 59,
-                "end": 64,
-                "name": "__obj",
-                "kind": "reference"
-              },
-              "operator": "in"
-            }
-          }
-        }
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 68,
-        "end": 70,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+              "start": 45,
+              "end": 65
+            },
+            "start": 44,
+            "end": 66
+          },
+          "prefix": true,
+          "start": 43,
+          "end": 66
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 68,
+          "end": 70
+        },
+        "alternate": null,
+        "start": 39,
+        "end": 70
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 70
+  },
+  "comments": [],
+  "diagnostics": []
 }

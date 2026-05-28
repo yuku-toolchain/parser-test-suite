@@ -1,150 +1,144 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 205,
-  "sourceType": "module",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 17,
-      "end": 30,
-      "expression": {
-        "type": "Literal",
-        "start": 17,
-        "end": 29,
-        "value": "use strict",
-        "raw": "\"use strict\""
-      },
-      "directive": "use strict",
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " @target: ES6"
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 32,
-      "end": 151,
-      "test": {
-        "type": "Literal",
-        "start": 36,
-        "end": 40,
-        "value": true,
-        "raw": "true"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 42,
-        "end": 151,
-        "body": [
-          {
-            "type": "FunctionDeclaration",
-            "start": 49,
-            "end": 67,
-            "id": {
-              "type": "Identifier",
-              "start": 58,
-              "end": 61,
-              "name": "foo",
-              "kind": "binding",
-              "decorators": [],
-              "typeAnnotation": null,
-              "optional": false
-            },
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 64,
-              "end": 67,
-              "body": []
-            },
-            "expression": false,
-            "typeParameters": null,
-            "returnType": null,
-            "declare": false,
-            "comments": [
-              {
-                "type": "Line",
-                "position": "after",
-                "sameLine": true,
-                "value": " Allowed to declare block scope function"
-              }
-            ]
-          },
-          {
-            "type": "ExpressionStatement",
-            "start": 116,
-            "end": 122,
-            "expression": {
-              "type": "CallExpression",
-              "start": 116,
-              "end": 121,
-              "callee": {
-                "type": "Identifier",
-                "start": 116,
-                "end": 119,
-                "name": "foo",
-                "kind": "reference",
-                "decorators": [],
-                "optional": false,
-                "typeAnnotation": null
-              },
-              "arguments": [],
-              "optional": false,
-              "typeArguments": null
-            },
-            "directive": null,
-            "comments": [
-              {
-                "type": "Line",
-                "position": "after",
-                "sameLine": true,
-                "value": " This call should be ok"
-              }
-            ]
-          }
-        ]
-      },
-      "alternate": null
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 153,
-      "end": 159,
-      "expression": {
-        "type": "CallExpression",
-        "start": 153,
-        "end": 158,
-        "callee": {
-          "type": "Identifier",
-          "start": 153,
-          "end": 156,
-          "name": "foo",
-          "kind": "reference",
-          "decorators": [],
-          "optional": false,
-          "typeAnnotation": null
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "Literal",
+          "value": "use strict",
+          "raw": "\"use strict\"",
+          "start": 17,
+          "end": 29
         },
-        "arguments": [],
-        "optional": false,
-        "typeArguments": null
+        "directive": "use strict",
+        "start": 17,
+        "end": 30
       },
-      "directive": null,
-      "comments": [
-        {
-          "type": "Line",
-          "position": "after",
-          "sameLine": true,
-          "value": " Cannot find name since foo is block scoped"
-        }
-      ]
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true",
+          "start": 36,
+          "end": 40
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "FunctionDeclaration",
+              "id": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "foo",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 58,
+                "end": 61
+              },
+              "generator": false,
+              "async": false,
+              "declare": false,
+              "typeParameters": null,
+              "params": [],
+              "returnType": null,
+              "body": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 64,
+                "end": 67
+              },
+              "expression": false,
+              "start": 49,
+              "end": 67
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "decorators": [],
+                  "name": "foo",
+                  "optional": false,
+                  "typeAnnotation": null,
+                  "start": 116,
+                  "end": 119
+                },
+                "typeArguments": null,
+                "arguments": [],
+                "optional": false,
+                "start": 116,
+                "end": 121
+              },
+              "directive": null,
+              "start": 116,
+              "end": 122
+            }
+          ],
+          "start": 42,
+          "end": 151
+        },
+        "alternate": null,
+        "start": 32,
+        "end": 151
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "foo",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 153,
+            "end": 156
+          },
+          "typeArguments": null,
+          "arguments": [],
+          "optional": false,
+          "start": 153,
+          "end": 158
+        },
+        "directive": null,
+        "start": 153,
+        "end": 159
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 205
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " @target: ES6",
+      "start": 0,
+      "end": 15
+    },
+    {
+      "type": "Line",
+      "value": " Allowed to declare block scope function",
+      "start": 68,
+      "end": 110
+    },
+    {
+      "type": "Line",
+      "value": " This call should be ok",
+      "start": 123,
+      "end": 148
+    },
+    {
+      "type": "Line",
+      "value": " Cannot find name since foo is block scoped",
+      "start": 160,
+      "end": 205
     }
-  ]
+  ],
+  "diagnostics": []
 }

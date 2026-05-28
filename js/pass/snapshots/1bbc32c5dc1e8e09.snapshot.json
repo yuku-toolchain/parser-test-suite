@@ -1,197 +1,192 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 196,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 79,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 78,
-          "id": {
-            "type": "Identifier",
-            "start": 6,
-            "end": 14,
-            "name": "datetime",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 17,
-            "end": 78,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 21,
-              "end": 43,
-              "object": {
-                "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "datetime",
+              "start": 6,
+              "end": 14
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Temporal",
+                  "start": 21,
+                  "end": 29
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "ZonedDateTime",
+                  "start": 30,
+                  "end": 43
+                },
+                "optional": false,
+                "computed": false,
                 "start": 21,
-                "end": 29,
-                "name": "Temporal",
-                "kind": "reference"
+                "end": 43
               },
-              "property": {
-                "type": "Identifier",
-                "start": 30,
-                "end": 43,
-                "name": "ZonedDateTime",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "(BigInt) 1000000000000000005n",
+                  "raw": "1_000_000_000_000_000_005n",
+                  "bigint": "1000000000000000005",
+                  "start": 44,
+                  "end": 70
+                },
+                {
+                  "type": "Literal",
+                  "value": "UTC",
+                  "raw": "\"UTC\"",
+                  "start": 72,
+                  "end": 77
+                }
+              ],
+              "start": 17,
+              "end": 78
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 44,
-                "end": 70,
-                "value": "(BigInt) 1000000000000000005n",
-                "raw": "1_000_000_000_000_000_005n",
-                "bigint": "1000000000000000005"
-              },
-              {
-                "type": "Literal",
-                "start": 72,
-                "end": 77,
-                "value": "UTC",
-                "raw": "\"UTC\""
-              }
-            ]
+            "start": 6,
+            "end": 78
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 80,
-      "end": 196,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 86,
-          "end": 195,
-          "id": {
-            "type": "Identifier",
-            "start": 86,
-            "end": 92,
-            "name": "result",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 95,
-            "end": 195,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 95,
-              "end": 109,
-              "object": {
-                "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 79
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "result",
+              "start": 86,
+              "end": 92
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "datetime",
+                  "start": 95,
+                  "end": 103
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "round",
+                  "start": 104,
+                  "end": 109
+                },
+                "optional": false,
+                "computed": false,
                 "start": 95,
-                "end": 103,
-                "name": "datetime",
-                "kind": "reference"
+                "end": 109
               },
-              "property": {
-                "type": "Identifier",
-                "start": 104,
-                "end": 109,
-                "name": "round",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
-                "type": "ObjectExpression",
-                "start": 110,
-                "end": 194,
-                "properties": [
-                  {
-                    "type": "Property",
-                    "start": 114,
-                    "end": 140,
-                    "key": {
-                      "type": "Identifier",
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "smallestUnit",
+                        "start": 114,
+                        "end": 126
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": "nanosecond",
+                        "raw": "\"nanosecond\"",
+                        "start": 128,
+                        "end": 140
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
                       "start": 114,
-                      "end": 126,
-                      "name": "smallestUnit",
-                      "kind": "name"
+                      "end": 140
                     },
-                    "value": {
-                      "type": "Literal",
-                      "start": 128,
-                      "end": 140,
-                      "value": "nanosecond",
-                      "raw": "\"nanosecond\""
-                    },
-                    "kind": "init",
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false
-                  },
-                  {
-                    "type": "Property",
-                    "start": 144,
-                    "end": 166,
-                    "key": {
-                      "type": "Identifier",
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "roundingIncrement",
+                        "start": 144,
+                        "end": 161
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": 2.5,
+                        "raw": "2.5",
+                        "start": 163,
+                        "end": 166
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
                       "start": 144,
-                      "end": 161,
-                      "name": "roundingIncrement",
-                      "kind": "name"
+                      "end": 166
                     },
-                    "value": {
-                      "type": "Literal",
-                      "start": 163,
-                      "end": 166,
-                      "value": 2.5,
-                      "raw": "2.5"
-                    },
-                    "kind": "init",
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false
-                  },
-                  {
-                    "type": "Property",
-                    "start": 170,
-                    "end": 192,
-                    "key": {
-                      "type": "Identifier",
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "roundingMode",
+                        "start": 170,
+                        "end": 182
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": "expand",
+                        "raw": "\"expand\"",
+                        "start": 184,
+                        "end": 192
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
                       "start": 170,
-                      "end": 182,
-                      "name": "roundingMode",
-                      "kind": "name"
-                    },
-                    "value": {
-                      "type": "Literal",
-                      "start": 184,
-                      "end": 192,
-                      "value": "expand",
-                      "raw": "\"expand\""
-                    },
-                    "kind": "init",
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false
-                  }
-                ]
-              }
-            ],
-            "optional": false
+                      "end": 192
+                    }
+                  ],
+                  "start": 110,
+                  "end": 194
+                }
+              ],
+              "optional": false,
+              "start": 95,
+              "end": 195
+            },
+            "start": 86,
+            "end": 195
           }
-        }
-      ]
-    }
-  ]
+        ],
+        "start": 80,
+        "end": 196
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 196
+  },
+  "comments": [],
+  "diagnostics": []
 }
