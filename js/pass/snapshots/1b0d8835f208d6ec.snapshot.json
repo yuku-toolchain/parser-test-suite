@@ -1,135 +1,132 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 142,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 85,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 84,
-          "id": {
-            "type": "Identifier",
-            "start": 6,
-            "end": 10,
-            "name": "i32a",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 13,
-            "end": 84,
-            "callee": {
-              "type": "Identifier",
-              "start": 17,
-              "end": 27,
-              "name": "Int32Array",
-              "kind": "reference"
-            },
-            "arguments": [
-              {
-                "type": "NewExpression",
-                "start": 28,
-                "end": 83,
-                "callee": {
-                  "type": "Identifier",
-                  "start": 32,
-                  "end": 49,
-                  "name": "SharedArrayBuffer",
-                  "kind": "reference"
-                },
-                "arguments": [
-                  {
-                    "type": "BinaryExpression",
-                    "start": 50,
-                    "end": 82,
-                    "left": {
-                      "type": "MemberExpression",
-                      "start": 50,
-                      "end": 78,
-                      "object": {
-                        "type": "Identifier",
-                        "start": 50,
-                        "end": 60,
-                        "name": "Int32Array",
-                        "kind": "reference"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "start": 61,
-                        "end": 78,
-                        "name": "BYTES_PER_ELEMENT",
-                        "kind": "name"
-                      },
-                      "computed": false,
-                      "optional": false
-                    },
-                    "right": {
-                      "type": "Literal",
-                      "start": 81,
-                      "end": 82,
-                      "value": 8,
-                      "raw": "8"
-                    },
-                    "operator": "*"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 86,
-      "end": 142,
-      "expression": {
-        "type": "CallExpression",
-        "start": 86,
-        "end": 141,
-        "callee": {
-          "type": "Identifier",
-          "start": 86,
-          "end": 119,
-          "name": "testWithAtomicsOutOfBoundsIndices",
-          "kind": "reference"
-        },
-        "arguments": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
           {
-            "type": "FunctionExpression",
-            "start": 120,
-            "end": 140,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [
-              {
-                "type": "Identifier",
-                "start": 130,
-                "end": 136,
-                "name": "IdxGen",
-                "kind": "binding"
-              }
-            ],
-            "body": {
-              "type": "BlockStatement",
-              "start": 138,
-              "end": 140,
-              "body": []
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "i32a",
+              "start": 6,
+              "end": 10
             },
-            "expression": false
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Int32Array",
+                "start": 17,
+                "end": 27
+              },
+              "arguments": [
+                {
+                  "type": "NewExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "SharedArrayBuffer",
+                    "start": 32,
+                    "end": 49
+                  },
+                  "arguments": [
+                    {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Int32Array",
+                          "start": 50,
+                          "end": 60
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "BYTES_PER_ELEMENT",
+                          "start": 61,
+                          "end": 78
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 50,
+                        "end": 78
+                      },
+                      "operator": "*",
+                      "right": {
+                        "type": "Literal",
+                        "value": 8,
+                        "raw": "8",
+                        "start": 81,
+                        "end": 82
+                      },
+                      "start": 50,
+                      "end": 82
+                    }
+                  ],
+                  "start": 28,
+                  "end": 83
+                }
+              ],
+              "start": 13,
+              "end": 84
+            },
+            "start": 6,
+            "end": 84
           }
         ],
-        "optional": false
+        "start": 0,
+        "end": 85
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "testWithAtomicsOutOfBoundsIndices",
+            "start": 86,
+            "end": 119
+          },
+          "arguments": [
+            {
+              "type": "FunctionExpression",
+              "id": null,
+              "generator": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "IdxGen",
+                  "start": 130,
+                  "end": 136
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 138,
+                "end": 140
+              },
+              "expression": false,
+              "start": 120,
+              "end": 140
+            }
+          ],
+          "optional": false,
+          "start": 86,
+          "end": 141
+        },
+        "start": 86,
+        "end": 142
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 142
+  },
+  "comments": [],
+  "diagnostics": []
 }

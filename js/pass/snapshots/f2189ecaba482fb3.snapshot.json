@@ -1,218 +1,216 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 109,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 31,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 30,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 7,
-            "name": "arr",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 10,
-            "end": 30,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 10,
-              "end": 24,
-              "object": {
-                "type": "ParenthesizedExpression",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 4,
+              "end": 7
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "ParenthesizedExpression",
+                  "expression": {
+                    "type": "Literal",
+                    "value": "(RegExp) /\\1(A)/",
+                    "raw": "/\\1(A)/",
+                    "regex": {
+                      "pattern": "\\1(A)",
+                      "flags": ""
+                    },
+                    "start": 11,
+                    "end": 18
+                  },
+                  "start": 10,
+                  "end": 19
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "exec",
+                  "start": 20,
+                  "end": 24
+                },
+                "optional": false,
+                "computed": false,
                 "start": 10,
-                "end": 19,
-                "expression": {
+                "end": 24
+              },
+              "arguments": [
+                {
                   "type": "Literal",
-                  "start": 11,
-                  "end": 18,
-                  "value": "(RegExp) /\\1(A)/",
-                  "raw": "/\\1(A)/",
-                  "regex": {
-                    "pattern": "\\1(A)",
-                    "flags": ""
-                  }
+                  "value": "AA",
+                  "raw": "\"AA\"",
+                  "start": 25,
+                  "end": 29
                 }
+              ],
+              "optional": false,
+              "start": 10,
+              "end": 30
+            },
+            "start": 4,
+            "end": 30
+          }
+        ],
+        "start": 0,
+        "end": 31
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
+          "left": {
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Identifier",
+              "name": "arr",
+              "start": 36,
+              "end": 39
+            },
+            "operator": "===",
+            "right": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "start": 44,
+              "end": 48
+            },
+            "start": 36,
+            "end": 48
+          },
+          "operator": "||",
+          "right": {
+            "type": "BinaryExpression",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "arr",
+                "start": 52,
+                "end": 55
               },
               "property": {
-                "type": "Identifier",
-                "start": 20,
-                "end": 24,
-                "name": "exec",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
                 "type": "Literal",
-                "start": 25,
-                "end": 29,
-                "value": "AA",
-                "raw": "\"AA\""
-              }
-            ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 32,
-      "end": 70,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 36,
-        "end": 66,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 36,
-          "end": 48,
-          "left": {
-            "type": "Identifier",
-            "start": 36,
-            "end": 39,
-            "name": "arr",
-            "kind": "reference"
-          },
-          "right": {
-            "type": "Literal",
-            "start": 44,
-            "end": 48,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
-        },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 52,
-          "end": 66,
-          "left": {
-            "type": "MemberExpression",
-            "start": 52,
-            "end": 58,
-            "object": {
-              "type": "Identifier",
+                "value": 0,
+                "raw": "0",
+                "start": 56,
+                "end": 57
+              },
+              "optional": false,
+              "computed": true,
               "start": 52,
-              "end": 55,
-              "name": "arr",
-              "kind": "reference"
+              "end": 58
             },
-            "property": {
+            "operator": "!==",
+            "right": {
               "type": "Literal",
-              "start": 56,
-              "end": 57,
-              "value": 0,
-              "raw": "0"
+              "value": "A",
+              "raw": "\"A\"",
+              "start": 63,
+              "end": 66
             },
-            "computed": true,
-            "optional": false
+            "start": 52,
+            "end": 66
           },
-          "right": {
-            "type": "Literal",
-            "start": 63,
-            "end": 66,
-            "value": "A",
-            "raw": "\"A\""
-          },
-          "operator": "!=="
+          "start": 36,
+          "end": 66
         },
-        "operator": "||"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 68,
-        "end": 70,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "IfStatement",
-      "start": 71,
-      "end": 109,
-      "test": {
-        "type": "LogicalExpression",
-        "start": 75,
-        "end": 105,
-        "left": {
-          "type": "BinaryExpression",
-          "start": 75,
-          "end": 87,
-          "left": {
-            "type": "Identifier",
-            "start": 75,
-            "end": 78,
-            "name": "arr",
-            "kind": "reference"
-          },
-          "right": {
-            "type": "Literal",
-            "start": 83,
-            "end": 87,
-            "value": null,
-            "raw": "null"
-          },
-          "operator": "==="
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 68,
+          "end": 70
         },
-        "right": {
-          "type": "BinaryExpression",
-          "start": 91,
-          "end": 105,
+        "alternate": null,
+        "start": 32,
+        "end": 70
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "LogicalExpression",
           "left": {
-            "type": "MemberExpression",
-            "start": 91,
-            "end": 97,
-            "object": {
+            "type": "BinaryExpression",
+            "left": {
               "type": "Identifier",
-              "start": 91,
-              "end": 94,
               "name": "arr",
-              "kind": "reference"
+              "start": 75,
+              "end": 78
             },
-            "property": {
+            "operator": "===",
+            "right": {
               "type": "Literal",
-              "start": 95,
-              "end": 96,
-              "value": 1,
-              "raw": "1"
+              "value": null,
+              "raw": "null",
+              "start": 83,
+              "end": 87
             },
-            "computed": true,
-            "optional": false
+            "start": 75,
+            "end": 87
           },
+          "operator": "||",
           "right": {
-            "type": "Literal",
-            "start": 102,
-            "end": 105,
-            "value": "A",
-            "raw": "\"A\""
+            "type": "BinaryExpression",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "arr",
+                "start": 91,
+                "end": 94
+              },
+              "property": {
+                "type": "Literal",
+                "value": 1,
+                "raw": "1",
+                "start": 95,
+                "end": 96
+              },
+              "optional": false,
+              "computed": true,
+              "start": 91,
+              "end": 97
+            },
+            "operator": "!==",
+            "right": {
+              "type": "Literal",
+              "value": "A",
+              "raw": "\"A\"",
+              "start": 102,
+              "end": 105
+            },
+            "start": 91,
+            "end": 105
           },
-          "operator": "!=="
+          "start": 75,
+          "end": 105
         },
-        "operator": "||"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 107,
-        "end": 109,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 107,
+          "end": 109
+        },
+        "alternate": null,
+        "start": 71,
+        "end": 109
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 109
+  },
+  "comments": [],
+  "diagnostics": []
 }

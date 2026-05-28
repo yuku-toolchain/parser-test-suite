@@ -1,150 +1,144 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 194,
-  "sourceType": "module",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 25,
-      "end": 38,
-      "expression": {
-        "type": "Literal",
-        "start": 25,
-        "end": 37,
-        "value": "use strict",
-        "raw": "\"use strict\""
-      },
-      "directive": "use strict",
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " @target: ES5, ES2015"
-        }
-      ]
-    },
-    {
-      "type": "IfStatement",
-      "start": 40,
-      "end": 160,
-      "test": {
-        "type": "Literal",
-        "start": 44,
-        "end": 48,
-        "value": true,
-        "raw": "true"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 50,
-        "end": 160,
-        "body": [
-          {
-            "type": "FunctionDeclaration",
-            "start": 57,
-            "end": 75,
-            "id": {
-              "type": "Identifier",
-              "start": 66,
-              "end": 69,
-              "name": "foo",
-              "kind": "binding",
-              "decorators": [],
-              "typeAnnotation": null,
-              "optional": false
-            },
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 72,
-              "end": 75,
-              "body": []
-            },
-            "expression": false,
-            "typeParameters": null,
-            "returnType": null,
-            "declare": false,
-            "comments": [
-              {
-                "type": "Line",
-                "position": "after",
-                "sameLine": true,
-                "value": " Error to declare function in block scope"
-              }
-            ]
-          },
-          {
-            "type": "ExpressionStatement",
-            "start": 125,
-            "end": 131,
-            "expression": {
-              "type": "CallExpression",
-              "start": 125,
-              "end": 130,
-              "callee": {
-                "type": "Identifier",
-                "start": 125,
-                "end": 128,
-                "name": "foo",
-                "kind": "reference",
-                "decorators": [],
-                "optional": false,
-                "typeAnnotation": null
-              },
-              "arguments": [],
-              "optional": false,
-              "typeArguments": null
-            },
-            "directive": null,
-            "comments": [
-              {
-                "type": "Line",
-                "position": "after",
-                "sameLine": true,
-                "value": " This call should be ok"
-              }
-            ]
-          }
-        ]
-      },
-      "alternate": null
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 162,
-      "end": 168,
-      "expression": {
-        "type": "CallExpression",
-        "start": 162,
-        "end": 167,
-        "callee": {
-          "type": "Identifier",
-          "start": 162,
-          "end": 165,
-          "name": "foo",
-          "kind": "reference",
-          "decorators": [],
-          "optional": false,
-          "typeAnnotation": null
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "Literal",
+          "value": "use strict",
+          "raw": "\"use strict\"",
+          "start": 25,
+          "end": 37
         },
-        "arguments": [],
-        "optional": false,
-        "typeArguments": null
+        "directive": "use strict",
+        "start": 25,
+        "end": 38
       },
-      "directive": null,
-      "comments": [
-        {
-          "type": "Line",
-          "position": "after",
-          "sameLine": true,
-          "value": " Error to find name foo"
-        }
-      ]
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true",
+          "start": 44,
+          "end": 48
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "FunctionDeclaration",
+              "id": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "foo",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 66,
+                "end": 69
+              },
+              "generator": false,
+              "async": false,
+              "declare": false,
+              "typeParameters": null,
+              "params": [],
+              "returnType": null,
+              "body": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 72,
+                "end": 75
+              },
+              "expression": false,
+              "start": 57,
+              "end": 75
+            },
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "decorators": [],
+                  "name": "foo",
+                  "optional": false,
+                  "typeAnnotation": null,
+                  "start": 125,
+                  "end": 128
+                },
+                "typeArguments": null,
+                "arguments": [],
+                "optional": false,
+                "start": 125,
+                "end": 130
+              },
+              "directive": null,
+              "start": 125,
+              "end": 131
+            }
+          ],
+          "start": 50,
+          "end": 160
+        },
+        "alternate": null,
+        "start": 40,
+        "end": 160
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "foo",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 162,
+            "end": 165
+          },
+          "typeArguments": null,
+          "arguments": [],
+          "optional": false,
+          "start": 162,
+          "end": 167
+        },
+        "directive": null,
+        "start": 162,
+        "end": 168
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 194
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " @target: ES5, ES2015",
+      "start": 0,
+      "end": 23
+    },
+    {
+      "type": "Line",
+      "value": " Error to declare function in block scope",
+      "start": 76,
+      "end": 119
+    },
+    {
+      "type": "Line",
+      "value": " This call should be ok",
+      "start": 132,
+      "end": 157
+    },
+    {
+      "type": "Line",
+      "value": " Error to find name foo",
+      "start": 169,
+      "end": 194
     }
-  ]
+  ],
+  "diagnostics": []
 }

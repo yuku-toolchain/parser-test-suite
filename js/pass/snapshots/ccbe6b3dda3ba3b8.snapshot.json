@@ -1,242 +1,236 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 195,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "IfStatement",
-      "start": 0,
-      "end": 43,
-      "test": {
-        "type": "UnaryExpression",
-        "start": 4,
-        "end": 39,
-        "operator": "!",
-        "prefix": true,
-        "argument": {
-          "type": "CallExpression",
-          "start": 5,
-          "end": 39,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 5,
-            "end": 26,
-            "object": {
-              "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "UnaryExpression",
+          "operator": "!",
+          "argument": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "String",
+                "start": 5,
+                "end": 11
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "hasOwnProperty",
+                "start": 12,
+                "end": 26
+              },
+              "optional": false,
+              "computed": false,
               "start": 5,
-              "end": 11,
-              "name": "String",
-              "kind": "reference"
+              "end": 26
             },
-            "property": {
-              "type": "Identifier",
-              "start": 12,
-              "end": 26,
-              "name": "hasOwnProperty",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 27,
-              "end": 38,
-              "value": "prototype",
-              "raw": "'prototype'"
-            }
-          ],
-          "optional": false
-        }
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 41,
-        "end": 43,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "TryStatement",
-      "start": 44,
-      "end": 151,
-      "block": {
-        "type": "BlockStatement",
-        "start": 48,
-        "end": 95,
-        "body": [
-          {
-            "type": "IfStatement",
-            "start": 52,
-            "end": 93,
-            "test": {
-              "type": "BinaryExpression",
-              "start": 56,
-              "end": 89,
-              "left": {
-                "type": "UnaryExpression",
-                "start": 56,
-                "end": 79,
-                "operator": "delete",
-                "prefix": true,
-                "argument": {
-                  "type": "MemberExpression",
-                  "start": 63,
-                  "end": 79,
-                  "object": {
-                    "type": "Identifier",
-                    "start": 63,
-                    "end": 69,
-                    "name": "String",
-                    "kind": "reference"
-                  },
-                  "property": {
-                    "type": "Identifier",
-                    "start": 70,
-                    "end": 79,
-                    "name": "prototype",
-                    "kind": "name"
-                  },
-                  "computed": false,
-                  "optional": false
-                }
-              },
-              "right": {
+            "arguments": [
+              {
                 "type": "Literal",
-                "start": 84,
-                "end": 89,
-                "value": false,
-                "raw": "false"
-              },
-              "operator": "!=="
-            },
-            "consequent": {
-              "type": "BlockStatement",
-              "start": 91,
-              "end": 93,
-              "body": []
-            },
-            "alternate": null
-          }
-        ]
-      },
-      "handler": {
-        "type": "CatchClause",
-        "start": 96,
-        "end": 151,
-        "param": {
-          "type": "Identifier",
-          "start": 103,
-          "end": 104,
-          "name": "e",
-          "kind": "binding"
+                "value": "prototype",
+                "raw": "'prototype'",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "optional": false,
+            "start": 5,
+            "end": 39
+          },
+          "prefix": true,
+          "start": 4,
+          "end": 39
         },
-        "body": {
+        "consequent": {
           "type": "BlockStatement",
-          "start": 106,
-          "end": 151,
+          "body": [],
+          "start": 41,
+          "end": 43
+        },
+        "alternate": null,
+        "start": 0,
+        "end": 43
+      },
+      {
+        "type": "TryStatement",
+        "block": {
+          "type": "BlockStatement",
           "body": [
             {
               "type": "IfStatement",
-              "start": 110,
-              "end": 149,
               "test": {
                 "type": "BinaryExpression",
-                "start": 114,
-                "end": 139,
                 "left": {
-                  "type": "Identifier",
-                  "start": 114,
-                  "end": 115,
-                  "name": "e",
-                  "kind": "reference"
+                  "type": "UnaryExpression",
+                  "operator": "delete",
+                  "argument": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "String",
+                      "start": 63,
+                      "end": 69
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "prototype",
+                      "start": 70,
+                      "end": 79
+                    },
+                    "optional": false,
+                    "computed": false,
+                    "start": 63,
+                    "end": 79
+                  },
+                  "prefix": true,
+                  "start": 56,
+                  "end": 79
                 },
+                "operator": "!==",
                 "right": {
-                  "type": "Identifier",
-                  "start": 127,
-                  "end": 139,
-                  "name": "Test262Error",
-                  "kind": "reference"
+                  "type": "Literal",
+                  "value": false,
+                  "raw": "false",
+                  "start": 84,
+                  "end": 89
                 },
-                "operator": "instanceof"
+                "start": 56,
+                "end": 89
               },
               "consequent": {
-                "type": "ThrowStatement",
-                "start": 141,
-                "end": 149,
-                "argument": {
-                  "type": "Identifier",
-                  "start": 147,
-                  "end": 148,
-                  "name": "e",
-                  "kind": "reference"
-                }
+                "type": "BlockStatement",
+                "body": [],
+                "start": 91,
+                "end": 93
               },
-              "alternate": null
-            }
-          ]
-        }
-      },
-      "finalizer": null
-    },
-    {
-      "type": "IfStatement",
-      "start": 152,
-      "end": 195,
-      "test": {
-        "type": "UnaryExpression",
-        "start": 156,
-        "end": 191,
-        "operator": "!",
-        "prefix": true,
-        "argument": {
-          "type": "CallExpression",
-          "start": 157,
-          "end": 191,
-          "callee": {
-            "type": "MemberExpression",
-            "start": 157,
-            "end": 178,
-            "object": {
-              "type": "Identifier",
-              "start": 157,
-              "end": 163,
-              "name": "String",
-              "kind": "reference"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 164,
-              "end": 178,
-              "name": "hasOwnProperty",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
-          },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 179,
-              "end": 190,
-              "value": "prototype",
-              "raw": "'prototype'"
+              "alternate": null,
+              "start": 52,
+              "end": 93
             }
           ],
-          "optional": false
-        }
+          "start": 48,
+          "end": 95
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "e",
+            "start": 103,
+            "end": 104
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "IfStatement",
+                "test": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "e",
+                    "start": 114,
+                    "end": 115
+                  },
+                  "operator": "instanceof",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "Test262Error",
+                    "start": 127,
+                    "end": 139
+                  },
+                  "start": 114,
+                  "end": 139
+                },
+                "consequent": {
+                  "type": "ThrowStatement",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "e",
+                    "start": 147,
+                    "end": 148
+                  },
+                  "start": 141,
+                  "end": 149
+                },
+                "alternate": null,
+                "start": 110,
+                "end": 149
+              }
+            ],
+            "start": 106,
+            "end": 151
+          },
+          "start": 96,
+          "end": 151
+        },
+        "finalizer": null,
+        "start": 44,
+        "end": 151
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 193,
-        "end": 195,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "UnaryExpression",
+          "operator": "!",
+          "argument": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "String",
+                "start": 157,
+                "end": 163
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "hasOwnProperty",
+                "start": 164,
+                "end": 178
+              },
+              "optional": false,
+              "computed": false,
+              "start": 157,
+              "end": 178
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": "prototype",
+                "raw": "'prototype'",
+                "start": 179,
+                "end": 190
+              }
+            ],
+            "optional": false,
+            "start": 157,
+            "end": 191
+          },
+          "prefix": true,
+          "start": 156,
+          "end": 191
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 193,
+          "end": 195
+        },
+        "alternate": null,
+        "start": 152,
+        "end": 195
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 195
+  },
+  "comments": [],
+  "diagnostics": []
 }

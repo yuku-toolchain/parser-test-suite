@@ -1,147 +1,145 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 127,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 26,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 15,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "__evaluated",
+              "start": 4,
+              "end": 15
+            },
+            "init": null,
             "start": 4,
-            "end": 15,
-            "name": "__evaluated",
-            "kind": "binding"
+            "end": 15
           },
-          "init": null
-        },
-        {
-          "type": "VariableDeclarator",
-          "start": 17,
-          "end": 25,
-          "id": {
-            "type": "Identifier",
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "__in__do",
+              "start": 17,
+              "end": 25
+            },
+            "init": null,
             "start": 17,
-            "end": 25,
-            "name": "__in__do",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 27,
-      "end": 78,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 27,
-        "end": 77,
-        "left": {
-          "type": "Identifier",
-          "start": 27,
-          "end": 38,
-          "name": "__evaluated",
-          "kind": "reference"
-        },
-        "right": {
-          "type": "CallExpression",
-          "start": 41,
-          "end": 77,
-          "callee": {
+            "end": 25
+          }
+        ],
+        "start": 0,
+        "end": 26
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
             "type": "Identifier",
-            "start": 41,
-            "end": 45,
-            "name": "eval",
-            "kind": "reference"
+            "name": "__evaluated",
+            "start": 27,
+            "end": 38
           },
-          "arguments": [
-            {
-              "type": "Literal",
-              "start": 46,
-              "end": 76,
-              "value": "do __in__do=1; while (false)",
-              "raw": "\"do __in__do=1; while (false)\""
-            }
-          ],
-          "optional": false
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "eval",
+              "start": 41,
+              "end": 45
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": "do __in__do=1; while (false)",
+                "raw": "\"do __in__do=1; while (false)\"",
+                "start": 46,
+                "end": 76
+              }
+            ],
+            "optional": false,
+            "start": 41,
+            "end": 77
+          },
+          "start": 27,
+          "end": 77
         },
-        "operator": "="
-      }
-    },
-    {
-      "type": "IfStatement",
-      "start": 79,
-      "end": 101,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 83,
-        "end": 97,
-        "left": {
-          "type": "Identifier",
+        "start": 27,
+        "end": 78
+      },
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "__in__do",
+            "start": 83,
+            "end": 91
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "raw": "1",
+            "start": 96,
+            "end": 97
+          },
           "start": 83,
-          "end": 91,
-          "name": "__in__do",
-          "kind": "reference"
+          "end": 97
         },
-        "right": {
-          "type": "Literal",
-          "start": 96,
-          "end": 97,
-          "value": 1,
-          "raw": "1"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 99,
+          "end": 101
         },
-        "operator": "!=="
+        "alternate": null,
+        "start": 79,
+        "end": 101
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 99,
-        "end": 101,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "IfStatement",
-      "start": 102,
-      "end": 127,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 106,
-        "end": 123,
-        "left": {
-          "type": "Identifier",
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "__evaluated",
+            "start": 106,
+            "end": 117
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": 1,
+            "raw": "1",
+            "start": 122,
+            "end": 123
+          },
           "start": 106,
-          "end": 117,
-          "name": "__evaluated",
-          "kind": "reference"
+          "end": 123
         },
-        "right": {
-          "type": "Literal",
-          "start": 122,
-          "end": 123,
-          "value": 1,
-          "raw": "1"
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 125,
+          "end": 127
         },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 125,
-        "end": 127,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+        "alternate": null,
+        "start": 102,
+        "end": 127
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 127
+  },
+  "comments": [],
+  "diagnostics": []
 }

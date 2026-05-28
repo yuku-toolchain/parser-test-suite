@@ -1,124 +1,123 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 200,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 71,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 70,
-          "id": {
-            "type": "Identifier",
-            "start": 6,
-            "end": 14,
-            "name": "datetime",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 17,
-            "end": 70,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 21,
-              "end": 43,
-              "object": {
-                "type": "Identifier",
-                "start": 21,
-                "end": 29,
-                "name": "Temporal",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 30,
-                "end": 43,
-                "name": "ZonedDateTime",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "datetime",
+              "start": 6,
+              "end": 14
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 44,
-                "end": 59,
-                "value": "(BigInt) 30000000000n",
-                "raw": "30_000_000_000n",
-                "bigint": "30000000000"
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Temporal",
+                  "start": 21,
+                  "end": 29
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "ZonedDateTime",
+                  "start": 30,
+                  "end": 43
+                },
+                "optional": false,
+                "computed": false,
+                "start": 21,
+                "end": 43
               },
-              {
-                "type": "Literal",
-                "start": 61,
-                "end": 69,
-                "value": "+01:35",
-                "raw": "\"+01:35\""
-              }
-            ]
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "(BigInt) 30000000000n",
+                  "raw": "30_000_000_000n",
+                  "bigint": "30000000000",
+                  "start": 44,
+                  "end": 59
+                },
+                {
+                  "type": "Literal",
+                  "value": "+01:35",
+                  "raw": "\"+01:35\"",
+                  "start": 61,
+                  "end": 69
+                }
+              ],
+              "start": 17,
+              "end": 70
+            },
+            "start": 6,
+            "end": 70
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 72,
-      "end": 131,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 76,
-          "end": 130,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 71
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "str",
+              "start": 76,
+              "end": 79
+            },
+            "init": {
+              "type": "Literal",
+              "value": "1970-01-01T01:35:30+01:35:00.000000000[+01:35]",
+              "raw": "\"1970-01-01T01:35:30+01:35:00.000000000[+01:35]\"",
+              "start": 82,
+              "end": 130
+            },
             "start": 76,
-            "end": 79,
-            "name": "str",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 82,
-            "end": 130,
-            "value": "1970-01-01T01:35:30+01:35:00.000000000[+01:35]",
-            "raw": "\"1970-01-01T01:35:30+01:35:00.000000000[+01:35]\""
+            "end": 130
           }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 132,
-      "end": 200,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 132,
-        "end": 199,
-        "left": {
-          "type": "Identifier",
+        ],
+        "start": 72,
+        "end": 131
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "str",
+            "start": 132,
+            "end": 135
+          },
+          "right": {
+            "type": "Literal",
+            "value": "1970-01-01T01:35:30+01:35:00.000000000[+01:35:00.000000000]",
+            "raw": "\"1970-01-01T01:35:30+01:35:00.000000000[+01:35:00.000000000]\"",
+            "start": 138,
+            "end": 199
+          },
           "start": 132,
-          "end": 135,
-          "name": "str",
-          "kind": "reference"
+          "end": 199
         },
-        "right": {
-          "type": "Literal",
-          "start": 138,
-          "end": 199,
-          "value": "1970-01-01T01:35:30+01:35:00.000000000[+01:35:00.000000000]",
-          "raw": "\"1970-01-01T01:35:30+01:35:00.000000000[+01:35:00.000000000]\""
-        },
-        "operator": "="
+        "start": 132,
+        "end": 200
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 200
+  },
+  "comments": [],
+  "diagnostics": []
 }

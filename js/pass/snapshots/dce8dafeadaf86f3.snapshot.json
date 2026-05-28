@@ -1,548 +1,518 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 689,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 266,
-      "end": 304,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 272,
-          "end": 303,
-          "id": {
-            "type": "Identifier",
-            "start": 272,
-            "end": 275,
-            "name": "dtf",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 278,
-            "end": 303,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 282,
-              "end": 301,
-              "object": {
-                "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "dtf",
+              "start": 272,
+              "end": 275
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Intl",
+                  "start": 282,
+                  "end": 286
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "DateTimeFormat",
+                  "start": 287,
+                  "end": 301
+                },
+                "optional": false,
+                "computed": false,
                 "start": 282,
-                "end": 286,
-                "name": "Intl",
-                "kind": "reference"
+                "end": 301
               },
-              "property": {
-                "type": "Identifier",
-                "start": 287,
-                "end": 301,
-                "name": "DateTimeFormat",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              "arguments": [],
+              "start": 278,
+              "end": 303
             },
-            "arguments": []
+            "start": 272,
+            "end": 303
           }
-        }
-      ],
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Copyright (C) 2018 Bloomberg LP. All rights reserved."
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " This code is governed by the BSD license found in the LICENSE file."
-        },
-        {
-          "type": "Block",
-          "position": "before",
-          "sameLine": false,
-          "value": "---\nesid: sec-datetime-format-functions\ndescription: Throw RangeError when called with different calendars\nfeatures: [Temporal]\n---"
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 305,
-      "end": 349,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 311,
-          "end": 348,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 266,
+        "end": 304
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "t1",
+              "start": 311,
+              "end": 313
+            },
+            "init": {
+              "type": "Literal",
+              "value": "1976-11-18T14:23:30+00:00[UTC]",
+              "raw": "\"1976-11-18T14:23:30+00:00[UTC]\"",
+              "start": 316,
+              "end": 348
+            },
             "start": 311,
-            "end": 313,
-            "name": "t1",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 316,
-            "end": 348,
-            "value": "1976-11-18T14:23:30+00:00[UTC]",
-            "raw": "\"1976-11-18T14:23:30+00:00[UTC]\""
+            "end": 348
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 350,
-      "end": 407,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 356,
-          "end": 406,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 305,
+        "end": 349
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "t2",
+              "start": 356,
+              "end": 358
+            },
+            "init": {
+              "type": "Literal",
+              "value": "2020-02-20T15:44:56-05:00[America/New_York]",
+              "raw": "\"2020-02-20T15:44:56-05:00[America/New_York]\"",
+              "start": 361,
+              "end": 406
+            },
             "start": 356,
-            "end": 358,
-            "name": "t2",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 361,
-            "end": 406,
-            "value": "2020-02-20T15:44:56-05:00[America/New_York]",
-            "raw": "\"2020-02-20T15:44:56-05:00[America/New_York]\""
+            "end": 406
           }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 409,
-      "end": 552,
-      "expression": {
-        "type": "CallExpression",
-        "start": 409,
-        "end": 551,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 409,
-          "end": 422,
-          "object": {
-            "type": "Identifier",
+        ],
+        "start": 350,
+        "end": 407
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 409,
+              "end": 415
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "throws",
+              "start": 416,
+              "end": 422
+            },
+            "optional": false,
+            "computed": false,
             "start": 409,
-            "end": 415,
-            "name": "assert",
-            "kind": "reference"
+            "end": 422
           },
-          "property": {
-            "type": "Identifier",
-            "start": 416,
-            "end": 422,
-            "name": "throws",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 423,
-            "end": 433,
-            "name": "RangeError",
-            "kind": "reference"
-          },
-          {
-            "type": "ArrowFunctionExpression",
-            "start": 435,
-            "end": 549,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "CallExpression",
-              "start": 443,
-              "end": 549,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 443,
-                "end": 458,
-                "object": {
-                  "type": "Identifier",
-                  "start": 443,
-                  "end": 446,
-                  "name": "dtf",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 447,
-                  "end": 458,
-                  "name": "formatRange",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
-              },
-              "arguments": [
-                {
-                  "type": "CallExpression",
-                  "start": 459,
-                  "end": 490,
-                  "callee": {
-                    "type": "MemberExpression",
-                    "start": 459,
-                    "end": 486,
-                    "object": {
-                      "type": "MemberExpression",
-                      "start": 459,
-                      "end": 481,
-                      "object": {
-                        "type": "Identifier",
-                        "start": 459,
-                        "end": 467,
-                        "name": "Temporal",
-                        "kind": "reference"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "start": 468,
-                        "end": 481,
-                        "name": "PlainDateTime",
-                        "kind": "name"
-                      },
-                      "computed": false,
-                      "optional": false
-                    },
-                    "property": {
-                      "type": "Identifier",
-                      "start": 482,
-                      "end": 486,
-                      "name": "from",
-                      "kind": "name"
-                    },
-                    "computed": false,
-                    "optional": false
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "RangeError",
+              "start": 423,
+              "end": 433
+            },
+            {
+              "type": "ArrowFunctionExpression",
+              "expression": true,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "dtf",
+                    "start": 443,
+                    "end": 446
                   },
-                  "arguments": [
-                    {
-                      "type": "Identifier",
-                      "start": 487,
-                      "end": 489,
-                      "name": "t1",
-                      "kind": "reference"
-                    }
-                  ],
-                  "optional": false
+                  "property": {
+                    "type": "Identifier",
+                    "name": "formatRange",
+                    "start": 447,
+                    "end": 458
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 443,
+                  "end": 458
                 },
-                {
-                  "type": "CallExpression",
-                  "start": 492,
-                  "end": 548,
-                  "callee": {
-                    "type": "MemberExpression",
-                    "start": 492,
-                    "end": 536,
-                    "object": {
-                      "type": "CallExpression",
-                      "start": 492,
-                      "end": 523,
-                      "callee": {
+                "arguments": [
+                  {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "object": {
                         "type": "MemberExpression",
-                        "start": 492,
-                        "end": 519,
                         "object": {
-                          "type": "MemberExpression",
-                          "start": 492,
-                          "end": 514,
-                          "object": {
-                            "type": "Identifier",
-                            "start": 492,
-                            "end": 500,
-                            "name": "Temporal",
-                            "kind": "reference"
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "start": 501,
-                            "end": 514,
-                            "name": "PlainDateTime",
-                            "kind": "name"
-                          },
-                          "computed": false,
-                          "optional": false
+                          "type": "Identifier",
+                          "name": "Temporal",
+                          "start": 459,
+                          "end": 467
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 515,
-                          "end": 519,
-                          "name": "from",
-                          "kind": "name"
+                          "name": "PlainDateTime",
+                          "start": 468,
+                          "end": 481
                         },
+                        "optional": false,
                         "computed": false,
-                        "optional": false
+                        "start": 459,
+                        "end": 481
                       },
-                      "arguments": [
-                        {
-                          "type": "Identifier",
-                          "start": 520,
-                          "end": 522,
-                          "name": "t2",
-                          "kind": "reference"
-                        }
-                      ],
-                      "optional": false
+                      "property": {
+                        "type": "Identifier",
+                        "name": "from",
+                        "start": 482,
+                        "end": 486
+                      },
+                      "optional": false,
+                      "computed": false,
+                      "start": 459,
+                      "end": 486
                     },
-                    "property": {
-                      "type": "Identifier",
-                      "start": 524,
-                      "end": 536,
-                      "name": "withCalendar",
-                      "kind": "name"
-                    },
-                    "computed": false,
-                    "optional": false
+                    "arguments": [
+                      {
+                        "type": "Identifier",
+                        "name": "t1",
+                        "start": 487,
+                        "end": 489
+                      }
+                    ],
+                    "optional": false,
+                    "start": 459,
+                    "end": 490
                   },
-                  "arguments": [
-                    {
-                      "type": "Literal",
-                      "start": 537,
-                      "end": 547,
-                      "value": "japanese",
-                      "raw": "\"japanese\""
-                    }
-                  ],
-                  "optional": false
-                }
-              ],
-              "optional": false
+                  {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "Temporal",
+                              "start": 492,
+                              "end": 500
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "PlainDateTime",
+                              "start": 501,
+                              "end": 514
+                            },
+                            "optional": false,
+                            "computed": false,
+                            "start": 492,
+                            "end": 514
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "from",
+                            "start": 515,
+                            "end": 519
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 492,
+                          "end": 519
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "t2",
+                            "start": 520,
+                            "end": 522
+                          }
+                        ],
+                        "optional": false,
+                        "start": 492,
+                        "end": 523
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "withCalendar",
+                        "start": 524,
+                        "end": 536
+                      },
+                      "optional": false,
+                      "computed": false,
+                      "start": 492,
+                      "end": 536
+                    },
+                    "arguments": [
+                      {
+                        "type": "Literal",
+                        "value": "japanese",
+                        "raw": "\"japanese\"",
+                        "start": 537,
+                        "end": 547
+                      }
+                    ],
+                    "optional": false,
+                    "start": 492,
+                    "end": 548
+                  }
+                ],
+                "optional": false,
+                "start": 443,
+                "end": 549
+              },
+              "id": null,
+              "generator": false,
+              "start": 435,
+              "end": 549
+            }
+          ],
+          "optional": false,
+          "start": 409,
+          "end": 551
+        },
+        "start": 409,
+        "end": 552
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 553,
+              "end": 559
             },
-            "expression": true
-          }
-        ],
-        "optional": false
+            "property": {
+              "type": "Identifier",
+              "name": "throws",
+              "start": 560,
+              "end": 566
+            },
+            "optional": false,
+            "computed": false,
+            "start": 553,
+            "end": 566
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "RangeError",
+              "start": 567,
+              "end": 577
+            },
+            {
+              "type": "ArrowFunctionExpression",
+              "expression": true,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "dtf",
+                    "start": 587,
+                    "end": 590
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "formatRange",
+                    "start": 591,
+                    "end": 602
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 587,
+                  "end": 602
+                },
+                "arguments": [
+                  {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Temporal",
+                          "start": 603,
+                          "end": 611
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "PlainDate",
+                          "start": 612,
+                          "end": 621
+                        },
+                        "optional": false,
+                        "computed": false,
+                        "start": 603,
+                        "end": 621
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "from",
+                        "start": 622,
+                        "end": 626
+                      },
+                      "optional": false,
+                      "computed": false,
+                      "start": 603,
+                      "end": 626
+                    },
+                    "arguments": [
+                      {
+                        "type": "Identifier",
+                        "name": "t1",
+                        "start": 627,
+                        "end": 629
+                      }
+                    ],
+                    "optional": false,
+                    "start": 603,
+                    "end": 630
+                  },
+                  {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "Temporal",
+                              "start": 632,
+                              "end": 640
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "PlainDate",
+                              "start": 641,
+                              "end": 650
+                            },
+                            "optional": false,
+                            "computed": false,
+                            "start": 632,
+                            "end": 650
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "from",
+                            "start": 651,
+                            "end": 655
+                          },
+                          "optional": false,
+                          "computed": false,
+                          "start": 632,
+                          "end": 655
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "t2",
+                            "start": 656,
+                            "end": 658
+                          }
+                        ],
+                        "optional": false,
+                        "start": 632,
+                        "end": 659
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "withCalendar",
+                        "start": 660,
+                        "end": 672
+                      },
+                      "optional": false,
+                      "computed": false,
+                      "start": 632,
+                      "end": 672
+                    },
+                    "arguments": [
+                      {
+                        "type": "Literal",
+                        "value": "japanese",
+                        "raw": "\"japanese\"",
+                        "start": 673,
+                        "end": 683
+                      }
+                    ],
+                    "optional": false,
+                    "start": 632,
+                    "end": 684
+                  }
+                ],
+                "optional": false,
+                "start": 587,
+                "end": 685
+              },
+              "id": null,
+              "generator": false,
+              "start": 579,
+              "end": 685
+            }
+          ],
+          "optional": false,
+          "start": 553,
+          "end": 687
+        },
+        "start": 553,
+        "end": 688
       }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 689
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2018 Bloomberg LP. All rights reserved.",
+      "start": 0,
+      "end": 56
     },
     {
-      "type": "ExpressionStatement",
-      "start": 553,
-      "end": 688,
-      "expression": {
-        "type": "CallExpression",
-        "start": 553,
-        "end": 687,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 553,
-          "end": 566,
-          "object": {
-            "type": "Identifier",
-            "start": 553,
-            "end": 559,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 560,
-            "end": 566,
-            "name": "throws",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 567,
-            "end": 577,
-            "name": "RangeError",
-            "kind": "reference"
-          },
-          {
-            "type": "ArrowFunctionExpression",
-            "start": 579,
-            "end": 685,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "CallExpression",
-              "start": 587,
-              "end": 685,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 587,
-                "end": 602,
-                "object": {
-                  "type": "Identifier",
-                  "start": 587,
-                  "end": 590,
-                  "name": "dtf",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 591,
-                  "end": 602,
-                  "name": "formatRange",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
-              },
-              "arguments": [
-                {
-                  "type": "CallExpression",
-                  "start": 603,
-                  "end": 630,
-                  "callee": {
-                    "type": "MemberExpression",
-                    "start": 603,
-                    "end": 626,
-                    "object": {
-                      "type": "MemberExpression",
-                      "start": 603,
-                      "end": 621,
-                      "object": {
-                        "type": "Identifier",
-                        "start": 603,
-                        "end": 611,
-                        "name": "Temporal",
-                        "kind": "reference"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "start": 612,
-                        "end": 621,
-                        "name": "PlainDate",
-                        "kind": "name"
-                      },
-                      "computed": false,
-                      "optional": false
-                    },
-                    "property": {
-                      "type": "Identifier",
-                      "start": 622,
-                      "end": 626,
-                      "name": "from",
-                      "kind": "name"
-                    },
-                    "computed": false,
-                    "optional": false
-                  },
-                  "arguments": [
-                    {
-                      "type": "Identifier",
-                      "start": 627,
-                      "end": 629,
-                      "name": "t1",
-                      "kind": "reference"
-                    }
-                  ],
-                  "optional": false
-                },
-                {
-                  "type": "CallExpression",
-                  "start": 632,
-                  "end": 684,
-                  "callee": {
-                    "type": "MemberExpression",
-                    "start": 632,
-                    "end": 672,
-                    "object": {
-                      "type": "CallExpression",
-                      "start": 632,
-                      "end": 659,
-                      "callee": {
-                        "type": "MemberExpression",
-                        "start": 632,
-                        "end": 655,
-                        "object": {
-                          "type": "MemberExpression",
-                          "start": 632,
-                          "end": 650,
-                          "object": {
-                            "type": "Identifier",
-                            "start": 632,
-                            "end": 640,
-                            "name": "Temporal",
-                            "kind": "reference"
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "start": 641,
-                            "end": 650,
-                            "name": "PlainDate",
-                            "kind": "name"
-                          },
-                          "computed": false,
-                          "optional": false
-                        },
-                        "property": {
-                          "type": "Identifier",
-                          "start": 651,
-                          "end": 655,
-                          "name": "from",
-                          "kind": "name"
-                        },
-                        "computed": false,
-                        "optional": false
-                      },
-                      "arguments": [
-                        {
-                          "type": "Identifier",
-                          "start": 656,
-                          "end": 658,
-                          "name": "t2",
-                          "kind": "reference"
-                        }
-                      ],
-                      "optional": false
-                    },
-                    "property": {
-                      "type": "Identifier",
-                      "start": 660,
-                      "end": 672,
-                      "name": "withCalendar",
-                      "kind": "name"
-                    },
-                    "computed": false,
-                    "optional": false
-                  },
-                  "arguments": [
-                    {
-                      "type": "Literal",
-                      "start": 673,
-                      "end": 683,
-                      "value": "japanese",
-                      "raw": "\"japanese\""
-                    }
-                  ],
-                  "optional": false
-                }
-              ],
-              "optional": false
-            },
-            "expression": true
-          }
-        ],
-        "optional": false
-      }
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 57,
+      "end": 127
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-datetime-format-functions\ndescription: Throw RangeError when called with different calendars\nfeatures: [Temporal]\n---",
+      "start": 129,
+      "end": 264
     }
-  ]
+  ],
+  "diagnostics": []
 }

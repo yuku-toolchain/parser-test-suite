@@ -1,0 +1,28 @@
+name: create-snapshots
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-snapshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun update --latest --force
+      - id: meta
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+      - run: bun run create-snapshots
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: create snapshots ${{ steps.meta.outputs.date }}
+          title: create snapshots ${{ steps.meta.outputs.date }}
+          body: ""
+          branch: snapshots-${{ steps.meta.outputs.date }}
+          delete-branch: true

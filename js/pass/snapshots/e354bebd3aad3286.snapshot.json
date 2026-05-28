@@ -1,141 +1,136 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 517,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 343,
-      "end": 516,
-      "expression": {
-        "type": "CallExpression",
-        "start": 343,
-        "end": 515,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 343,
-          "end": 359,
-          "object": {
-            "type": "Identifier",
-            "start": 343,
-            "end": 349,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 350,
-            "end": 359,
-            "name": "sameValue",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "CallExpression",
-            "start": 363,
-            "end": 402,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 363,
-              "end": 384,
-              "object": {
-                "type": "Identifier",
-                "start": 363,
-                "end": 369,
-                "name": "Object",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 370,
-                "end": 384,
-                "name": "getPrototypeOf",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
-                "type": "MemberExpression",
-                "start": 385,
-                "end": 401,
-                "object": {
-                  "type": "Identifier",
-                  "start": 385,
-                  "end": 392,
-                  "name": "Promise",
-                  "kind": "reference"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 393,
-                  "end": 401,
-                  "name": "allKeyed",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
-              }
-            ],
-            "optional": false
-          },
-          {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
             "type": "MemberExpression",
-            "start": 406,
-            "end": 424,
             "object": {
               "type": "Identifier",
-              "start": 406,
-              "end": 414,
-              "name": "Function",
-              "kind": "reference"
+              "name": "assert",
+              "start": 343,
+              "end": 349
             },
             "property": {
               "type": "Identifier",
-              "start": 415,
-              "end": 424,
-              "name": "prototype",
-              "kind": "name"
+              "name": "sameValue",
+              "start": 350,
+              "end": 359
             },
+            "optional": false,
             "computed": false,
-            "optional": false
+            "start": 343,
+            "end": 359
           },
-          {
-            "type": "Literal",
-            "start": 428,
-            "end": 513,
-            "value": "Object.getPrototypeOf(Promise.allKeyed) must return the value of Function.prototype",
-            "raw": "\"Object.getPrototypeOf(Promise.allKeyed) must return the value of Function.prototype\""
-          }
-        ],
-        "optional": false
-      },
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Copyright (C) 2026 Danial Asaria (Bloomberg LP). All rights reserved."
+          "arguments": [
+            {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Object",
+                  "start": 363,
+                  "end": 369
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "getPrototypeOf",
+                  "start": 370,
+                  "end": 384
+                },
+                "optional": false,
+                "computed": false,
+                "start": 363,
+                "end": 384
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "Promise",
+                    "start": 385,
+                    "end": 392
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "allKeyed",
+                    "start": 393,
+                    "end": 401
+                  },
+                  "optional": false,
+                  "computed": false,
+                  "start": 385,
+                  "end": 401
+                }
+              ],
+              "optional": false,
+              "start": 363,
+              "end": 402
+            },
+            {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Function",
+                "start": 406,
+                "end": 414
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "prototype",
+                "start": 415,
+                "end": 424
+              },
+              "optional": false,
+              "computed": false,
+              "start": 406,
+              "end": 424
+            },
+            {
+              "type": "Literal",
+              "value": "Object.getPrototypeOf(Promise.allKeyed) must return the value of Function.prototype",
+              "raw": "\"Object.getPrototypeOf(Promise.allKeyed) must return the value of Function.prototype\"",
+              "start": 428,
+              "end": 513
+            }
+          ],
+          "optional": false,
+          "start": 343,
+          "end": 515
         },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " This code is governed by the BSD license found in the LICENSE file."
-        },
-        {
-          "type": "Block",
-          "position": "before",
-          "sameLine": false,
-          "value": "---\nesid: sec-promise.allkeyed\ndescription: >\n  The value of the [[Prototype]] internal slot of Promise.allKeyed is the\n  intrinsic object %FunctionPrototype%.\nfeatures: [await-dictionary]\n---"
-        }
-      ]
+        "start": 343,
+        "end": 516
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 517
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2026 Danial Asaria (Bloomberg LP). All rights reserved.",
+      "start": 0,
+      "end": 72
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 73,
+      "end": 143
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-promise.allkeyed\ndescription: >\n  The value of the [[Prototype]] internal slot of Promise.allKeyed is the\n  intrinsic object %FunctionPrototype%.\nfeatures: [await-dictionary]\n---",
+      "start": 145,
+      "end": 341
     }
-  ]
+  ],
+  "diagnostics": []
 }

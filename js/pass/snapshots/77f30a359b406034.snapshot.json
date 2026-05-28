@@ -1,442 +1,419 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 835,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 316,
-      "end": 369,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 322,
-          "end": 368,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "DSTEnd",
+              "start": 322,
+              "end": 328
+            },
+            "init": {
+              "type": "Literal",
+              "value": "2019-02-16T23:45[America/Sao_Paulo]",
+              "raw": "\"2019-02-16T23:45[America/Sao_Paulo]\"",
+              "start": 331,
+              "end": 368
+            },
             "start": 322,
-            "end": 328,
-            "name": "DSTEnd",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 331,
-            "end": 368,
-            "value": "2019-02-16T23:45[America/Sao_Paulo]",
-            "raw": "\"2019-02-16T23:45[America/Sao_Paulo]\""
+            "end": 368
           }
-        }
-      ],
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Copyright (C) 2018 Bloomberg LP. All rights reserved."
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " This code is governed by the BSD license found in the LICENSE file."
-        },
-        {
-          "type": "Block",
-          "position": "before",
-          "sameLine": false,
-          "value": "---\nesid: sec-temporal.zoneddatetime.from\ndescription: Test behaviour around DST boundaries without any options set.\nfeatures: [Temporal]\n---"
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Ambiguous zoned date time - Fall DST"
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 370,
-      "end": 416,
-      "kind": "let",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 374,
-          "end": 415,
-          "id": {
-            "type": "Identifier",
-            "start": 374,
-            "end": 377,
-            "name": "zdt",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 380,
-            "end": 415,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 380,
-              "end": 407,
-              "object": {
+        ],
+        "start": 316,
+        "end": 369
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "let",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "zdt",
+              "start": 374,
+              "end": 377
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
                 "type": "MemberExpression",
-                "start": 380,
-                "end": 402,
                 "object": {
-                  "type": "Identifier",
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "Temporal",
+                    "start": 380,
+                    "end": 388
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "ZonedDateTime",
+                    "start": 389,
+                    "end": 402
+                  },
+                  "optional": false,
+                  "computed": false,
                   "start": 380,
-                  "end": 388,
-                  "name": "Temporal",
-                  "kind": "reference"
+                  "end": 402
                 },
                 "property": {
                   "type": "Identifier",
-                  "start": 389,
-                  "end": 402,
-                  "name": "ZonedDateTime",
-                  "kind": "name"
+                  "name": "from",
+                  "start": 403,
+                  "end": 407
                 },
+                "optional": false,
                 "computed": false,
-                "optional": false
+                "start": 380,
+                "end": 407
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "DSTEnd",
+                  "start": 408,
+                  "end": 414
+                }
+              ],
+              "optional": false,
+              "start": 380,
+              "end": 415
+            },
+            "start": 374,
+            "end": 415
+          }
+        ],
+        "start": 370,
+        "end": 416
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 417,
+              "end": 423
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "sameValue",
+              "start": 424,
+              "end": 433
+            },
+            "optional": false,
+            "computed": false,
+            "start": 417,
+            "end": 433
+          },
+          "arguments": [
+            {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "zdt",
+                "start": 437,
+                "end": 440
               },
               "property": {
                 "type": "Identifier",
-                "start": 403,
-                "end": 407,
-                "name": "from",
-                "kind": "name"
+                "name": "offset",
+                "start": 441,
+                "end": 447
               },
+              "optional": false,
               "computed": false,
-              "optional": false
+              "start": 437,
+              "end": 447
+            },
+            {
+              "type": "Literal",
+              "value": "-02:00",
+              "raw": "\"-02:00\"",
+              "start": 451,
+              "end": 459
+            },
+            {
+              "type": "Literal",
+              "value": "Ambiguous zoned date time",
+              "raw": "\"Ambiguous zoned date time\"",
+              "start": 463,
+              "end": 490
+            }
+          ],
+          "optional": false,
+          "start": 417,
+          "end": 491
+        },
+        "start": 417,
+        "end": 492
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "DSTStart",
+              "start": 545,
+              "end": 553
+            },
+            "init": {
+              "type": "Literal",
+              "value": "2020-03-08T02:30[America/Los_Angeles]",
+              "raw": "\"2020-03-08T02:30[America/Los_Angeles]\"",
+              "start": 556,
+              "end": 595
+            },
+            "start": 545,
+            "end": 595
+          }
+        ],
+        "start": 539,
+        "end": 596
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "zdt",
+            "start": 597,
+            "end": 600
+          },
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Temporal",
+                  "start": 603,
+                  "end": 611
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "ZonedDateTime",
+                  "start": 612,
+                  "end": 625
+                },
+                "optional": false,
+                "computed": false,
+                "start": 603,
+                "end": 625
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "from",
+                "start": 626,
+                "end": 630
+              },
+              "optional": false,
+              "computed": false,
+              "start": 603,
+              "end": 630
             },
             "arguments": [
               {
                 "type": "Identifier",
-                "start": 408,
-                "end": 414,
-                "name": "DSTEnd",
-                "kind": "reference"
+                "name": "DSTStart",
+                "start": 631,
+                "end": 639
               }
             ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 417,
-      "end": 492,
-      "expression": {
-        "type": "CallExpression",
-        "start": 417,
-        "end": 491,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 417,
-          "end": 433,
-          "object": {
-            "type": "Identifier",
-            "start": 417,
-            "end": 423,
-            "name": "assert",
-            "kind": "reference"
+            "optional": false,
+            "start": 603,
+            "end": 640
           },
-          "property": {
-            "type": "Identifier",
-            "start": 424,
-            "end": 433,
-            "name": "sameValue",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "MemberExpression",
-            "start": 437,
-            "end": 447,
-            "object": {
-              "type": "Identifier",
-              "start": 437,
-              "end": 440,
-              "name": "zdt",
-              "kind": "reference"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 441,
-              "end": 447,
-              "name": "offset",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
-          },
-          {
-            "type": "Literal",
-            "start": 451,
-            "end": 459,
-            "value": "-02:00",
-            "raw": "\"-02:00\""
-          },
-          {
-            "type": "Literal",
-            "start": 463,
-            "end": 490,
-            "value": "Ambiguous zoned date time",
-            "raw": "\"Ambiguous zoned date time\""
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 539,
-      "end": 596,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 545,
-          "end": 595,
-          "id": {
-            "type": "Identifier",
-            "start": 545,
-            "end": 553,
-            "name": "DSTStart",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 556,
-            "end": 595,
-            "value": "2020-03-08T02:30[America/Los_Angeles]",
-            "raw": "\"2020-03-08T02:30[America/Los_Angeles]\""
-          }
-        }
-      ],
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Non existent zoned date time - Spring DST"
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 597,
-      "end": 641,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 597,
-        "end": 640,
-        "left": {
-          "type": "Identifier",
           "start": 597,
-          "end": 600,
-          "name": "zdt",
-          "kind": "reference"
+          "end": 640
         },
-        "right": {
+        "start": 597,
+        "end": 641
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
           "type": "CallExpression",
-          "start": 603,
-          "end": 640,
           "callee": {
             "type": "MemberExpression",
-            "start": 603,
-            "end": 630,
             "object": {
-              "type": "MemberExpression",
-              "start": 603,
-              "end": 625,
-              "object": {
-                "type": "Identifier",
-                "start": 603,
-                "end": 611,
-                "name": "Temporal",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 612,
-                "end": 625,
-                "name": "ZonedDateTime",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              "type": "Identifier",
+              "name": "assert",
+              "start": 642,
+              "end": 648
             },
             "property": {
               "type": "Identifier",
-              "start": 626,
-              "end": 630,
-              "name": "from",
-              "kind": "name"
+              "name": "sameValue",
+              "start": 649,
+              "end": 658
             },
+            "optional": false,
             "computed": false,
-            "optional": false
+            "start": 642,
+            "end": 658
           },
           "arguments": [
             {
-              "type": "Identifier",
-              "start": 631,
-              "end": 639,
-              "name": "DSTStart",
-              "kind": "reference"
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "zdt",
+                "start": 662,
+                "end": 665
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "offset",
+                "start": 666,
+                "end": 672
+              },
+              "optional": false,
+              "computed": false,
+              "start": 662,
+              "end": 672
+            },
+            {
+              "type": "Literal",
+              "value": "-07:00",
+              "raw": "\"-07:00\"",
+              "start": 676,
+              "end": 684
+            },
+            {
+              "type": "Literal",
+              "value": "Offset result, zoned date time in non existent time",
+              "raw": "\"Offset result, zoned date time in non existent time\"",
+              "start": 688,
+              "end": 741
             }
           ],
-          "optional": false
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 642,
-      "end": 743,
-      "expression": {
-        "type": "CallExpression",
-        "start": 642,
-        "end": 742,
-        "callee": {
-          "type": "MemberExpression",
+          "optional": false,
           "start": 642,
-          "end": 658,
-          "object": {
-            "type": "Identifier",
-            "start": 642,
-            "end": 648,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 649,
-            "end": 658,
-            "name": "sameValue",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "end": 742
         },
-        "arguments": [
-          {
+        "start": 642,
+        "end": 743
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
             "type": "MemberExpression",
-            "start": 662,
-            "end": 672,
             "object": {
               "type": "Identifier",
-              "start": 662,
-              "end": 665,
-              "name": "zdt",
-              "kind": "reference"
+              "name": "assert",
+              "start": 744,
+              "end": 750
             },
             "property": {
               "type": "Identifier",
-              "start": 666,
-              "end": 672,
-              "name": "offset",
-              "kind": "name"
+              "name": "sameValue",
+              "start": 751,
+              "end": 760
             },
+            "optional": false,
             "computed": false,
-            "optional": false
+            "start": 744,
+            "end": 760
           },
-          {
-            "type": "Literal",
-            "start": 676,
-            "end": 684,
-            "value": "-07:00",
-            "raw": "\"-07:00\""
-          },
-          {
-            "type": "Literal",
-            "start": 688,
-            "end": 741,
-            "value": "Offset result, zoned date time in non existent time",
-            "raw": "\"Offset result, zoned date time in non existent time\""
-          }
-        ],
-        "optional": false
+          "arguments": [
+            {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "zdt",
+                "start": 764,
+                "end": 767
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "hour",
+                "start": 768,
+                "end": 772
+              },
+              "optional": false,
+              "computed": false,
+              "start": 764,
+              "end": 772
+            },
+            {
+              "type": "Literal",
+              "value": 3,
+              "raw": "3",
+              "start": 776,
+              "end": 777
+            },
+            {
+              "type": "Literal",
+              "value": "Hour result, zoned date time in non existent time",
+              "raw": "\"Hour result, zoned date time in non existent time\"",
+              "start": 781,
+              "end": 832
+            }
+          ],
+          "optional": false,
+          "start": 744,
+          "end": 833
+        },
+        "start": 744,
+        "end": 834
       }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 835
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2018 Bloomberg LP. All rights reserved.",
+      "start": 0,
+      "end": 56
     },
     {
-      "type": "ExpressionStatement",
-      "start": 744,
-      "end": 834,
-      "expression": {
-        "type": "CallExpression",
-        "start": 744,
-        "end": 833,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 744,
-          "end": 760,
-          "object": {
-            "type": "Identifier",
-            "start": 744,
-            "end": 750,
-            "name": "assert",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 751,
-            "end": 760,
-            "name": "sameValue",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
-          {
-            "type": "MemberExpression",
-            "start": 764,
-            "end": 772,
-            "object": {
-              "type": "Identifier",
-              "start": 764,
-              "end": 767,
-              "name": "zdt",
-              "kind": "reference"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 768,
-              "end": 772,
-              "name": "hour",
-              "kind": "name"
-            },
-            "computed": false,
-            "optional": false
-          },
-          {
-            "type": "Literal",
-            "start": 776,
-            "end": 777,
-            "value": 3,
-            "raw": "3"
-          },
-          {
-            "type": "Literal",
-            "start": 781,
-            "end": 832,
-            "value": "Hour result, zoned date time in non existent time",
-            "raw": "\"Hour result, zoned date time in non existent time\""
-          }
-        ],
-        "optional": false
-      }
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 57,
+      "end": 127
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-temporal.zoneddatetime.from\ndescription: Test behaviour around DST boundaries without any options set.\nfeatures: [Temporal]\n---",
+      "start": 129,
+      "end": 274
+    },
+    {
+      "type": "Line",
+      "value": " Ambiguous zoned date time - Fall DST",
+      "start": 276,
+      "end": 315
+    },
+    {
+      "type": "Line",
+      "value": " Non existent zoned date time - Spring DST",
+      "start": 494,
+      "end": 538
     }
-  ]
+  ],
+  "diagnostics": []
 }

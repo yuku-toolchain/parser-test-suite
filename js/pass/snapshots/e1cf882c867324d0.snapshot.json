@@ -1,143 +1,142 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 81,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 9,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 8,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 8,
-            "name": "rest",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 10,
-      "end": 26,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 14,
-          "end": 25,
-          "id": {
-            "type": "Identifier",
-            "start": 14,
-            "end": 21,
-            "name": "counter",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 24,
-            "end": 25,
-            "value": 0,
-            "raw": "0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "ForOfStatement",
-      "start": 27,
-      "end": 81,
-      "left": {
-        "type": "ObjectPattern",
-        "start": 32,
-        "end": 41,
-        "properties": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
           {
-            "type": "RestElement",
-            "start": 33,
-            "end": 40,
-            "argument": {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 36,
-              "end": 40,
               "name": "rest",
-              "kind": "reference"
-            }
-          }
-        ]
-      },
-      "right": {
-        "type": "ArrayExpression",
-        "start": 45,
-        "end": 60,
-        "elements": [
-          {
-            "type": "CallExpression",
-            "start": 46,
-            "end": 59,
-            "callee": {
-              "type": "Identifier",
-              "start": 46,
-              "end": 52,
-              "name": "Symbol",
-              "kind": "reference"
+              "start": 4,
+              "end": 8
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 53,
-                "end": 58,
-                "value": "foo",
-                "raw": "\"foo\""
-              }
-            ],
-            "optional": false
+            "init": null,
+            "start": 4,
+            "end": 8
           }
-        ]
+        ],
+        "start": 0,
+        "end": 9
       },
-      "body": {
-        "type": "BlockStatement",
-        "start": 62,
-        "end": 81,
-        "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
           {
-            "type": "ExpressionStatement",
-            "start": 66,
-            "end": 79,
-            "expression": {
-              "type": "AssignmentExpression",
-              "start": 66,
-              "end": 78,
-              "left": {
-                "type": "Identifier",
-                "start": 66,
-                "end": 73,
-                "name": "counter",
-                "kind": "reference"
-              },
-              "right": {
-                "type": "Literal",
-                "start": 77,
-                "end": 78,
-                "value": 1,
-                "raw": "1"
-              },
-              "operator": "+="
-            }
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "counter",
+              "start": 14,
+              "end": 21
+            },
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 24,
+              "end": 25
+            },
+            "start": 14,
+            "end": 25
           }
-        ]
+        ],
+        "start": 10,
+        "end": 26
       },
-      "await": false
-    }
-  ]
+      {
+        "type": "ForOfStatement",
+        "await": false,
+        "left": {
+          "type": "ObjectPattern",
+          "properties": [
+            {
+              "type": "RestElement",
+              "argument": {
+                "type": "Identifier",
+                "name": "rest",
+                "start": 36,
+                "end": 40
+              },
+              "start": 33,
+              "end": 40
+            }
+          ],
+          "start": 32,
+          "end": 41
+        },
+        "right": {
+          "type": "ArrayExpression",
+          "elements": [
+            {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "Symbol",
+                "start": 46,
+                "end": 52
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "foo",
+                  "raw": "\"foo\"",
+                  "start": 53,
+                  "end": 58
+                }
+              ],
+              "optional": false,
+              "start": 46,
+              "end": 59
+            }
+          ],
+          "start": 45,
+          "end": 60
+        },
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "AssignmentExpression",
+                "operator": "+=",
+                "left": {
+                  "type": "Identifier",
+                  "name": "counter",
+                  "start": 66,
+                  "end": 73
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "raw": "1",
+                  "start": 77,
+                  "end": 78
+                },
+                "start": 66,
+                "end": 78
+              },
+              "start": 66,
+              "end": 79
+            }
+          ],
+          "start": 62,
+          "end": 81
+        },
+        "start": 27,
+        "end": 81
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 81
+  },
+  "comments": [],
+  "diagnostics": []
 }

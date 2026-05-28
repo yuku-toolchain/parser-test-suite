@@ -1,171 +1,170 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 259,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 213,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 212,
-          "id": {
-            "type": "Identifier",
-            "start": 6,
-            "end": 20,
-            "name": "invalidStrings",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ArrayExpression",
-            "start": 23,
-            "end": 212,
-            "elements": [
-              {
-                "type": "ArrayExpression",
-                "start": 24,
-                "end": 79,
-                "elements": [
-                  {
-                    "type": "Literal",
-                    "start": 25,
-                    "end": 51,
-                    "value": "1970-01-01[U-CA=iso8601]",
-                    "raw": "\"1970-01-01[U-CA=iso8601]\""
-                  },
-                  {
-                    "type": "Literal",
-                    "start": 53,
-                    "end": 78,
-                    "value": "invalid capitalized key",
-                    "raw": "\"invalid capitalized key\""
-                  }
-                ]
-              },
-              {
-                "type": "ArrayExpression",
-                "start": 81,
-                "end": 146,
-                "elements": [
-                  {
-                    "type": "Literal",
-                    "start": 82,
-                    "end": 108,
-                    "value": "1970-01-01[u-CA=iso8601]",
-                    "raw": "\"1970-01-01[u-CA=iso8601]\""
-                  },
-                  {
-                    "type": "Literal",
-                    "start": 110,
-                    "end": 145,
-                    "value": "invalid partially-capitalized key",
-                    "raw": "\"invalid partially-capitalized key\""
-                  }
-                ]
-              },
-              {
-                "type": "ArrayExpression",
-                "start": 148,
-                "end": 211,
-                "elements": [
-                  {
-                    "type": "Literal",
-                    "start": 149,
-                    "end": 170,
-                    "value": "1970-01-01[FOO=bar]",
-                    "raw": "\"1970-01-01[FOO=bar]\""
-                  },
-                  {
-                    "type": "Literal",
-                    "start": 172,
-                    "end": 210,
-                    "value": "invalid capitalized unrecognized key",
-                    "raw": "\"invalid capitalized unrecognized key\""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 214,
-      "end": 259,
-      "expression": {
-        "type": "CallExpression",
-        "start": 214,
-        "end": 258,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 214,
-          "end": 236,
-          "object": {
-            "type": "Identifier",
-            "start": 214,
-            "end": 228,
-            "name": "invalidStrings",
-            "kind": "reference"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 229,
-            "end": 236,
-            "name": "forEach",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
-        },
-        "arguments": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
           {
-            "type": "ArrowFunctionExpression",
-            "start": 237,
-            "end": 257,
-            "id": null,
-            "generator": false,
-            "async": false,
-            "params": [
-              {
-                "type": "ArrayPattern",
-                "start": 238,
-                "end": 250,
-                "elements": [
-                  {
-                    "type": "Identifier",
-                    "start": 239,
-                    "end": 242,
-                    "name": "arg",
-                    "kind": "binding"
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 244,
-                    "end": 249,
-                    "name": "descr",
-                    "kind": "binding"
-                  }
-                ]
-              }
-            ],
-            "body": {
-              "type": "BlockStatement",
-              "start": 255,
-              "end": 257,
-              "body": []
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "invalidStrings",
+              "start": 6,
+              "end": 20
             },
-            "expression": false
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [
+                {
+                  "type": "ArrayExpression",
+                  "elements": [
+                    {
+                      "type": "Literal",
+                      "value": "1970-01-01[U-CA=iso8601]",
+                      "raw": "\"1970-01-01[U-CA=iso8601]\"",
+                      "start": 25,
+                      "end": 51
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "invalid capitalized key",
+                      "raw": "\"invalid capitalized key\"",
+                      "start": 53,
+                      "end": 78
+                    }
+                  ],
+                  "start": 24,
+                  "end": 79
+                },
+                {
+                  "type": "ArrayExpression",
+                  "elements": [
+                    {
+                      "type": "Literal",
+                      "value": "1970-01-01[u-CA=iso8601]",
+                      "raw": "\"1970-01-01[u-CA=iso8601]\"",
+                      "start": 82,
+                      "end": 108
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "invalid partially-capitalized key",
+                      "raw": "\"invalid partially-capitalized key\"",
+                      "start": 110,
+                      "end": 145
+                    }
+                  ],
+                  "start": 81,
+                  "end": 146
+                },
+                {
+                  "type": "ArrayExpression",
+                  "elements": [
+                    {
+                      "type": "Literal",
+                      "value": "1970-01-01[FOO=bar]",
+                      "raw": "\"1970-01-01[FOO=bar]\"",
+                      "start": 149,
+                      "end": 170
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "invalid capitalized unrecognized key",
+                      "raw": "\"invalid capitalized unrecognized key\"",
+                      "start": 172,
+                      "end": 210
+                    }
+                  ],
+                  "start": 148,
+                  "end": 211
+                }
+              ],
+              "start": 23,
+              "end": 212
+            },
+            "start": 6,
+            "end": 212
           }
         ],
-        "optional": false
+        "start": 0,
+        "end": 213
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "invalidStrings",
+              "start": 214,
+              "end": 228
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "forEach",
+              "start": 229,
+              "end": 236
+            },
+            "optional": false,
+            "computed": false,
+            "start": 214,
+            "end": 236
+          },
+          "arguments": [
+            {
+              "type": "ArrowFunctionExpression",
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "ArrayPattern",
+                  "elements": [
+                    {
+                      "type": "Identifier",
+                      "name": "arg",
+                      "start": 239,
+                      "end": 242
+                    },
+                    {
+                      "type": "Identifier",
+                      "name": "descr",
+                      "start": 244,
+                      "end": 249
+                    }
+                  ],
+                  "start": 238,
+                  "end": 250
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [],
+                "start": 255,
+                "end": 257
+              },
+              "id": null,
+              "generator": false,
+              "start": 237,
+              "end": 257
+            }
+          ],
+          "optional": false,
+          "start": 214,
+          "end": 258
+        },
+        "start": 214,
+        "end": 259
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 259
+  },
+  "comments": [],
+  "diagnostics": []
 }

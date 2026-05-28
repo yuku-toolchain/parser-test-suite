@@ -1,209 +1,204 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 165,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 22,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 21,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 17,
-            "name": "initEvalCount",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "Literal",
-            "start": 20,
-            "end": 21,
-            "value": 0,
-            "raw": "0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 23,
-      "end": 111,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 27,
-          "end": 110,
-          "id": {
-            "type": "Identifier",
-            "start": 27,
-            "end": 43,
-            "name": "poisonedProperty",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 46,
-            "end": 110,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 46,
-              "end": 67,
-              "object": {
-                "type": "Identifier",
-                "start": 46,
-                "end": 52,
-                "name": "Object",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 53,
-                "end": 67,
-                "name": "defineProperty",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "initEvalCount",
+              "start": 4,
+              "end": 17
             },
-            "arguments": [
-              {
-                "type": "ObjectExpression",
-                "start": 68,
-                "end": 70,
-                "properties": []
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "start": 20,
+              "end": 21
+            },
+            "start": 4,
+            "end": 21
+          }
+        ],
+        "start": 0,
+        "end": 22
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "poisonedProperty",
+              "start": 27,
+              "end": 43
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Object",
+                  "start": 46,
+                  "end": 52
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "defineProperty",
+                  "start": 53,
+                  "end": 67
+                },
+                "optional": false,
+                "computed": false,
+                "start": 46,
+                "end": 67
               },
-              {
-                "type": "Literal",
-                "start": 72,
-                "end": 82,
-                "value": "poisoned",
-                "raw": "'poisoned'"
-              },
-              {
-                "type": "ObjectExpression",
-                "start": 84,
-                "end": 109,
-                "properties": [
-                  {
-                    "type": "Property",
-                    "start": 88,
-                    "end": 107,
-                    "key": {
-                      "type": "Identifier",
-                      "start": 88,
-                      "end": 91,
-                      "name": "get",
-                      "kind": "name"
-                    },
-                    "value": {
-                      "type": "FunctionExpression",
-                      "start": 93,
-                      "end": 107,
-                      "id": null,
-                      "generator": false,
-                      "async": false,
-                      "params": [],
-                      "body": {
-                        "type": "BlockStatement",
-                        "start": 105,
-                        "end": 107,
-                        "body": []
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 68,
+                  "end": 70
+                },
+                {
+                  "type": "Literal",
+                  "value": "poisoned",
+                  "raw": "'poisoned'",
+                  "start": 72,
+                  "end": 82
+                },
+                {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "kind": "init",
+                      "key": {
+                        "type": "Identifier",
+                        "name": "get",
+                        "start": 88,
+                        "end": 91
                       },
-                      "expression": false
+                      "value": {
+                        "type": "FunctionExpression",
+                        "id": null,
+                        "generator": false,
+                        "async": false,
+                        "params": [],
+                        "body": {
+                          "type": "BlockStatement",
+                          "body": [],
+                          "start": 105,
+                          "end": 107
+                        },
+                        "expression": false,
+                        "start": 93,
+                        "end": 107
+                      },
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "start": 88,
+                      "end": 107
+                    }
+                  ],
+                  "start": 84,
+                  "end": 109
+                }
+              ],
+              "optional": false,
+              "start": 46,
+              "end": 110
+            },
+            "start": 27,
+            "end": 110
+          }
+        ],
+        "start": 23,
+        "end": 111
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "f",
+          "start": 128,
+          "end": 129
+        },
+        "generator": true,
+        "async": true,
+        "params": [
+          {
+            "type": "ObjectPattern",
+            "properties": [
+              {
+                "type": "Property",
+                "kind": "init",
+                "key": {
+                  "type": "Identifier",
+                  "name": "poisoned",
+                  "start": 131,
+                  "end": 139
+                },
+                "value": {
+                  "type": "AssignmentPattern",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "x",
+                    "start": 141,
+                    "end": 142
+                  },
+                  "right": {
+                    "type": "UpdateExpression",
+                    "operator": "++",
+                    "prefix": true,
+                    "argument": {
+                      "type": "Identifier",
+                      "name": "initEvalCount",
+                      "start": 147,
+                      "end": 160
                     },
-                    "kind": "init",
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false
-                  }
-                ]
+                    "start": 145,
+                    "end": 160
+                  },
+                  "start": 141,
+                  "end": 160
+                },
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "start": 131,
+                "end": 160
               }
             ],
-            "optional": false
+            "start": 130,
+            "end": 161
           }
-        }
-      ]
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 112,
-      "end": 165,
-      "id": {
-        "type": "Identifier",
-        "start": 128,
-        "end": 129,
-        "name": "f",
-        "kind": "binding"
-      },
-      "generator": true,
-      "async": true,
-      "params": [
-        {
-          "type": "ObjectPattern",
-          "start": 130,
-          "end": 161,
-          "properties": [
-            {
-              "type": "Property",
-              "start": 131,
-              "end": 160,
-              "kind": "init",
-              "key": {
-                "type": "Identifier",
-                "start": 131,
-                "end": 139,
-                "name": "poisoned",
-                "kind": "name"
-              },
-              "value": {
-                "type": "AssignmentPattern",
-                "start": 141,
-                "end": 160,
-                "left": {
-                  "type": "Identifier",
-                  "start": 141,
-                  "end": 142,
-                  "name": "x",
-                  "kind": "binding"
-                },
-                "right": {
-                  "type": "UpdateExpression",
-                  "start": 145,
-                  "end": 160,
-                  "argument": {
-                    "type": "Identifier",
-                    "start": 147,
-                    "end": 160,
-                    "name": "initEvalCount",
-                    "kind": "reference"
-                  },
-                  "operator": "++",
-                  "prefix": true
-                }
-              },
-              "method": false,
-              "shorthand": false,
-              "computed": false
-            }
-          ]
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 163,
-        "end": 165,
-        "body": []
-      },
-      "expression": false
-    }
-  ]
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 163,
+          "end": 165
+        },
+        "expression": false,
+        "start": 112,
+        "end": 165
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 165
+  },
+  "comments": [],
+  "diagnostics": []
 }

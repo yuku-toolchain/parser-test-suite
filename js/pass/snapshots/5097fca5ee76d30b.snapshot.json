@@ -1,75 +1,78 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 173,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 0,
-      "end": 173,
-      "expression": {
-        "type": "CallExpression",
-        "start": 0,
-        "end": 172,
-        "callee": {
-          "type": "Identifier",
-          "start": 0,
-          "end": 4,
-          "name": "eval",
-          "kind": "reference"
-        },
-        "arguments": [
-          {
-            "type": "BinaryExpression",
-            "start": 5,
-            "end": 171,
-            "left": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "eval",
+            "start": 0,
+            "end": 4
+          },
+          "arguments": [
+            {
               "type": "BinaryExpression",
-              "start": 5,
-              "end": 81,
               "left": {
                 "type": "BinaryExpression",
-                "start": 5,
-                "end": 34,
                 "left": {
-                  "type": "Literal",
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Literal",
+                    "value": "switch (1) {",
+                    "raw": "'switch (1) {'",
+                    "start": 5,
+                    "end": 19
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Literal",
+                    "value": "  default:",
+                    "raw": "'  default:'",
+                    "start": 22,
+                    "end": 34
+                  },
                   "start": 5,
-                  "end": 19,
-                  "value": "switch (1) {",
-                  "raw": "'switch (1) {'"
+                  "end": 34
                 },
+                "operator": "+",
                 "right": {
                   "type": "Literal",
-                  "start": 22,
-                  "end": 34,
-                  "value": "  default:",
-                  "raw": "'  default:'"
+                  "value": "    function f() { return \"declaration\"; }",
+                  "raw": "'    function f() { return \"declaration\"; }'",
+                  "start": 37,
+                  "end": 81
                 },
-                "operator": "+"
+                "start": 5,
+                "end": 81
               },
+              "operator": "+",
               "right": {
                 "type": "Literal",
-                "start": 37,
-                "end": 81,
-                "value": "    function f() { return \"declaration\"; }",
-                "raw": "'    function f() { return \"declaration\"; }'"
+                "value": "}  assert.sameValue(typeof f, \"function\");  assert.sameValue(f(), \"declaration\");",
+                "raw": "'}\\\n  assert.sameValue(typeof f, \"function\");\\\n  assert.sameValue(f(), \"declaration\");'",
+                "start": 84,
+                "end": 171
               },
-              "operator": "+"
-            },
-            "right": {
-              "type": "Literal",
-              "start": 84,
-              "end": 171,
-              "value": "}  assert.sameValue(typeof f, \"function\");  assert.sameValue(f(), \"declaration\");",
-              "raw": "'}\\\n  assert.sameValue(typeof f, \"function\");\\\n  assert.sameValue(f(), \"declaration\");'"
-            },
-            "operator": "+"
-          }
-        ],
-        "optional": false
+              "start": 5,
+              "end": 171
+            }
+          ],
+          "optional": false,
+          "start": 0,
+          "end": 172
+        },
+        "start": 0,
+        "end": 173
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 173
+  },
+  "comments": [],
+  "diagnostics": []
 }

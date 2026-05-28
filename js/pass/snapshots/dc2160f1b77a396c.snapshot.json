@@ -1,137 +1,139 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 99,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "IfStatement",
-      "start": 0,
-      "end": 45,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 4,
-        "end": 41,
-        "left": {
-          "type": "CallExpression",
-          "start": 4,
-          "end": 23,
-          "callee": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 10,
-            "name": "String",
-            "kind": "reference"
-          },
-          "arguments": [
-            {
-              "type": "UnaryExpression",
-              "start": 11,
-              "end": 22,
-              "operator": "-",
-              "prefix": true,
-              "argument": {
-                "type": "Literal",
-                "start": 12,
-                "end": 22,
-                "value": 1234567890,
-                "raw": "1234567890"
-              }
-            }
-          ],
-          "optional": false
-        },
-        "right": {
-          "type": "Literal",
-          "start": 28,
-          "end": 41,
-          "value": "-1234567890",
-          "raw": "\"-1234567890\""
-        },
-        "operator": "!=="
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 43,
-        "end": 45,
-        "body": []
-      },
-      "alternate": null
-    },
-    {
-      "type": "IfStatement",
-      "start": 46,
-      "end": 99,
-      "test": {
-        "type": "BinaryExpression",
-        "start": 50,
-        "end": 95,
-        "left": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "IfStatement",
+        "test": {
           "type": "BinaryExpression",
-          "start": 50,
-          "end": 77,
           "left": {
-            "type": "Literal",
-            "start": 50,
-            "end": 53,
-            "value": "-",
-            "raw": "\"-\""
-          },
-          "right": {
             "type": "CallExpression",
-            "start": 56,
-            "end": 77,
             "callee": {
               "type": "Identifier",
-              "start": 56,
-              "end": 62,
               "name": "String",
-              "kind": "reference"
+              "start": 4,
+              "end": 10
             },
             "arguments": [
               {
                 "type": "UnaryExpression",
-                "start": 63,
-                "end": 76,
                 "operator": "-",
-                "prefix": true,
                 "argument": {
-                  "type": "UnaryExpression",
-                  "start": 65,
-                  "end": 76,
-                  "operator": "-",
-                  "prefix": true,
-                  "argument": {
-                    "type": "Literal",
-                    "start": 66,
-                    "end": 76,
-                    "value": 1234567890,
-                    "raw": "1234567890"
-                  }
-                }
+                  "type": "Literal",
+                  "value": 1234567890,
+                  "raw": "1234567890",
+                  "start": 12,
+                  "end": 22
+                },
+                "prefix": true,
+                "start": 11,
+                "end": 22
               }
             ],
-            "optional": false
+            "optional": false,
+            "start": 4,
+            "end": 23
           },
-          "operator": "+"
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "-1234567890",
+            "raw": "\"-1234567890\"",
+            "start": 28,
+            "end": 41
+          },
+          "start": 4,
+          "end": 41
         },
-        "right": {
-          "type": "Literal",
-          "start": 82,
-          "end": 95,
-          "value": "-1234567890",
-          "raw": "\"-1234567890\""
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 43,
+          "end": 45
         },
-        "operator": "!=="
+        "alternate": null,
+        "start": 0,
+        "end": 45
       },
-      "consequent": {
-        "type": "BlockStatement",
-        "start": 97,
-        "end": 99,
-        "body": []
-      },
-      "alternate": null
-    }
-  ]
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "BinaryExpression",
+            "left": {
+              "type": "Literal",
+              "value": "-",
+              "raw": "\"-\"",
+              "start": 50,
+              "end": 53
+            },
+            "operator": "+",
+            "right": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "String",
+                "start": 56,
+                "end": 62
+              },
+              "arguments": [
+                {
+                  "type": "UnaryExpression",
+                  "operator": "-",
+                  "argument": {
+                    "type": "UnaryExpression",
+                    "operator": "-",
+                    "argument": {
+                      "type": "Literal",
+                      "value": 1234567890,
+                      "raw": "1234567890",
+                      "start": 66,
+                      "end": 76
+                    },
+                    "prefix": true,
+                    "start": 65,
+                    "end": 76
+                  },
+                  "prefix": true,
+                  "start": 63,
+                  "end": 76
+                }
+              ],
+              "optional": false,
+              "start": 56,
+              "end": 77
+            },
+            "start": 50,
+            "end": 77
+          },
+          "operator": "!==",
+          "right": {
+            "type": "Literal",
+            "value": "-1234567890",
+            "raw": "\"-1234567890\"",
+            "start": 82,
+            "end": 95
+          },
+          "start": 50,
+          "end": 95
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 97,
+          "end": 99
+        },
+        "alternate": null,
+        "start": 46,
+        "end": 99
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 99
+  },
+  "comments": [],
+  "diagnostics": []
 }

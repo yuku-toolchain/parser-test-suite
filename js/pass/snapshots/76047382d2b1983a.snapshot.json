@@ -1,421 +1,398 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 300,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 34,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 33,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 9,
-            "name": "stack",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 12,
-            "end": 33,
-            "callee": {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 16,
-              "end": 31,
-              "name": "DisposableStack",
-              "kind": "reference"
+              "name": "stack",
+              "start": 4,
+              "end": 9
             },
-            "arguments": []
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "DisposableStack",
+                "start": 16,
+                "end": 31
+              },
+              "arguments": [],
+              "start": 12,
+              "end": 33
+            },
+            "start": 4,
+            "end": 33
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 35,
-      "end": 53,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 39,
-          "end": 52,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 34
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "disposed",
+              "start": 39,
+              "end": 47
+            },
+            "init": {
+              "type": "ArrayExpression",
+              "elements": [],
+              "start": 50,
+              "end": 52
+            },
             "start": 39,
-            "end": 47,
-            "name": "disposed",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ArrayExpression",
-            "start": 50,
-            "end": 52,
-            "elements": []
+            "end": 52
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 54,
-      "end": 73,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 58,
-          "end": 72,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 35,
+        "end": 53
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "resource1",
+              "start": 58,
+              "end": 67
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [],
+              "start": 70,
+              "end": 72
+            },
             "start": 58,
-            "end": 67,
-            "name": "resource1",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 70,
-            "end": 72,
-            "properties": []
+            "end": 72
           }
-        }
-      ]
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 74,
-      "end": 134,
-      "id": {
-        "type": "Identifier",
-        "start": 83,
-        "end": 91,
-        "name": "dispose1",
-        "kind": "binding"
+        ],
+        "start": 54,
+        "end": 73
       },
-      "generator": false,
-      "async": false,
-      "params": [
-        {
+      {
+        "type": "FunctionDeclaration",
+        "id": {
           "type": "Identifier",
-          "start": 92,
-          "end": 95,
-          "name": "res",
-          "kind": "binding"
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 97,
-        "end": 134,
-        "body": [
+          "name": "dispose1",
+          "start": 83,
+          "end": 91
+        },
+        "generator": false,
+        "async": false,
+        "params": [
           {
-            "type": "ExpressionStatement",
-            "start": 101,
-            "end": 132,
-            "expression": {
-              "type": "CallExpression",
-              "start": 101,
-              "end": 131,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 101,
-                "end": 114,
-                "object": {
-                  "type": "Identifier",
+            "type": "Identifier",
+            "name": "res",
+            "start": 92,
+            "end": 95
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "disposed",
+                    "start": 101,
+                    "end": 109
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "push",
+                    "start": 110,
+                    "end": 114
+                  },
+                  "optional": false,
+                  "computed": false,
                   "start": 101,
-                  "end": 109,
-                  "name": "disposed",
-                  "kind": "reference"
+                  "end": 114
                 },
-                "property": {
-                  "type": "Identifier",
-                  "start": 110,
-                  "end": 114,
-                  "name": "push",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
+                "arguments": [
+                  {
+                    "type": "ArrayExpression",
+                    "elements": [
+                      {
+                        "type": "Identifier",
+                        "name": "res",
+                        "start": 116,
+                        "end": 119
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "dispose1",
+                        "start": 121,
+                        "end": 129
+                      }
+                    ],
+                    "start": 115,
+                    "end": 130
+                  }
+                ],
+                "optional": false,
+                "start": 101,
+                "end": 131
               },
-              "arguments": [
-                {
-                  "type": "ArrayExpression",
-                  "start": 115,
-                  "end": 130,
-                  "elements": [
-                    {
-                      "type": "Identifier",
-                      "start": 116,
-                      "end": 119,
-                      "name": "res",
-                      "kind": "reference"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 121,
-                      "end": 129,
-                      "name": "dispose1",
-                      "kind": "reference"
-                    }
-                  ]
-                }
-              ],
-              "optional": false
+              "start": 101,
+              "end": 132
             }
-          }
-        ]
+          ],
+          "start": 97,
+          "end": 134
+        },
+        "expression": false,
+        "start": 74,
+        "end": 134
       },
-      "expression": false
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 135,
-      "end": 154,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 139,
-          "end": 153,
-          "id": {
-            "type": "Identifier",
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "resource2",
+              "start": 139,
+              "end": 148
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [],
+              "start": 151,
+              "end": 153
+            },
             "start": 139,
-            "end": 148,
-            "name": "resource2",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "ObjectExpression",
-            "start": 151,
-            "end": 153,
-            "properties": []
+            "end": 153
           }
-        }
-      ]
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 155,
-      "end": 215,
-      "id": {
-        "type": "Identifier",
-        "start": 164,
-        "end": 172,
-        "name": "dispose2",
-        "kind": "binding"
+        ],
+        "start": 135,
+        "end": 154
       },
-      "generator": false,
-      "async": false,
-      "params": [
-        {
+      {
+        "type": "FunctionDeclaration",
+        "id": {
           "type": "Identifier",
-          "start": 173,
-          "end": 176,
-          "name": "res",
-          "kind": "binding"
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 178,
-        "end": 215,
-        "body": [
+          "name": "dispose2",
+          "start": 164,
+          "end": 172
+        },
+        "generator": false,
+        "async": false,
+        "params": [
           {
-            "type": "ExpressionStatement",
-            "start": 182,
-            "end": 213,
-            "expression": {
-              "type": "CallExpression",
-              "start": 182,
-              "end": 212,
-              "callee": {
-                "type": "MemberExpression",
-                "start": 182,
-                "end": 195,
-                "object": {
-                  "type": "Identifier",
+            "type": "Identifier",
+            "name": "res",
+            "start": 173,
+            "end": 176
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "disposed",
+                    "start": 182,
+                    "end": 190
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "push",
+                    "start": 191,
+                    "end": 195
+                  },
+                  "optional": false,
+                  "computed": false,
                   "start": 182,
-                  "end": 190,
-                  "name": "disposed",
-                  "kind": "reference"
+                  "end": 195
                 },
-                "property": {
-                  "type": "Identifier",
-                  "start": 191,
-                  "end": 195,
-                  "name": "push",
-                  "kind": "name"
-                },
-                "computed": false,
-                "optional": false
+                "arguments": [
+                  {
+                    "type": "ArrayExpression",
+                    "elements": [
+                      {
+                        "type": "Identifier",
+                        "name": "res",
+                        "start": 197,
+                        "end": 200
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "dispose2",
+                        "start": 202,
+                        "end": 210
+                      }
+                    ],
+                    "start": 196,
+                    "end": 211
+                  }
+                ],
+                "optional": false,
+                "start": 182,
+                "end": 212
               },
-              "arguments": [
-                {
-                  "type": "ArrayExpression",
-                  "start": 196,
-                  "end": 211,
-                  "elements": [
-                    {
-                      "type": "Identifier",
-                      "start": 197,
-                      "end": 200,
-                      "name": "res",
-                      "kind": "reference"
-                    },
-                    {
-                      "type": "Identifier",
-                      "start": 202,
-                      "end": 210,
-                      "name": "dispose2",
-                      "kind": "reference"
-                    }
-                  ]
-                }
-              ],
-              "optional": false
+              "start": 182,
+              "end": 213
             }
-          }
-        ]
+          ],
+          "start": 178,
+          "end": 215
+        },
+        "expression": false,
+        "start": 155,
+        "end": 215
       },
-      "expression": false
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 216,
-      "end": 249,
-      "expression": {
-        "type": "CallExpression",
-        "start": 216,
-        "end": 248,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 216,
-          "end": 227,
-          "object": {
-            "type": "Identifier",
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "stack",
+              "start": 216,
+              "end": 221
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "adopt",
+              "start": 222,
+              "end": 227
+            },
+            "optional": false,
+            "computed": false,
             "start": 216,
-            "end": 221,
-            "name": "stack",
-            "kind": "reference"
+            "end": 227
           },
-          "property": {
-            "type": "Identifier",
-            "start": 222,
-            "end": 227,
-            "name": "adopt",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "resource1",
+              "start": 228,
+              "end": 237
+            },
+            {
+              "type": "Identifier",
+              "name": "dispose1",
+              "start": 239,
+              "end": 247
+            }
+          ],
+          "optional": false,
+          "start": 216,
+          "end": 248
         },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 228,
-            "end": 237,
-            "name": "resource1",
-            "kind": "reference"
-          },
-          {
-            "type": "Identifier",
-            "start": 239,
-            "end": 247,
-            "name": "dispose1",
-            "kind": "reference"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 250,
-      "end": 283,
-      "expression": {
-        "type": "CallExpression",
-        "start": 250,
-        "end": 282,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 250,
-          "end": 261,
-          "object": {
-            "type": "Identifier",
+        "start": 216,
+        "end": 249
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "stack",
+              "start": 250,
+              "end": 255
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "adopt",
+              "start": 256,
+              "end": 261
+            },
+            "optional": false,
+            "computed": false,
             "start": 250,
-            "end": 255,
-            "name": "stack",
-            "kind": "reference"
+            "end": 261
           },
-          "property": {
-            "type": "Identifier",
-            "start": 256,
-            "end": 261,
-            "name": "adopt",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "resource2",
+              "start": 262,
+              "end": 271
+            },
+            {
+              "type": "Identifier",
+              "name": "dispose2",
+              "start": 273,
+              "end": 281
+            }
+          ],
+          "optional": false,
+          "start": 250,
+          "end": 282
         },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 262,
-            "end": 271,
-            "name": "resource2",
-            "kind": "reference"
-          },
-          {
-            "type": "Identifier",
-            "start": 273,
-            "end": 281,
-            "name": "dispose2",
-            "kind": "reference"
-          }
-        ],
-        "optional": false
-      }
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 284,
-      "end": 300,
-      "expression": {
-        "type": "CallExpression",
-        "start": 284,
-        "end": 299,
-        "callee": {
-          "type": "MemberExpression",
-          "start": 284,
-          "end": 297,
-          "object": {
-            "type": "Identifier",
+        "start": 250,
+        "end": 283
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "stack",
+              "start": 284,
+              "end": 289
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "dispose",
+              "start": 290,
+              "end": 297
+            },
+            "optional": false,
+            "computed": false,
             "start": 284,
-            "end": 289,
-            "name": "stack",
-            "kind": "reference"
+            "end": 297
           },
-          "property": {
-            "type": "Identifier",
-            "start": 290,
-            "end": 297,
-            "name": "dispose",
-            "kind": "name"
-          },
-          "computed": false,
-          "optional": false
+          "arguments": [],
+          "optional": false,
+          "start": 284,
+          "end": 299
         },
-        "arguments": [],
-        "optional": false
+        "start": 284,
+        "end": 300
       }
-    }
-  ]
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 300
+  },
+  "comments": [],
+  "diagnostics": []
 }

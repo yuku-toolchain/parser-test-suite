@@ -1,164 +1,158 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 154,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "FunctionDeclaration",
-      "start": 0,
-      "end": 154,
-      "id": {
-        "type": "Identifier",
-        "start": 9,
-        "end": 10,
-        "name": "a",
-        "kind": "binding"
-      },
-      "generator": false,
-      "async": false,
-      "params": [
-        {
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "FunctionDeclaration",
+        "id": {
           "type": "Identifier",
-          "start": 11,
-          "end": 12,
-          "name": "b",
-          "kind": "binding"
+          "name": "a",
+          "start": 9,
+          "end": 10
         },
-        {
-          "type": "Identifier",
-          "start": 14,
-          "end": 15,
-          "name": "c",
-          "kind": "binding"
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 17,
-        "end": 154,
-        "body": [
+        "generator": false,
+        "async": false,
+        "params": [
           {
-            "type": "FunctionDeclaration",
-            "start": 49,
-            "end": 89,
-            "id": {
-              "type": "Identifier",
-              "start": 58,
-              "end": 59,
-              "name": "d",
-              "kind": "binding"
-            },
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 62,
-              "end": 89,
-              "body": [
-                {
-                  "type": "ReturnStatement",
-                  "start": 72,
-                  "end": 83,
-                  "argument": {
-                    "type": "CallExpression",
-                    "start": 79,
-                    "end": 82,
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 79,
-                      "end": 80,
-                      "name": "e",
-                      "kind": "reference"
-                    },
-                    "arguments": [],
-                    "optional": false
-                  }
-                }
-              ]
-            },
-            "expression": false,
-            "comments": [
-              {
-                "type": "Line",
-                "position": "before",
-                "sameLine": false,
-                "value": " circular reference"
-              }
-            ]
+            "type": "Identifier",
+            "name": "b",
+            "start": 11,
+            "end": 12
           },
           {
-            "type": "FunctionDeclaration",
-            "start": 94,
-            "end": 134,
-            "id": {
-              "type": "Identifier",
-              "start": 103,
-              "end": 104,
-              "name": "e",
-              "kind": "binding"
-            },
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "BlockStatement",
-              "start": 107,
-              "end": 134,
-              "body": [
-                {
-                  "type": "ReturnStatement",
-                  "start": 117,
-                  "end": 128,
-                  "argument": {
-                    "type": "CallExpression",
-                    "start": 124,
-                    "end": 127,
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 124,
-                      "end": 125,
-                      "name": "d",
-                      "kind": "reference"
-                    },
-                    "arguments": [],
-                    "optional": false
-                  }
-                }
-              ]
-            },
-            "expression": false
-          },
-          {
-            "type": "ReturnStatement",
-            "start": 139,
-            "end": 152,
-            "argument": {
-              "type": "BinaryExpression",
-              "start": 146,
-              "end": 151,
-              "left": {
-                "type": "Identifier",
-                "start": 146,
-                "end": 147,
-                "name": "b",
-                "kind": "reference"
-              },
-              "right": {
-                "type": "Identifier",
-                "start": 150,
-                "end": 151,
-                "name": "c",
-                "kind": "reference"
-              },
-              "operator": "+"
-            }
+            "type": "Identifier",
+            "name": "c",
+            "start": 14,
+            "end": 15
           }
-        ]
-      },
-      "expression": false
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "FunctionDeclaration",
+              "id": {
+                "type": "Identifier",
+                "name": "d",
+                "start": 58,
+                "end": 59
+              },
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "e",
+                        "start": 79,
+                        "end": 80
+                      },
+                      "arguments": [],
+                      "optional": false,
+                      "start": 79,
+                      "end": 82
+                    },
+                    "start": 72,
+                    "end": 83
+                  }
+                ],
+                "start": 62,
+                "end": 89
+              },
+              "expression": false,
+              "start": 49,
+              "end": 89
+            },
+            {
+              "type": "FunctionDeclaration",
+              "id": {
+                "type": "Identifier",
+                "name": "e",
+                "start": 103,
+                "end": 104
+              },
+              "generator": false,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "d",
+                        "start": 124,
+                        "end": 125
+                      },
+                      "arguments": [],
+                      "optional": false,
+                      "start": 124,
+                      "end": 127
+                    },
+                    "start": 117,
+                    "end": 128
+                  }
+                ],
+                "start": 107,
+                "end": 134
+              },
+              "expression": false,
+              "start": 94,
+              "end": 134
+            },
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "b",
+                  "start": 146,
+                  "end": 147
+                },
+                "operator": "+",
+                "right": {
+                  "type": "Identifier",
+                  "name": "c",
+                  "start": 150,
+                  "end": 151
+                },
+                "start": 146,
+                "end": 151
+              },
+              "start": 139,
+              "end": 152
+            }
+          ],
+          "start": 17,
+          "end": 154
+        },
+        "expression": false,
+        "start": 0,
+        "end": 154
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 154
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " circular reference",
+      "start": 23,
+      "end": 44
     }
-  ]
+  ],
+  "diagnostics": []
 }

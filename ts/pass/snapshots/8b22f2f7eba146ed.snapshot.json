@@ -1,317 +1,308 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 263,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "TSInterfaceDeclaration",
-      "start": 64,
-      "end": 110,
-      "id": {
-        "type": "Identifier",
-        "start": 74,
-        "end": 83,
-        "name": "ITreeItem",
-        "kind": "binding",
-        "decorators": [],
-        "typeAnnotation": null,
-        "optional": false
-      },
-      "typeParameters": null,
-      "extends": [],
-      "body": {
-        "type": "TSInterfaceBody",
-        "start": 84,
-        "end": 110,
-        "body": [
-          {
-            "type": "TSPropertySignature",
-            "start": 93,
-            "end": 107,
-            "key": {
-              "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "TSInterfaceDeclaration",
+        "id": {
+          "type": "Identifier",
+          "decorators": [],
+          "name": "ITreeItem",
+          "optional": false,
+          "typeAnnotation": null,
+          "start": 74,
+          "end": 83
+        },
+        "typeParameters": null,
+        "extends": [],
+        "body": {
+          "type": "TSInterfaceBody",
+          "body": [
+            {
+              "type": "TSPropertySignature",
+              "computed": false,
+              "optional": true,
+              "readonly": false,
+              "key": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "Parent",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 93,
+                "end": 99
+              },
+              "typeAnnotation": {
+                "type": "TSTypeAnnotation",
+                "typeAnnotation": {
+                  "type": "TSThisType",
+                  "start": 102,
+                  "end": 106
+                },
+                "start": 100,
+                "end": 106
+              },
+              "accessibility": null,
+              "static": false,
               "start": 93,
-              "end": 99,
-              "name": "Parent",
-              "kind": "name",
-              "decorators": [],
-              "optional": false,
-              "typeAnnotation": null
+              "end": 107
+            }
+          ],
+          "start": 84,
+          "end": 110
+        },
+        "declare": false,
+        "start": 64,
+        "end": 110
+      },
+      {
+        "type": "TSTypeAliasDeclaration",
+        "id": {
+          "type": "Identifier",
+          "decorators": [],
+          "name": "NodeWithId",
+          "optional": false,
+          "typeAnnotation": null,
+          "start": 119,
+          "end": 129
+        },
+        "typeParameters": null,
+        "typeAnnotation": {
+          "type": "TSIntersectionType",
+          "types": [
+            {
+              "type": "TSTypeReference",
+              "typeName": {
+                "type": "Identifier",
+                "decorators": [],
+                "name": "ITreeItem",
+                "optional": false,
+                "typeAnnotation": null,
+                "start": 132,
+                "end": 141
+              },
+              "typeArguments": null,
+              "start": 132,
+              "end": 141
             },
+            {
+              "type": "TSTypeLiteral",
+              "members": [
+                {
+                  "type": "TSPropertySignature",
+                  "computed": false,
+                  "optional": true,
+                  "readonly": false,
+                  "key": {
+                    "type": "Identifier",
+                    "decorators": [],
+                    "name": "Id",
+                    "optional": false,
+                    "typeAnnotation": null,
+                    "start": 146,
+                    "end": 148
+                  },
+                  "typeAnnotation": {
+                    "type": "TSTypeAnnotation",
+                    "typeAnnotation": {
+                      "type": "TSNumberKeyword",
+                      "start": 151,
+                      "end": 157
+                    },
+                    "start": 149,
+                    "end": 157
+                  },
+                  "accessibility": null,
+                  "static": false,
+                  "start": 146,
+                  "end": 157
+                }
+              ],
+              "start": 144,
+              "end": 159
+            }
+          ],
+          "start": 132,
+          "end": 159
+        },
+        "declare": false,
+        "start": 114,
+        "end": 160
+      },
+      {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "decorators": [],
+          "name": "getMaxId",
+          "optional": false,
+          "typeAnnotation": null,
+          "start": 173,
+          "end": 181
+        },
+        "generator": false,
+        "async": false,
+        "declare": false,
+        "typeParameters": null,
+        "params": [
+          {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "items",
+            "optional": false,
             "typeAnnotation": {
               "type": "TSTypeAnnotation",
-              "start": 100,
-              "end": 106,
               "typeAnnotation": {
-                "type": "TSThisType",
-                "start": 102,
-                "end": 106
-              }
-            },
-            "computed": false,
-            "optional": true,
-            "readonly": false,
-            "accessibility": null,
-            "static": false
-          }
-        ]
-      },
-      "declare": false,
-      "comments": [
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " @target: es2015"
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " @strict: true"
-        },
-        {
-          "type": "Line",
-          "position": "before",
-          "sameLine": false,
-          "value": " Repro from #35804"
-        }
-      ]
-    },
-    {
-      "type": "TSTypeAliasDeclaration",
-      "start": 114,
-      "end": 160,
-      "id": {
-        "type": "Identifier",
-        "start": 119,
-        "end": 129,
-        "name": "NodeWithId",
-        "kind": "binding",
-        "decorators": [],
-        "typeAnnotation": null,
-        "optional": false
-      },
-      "typeParameters": null,
-      "typeAnnotation": {
-        "type": "TSIntersectionType",
-        "start": 132,
-        "end": 159,
-        "types": [
-          {
-            "type": "TSTypeReference",
-            "start": 132,
-            "end": 141,
-            "typeName": {
-              "type": "Identifier",
-              "start": 132,
-              "end": 141,
-              "name": "ITreeItem",
-              "kind": "reference",
-              "decorators": [],
-              "optional": false,
-              "typeAnnotation": null
-            },
-            "typeArguments": null
-          },
-          {
-            "type": "TSTypeLiteral",
-            "start": 144,
-            "end": 159,
-            "members": [
-              {
-                "type": "TSPropertySignature",
-                "start": 146,
-                "end": 157,
-                "key": {
-                  "type": "Identifier",
-                  "start": 146,
-                  "end": 148,
-                  "name": "Id",
-                  "kind": "name",
-                  "decorators": [],
-                  "optional": false,
-                  "typeAnnotation": null
-                },
-                "typeAnnotation": {
-                  "type": "TSTypeAnnotation",
-                  "start": 149,
-                  "end": 157,
-                  "typeAnnotation": {
-                    "type": "TSNumberKeyword",
-                    "start": 151,
-                    "end": 157
-                  }
-                },
-                "computed": false,
-                "optional": true,
-                "readonly": false,
-                "accessibility": null,
-                "static": false
-              }
-            ]
-          }
-        ]
-      },
-      "declare": false
-    },
-    {
-      "type": "FunctionDeclaration",
-      "start": 164,
-      "end": 207,
-      "id": {
-        "type": "Identifier",
-        "start": 173,
-        "end": 181,
-        "name": "getMaxId",
-        "kind": "binding",
-        "decorators": [],
-        "typeAnnotation": null,
-        "optional": false
-      },
-      "generator": false,
-      "async": false,
-      "params": [
-        {
-          "type": "Identifier",
-          "start": 182,
-          "end": 201,
-          "name": "items",
-          "kind": "binding",
-          "decorators": [],
-          "typeAnnotation": {
-            "type": "TSTypeAnnotation",
-            "start": 187,
-            "end": 201,
-            "typeAnnotation": {
-              "type": "TSArrayType",
-              "start": 189,
-              "end": 201,
-              "elementType": {
-                "type": "TSTypeReference",
-                "start": 189,
-                "end": 199,
-                "typeName": {
-                  "type": "Identifier",
+                "type": "TSArrayType",
+                "elementType": {
+                  "type": "TSTypeReference",
+                  "typeName": {
+                    "type": "Identifier",
+                    "decorators": [],
+                    "name": "NodeWithId",
+                    "optional": false,
+                    "typeAnnotation": null,
+                    "start": 189,
+                    "end": 199
+                  },
+                  "typeArguments": null,
                   "start": 189,
-                  "end": 199,
-                  "name": "NodeWithId",
-                  "kind": "reference",
-                  "decorators": [],
-                  "optional": false,
-                  "typeAnnotation": null
+                  "end": 199
                 },
-                "typeArguments": null
-              }
-            }
-          },
-          "optional": false
-        }
-      ],
-      "body": {
-        "type": "BlockStatement",
-        "start": 203,
-        "end": 207,
-        "body": []
-      },
-      "expression": false,
-      "typeParameters": null,
-      "returnType": null,
-      "declare": false
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 211,
-      "end": 243,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 217,
-          "end": 242,
-          "id": {
-            "type": "Identifier",
-            "start": 217,
-            "end": 222,
-            "name": "nodes",
-            "kind": "binding",
-            "decorators": [],
-            "typeAnnotation": null,
-            "optional": false
-          },
-          "init": {
-            "type": "TSAsExpression",
-            "start": 225,
-            "end": 242,
-            "expression": {
-              "type": "ArrayExpression",
-              "start": 225,
-              "end": 227,
-              "elements": []
+                "start": 189,
+                "end": 201
+              },
+              "start": 187,
+              "end": 201
             },
-            "typeAnnotation": {
-              "type": "TSArrayType",
-              "start": 231,
-              "end": 242,
-              "elementType": {
-                "type": "TSTypeReference",
-                "start": 231,
-                "end": 240,
-                "typeName": {
-                  "type": "Identifier",
-                  "start": 231,
-                  "end": 240,
-                  "name": "ITreeItem",
-                  "kind": "reference",
-                  "decorators": [],
-                  "optional": false,
-                  "typeAnnotation": null
-                },
-                "typeArguments": null
-              }
-            }
-          },
-          "definite": false
-        }
-      ],
-      "declare": false
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 245,
-      "end": 261,
-      "expression": {
-        "type": "CallExpression",
-        "start": 245,
-        "end": 260,
-        "callee": {
-          "type": "Identifier",
-          "start": 245,
-          "end": 253,
-          "name": "getMaxId",
-          "kind": "reference",
-          "decorators": [],
-          "optional": false,
-          "typeAnnotation": null
-        },
-        "arguments": [
-          {
-            "type": "Identifier",
-            "start": 254,
-            "end": 259,
-            "name": "nodes",
-            "kind": "reference",
-            "decorators": [],
-            "optional": false,
-            "typeAnnotation": null
+            "start": 182,
+            "end": 201
           }
         ],
-        "optional": false,
-        "typeArguments": null
+        "returnType": null,
+        "body": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 203,
+          "end": 207
+        },
+        "expression": false,
+        "start": 164,
+        "end": 207
       },
-      "directive": null
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "decorators": [],
+              "name": "nodes",
+              "optional": false,
+              "typeAnnotation": null,
+              "start": 217,
+              "end": 222
+            },
+            "init": {
+              "type": "TSAsExpression",
+              "expression": {
+                "type": "ArrayExpression",
+                "elements": [],
+                "start": 225,
+                "end": 227
+              },
+              "typeAnnotation": {
+                "type": "TSArrayType",
+                "elementType": {
+                  "type": "TSTypeReference",
+                  "typeName": {
+                    "type": "Identifier",
+                    "decorators": [],
+                    "name": "ITreeItem",
+                    "optional": false,
+                    "typeAnnotation": null,
+                    "start": 231,
+                    "end": 240
+                  },
+                  "typeArguments": null,
+                  "start": 231,
+                  "end": 240
+                },
+                "start": 231,
+                "end": 242
+              },
+              "start": 225,
+              "end": 242
+            },
+            "definite": false,
+            "start": 217,
+            "end": 242
+          }
+        ],
+        "declare": false,
+        "start": 211,
+        "end": 243
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "decorators": [],
+            "name": "getMaxId",
+            "optional": false,
+            "typeAnnotation": null,
+            "start": 245,
+            "end": 253
+          },
+          "typeArguments": null,
+          "arguments": [
+            {
+              "type": "Identifier",
+              "decorators": [],
+              "name": "nodes",
+              "optional": false,
+              "typeAnnotation": null,
+              "start": 254,
+              "end": 259
+            }
+          ],
+          "optional": false,
+          "start": 245,
+          "end": 260
+        },
+        "directive": null,
+        "start": 245,
+        "end": 261
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 263
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " @target: es2015",
+      "start": 0,
+      "end": 18
+    },
+    {
+      "type": "Line",
+      "value": " @strict: true",
+      "start": 20,
+      "end": 36
+    },
+    {
+      "type": "Line",
+      "value": " Repro from #35804",
+      "start": 40,
+      "end": 60
     }
-  ]
+  ],
+  "diagnostics": []
 }

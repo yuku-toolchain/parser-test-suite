@@ -1,346 +1,332 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 414,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 33,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 6,
-          "end": 32,
-          "id": {
-            "type": "Identifier",
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "realm1",
+              "start": 6,
+              "end": 12
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 19,
+                "end": 30
+              },
+              "arguments": [],
+              "start": 15,
+              "end": 32
+            },
             "start": 6,
-            "end": 12,
-            "name": "realm1",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 15,
-            "end": 32,
-            "callee": {
-              "type": "Identifier",
-              "start": 19,
-              "end": 30,
-              "name": "ShadowRealm",
-              "kind": "reference"
-            },
-            "arguments": []
+            "end": 32
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 34,
-      "end": 67,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 40,
-          "end": 66,
-          "id": {
-            "type": "Identifier",
+        ],
+        "start": 0,
+        "end": 33
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "realm2",
+              "start": 40,
+              "end": 46
+            },
+            "init": {
+              "type": "NewExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "ShadowRealm",
+                "start": 53,
+                "end": 64
+              },
+              "arguments": [],
+              "start": 49,
+              "end": 66
+            },
             "start": 40,
-            "end": 46,
-            "name": "realm2",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "NewExpression",
-            "start": 49,
-            "end": 66,
-            "callee": {
-              "type": "Identifier",
-              "start": 53,
-              "end": 64,
-              "name": "ShadowRealm",
-              "kind": "reference"
-            },
-            "arguments": []
+            "end": 66
           }
-        }
-      ]
-    },
-    {
-      "type": "ExpressionStatement",
-      "start": 68,
-      "end": 89,
-      "expression": {
-        "type": "AssignmentExpression",
-        "start": 68,
-        "end": 88,
-        "left": {
-          "type": "MemberExpression",
-          "start": 68,
-          "end": 84,
-          "object": {
-            "type": "Identifier",
+        ],
+        "start": 34,
+        "end": 67
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "globalThis",
+              "start": 68,
+              "end": 78
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "count",
+              "start": 79,
+              "end": 84
+            },
+            "optional": false,
+            "computed": false,
             "start": 68,
-            "end": 78,
-            "name": "globalThis",
-            "kind": "reference"
+            "end": 84
           },
-          "property": {
-            "type": "Identifier",
-            "start": 79,
-            "end": 84,
-            "name": "count",
-            "kind": "name"
+          "right": {
+            "type": "Literal",
+            "value": 0,
+            "raw": "0",
+            "start": 87,
+            "end": 88
           },
-          "computed": false,
-          "optional": false
+          "start": 68,
+          "end": 88
         },
-        "right": {
-          "type": "Literal",
-          "start": 87,
-          "end": 88,
-          "value": 0,
-          "raw": "0"
-        },
-        "operator": "="
-      }
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 90,
-      "end": 184,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 96,
-          "end": 183,
-          "id": {
-            "type": "Identifier",
-            "start": 96,
-            "end": 105,
-            "name": "r1wrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 108,
-            "end": 183,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 108,
-              "end": 123,
-              "object": {
-                "type": "Identifier",
-                "start": 108,
-                "end": 114,
-                "name": "realm1",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 115,
-                "end": 123,
-                "name": "evaluate",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
-                "type": "TemplateLiteral",
-                "start": 124,
-                "end": 182,
-                "quasis": [
-                  {
-                    "type": "TemplateElement",
-                    "start": 125,
-                    "end": 181,
-                    "value": {
-                      "raw": "\n  globalThis.count = 0;\n  () => globalThis.count += 1;\n",
-                      "cooked": "\n  globalThis.count = 0;\n  () => globalThis.count += 1;\n"
-                    },
-                    "tail": true
-                  }
-                ],
-                "expressions": []
-              }
-            ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 185,
-      "end": 317,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 191,
-          "end": 316,
-          "id": {
-            "type": "Identifier",
-            "start": 191,
-            "end": 200,
-            "name": "r2wrapper",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 203,
-            "end": 316,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 203,
-              "end": 218,
-              "object": {
-                "type": "Identifier",
-                "start": 203,
-                "end": 209,
-                "name": "realm2",
-                "kind": "reference"
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 210,
-                "end": 218,
-                "name": "evaluate",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
-            },
-            "arguments": [
-              {
-                "type": "TemplateLiteral",
-                "start": 219,
-                "end": 315,
-                "quasis": [
-                  {
-                    "type": "TemplateElement",
-                    "start": 220,
-                    "end": 314,
-                    "value": {
-                      "raw": "\n  globalThis.wrapped = undefined;\n  globalThis.count = 0;\n  (fn) => globalThis.wrapped = fn;\n",
-                      "cooked": "\n  globalThis.wrapped = undefined;\n  globalThis.count = 0;\n  (fn) => globalThis.wrapped = fn;\n"
-                    },
-                    "tail": true
-                  }
-                ],
-                "expressions": []
-              }
-            ],
-            "optional": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 318,
-      "end": 357,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 324,
-          "end": 356,
-          "id": {
-            "type": "Identifier",
-            "start": 324,
-            "end": 333,
-            "name": "rewrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 336,
-            "end": 356,
-            "callee": {
+        "start": 68,
+        "end": 89
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
               "type": "Identifier",
-              "start": 336,
-              "end": 345,
+              "name": "r1wrapped",
+              "start": 96,
+              "end": 105
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "realm1",
+                  "start": 108,
+                  "end": 114
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 115,
+                  "end": 123
+                },
+                "optional": false,
+                "computed": false,
+                "start": 108,
+                "end": 123
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "value": {
+                        "raw": "\n  globalThis.count = 0;\n  () => globalThis.count += 1;\n",
+                        "cooked": "\n  globalThis.count = 0;\n  () => globalThis.count += 1;\n"
+                      },
+                      "tail": true,
+                      "start": 125,
+                      "end": 181
+                    }
+                  ],
+                  "expressions": [],
+                  "start": 124,
+                  "end": 182
+                }
+              ],
+              "optional": false,
+              "start": 108,
+              "end": 183
+            },
+            "start": 96,
+            "end": 183
+          }
+        ],
+        "start": 90,
+        "end": 184
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
               "name": "r2wrapper",
-              "kind": "reference"
+              "start": 191,
+              "end": 200
             },
-            "arguments": [
-              {
-                "type": "Identifier",
-                "start": 346,
-                "end": 355,
-                "name": "r1wrapped",
-                "kind": "reference"
-              }
-            ],
-            "optional": false
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "realm2",
+                  "start": 203,
+                  "end": 209
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 210,
+                  "end": 218
+                },
+                "optional": false,
+                "computed": false,
+                "start": 203,
+                "end": 218
+              },
+              "arguments": [
+                {
+                  "type": "TemplateLiteral",
+                  "quasis": [
+                    {
+                      "type": "TemplateElement",
+                      "value": {
+                        "raw": "\n  globalThis.wrapped = undefined;\n  globalThis.count = 0;\n  (fn) => globalThis.wrapped = fn;\n",
+                        "cooked": "\n  globalThis.wrapped = undefined;\n  globalThis.count = 0;\n  (fn) => globalThis.wrapped = fn;\n"
+                      },
+                      "tail": true,
+                      "start": 220,
+                      "end": 314
+                    }
+                  ],
+                  "expressions": [],
+                  "start": 219,
+                  "end": 315
+                }
+              ],
+              "optional": false,
+              "start": 203,
+              "end": 316
+            },
+            "start": 191,
+            "end": 316
           }
-        }
-      ]
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 358,
-      "end": 414,
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 364,
-          "end": 413,
-          "id": {
-            "type": "Identifier",
-            "start": 364,
-            "end": 373,
-            "name": "r2wrapped",
-            "kind": "binding"
-          },
-          "init": {
-            "type": "CallExpression",
-            "start": 376,
-            "end": 413,
-            "callee": {
-              "type": "MemberExpression",
-              "start": 376,
-              "end": 391,
-              "object": {
+        ],
+        "start": 185,
+        "end": 317
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "rewrapped",
+              "start": 324,
+              "end": 333
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
                 "type": "Identifier",
+                "name": "r2wrapper",
+                "start": 336,
+                "end": 345
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "r1wrapped",
+                  "start": 346,
+                  "end": 355
+                }
+              ],
+              "optional": false,
+              "start": 336,
+              "end": 356
+            },
+            "start": 324,
+            "end": 356
+          }
+        ],
+        "start": 318,
+        "end": 357
+      },
+      {
+        "type": "VariableDeclaration",
+        "kind": "const",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "r2wrapped",
+              "start": 364,
+              "end": 373
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "realm2",
+                  "start": 376,
+                  "end": 382
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "evaluate",
+                  "start": 383,
+                  "end": 391
+                },
+                "optional": false,
+                "computed": false,
                 "start": 376,
-                "end": 382,
-                "name": "realm2",
-                "kind": "reference"
+                "end": 391
               },
-              "property": {
-                "type": "Identifier",
-                "start": 383,
-                "end": 391,
-                "name": "evaluate",
-                "kind": "name"
-              },
-              "computed": false,
-              "optional": false
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "value": "globalThis.wrapped",
+                  "raw": "'globalThis.wrapped'",
+                  "start": 392,
+                  "end": 412
+                }
+              ],
+              "optional": false,
+              "start": 376,
+              "end": 413
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "start": 392,
-                "end": 412,
-                "value": "globalThis.wrapped",
-                "raw": "'globalThis.wrapped'"
-              }
-            ],
-            "optional": false
+            "start": 364,
+            "end": 413
           }
-        }
-      ]
-    }
-  ]
+        ],
+        "start": 358,
+        "end": 414
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 414
+  },
+  "comments": [],
+  "diagnostics": []
 }

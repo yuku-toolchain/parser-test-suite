@@ -1,134 +1,133 @@
 {
-  "type": "Program",
-  "start": 0,
-  "end": 100,
-  "sourceType": "script",
-  "hashbang": null,
-  "body": [
-    {
-      "type": "VariableDeclaration",
-      "start": 0,
-      "end": 6,
-      "kind": "var",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 4,
-          "end": 5,
-          "id": {
-            "type": "Identifier",
-            "start": 4,
-            "end": 5,
-            "name": "x",
-            "kind": "binding"
-          },
-          "init": null
-        }
-      ]
-    },
-    {
-      "type": "TryStatement",
-      "start": 7,
-      "end": 100,
-      "block": {
-        "type": "BlockStatement",
-        "start": 11,
-        "end": 42,
-        "body": [
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "VariableDeclaration",
+        "kind": "var",
+        "declarations": [
           {
-            "type": "ExpressionStatement",
-            "start": 15,
-            "end": 40,
-            "expression": {
-              "type": "CallExpression",
-              "start": 15,
-              "end": 39,
-              "callee": {
-                "type": "Identifier",
-                "start": 15,
-                "end": 19,
-                "name": "eval",
-                "kind": "reference"
-              },
-              "arguments": [
-                {
-                  "type": "Literal",
-                  "start": 20,
-                  "end": 38,
-                  "value": "x = 1; x\n++",
-                  "raw": "\"x = 1; x\\u000A++\""
-                }
-              ],
-              "optional": false
-            }
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 4,
+              "end": 5
+            },
+            "init": null,
+            "start": 4,
+            "end": 5
           }
-        ]
+        ],
+        "start": 0,
+        "end": 6
       },
-      "handler": {
-        "type": "CatchClause",
-        "start": 43,
-        "end": 100,
-        "param": {
-          "type": "Identifier",
-          "start": 50,
-          "end": 51,
-          "name": "e",
-          "kind": "binding"
-        },
-        "body": {
+      {
+        "type": "TryStatement",
+        "block": {
           "type": "BlockStatement",
-          "start": 53,
-          "end": 100,
           "body": [
             {
-              "type": "IfStatement",
-              "start": 57,
-              "end": 98,
-              "test": {
-                "type": "BinaryExpression",
-                "start": 61,
-                "end": 94,
-                "left": {
-                  "type": "BinaryExpression",
-                  "start": 61,
-                  "end": 85,
-                  "left": {
-                    "type": "Identifier",
-                    "start": 61,
-                    "end": 62,
-                    "name": "e",
-                    "kind": "reference"
-                  },
-                  "right": {
-                    "type": "Identifier",
-                    "start": 74,
-                    "end": 85,
-                    "name": "SyntaxError",
-                    "kind": "reference"
-                  },
-                  "operator": "instanceof"
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "eval",
+                  "start": 15,
+                  "end": 19
                 },
-                "right": {
-                  "type": "Literal",
-                  "start": 90,
-                  "end": 94,
-                  "value": true,
-                  "raw": "true"
-                },
-                "operator": "!=="
+                "arguments": [
+                  {
+                    "type": "Literal",
+                    "value": "x = 1; x\n++",
+                    "raw": "\"x = 1; x\\u000A++\"",
+                    "start": 20,
+                    "end": 38
+                  }
+                ],
+                "optional": false,
+                "start": 15,
+                "end": 39
               },
-              "consequent": {
-                "type": "BlockStatement",
-                "start": 96,
-                "end": 98,
-                "body": []
-              },
-              "alternate": null
+              "start": 15,
+              "end": 40
             }
-          ]
-        }
-      },
-      "finalizer": null
-    }
-  ]
+          ],
+          "start": 11,
+          "end": 42
+        },
+        "handler": {
+          "type": "CatchClause",
+          "param": {
+            "type": "Identifier",
+            "name": "e",
+            "start": 50,
+            "end": 51
+          },
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "IfStatement",
+                "test": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "e",
+                      "start": 61,
+                      "end": 62
+                    },
+                    "operator": "instanceof",
+                    "right": {
+                      "type": "Identifier",
+                      "name": "SyntaxError",
+                      "start": 74,
+                      "end": 85
+                    },
+                    "start": 61,
+                    "end": 85
+                  },
+                  "operator": "!==",
+                  "right": {
+                    "type": "Literal",
+                    "value": true,
+                    "raw": "true",
+                    "start": 90,
+                    "end": 94
+                  },
+                  "start": 61,
+                  "end": 94
+                },
+                "consequent": {
+                  "type": "BlockStatement",
+                  "body": [],
+                  "start": 96,
+                  "end": 98
+                },
+                "alternate": null,
+                "start": 57,
+                "end": 98
+              }
+            ],
+            "start": 53,
+            "end": 100
+          },
+          "start": 43,
+          "end": 100
+        },
+        "finalizer": null,
+        "start": 7,
+        "end": 100
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 100
+  },
+  "comments": [],
+  "diagnostics": []
 }
