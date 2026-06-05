@@ -1,5 +1,34 @@
 # test262 sync history
 
+## 2026-06-05
+
+- [41d455533c2f4edf.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/capability-executor-not-callable.js)
+- [dd96ea94be763a4f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/ctx-ctor-constructed.js)
+- [474aae1c5770a4f0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/ctx-ctor-throws.js)
+- [65954bf33c2b3474.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/getownproperty-not-enumerable.js)
+- [eb2740a60379c1b7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/getownproperty-returns-undefined.js)
+- [5d12667a4f57d702.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/getownproperty-throws.js)
+- [da6340313ab92471.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-resolve-error-reject.js)
+- [82a6003f94e622c4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-resolve-get-error-reject.js)
+- [171c8405ff0e6f67.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-then-error-reject.js)
+- [5595a8a8f3c913c0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-then-get-error-reject.js)
+- [9dada459ba6fe2b7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/ownkeys-throws.js)
+- [74628e92da344372.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/reject-last.js)
+- [370c738a366f714a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/reject-second.js)
+- [0ef9e3edb4da534f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/resolve-before-loop-exit.js)
+- [79a89daa26d39106.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/capability-executor-not-callable.js)
+- [f9ba1938fb76a505.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/ctx-ctor-constructed.js)
+- [ab721908172bab72.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/ctx-ctor-throws.js)
+- [fa33d42a75634cdd.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/getownproperty-not-enumerable.js)
+- [9426579872942b7f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/getownproperty-returns-undefined.js)
+- [c50d40d22700fe6a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/getownproperty-throws.js)
+- [c704967404200669.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-resolve-error-reject.js)
+- [cc835f9908106364.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-resolve-get-error-reject.js)
+- [25c721ad6b2ce6e6.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-then-error-reject.js)
+- [3016d1d785943b87.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-then-get-error-reject.js)
+- [165ab4673e38ca97.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/ownkeys-throws.js)
+- [6fa034831257ecd0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/resolve-before-loop-exit.js)
+
 ## 2026-05-27
 
 - [c24c6b41fc34f2d3.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/intl-legacy-constructed-symbol-property.js)
