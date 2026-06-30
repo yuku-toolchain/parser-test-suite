@@ -1,5 +1,34 @@
 # test262 sync history
 
+## 2026-06-30
+
+- [843c574ead38ea6f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/capability-resolve-throws-reject.js)
+- [23d6adae197a6d9d.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/get-value-not-called-for-non-enumerable.js)
+- [9abad8e5d36f9ad9.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/get-value-throws-reject.js)
+- [11d668353725d389.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-resolve-custom.js)
+- [87f50d8432d0c968.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-resolve-get-once.js)
+- [b59785dd14246090.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-resolve-return.js)
+- [ee534b029be00e6f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/invoke-then-not-callable-reject.js)
+- [c27d3e486e459ede.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/non-enumerable-properties-only.js)
+- [d32e73d1ae95f0b6.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/reject-first.js)
+- [5668cd8447683677.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/resolve-element-function-properties.js)
+- [d142c16625dcb34a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/resolve-from-same-thenable.js)
+- [fd004aa60986e368.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/resolve-missing-reject-with-typeerror.js)
+- [06f63b6bbbd9b740.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/result-property-descriptors.js)
+- [218ccd889f9202bd.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/capability-resolve-throws-reject.js)
+- [7a22e3152787043b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/element-function-properties.js)
+- [ec4329d64e2f8fd2.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/get-value-not-called-for-non-enumerable.js)
+- [6403bb6502c6b7a3.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/get-value-throws-reject.js)
+- [6f8bcc1367624517.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-resolve-custom.js)
+- [476b9512bd030baa.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-resolve-get-once.js)
+- [fc3aff67bd7cf9b4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-resolve-return.js)
+- [9ac629a988f62e1e.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/invoke-then-not-callable-reject.js)
+- [b836e4993ba75bfc.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/non-enumerable-properties-only.js)
+- [6c3a3cba00c067d9.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/reject-from-same-thenable.js)
+- [2c2f04ca77f27543.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/resolve-from-same-thenable.js)
+- [3e7765a945af2456.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/resolve-missing-reject-with-typeerror.js)
+- [2d51e6b5e88c8cf0.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allSettledKeyed/result-property-descriptors.js)
+
 ## 2026-06-11
 
 - [8d9f6f2c6df045c4.js](https://github.com/tc39/test262/blob/main/test/language/expressions/dynamic-import/syntax/invalid/nested-arrow-assignment-expression-import-defer-no-new-call-expression-prop-access.js)
