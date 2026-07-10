@@ -1,5 +1,10 @@
 # test262 sync history
 
+## 2026-07-10
+
+- [f88cc90a6755753f.js](https://github.com/tc39/test262/blob/main/test/language/expressions/dynamic-import/import-fulfilled-member-of-errored-cycle.js)
+- [229249e61df45c0b.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/deferred-namespace-object/json-module.js)
+
 ## 2026-06-30
 
 - [843c574ead38ea6f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/allKeyed/capability-resolve-throws-reject.js)
