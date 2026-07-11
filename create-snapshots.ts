@@ -83,7 +83,7 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
 
     const serialized = JSON.stringify(
       output,
-      // JSON can't represent bigints or regexps natively
+      // JSON can't represent bigints, regexps, or non-finite numbers natively
       // So we tag them with a prefix to preserve them in snapshots
       (_, value) => {
         if (typeof value === "bigint") {
@@ -91,6 +91,9 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
         }
         if (value instanceof RegExp) {
           return `(RegExp) ${value.toString()}`;
+        }
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          return `(Number) ${value}`;
         }
         // oxc-parser emits non-standard `attributes`/`selfClosing` on
         // JSXOpeningFragment in .jsx mode.
