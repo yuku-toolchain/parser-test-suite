@@ -14,10 +14,11 @@ type FolderConfig = {
 const FOLDERS: FolderConfig[] = [
   { path: "js/pass", failPath: "js/fail" },
   { path: "jsx/pass", failPath: "jsx/fail" },
-  { path: "ts/pass", failPath: "ts/fail" },
+  { path: "ts/pass" },
 ];
 
 function detectLang(fileName: string): Lang {
+  if (fileName.endsWith(".d.ts")) return "dts";
   if (fileName.endsWith(".tsx")) return "tsx";
   if (fileName.endsWith(".ts")) return "ts";
   if (fileName.endsWith(".jsx")) return "jsx";
@@ -25,7 +26,7 @@ function detectLang(fileName: string): Lang {
 }
 
 function detectAstType(lang: Lang): AstType {
-  return lang === "ts" || lang === "tsx" ? "ts" : "js";
+  return lang === "ts" || lang === "tsx" || lang === "dts" ? "ts" : "js";
 }
 
 // Workaround for an oxc-parser bug: the `value` of HTML-style
@@ -49,7 +50,7 @@ function fixHtmlCommentValues<T extends { type: string; start: number; end: numb
 async function processFile(folder: FolderConfig, fileName: string, lang: Lang, astType: AstType) {
   const filePath = join(folder.path, fileName);
 
-  const outputName = `${fileName.replace(/\.(module\.)?(j|t)sx?$/, '')}.snapshot.json`;
+  const outputName = `${fileName.slice(0, fileName.indexOf("."))}.snapshot.json`;
   const outputPath = join(folder.path, "snapshots", outputName);
 
   if (await Bun.file(outputPath).exists()) {
@@ -70,8 +71,10 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
       if (folder.failPath) {
         const failPath = join(folder.failPath, fileName);
         await Bun.write(failPath, source);
-        rmSync(filePath, { force: true });
+      } else {
+        console.error(`dropped ${filePath}: ${result.errors[0]?.message}`);
       }
+      rmSync(filePath, { force: true });
       return;
     }
 

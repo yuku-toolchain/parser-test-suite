@@ -136,7 +136,7 @@ function classify(source: string, repoPath: string): ClassifyResult {
 }
 
 function outputName(hash: string, isModule: boolean, repoPath: string) {
-  const ext = repoPath.endsWith(".tsx") ? ".tsx" : ".ts";
+  const ext = repoPath.endsWith(".d.ts") ? ".d.ts" : repoPath.endsWith(".tsx") ? ".tsx" : ".ts";
   return isModule ? `${hash}.module${ext}` : `${hash}${ext}`;
 }
 

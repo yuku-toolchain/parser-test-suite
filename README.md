@@ -10,13 +10,13 @@ Comprehensive ECMAScript parser test suite targeting [ESTree](https://github.com
 | ----- | ------- | ---------- | -------------- |
 | `js`  | ~37,000 | ~3,700     | ~3,600         |
 | `jsx` | dozens  | a handful  |                |
-| `ts`  | ~8,000  |            | a few hundred  |
+| `ts`  | ~8,300  |            | a few hundred  |
 
 - `pass/` contains files that must parse cleanly. AST is compared against `pass/snapshots/*.snapshot.json` (ESTree for js/jsx, TypeScript-ESTree for ts).
 - `fail/` contains files that must produce a parse error.
 - `semantic/` contains files that parse cleanly but must fail [semantic analysis](https://github.com/yuku-toolchain/yuku/blob/main/docs/src/content/docs/parser.md#semantic-analysis), which checks the scope-dependent [early errors](https://tc39.es/ecma262/#early-error) that cannot be caught from local context alone (redeclarations, unresolved exports, private fields used outside their class, and so on).
 
-Filenames are a 16-char content hash. A `.module.` segment marks the file as ESM and is parsed with `sourceType: "module"` (strict mode on), e.g. `abcd…1234.module.js`. Everything else is parsed as a script.
+Filenames are a 16-char content hash. A `.module.` segment marks the file as ESM and is parsed with `sourceType: "module"` (strict mode on), e.g. `abcd…1234.module.js`. Everything else is parsed as a script. TypeScript declaration-file tests keep their `.d.ts` extension and are parsed in declaration-file mode (`lang: "dts"`).
 
 ## Syncing
 
