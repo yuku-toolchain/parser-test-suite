@@ -1,0 +1,102 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "$DONOTEVALUATE",
+            "start": 596,
+            "end": 610
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 596,
+          "end": 612
+        },
+        "start": 596,
+        "end": 613
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "imported": {
+              "type": "Identifier",
+              "name": "name",
+              "start": 623,
+              "end": 627
+            },
+            "local": {
+              "type": "Identifier",
+              "name": "name",
+              "start": 623,
+              "end": 627
+            },
+            "start": 623,
+            "end": 627
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./json-named-bindings_FIXTURE.json",
+          "raw": "'./json-named-bindings_FIXTURE.json'",
+          "start": 634,
+          "end": 670
+        },
+        "phase": null,
+        "attributes": [
+          {
+            "type": "ImportAttribute",
+            "key": {
+              "type": "Identifier",
+              "name": "type",
+              "start": 678,
+              "end": 682
+            },
+            "value": {
+              "type": "Literal",
+              "value": "json",
+              "raw": "'json'",
+              "start": 684,
+              "end": 690
+            },
+            "start": 678,
+            "end": 690
+          }
+        ],
+        "start": 615,
+        "end": 693
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 694
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2021 the V8 project authors. All rights reserved.",
+      "start": 0,
+      "end": 66
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 67,
+      "end": 137
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-parse-json-module\ndescription: Does not define named bindings\ninfo: |\n  In the early design of JSON modules, contributors considered allowing the\n  properties of object values in JSON modules to be imported directly by name.\n  This was ultimately rejected, so attempting to import in this way should\n  produce a SyntaxError.\nflags: [module]\nfeatures: [import-attributes, json-modules]\nnegative:\n  phase: resolution\n  type: SyntaxError\n---",
+      "start": 138,
+      "end": 594
+    }
+  ],
+  "diagnostics": []
+}

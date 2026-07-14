@@ -1,0 +1,86 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ThrowStatement",
+        "argument": {
+          "type": "Literal",
+          "value": "Test262: This statement should not be evaluated.",
+          "raw": "\"Test262: This statement should not be evaluated.\"",
+          "start": 623,
+          "end": 673
+        },
+        "start": 617,
+        "end": 674
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [],
+        "source": {
+          "type": "Literal",
+          "value": "./ensure-linking-error_FIXTURE.js",
+          "raw": "\"./ensure-linking-error_FIXTURE.js\"",
+          "start": 683,
+          "end": 718
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 676,
+        "end": 719
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportNamespaceSpecifier",
+            "local": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 733,
+              "end": 734
+            },
+            "start": 728,
+            "end": 734
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-1_FIXTURE.js",
+          "raw": "'./import-attribute-1_FIXTURE.js'",
+          "start": 740,
+          "end": 773
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 721,
+        "end": 782
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 783
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2021 the V8 project authors. All rights reserved.",
+      "start": 0,
+      "end": 66
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 67,
+      "end": 137
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: >\n  `with` AttributesKeyword in WithClause in ImportDeclaration can\n  be preceded by a line terminator\nesid: sec-modules\ninfo: |\n  ImportDeclaration:\n    import ModuleSpecifier WithClause;\n\n  WithClause:\n    AttributesKeyword {}\n    AttributesKeyword { WithEntries ,opt }\n\n  AttributesKeyword:\n    with\n    [no LineTerminator here] assert\n\nnegative:\n  phase: resolution\n  type: SyntaxError\nfeatures: [import-attributes, globalThis]\nflags: [module, raw]\n---",
+      "start": 138,
+      "end": 615
+    }
+  ],
+  "diagnostics": []
+}

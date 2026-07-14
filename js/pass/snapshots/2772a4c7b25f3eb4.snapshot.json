@@ -1,0 +1,87 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "IfStatement",
+        "test": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false",
+          "start": 1290,
+          "end": 1295
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [],
+          "start": 1297,
+          "end": 1301
+        },
+        "alternate": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "ImportExpression",
+                "source": {
+                  "type": "Literal",
+                  "value": "./empty_FIXTURE.js",
+                  "raw": "'./empty_FIXTURE.js'",
+                  "start": 1318,
+                  "end": 1338
+                },
+                "options": {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "start": 1340,
+                  "end": 1342
+                },
+                "phase": null,
+                "start": 1311,
+                "end": 1344
+              },
+              "start": 1311,
+              "end": 1345
+            }
+          ],
+          "start": 1307,
+          "end": 1347
+        },
+        "start": 1286,
+        "end": 1347
+      }
+    ],
+    "sourceType": "script",
+    "hashbang": null,
+    "start": 0,
+    "end": 1348
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " This file was procedurally generated from the following sources:",
+      "start": 0,
+      "end": 67
+    },
+    {
+      "type": "Line",
+      "value": " - src/dynamic-import/import-attributes-trailing-comma-second.case",
+      "start": 68,
+      "end": 136
+    },
+    {
+      "type": "Line",
+      "value": " - src/dynamic-import/syntax/valid/nested-else.template",
+      "start": 137,
+      "end": 194
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: ImportCall trailing comma following second parameter (nested else syntax)\nesid: sec-import-call-runtime-semantics-evaluation\nfeatures: [import-attributes, dynamic-import]\nflags: [generated]\ninfo: |\n    ImportCall :\n        import( AssignmentExpression )\n\n    1. Let referencingScriptOrModule be ! GetActiveScriptOrModule().\n    2. Assert: referencingScriptOrModule is a Script Record or Module Record (i.e. is not null).\n    3. Let argRef be the result of evaluating AssignmentExpression.\n    4. Let specifier be ? GetValue(argRef).\n    5. Let promiseCapability be ! NewPromiseCapability(%Promise%).\n    6. Let specifierString be ToString(specifier).\n    7. IfAbruptRejectPromise(specifierString, promiseCapability).\n    8. Perform ! HostImportModuleDynamically(referencingScriptOrModule, specifierString, promiseCapability).\n    9. Return promiseCapability.[[Promise]].\n\n\n    ImportCall :\n        import( AssignmentExpression[+In, ?Yield, ?Await] ,opt )\n        import( AssignmentExpression[+In, ?Yield, ?Await] , AssignmentExpression[+In, ?Yield, ?Await] ,opt )\n\n---",
+      "start": 195,
+      "end": 1284
+    }
+  ],
+  "diagnostics": []
+}
