@@ -1,0 +1,223 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "$DONOTEVALUATE",
+            "start": 681,
+            "end": 695
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 681,
+          "end": 697
+        },
+        "start": 681,
+        "end": 698
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [],
+        "source": {
+          "type": "Literal",
+          "value": "./ensure-linking-error_FIXTURE.js",
+          "raw": "\"./ensure-linking-error_FIXTURE.js\"",
+          "start": 707,
+          "end": 742
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 700,
+        "end": 743
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "local": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 752,
+              "end": 753
+            },
+            "start": 752,
+            "end": 753
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-1_FIXTURE.js",
+          "raw": "'./import-attribute-1_FIXTURE.js'",
+          "start": 759,
+          "end": 792
+        },
+        "phase": null,
+        "attributes": [
+          {
+            "type": "ImportAttribute",
+            "key": {
+              "type": "Identifier",
+              "name": "if",
+              "start": 799,
+              "end": 801
+            },
+            "value": {
+              "type": "Literal",
+              "value": "",
+              "raw": "''",
+              "start": 802,
+              "end": 804
+            },
+            "start": 799,
+            "end": 804
+          }
+        ],
+        "start": 745,
+        "end": 806
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [],
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-2_FIXTURE.js",
+          "raw": "'./import-attribute-2_FIXTURE.js'",
+          "start": 814,
+          "end": 847
+        },
+        "phase": null,
+        "attributes": [
+          {
+            "type": "ImportAttribute",
+            "key": {
+              "type": "Identifier",
+              "name": "if",
+              "start": 854,
+              "end": 856
+            },
+            "value": {
+              "type": "Literal",
+              "value": "",
+              "raw": "''",
+              "start": 857,
+              "end": 859
+            },
+            "start": 854,
+            "end": 859
+          }
+        ],
+        "start": 807,
+        "end": 861
+      },
+      {
+        "type": "ExportAllDeclaration",
+        "exported": null,
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-3_FIXTURE.js",
+          "raw": "'./import-attribute-3_FIXTURE.js'",
+          "start": 876,
+          "end": 909
+        },
+        "attributes": [
+          {
+            "type": "ImportAttribute",
+            "key": {
+              "type": "Identifier",
+              "name": "if",
+              "start": 916,
+              "end": 918
+            },
+            "value": {
+              "type": "Literal",
+              "value": "",
+              "raw": "''",
+              "start": 919,
+              "end": 921
+            },
+            "start": 916,
+            "end": 921
+          }
+        ],
+        "start": 862,
+        "end": 923
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 925,
+              "end": 931
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "sameValue",
+              "start": 932,
+              "end": 941
+            },
+            "optional": false,
+            "computed": false,
+            "start": 925,
+            "end": 941
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "x",
+              "start": 942,
+              "end": 943
+            },
+            {
+              "type": "Literal",
+              "value": 262.1,
+              "raw": "262.1",
+              "start": 945,
+              "end": 950
+            }
+          ],
+          "optional": false,
+          "start": 925,
+          "end": 951
+        },
+        "start": 925,
+        "end": 952
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 953
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2021 the V8 project authors. All rights reserved.",
+      "start": 0,
+      "end": 66
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 67,
+      "end": 137
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: >\n    WithClause in ImportDeclaration may use any valid IdentifierName as a key\nesid: sec-modules\ninfo: |\n  ImportDeclaration:\n    import ModuleSpecifier[no LineTerminator here] WithClause;\n\n  WithClause:\n    AttributesKeyword {}\n    AttributesKeyword {WithEntries ,opt}\n\n  WithEntries:\n    AttributeKey : StringLiteral\n    AttributeKey : StringLiteral , WithEntries\n\n  AttributeKey:\n    IdentifierName\n    StringLiteral\nnegative:\n  phase: resolution\n  type: SyntaxError\nfeatures: [import-attributes]\nflags: [module]\n---",
+      "start": 138,
+      "end": 679
+    }
+  ],
+  "diagnostics": []
+}

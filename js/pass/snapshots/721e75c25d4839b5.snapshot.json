@@ -1,0 +1,96 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "$DONOTEVALUATE",
+            "start": 610,
+            "end": 624
+          },
+          "arguments": [],
+          "optional": false,
+          "start": 610,
+          "end": 626
+        },
+        "start": 610,
+        "end": 627
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "local": {
+              "type": "Identifier",
+              "name": "value",
+              "start": 636,
+              "end": 641
+            },
+            "start": 636,
+            "end": 641
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./json-invalid_FIXTURE.json",
+          "raw": "'./json-invalid_FIXTURE.json'",
+          "start": 647,
+          "end": 676
+        },
+        "phase": null,
+        "attributes": [
+          {
+            "type": "ImportAttribute",
+            "key": {
+              "type": "Identifier",
+              "name": "type",
+              "start": 684,
+              "end": 688
+            },
+            "value": {
+              "type": "Literal",
+              "value": "json",
+              "raw": "'json'",
+              "start": 690,
+              "end": 696
+            },
+            "start": 684,
+            "end": 696
+          }
+        ],
+        "start": 629,
+        "end": 699
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 700
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2021 the V8 project authors. All rights reserved.",
+      "start": 0,
+      "end": 66
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 67,
+      "end": 137
+    },
+    {
+      "type": "Block",
+      "value": "---\nesid: sec-parse-json-module\ndescription: Does not define\ninfo: |\n  # 1.4 ParseJSONModule ( source )\n\n  The abstract operation ParseJSONModule takes a single argument source which\n  is a String representing the contents of a module.\n\n  1. Let json be ? Call(%JSON.parse%, undefined, « source »).\n  2. Return CreateDefaultExportSyntheticModule(json).\nflags: [module]\nfeatures: [import-attributes, json-modules]\nnegative:\n  phase: resolution\n  type: SyntaxError\n---",
+      "start": 138,
+      "end": 608
+    }
+  ],
+  "diagnostics": []
+}

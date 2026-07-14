@@ -1,0 +1,133 @@
+{
+  "program": {
+    "type": "Program",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "local": {
+              "type": "Identifier",
+              "name": "x",
+              "start": 615,
+              "end": 616
+            },
+            "start": 615,
+            "end": 616
+          }
+        ],
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-1_FIXTURE.js",
+          "raw": "'./import-attribute-1_FIXTURE.js'",
+          "start": 622,
+          "end": 655
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 608,
+        "end": 664
+      },
+      {
+        "type": "ImportDeclaration",
+        "specifiers": [],
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-2_FIXTURE.js",
+          "raw": "'./import-attribute-2_FIXTURE.js'",
+          "start": 672,
+          "end": 705
+        },
+        "phase": null,
+        "attributes": [],
+        "start": 665,
+        "end": 714
+      },
+      {
+        "type": "ExportAllDeclaration",
+        "exported": null,
+        "source": {
+          "type": "Literal",
+          "value": "./import-attribute-3_FIXTURE.js",
+          "raw": "'./import-attribute-3_FIXTURE.js'",
+          "start": 729,
+          "end": 762
+        },
+        "attributes": [],
+        "start": 715,
+        "end": 771
+      },
+      {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "assert",
+              "start": 773,
+              "end": 779
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "sameValue",
+              "start": 780,
+              "end": 789
+            },
+            "optional": false,
+            "computed": false,
+            "start": 773,
+            "end": 789
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "x",
+              "start": 790,
+              "end": 791
+            },
+            {
+              "type": "Literal",
+              "value": 262.1,
+              "raw": "262.1",
+              "start": 793,
+              "end": 798
+            }
+          ],
+          "optional": false,
+          "start": 773,
+          "end": 799
+        },
+        "start": 773,
+        "end": 800
+      }
+    ],
+    "sourceType": "module",
+    "hashbang": null,
+    "start": 0,
+    "end": 801
+  },
+  "comments": [
+    {
+      "type": "Line",
+      "value": " Copyright (C) 2021 the V8 project authors. All rights reserved.",
+      "start": 0,
+      "end": 66
+    },
+    {
+      "type": "Line",
+      "value": " This code is governed by the BSD license found in the LICENSE file.",
+      "start": 67,
+      "end": 137
+    },
+    {
+      "type": "Block",
+      "value": "---\ndescription: WithClause in ImportDeclaration may be empty\nesid: sec-modules\ninfo: |\n  ImportDeclaration:\n    import ModuleSpecifier[no LineTerminator here] WithClause;\n\n  WithClause:\n    AttributesKeyword {}\n    AttributesKeyword {WithEntries ,opt}\n\n  WithEntries:\n    AttributeKey : StringLiteral\n    AttributeKey : StringLiteral , WithEntries\n\n  AttributeKey:\n    IdentifierName\n    StringLiteral\nfeatures: [import-attributes, globalThis]\nflags: [module]\n---",
+      "start": 138,
+      "end": 606
+    }
+  ],
+  "diagnostics": []
+}
