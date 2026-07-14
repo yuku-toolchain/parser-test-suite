@@ -1,5 +1,9 @@
 # test262 sync history
 
+## 2026-07-14
+
+- Full sync from [`f2d14356`](https://github.com/tc39/test262/tree/f2d14356) (filter: `import-attributes`): 90 test(s) added, 0 fixture(s) copied.
+
 ## 2026-07-10
 
 - [f88cc90a6755753f.js](https://github.com/tc39/test262/blob/main/test/language/expressions/dynamic-import/import-fulfilled-member-of-errored-cycle.js)
