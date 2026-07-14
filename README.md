@@ -4,19 +4,23 @@ Comprehensive ECMAScript parser test suite targeting [ESTree](https://github.com
 
 ## Layout
 
-| Suite | pass   | fail  | semantic |
-| ----- | ------ | ----- | -------- |
-| `js`  | 37,459 | 3,634 | 3,615    |
-| `jsx` | 55     | 14    |          |
-| `ts`  | 8,083  |       | 176      |
+**Over 50,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (jsx). The suite [syncs with upstream daily](#syncing) and grows over time, so counts below are approximate orders of magnitude, not exact numbers.
 
-**Total: ~53,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (jsx).
+| Suite | pass    | fail       | semantic       |
+| ----- | ------- | ---------- | -------------- |
+| `js`  | ~37,000 | ~3,700     | ~3,600         |
+| `jsx` | dozens  | a handful  |                |
+| `ts`  | ~8,000  |            | a few hundred  |
 
 - `pass/` contains files that must parse cleanly. AST is compared against `pass/snapshots/*.snapshot.json` (ESTree for js/jsx, TypeScript-ESTree for ts).
 - `fail/` contains files that must produce a parse error.
 - `semantic/` contains files that parse cleanly but must fail [semantic analysis](https://github.com/yuku-toolchain/yuku/blob/main/docs/src/content/docs/parser.md#semantic-analysis), which checks the scope-dependent [early errors](https://tc39.es/ecma262/#early-error) that cannot be caught from local context alone (redeclarations, unresolved exports, private fields used outside their class, and so on).
 
 Filenames are a 16-char content hash. A `.module.` segment marks the file as ESM and is parsed with `sourceType: "module"` (strict mode on), e.g. `abcd…1234.module.js`. Everything else is parsed as a script.
+
+## Syncing
+
+A daily job checks [tc39/test262](https://github.com/tc39/test262) and [microsoft/TypeScript](https://github.com/microsoft/TypeScript) for newly added tests and opens a PR bringing them into the suite, so new spec proposals and compiler features are covered shortly after they land upstream. See [test262-sync.md](test262-sync.md) and [typescript-sync.md](typescript-sync.md) for the full history of what was added and when.
 
 ## Usage in yuku
 
