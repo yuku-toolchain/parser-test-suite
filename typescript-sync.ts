@@ -1,4 +1,4 @@
-import ts from "typescript";
+import { classify, type SourceLang } from "./classify";
 
 const REPO = "microsoft/TypeScript";
 const HISTORY_FILE = "typescript-sync.md";
@@ -73,66 +73,9 @@ function isTsTestPath(path: string) {
   return path.endsWith(".ts") || path.endsWith(".tsx");
 }
 
-function hasSyntacticErrors(
-  sourceFile: ts.SourceFile,
-  repoPath: string,
-  source: string,
-  compilerOptions: ts.CompilerOptions
-): boolean {
-  const host = ts.createCompilerHost(compilerOptions, true);
-  const origGetSourceFile = host.getSourceFile.bind(host);
-  host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
-    if (fileName === repoPath) return sourceFile;
-    return origGetSourceFile(fileName, languageVersion, onError, shouldCreateNewSourceFile);
-  };
-  host.readFile = (fileName) => (fileName === repoPath ? source : undefined);
-  host.fileExists = (fileName) => fileName === repoPath;
-
-  const program = ts.createProgram([repoPath], compilerOptions, host);
-  return program.getSyntacticDiagnostics(sourceFile).length > 0;
-}
-
-type ClassifyResult =
-  | { kind: "skip"; reason: string }
-  | { kind: "fail"; asModule: boolean }
-  | { kind: "pass"; asModule: boolean };
-
-function classify(source: string, repoPath: string): ClassifyResult {
-  if (shouldSkipSource(source)) {
-    return { kind: "skip", reason: "filtered" };
-  }
-
-  const scriptKind = repoPath.endsWith(".tsx") ? ts.ScriptKind.TSX : ts.ScriptKind.TS;
-  const sourceFile = ts.createSourceFile(
-    repoPath,
-    source,
-    ts.ScriptTarget.Latest,
-    true,
-    scriptKind
-  );
-
-  const isModule = ts.isExternalModule(sourceFile);
-  const isStrict = sourceFile.statements.some(
-    (s) =>
-      ts.isExpressionStatement(s) &&
-      ts.isStringLiteral(s.expression) &&
-      s.expression.text === "use strict"
-  );
-  const asModule = isModule || isStrict;
-
-  const compilerOptions: ts.CompilerOptions = {
-    target: ts.ScriptTarget.Latest,
-    module: isModule ? ts.ModuleKind.ESNext : ts.ModuleKind.None,
-    noResolve: true,
-    noLib: true,
-    jsx: scriptKind === ts.ScriptKind.TSX ? ts.JsxEmit.Preserve : undefined,
-  };
-
-  if (hasSyntacticErrors(sourceFile, repoPath, source, compilerOptions)) {
-    return { kind: "fail", asModule };
-  }
-
-  return { kind: "pass", asModule };
+function langOf(path: string): SourceLang {
+  if (path.endsWith(".d.ts")) return "dts";
+  return path.endsWith(".tsx") ? "tsx" : "ts";
 }
 
 function outputName(hash: string, isModule: boolean, repoPath: string) {
@@ -183,20 +126,19 @@ const saved: { filename: string; path: string }[] = [];
 for (const [path] of added) {
   try {
     const source = await fetchRaw(path);
-    const c = classify(source, path);
-    if (c.kind === "skip") {
-      console.log(`${LOG_PREFIX}   skip (${c.reason}): ${path}`);
+    if (shouldSkipSource(source)) {
+      console.log(`${LOG_PREFIX}   skip (filtered): ${path}`);
       continue;
     }
-    if (c.kind === "fail") {
-      console.log(`${LOG_PREFIX}   skip (syntactic errors): ${path}`);
+    const c = classify(source, langOf(path));
+    if (c.folder === "skip" || c.folder === "fail") {
+      console.log(`${LOG_PREFIX}   skip (does not parse): ${path}`);
       continue;
     }
-    const hash = contentHash(source);
-    const filename = outputName(hash, c.asModule, path);
-    await Bun.write(`ts/pass/${filename}`, source);
+    const filename = outputName(contentHash(source), c.asModule, path);
+    await Bun.write(`ts/${c.folder}/${filename}`, source);
     saved.push({ filename, path });
-    console.log(`${LOG_PREFIX}   pass: ${filename} <- ${path}`);
+    console.log(`${LOG_PREFIX}   ${c.folder}: ${filename} <- ${path}`);
   } catch (e: any) {
     console.log(`${LOG_PREFIX}   skip: ${path} (${e.message})`);
   }

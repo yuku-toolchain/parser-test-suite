@@ -1,2 +1,0 @@
-for (;;)
-  interface I {}

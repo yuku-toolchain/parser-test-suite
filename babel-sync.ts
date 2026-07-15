@@ -1,4 +1,4 @@
-import ts from "typescript";
+import { classify, type SourceLang } from "./classify";
 
 const REPO = "babel/babel";
 const HISTORY_FILE = "babel-sync.md";
@@ -100,9 +100,7 @@ async function resolveOptions(
   return { sourceType: merged.sourceType, plugins };
 }
 
-type Dialect = "js" | "jsx" | "ts" | "tsx" | "dts";
-
-function dialectOf(path: string, plugins: string[]): Dialect {
+function dialectOf(path: string, plugins: string[]): SourceLang {
   if (path.endsWith(".d.ts")) return "dts";
   if (path.endsWith(".tsx")) return "tsx";
   if (path.endsWith(".ts")) return "ts";
@@ -113,95 +111,17 @@ function dialectOf(path: string, plugins: string[]): Dialect {
   return "js";
 }
 
-const SCRIPT_KINDS: Record<Dialect, ts.ScriptKind> = {
-  js: ts.ScriptKind.JS,
-  jsx: ts.ScriptKind.JSX,
-  ts: ts.ScriptKind.TS,
-  tsx: ts.ScriptKind.TSX,
-  dts: ts.ScriptKind.TS,
+const TARGETS: Record<SourceLang, { suite: string; ext: string }> = {
+  js: { suite: "js", ext: ".js" },
+  jsx: { suite: "jsx", ext: ".jsx" },
+  ts: { suite: "ts", ext: ".ts" },
+  tsx: { suite: "ts", ext: ".tsx" },
+  dts: { suite: "ts", ext: ".d.ts" },
 };
 
-function hasSyntacticErrors(
-  sourceFile: ts.SourceFile,
-  fileName: string,
-  source: string,
-  compilerOptions: ts.CompilerOptions
-): boolean {
-  const host = ts.createCompilerHost(compilerOptions, true);
-  const origGetSourceFile = host.getSourceFile.bind(host);
-  host.getSourceFile = (name, languageVersion, onError, shouldCreateNewSourceFile) => {
-    if (name === fileName) return sourceFile;
-    return origGetSourceFile(name, languageVersion, onError, shouldCreateNewSourceFile);
-  };
-  host.readFile = (name) => (name === fileName ? source : undefined);
-  host.fileExists = (name) => name === fileName;
-
-  const program = ts.createProgram([fileName], compilerOptions, host);
-  return program.getSyntacticDiagnostics(sourceFile).length > 0;
-}
-
-type ClassifyResult =
-  | { kind: "fail" }
-  | { kind: "pass"; asModule: boolean };
-
-function classify(
-  source: string,
-  inputPath: string,
-  dialect: Dialect,
-  optSourceType: string | undefined
-): ClassifyResult {
-  // tsc's parser needs a matching extension to pick declaration/tsx handling;
-  // babel dialects come from plugins, so parse under a normalized name.
-  const ext = dialect === "dts" ? ".d.ts" : `.${dialect === "tsx" ? "tsx" : dialect}`;
-  const fileName = inputPath.replace(INPUT_RE, `/input${ext}`);
-  const sourceFile = ts.createSourceFile(
-    fileName,
-    source,
-    ts.ScriptTarget.Latest,
-    true,
-    SCRIPT_KINDS[dialect]
-  );
-
-  const isStrict = sourceFile.statements.some(
-    (s) =>
-      ts.isExpressionStatement(s) &&
-      ts.isStringLiteral(s.expression) &&
-      s.expression.text === "use strict"
-  );
-  const isModule =
-    inputPath.endsWith(".mjs") ||
-    (dialect === "js" || dialect === "jsx" ? optSourceType === "module" : false) ||
-    ts.isExternalModule(sourceFile);
-  const asModule = inputPath.endsWith(".cjs") ? false : isModule || isStrict;
-
-  const jsxDialect = dialect === "jsx" || dialect === "tsx";
-  const compilerOptions: ts.CompilerOptions = {
-    target: ts.ScriptTarget.Latest,
-    module: isModule ? ts.ModuleKind.ESNext : ts.ModuleKind.None,
-    noResolve: true,
-    noLib: true,
-    allowJs: true,
-    jsx: jsxDialect ? ts.JsxEmit.Preserve : undefined,
-  };
-
-  if (hasSyntacticErrors(sourceFile, fileName, source, compilerOptions)) {
-    return { kind: "fail" };
-  }
-
-  return { kind: "pass", asModule };
-}
-
-const TARGETS: Record<Dialect, { dir: string; ext: string }> = {
-  js: { dir: "js/pass", ext: ".js" },
-  jsx: { dir: "jsx/pass", ext: ".jsx" },
-  ts: { dir: "ts/pass", ext: ".ts" },
-  tsx: { dir: "ts/pass", ext: ".tsx" },
-  dts: { dir: "ts/pass", ext: ".d.ts" },
-};
-
-function outputPath(hash: string, asModule: boolean, dialect: Dialect) {
-  const { dir, ext } = TARGETS[dialect];
-  return `${dir}/${hash}${asModule ? ".module" : ""}${ext}`;
+function outputPath(hash: string, folder: string, asModule: boolean, dialect: SourceLang) {
+  const { suite, ext } = TARGETS[dialect];
+  return `${suite}/${folder}/${hash}${asModule ? ".module" : ""}${ext}`;
 }
 
 const days = parseDays();
@@ -242,15 +162,18 @@ for (const [path] of added) {
     const source = await fetchRaw(path);
     const options = await resolveOptions(path);
     const dialect = dialectOf(path, options.plugins);
-    const c = classify(source, path, dialect, options.sourceType);
-    if (c.kind === "fail") {
-      console.log(`${LOG_PREFIX}   skip (syntactic errors): ${path}`);
+    const initialModule =
+      path.endsWith(".mjs") ||
+      ((dialect === "js" || dialect === "jsx") && options.sourceType === "module");
+    const c = classify(source, dialect, initialModule);
+    if (c.folder === "skip") {
+      console.log(`${LOG_PREFIX}   skip (does not parse): ${path}`);
       continue;
     }
-    const target = outputPath(contentHash(source), c.asModule, dialect);
+    const target = outputPath(contentHash(source), c.folder, c.asModule, dialect);
     await Bun.write(target, source);
     saved.push({ filename: target, path });
-    console.log(`${LOG_PREFIX}   pass: ${target} <- ${path}`);
+    console.log(`${LOG_PREFIX}   ${c.folder}: ${target} <- ${path}`);
   } catch (e: any) {
     console.log(`${LOG_PREFIX}   skip: ${path} (${e.message})`);
   }

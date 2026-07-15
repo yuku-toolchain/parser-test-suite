@@ -8,8 +8,8 @@ Comprehensive ECMAScript parser test suite targeting [ESTree](https://github.com
 
 | Suite | pass    | fail       | semantic       |
 | ----- | ------- | ---------- | -------------- |
-| `js`  | ~39,000 | ~3,900     | ~3,600         |
-| `jsx` | ~90     | a handful  |                |
+| `js`  | ~38,500 | ~5,000     | ~4,200         |
+| `jsx` | ~90     | ~20        | a few          |
 | `ts`  | ~8,700  |            | a few hundred  |
 
 - `pass/` contains files that must parse cleanly. AST is compared against `pass/snapshots/*.snapshot.json` (ESTree for js/jsx, TypeScript-ESTree for ts).
