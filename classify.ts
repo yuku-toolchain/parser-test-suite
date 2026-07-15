@@ -11,9 +11,6 @@ export interface Classification {
 type SourceType = "script" | "module";
 type OxcError = { message?: string; helpMessage?: string | null; codeframe?: string | null };
 
-// oxc reports these as parse errors, but they are early errors that yuku's
-// semantic analysis reports, so the file belongs in semantic/ rather than
-// fail/. Grows as new cases are found.
 const SEMANTIC_ERROR_MESSAGES = ["A module cannot have multiple default exports."];
 
 // Semantic-looking errors that must stay hard failures, parsed as modules.
@@ -36,17 +33,6 @@ interface Verdict {
   passMode: SourceType;
 }
 
-/**
- * Classifies a source file by parsing it with oxc in both source types.
- *
- * - Parses cleanly (in either mode) -> pass, in a mode where it parses.
- * - Only fails when oxc's semantic checks are enabled, or the error is a
- *   known early error -> semantic.
- * - Fails to parse in both modes -> fail, in the initial mode.
- *
- * A file valid in exactly one mode is kept in that mode, so e.g. module-only
- * syntax found in a script lands as a `.module.` test instead of a failure.
- */
 export function classify(source: string, lang: SourceLang, initialModule = false): Classification {
   const filename = `input.${lang === "dts" ? "d.ts" : lang}`;
   const astType = lang === "js" || lang === "jsx" ? "js" : "ts";
@@ -61,10 +47,6 @@ export function classify(source: string, lang: SourceLang, initialModule = false
     return { folder: "fail", asModule: true };
   }
 
-  // yuku only parses TypeScript: it never reports TS-specific errors. Files
-  // oxc rejects are untestable (skip), and only the ECMAScript early errors
-  // yuku shares with js may assert a semantic failure - anything else lands
-  // in pass when some mode is fully clean, otherwise it is skipped.
   if (lang === "ts" || lang === "tsx" || lang === "dts") {
     if (verdict.folder === "fail") {
       return { folder: "skip", asModule: false };
@@ -116,7 +98,7 @@ function resolve(
     return { folder: "semantic", mode: initial, triggers: initialFull, passMode: initial };
   }
 
-  // Fully valid in the initial mode; if the opposite mode misbehaves, prefer
+  // Fully valid in the initial mode, if the opposite mode misbehaves, prefer
   // that mode so the file carries a stronger assertion than a plain pass.
   const oppositeSyntax = parse(opposite, false);
   if (oppositeSyntax.length > 0) {
