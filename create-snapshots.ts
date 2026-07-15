@@ -1,4 +1,4 @@
-import { parseSync, ParserOptions } from "oxc-parser";
+import { parseSync, type ParserOptions } from "oxc-parser";
 import { join } from "path";
 import { Glob } from "bun";
 import { rmSync } from "fs";

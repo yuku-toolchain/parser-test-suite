@@ -13,7 +13,7 @@ const headers: Record<string, string> = {
   ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
 };
 
-async function fetchJson(url: string) {
+async function fetchJson(url: string): Promise<any> {
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`${res.status} ${url}`);
   return res.json();
