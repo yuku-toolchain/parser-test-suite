@@ -4,13 +4,13 @@ Comprehensive ECMAScript parser test suite targeting [ESTree](https://github.com
 
 ## Layout
 
-**Over 50,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (jsx). The suite [syncs with upstream daily](#syncing) and grows over time, so counts below are approximate orders of magnitude, not exact numbers.
+**Over 50,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (js, jsx, ts). The suite [syncs with upstream daily](#syncing) and grows over time, so counts below are approximate orders of magnitude, not exact numbers.
 
 | Suite | pass    | fail       | semantic       |
 | ----- | ------- | ---------- | -------------- |
-| `js`  | ~37,000 | ~3,700     | ~3,600         |
-| `jsx` | dozens  | a handful  |                |
-| `ts`  | ~8,200  |            | a few hundred  |
+| `js`  | ~38,500 | ~5,000     | ~4,200         |
+| `jsx` | ~90     | ~20        | a few          |
+| `ts`  | ~8,700  |            | a few hundred  |
 
 - `pass/` contains files that must parse cleanly. AST is compared against `pass/snapshots/*.snapshot.json` (ESTree for js/jsx, TypeScript-ESTree for ts).
 - `fail/` contains files that must produce a parse error.
@@ -20,7 +20,7 @@ Filenames are a 16-char content hash. A `.module.` segment marks the file as ESM
 
 ## Syncing
 
-A daily job checks [tc39/test262](https://github.com/tc39/test262) and [microsoft/TypeScript](https://github.com/microsoft/TypeScript) for newly added tests and opens a PR bringing them into the suite, so new spec proposals and compiler features are covered shortly after they land upstream. See [test262-sync.md](test262-sync.md) and [typescript-sync.md](typescript-sync.md) for the full history of what was added and when.
+A daily job checks [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel/babel](https://github.com/babel/babel) (parser fixtures) for newly added tests and opens a PR bringing them into the suite, so new spec proposals and compiler features are covered shortly after they land upstream. See [test262-sync.md](test262-sync.md), [typescript-sync.md](typescript-sync.md), and [babel-sync.md](babel-sync.md) for the full history of what was added and when.
 
 ## Usage in yuku
 
