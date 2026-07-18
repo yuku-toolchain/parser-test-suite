@@ -1,5 +1,16 @@
 # test262 sync history
 
+## 2026-07-18
+
+- [2a1e27d4df1d5e26.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCalendars/likely-subtags-region.js)
+- [f8fb896aac15ccfa.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCalendars/region-override.js)
+- [4c68c9a62d5ea22c.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCalendars/region-priority.js)
+- [2015c7ea6e1b1468.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCalendars/subdivision-region.js)
+- [4abad5f1e6a23c03.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/likely-subtags-region.js)
+- [f8ba94a5472a3ed1.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/region-override.js)
+- [9d49da1acfee4a7f.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/region-priority.js)
+- [97664a5ba052bc6d.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/subdivision-region.js)
+
 ## 2026-07-14
 
 - Full sync from [`f2d14356`](https://github.com/tc39/test262/tree/f2d14356) (filter: `import-attributes`): 90 test(s) added, 0 fixture(s) copied.
