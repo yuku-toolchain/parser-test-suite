@@ -1,5 +1,9 @@
 # test262 sync history
 
+## 2026-07-23
+
+- [491ac894ab3dd2f4.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/language-priority.js)
+
 ## 2026-07-18
 
 - [2a1e27d4df1d5e26.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCalendars/likely-subtags-region.js)
