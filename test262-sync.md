@@ -1,17 +1,10 @@
 # test262 sync history
 
-## 2026-07-24
+## 2026-07-25
 
-- [433317130368c5ee.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/await-using/initializer-Symbol.asyncDispose-disposed-at-end-of-imported-module.js)
-- [64c70a10af7afaf2.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/await-using/initializer-Symbol.asyncDispose-disposed-at-end-of-module.js)
-- [0e7173c14634f751.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/await-using/initializer-Symbol.dispose-disposed-at-end-of-imported-module.js)
-- [b4fa527eeefb7ffe.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/await-using/initializer-Symbol.dispose-disposed-at-end-of-module.js)
-- [607eb1e3782f9290.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/using/initializer-disposed-at-end-of-imported-module.js)
-- [a288f529cffe1c27.module.js](https://github.com/tc39/test262/blob/main/test/language/statements/using/initializer-disposed-at-end-of-module.js)
-- [d0303e17310c4527.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getWeekInfo/likely-subtags-region.js)
-- [d21ce0426c6d0a97.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getWeekInfo/region-override.js)
-- [f5012b67f0839c3c.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getWeekInfo/region-priority.js)
-- [2aff1e816d23f82c.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getWeekInfo/subdivision-region.js)
+- [bbd0fd6ca30dabbe.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/collation-keyword.js)
+- [b58dd2a9608611c8.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/output-array-sorted.js)
+- [f757f210ee7da9b0.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/und-language.js)
 
 ## 2026-07-23
 
