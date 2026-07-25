@@ -1,5 +1,11 @@
 # test262 sync history
 
+## 2026-07-25
+
+- [bbd0fd6ca30dabbe.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/collation-keyword.js)
+- [b58dd2a9608611c8.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/output-array-sorted.js)
+- [f757f210ee7da9b0.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/und-language.js)
+
 ## 2026-07-23
 
 - [491ac894ab3dd2f4.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getHourCycles/language-priority.js)
