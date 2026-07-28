@@ -1,5 +1,27 @@
 # test262 sync history
 
+## 2026-07-28
+
+- [a703ae4afaf20e1e.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/closes-on-contents-coercion-exception.js)
+- [14ebfcfcda4e5cc7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/closes-on-separator-coercion-exception.js)
+- [86efa57213e450da.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/contents-nullish.js)
+- [3b945e654972ab43.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/contents-tostring.js)
+- [a0b8abfdfad86035.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/descriptor.js)
+- [41a5d23051a9ca97.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/does-not-close-on-iterator-error.js)
+- [fa40ad4452dd7f94.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/does-not-close-on-iterator-exhaustion.js)
+- [bf8566d2e96163b3.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/does-not-close-on-iterator-protocol-violation.js)
+- [f8e3f80d1b6179f2.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/does-not-close-on-next-getter-error.js)
+- [b09b88792f2c1ba2.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/length.js)
+- [4742b1125a37ccb4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/name.js)
+- [468d97524e1e5d97.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/next-lookup-after-separator-tostring.js)
+- [38f45a4872b0d7f3.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/not-a-constructor.js)
+- [20f9dbdce419e360.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/receiver-not-object.js)
+- [8f7a0123e9285705.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/results-empty-separator.js)
+- [eddab9cd29c7b7f1.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/results-no-separator.js)
+- [b87a7d4ad9ed285f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/results-nonempty-separator.js)
+- [76a241fd58b9c853.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/prototype/join/separator-tostring.js)
+- [baebbfdf86a681e7.module.js](https://github.com/tc39/test262/blob/main/test/language/import/import-defer/evaluation-top-level-await/async-cycle-dependency-of-deferred-module/main.js)
+
 ## 2026-07-25
 
 - [bbd0fd6ca30dabbe.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/collation-keyword.js)
