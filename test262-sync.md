@@ -1,5 +1,11 @@
 # test262 sync history
 
+## 2026-08-11
+
+- [96c263037c9be381.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/try/avoids-wrap-for-subclass.js)
+- [bbcb3cb7f9c20c70.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/try/avoids-wrap.js)
+- [ff779a0977603436.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/try/ctx-ctor-for-error.js)
+
 ## 2026-07-30
 
 - [fadece2152a72455.js](https://github.com/tc39/test262/blob/main/test/built-ins/Array/prototype/Symbol.unscopables/at.js)
