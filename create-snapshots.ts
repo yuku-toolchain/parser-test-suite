@@ -104,6 +104,18 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
           const { attributes: _, selfClosing: __, ...rest } = value;
           return rest;
         }
+        // Workaround for an oxc-parser bug: a decorated rest parameter's
+        // `RestElement` starts after its own decorators, so the decorators fall
+        // outside the range of the node that owns them. TypeScript,
+        // typescript-estree and SWC all span them, as does oxc's own
+        // `AssignmentPattern`.
+        // Track upstream: https://github.com/oxc-project/oxc/issues/26011
+        if (value && typeof value === "object" && value.type === "RestElement") {
+          const first = value.decorators?.[0]?.start;
+          if (typeof first === "number" && first < value.start) {
+            return { ...value, start: first };
+          }
+        }
         return value;
       },
       2
