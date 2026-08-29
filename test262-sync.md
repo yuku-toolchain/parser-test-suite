@@ -1,5 +1,10 @@
 # test262 sync history
 
+## 2026-08-29
+
+- [fd053da2d16d1cc1.js](https://github.com/tc39/test262/blob/main/test/language/literals/regexp/invalid-quantifier-out-of-order.js)
+- [a95b80985f6ba820.js](https://github.com/tc39/test262/blob/main/test/language/literals/regexp/u-invalid-quantifier-out-of-order.js)
+
 ## 2026-08-11
 
 - [96c263037c9be381.js](https://github.com/tc39/test262/blob/main/test/built-ins/Promise/try/avoids-wrap-for-subclass.js)
