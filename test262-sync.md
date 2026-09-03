@@ -1,5 +1,10 @@
 # test262 sync history
 
+## 2026-09-03
+
+- [98e39930dc0e4640.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Instant/prototype/toString/timezone-string-unknown.js)
+- [ac9bb9045371642f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Instant/prototype/toZonedDateTimeISO/timezone-string-unknown.js)
+
 ## 2026-08-29
 
 - [fd053da2d16d1cc1.js](https://github.com/tc39/test262/blob/main/test/language/literals/regexp/invalid-quantifier-out-of-order.js)
