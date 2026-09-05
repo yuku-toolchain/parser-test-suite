@@ -1,5 +1,9 @@
 # babel sync history
 
+## 2026-09-04
+
+- [jsx/pass/2ce48583c8191627.jsx](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/jsx/html-entities/code-point-like-ampersand/input.js)
+
 ## 2026-08-24
 
 - [js/fail/17165ca85d75291c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/bind-operator/invalid-binary-import-call-prop/input.js)
