@@ -1,5 +1,14 @@
 # babel sync history
 
+## 2026-09-10
+
+- [js/pass/2deb127c6646b1f1.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/binary-double-zero-with-numeric-separator/input.js)
+- [js/pass/af3edebbf065ff51.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/hex-negative-zero/input.js)
+- [js/pass/6f49fd6ad8761674.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/hex-zero/input.js)
+- [js/pass/ad94682f23f86678.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/hex/input.js)
+- [js/fail/ad83203cde96a633.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/invalid-float/input.js)
+- [js/pass/15bc09725d596b8f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/octal-zero/input.js)
+
 ## 2026-09-04
 
 - [jsx/pass/2ce48583c8191627.jsx](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/jsx/html-entities/code-point-like-ampersand/input.js)
