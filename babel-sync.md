@@ -1,5 +1,11 @@
 # babel sync history
 
+## 2026-09-15
+
+- [js/fail/4aa964c9923ef975.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-binary-radix-leading/input.js)
+- [js/fail/bd6265ed2b71450f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-binary-radix-trailing-errorRecovery-false/input.js)
+- [js/fail/bd6265ed2b71450f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-binary-radix-trailing/input.js)
+
 ## 2026-09-10
 
 - [js/pass/2deb127c6646b1f1.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/estree/bigInt/binary-double-zero-with-numeric-separator/input.js)
