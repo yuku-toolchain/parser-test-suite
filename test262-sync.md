@@ -1,5 +1,13 @@
 # test262 sync history
 
+## 2026-09-18
+
+- [e5685059d997ed88.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/calendar/canonicalize-case.js)
+- [233f9d44b67247a4.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/collation/canonicalize-case.js)
+- [ee527ad60b17d092.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/numberingSystem/canonicalize-case.js)
+- [c9ff79b3f5f501f0.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/constructor-unicode-extension-uvalue-true.js)
+- [1bb77a4505fb0c82.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/constructor-unicode-extension-uvalue-yes.js)
+
 ## 2026-09-03
 
 - [98e39930dc0e4640.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Instant/prototype/toString/timezone-string-unknown.js)
