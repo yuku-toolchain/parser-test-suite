@@ -1,5 +1,16 @@
 # test262 sync history
 
+## 2026-09-22
+
+- [89bd02d69e043a2f.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/prototype/format/german-weekday-no-year.js)
+- [9292895c9740fca9.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/filter/BigInt/callbackfn-detachbuffer-kept-undefined.js)
+- [a955da95bf8a48c5.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/filter/BigInt/callbackfn-shrink-kept-undefined.js)
+- [9bd97d7815f1c5a0.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/with/BigInt/index-coercion-shrinks.js)
+- [018266cacdd37d63.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/with/BigInt/negative-index-resize-to-out-of-bounds.js)
+- [c76ea5f49eff10d0.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/with/BigInt/value-coercion-shrinks.js)
+- [1255632972f30c24.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/with/index-coercion-shrinks.js)
+- [da6bc0048735e885.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArray/prototype/with/value-coercion-shrinks.js)
+
 ## 2026-09-18
 
 - [e5685059d997ed88.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/calendar/canonicalize-case.js)
