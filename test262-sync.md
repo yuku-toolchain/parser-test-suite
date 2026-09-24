@@ -1,5 +1,10 @@
 # test262 sync history
 
+## 2026-09-24
+
+- [ac7e6919b02fb58b.js](https://github.com/tc39/test262/blob/main/test/intl402/NumberFormat/prototype/formatToParts/significant-digits-rounding-magnitude-en-US.js)
+- [86195340f8e4f9e7.js](https://github.com/tc39/test262/blob/main/test/intl402/NumberFormat/prototype/format/format-significant-digits-rounding-magnitude.js)
+
 ## 2026-09-22
 
 - [89bd02d69e043a2f.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/prototype/format/german-weekday-no-year.js)
