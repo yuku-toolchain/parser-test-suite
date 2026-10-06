@@ -1,5 +1,16 @@
 # babel sync history
 
+## 2026-10-06
+
+- [js/fail/5a84dcc8dd9c7d59.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-async-function-expression-name-inside-async-arrow-params/input.js)
+- [js/fail/63431ca3421124e9.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-binding-after-function-expression-name-inside-async-arrow-params/input.js)
+- [js/fail/ba2b9c315c984841.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-class-expression-name-inside-async-arrow-params/input.js)
+- [js/semantic/1a09d2252b765068.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-function-expression-name-inside-async-arrow-params-module/input.js)
+- [js/semantic/dea5c3f411146962.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-function-expression-name-inside-async-arrow-params-nested/input.js)
+- [js/semantic/1a09d2252b765068.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-function-expression-name-inside-async-arrow-params/input.js)
+- [js/semantic/89fa1bb7ef736bca.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-generator-expression-name-inside-async-arrow-params/input.js)
+- [js/semantic/530c10a24bd2358f.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-static-block/await-function-expression-name-in-async-arrow-params-in-static-block/input.js)
+
 ## 2026-09-15
 
 - [js/fail/4aa964c9923ef975.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-binary-radix-leading/input.js)
