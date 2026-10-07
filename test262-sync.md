@@ -1,5 +1,25 @@
 # test262 sync history
 
+## 2026-10-07
+
+- [aa3bccfb64517fdd.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/collations-supported-by-collator.js)
+- [7f716000f3fc49af.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/language-subtag-with-more-than-three-letters.js)
+- [42fc7c7d51c307bf.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/output-array-is-sorted.js)
+- [dd26bbd2cbb1cce6.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/preferred-from-unicode-extension-true-empty.js)
+- [26989c3785c88ae7.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/preferred-from-unicode-extension.js)
+- [3df1b858d1cdf181.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/language-subtag-with-more-than-three-letters.js)
+- [4e6b9eae9d316fe6.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/script-metadata-rtl-is-unknown.js)
+- [f5ba18264c826992.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/script-metadata-unlisted-language-script-is-rtl.js)
+- [57dfbf1fe487bf7a.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/script-subtag-missing.js)
+- [8b4ae21ff6a80dd8.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/script-subtag-present.js)
+- [6f14575c2afecbe0.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getTextInfo/script-unregistered-or-privateuse.js)
+- [d4a3d6f14e7a5fa2.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/maximize/language-subtag-with-more-than-three-letters.js)
+- [6447a4b9ae62478c.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getNumberingSystems/language-subtag-with-more-than-three-letters.js)
+- [5552a6f1f2c2642b.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getNumberingSystems/lookup-locale-by-prefix.js)
+- [734ea556d842668b.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getNumberingSystems/preferred-from-unicode-extension-true-empty.js)
+- [8e116108f7a4f830.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getNumberingSystems/preferred-from-unicode-extension.js)
+- [f809f5e898a7d3cf.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getNumberingSystems/unsupported-defaults-to-latn.js)
+
 ## 2026-09-24
 
 - [ac7e6919b02fb58b.js](https://github.com/tc39/test262/blob/main/test/intl402/NumberFormat/prototype/formatToParts/significant-digits-rounding-magnitude-en-US.js)
