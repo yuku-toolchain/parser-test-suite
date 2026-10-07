@@ -1,3 +1,6 @@
+import { mkdtempSync, rmSync, writeFileSync } from "node:fs"
+import { tmpdir } from "node:os"
+import { join } from "node:path"
 import { parseSync, type ErrorLabel, type OxcError, type ParserOptions, type Program } from "oxc-parser"
 
 export type SourceLang = NonNullable<ParserOptions["lang"]>
@@ -91,6 +94,109 @@ function dropMemberRedeclarations(errors: OxcError[], program: Program): OxcErro
   )
 }
 
+// tsc reports a conflict between bindings at every binding involved, which
+// oxc misses for ambient declarations, namespace bodies, and class merges.
+// a conflict with a class member is also reported at the member, or once
+// for an implicit one like prototype, and is a checker rule yuku never reports
+const TSC_CONFLICT_CODES = new Set([2300, 2451, 2567, 2813, 2814])
+
+const TSC = join(import.meta.dir, "node_modules", ".bin", "tsc")
+
+const TSC_OPTIONS = [
+  "--ignoreConfig",
+  "--noEmit",
+  "--noResolve",
+  "--lib",
+  "es5",
+  "--jsx",
+  "preserve",
+  "--moduleDetection",
+  "force",
+  "--pretty",
+  "false",
+]
+
+const NAMED_DECLARATION_TYPES = new Set([
+  "FunctionDeclaration",
+  "TSDeclareFunction",
+  "ClassDeclaration",
+  "TSInterfaceDeclaration",
+  "TSTypeAliasDeclaration",
+  "TSEnumDeclaration",
+  "TSModuleDeclaration",
+  "TSImportEqualsDeclaration",
+])
+
+const IMPORT_SPECIFIER_TYPES = new Set(["ImportSpecifier", "ImportDefaultSpecifier", "ImportNamespaceSpecifier"])
+
+const IDENTIFIER = /[\p{ID_Continue}$\u200c\u200d]*/uy
+
+type Node = Record<string, unknown> & { type?: string; start: number }
+
+function patternBindingStarts(pattern: Node | null | undefined, starts: Set<number>) {
+  if (!pattern) return
+  if (pattern.type === "Identifier") starts.add(pattern.start)
+  else if (pattern.type === "ObjectPattern") {
+    for (const property of pattern.properties as Node[]) {
+      patternBindingStarts((property.value ?? property.argument) as Node, starts)
+    }
+  } else if (pattern.type === "ArrayPattern") {
+    for (const element of pattern.elements as (Node | null)[]) patternBindingStarts(element, starts)
+  } else if (pattern.type === "AssignmentPattern") patternBindingStarts(pattern.left as Node, starts)
+  else if (pattern.type === "RestElement") patternBindingStarts(pattern.argument as Node, starts)
+}
+
+function bindingStarts(node: unknown, starts = new Set<number>()): Set<number> {
+  if (Array.isArray(node)) {
+    for (const item of node) bindingStarts(item, starts)
+  } else if (node && typeof node === "object") {
+    const { type, id, local } = node as Node & { id?: Node; local?: Node }
+    if (typeof type === "string") {
+      if (NAMED_DECLARATION_TYPES.has(type) && id?.type === "Identifier") starts.add(id.start)
+      else if (type === "VariableDeclarator") patternBindingStarts(id, starts)
+      else if (IMPORT_SPECIFIER_TYPES.has(type) && local) starts.add(local.start)
+    }
+    for (const value of Object.values(node)) bindingStarts(value, starts)
+  }
+  return starts
+}
+
+function lineStarts(source: string): number[] {
+  const starts = [0]
+  for (let index = 0; index < source.length; index++) {
+    const char = source[index]
+    if (char === "\r" && source[index + 1] === "\n") index++
+    if (char === "\n" || char === "\r" || char === "\u2028" || char === "\u2029") starts.push(index + 1)
+  }
+  return starts
+}
+
+function tscReportsBindingConflict(source: string, filename: string, program: Program): boolean {
+  const dir = mkdtempSync(join(tmpdir(), "classify-"))
+  try {
+    writeFileSync(join(dir, filename), source)
+    const { stdout } = Bun.spawnSync([TSC, ...TSC_OPTIONS, filename], { cwd: dir })
+    const lines = lineStarts(source)
+    const bindings = bindingStarts(program)
+    const reports = new Map<string, { bindings: number; others: number }>()
+    for (const line of stdout.toString().split("\n")) {
+      if (!line.startsWith(`${filename}(`)) continue
+      const match = /^[^(]*\((\d+),(\d+)\): error TS(\d+):/.exec(line)
+      if (!match || !TSC_CONFLICT_CODES.has(Number(match[3]))) continue
+      const offset = lines[Number(match[1]) - 1] + Number(match[2]) - 1
+      IDENTIFIER.lastIndex = offset
+      const name = IDENTIFIER.exec(source)![0]
+      const count = reports.get(name) ?? { bindings: 0, others: 0 }
+      if (bindings.has(offset)) count.bindings++
+      else count.others++
+      reports.set(name, count)
+    }
+    return [...reports.values()].some((count) => count.bindings >= 2 && count.others === 0)
+  } finally {
+    rmSync(dir, { recursive: true, force: true })
+  }
+}
+
 // TS specific forms like export = are legal in scripts and must not count
 const ES_MODULE_NODE_TYPES = new Set([
   "ImportDeclaration",
@@ -138,6 +244,10 @@ export function classify(source: string, lang: SourceLang, initialModule = false
     parse("module", true).errors.length === 0
   ) {
     mode = "module"
+  }
+
+  if (isTs && folder === "pass" && tscReportsBindingConflict(source, filename, parse(mode, false).program)) {
+    folder = "semantic"
   }
 
   return { folder, asModule: mode === "module" }
