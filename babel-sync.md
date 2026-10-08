@@ -1,5 +1,22 @@
 # babel sync history
 
+## 2026-10-08
+
+- [js/semantic/f1de9fc3ec4637cc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-declaration-name-arguments/input.js)
+- [js/semantic/4286a88aed2001ee.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-declaration-name-eval/input.js)
+- [js/semantic/f0162fd76490304e.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-export-name-eval-arguments/input.js)
+- [js/semantic/797f10645d5b199e.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-expression-name-arguments/input.js)
+- [js/semantic/e05f266a44eda8dc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-expression-name-eval/input.js)
+- [js/semantic/bd301a76bf1c1f65.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-name-eval-arguments-escaped/input.js)
+- [js/semantic/94386b97a8f9bd66.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-name-eval-arguments-nested/input.js)
+- [js/semantic/8c052ca41438faeb.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-name-eval-arguments-sloppy-function/input.js)
+- [js/fail/e7822c826ae177d9.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/valid-name-await-script/input.js)
+- [js/pass/d4cfc5bafcb46295.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/valid-name-eval-arguments-like/input.js)
+- [js/semantic/c712af55530f2741.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-properties/invalid-class-name-arguments-in-initializer/input.js)
+- [js/semantic/ed9eef5f4bfe800b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-static-block/invalid-class-name-arguments/input.js)
+- [ts/pass/e251e89bafb5423a.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/class/invalid-declare-name-eval-arguments/input.ts)
+- [ts/semantic/cc49d36b6c09bf56.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/class/invalid-name-eval-arguments/input.ts)
+
 ## 2026-10-06
 
 - [js/fail/5a84dcc8dd9c7d59.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/await-async-function-expression-name-inside-async-arrow-params/input.js)
