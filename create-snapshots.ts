@@ -2,6 +2,7 @@ import { parseSync, type ParserOptions } from "oxc-parser";
 import { join } from "path";
 import { Glob } from "bun";
 import { rmSync } from "fs";
+import { XHTML_ENTITIES } from "./xhtml-entities";
 
 type Lang = ParserOptions["lang"];
 type AstType = ParserOptions["astType"];
@@ -45,6 +46,16 @@ function fixHtmlCommentValues<T extends { type: string; start: number; end: numb
     else if (text.startsWith("-->")) comment.value = text.slice(3);
   }
   return comments;
+}
+
+function decodeJsxEntities(text: string): string {
+  return text.replaceAll(/&(?:#\d+|#x[\da-fA-F]+|[0-9a-zA-Z]+);/g, (entity) => {
+    const body = entity.slice(1, -1);
+    const codePoint = body[0] !== "#"
+      ? XHTML_ENTITIES.get(body)
+      : parseInt(body[1] === "x" ? body.slice(2) : body.slice(1), body[1] === "x" ? 16 : 10);
+    return codePoint === undefined || codePoint > 0x10ffff ? entity : String.fromCodePoint(codePoint);
+  });
 }
 
 async function processFile(folder: FolderConfig, fileName: string, lang: Lang, astType: AstType) {
@@ -115,6 +126,15 @@ async function processFile(folder: FolderConfig, fileName: string, lang: Lang, a
           if (typeof first === "number" && first < value.start) {
             return { ...value, start: first };
           }
+        }
+        // oxc-parser keeps the entities of JSX text and attribute strings as
+        // written, where Babel, acorn-jsx and typescript-estree decode them.
+        if (value && typeof value === "object" && value.type === "JSXText") {
+          return { ...value, value: decodeJsxEntities(value.raw) };
+        }
+        if (value && typeof value === "object" && value.type === "JSXAttribute" &&
+            value.value?.type === "Literal" && typeof value.value.value === "string") {
+          return { ...value, value: { ...value.value, value: decodeJsxEntities(value.value.value) } };
         }
         return value;
       },
