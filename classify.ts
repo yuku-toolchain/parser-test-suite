@@ -100,7 +100,10 @@ function dropMemberRedeclarations(errors: OxcError[], program: Program): OxcErro
 // for an implicit one like prototype, and is a checker rule yuku never reports
 const TSC_CONFLICT_CODES = new Set([2300, 2451, 2567, 2813, 2814])
 
-const TSC = join(import.meta.dir, "node_modules", ".bin", "tsc")
+// tsc reports these at exported names that cannot be shared, never at members
+const TSC_EXPORT_CONFLICT_CODES = new Set([2323, 2484])
+
+const TSC = join(import.meta.dir, "node_modules", "typescript", "bin", "tsc")
 
 const TSC_OPTIONS = [
   "--ignoreConfig",
@@ -129,6 +132,8 @@ const NAMED_DECLARATION_TYPES = new Set([
 
 const IMPORT_SPECIFIER_TYPES = new Set(["ImportSpecifier", "ImportDefaultSpecifier", "ImportNamespaceSpecifier"])
 
+const EXPORTED_NAME_TYPES = new Set(["ExportSpecifier", "ExportAllDeclaration"])
+
 const IDENTIFIER = /[\p{ID_Continue}$\u200c\u200d]*/uy
 
 type Node = Record<string, unknown> & { type?: string; start: number }
@@ -146,17 +151,20 @@ function patternBindingStarts(pattern: Node | null | undefined, starts: Set<numb
   else if (pattern.type === "RestElement") patternBindingStarts(pattern.argument as Node, starts)
 }
 
-function bindingStarts(node: unknown, starts = new Set<number>()): Set<number> {
+// yuku checks the exported names of a module, not those of a namespace
+function nameStarts(node: unknown, starts = new Set<number>(), inNamespace = false): Set<number> {
   if (Array.isArray(node)) {
-    for (const item of node) bindingStarts(item, starts)
+    for (const item of node) nameStarts(item, starts, inNamespace)
   } else if (node && typeof node === "object") {
-    const { type, id, local } = node as Node & { id?: Node; local?: Node }
+    const { type, id, local, exported } = node as Node & { id?: Node; local?: Node; exported?: Node }
     if (typeof type === "string") {
       if (NAMED_DECLARATION_TYPES.has(type) && id?.type === "Identifier") starts.add(id.start)
       else if (type === "VariableDeclarator") patternBindingStarts(id, starts)
       else if (IMPORT_SPECIFIER_TYPES.has(type) && local) starts.add(local.start)
+      else if (EXPORTED_NAME_TYPES.has(type) && exported && !inNamespace) starts.add(exported.start)
     }
-    for (const value of Object.values(node)) bindingStarts(value, starts)
+    const nested = inNamespace || type === "TSModuleDeclaration"
+    for (const value of Object.values(node)) nameStarts(value, starts, nested)
   }
   return starts
 }
@@ -171,27 +179,32 @@ function lineStarts(source: string): number[] {
   return starts
 }
 
-function tscReportsBindingConflict(source: string, filename: string, program: Program): boolean {
+function tscReportsConflict(source: string, filename: string, program: Program): boolean {
   const dir = mkdtempSync(join(tmpdir(), "classify-"))
   try {
     writeFileSync(join(dir, filename), source)
-    const { stdout } = Bun.spawnSync([TSC, ...TSC_OPTIONS, filename], { cwd: dir })
+    const run = Bun.spawnSync([process.execPath, TSC, ...TSC_OPTIONS, filename], { cwd: dir })
+    // tsc exits with 1 or 2 when it reports errors
+    if (![0, 1, 2].includes(run.exitCode ?? -1)) throw new Error(`tsc failed: ${run.stderr}`)
     const lines = lineStarts(source)
-    const bindings = bindingStarts(program)
-    const reports = new Map<string, { bindings: number; others: number }>()
-    for (const line of stdout.toString().split("\n")) {
+    const names = nameStarts(program)
+    const reports = new Map<string, { named: number; others: number }>()
+    for (const line of run.stdout.toString().split("\n")) {
       if (!line.startsWith(`${filename}(`)) continue
       const match = /^[^(]*\((\d+),(\d+)\): error TS(\d+):/.exec(line)
-      if (!match || !TSC_CONFLICT_CODES.has(Number(match[3]))) continue
+      if (!match) continue
+      const code = Number(match[3])
       const offset = lines[Number(match[1]) - 1] + Number(match[2]) - 1
+      if (TSC_EXPORT_CONFLICT_CODES.has(code) && names.has(offset)) return true
+      if (!TSC_CONFLICT_CODES.has(code)) continue
       IDENTIFIER.lastIndex = offset
       const name = IDENTIFIER.exec(source)![0]
-      const count = reports.get(name) ?? { bindings: 0, others: 0 }
-      if (bindings.has(offset)) count.bindings++
+      const count = reports.get(name) ?? { named: 0, others: 0 }
+      if (names.has(offset)) count.named++
       else count.others++
       reports.set(name, count)
     }
-    return [...reports.values()].some((count) => count.bindings >= 2 && count.others === 0)
+    return [...reports.values()].some((count) => count.named >= 2 && count.others === 0)
   } finally {
     rmSync(dir, { recursive: true, force: true })
   }
@@ -246,7 +259,7 @@ export function classify(source: string, lang: SourceLang, initialModule = false
     mode = "module"
   }
 
-  if (isTs && folder === "pass" && tscReportsBindingConflict(source, filename, parse(mode, false).program)) {
+  if (isTs && folder === "pass" && tscReportsConflict(source, filename, parse(mode, false).program)) {
     folder = "semantic"
   }
 
