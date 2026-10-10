@@ -1,5 +1,10 @@
 # test262 sync history
 
+## 2026-10-09
+
+- [54fb044158acf917.js](https://github.com/tc39/test262/blob/main/test/built-ins/Array/prototype/join/number-elements.js)
+- [39727602ee3328e2.js](https://github.com/tc39/test262/blob/main/test/built-ins/JSON/stringify/value-number.js)
+
 ## 2026-10-07
 
 - [aa3bccfb64517fdd.js](https://github.com/tc39/test262/blob/main/test/intl402/Locale/prototype/getCollations/collations-supported-by-collator.js)

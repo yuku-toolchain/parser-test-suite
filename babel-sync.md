@@ -1,5 +1,14 @@
 # babel sync history
 
+## 2026-10-09
+
+- [js/fail/41b3800985eea52d.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/invalid-call-expression-arrow-param/input.js)
+- [js/pass/f3aa51f7b1493aa1.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/valid-call-expression-arrow-param-default/input.js)
+- [js/pass/d712d4257c0b32ba.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/valid-call-expression-not-arrow-param/input.js)
+- [js/fail/41b3800985eea52d.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/invalid-call-expression-arrow-param/input.js)
+- [js/pass/f3aa51f7b1493aa1.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/valid-call-expression-arrow-param-default/input.js)
+- [js/pass/d712d4257c0b32ba.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/valid-call-expression-not-arrow-param/input.js)
+
 ## 2026-10-08
 
 - [js/semantic/f1de9fc3ec4637cc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/invalid-declaration-name-arguments/input.js)
