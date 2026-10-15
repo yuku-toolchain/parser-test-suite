@@ -16,6 +16,34 @@
 - [js/fail/5fcc13557f31dba0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/labels/labeled-function-redeclaration/input.js)
 - [ts/semantic/f35b5a77d10272a3.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/function/labeled-bodiless-redeclaration/input.ts)
 
+## 2026-10-13
+
+- [js/fail/4186deb1eb914895.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-import-call/input.js)
+- [js/semantic/e0adb8f0a67c8b5a.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-let/input.js)
+- [js/fail/7c0f9333294975d4.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-after-block-comment-let/input.js)
+- [js/fail/2e5f3cfbc657cb08.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-let-declaration-cr/input.js)
+- [js/fail/0743a7da60958e7f.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-let-declaration-line-separator/input.js)
+- [js/fail/ea9145e566b305b8.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-let-declaration/input.js)
+- [js/fail/f1f740a4a944a5e6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-same-line-let/input.js)
+- [js/fail/8bcd11d07c72fc6b.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-multiple-let/input.js)
+- [js/semantic/f7d61754b2eaea5c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-export-default-from/input.js)
+- [js/fail/1fd74a0044469981.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-for-of-let/input.js)
+- [js/pass/4186deb1eb914895.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-import-call-module/input.js)
+- [js/fail/4186deb1eb914895.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-import-call/input.js)
+- [js/fail/0cee46ad077951ca.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-array-pattern/input.js)
+- [js/semantic/e0adb8f0a67c8b5a.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-declaration/input.js)
+- [js/fail/960f3460057660ea.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-object-pattern/input.js)
+- [ts/semantic/ee2f7f09eb0c9758.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-ts-interface/input.js)
+- [js/fail/346f997c2ffc6a7b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-let-postfix-decrement-greater-than/input.js)
+- [js/fail/a3deb2ba824928a8.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-after-exponent-minus-sign/input.js)
+- [js/fail/09645c989950cdbe.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-after-exponent-plus-sign/input.js)
+- [js/fail/2f95c99622024c2c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-after-exponent-sign-bigint/input.js)
+- [js/fail/d52d41d79fed3df5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-after-exponent-sign-float/input.js)
+- [js/fail/c9e9023c8204b851.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-after-exponent-sign-non-octal-decimal/input.js)
+- [js/fail/225fe96fda66eaea.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/invalid-separator-before-exponent-sign/input.js)
+- [js/pass/a884ac061d5190d6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/valid-additive-operator-before-underscore-identifier/input.js)
+- [js/pass/3eba87cc6233bf73.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2021/numeric-separator/valid-separator-in-signed-exponent/input.js)
+
 ## 2026-10-12
 
 - [js/semantic/3961715cf9192ea6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/duplicate-proto/in-member-assignment-target/input.js)
