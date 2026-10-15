@@ -81,7 +81,7 @@ function fetchOptions(path: string) {
 
 async function resolveOptions(
   inputPath: string
-): Promise<{ sourceType?: string; plugins: string[] }> {
+): Promise<{ sourceType?: string; plugins: string[]; throws?: string }> {
   const dirs = inputPath.slice(FIXTURES_ROOT.length).split("/").slice(0, -1);
   let merged: any = {};
   for (let i = 0; i <= dirs.length; i++) {
@@ -97,7 +97,26 @@ async function resolveOptions(
   const plugins = (merged.plugins ?? []).map((p: unknown) =>
     Array.isArray(p) ? String(p[0]) : String(p)
   );
-  return { sourceType: merged.sourceType, plugins };
+  return { sourceType: merged.sourceType, plugins, throws: merged.throws };
+}
+
+// Babel expects a fixture to parse when it has no `throws` option and its
+// output.json records no recovered errors. Only a fixture with no plugin
+// beyond the dialect counts, since an experimental plugin makes Babel parse
+// syntax that a standard parser must reject.
+const DIALECT_PLUGINS = new Set(["jsx", "typescript"]);
+
+async function babelParses(
+  inputPath: string,
+  options: { plugins: string[]; throws?: string }
+) {
+  if (options.throws !== undefined) return false;
+  if (!options.plugins.every((plugin) => DIALECT_PLUGINS.has(plugin))) return false;
+  const output = await fetchRaw(inputPath.replace(INPUT_RE, "/output.json")).catch(
+    () => null
+  );
+  if (output === null) return false;
+  return JSON.parse(output).errors === undefined;
 }
 
 function dialectOf(path: string, plugins: string[]): SourceLang {
@@ -168,6 +187,16 @@ for (const [path] of added) {
     const c = classify(source, dialect, initialModule);
     if (c.folder === "skip") {
       console.log(`${LOG_PREFIX}   skip (does not parse): ${path}`);
+      continue;
+    }
+    // classify trusts oxc, so a fixture oxc wrongly rejects in the mode Babel
+    // parses it in would be filed as a failure.
+    if (
+      c.folder === "fail" &&
+      c.asModule === initialModule &&
+      (await babelParses(path, options))
+    ) {
+      console.log(`${LOG_PREFIX}   skip (oxc rejects what babel parses): ${path}`);
       continue;
     }
     const target = outputPath(contentHash(source), c.folder, c.asModule, dialect);
