@@ -1,5 +1,21 @@
 # babel sync history
 
+## 2026-10-15
+
+- [js/semantic/2699f8960c26691f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/3.1-sloppy-labeled-functions-redeclaration/input.js)
+- [js/fail/33befa72c6d9f50d.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-async-functions-redeclaration/input.js)
+- [js/semantic/d5c133ba80a290fc.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-duplicate-in-block/input.js)
+- [js/semantic/dad2d3f09bb43e2d.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-block/input.js)
+- [js/semantic/573d59e0beae7699.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-catch-param/input.js)
+- [js/semantic/7c24f22b23c0fc2f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-function-body/input.js)
+- [js/semantic/184f05eaa45a75bc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-switch/input.js)
+- [js/semantic/1d3d7ea7986a7f01.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-top-level/input.js)
+- [js/semantic/3c5d4e9da47f259b.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-var-redeclaration/input.js)
+- [js/semantic/28b5bfa8d6eec5a5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.3-function-in-if-body-lexical-redeclaration/input.js)
+- [js/fail/6f4f7c800c3ab503.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/labels/labeled-function-in-if-body/input.js)
+- [js/fail/5fcc13557f31dba0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/labels/labeled-function-redeclaration/input.js)
+- [ts/semantic/f35b5a77d10272a3.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/function/labeled-bodiless-redeclaration/input.ts)
+
 ## 2026-10-13
 
 - [js/fail/4186deb1eb914895.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-import-call/input.js)
