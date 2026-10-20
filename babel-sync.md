@@ -1,5 +1,13 @@
 # babel sync history
 
+## 2026-10-20
+
+- [js/semantic/4eb2e21415499870.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/categorized/invalid-strict-delete-parenthesized-identifier/input.js)
+- [js/semantic/cbfa788cb624de50.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/create-parenthesized-expressions/invalid-delete-parenthesized-private-property/input.js)
+- [js/semantic/4eb2e21415499870.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/create-parenthesized-expressions/invalid-strict-delete-parenthesized-identifier/input.js)
+- [js/semantic/ac687adc0d4214d0.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/create-parenthesized-expressions/valid-sloppy-delete-parenthesized/input.js)
+- [js/semantic/cbfa788cb624de50.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-private-properties/failure-delete-parenthesized-private-property/input.js)
+
 ## 2026-10-15
 
 - [js/semantic/2699f8960c26691f.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/3.1-sloppy-labeled-functions-redeclaration/input.js)
