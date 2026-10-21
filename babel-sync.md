@@ -1,5 +1,13 @@
 # babel sync history
 
+## 2026-10-21
+
+- [js/pass/0b8010a391d02c8a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/identifiers/escaped-identifier-followed-by-operator-after-line-break/input.js)
+- [js/fail/41683a95dabd98e2.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/identifiers/invalid-escape-seq-in-operator/input.js)
+- [js/fail/990e261b5538f24b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/private-in/invalid-private-followed-by-escaped-in-after-line-break/input.js)
+- [js/fail/014810eb2aaa3fde.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/private-in/invalid-private-followed-by-escaped-in/input.js)
+- [js/fail/f4c0437251216482.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/pipeline-operator-fsharp/fsharp-proposal-await-followed-by-escaped-keyword-after-line-break/input.js)
+
 ## 2026-10-20
 
 - [js/semantic/4eb2e21415499870.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/categorized/invalid-strict-delete-parenthesized-identifier/input.js)
