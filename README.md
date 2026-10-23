@@ -4,19 +4,19 @@ Comprehensive ECMAScript parser test suite targeting [ESTree](https://github.com
 
 ## Layout
 
-**Over 50,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (js, jsx, ts). The suite [syncs with upstream daily](#syncing) and grows over time, so counts below are approximate orders of magnitude, not exact numbers.
+**Over 57,000 tests**, sourced from [tc39/test262](https://github.com/tc39/test262), [microsoft/TypeScript](https://github.com/microsoft/TypeScript), and [babel](https://github.com/babel/babel) (js, jsx, ts). The suite [syncs with upstream daily](#syncing) and grows over time, so counts below are approximate orders of magnitude, not exact numbers.
 
 | Suite | pass    | fail       | semantic       |
 | ----- | ------- | ---------- | -------------- |
-| `js`  | ~38,500 | ~5,000     | ~4,200         |
+| `js`  | ~38,800 | ~5,000     | ~4,200         |
 | `jsx` | ~90     | ~20        | a few          |
-| `ts`  | ~8,700  |            | a few hundred  |
+| `ts`  | ~8,600  |            | a few hundred  |
 
 - `pass/` contains files that must parse cleanly. AST is compared against `pass/snapshots/*.snapshot.json` (ESTree for js/jsx, TypeScript-ESTree for ts).
 - `fail/` contains files that must produce a parse error.
 - `semantic/` contains files that parse cleanly but must fail [semantic analysis](https://github.com/yuku-toolchain/yuku/blob/main/docs/src/content/docs/parser.md#semantic-analysis), which checks the scope-dependent [early errors](https://tc39.es/ecma262/#early-error) that cannot be caught from local context alone (redeclarations, unresolved exports, private fields used outside their class, and so on).
 
-Filenames are a 16-char content hash. A `.module.` segment marks the file as ESM and is parsed with `sourceType: "module"` (strict mode on), e.g. `abcd…1234.module.js`. Everything else is parsed as a script. TypeScript declaration-file tests keep their `.d.ts` extension and are parsed in declaration-file mode (`lang: "dts"`).
+Filenames are a 16-char content hash, unique across all suites: the first 16 hex chars of the file's SHA-256, or the next free 16-char window of it when another file already holds that name. A `.module.` segment marks the file as ESM and is parsed with `sourceType: "module"` (strict mode on), e.g. `abcd…1234.module.js`. Everything else is parsed as a script. TypeScript declaration-file tests keep their `.d.ts` extension and are parsed in declaration-file mode (`lang: "dts"`).
 
 ## Syncing
 

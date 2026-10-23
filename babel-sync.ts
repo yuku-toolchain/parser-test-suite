@@ -1,4 +1,5 @@
 import { classify, type SourceLang } from "./classify";
+import { testPath } from "./test-path";
 
 const REPO = "babel/babel";
 const HISTORY_FILE = "babel-sync.md";
@@ -43,10 +44,6 @@ async function fetchRaw(path: string) {
   const res = await fetch(`https://raw.githubusercontent.com/${REPO}/main/${path}`);
   if (!res.ok) throw new Error(`${res.status} fetching ${path}`);
   return res.text();
-}
-
-function contentHash(code: string) {
-  return new Bun.CryptoHasher("sha256").update(code).digest("hex").slice(0, 16);
 }
 
 function parseDays() {
@@ -138,9 +135,9 @@ const TARGETS: Record<SourceLang, { suite: string; ext: string }> = {
   dts: { suite: "ts", ext: ".d.ts" },
 };
 
-function outputPath(hash: string, folder: string, asModule: boolean, dialect: SourceLang) {
+function outputPath(source: string, folder: string, asModule: boolean, dialect: SourceLang) {
   const { suite, ext } = TARGETS[dialect];
-  return `${suite}/${folder}/${hash}${asModule ? ".module" : ""}${ext}`;
+  return testPath(source, `${suite}/${folder}`, `${asModule ? ".module" : ""}${ext}`);
 }
 
 const days = parseDays();
@@ -199,7 +196,11 @@ for (const [path] of added) {
       console.log(`${LOG_PREFIX}   skip (oxc rejects what babel parses): ${path}`);
       continue;
     }
-    const target = outputPath(contentHash(source), c.folder, c.asModule, dialect);
+    const target = outputPath(source, c.folder, c.asModule, dialect);
+    if (!target) {
+      console.log(`${LOG_PREFIX}   skip (already in suite): ${path}`);
+      continue;
+    }
     await Bun.write(target, source);
     saved.push({ filename: target, path });
     console.log(`${LOG_PREFIX}   ${c.folder}: ${target} <- ${path}`);

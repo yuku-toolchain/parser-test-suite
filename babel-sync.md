@@ -34,7 +34,7 @@
 
 ## 2026-10-13
 
-- [js/fail/4186deb1eb914895.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-import-call/input.js)
+- [js/fail/186deb1eb9148953.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-import-call/input.js)
 - [js/semantic/e0adb8f0a67c8b5a.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/1.1-html-comments-open-let/input.js)
 - [js/fail/7c0f9333294975d4.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-after-block-comment-let/input.js)
 - [js/fail/2e5f3cfbc657cb08.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-close-let-declaration-cr/input.js)
@@ -45,7 +45,7 @@
 - [js/semantic/f7d61754b2eaea5c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-export-default-from/input.js)
 - [js/fail/1fd74a0044469981.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-for-of-let/input.js)
 - [js/pass/4186deb1eb914895.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-import-call-module/input.js)
-- [js/fail/4186deb1eb914895.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-import-call/input.js)
+- [js/fail/186deb1eb9148953.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-import-call/input.js)
 - [js/fail/0cee46ad077951ca.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-array-pattern/input.js)
 - [js/semantic/e0adb8f0a67c8b5a.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-declaration/input.js)
 - [js/fail/960f3460057660ea.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-object-pattern/input.js)

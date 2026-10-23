@@ -1,1 +1,1 @@
-var 𞸊𞸋;
+var \u{1EE0A}\u{1EE0B}

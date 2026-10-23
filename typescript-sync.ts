@@ -1,4 +1,6 @@
+import { basename } from "node:path";
 import { classify, type SourceLang } from "./classify";
+import { testPath } from "./test-path";
 
 const REPO = "microsoft/TypeScript";
 const HISTORY_FILE = "typescript-sync.md";
@@ -45,10 +47,6 @@ async function fetchRaw(path: string) {
   return res.text();
 }
 
-function contentHash(code: string) {
-  return new Bun.CryptoHasher("sha256").update(code).digest("hex").slice(0, 16);
-}
-
 function parseDays() {
   const idx = Bun.argv.indexOf("--days");
   return idx !== -1 ? parseInt(Bun.argv[idx + 1], 10) || 1 : 1;
@@ -78,9 +76,9 @@ function langOf(path: string): SourceLang {
   return path.endsWith(".tsx") ? "tsx" : "ts";
 }
 
-function outputName(hash: string, isModule: boolean, repoPath: string) {
+function outputSuffix(isModule: boolean, repoPath: string) {
   const ext = repoPath.endsWith(".d.ts") ? ".d.ts" : repoPath.endsWith(".tsx") ? ".tsx" : ".ts";
-  return isModule ? `${hash}.module${ext}` : `${hash}${ext}`;
+  return isModule ? `.module${ext}` : ext;
 }
 
 const { mkdir } = await import("node:fs/promises");
@@ -135,8 +133,13 @@ for (const [path] of added) {
       console.log(`${LOG_PREFIX}   skip (does not parse): ${path}`);
       continue;
     }
-    const filename = outputName(contentHash(source), c.asModule, path);
-    await Bun.write(`ts/${c.folder}/${filename}`, source);
+    const target = testPath(source, `ts/${c.folder}`, outputSuffix(c.asModule, path));
+    if (!target) {
+      console.log(`${LOG_PREFIX}   skip (already in suite): ${path}`);
+      continue;
+    }
+    const filename = basename(target);
+    await Bun.write(target, source);
     saved.push({ filename, path });
     console.log(`${LOG_PREFIX}   ${c.folder}: ${filename} <- ${path}`);
   } catch (e: any) {

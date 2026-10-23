@@ -1,1 +1,1 @@
-var ABC;
+var \u{41}BC;

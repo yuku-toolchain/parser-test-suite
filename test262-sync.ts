@@ -1,3 +1,6 @@
+import { basename } from "node:path";
+import { testPath } from "./test-path";
+
 const REPO = "tc39/test262";
 const HISTORY_FILE = "test262-sync.md";
 const HISTORY_HEADER = "# test262 sync history";
@@ -75,10 +78,6 @@ function isModule(yaml: string) {
   return flags.includes("module") || flags.includes("onlyStrict");
 }
 
-function contentHash(code: string) {
-  return new Bun.CryptoHasher("sha256").update(code).digest("hex").slice(0, 16);
-}
-
 function parseDays() {
   const idx = Bun.argv.indexOf("--days");
   return idx !== -1 ? parseInt(Bun.argv[idx + 1], 10) || 1 : 1;
@@ -134,9 +133,13 @@ for (const [path] of added) {
     const yaml = extractYaml(code) ?? "";
     const category = shouldFail(yaml) ? "fail" : "pass";
     const ext = isModule(yaml) ? ".module.js" : ".js";
-    const hash = contentHash(code);
-    const filename = `${hash}${ext}`;
-    await Bun.write(`js/${category}/${filename}`, code);
+    const target = testPath(code, `js/${category}`, ext);
+    if (!target) {
+      console.log(`${LOG_PREFIX}   skip (already in suite): ${path}`);
+      continue;
+    }
+    const filename = basename(target);
+    await Bun.write(target, code);
     saved.push({ filename, path });
     console.log(`${LOG_PREFIX}   ${category}: ${filename} <- ${path}`);
   } catch (e: any) {
