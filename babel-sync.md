@@ -1,5 +1,43 @@
 # babel sync history
 
+## 2026-10-24
+
+- [js/fail/a100c0e36a620ce4.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/no-defer/input.js)
+- [js/fail/2f9a6cb102962df4.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2020/export-ns-from/invalid-named-specifiers-after-namespace/input.js)
+- [js/fail/10627a651c91d3d3.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/export-extensions/invalid-default-and-ns-and-named/input.js)
+- [js/fail/bc86b1249cecbecd.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/export-extensions/invalid-default-and-ns-comma-and-named/input.js)
+- [js/pass/44c2d8373937e3e2.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-in/const-no-initializer/input.js)
+- [js/pass/53f05139f599f527.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-of/const-no-initializer/input.js)
+- [js/fail/7ce42bf62361aff0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-of/invalid-const-no-initializer-multiple-declarators/input.js)
+- [js/fail/1f402cadb2d35907.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-of/invalid-destructuring-no-initializer-multiple-declarators/input.js)
+- [js/fail/5d6a7b8ae7e0586c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-of/invalid-let-no-initializer-multiple-declarators/input.js)
+- [js/fail/a0d928ca44384f3a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/for-of/invalid-var-no-initializer-multiple-declarators/input.js)
+- [js/fail/f32c395605c8c939.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-const-no-initializer-linebreak-in-errorRecovery-false/input.js)
+- [js/fail/86fc94827db64771.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-const-no-initializer-linebreak-of-module/input.js)
+- [js/fail/6fc94827db64771a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/invalid-const-no-initializer-linebreak-of/input.js)
+- [js/pass/32985621885ab9c5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/valid-let-no-initializer-linebreak-of/input.js)
+- [js/pass/af97dea5c4521852.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/uncategorised/valid-var-no-initializer-linebreak-of/input.js)
+- [js/fail/2e0f78b2cf391c55.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/async-explicit-resource-management/invalid-await-using-no-initializer-linebreak-in-errorRecovery-false/input.js)
+- [js/fail/33270ab08e679610.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/async-explicit-resource-management/invalid-await-using-no-initializer-linebreak-of/input.js)
+- [js/fail/76dcf604487745d6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/async-explicit-resource-management/invalid-for-await-using-no-initializer-multiple-declarators/input.js)
+- [js/pass/df43f2a445645c35.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/async-explicit-resource-management/valid-for-await-using-of-no-initializer/input.js)
+- [js/fail/66237df853f2e331.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/explicit-resource-management/invalid-for-using-no-initializer-multiple-declarators/input.js)
+- [js/fail/93e798ec4e46f2e0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/explicit-resource-management/invalid-using-no-initializer-linebreak-in-errorRecovery-false/input.js)
+- [js/fail/62fdfaf84091c6a7.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/explicit-resource-management/invalid-using-no-initializer-linebreak-of/input.js)
+- [js/pass/ca2b8f8ea75fcd5e.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/explicit-resource-management/valid-for-using-of-no-initializer/input.js)
+- [js/pass/c127b0b00d2a8a6c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/asi-before-regexp-starting-with-equals/input.js)
+- [js/fail/9757bd797c264b60.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-expression-body-before-regexp-starting-with-equals/input.js)
+- [js/fail/e27802558e140383.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-no-asi-before-regexp-starting-with-equals/input.js)
+- [js/fail/d85b82a97b2ef70e.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-parenthesized-alternate-before-regexp-starting-with-equals/input.js)
+- [js/fail/afa95e79e2d813b6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-parenthesized-before-regexp-starting-with-equals/input.js)
+- [js/fail/0385449b465d46f6.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-shorthand-in-conditional-before-regexp-starting-with-equals/input.js)
+- [js/pass/2b08e470dd443aaf.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/yield/asi-before-regexp-starting-with-equals/input.js)
+- [js/pass/0e7c5b61b52ab7fb.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-arrow/asi-before-regexp-starting-with-equals/input.js)
+- [js/pass/d88c817fca4f54fe.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-properties/arguments-label-in-initializer/input.js)
+- [js/pass/6f7a7b6312d5f915.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-static-block/arguments-label/input.js)
+- [js/semantic/e2cbde52bcaa2a24.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2022/class-static-block/invalid-arguments-label-reference/input.js)
+- [js/fail/01ece0ee24140743.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/bind-operator/invalid-arguments-in-class-static-block/input.js)
+
 ## 2026-10-21
 
 - [js/pass/0b8010a391d02c8a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/identifiers/escaped-identifier-followed-by-operator-after-line-break/input.js)
