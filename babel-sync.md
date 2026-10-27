@@ -1,5 +1,13 @@
 # babel sync history
 
+## 2026-10-27
+
+- [js/semantic/60e6476678cd0388.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2020/export-ns-from/duplicate-default-ns-locations-false/input.js)
+- [js/semantic/91697785ff22ea30.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2020/export-ns-from/duplicate-ns-locations-false/input.js)
+- [js/fail/0b5c42ce97c7f9df.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/v8intrinsic/_errors/arguments-in-class-field/input.js)
+- [js/fail/7f99a8df6a025a2b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/v8intrinsic/_errors/await-in-async-function/input.js)
+- [js/fail/e31f8850d2736f6b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/v8intrinsic/_errors/yield-in-generator/input.js)
+
 ## 2026-10-24
 
 - [js/fail/a100c0e36a620ce4.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/no-defer/input.js)
