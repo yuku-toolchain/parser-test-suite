@@ -1,5 +1,29 @@
 # babel sync history
 
+## 2026-10-28
+
+- [js/semantic/1c06f528e9bf0344.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/1.1-html-comments-open-let-keyword/input.js)
+- [js/semantic/3243f4ed2181c1f9.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/export-default-let-with-linebreak-and-keyword/input.js)
+- [js/fail/75d2b4e3930ea5cd.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/export-let-with-linebreak-and-keyword-script/input.js)
+- [js/fail/5d2b4e3930ea5cd4.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/export-let-with-linebreak-and-keyword/input.js)
+- [js/fail/24e38286ce971a6c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/for-let-with-linebreak-and-keyword/input.js)
+- [js/fail/6c0f7b93146c62ab.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-keyword-same-line/input.js)
+- [js/fail/756177bb03111d36.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-await-async/input.js)
+- [js/fail/ce827fc4d7c64193.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-await-module/input.js)
+- [js/fail/cb5fe9e57bf8b827.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-enum/input.js)
+- [js/fail/421bf6bacf97c2c7.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-escaped-keyword/input.js)
+- [js/fail/e02c3a3490be6996.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-keyword-module/input.js)
+- [js/pass/5f1f2a60a2ecfbb2.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-keyword-prefixed-identifier/input.js)
+- [js/fail/2d0df149a26755b5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-keyword-strict/input.js)
+- [js/fail/ac5bb3ff479867ff.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-non-reserved-word/input.js)
+- [js/fail/7c9859cf8dc6b709.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-yield-generator/input.js)
+- [js/fail/3aa2169ab3367ddd.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/let/let-with-linebreak-and-yield/input.js)
+- [js/fail/2738e03e4f3d65e4.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/discard-binding/let-with-linebreak-and-void/input.js)
+- [js/fail/4c5f1490d57d2a25.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/no-specifiers-attributes/input.js)
+- [js/fail/9489aef32da2cb3e.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/no-specifiers-flow/input.js)
+- [js/fail/f4a9fc5288327d9d.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/source-phase-imports/no-specifiers-attributes/input.js)
+- [js/fail/51bc9d3e9a0b0164.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/source-phase-imports/no-specifiers-flow/input.js)
+
 ## 2026-10-27
 
 - [js/semantic/60e6476678cd0388.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2020/export-ns-from/duplicate-default-ns-locations-false/input.js)
