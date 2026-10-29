@@ -94,6 +94,34 @@ function dropMemberRedeclarations(errors: OxcError[], program: Program): OxcErro
   )
 }
 
+// oxc binds a function an if clause holds in the enclosing scope, but it sits alone
+// in a block of its own, so it never redeclares a name there (annex B.3.3)
+// https://tc39.es/ecma262/#sec-functiondeclarations-in-ifstatement-statement-clauses
+function ifClauseFunctionNames(node: unknown, ranges: Span[] = []): Span[] {
+  if (Array.isArray(node)) {
+    for (const item of node) ifClauseFunctionNames(item, ranges)
+  } else if (node && typeof node === "object") {
+    const { type, consequent, alternate } = node as Record<string, unknown> & { consequent?: Node; alternate?: Node }
+    if (type === "IfStatement") {
+      for (const clause of [consequent, alternate]) {
+        const id = clause?.type === "FunctionDeclaration" ? (clause.id as Span | null) : null
+        if (id) ranges.push({ start: id.start, end: id.end })
+      }
+    }
+    for (const value of Object.values(node)) ifClauseFunctionNames(value, ranges)
+  }
+  return ranges
+}
+
+function dropIfClauseRedeclarations(errors: OxcError[], program: Program): OxcError[] {
+  const isRedeclaration = (error: OxcError) => errorText(error).includes(REDECLARATION_MESSAGE)
+  if (!errors.some(isRedeclaration)) return errors
+
+  const ranges = ifClauseFunctionNames(program)
+  const atName = (label: ErrorLabel) => ranges.some((range) => label.start >= range.start && label.end <= range.end)
+  return errors.filter((error) => !(isRedeclaration(error) && error.labels.some(atName)))
+}
+
 // tsc reports a conflict between bindings at every binding involved, which
 // oxc misses for ambient declarations, namespace bodies, and class merges.
 // a conflict with a class member is also reported at the member, or once
@@ -226,7 +254,9 @@ export function classify(source: string, lang: SourceLang, initialModule = false
 
   const parse: Parse = (sourceType, showSemanticErrors) => {
     const result = parseSync(filename, source, { lang, astType: isTs ? "ts" : "js", sourceType, showSemanticErrors })
-    const errors = isTs ? dropMemberRedeclarations(result.errors, result.program) : result.errors
+    const errors = isTs
+      ? dropMemberRedeclarations(result.errors, result.program)
+      : dropIfClauseRedeclarations(result.errors, result.program)
     return { errors, program: result.program }
   }
 

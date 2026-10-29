@@ -96,7 +96,7 @@
 - [js/semantic/184f05eaa45a75bc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-switch/input.js)
 - [js/semantic/1d3d7ea7986a7f01.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-redeclaration-top-level/input.js)
 - [js/semantic/3c5d4e9da47f259b.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.1-sloppy-labeled-functions-var-redeclaration/input.js)
-- [js/semantic/28b5bfa8d6eec5a5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.3-function-in-if-body-lexical-redeclaration/input.js)
+- [js/semantic/28b5bfa8d6eec5a5.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.3-function-in-if-body-lexical-redeclaration/input.js)
 - [js/fail/6f4f7c800c3ab503.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/labels/labeled-function-in-if-body/input.js)
 - [js/fail/5fcc13557f31dba0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/labels/labeled-function-redeclaration/input.js)
 - [ts/semantic/f35b5a77d10272a3.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/function/labeled-bodiless-redeclaration/input.ts)
