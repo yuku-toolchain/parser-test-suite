@@ -1,5 +1,24 @@
 # babel sync history
 
+## 2026-11-01
+
+- [js/fail/11a534d040d10ab5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/3.5-for-in-initializer-yield-before-in/input.js)
+- [js/fail/79b740df486a2f7e.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.5-for-in-initializer-yield-before-in-let/input.js)
+- [js/fail/f8e9a6170510eaa9.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.5-for-in-initializer-yield-before-in-strict/input.js)
+- [js/fail/710b9a7806126104.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.5-for-in-initializer-yield-binary-in-before-in/input.js)
+- [js/fail/21cd4de9ff3710cc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/enabled/3.5-for-in-initializer-yield-star-before-in/input.js)
+- [js/fail/b7d1ec5ed69bb5fc.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/invalid-escaped-function-after-async/input.js)
+- [js/fail/20699c0a927b8a00.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/invalid-escaped-function-after-export-async/input.js)
+- [js/fail/6e6514142adf72ad.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/invalid-escaped-function-after-export-default-async/input.js)
+- [js/fail/e20b805f8448a730.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/async-explicit-resource-management/invalid-escaped-identifier-after-await-using/input.js)
+- [js/pass/a14a8f22058156f9.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2026/explicit-resource-management/escaped-identifier-after-using-in-for-init/input.js)
+- [js/fail/7b7ecf0289db52b8.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/export-extensions/default-from-escaped-identifier/input.js)
+- [js/fail/67c256eddda88971.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/export-extensions/invalid-named-escaped-from/input.js)
+- [js/fail/1fc70abf5e4b9438.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/export/default-default-escaped-from-identifier/input.js)
+- [ts/pass/7f85fbc52d2ffbdd.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/class/export-default-abstract-escaped-class/input.ts)
+- [ts/pass/8ce97d1355edacdb.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/enum/const-escaped-enum/input.ts)
+- [ts/pass/8299ddb2c9c7e926.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/types/abstract-escaped-new/input.ts)
+
 ## 2026-10-31
 
 - [js/fail/402f807a1a3c4cf0.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/namespace-import-filter/comments-trailing-comma/input.js)
