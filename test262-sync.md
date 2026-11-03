@@ -1,5 +1,23 @@
 # test262 sync history
 
+## 2026-11-03
+
+- [3a2098fad52d0f30.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-add.js)
+- [efad3ccf75223bf8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitand.js)
+- [b9c644651abe97da.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitor.js)
+- [c56d2213a3b075c8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitxor.js)
+- [83a73a3dbe577df1.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-div.js)
+- [2e64d0c0b0c2569a.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-exp.js)
+- [c75bd4b42e91b87a.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-lshift.js)
+- [fd7a42ac516cfcd0.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-mod.js)
+- [724c1d9fa4081666.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-mult.js)
+- [9ce609193eaa53b6.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-rshift.js)
+- [ee686ba07e7e8b44.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-srshift.js)
+- [4d1d5950fee089f8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-sub.js)
+- [35efb9d6f3385376.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-and-assignment-operator-topropertykey-once.js)
+- [97342d770ea299ce.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-nullish-assignment-operator-topropertykey-once.js)
+- [2133c604fc211031.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-or-assignment-operator-topropertykey-once.js)
+
 ## 2026-10-30
 
 - [96c261489d61ce6f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/concat/completed-after-abrupt-completion.js)
