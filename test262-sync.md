@@ -1,5 +1,17 @@
 # test262 sync history
 
+## 2026-11-04
+
+- [c8c5687901bd8483.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/toZonedDateTime/timezone-string-sub-minute-offset.js)
+- [a3b0509363d27e44.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/timezone-string-sub-minute-offset.js)
+- [40d7c36cde3b0d4d.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/makedate-float-arithmetic.js)
+- [3f878bcaff51a473.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/add/makedate-float-arithmetic.js)
+- [ee23ccde7d725dc9.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/subtract/makedate-float-arithmetic.js)
+- [b66b513a1f210a43.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/add/makedate-float-arithmetic.js)
+- [aa68cf6650299186.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/subtract/makedate-float-arithmetic.js)
+- [4ea779906e4a72a8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/add/makedate-float-arithmetic.js)
+- [e961111254384686.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/subtract/makedate-float-arithmetic.js)
+
 ## 2026-10-30
 
 - [96c261489d61ce6f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Iterator/concat/completed-after-abrupt-completion.js)
