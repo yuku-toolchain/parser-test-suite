@@ -1,5 +1,15 @@
 # babel sync history
 
+## 2026-11-05
+
+- [js/fail/33c5c77cceccdb10.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/decorators-legacy/object-decorator-range/input.js)
+- [ts/pass/6c3d2fb717a65930.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-after/input.ts)
+- [ts/pass/9ccc61680c911512.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-default-after/input.ts)
+- [ts/pass/0bbfad35b23aa2f5.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-equals-after/input.ts)
+- [ts/pass/8c4f33f7677b7e89.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-in-declare-module-after/input.ts)
+- [ts/pass/cc2a68226c8d3b04.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-namespace-after/input.ts)
+- [ts/pass/1c3257e5677b274a.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/scope/export-import-type-after/input.ts)
+
 ## 2026-11-01
 
 - [js/fail/11a534d040d10ab5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/annex-b/disabled/3.5-for-in-initializer-yield-before-in/input.js)
