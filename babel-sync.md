@@ -1,5 +1,14 @@
 # babel sync history
 
+## 2026-11-07
+
+- [js/fail/e797b146416a86fa.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/invalid-dynamic-import-without-parenthesis/input.js)
+- [js/fail/9949e5bcdba2995d.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/import-sync/invalid-dynamic-import-without-parenthesis/input.js)
+- [js/fail/ed9ba7af10b1d68d.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/source-phase-imports/invalid-dynamic-import-without-parenthesis/input.js)
+- [js/fail/2e58338ec7945cd9.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/async-do-expressions/await-in-parameters/input.js)
+- [js/fail/c11e9859d66f4ef5.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/async-do-expressions/invalid-await-in-arrow-parameters-in-parameters/input.js)
+- [js/fail/5f98e906241f84d0.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/do-expressions/invalid-await-in-async-function-parameters/input.js)
+
 ## 2026-11-05
 
 - [js/fail/33c5c77cceccdb10.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/decorators-legacy/object-decorator-range/input.js)
