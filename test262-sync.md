@@ -1,5 +1,34 @@
 # test262 sync history
 
+## 2026-11-07
+
+- [2f59c98f5d6d7557.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setDate/this-value-valid-date-arg-non-finite.js)
+- [dc8bf528a8613eda.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setFullYear/this-value-valid-date-arg-non-finite.js)
+- [e064d49fc6224f10.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setHours/this-value-valid-date-arg-non-finite.js)
+- [a7661285e0d29f7a.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setMilliseconds/this-value-valid-date-arg-non-finite.js)
+- [77747379c5df5a64.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setMinutes/this-value-valid-date-arg-non-finite.js)
+- [3f0f7449ecd916fd.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setMonth/this-value-valid-date-arg-non-finite.js)
+- [beecdabed0e22b17.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setSeconds/this-value-valid-date-arg-non-finite.js)
+- [109465461eb744c4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setTime/this-value-valid-date-arg-non-finite.js)
+- [0b04e8d66b716ab4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCDate/this-value-valid-date-arg-non-finite.js)
+- [dd6956b828391dc2.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCFullYear/this-value-valid-date-arg-non-finite.js)
+- [92c2b377eea37bc2.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCHours/this-value-valid-date-arg-non-finite.js)
+- [90627af0cf39d794.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCMilliseconds/this-value-valid-date-arg-non-finite.js)
+- [76bc2beb59b098b4.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCMinutes/this-value-valid-date-arg-non-finite.js)
+- [4b00d6c490c5b142.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCMonth/this-value-valid-date-arg-non-finite.js)
+- [3f0b512d01a11a38.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setUTCSeconds/this-value-valid-date-arg-non-finite.js)
+- [032db88327bac373.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/compare/calendar-intl-objects.js)
+- [6d7813bec03d1ba8.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/prototype/round/calendar-intl-objects.js)
+- [a452ec0975f557e7.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/prototype/total/calendar-intl-objects.js)
+- [ed8f75bcd500c0d1.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDate/from/calendar-intl-objects.js)
+- [478e452a391dbd3d.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDate/prototype/withCalendar/calendar-intl-objects.js)
+- [9809bc79fbd4fc58.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDateTime/from/calendar-intl-objects.js)
+- [db5a886ac01dab74.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDateTime/prototype/withCalendar/calendar-intl-objects.js)
+- [5c3a8a638b3e51a9.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainMonthDay/from/calendar-intl-objects.js)
+- [8dc06a089177f78a.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainYearMonth/from/calendar-intl-objects.js)
+- [0e8f0da9bf9615a4.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/from/calendar-intl-objects.js)
+- [64a5099c32338add.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/prototype/withCalendar/calendar-intl-objects.js)
+
 ## 2026-11-04
 
 - [c8c5687901bd8483.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/toZonedDateTime/timezone-string-sub-minute-offset.js)
@@ -11,6 +40,24 @@
 - [aa68cf6650299186.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/subtract/makedate-float-arithmetic.js)
 - [4ea779906e4a72a8.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/add/makedate-float-arithmetic.js)
 - [e961111254384686.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainYearMonth/prototype/subtract/makedate-float-arithmetic.js)
+
+## 2026-11-03
+
+- [3a2098fad52d0f30.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-add.js)
+- [efad3ccf75223bf8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitand.js)
+- [b9c644651abe97da.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitor.js)
+- [c56d2213a3b075c8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-bitxor.js)
+- [83a73a3dbe577df1.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-div.js)
+- [2e64d0c0b0c2569a.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-exp.js)
+- [c75bd4b42e91b87a.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-lshift.js)
+- [fd7a42ac516cfcd0.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-mod.js)
+- [724c1d9fa4081666.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-mult.js)
+- [9ce609193eaa53b6.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-rshift.js)
+- [ee686ba07e7e8b44.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-srshift.js)
+- [4d1d5950fee089f8.js](https://github.com/tc39/test262/blob/main/test/language/expressions/compound-assignment/left-hand-side-property-reference-topropertykey-once-sub.js)
+- [35efb9d6f3385376.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-and-assignment-operator-topropertykey-once.js)
+- [97342d770ea299ce.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-nullish-assignment-operator-topropertykey-once.js)
+- [2133c604fc211031.js](https://github.com/tc39/test262/blob/main/test/language/expressions/logical-assignment/lgcl-or-assignment-operator-topropertykey-once.js)
 
 ## 2026-10-30
 
