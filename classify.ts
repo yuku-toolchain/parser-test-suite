@@ -128,8 +128,8 @@ function dropIfClauseRedeclarations(errors: OxcError[], program: Program): OxcEr
 // for an implicit one like prototype, and is a checker rule yuku never reports
 const TSC_CONFLICT_CODES = new Set([2300, 2451, 2567, 2813, 2814])
 
-// tsc reports these at exported names that cannot be shared, never at members
-const TSC_EXPORT_CONFLICT_CODES = new Set([2323, 2484])
+// tsc reports these at exported names that cannot be shared or name nothing, never at members
+const TSC_EXPORT_CONFLICT_CODES = new Set([2304, 2323, 2484])
 
 const TSC = join(import.meta.dir, "node_modules", "typescript", "bin", "tsc")
 
