@@ -1,5 +1,9 @@
 # test262 sync history
 
+## 2026-11-10
+
+- [f613cd81ece8c275.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/out-of-range-nudged-epochns.js)
+
 ## 2026-11-07
 
 - [2f59c98f5d6d7557.js](https://github.com/tc39/test262/blob/main/test/built-ins/Date/prototype/setDate/this-value-valid-date-arg-non-finite.js)

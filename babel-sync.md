@@ -1,5 +1,18 @@
 # babel sync history
 
+## 2026-11-10
+
+- [js/pass/78235f117c5f4533.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/binary-argument-after-parenthesized-arrow/input.js)
+- [js/fail/2557a9104f3566f3.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-after-arrow-in-array/input.js)
+- [js/fail/e58b11dcacc9b890.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-after-arrow-in-template/input.js)
+- [js/fail/63e38d2719bfb843.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-after-parenthesized-arrow/input.js)
+- [js/fail/fc4260103620102c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-async-after-parenthesized-arrow/input.js)
+- [js/fail/e6f90afcc958fda4.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-async-parens-after-parenthesized-arrow/input.js)
+- [js/fail/176e1c230c308fce.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-binary-argument-parens-after-parenthesized-arrow/input.js)
+- [js/fail/e912d3af1567378c.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-exponent-argument-after-parenthesized-arrow/input.js)
+- [js/fail/4a33c6412d2bb6c7.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/invalid-logical-argument-after-arrow-in-call/input.js)
+- [js/fail/a5edec64bb0d8b58.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/pipeline-operator-fsharp/fsharp-proposal-ban-arrow-in-binary-operand/input.js)
+
 ## 2026-11-07
 
 - [js/fail/e797b146416a86fa.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/deferred-import-evaluation/invalid-dynamic-import-without-parenthesis/input.js)
