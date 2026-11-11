@@ -1,5 +1,13 @@
 # babel sync history
 
+## 2026-11-11
+
+- [ts/pass/00039b8003a16911.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-only-import-export-specifiers/export-type-as-string/input.ts)
+- [ts/pass/76a319f7f3a786db.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-only-import-export-specifiers/export-type-only-as-as-string/input.ts)
+- [ts/pass/86ee27c7f4fbeef5.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-only-import-export-specifiers/export-type-only-string/input.ts)
+- [ts/pass/41cf12fd135378fd.module.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-only-import-export-specifiers/import-type-only-string/input.ts)
+- [js/fail/b78883fec19a66a7.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/v8intrinsic/_errors/reserved-word/input.js)
+
 ## 2026-11-10
 
 - [js/pass/78235f117c5f4533.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/arrow-functions/binary-argument-after-parenthesized-arrow/input.js)
