@@ -1,5 +1,11 @@
 # test262 sync history
 
+## 2026-11-12
+
+- [3b3ab15cd23ef045.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/prototype/format/exotic-options.js)
+- [01121c6210ff936f.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-propertybag-timezone-large-time-component-out-of-range.js)
+- [6f22283a95e03e98.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/relativeto-propertybag-timezone-large-time-component-out-of-range.js)
+
 ## 2026-11-10
 
 - [f613cd81ece8c275.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/out-of-range-nudged-epochns.js)
