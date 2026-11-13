@@ -1,5 +1,15 @@
 # babel sync history
 
+## 2026-11-13
+
+- [js/fail/c866b1a7aa46481a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/escape-string/invalid-unterminated-code-point-escape/input.js)
+- [js/fail/65aa0d000fe08f0a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/identifiers/invalid-unterminated-code-point-escape/input.js)
+- [js/semantic/d3d877a8403d0e0a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/categorized/invalid-label-redeclaration-nested/input.js)
+- [js/fail/d2509394e9994317.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/categorized/invalid-elided-call-argument/input.js)
+- [js/fail/db2325dd80df4a4e.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2017/async-functions/invalid-elided-arrow-param/input.js)
+- [js/fail/58b7ff0c6dfc005b.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2020/dynamic-import/invalid-elided-argument/input.js)
+- [js/fail/bd887284200adec9.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/object/invalid-property-initializer-in-operand/input.js)
+
 ## 2026-11-12
 
 - [js/pass/44d19fdc8cecb0df.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/decorators-legacy/class-field-named-modifier-before-decorator/input.js)
