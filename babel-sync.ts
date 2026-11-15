@@ -97,23 +97,19 @@ async function resolveOptions(
   return { sourceType: merged.sourceType, plugins, throws: merged.throws };
 }
 
-// Babel expects a fixture to parse when it has no `throws` option and its
-// output.json records no recovered errors. Only a fixture with no plugin
-// beyond the dialect counts, since an experimental plugin makes Babel parse
-// syntax that a standard parser must reject.
 const DIALECT_PLUGINS = new Set(["jsx", "typescript"]);
 
-async function babelParses(
+async function babelVerdict(
   inputPath: string,
   options: { plugins: string[]; throws?: string }
-) {
-  if (options.throws !== undefined) return false;
-  if (!options.plugins.every((plugin) => DIALECT_PLUGINS.has(plugin))) return false;
+): Promise<"pass" | "fail" | null> {
+  if (!options.plugins.every((plugin) => DIALECT_PLUGINS.has(plugin))) return null;
+  if (options.throws !== undefined) return "fail";
   const output = await fetchRaw(inputPath.replace(INPUT_RE, "/output.json")).catch(
     () => null
   );
-  if (output === null) return false;
-  return JSON.parse(output).errors === undefined;
+  if (output === null) return null;
+  return JSON.parse(output).errors === undefined ? "pass" : "fail";
 }
 
 function dialectOf(path: string, plugins: string[]): SourceLang {
@@ -186,15 +182,16 @@ for (const [path] of added) {
       console.log(`${LOG_PREFIX}   skip (does not parse): ${path}`);
       continue;
     }
-    // classify trusts oxc, so a fixture oxc wrongly rejects in the mode Babel
-    // parses it in would be filed as a failure.
-    if (
-      c.folder === "fail" &&
-      c.asModule === initialModule &&
-      (await babelParses(path, options))
-    ) {
-      console.log(`${LOG_PREFIX}   skip (oxc rejects what babel parses): ${path}`);
-      continue;
+    if ((c.folder === "fail" || c.folder === "pass") && c.asModule === initialModule) {
+      const babel = await babelVerdict(path, options);
+      if (c.folder === "fail" && babel === "pass") {
+        console.log(`${LOG_PREFIX}   skip (oxc rejects what babel parses): ${path}`);
+        continue;
+      }
+      if (c.folder === "pass" && babel === "fail") {
+        console.log(`${LOG_PREFIX}   skip (oxc accepts what babel rejects): ${path}`);
+        continue;
+      }
     }
     const target = outputPath(source, c.folder, c.asModule, dialect);
     if (!target) {
