@@ -1,5 +1,15 @@
 # babel sync history
 
+## 2026-11-17
+
+- [js/pass/9b349c9d467d8432.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/extends-module-identifier-followed-by-expression/input.js)
+- [js/pass/589b486b360a0344.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/extends-module-identifier/input.js)
+- [js/pass/b349c9d467d8432f.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/module-blocks/class-heritage-identifier-followed-by-expression/input.js)
+- [js/pass/a2720cc2e6358cc0.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/module-blocks/class-heritage-identifier/input.js)
+- [js/fail/601097fcbeb0f035.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/module-blocks/class-heritage-nested-module-blocks/input.js)
+- [js/fail/05237f9355e6d8d2.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/module-blocks/invalid-class-heritage-member-of-module-block/input.js)
+- [js/fail/be2cdea4916ed926.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/experimental/module-blocks/new-module-block/input.js)
+
 ## 2026-11-13
 
 - [js/fail/c866b1a7aa46481a.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/core/escape-string/invalid-unterminated-code-point-escape/input.js)
