@@ -1,5 +1,14 @@
 # test262 sync history
 
+## 2026-11-21
+
+- [f828a0b861ddcd7a.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/DefineOwnProperty/immutable-buffer.js)
+- [6feff777b3cb39f3.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/GetOwnProperty/immutable-buffer.js)
+- [d07a5e9742f79c27.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/Set/immutable-buffer-key-is-canonical-non-strict.js)
+- [a99b383edf0539b7.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/Set/immutable-buffer-key-is-canonical-prototype-chain-non-strict.js)
+- [8cbf492612a04f6c.module.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/Set/immutable-buffer-key-is-canonical-prototype-chain-strict.js)
+- [dc8a7c46e36bd785.module.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/Set/immutable-buffer-key-is-canonical-strict.js)
+
 ## 2026-11-12
 
 - [3b3ab15cd23ef045.js](https://github.com/tc39/test262/blob/main/test/intl402/DateTimeFormat/prototype/format/exotic-options.js)
