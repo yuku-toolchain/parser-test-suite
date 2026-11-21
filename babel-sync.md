@@ -1,5 +1,11 @@
 # babel sync history
 
+## 2026-11-19
+
+- [js/fail/cdaedc9ae68e43f6.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/import/attributes/input.mjs)
+- [js/fail/a48b4e02c9c3cbad.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/import/unambiguous-file/input.js)
+- [js/fail/1b86ee50fdeeee33.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/import/unambiguous/input.js)
+
 ## 2026-11-17
 
 - [js/pass/9b349c9d467d8432.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/es2015/class/extends-module-identifier-followed-by-expression/input.js)
