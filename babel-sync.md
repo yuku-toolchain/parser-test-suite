@@ -1,5 +1,11 @@
 # babel sync history
 
+## 2026-11-26
+
+- [ts/pass/b5d7a3b8c7a482e4.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-arguments/instantiation-expression-parenthesized-before-binary-operator-tsx/input.ts)
+- [ts/pass/6a1564ac67449b79.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-arguments/instantiation-expression-parenthesized-before-binary-operator/input.ts)
+- [ts/pass/1ba653b0bdcdf4d3.ts](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/typescript/type-arguments/instantiation-expression-parenthesized-with-type-arguments/input.ts)
+
 ## 2026-11-19
 
 - [js/fail/cdaedc9ae68e43f6.module.js](https://github.com/babel/babel/blob/main/packages/babel-parser/test/fixtures/placeholders/import/attributes/input.mjs)
