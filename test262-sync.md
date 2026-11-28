@@ -1,5 +1,29 @@
 # test262 sync history
 
+## 2026-11-28
+
+- [b60c9e45cc06ceaa.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/round/relativeto-zoneddatetime-at-limits.js)
+- [242d4ef3461baef7.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/Duration/prototype/total/relativeto-zoneddatetime-at-limits.js)
+- [68c61606bd3cceed.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/since/rounding-at-limits.js)
+- [24a8ecb484093849.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDate/prototype/until/rounding-at-limits.js)
+- [398910d06c845b8b.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/since/rounding-at-limits.js)
+- [154b49440dc7eb59.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/PlainDateTime/prototype/until/rounding-at-limits.js)
+- [23f13e528d7c9b44.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/since/rounding-at-limits.js)
+- [744c0ad96d6933ca.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/until/rounding-at-limits.js)
+- [0d66a1b178ce2f14.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/toString/limits.js)
+- [c378b6b6fa803f20.js](https://github.com/tc39/test262/blob/main/test/built-ins/Temporal/ZonedDateTime/prototype/toString/rounding-near-limits.js)
+- [70c5c7ac435d7926.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/compare/relativeto-string-dst-gap-out-of-range.js)
+- [f697c6467b74464a.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/prototype/round/relativeto-string-dst-gap-out-of-range.js)
+- [97f605de6e115cb4.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/Duration/prototype/total/relativeto-string-dst-gap-out-of-range.js)
+- [cdf3c4d5688ccb9f.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/compare/argument-string-dst-gap-out-of-range.js)
+- [6bc14a5a86741f14.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/from/argument-string-dst-gap-out-of-range.js)
+- [aeb31a5be453bd7d.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/prototype/equals/argument-string-dst-gap-out-of-range.js)
+- [cf691b85f6508ebc.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/prototype/since/argument-string-dst-gap-out-of-range.js)
+- [5fd5d22319744701.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/prototype/until/argument-string-dst-gap-out-of-range.js)
+- [426770a7781d1140.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDate/prototype/toZonedDateTime/named-time-zone-not-valid-epoch-nanoseconds.js)
+- [694221722a4c4190.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/PlainDateTime/prototype/toZonedDateTime/named-time-zone-not-valid-epoch-nanoseconds.js)
+- [09af63f87cb55338.js](https://github.com/tc39/test262/blob/main/test/intl402/Temporal/ZonedDateTime/from/argument-string-named-time-zone-not-valid-epoch-nanoseconds.js)
+
 ## 2026-11-21
 
 - [f828a0b861ddcd7a.js](https://github.com/tc39/test262/blob/main/test/built-ins/TypedArrayConstructors/internals/DefineOwnProperty/immutable-buffer.js)
